@@ -1,238 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oak Lodge Garden</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#141a10;--card:#1c2316;--border:#2e3628;--text:#e4e0d6;--muted:#8e8a7e;--green:#7cb342;--warm:#d4a373}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400}
-.hdr{text-align:center;padding:2.5rem 1rem 1.8rem}
-.hdr h1{font-size:2.4rem}.hdr p{color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem}
-.wrap{max-width:960px;margin:0 auto;padding:0 1rem 3rem}
-.plan-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem;overflow:hidden}
-.plan-label{font-size:.75rem;color:var(--green);text-transform:uppercase;letter-spacing:.1em;font-weight:500;margin-bottom:.8rem}
-.plan-hint{font-size:.78rem;color:var(--muted);font-style:italic;margin-bottom:.8rem}
-svg.gp{width:100%;height:auto}
-svg.gp .zone{cursor:pointer;transition:filter .2s}
-svg.gp .zone:hover{filter:brightness(1.3) drop-shadow(0 0 8px rgba(124,179,66,.5))}
-svg.gp .zl{font-family:'DM Sans',sans-serif;font-weight:600;fill:#fff;pointer-events:none;text-anchor:middle;dominant-baseline:central;font-size:11px}
-svg.gp .zs{font-family:'DM Sans',sans-serif;font-size:7.5px;fill:rgba(255,255,255,.45);pointer-events:none;text-anchor:middle}
-.view{display:none}.view.active{display:block}
-.back{display:inline-flex;align-items:center;gap:.4rem;color:var(--green);font-size:.85rem;cursor:pointer;margin-bottom:1rem;background:none;border:none;font-family:inherit}
-.back:hover{text-decoration:underline}
-.bed-hdr{margin-bottom:.8rem}.bed-hdr h2{font-size:1.8rem}
-.badge{display:inline-block;padding:.2rem .6rem;border-radius:16px;font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-top:.3rem}
-.dims{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
-.dim{background:rgba(124,179,66,.1);border:1px solid rgba(124,179,66,.2);padding:.25rem .6rem;border-radius:6px;font-size:.8rem;color:var(--green);font-weight:500}
-.bed-desc{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:1.2rem}
-.st{font-size:1.05rem;color:var(--warm);margin:.8rem 0 .5rem;display:flex;align-items:center;gap:.4rem}
-.st::before{content:'';width:16px;height:2px;background:var(--warm)}
-.map-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:.8rem}
-.map-hint{font-size:.75rem;color:var(--muted);font-style:italic;margin-bottom:.5rem}
-.plant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.5rem;margin-bottom:1rem}
-.pc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.6rem .8rem;cursor:pointer;transition:all .2s}
-.pc:hover{border-color:var(--green);background:rgba(124,179,66,.08)}
-.pc .pn{font-weight:500;font-size:.85rem}.pc .pl{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:.1rem}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.5rem;margin-bottom:1rem}
-.gallery img{width:100%;height:200px;object-fit:cover;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:transform .2s}
-.gallery img:hover{transform:scale(1.02)}
-.gd{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.15rem}
-.tl{background:rgba(212,163,115,.06);border:1px dashed rgba(212,163,115,.25);border-radius:10px;padding:.8rem;text-align:center;color:var(--muted);font-size:.8rem;font-style:italic}
-.pd{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1rem}
-.pd h2{margin-bottom:.2rem}.pd .lt{color:var(--muted);font-style:italic;font-size:.95rem;margin-bottom:1.2rem}
-.ig{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.ii{background:rgba(255,255,255,.03);border-radius:10px;padding:.8rem}
-.ii h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:.3rem;font-weight:500}
-.ii p{font-size:.83rem;line-height:1.5;color:var(--muted)}
-@media(max-width:600px){.ig{grid-template-columns:1fr}}
-.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:2000;justify-content:center;align-items:center;cursor:pointer}
-.lb.active{display:flex}.lb img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:6px}
-footer{text-align:center;padding:1.5rem;color:var(--muted);font-size:.75rem}footer span{color:var(--green)}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oak Lodge — A Garden Notebook</title>
+  <link rel="stylesheet" href="paper.css" />
+
+  <!-- React 18 production builds (SRI hashes verified) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <!-- Babel standalone for JSX (no build step needed for static hosting) -->
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+  <script src="data.js"></script>
 </head>
 <body>
-<div class="hdr"><h1>Oak Lodge Garden</h1><p>Bromsgrove</p></div>
-<div class="wrap">
-<div class="view active" id="v-plan">
-<div class="plan-card">
-<div class="plan-label">Garden Plan</div>
-<div class="plan-hint">Click any zone to explore</div>
-<svg class="gp" viewBox="0 0 820 620" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<pattern id="grass" patternUnits="userSpaceOnUse" width="6" height="6"><rect width="6" height="6" fill="#2d3a25"/><circle cx="1" cy="1" r=".4" fill="#344029" opacity=".5"/></pattern>
-<pattern id="pav" patternUnits="userSpaceOnUse" width="10" height="10"><rect width="10" height="10" fill="#4a5548"/><rect width="4.5" height="4.5" fill="#525f54" rx=".3"/><rect x="5.5" y="5.5" width="4.5" height="4.5" fill="#525f54" rx=".3"/></pattern>
-<pattern id="deck" patternUnits="userSpaceOnUse" width="20" height="4"><rect width="20" height="4" fill="#6b6050"/><line x1="0" y1="3.5" x2="20" y2="3.5" stroke="#5e5545" stroke-width=".5"/></pattern>
-<pattern id="ston" patternUnits="userSpaceOnUse" width="8" height="8"><rect width="8" height="8" fill="#5a6a6e"/><circle cx="2" cy="3" r="1.5" fill="#546268" opacity=".5"/></pattern>
-<linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b4226"/><stop offset="100%" stop-color="#8b5e3c"/></linearGradient>
-<linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4a7030"/><stop offset="100%" stop-color="#6b8e4e"/></linearGradient>
-<linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a88a30"/><stop offset="100%" stop-color="#c7a54a"/></linearGradient>
-<linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6a50a0"/><stop offset="100%" stop-color="#8e6fbf"/></linearGradient>
-</defs>
-<rect x="25" y="25" width="750" height="550" rx="4" fill="url(#grass)" stroke="#4a5a3e" stroke-width="1.5"/>
-<rect x="25" y="25" width="750" height="8" rx="3" fill="#3a5528" opacity=".7"/>
-<rect x="767" y="25" width="8" height="550" rx="3" fill="#5a4a3a" opacity=".5"/>
-<rect x="25" y="25" width="6" height="550" rx="2" fill="#5a4a3a" opacity=".5"/>
-<rect x="25" y="33" width="750" height="220" rx="2" fill="url(#pav)" opacity=".4"/>
-<g class="zone" onclick="showBed('bed1')"><rect x="75" y="38" width="130" height="130" rx="8" fill="url(#g1)" stroke="#a0764e" stroke-width="1.5" opacity=".9"/><circle cx="130" cy="85" r="38" fill="#7b2040" opacity=".65"/><circle cx="130" cy="85" r="26" fill="#9b3050" opacity=".55"/><circle cx="100" cy="135" r="12" fill="#3a6830" opacity=".7"/><circle cx="160" cy="140" r="10" fill="#3a6830" opacity=".65"/><text class="zl" x="130" y="100" font-size="11">Flower Bed 1</text><text class="zs" x="130" y="115">2.6m x 2.6m</text></g>
-<rect x="22" y="225" width="15" height="4" fill="#8a7a60" rx="2"/><text x="38" y="222" font-family="DM Sans" font-size="8" fill="#8a8070">Gate</text>
-<g><circle cx="480" cy="65" r="32" fill="#2a5020" opacity=".6"/><circle cx="480" cy="65" r="22" fill="#3a6830" opacity=".55"/><text class="zl" x="480" y="68" font-size="9">Tree</text></g>
-<g class="zone" onclick="showBed('bed4')"><polygon points="715,55 765,55 765,255 585,255 585,175 715,175" fill="url(#g4)" stroke="#a080d0" stroke-width="1.5" opacity=".9"/><circle cx="735" cy="75" r="8" fill="#b090e0" opacity=".3"/><circle cx="738" cy="130" r="12" fill="#5a8a30" opacity=".55"/><circle cx="640" cy="210" r="16" fill="#a080d0" opacity=".3"/><text class="zl" x="675" y="210" font-size="11">Flower Bed 4</text><text class="zs" x="675" y="225">2m x 3.8m</text></g>
-<g class="zone" onclick="showBed('bed3')"><rect x="490" y="255" width="40" height="40" rx="6" fill="url(#g3)" stroke="#d4b85a" stroke-width="1.5" opacity=".9"/><circle cx="510" cy="270" r="10" fill="#4a8830" opacity=".6"/><text class="zl" x="510" y="250" font-size="10">Bed 3</text><text class="zs" x="510" y="308">0.8m x 0.8m</text></g>
-<g class="zone" onclick="showBed('stoneBed')"><rect x="530" y="267" width="225" height="48" rx="5" fill="url(#ston)" stroke="#6a8090" stroke-width="1.5" opacity=".9"/><circle cx="560" cy="287" r="6" fill="#5a7a80" opacity=".5"/><circle cx="660" cy="285" r="7" fill="#5a7a80" opacity=".4"/><text class="zl" x="642" y="293" font-size="10">Stone Bed</text></g>
-<g class="zone" onclick="showBed('steps')"><rect x="300" y="260" width="185" height="150" rx="5" fill="#454e42" stroke="#586252" stroke-width="1.5"/><line x1="310" y1="285" x2="475" y2="285" stroke="#515a4e" stroke-width=".8"/><line x1="310" y1="310" x2="475" y2="310" stroke="#515a4e" stroke-width=".8"/><line x1="310" y1="335" x2="475" y2="335" stroke="#515a4e" stroke-width=".8"/><line x1="310" y1="360" x2="475" y2="360" stroke="#515a4e" stroke-width=".8"/><text class="zl" x="392" y="330" font-size="12">Steps</text><text class="zs" x="392" y="348">3m x 3m</text></g>
-<rect x="130" y="250" width="170" height="85" fill="url(#pav)" opacity=".4" rx="2"/>
-<line x1="130" y1="335" x2="300" y2="335" stroke="#7a6a56" stroke-width="3" stroke-linecap="round"/><text x="215" y="330" font-family="DM Sans" font-size="7" fill="#8a7a66" text-anchor="middle">wall</text>
-<line x1="130" y1="395" x2="300" y2="395" stroke="#7a6a56" stroke-width="3" stroke-linecap="round"/><text x="215" y="408" font-family="DM Sans" font-size="7" fill="#8a7a66" text-anchor="middle">wall</text>
-<g class="zone" onclick="showBed('bed2')"><polygon points="30,250 130,250 130,335 300,335 300,395 130,395 130,475 30,475" fill="url(#g2)" stroke="#7aa058" stroke-width="1.5" opacity=".9"/><circle cx="65" cy="290" r="22" fill="#2a5820" opacity=".6"/><circle cx="100" cy="315" r="16" fill="#3a7030" opacity=".5"/><circle cx="180" cy="358" r="14" fill="#508840" opacity=".5"/><circle cx="250" cy="365" r="16" fill="#2a5820" opacity=".45"/><circle cx="60" cy="420" r="18" fill="#3a7030" opacity=".5"/><text class="zl" x="80" y="360" font-size="11">Flower</text><text class="zl" x="80" y="373" font-size="11">Bed 2</text></g>
-<g class="zone" onclick="showBed('kitchen')"><rect x="175" y="400" width="105" height="70" rx="5" fill="url(#pav)" stroke="#5e6b56" stroke-width="1"/><text class="zl" x="227" y="433" font-size="10">Patio Kitchen</text><text class="zs" x="227" y="448">1.6m x 1.4m</text></g>
-<g class="zone" onclick="showBed('lounge')"><rect x="283" y="413" width="200" height="60" rx="5" fill="url(#pav)" stroke="#5e6b56" stroke-width="1"/><text class="zl" x="383" y="443" font-size="10">Patio Lounge</text></g>
-<g class="zone" onclick="showBed('patio')"><rect x="488" y="318" width="277" height="155" rx="6" fill="url(#deck)" stroke="#7a6e5a" stroke-width="1.5"/><text class="zl" x="626" y="395" font-size="13">Patio</text><text class="zs" x="626" y="412">Composite Decking</text></g>
-<rect x="25" y="478" width="750" height="95" fill="#5c4a3a" stroke="#6e5a48" stroke-width="1"/><text x="65" y="530" font-family="DM Sans" font-size="9" fill="#9a8878" font-weight="500">15m HOUSE EDGE</text>
-<rect x="205" y="478" width="50" height="8" fill="#d4a373" rx="2"/><text x="230" y="488" font-family="DM Sans" font-size="7" fill="#1a1f16" text-anchor="middle" font-weight="600">Door</text>
-<rect x="400" y="478" width="70" height="8" fill="#d4a373" rx="2"/><text x="435" y="488" font-family="DM Sans" font-size="7" fill="#1a1f16" text-anchor="middle" font-weight="600">Door</text>
-<line x1="580" y1="555" x2="730" y2="555" stroke="#7a7a6a" stroke-width="1.5"/><line x1="580" y1="551" x2="580" y2="559" stroke="#7a7a6a" stroke-width="1"/><line x1="730" y1="551" x2="730" y2="559" stroke="#7a7a6a" stroke-width="1"/><text x="655" y="550" font-family="DM Sans" font-size="8" fill="#7a7a6a" text-anchor="middle">3m</text>
-</svg>
-</div>
-</div>
-<div class="view" id="v-bed"></div>
-<div class="view" id="v-plant"></div>
-</div>
-<div class="lb" id="lb" onclick="this.classList.remove('active')"><img id="lb-img" src="" alt=""/></div>
-<footer><span>Oak Lodge Garden</span> &middot; 2026</footer>
-<script>
-const PHOTOS={"bed1": ["images/may-2026/bed1.jpg", "images/may-2026/bed1-close1.jpg", "images/may-2026/bed1-close2.jpg"], "bed2": ["images/may-2026/bed2-1.jpg", "images/may-2026/bed2-2.jpg", "images/may-2026/bed2-kitchen.jpg", "images/may-2026/bed2-steps.jpg", "images/may-2026/bed2-south1.jpg", "images/may-2026/bed2-south2.jpg"], "bed3": ["images/may-2026/bed3.jpg", "images/may-2026/bed3-detail.jpg"], "bed4": ["images/may-2026/bed4.jpg", "images/may-2026/bed4-wide.jpg"], "stoneBed": ["images/may-2026/stone-bed.jpg", "images/may-2026/stone-bed-wide.jpg", "images/may-2026/stone-bed-detail1.jpg", "images/may-2026/stone-bed-detail2.jpg"], "steps": ["images/may-2026/steps.jpg"], "patio": ["images/may-2026/patio.jpg", "images/may-2026/patio-door.jpg", "images/may-2026/patio-clematis.jpg"]};
-const PLANTS={"Bed 1": [{"name": "Angel Wings", "latin": "Senecio candicans", "light": "Full sun", "water": "Well-drained soil; drought-tolerant.", "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.", "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."}, {"name": "Astilbe", "latin": "Astilbe", "light": "Partial to full shade", "water": "Moist to wet soil; do not let dry out.", "care": "Leave dried flower heads for winter interest or cut back in autumn.", "seasonal": "Herbaceous perennial. Dies back in winter. Feathery flower plumes appear in summer."}, {"name": "Box Hedging", "latin": "Buxus sempervirens", "light": "Full sun to full shade.", "water": "Tolerates most well-drained soils. Water regularly when newly planted; established plants are fairly drought-tolerant.", "care": "Clip twice a year (late spring and late summer) to maintain a neat shape. Watch for box blight and box tree caterpillar.", "seasonal": "Evergreen. Retains dense, glossy green foliage year-round. Produces small insignificant flowers in spring."}, {"name": "English Daisy", "latin": "Bellis perennis", "light": "Full sun to partial shade.", "water": "Moist, well-drained soil. Water regularly.", "care": "Deadhead spent flowers to encourage continued blooming. Can self-seed freely.", "seasonal": "Short-lived perennial often grown as a biennial. Produces pink, red, or white pom-pom flowers from early spring through summer. May die back in hot summers."}, {"name": "Euonymus", "latin": "Euonymus fortunei (golden variety)", "light": "Full sun to partial shade.", "water": "Tolerates most soils; average watering.", "care": "Prune in spring to maintain shape. Can be used as ground cover or trained upwards.", "seasonal": "Evergreen. Keeps its bright golden-variegated foliage all year round. Colours may intensify in full sun."}, {"name": "Hosta (Plantain Lily)", "latin": "Hosta", "light": "Partial to full shade", "water": "Rich moist soil.", "care": "Watch out for slugs and snails!", "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."}, {"name": "Japanese Aralia", "latin": "Fatsia japonica 'Spider''s Web'", "light": "Partial to full shade", "water": "Moist well-drained soil.", "care": "Protect from harsh cold winds.", "seasonal": "Evergreen. Keeps its speckled tropical leaves year-round."}, {"name": "Japanese Maple", "latin": "Acer palmatum", "light": "Dappled shade to partial sun.", "water": "Keep soil consistently moist but not waterlogged.", "care": "Slightly acidic, well-drained loam.", "seasonal": "Requires minimal pruning. Remove dead or crossing branches during the dormant winter season."}, {"name": "Rhododendron", "latin": "Rhododendron 'Goldflimmer'", "light": "Partial shade", "water": "Acidic (ericaceous) moist well-drained soil.", "care": "Deadhead carefully after flowering. Needs ericaceous compost/fertiliser.", "seasonal": "Evergreen. Keeps its variegated leaves all year. Blooms with purple flowers in late spring."}], "Bed 2": [{"name": "Angel Wings", "latin": "Senecio candicans", "light": "Full sun", "water": "Well-drained soil; drought-tolerant.", "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.", "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."}, {"name": "Forget-me-not", "latin": "Myosotis", "light": "Partial shade.", "water": "Keep soil consistently moist.", "care": "Humus-rich, moisture-retentive soil.", "seasonal": "Pull up plants after flowering to prevent excessive self-seeding, or leave them if naturalising is desired."}, {"name": "Hosta (Plantain Lily)", "latin": "Hosta", "light": "Partial to full shade", "water": "Rich moist soil.", "care": "Watch out for slugs and snails!", "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."}, {"name": "Maiden Pink", "latin": "Dianthus deltoides", "light": "Full sun", "water": "Well-drained neutral to alkaline soil.", "care": "Deadhead regularly to prolong flowering.", "seasonal": "Evergreen mat of foliage. Blooms with bright pink/red flowers in summer."}, {"name": "Nemesia", "latin": "Nemesiaspp.", "light": "Full sun to partial shade.", "water": "Regular; keep the soil moist but ensure it does not become soggy.", "care": "Rich, well-drained compost or soil.", "seasonal": "Trim the plant back slightly after the initial flush of flowers to encourage a second display."}, {"name": "Peony", "latin": "Paeonia lactiflora", "light": "Full sun to light shade", "water": "Rich well-drained soil; moderate watering.", "care": "Provide plant supports for heavy flower heads. Cut back dead foliage in late autumn.", "seasonal": "Herbaceous perennial. Dies back completely in winter. Huge blooms in late spring/early summer."}, {"name": "Silverbush", "latin": "Convolvulus cneorum", "light": "Full sun", "water": "Very well-drained soil; drought-tolerant.", "care": "Protect from severe winter wet and cold.", "seasonal": "Evergreen. Retains silver foliage year-round. Produces white/pink flowers in spring and summer."}, {"name": "Variegated Dogwood", "latin": "Cornus alba", "light": "Full sun to partial shade", "water": "Tolerates most soils even damp ones.", "care": "Prune hard (coppice) in late winter/early spring to encourage bright new stems.", "seasonal": "Deciduous. Drops leaves in autumn to reveal striking bright red winter stems."}, {"name": "Weeping Cherry", "latin": "Prunus\u00a0species", "light": "Full sun.", "water": "Needs moderately fertile, well-drained soil. Keep the ground consistently moist but avoid waterlogged conditions.", "care": "Prune during the dormant winter period only to remove dead, diseased, or crossing branches. Avoid disrupting the natural weeping form. Apply a balanced fertiliser in early spring.", "seasonal": "Deciduous. Exhibits prolific spring blossoms before or alongside leaf emergence. The canopy provides summer shade before leaves turn yellow or bronze and drop in autumn."}, {"name": "Weigela", "latin": "Weigela florida", "light": "Full sun to partial shade", "water": "Moist well-drained soil.", "care": "Prune immediately after flowering.", "seasonal": "Deciduous. Drops leaves in autumn. Blooms with trumpet flowers in late spring/early summer."}], "Bed 3": [{"name": "Apple Tree", "latin": "Malus domestica", "light": "Full sun.", "water": "Regular watering, particularly during fruit development.", "care": "Well-drained, fertile soil.", "seasonal": "Prune in late winter while dormant to maintain structure and encourage fruiting spurs."}, {"name": "Avens", "latin": "Geum", "light": "Full sun to partial shade", "water": "Moist but well-drained soil; water regularly.", "care": "Deadhead spent flowers to encourage more blooms.", "seasonal": "Herbaceous or semi-evergreen. Produces bright flowers from late spring through summer."}, {"name": "Wintercreeper", "latin": "Euonymus fortunei", "light": "Full sun to full shade", "water": "Tolerates most soils; average watering.", "care": "Prune in spring to maintain shape.", "seasonal": "Evergreen shrub. Keeps its bright variegated foliage all year round."}], "Bed 4": [{"name": "Lavender", "latin": "Lavandula angustifolia", "light": "Full sun.", "water": "Well-drained, poor to moderately fertile soil. Drought-tolerant once established.", "care": "Prune after flowering in late summer, cutting back to just above the woody growth. Do not cut into old wood.", "seasonal": "Evergreen. Grey-green aromatic foliage year-round. Produces fragrant purple flower spikes from mid to late summer. Attractive to bees and butterflies."}, {"name": "New Zealand Flax", "latin": "Phormium", "light": "Full sun to partial shade.", "water": "Moderate; keep evenly moist during the growing season.", "care": "Versatile; prefers well-drained conditions.", "seasonal": "Cut back old, damaged, or untidy leaves right to the base in spring."}, {"name": "Rose", "latin": "Rosa", "light": "Full sun.", "water": "Regular, deep watering at the base to avoid wetting the foliage.", "care": "Rich, well-drained, slightly acidic loam.", "seasonal": "Prune hard in late winter or early spring. Deadhead spent blooms regularly to encourage further flowering."}, {"name": "Wisteria", "latin": "Wisteriaspp.", "light": "Full sun.", "water": "Regular watering until a deep root system is established.", "care": "Well-drained, fertile soil.", "seasonal": "Requires bi-annual pruning (summer and winter) to control vigorous growth and promote flower buds."}, {"name": "Yucca", "latin": "Yucca filamentosa", "light": "Full sun.", "water": "Very well-drained soil; highly drought-tolerant once established.", "care": "Low maintenance. Remove dead or damaged leaves at the base. Wear gloves as leaf tips can be sharp.", "seasonal": "Evergreen. Spiky architectural rosettes provide year-round structure. Produces tall spikes of creamy-white bell flowers in summer."}], "Stone Bed": [{"name": "Aubrieta (Rock Cress)", "latin": "Aubrieta deltoidea", "light": "Full sun", "water": "Well-drained soil; drought-tolerant once established.", "care": "Shear back after blooming to keep it compact.", "seasonal": "Evergreen foliage. Bursts with purple flowers in spring."}, {"name": "Cabbage Tree", "latin": "Cordyline australis", "light": "Full sun to partial shade.", "water": "Moderate; drought-tolerant when mature.", "care": "Adaptable, but requires good drainage.", "seasonal": "Remove dead or yellowing leaves from the base of the tufts to maintain a tidy appearance."}, {"name": "Honeysuckle", "latin": "Lonicera", "light": "Full sun.", "water": "Adaptable to various soil types, provided they are moist and well-drained. Water regularly during the first growing season.", "care": "Prune after flowering to control growth and remove congested stems. Train new shoots along supports as required.", "seasonal": "Deciduous or semi-evergreen depending on the exact species. Characterised by rapid summer growth and fragrant tubular flowers, often followed by small berries in autumn."}, {"name": "Houseleeks (Hens and Chicks)", "latin": "Sempervivum", "light": "Full sun", "water": "Highly well-drained/gritty soil; water sparingly.", "care": "Very low maintenance. Remove dead rosettes after they flower and die.", "seasonal": "Evergreen rosettes. Forms offsets (chicks) during growing season."}, {"name": "New Zealand Flax (dark)", "latin": "Phormium 'Platt's Black' or similar", "light": "Full sun to partial shade.", "water": "Moderate; keep evenly moist during the growing season. Versatile; prefers well-drained conditions.", "care": "Cut back old, damaged, or untidy leaves right to the base in spring. Protect crown from severe frost with mulch.", "seasonal": "Evergreen. Dark burgundy-black sword-shaped leaves provide dramatic year-round contrast against the grey slate chippings."}, {"name": "Rosemary", "latin": "Salvia rosmarinus", "light": "Full sun.", "water": "Low; highly drought-tolerant once established. Allow soil to dry between waterings.", "care": "Poor to moderately fertile, very well-drained soil.", "seasonal": "Prune lightly after flowering to maintain shape and prevent the centre from becoming overly woody."}, {"name": "Stonecrop", "latin": "Sedum (various trailing types)", "light": "Full sun", "water": "Well-drained soil; very drought-tolerant.", "care": "Low maintenance. Trim back if it gets too leggy.", "seasonal": "Mostly evergreen. Flowers in summer. Leaf colours may deepen in cooler weather."}], "Patio": [{"name": "Clematis", "latin": "Clematis\u00a0(likely\u00a0montana)", "light": "Full sun.", "water": "Requires moist, well-drained earth. Deep watering is necessary during extended dry spells.", "care": "Pruning depends on the specific group; spring-flowering types generally need minimal pruning immediately after flowering to control size. Mulch around the base to keep roots cool.", "seasonal": "Deciduous. Produces vigorous growth and abundant flowers in spring. Foliage drops in autumn, leaving bare woody stems over winter."}], "Tree": [{"name": "Pear Tree", "latin": "Pyrus", "light": "Full sun.", "water": "Prefers well-drained, loamy soil. Requires regular watering during the establishment phase and prolonged dry periods, particularly when fruiting.", "care": "Requires annual winter pruning to maintain shape, remove dead wood, and encourage productive fruiting spurs. Monitor for common pests like aphids and diseases such as pear rust.", "seasonal": "Deciduous. Blossoms in early spring, followed by leaf emergence and fruit development through summer. Harvest typically occurs in late summer or autumn, preceding leaf fall."}]};
-const ZONES={
-bed1:{title:"Flower Bed 1",badge:"Raised Bed",color:"#8b5e3c",dims:["2.6m x 2.6m","Corner bed by gate"],desc:"Raised timber-edged bed on the upper terrace. Japanese Maple dominates, with Fatsia japonica, Rhododendron, Astilbe, Hosta, Angel Wings, and box hedging along the right edge.",plantKey:"Bed 1"},
-bed2:{title:"Flower Bed 2",badge:"Walled Bed",color:"#6b8e4e",dims:["2m wide","T-shaped, between brick walls"],desc:"T-shaped bed along the left boundary. Weeping cherry, dogwood, peony, weigela above. Maiden pink, forget-me-nots, nemesia, hosta, silverbush, and Angel Wings between the walls.",plantKey:"Bed 2"},
-bed3:{title:"Flower Bed 3",badge:"Feature Bed",color:"#c7a54a",dims:["0.8m x 0.8m","Top-left corner of stone bed"],desc:"Compact raised bed with apple tree, avens (Geum), and wintercreeper.",plantKey:"Bed 3"},
-bed4:{title:"Flower Bed 4",badge:"Border Bed",color:"#8e6fbf",dims:["2m x 3.8m","Mirrored L along right wall"],desc:"Mirrored L-shaped bed. Wisteria over the wall, Cordyline, New Zealand Flax, roses, yucca, and lavender.",plantKey:"Bed 4"},
-stoneBed:{title:"Stone Bed",badge:"Gravel & Alpine",color:"#7a8f9a",dims:["~4.8m x 1m","Along decking edge"],desc:"Narrow bed with slate chippings. Aubrieta, houseleeks, stonecrop, rosemary, dark Phormium, Cordyline, and honeysuckle.",plantKey:"Stone Bed"},
-steps:{title:"Steps",badge:"Transition",color:"#6e6e5e",dims:["~3m x 3m"],desc:"Block paving with brick edging connecting upper terrace to lower patio.",plantKey:null},
-patio:{title:"Patio",badge:"Decking",color:"#8a7e6b",dims:["~6m x 3m","Composite decking"],desc:"Main entertaining space. Mature Clematis montana on the house wall. Storage bench, lanterns, planting at edges.",plantKey:"Patio"},
-kitchen:{title:"Patio Kitchen",badge:"Outdoor Living",color:"#5c6b54",dims:["1.6m x 1.4m"],desc:"Sheltered outdoor kitchen between the walls.",plantKey:null},
-lounge:{title:"Patio Lounge",badge:"Outdoor Living",color:"#5c6b54",dims:["~3m x 1.4m"],desc:"Lower seating area connecting kitchen to patio.",plantKey:null}
-};
-function mkSvgPlant(x,y,rx,ry,fill,op,name,label,fontSize){
-  fontSize=fontSize||8;
-  const esc=name.replace(/'/g,"\\'");
-  let s='';
-  if(ry)s+=`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" opacity="${op}" cursor="pointer" onclick="showPlant('${esc}',currentBed)"/>`;
-  else s+=`<circle cx="${x}" cy="${y}" r="${rx}" fill="${fill}" opacity="${op}" cursor="pointer" onclick="showPlant('${esc}',currentBed)"/>`;
-  const lines=label.split('\n');
-  lines.forEach((l,i)=>{s+=`<text x="${x}" y="${y+i*11-(lines.length-1)*5}" text-anchor="middle" font-family="DM Sans" font-size="${fontSize}" fill="#e4e0d6" pointer-events="none">${l}</text>`});
-  return s;
-}
-function mkSvgRect(x,y,w,h,fill,op,name,label,rot){
-  const esc=name.replace(/'/g,"\\'");
-  let s=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${fill}" opacity="${op}" cursor="pointer" onclick="showPlant('${esc}',currentBed)"/>`;
-  if(rot)s+=`<text x="${x+w/2}" y="${y+h/2}" text-anchor="middle" dominant-baseline="central" font-family="DM Sans" font-size="8" fill="#e4e0d6" pointer-events="none" transform="rotate(${rot} ${x+w/2} ${y+h/2})">${label}</text>`;
-  else s+=`<text x="${x+w/2}" y="${y+h/2}" text-anchor="middle" dominant-baseline="central" font-family="DM Sans" font-size="8" fill="#e4e0d6" pointer-events="none">${label}</text>`;
-  return s;
-}
-const BED_MAPS={
-bed1:()=>{let s=`<svg viewBox="0 0 290 320" width="100%" style="max-width:460px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<rect x="10" y="30" width="250" height="250" rx="6" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<text x="135" y="20" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Back wall</text>`;
-s+=`<text x="135" y="300" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Front edge</text>`;
-s+=mkSvgPlant(135,105,70,55,'#6b2035',.5,'Japanese Maple','Japanese Maple\nAcer palmatum',9);
-s+=mkSvgPlant(135,180,30,16,'#2a5828',.6,'Japanese Aralia','Fatsia japonica',8);
-s+=mkSvgPlant(60,205,25,14,'#6a40a0',.45,'Rhododendron','Rhododendron',8);
-s+=mkSvgPlant(210,210,20,12,'#2a7878',.55,'Astilbe','Astilbe',8);
-s+=mkSvgPlant(50,250,25,13,'#3060a0',.45,'Hosta (Plantain Lily)','Hosta',8);
-s+=mkSvgPlant(135,260,22,11,'#708090',.45,'Angel Wings','Angel Wings',7);
-s+=mkSvgPlant(95,245,16,10,'#c7a54a',.4,'English Daisy','Bellis',7);
-s+=mkSvgPlant(42,230,14,18,'#5a8830',.45,'Euonymus','Euon.',7);
-s+=mkSvgRect(230,110,25,150,'#3a6830',.45,'Box Hedging','Box hedging',-90);
-s+=`</svg>`;return s},
-bed2:()=>{let s=`<svg viewBox="0 0 320 400" width="100%" style="max-width:460px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<polygon points="10,25 100,25 100,165 270,165 270,225 100,225 100,370 10,370" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<line x1="100" y1="165" x2="270" y2="165" stroke="#7a6a56" stroke-width="2"/><line x1="100" y1="225" x2="270" y2="225" stroke="#7a6a56" stroke-width="2"/>`;
-s+=`<text x="185" y="160" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#8a7a66">wall</text>`;
-s+=`<text x="185" y="240" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#8a7a66">wall</text>`;
-s+=mkSvgPlant(55,70,32,32,'#2a5020',.45,'Weeping Cherry','Weeping\nCherry',8);
-s+=mkSvgPlant(55,130,28,14,'#6b8e4e',.45,'Variegated Dogwood','Dogwood',7);
-s+=mkSvgPlant(145,190,22,12,'#d4a373',.4,'Nemesia','Nemesia',8);
-s+=mkSvgPlant(215,190,20,12,'#e48bb0',.4,'Maiden Pink','Maiden Pink',7);
-s+=mkSvgPlant(55,190,16,12,'#5a8830',.45,'Weigela','Weigela',7);
-s+=mkSvgPlant(40,265,22,12,'#3060a0',.45,'Hosta (Plantain Lily)','Hosta',8);
-s+=mkSvgPlant(40,305,18,10,'#708090',.45,'Angel Wings','Angel Wings',7);
-s+=mkSvgPlant(75,285,16,10,'#a8b5a0',.4,'Silverbush','Silverbush',7);
-s+=mkSvgPlant(55,335,20,11,'#e48bb0',.35,'Peony','Peony',8);
-s+=mkSvgPlant(75,245,12,9,'#5080c0',.35,'Forget-me-not','Forget\nme-not',6);
-s+=`</svg>`;return s},
-bed3:()=>{let s=`<svg viewBox="0 0 180 200" width="100%" style="max-width:280px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<rect x="10" y="25" width="150" height="150" rx="6" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<text x="85" y="18" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Steps side</text>`;
-s+=`<text x="85" y="192" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Stone bed side</text>`;
-s+=mkSvgPlant(85,75,32,32,'#3a6830',.5,'Apple Tree','Apple Tree\nMalus domestica',8);
-s+=mkSvgPlant(55,135,28,14,'#c7a54a',.4,'Avens','Avens (Geum)',8);
-s+=mkSvgPlant(125,140,25,12,'#4a8040',.45,'Wintercreeper','Wintercreeper',7);
-s+=`</svg>`;return s},
-bed4:()=>{let s=`<svg viewBox="0 0 260 340" width="100%" style="max-width:380px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<polygon points="170,20 245,20 245,300 80,300 80,155 170,155" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<text x="207" y="14" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Right wall</text>`;
-s+=`<circle cx="162" cy="320" r="10" fill="none" stroke="#5a5a4a" stroke-width="1" stroke-dasharray="3 2"/>`;
-s+=`<text x="162" y="338" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#8e8a7e">Circular paving</text>`;
-s+=mkSvgPlant(207,50,30,16,'#7050a0',.4,'Wisteria','Wisteria',9);
-s+=mkSvgPlant(207,100,22,22,'#4a7030',.45,'New Zealand Flax','NZ Flax\n(Phormium)',7);
-s+=mkSvgPlant(207,140,18,10,'#c05050',.4,'Rose','Rose',9);
-s+=mkSvgPlant(135,215,25,14,'#6a8a40',.4,'Yucca','Yucca',9);
-s+=mkSvgPlant(207,230,22,12,'#7a8f9a',.4,'Lavender','Lavender',8);
-s+=`</svg>`;return s},
-stoneBed:()=>{let s=`<svg viewBox="0 0 480 120" width="100%" style="max-width:580px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<text x="240" y="12" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Decking edge</text>`;
-s+=`<rect x="10" y="18" width="460" height="65" rx="5" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<text x="240" y="100" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Paving side</text>`;
-s+=mkSvgPlant(45,48,25,12,'#7050a0',.4,'Aubrieta (Rock Cress)','Aubrieta',7);
-s+=mkSvgPlant(110,45,16,10,'#708060',.4,'Houseleeks (Hens and Chicks)','Houseleeks',6);
-s+=mkSvgPlant(168,50,18,10,'#6a8a50',.4,'Stonecrop','Stonecrop',7);
-s+=mkSvgPlant(235,42,16,16,'#4a3040',.45,'New Zealand Flax (dark)','Dark\nPhormium',6);
-s+=mkSvgPlant(305,48,22,12,'#4a6a3a',.4,'Rosemary','Rosemary',8);
-s+=mkSvgPlant(375,45,20,20,'#3a5a28',.45,'Cabbage Tree','Cabbage\nTree',7);
-s+=mkSvgPlant(435,50,22,12,'#8a7030',.35,'Honeysuckle','Honeysuckle',7);
-s+=`</svg>`;return s},
-patio:()=>{let s=`<svg viewBox="0 0 380 130" width="100%" style="max-width:480px" xmlns="http://www.w3.org/2000/svg">`;
-s+=`<rect x="10" y="18" width="360" height="80" rx="6" fill="#1a2014" stroke="#3a4233" stroke-width="1"/>`;
-s+=`<text x="190" y="12" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">House wall</text>`;
-s+=`<text x="190" y="115" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#8e8a7e">Decking</text>`;
-s+=mkSvgPlant(300,50,45,25,'#3a5a28',.4,'Clematis','Clematis montana\nOn house wall',8);
-s+=`</svg>`;return s}
-};
+  <div id="root"></div>
 
-let currentBed=null;
-function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
-
-function showBed(id){
-currentBed=id;const z=ZONES[id];const plants=z.plantKey?(PLANTS[z.plantKey]||[]):[];const photos=PHOTOS[id]||[];
-let h='<button class="back" onclick="showView(\'v-plan\')">&#8592; Back to plan</button>';
-h+='<div class="bed-hdr"><h2>'+z.title+'</h2><div class="badge" style="background:'+z.color+'22;color:'+z.color+';border:1px solid '+z.color+'44">'+z.badge+'</div></div>';
-h+='<div class="dims">'+z.dims.map(d=>'<div class="dim">'+d+'</div>').join('')+'</div>';
-h+='<div class="bed-desc">'+z.desc+'</div>';
-if(BED_MAPS[id]){h+='<h3 class="st">Plant map</h3><div class="map-card"><div class="map-hint">Click a plant to see its care guide</div>'+BED_MAPS[id]()+'</div>'}
-if(plants.length>0){h+='<h3 class="st">All plants</h3><div class="plant-grid">';plants.forEach(p=>{h+='<div class="pc" onclick="showPlant(\''+p.name.replace(/'/g,"\\'")+'\',\''+id+'\')"><div class="pn">'+p.name+'</div><div class="pl">'+p.latin+'</div></div>'});h+='</div>'}
-if(photos.length>0){h+='<h3 class="st">Photos - May 2026</h3><div class="gallery">';photos.forEach(p=>{h+='<div><img src="'+p+'" alt="'+z.title+'" onclick="openLB(this.src)" loading="lazy"/><div class="gd">May 2026</div></div>'});h+='</div>'}
-h+='<h3 class="st">Growth timeline</h3><div class="tl">Monthly photos will appear here. Next update: June 2026</div>';
-document.getElementById('v-bed').innerHTML=h;showView('v-bed')}
-
-function showPlant(name,bedId){
-const z=ZONES[bedId];const plants=PLANTS[z.plantKey]||[];const p=plants.find(x=>x.name===name);if(!p)return;
-let h='<button class="back" onclick="showBed(\''+bedId+'\')">&#8592; Back to '+z.title+'</button>';
-h+='<div class="pd"><h2>'+p.name+'</h2><div class="lt">'+p.latin+'</div>';
-h+='<div class="ig">';
-h+='<div class="ii"><h4>Light</h4><p>'+p.light+'</p></div>';
-h+='<div class="ii"><h4>Watering & soil</h4><p>'+p.water+'</p></div>';
-h+='<div class="ii"><h4>Care</h4><p>'+p.care+'</p></div>';
-h+='<div class="ii"><h4>Seasonal changes</h4><p>'+p.seasonal+'</p></div>';
-h+='</div></div>';
-document.getElementById('v-plant').innerHTML=h;showView('v-plant')}
-
-function openLB(s){document.getElementById('lb-img').src=s;document.getElementById('lb').classList.add('active')}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('active')});
-</script>
+  <script type="text/babel" src="palette.js"></script>
+  <script type="text/babel" src="GardenPlan.jsx"></script>
+  <script type="text/babel" src="BedDetail.jsx"></script>
+  <script type="text/babel" src="PlantCard.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>
