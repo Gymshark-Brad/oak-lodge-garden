@@ -143,6 +143,7 @@ window.OAK = (function () {
       {
         name: "Japanese Maple",
         latin: "Acer palmatum",
+        photos: [],
         position: "Back centre — dominant canopy",
         light: "Dappled shade to partial sun. Sheltered from harsh afternoon sun.",
         water: "Keep soil consistently moist but never waterlogged.",
@@ -152,6 +153,7 @@ window.OAK = (function () {
       {
         name: "Japanese Aralia",
         latin: "Fatsia japonica 'Spider's Web'",
+        photos: ["images/plants/japanese-aralia.webp"],
         position: "Mid-centre, under the Acer",
         light: "Shade to partial shade. Tolerates deep shade.",
         water: "Moderate; let top inch dry between waterings.",
@@ -161,6 +163,7 @@ window.OAK = (function () {
       {
         name: "Rhododendron",
         latin: "Rhododendron 'Goldflimmer'",
+        photos: ["images/plants/rhododendron.webp"],
         position: "Mid-left, variegated evergreen",
         light: "Partial shade. Avoid hot, dry sun.",
         water: "Even moisture; never waterlogged.",
@@ -170,6 +173,7 @@ window.OAK = (function () {
       {
         name: "Astilbe",
         latin: "Astilbe",
+        photos: ["images/plants/astilbe.webp"],
         position: "Right side — feathery plumes in summer",
         light: "Partial shade; tolerates more sun if soil stays moist.",
         water: "Loves moisture. Water freely in dry spells.",
@@ -179,6 +183,7 @@ window.OAK = (function () {
       {
         name: "Hosta",
         latin: "Hosta",
+        photos: ["images/plants/hosta-gold-standard.webp", "images/plants/hosta-patriot.webp"],
         position: "Front-left, green/white variegation",
         light: "Shade to partial shade.",
         water: "Keep soil moist; mulch to retain moisture.",
@@ -188,6 +193,7 @@ window.OAK = (function () {
       {
         name: "Angel Wings",
         latin: "Senecio candicans",
+        photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp"],
         position: "Front-centre — silvery-white leaves",
         light: "Full sun to partial sun.",
         water: "Drought-tolerant once established. Avoid overwatering.",
@@ -197,6 +203,7 @@ window.OAK = (function () {
       {
         name: "Box Hedging",
         latin: "Buxus sempervirens",
+        photos: [],
         position: "Full right edge — clipped",
         light: "Sun or partial shade.",
         water: "Moderate; established plants tolerate dry spells.",
@@ -206,6 +213,7 @@ window.OAK = (function () {
       {
         name: "Euonymus",
         latin: "Euonymus fortunei (golden)",
+        photos: [],
         position: "Front-left corner",
         light: "Sun or partial shade.",
         water: "Moderate; very tolerant once established.",
@@ -215,6 +223,7 @@ window.OAK = (function () {
       {
         name: "English Daisy",
         latin: "Bellis perennis",
+        photos: [],
         position: "Front-centre — pink pom-poms",
         light: "Sun to partial shade.",
         water: "Moderate.",
@@ -226,6 +235,7 @@ window.OAK = (function () {
       {
         name: "Weeping Cherry",
         latin: "Prunus species",
+        photos: [],
         position: "Upper section — overhanging the wall",
         light: "Full sun.",
         water: "Moderate; deep watering when young.",
@@ -235,6 +245,7 @@ window.OAK = (function () {
       {
         name: "Variegated Dogwood",
         latin: "Cornus alba 'Elegantissima'",
+        photos: ["images/plants/variegated-dogwood.webp"],
         position: "Upper section — red winter stems",
         light: "Sun or partial shade.",
         water: "Moisture-loving; tolerates wet soil.",
@@ -244,6 +255,7 @@ window.OAK = (function () {
       {
         name: "Peony",
         latin: "Paeonia lactiflora",
+        photos: ["images/plants/peony.webp"],
         position: "Lower section",
         light: "Full sun, sheltered.",
         water: "Moderate; deep watering when budding.",
@@ -253,6 +265,7 @@ window.OAK = (function () {
       {
         name: "Weigela",
         latin: "Weigela florida",
+        photos: ["images/plants/weigela.webp"],
         position: "Mid section",
         light: "Full sun.",
         water: "Moderate.",
@@ -262,6 +275,7 @@ window.OAK = (function () {
       {
         name: "Silverbush",
         latin: "Convolvulus cneorum",
+        photos: ["images/plants/silverbush.webp"],
         position: "Mid-right — silvery foliage",
         light: "Full sun.",
         water: "Drought-tolerant. Hates wet feet.",
@@ -271,6 +285,7 @@ window.OAK = (function () {
       {
         name: "Hosta",
         latin: "Hosta",
+        photos: ["images/plants/hosta-gold-standard.webp", "images/plants/hosta-patriot.webp"],
         position: "Lower, front-left",
         light: "Shade to partial shade.",
         water: "Keep moist.",
@@ -280,6 +295,7 @@ window.OAK = (function () {
       {
         name: "Angel Wings",
         latin: "Senecio candicans",
+        photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp"],
         position: "Lower, front",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -289,6 +305,7 @@ window.OAK = (function () {
       {
         name: "Forget-me-not",
         latin: "Myosotis",
+        photos: [],
         position: "Lower — small blue flowers",
         light: "Sun to partial shade.",
         water: "Moderate.",
@@ -298,6 +315,7 @@ window.OAK = (function () {
       {
         name: "Maiden Pink",
         latin: "Dianthus deltoides",
+        photos: ["images/plants/maiden-pink.webp"],
         position: "Between walls — pink flowers",
         light: "Full sun.",
         water: "Low; sharp drainage.",
@@ -307,6 +325,7 @@ window.OAK = (function () {
       {
         name: "Nemesia",
         latin: "Nemesia spp.",
+        photos: [],
         position: "Between walls — orange/coral",
         light: "Full sun.",
         water: "Moderate; don't let pots dry out.",
@@ -318,6 +337,7 @@ window.OAK = (function () {
       {
         name: "Apple Tree",
         latin: "Malus domestica",
+        photos: [],
         position: "Centre — with bird feeders",
         light: "Full sun.",
         water: "Deep watering in dry spells, especially when fruiting.",
@@ -327,6 +347,7 @@ window.OAK = (function () {
       {
         name: "Avens",
         latin: "Geum",
+        photos: ["images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp"],
         position: "Front-left — orange flowers",
         light: "Sun or partial shade.",
         water: "Moderate.",
@@ -336,6 +357,7 @@ window.OAK = (function () {
       {
         name: "Wintercreeper",
         latin: "Euonymus fortunei",
+        photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp"],
         position: "Front-right — variegated evergreen",
         light: "Sun or partial shade.",
         water: "Moderate.",
@@ -347,6 +369,7 @@ window.OAK = (function () {
       {
         name: "Wisteria",
         latin: "Wisteria spp.",
+        photos: [],
         position: "Top — cascading over the wall",
         light: "Full sun.",
         water: "Deep watering when young; established plants tolerate drought.",
@@ -356,6 +379,7 @@ window.OAK = (function () {
       {
         name: "New Zealand Flax",
         latin: "Phormium",
+        photos: [],
         position: "Upper-mid — sword-shaped leaves",
         light: "Full sun.",
         water: "Moderate; drought-tolerant established.",
@@ -365,6 +389,7 @@ window.OAK = (function () {
       {
         name: "Rose",
         latin: "Rosa",
+        photos: [],
         position: "Mid — on trellis/support",
         light: "Full sun.",
         water: "Deep watering, mulch in spring.",
@@ -374,6 +399,7 @@ window.OAK = (function () {
       {
         name: "Yucca",
         latin: "Yucca filamentosa",
+        photos: [],
         position: "Lower-left — spiky, architectural",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -383,6 +409,7 @@ window.OAK = (function () {
       {
         name: "Lavender",
         latin: "Lavandula angustifolia",
+        photos: [],
         position: "Right — grey-green foliage",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -394,6 +421,7 @@ window.OAK = (function () {
       {
         name: "Aubrieta",
         latin: "Aubrieta deltoidea",
+        photos: ["images/plants/aubrieta.webp"],
         position: "Left end — purple spring flowers",
         light: "Full sun.",
         water: "Low.",
@@ -403,6 +431,7 @@ window.OAK = (function () {
       {
         name: "Houseleeks",
         latin: "Sempervivum",
+        photos: ["images/plants/houseleek.webp"],
         position: "Left-centre — rosettes in gravel",
         light: "Full sun.",
         water: "Very low. Hates wet.",
@@ -412,6 +441,7 @@ window.OAK = (function () {
       {
         name: "Stonecrop",
         latin: "Sedum (trailing)",
+        photos: ["images/plants/stonecrop-1.webp", "images/plants/stonecrop-2.webp", "images/plants/stonecrop-3.webp"],
         position: "Centre-left",
         light: "Full sun.",
         water: "Low.",
@@ -421,6 +451,7 @@ window.OAK = (function () {
       {
         name: "New Zealand Flax (dark)",
         latin: "Phormium 'Platt's Black'",
+        photos: [],
         position: "Centre — dark burgundy spikes",
         light: "Full sun.",
         water: "Moderate; drought-tolerant once established.",
@@ -430,6 +461,7 @@ window.OAK = (function () {
       {
         name: "Rosemary",
         latin: "Salvia rosmarinus",
+        photos: [],
         position: "Centre-right — grey-green needles",
         light: "Full sun.",
         water: "Low.",
@@ -439,6 +471,7 @@ window.OAK = (function () {
       {
         name: "Cabbage Tree",
         latin: "Cordyline australis 'Red Star'",
+        photos: [],
         position: "Right — large palm-like tree",
         light: "Full sun.",
         water: "Moderate; established plants tolerate drought.",
@@ -448,6 +481,7 @@ window.OAK = (function () {
       {
         name: "Honeysuckle",
         latin: "Lonicera",
+        photos: [],
         position: "Far right",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
@@ -459,6 +493,7 @@ window.OAK = (function () {
       {
         name: "Clematis",
         latin: "Clematis montana",
+        photos: [],
         position: "Left side of house wall — mature woody stems",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
@@ -470,6 +505,7 @@ window.OAK = (function () {
       {
         name: "Pear Tree",
         latin: "Pyrus",
+        photos: [],
         position: "Upper terrace — near the gate",
         light: "Full sun.",
         water: "Deep watering in dry summers.",
