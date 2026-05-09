@@ -1,0 +1,304 @@
+{
+  "Bed 1": [
+    {
+      "name": "Angel Wings",
+      "latin": "Senecio candicans",
+      "light": "Full sun",
+      "water": "Well-drained soil; drought-tolerant.",
+      "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.",
+      "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."
+    },
+    {
+      "name": "Astilbe",
+      "latin": "Astilbe",
+      "light": "Partial to full shade",
+      "water": "Moist to wet soil; do not let dry out.",
+      "care": "Leave dried flower heads for winter interest or cut back in autumn.",
+      "seasonal": "Herbaceous perennial. Dies back in winter. Feathery flower plumes appear in summer."
+    },
+    {
+      "name": "Box Hedging",
+      "latin": "Buxus sempervirens",
+      "light": "Full sun to full shade.",
+      "water": "Tolerates most well-drained soils. Water regularly when newly planted; established plants are fairly drought-tolerant.",
+      "care": "Clip twice a year (late spring and late summer) to maintain a neat shape. Watch for box blight and box tree caterpillar.",
+      "seasonal": "Evergreen. Retains dense, glossy green foliage year-round. Produces small insignificant flowers in spring."
+    },
+    {
+      "name": "English Daisy",
+      "latin": "Bellis perennis",
+      "light": "Full sun to partial shade.",
+      "water": "Moist, well-drained soil. Water regularly.",
+      "care": "Deadhead spent flowers to encourage continued blooming. Can self-seed freely.",
+      "seasonal": "Short-lived perennial often grown as a biennial. Produces pink, red, or white pom-pom flowers from early spring through summer. May die back in hot summers."
+    },
+    {
+      "name": "Euonymus",
+      "latin": "Euonymus fortunei (golden variety)",
+      "light": "Full sun to partial shade.",
+      "water": "Tolerates most soils; average watering.",
+      "care": "Prune in spring to maintain shape. Can be used as ground cover or trained upwards.",
+      "seasonal": "Evergreen. Keeps its bright golden-variegated foliage all year round. Colours may intensify in full sun."
+    },
+    {
+      "name": "Hosta (Plantain Lily)",
+      "latin": "Hosta",
+      "light": "Partial to full shade",
+      "water": "Rich moist soil.",
+      "care": "Watch out for slugs and snails!",
+      "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."
+    },
+    {
+      "name": "Japanese Aralia",
+      "latin": "Fatsia japonica 'Spider''s Web'",
+      "light": "Partial to full shade",
+      "water": "Moist well-drained soil.",
+      "care": "Protect from harsh cold winds.",
+      "seasonal": "Evergreen. Keeps its speckled tropical leaves year-round."
+    },
+    {
+      "name": "Japanese Maple",
+      "latin": "Acer palmatum",
+      "light": "Dappled shade to partial sun.",
+      "water": "Keep soil consistently moist but not waterlogged.",
+      "care": "Slightly acidic, well-drained loam.",
+      "seasonal": "Requires minimal pruning. Remove dead or crossing branches during the dormant winter season."
+    },
+    {
+      "name": "Rhododendron",
+      "latin": "Rhododendron 'Goldflimmer'",
+      "light": "Partial shade",
+      "water": "Acidic (ericaceous) moist well-drained soil.",
+      "care": "Deadhead carefully after flowering. Needs ericaceous compost/fertiliser.",
+      "seasonal": "Evergreen. Keeps its variegated leaves all year. Blooms with purple flowers in late spring."
+    }
+  ],
+  "Bed 2": [
+    {
+      "name": "Angel Wings",
+      "latin": "Senecio candicans",
+      "light": "Full sun",
+      "water": "Well-drained soil; drought-tolerant.",
+      "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.",
+      "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."
+    },
+    {
+      "name": "Forget-me-not",
+      "latin": "Myosotis",
+      "light": "Partial shade.",
+      "water": "Keep soil consistently moist.",
+      "care": "Humus-rich, moisture-retentive soil.",
+      "seasonal": "Pull up plants after flowering to prevent excessive self-seeding, or leave them if naturalising is desired."
+    },
+    {
+      "name": "Hosta (Plantain Lily)",
+      "latin": "Hosta",
+      "light": "Partial to full shade",
+      "water": "Rich moist soil.",
+      "care": "Watch out for slugs and snails!",
+      "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."
+    },
+    {
+      "name": "Maiden Pink",
+      "latin": "Dianthus deltoides",
+      "light": "Full sun",
+      "water": "Well-drained neutral to alkaline soil.",
+      "care": "Deadhead regularly to prolong flowering.",
+      "seasonal": "Evergreen mat of foliage. Blooms with bright pink/red flowers in summer."
+    },
+    {
+      "name": "Nemesia",
+      "latin": "Nemesiaspp.",
+      "light": "Full sun to partial shade.",
+      "water": "Regular; keep the soil moist but ensure it does not become soggy.",
+      "care": "Rich, well-drained compost or soil.",
+      "seasonal": "Trim the plant back slightly after the initial flush of flowers to encourage a second display."
+    },
+    {
+      "name": "Peony",
+      "latin": "Paeonia lactiflora",
+      "light": "Full sun to light shade",
+      "water": "Rich well-drained soil; moderate watering.",
+      "care": "Provide plant supports for heavy flower heads. Cut back dead foliage in late autumn.",
+      "seasonal": "Herbaceous perennial. Dies back completely in winter. Huge blooms in late spring/early summer."
+    },
+    {
+      "name": "Silverbush",
+      "latin": "Convolvulus cneorum",
+      "light": "Full sun",
+      "water": "Very well-drained soil; drought-tolerant.",
+      "care": "Protect from severe winter wet and cold.",
+      "seasonal": "Evergreen. Retains silver foliage year-round. Produces white/pink flowers in spring and summer."
+    },
+    {
+      "name": "Variegated Dogwood",
+      "latin": "Cornus alba",
+      "light": "Full sun to partial shade",
+      "water": "Tolerates most soils even damp ones.",
+      "care": "Prune hard (coppice) in late winter/early spring to encourage bright new stems.",
+      "seasonal": "Deciduous. Drops leaves in autumn to reveal striking bright red winter stems."
+    },
+    {
+      "name": "Weeping Cherry",
+      "latin": "Prunus\u00a0species",
+      "light": "Full sun.",
+      "water": "Needs moderately fertile, well-drained soil. Keep the ground consistently moist but avoid waterlogged conditions.",
+      "care": "Prune during the dormant winter period only to remove dead, diseased, or crossing branches. Avoid disrupting the natural weeping form. Apply a balanced fertiliser in early spring.",
+      "seasonal": "Deciduous. Exhibits prolific spring blossoms before or alongside leaf emergence. The canopy provides summer shade before leaves turn yellow or bronze and drop in autumn."
+    },
+    {
+      "name": "Weigela",
+      "latin": "Weigela florida",
+      "light": "Full sun to partial shade",
+      "water": "Moist well-drained soil.",
+      "care": "Prune immediately after flowering.",
+      "seasonal": "Deciduous. Drops leaves in autumn. Blooms with trumpet flowers in late spring/early summer."
+    }
+  ],
+  "Bed 3": [
+    {
+      "name": "Apple Tree",
+      "latin": "Malus domestica",
+      "light": "Full sun.",
+      "water": "Regular watering, particularly during fruit development.",
+      "care": "Well-drained, fertile soil.",
+      "seasonal": "Prune in late winter while dormant to maintain structure and encourage fruiting spurs."
+    },
+    {
+      "name": "Avens",
+      "latin": "Geum",
+      "light": "Full sun to partial shade",
+      "water": "Moist but well-drained soil; water regularly.",
+      "care": "Deadhead spent flowers to encourage more blooms.",
+      "seasonal": "Herbaceous or semi-evergreen. Produces bright flowers from late spring through summer."
+    },
+    {
+      "name": "Wintercreeper",
+      "latin": "Euonymus fortunei",
+      "light": "Full sun to full shade",
+      "water": "Tolerates most soils; average watering.",
+      "care": "Prune in spring to maintain shape.",
+      "seasonal": "Evergreen shrub. Keeps its bright variegated foliage all year round."
+    }
+  ],
+  "Bed 4": [
+    {
+      "name": "Lavender",
+      "latin": "Lavandula angustifolia",
+      "light": "Full sun.",
+      "water": "Well-drained, poor to moderately fertile soil. Drought-tolerant once established.",
+      "care": "Prune after flowering in late summer, cutting back to just above the woody growth. Do not cut into old wood.",
+      "seasonal": "Evergreen. Grey-green aromatic foliage year-round. Produces fragrant purple flower spikes from mid to late summer. Attractive to bees and butterflies."
+    },
+    {
+      "name": "New Zealand Flax",
+      "latin": "Phormium",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate; keep evenly moist during the growing season.",
+      "care": "Versatile; prefers well-drained conditions.",
+      "seasonal": "Cut back old, damaged, or untidy leaves right to the base in spring."
+    },
+    {
+      "name": "Rose",
+      "latin": "Rosa",
+      "light": "Full sun.",
+      "water": "Regular, deep watering at the base to avoid wetting the foliage.",
+      "care": "Rich, well-drained, slightly acidic loam.",
+      "seasonal": "Prune hard in late winter or early spring. Deadhead spent blooms regularly to encourage further flowering."
+    },
+    {
+      "name": "Wisteria",
+      "latin": "Wisteriaspp.",
+      "light": "Full sun.",
+      "water": "Regular watering until a deep root system is established.",
+      "care": "Well-drained, fertile soil.",
+      "seasonal": "Requires bi-annual pruning (summer and winter) to control vigorous growth and promote flower buds."
+    },
+    {
+      "name": "Yucca",
+      "latin": "Yucca filamentosa",
+      "light": "Full sun.",
+      "water": "Very well-drained soil; highly drought-tolerant once established.",
+      "care": "Low maintenance. Remove dead or damaged leaves at the base. Wear gloves as leaf tips can be sharp.",
+      "seasonal": "Evergreen. Spiky architectural rosettes provide year-round structure. Produces tall spikes of creamy-white bell flowers in summer."
+    }
+  ],
+  "Stone Bed": [
+    {
+      "name": "Aubrieta (Rock Cress)",
+      "latin": "Aubrieta deltoidea",
+      "light": "Full sun",
+      "water": "Well-drained soil; drought-tolerant once established.",
+      "care": "Shear back after blooming to keep it compact.",
+      "seasonal": "Evergreen foliage. Bursts with purple flowers in spring."
+    },
+    {
+      "name": "Cabbage Tree",
+      "latin": "Cordyline australis",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate; drought-tolerant when mature.",
+      "care": "Adaptable, but requires good drainage.",
+      "seasonal": "Remove dead or yellowing leaves from the base of the tufts to maintain a tidy appearance."
+    },
+    {
+      "name": "Honeysuckle",
+      "latin": "Lonicera",
+      "light": "Full sun.",
+      "water": "Adaptable to various soil types, provided they are moist and well-drained. Water regularly during the first growing season.",
+      "care": "Prune after flowering to control growth and remove congested stems. Train new shoots along supports as required.",
+      "seasonal": "Deciduous or semi-evergreen depending on the exact species. Characterised by rapid summer growth and fragrant tubular flowers, often followed by small berries in autumn."
+    },
+    {
+      "name": "Houseleeks (Hens and Chicks)",
+      "latin": "Sempervivum",
+      "light": "Full sun",
+      "water": "Highly well-drained/gritty soil; water sparingly.",
+      "care": "Very low maintenance. Remove dead rosettes after they flower and die.",
+      "seasonal": "Evergreen rosettes. Forms offsets (chicks) during growing season."
+    },
+    {
+      "name": "New Zealand Flax (dark)",
+      "latin": "Phormium 'Platt's Black' or similar",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate; keep evenly moist during the growing season. Versatile; prefers well-drained conditions.",
+      "care": "Cut back old, damaged, or untidy leaves right to the base in spring. Protect crown from severe frost with mulch.",
+      "seasonal": "Evergreen. Dark burgundy-black sword-shaped leaves provide dramatic year-round contrast against the grey slate chippings."
+    },
+    {
+      "name": "Rosemary",
+      "latin": "Salvia rosmarinus",
+      "light": "Full sun.",
+      "water": "Low; highly drought-tolerant once established. Allow soil to dry between waterings.",
+      "care": "Poor to moderately fertile, very well-drained soil.",
+      "seasonal": "Prune lightly after flowering to maintain shape and prevent the centre from becoming overly woody."
+    },
+    {
+      "name": "Stonecrop",
+      "latin": "Sedum (various trailing types)",
+      "light": "Full sun",
+      "water": "Well-drained soil; very drought-tolerant.",
+      "care": "Low maintenance. Trim back if it gets too leggy.",
+      "seasonal": "Mostly evergreen. Flowers in summer. Leaf colours may deepen in cooler weather."
+    }
+  ],
+  "Patio": [
+    {
+      "name": "Clematis",
+      "latin": "Clematis\u00a0(likely\u00a0montana)",
+      "light": "Full sun.",
+      "water": "Requires moist, well-drained earth. Deep watering is necessary during extended dry spells.",
+      "care": "Pruning depends on the specific group; spring-flowering types generally need minimal pruning immediately after flowering to control size. Mulch around the base to keep roots cool.",
+      "seasonal": "Deciduous. Produces vigorous growth and abundant flowers in spring. Foliage drops in autumn, leaving bare woody stems over winter."
+    }
+  ],
+  "Tree": [
+    {
+      "name": "Pear Tree",
+      "latin": "Pyrus",
+      "light": "Full sun.",
+      "water": "Prefers well-drained, loamy soil. Requires regular watering during the establishment phase and prolonged dry periods, particularly when fruiting.",
+      "care": "Requires annual winter pruning to maintain shape, remove dead wood, and encourage productive fruiting spurs. Monitor for common pests like aphids and diseases such as pear rust.",
+      "seasonal": "Deciduous. Blossoms in early spring, followed by leaf emergence and fruit development through summer. Harvest typically occurs in late summer or autumn, preceding leaf fall."
+    }
+  ]
+}
