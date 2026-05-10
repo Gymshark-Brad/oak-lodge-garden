@@ -1,9 +1,14 @@
 // Oak Lodge Garden — PlantCard.jsx
 // Herbarium specimen-style card. Slides up from the bottom when a plant is opened.
 
-const { useEffect: useEffect_PC } = React;
+const { useEffect: useEffect_PC, useState: useState_PC } = React;
 
 function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
+  const [photoIdx, setPhotoIdx] = useState_PC(0);
+
+  // Reset photo index when plant changes
+  useEffect_PC(() => { setPhotoIdx(0); }, [plant]);
+
   useEffect_PC(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -16,24 +21,28 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
 
   if (!plant) return null;
 
+  const photos = plant.photos || [];
+  const hasPhotos = photos.length > 0;
+
   const fields = [
-    { label: "Light", icon: "☀", text: plant.light },
-    { label: "Water", icon: "◌", text: plant.water },
-    { label: "Care & soil", icon: "✦", text: plant.care },
+    { label: "Light",          icon: "☀", text: plant.light    },
+    { label: "Water",          icon: "◌", text: plant.water    },
+    { label: "Care & soil",    icon: "✦", text: plant.care     },
     { label: "Through the year", icon: "❋", text: plant.seasonal },
   ];
 
-  // herbarium-y specimen number derived from Latin name
   const specNo = (plant.latin || plant.name)
     .replace(/[^A-Za-z0-9]/g, "")
     .toUpperCase()
     .slice(0, 6)
     .padEnd(6, "0");
 
+  const prevPhoto = () => setPhotoIdx((i) => (i - 1 + photos.length) % photos.length);
+  const nextPhoto = () => setPhotoIdx((i) => (i + 1) % photos.length);
+
   return (
     <div className="pc-backdrop" onClick={onClose}>
       <div className="pc-shell" onClick={(e) => e.stopPropagation()}>
-        {/* Tape strips at corners */}
         <span className="tape" style={{ top: -10, left: 60, transform: "rotate(-6deg)" }} />
         <span className="tape" style={{ top: -10, right: 60, transform: "rotate(5deg)" }} />
 
@@ -52,15 +61,43 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
             </div>
           </div>
 
-          {/* Specimen body — left = silhouette, right = naming */}
+          {/* Specimen body */}
           <div className="pc-body">
+
+            {/* Left: photo or silhouette */}
             <div className="pc-silhouette">
-              <PlantSilhouette plant={plant} />
-              <div className="t-mono" style={{ textAlign: "center", opacity: 0.6, marginTop: 6 }}>
-                impression · pencil & wash
-              </div>
+              {hasPhotos ? (
+                <div className="pc-photo-wrap">
+                  <img
+                    key={photos[photoIdx]}
+                    src={photos[photoIdx]}
+                    alt={plant.name}
+                    className="pc-photo"
+                  />
+                  {photos.length > 1 && (
+                    <div className="pc-photo-nav">
+                      <button className="pc-photo-btn" onClick={(e) => { e.stopPropagation(); prevPhoto(); }}>‹</button>
+                      <span className="t-mono" style={{ fontSize: 10, opacity: 0.7 }}>
+                        {photoIdx + 1} / {photos.length}
+                      </span>
+                      <button className="pc-photo-btn" onClick={(e) => { e.stopPropagation(); nextPhoto(); }}>›</button>
+                    </div>
+                  )}
+                  <div className="t-mono" style={{ textAlign: "center", opacity: 0.55, marginTop: 6, fontSize: 10 }}>
+                    Oak Lodge · May 2026
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <PlantSilhouette plant={plant} />
+                  <div className="t-mono" style={{ textAlign: "center", opacity: 0.6, marginTop: 6 }}>
+                    impression · pencil &amp; wash
+                  </div>
+                </>
+              )}
             </div>
 
+            {/* Right: naming */}
             <div className="pc-naming">
               <div className="t-stamp">Common name</div>
               <div className="t-display" style={{ fontSize: 56, lineHeight: 1, marginTop: 4 }}>
@@ -79,7 +116,7 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
 
           <div className="rule" style={{ margin: "8px 0 16px" }} />
 
-          {/* Care fields, ruled-paper grid */}
+          {/* Care fields */}
           <div className="pc-fields">
             {fields.map((f) => (
               <div key={f.label} className="pc-field">
@@ -92,10 +129,10 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
             ))}
           </div>
 
-          {/* Footer: collector signature + nav */}
+          {/* Footer */}
           <div className="pc-foot">
             <div className="t-mono" style={{ opacity: 0.65 }}>
-              det. b. h. ·  ‘26
+              det. b. h. · '26
             </div>
             <div className="row gap-3">
               {onPrev && (
@@ -162,6 +199,34 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
           background: color-mix(in oklab, var(--paper) 92%, var(--paper-deep) 8%);
           border: 1px dashed var(--hairline);
         }
+        .pc-photo-wrap {
+          width: 100%;
+          display: flex; flex-direction: column; align-items: center;
+        }
+        .pc-photo {
+          width: 100%;
+          aspect-ratio: 3/4;
+          object-fit: cover;
+          display: block;
+          border: 1px solid color-mix(in oklab, var(--ink) 8%, transparent);
+        }
+        .pc-photo-nav {
+          display: flex; align-items: center; gap: 10px;
+          margin-top: 8px;
+        }
+        .pc-photo-btn {
+          background: none;
+          border: 1px solid color-mix(in oklab, var(--ink) 20%, transparent);
+          color: var(--ink);
+          font-family: var(--serif);
+          font-size: 16px;
+          padding: 2px 8px;
+          cursor: pointer;
+          border-radius: 2px;
+          opacity: 0.7;
+          transition: opacity 0.15s;
+        }
+        .pc-photo-btn:hover { opacity: 1; }
         .pc-fields {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -198,8 +263,7 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
   );
 }
 
-// Hand-drawn-looking SVG silhouette of the plant. Generic shapes per category;
-// no attempt at photorealism — this is a journal sketch.
+// Hand-drawn-looking SVG silhouette — fallback when no photo exists
 function PlantSilhouette({ plant }) {
   const name = (plant.name + " " + plant.latin).toLowerCase();
   let kind = "shrub";
@@ -207,9 +271,9 @@ function PlantSilhouette({ plant }) {
   else if (/(wisteria|clematis|honeysuckle|rose|rosa)/.test(name)) kind = "vine";
   else if (/(phormium|cordyline|yucca|cabbage tree)/.test(name)) kind = "spike";
   else if (/(hosta|fatsia|aralia)/.test(name)) kind = "leaf";
-  else if (/(daisy|peony|dianthus|nemesia|forget|aubrieta|geum|avens)/.test(name)) kind = "flower";
+  else if (/(daisy|peony|dianthus|nemesia|forget|aubrieta|geum|avens|geranium|kerria|pink)/.test(name)) kind = "flower";
   else if (/(sempervivum|sedum|stonecrop|houseleek)/.test(name)) kind = "succulent";
-  else if (/(lavender|rosemary|salvia)/.test(name)) kind = "herb";
+  else if (/(lavender|rosemary|salvia|hebe)/.test(name)) kind = "herb";
 
   return (
     <svg viewBox="0 0 100 130" style={{ width: 140, height: 180, display: "block" }}>
@@ -219,103 +283,70 @@ function PlantSilhouette({ plant }) {
           <feDisplacementMap in="SourceGraphic" in2="t" scale="1.4" />
         </filter>
       </defs>
-
-      {/* ground line */}
       <line x1="10" y1="120" x2="90" y2="120" stroke="var(--ink)" strokeOpacity="0.6" strokeWidth="0.7" strokeDasharray="2 1.5" />
-
       <g filter="url(#sl-rough)" fill="none" stroke="var(--ink)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        {kind === "tree" && (
-          <g>
-            <path d="M 50 120 L 50 70" />
-            <path d="M 50 80 C 45 78 42 73 44 68" />
-            <path d="M 50 75 C 56 73 60 68 58 62" />
-            <ellipse cx="50" cy="50" rx="28" ry="26" />
-            <ellipse cx="38" cy="42" rx="14" ry="12" />
-            <ellipse cx="62" cy="42" rx="14" ry="12" />
-            <ellipse cx="50" cy="34" rx="14" ry="11" />
-          </g>
-        )}
-        {kind === "shrub" && (
-          <g>
-            <path d="M 50 120 L 50 100" />
-            <ellipse cx="50" cy="80" rx="32" ry="22" />
-            <ellipse cx="36" cy="72" rx="14" ry="12" />
-            <ellipse cx="64" cy="74" rx="14" ry="12" />
-          </g>
-        )}
-        {kind === "vine" && (
-          <g>
-            <path d="M 18 120 C 18 100 28 90 28 70 C 28 50 18 38 25 22" />
-            <path d="M 30 110 C 38 100 38 90 50 84" />
-            <path d="M 25 90 C 35 88 48 78 50 70" />
-            <path d="M 28 65 C 40 60 48 52 60 50" />
-            <circle cx="60" cy="50" r="3" />
-            <circle cx="50" cy="70" r="2.6" />
-            <circle cx="38" cy="98" r="2.4" />
-          </g>
-        )}
-        {kind === "spike" && (
-          <g>
-            <path d="M 50 120 L 50 50" />
-            <path d="M 50 60 L 28 30" />
-            <path d="M 50 60 L 35 22" />
-            <path d="M 50 60 L 50 18" />
-            <path d="M 50 60 L 65 22" />
-            <path d="M 50 60 L 72 30" />
-            <path d="M 50 60 L 80 50" />
-            <path d="M 50 60 L 20 50" />
-          </g>
-        )}
-        {kind === "leaf" && (
-          <g>
-            <path d="M 50 120 C 35 110 28 90 32 70 C 35 56 45 50 50 50 C 55 50 65 56 68 70 C 72 90 65 110 50 120 Z" />
-            <path d="M 50 60 L 50 118" />
-            <path d="M 50 80 L 36 88" />
-            <path d="M 50 80 L 64 88" />
-            <path d="M 50 95 L 38 102" />
-            <path d="M 50 95 L 62 102" />
-          </g>
-        )}
-        {kind === "flower" && (
-          <g>
-            <path d="M 50 120 L 50 70" />
-            <circle cx="50" cy="55" r="6" />
-            <circle cx="50" cy="42" r="5" />
-            <circle cx="42" cy="50" r="4.5" />
-            <circle cx="58" cy="50" r="4.5" />
-            <circle cx="44" cy="62" r="4" />
-            <circle cx="56" cy="62" r="4" />
-            <path d="M 50 90 L 40 85" />
-            <path d="M 50 100 L 60 95" />
-          </g>
-        )}
-        {kind === "succulent" && (
-          <g>
-            <ellipse cx="50" cy="100" rx="24" ry="8" />
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a, i) => {
-              const r = 18;
-              const x = 50 + Math.cos((a * Math.PI) / 180) * r;
-              const y = 100 + Math.sin((a * Math.PI) / 180) * r * 0.45;
-              return <path key={i} d={`M 50 100 L ${x.toFixed(1)} ${y.toFixed(1)}`} />;
-            })}
-            <circle cx="50" cy="100" r="4" />
-          </g>
-        )}
-        {kind === "herb" && (
-          <g>
-            <path d="M 30 120 C 30 100 38 80 42 60" />
-            <path d="M 50 120 C 50 95 50 75 50 55" />
-            <path d="M 70 120 C 70 100 64 82 58 60" />
-            {[40, 50, 60, 70, 80, 90].map((y, i) => (
-              <g key={i}>
-                <path d={`M 42 ${y} L 38 ${y - 3}`} />
-                <path d={`M 50 ${y} L 46 ${y - 3}`} />
-                <path d={`M 50 ${y} L 54 ${y - 3}`} />
-                <path d={`M 58 ${y} L 62 ${y - 3}`} />
-              </g>
-            ))}
-          </g>
-        )}
+        {kind === "tree" && (<g>
+          <path d="M 50 120 L 50 70" />
+          <path d="M 50 80 C 45 78 42 73 44 68" />
+          <path d="M 50 75 C 56 73 60 68 58 62" />
+          <ellipse cx="50" cy="50" rx="28" ry="26" />
+          <ellipse cx="38" cy="42" rx="14" ry="12" />
+          <ellipse cx="62" cy="42" rx="14" ry="12" />
+          <ellipse cx="50" cy="34" rx="14" ry="11" />
+        </g>)}
+        {kind === "shrub" && (<g>
+          <path d="M 50 120 L 50 100" />
+          <ellipse cx="50" cy="80" rx="32" ry="22" />
+          <ellipse cx="36" cy="72" rx="14" ry="12" />
+          <ellipse cx="64" cy="74" rx="14" ry="12" />
+        </g>)}
+        {kind === "vine" && (<g>
+          <path d="M 18 120 C 18 100 28 90 28 70 C 28 50 18 38 25 22" />
+          <path d="M 30 110 C 38 100 38 90 50 84" />
+          <path d="M 25 90 C 35 88 48 78 50 70" />
+          <path d="M 28 65 C 40 60 48 52 60 50" />
+          <circle cx="60" cy="50" r="3" />
+          <circle cx="50" cy="70" r="2.6" />
+          <circle cx="38" cy="98" r="2.4" />
+        </g>)}
+        {kind === "spike" && (<g>
+          <path d="M 50 120 L 50 50" />
+          <path d="M 50 60 L 28 30" /><path d="M 50 60 L 35 22" />
+          <path d="M 50 60 L 50 18" /><path d="M 50 60 L 65 22" />
+          <path d="M 50 60 L 72 30" /><path d="M 50 60 L 80 50" />
+          <path d="M 50 60 L 20 50" />
+        </g>)}
+        {kind === "leaf" && (<g>
+          <path d="M 50 120 C 35 110 28 90 32 70 C 35 56 45 50 50 50 C 55 50 65 56 68 70 C 72 90 65 110 50 120 Z" />
+          <path d="M 50 60 L 50 118" />
+          <path d="M 50 80 L 36 88" /><path d="M 50 80 L 64 88" />
+          <path d="M 50 95 L 38 102" /><path d="M 50 95 L 62 102" />
+        </g>)}
+        {kind === "flower" && (<g>
+          <path d="M 50 120 L 50 70" />
+          <circle cx="50" cy="55" r="6" /><circle cx="50" cy="42" r="5" />
+          <circle cx="42" cy="50" r="4.5" /><circle cx="58" cy="50" r="4.5" />
+          <circle cx="44" cy="62" r="4" /><circle cx="56" cy="62" r="4" />
+          <path d="M 50 90 L 40 85" /><path d="M 50 100 L 60 95" />
+        </g>)}
+        {kind === "succulent" && (<g>
+          <ellipse cx="50" cy="100" rx="24" ry="8" />
+          {[0,30,60,90,120,150,180,210,240,270,300,330].map((a, i) => {
+            const x = 50 + Math.cos((a*Math.PI)/180)*18;
+            const y = 100 + Math.sin((a*Math.PI)/180)*8;
+            return <path key={i} d={`M 50 100 L ${x.toFixed(1)} ${y.toFixed(1)}`} />;
+          })}
+          <circle cx="50" cy="100" r="4" />
+        </g>)}
+        {kind === "herb" && (<g>
+          <path d="M 30 120 C 30 100 38 80 42 60" />
+          <path d="M 50 120 C 50 95 50 75 50 55" />
+          <path d="M 70 120 C 70 100 64 82 58 60" />
+          {[40,50,60,70,80,90].map((y, i) => (<g key={i}>
+            <path d={`M 42 ${y} L 38 ${y-3}`} /><path d={`M 50 ${y} L 46 ${y-3}`} />
+            <path d={`M 50 ${y} L 54 ${y-3}`} /><path d={`M 58 ${y} L 62 ${y-3}`} />
+          </g>))}
+        </g>)}
       </g>
     </svg>
   );

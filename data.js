@@ -203,7 +203,7 @@ window.OAK = (function () {
       {
         name: "Box Hedging",
         latin: "Buxus sempervirens",
-        photos: [],
+        photos: ["images/plants/box-hedging.webp", "images/plants/box-hedging-1.webp"],
         position: "Full right edge — clipped",
         light: "Sun or partial shade.",
         water: "Moderate; established plants tolerate dry spells.",
@@ -213,7 +213,7 @@ window.OAK = (function () {
       {
         name: "Euonymus",
         latin: "Euonymus fortunei (golden)",
-        photos: [],
+        photos: ["images/plants/euonymus.webp", "images/plants/euonymus-1.webp"],
         position: "Front-left corner",
         light: "Sun or partial shade.",
         water: "Moderate; very tolerant once established.",
@@ -229,16 +229,6 @@ window.OAK = (function () {
         water: "Low to moderate once established.",
         care: "Cut back hard after first flush for a second showing. Divide every 3–4 years.",
         seasonal: "Deeply lobed foliage from April; purple-blue flowers May–July, often a second flush in autumn.",
-      },
-      {
-        name: "English Daisy",
-        latin: "Bellis perennis",
-        photos: [],
-        position: "Front-centre — pink pom-poms",
-        light: "Sun to partial shade.",
-        water: "Moderate.",
-        care: "Deadhead to prolong flowering; biennial — may self-seed.",
-        seasonal: "Pink double flowers April–July.",
       },
     ],
     "Bed 2": [
@@ -437,7 +427,7 @@ window.OAK = (function () {
       {
         name: "Lavender",
         latin: "Lavandula angustifolia",
-        photos: [],
+        photos: ["images/plants/lavender.webp", "images/plants/lavender-1.webp"],
         position: "Right — grey-green foliage",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -519,7 +509,7 @@ window.OAK = (function () {
       {
         name: "Honeysuckle",
         latin: "Lonicera",
-        photos: [],
+        photos: ["images/plants/honeysuckle.webp", "images/plants/honeysuckle-1.webp", "images/plants/honeysuckle-2.webp"],
         position: "Far right",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
@@ -640,7 +630,6 @@ window.OAK = (function () {
       { name: "Angel Wings", x: 50, y: 80, r: 8, hue: 70 },
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
-      { name: "English Daisy", x: 60, y: 90, r: 5, hue: 340 },
       { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
     ],
     bed2: [
