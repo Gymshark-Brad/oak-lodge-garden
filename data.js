@@ -25,7 +25,7 @@ window.OAK = (function () {
       dims: "T-shape, between walls",
       where: "Lower level, west boundary",
       desc:
-        "T-shaped border running between two brick walls. Weeping cherry overhangs the back, with peony, dogwood and weigela through the body. Maiden pink and nemesia spill from the wall gap.",
+        "T-shaped border running between two brick walls. Weeping cherry overhangs the back, with peony, dogwood and weigela through the body. Maiden pink spills from the wall gap.",
       shape: {
         kind: "polygon",
         points: "30,250 130,250 130,335 300,335 300,395 130,395 130,475 30,475",
@@ -183,7 +183,7 @@ window.OAK = (function () {
       {
         name: "Hosta",
         latin: "Hosta",
-        photos: ["images/plants/hosta-gold-standard.webp", "images/plants/hosta-patriot.webp", "images/plants/hosta-patriot-2.webp", "images/plants/hosta-francee.webp"],
+        photos: ["images/plants/hosta-patriot.webp", "images/plants/hosta-patriot-2.webp", "images/plants/hosta-francee.webp"],
         position: "Front-left, green/white variegation",
         light: "Shade to partial shade.",
         water: "Keep soil moist; mulch to retain moisture.",
@@ -219,6 +219,16 @@ window.OAK = (function () {
         water: "Moderate; very tolerant once established.",
         care: "Trim to shape in spring. Tough and trouble-free.",
         seasonal: "Golden-variegated evergreen; pink tints in cold weather.",
+      },
+      {
+        name: "Nemesia",
+        latin: "Nemesia spp.",
+        photos: ["images/plants/nemesia.webp", "images/plants/nemesia-1.webp", "images/plants/nemesia-2.webp"],
+        position: "Front edge — orange/coral",
+        light: "Full sun.",
+        water: "Moderate; don't let pots dry out.",
+        care: "Deadhead and trim back to keep flowering.",
+        seasonal: "Continuous flowers May–October.",
       },
       {
         name: "Hardy Geranium",
@@ -285,6 +295,7 @@ window.OAK = (function () {
       {
         name: "Hosta",
         latin: "Hosta",
+        photos: ["images/plants/hosta-gold-standard.webp"],
         position: "Lower, front-left",
         light: "Shade to partial shade.",
         water: "Keep moist.",
@@ -294,6 +305,7 @@ window.OAK = (function () {
       {
         name: "Angel Wings",
         latin: "Senecio candicans",
+        photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp", "images/plants/angel-wings-3.webp"],
         position: "Lower, front",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -339,16 +351,6 @@ window.OAK = (function () {
         water: "Low. Sharp drainage essential.",
         care: "Deadhead to extend flowering. Cut back after main flush. Replace plants every 3 years as they become woody.",
         seasonal: "Fragrant double pink flowers June–August; silver-grey cushion foliage year-round.",
-      },
-      {
-        name: "Nemesia",
-        latin: "Nemesia spp.",
-        photos: ["images/plants/nemesia.webp", "images/plants/nemesia-1.webp", "images/plants/nemesia-2.webp"],
-        position: "Between walls — orange/coral",
-        light: "Full sun.",
-        water: "Moderate; don't let pots dry out.",
-        care: "Deadhead and trim back to keep flowering.",
-        seasonal: "Continuous flowers May–October.",
       },
     ],
     "Bed 3": [
@@ -506,18 +508,18 @@ window.OAK = (function () {
         care: "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest \'Heartbreaker\' or a closely related variegated cultivar.",
         seasonal: "Evergreen variegated foliage year-round; small purple-white flower spikes in summer.",
       },
+    ],
+    Patio: [
       {
         name: "Honeysuckle",
         latin: "Lonicera",
         photos: ["images/plants/honeysuckle.webp", "images/plants/honeysuckle-1.webp", "images/plants/honeysuckle-2.webp"],
-        position: "Far right",
+        position: "Far right — climbing on support",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
         care: "Light prune after flowering. Train onto support.",
         seasonal: "Fragrant flowers June–August.",
       },
-    ],
-    Patio: [
       {
         name: "Clematis",
         latin: "Clematis montana",
@@ -596,7 +598,6 @@ window.OAK = (function () {
         { src: "images/may-2026/patio.jpg",            caption: "Decking" },
         { src: "images/may-2026/patio-door.jpg",       caption: "Towards the house" },
         { src: "images/may-2026/patio-clematis.jpg",   caption: "Clematis montana" },
-        { src: "images/may-2026/patio-clematis-2.webp",caption: "Clematis in full bloom" },
         { src: "images/may-2026/patio-2.webp",         caption: "Circular paving" },
         { src: "images/may-2026/patio-3.webp",         caption: "Decking full length" },
       ],
@@ -611,7 +612,6 @@ window.OAK = (function () {
         { src: "images/may-2026/lounge.webp", caption: "Side passage" },
       ],
       pear: [
-        { src: "images/may-2026/pear.webp",   caption: "Pear tree area" },
         { src: "images/may-2026/pear-2.webp", caption: "Upper garden overview" },
       ],
     },
@@ -631,6 +631,7 @@ window.OAK = (function () {
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
       { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
+      { name: "Nemesia", x: 65, y: 88, r: 5, hue: 25 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
@@ -642,7 +643,6 @@ window.OAK = (function () {
       { name: "Angel Wings", x: 30, y: 88, r: 7, hue: 70 },
       { name: "Forget-me-not", x: 46, y: 78, r: 5, hue: 220 },
       { name: "Maiden Pink", x: 70, y: 78, r: 5, hue: 330 },
-      { name: "Nemesia", x: 86, y: 78, r: 5, hue: 25 },
       { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
       { name: "Garden Pink", x: 72, y: 88, r: 5, hue: 340 },
     ],
@@ -665,11 +665,11 @@ window.OAK = (function () {
       { name: "New Zealand Flax (dark)", x: 50, y: 50, r: 9, hue: 0 },
       { name: "Rosemary", x: 64, y: 50, r: 7, hue: 200 },
       { name: "Cabbage Tree", x: 80, y: 50, r: 11, hue: 350 },
-      { name: "Honeysuckle", x: 94, y: 50, r: 7, hue: 50 },
       { name: "Hebe", x: 14, y: 72, r: 6, hue: 260 },
     ],
     patio: [
       { name: "Clematis", x: 18, y: 50, r: 14, hue: 320 },
+      { name: "Honeysuckle", x: 82, y: 50, r: 10, hue: 50 },
     ],
     pear: [
       { name: "Pear Tree", x: 50, y: 50, r: 30, hue: 100 },
