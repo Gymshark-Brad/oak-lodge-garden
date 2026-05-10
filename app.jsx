@@ -10,7 +10,8 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  const [view, setView] = useState_App({ name: "plan" }); // plan | bed | plant
+  const [view, setView] = useState_App({ name: "plan" }); // plan | calendar | bed | plant
+  const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
 
   const Z = window.OAK.ZONES;
@@ -45,7 +46,8 @@ function App() {
     setView({ name: "bed", zoneKey });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const openPlant = ({ zoneKey, plantIndex, plantName }) => {
+  const openPlant = ({ zoneKey, plantIndex, plantName, fromCalendar }) => {
+    if (fromCalendar) setCalendarPlantReturn(true);
     setView((prev) => ({
       name: "plant",
       zoneKey: zoneKey || prev.zoneKey,
@@ -53,8 +55,18 @@ function App() {
       plantName,
     }));
   };
+  const openPlantFromCalendar = (args) => openPlant({ ...args, fromCalendar: true });
   const closePlant = () => {
-    setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
+    if (calendarPlantReturn) {
+      setCalendarPlantReturn(false);
+      setView({ name: "calendar" });
+    } else {
+      setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
+    }
+  };
+  const goCalendar = () => {
+    setView({ name: "calendar" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const goPlanFromBed = () => {
     setView({ name: "plan" });
@@ -62,8 +74,9 @@ function App() {
   };
 
   // Crumbs / chrome content depends on view
-  const inBed = view.name === "bed" || view.name === "plant";
+  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn);
   const breadcrumb = inBed ? Z[view.zoneKey].title : null;
+  const inCalendar = view.name === "calendar" || (view.name === "plant" && calendarPlantReturn);
 
   return (
     <div className="app-root" data-palette={t.palette}>
@@ -75,11 +88,19 @@ function App() {
         <div className="crumb-bar">
           <button
             className="ghostbtn"
-            aria-pressed={view.name === "plan"}
-            onClick={() => setView({ name: "plan" })}
+            aria-pressed={view.name === "plan" || inBed}
+            onClick={() => { setCalendarPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ minHeight: 32 }}
           >
             Garden plan
+          </button>
+          <button
+            className="ghostbtn"
+            aria-pressed={inCalendar}
+            onClick={goCalendar}
+            style={{ minHeight: 32 }}
+          >
+            Seasonal calendar
           </button>
           {inBed && (
             <>
@@ -88,10 +109,7 @@ function App() {
             </>
           )}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <PaletteSwitcher />
-          <div className="t-mono" style={{ opacity: 0.5 }}>v.2026.05</div>
-        </div>
+        <div className="t-mono" style={{ opacity: 0.7 }}>v.2026.05</div>
       </header>
 
       <main className="paper-main">
@@ -99,7 +117,12 @@ function App() {
           {view.name === "plan" && (
             <GardenPlan onOpenZone={openZone} dark={dark} />
           )}
-          {(view.name === "bed" || view.name === "plant") && (
+          {(view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
+            <SeasonalCalendar
+              onOpenPlant={openPlantFromCalendar}
+            />
+          )}
+          {(view.name === "bed" || (view.name === "plant" && !calendarPlantReturn)) && (
             <BedDetail
               key={view.zoneKey}
               zoneKey={view.zoneKey}
@@ -145,6 +168,37 @@ function App() {
         </div>
       )}
 
+      {/* Tweaks panel — palette switcher */}
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Season / palette" />
+        <div className="palette-grid">
+          {[
+            { id: "spring", label: "Spring", paper: "#f3ecda", ink: "#2b271c", accent: "#9c5a2c" },
+            { id: "summer", label: "Summer", paper: "#f6efd9", ink: "#3a2f1d", accent: "#bb6a2c" },
+            { id: "autumn", label: "Autumn", paper: "#ece1c9", ink: "#2d2014", accent: "#a8501f" },
+            { id: "winter", label: "Winter", paper: "#ecebe3", ink: "#1f2024", accent: "#6a7e8c" },
+            { id: "night",  label: "Night",  paper: "#1c2018", ink: "#e7e0cb", accent: "#d6a168" },
+          ].map((p) => (
+            <button
+              key={p.id}
+              className={"palette-card" + (t.palette === p.id ? " is-on" : "")}
+              onClick={() => setTweak("palette", p.id)}
+              title={p.label}
+            >
+              <div className="palette-swatch" style={{ background: p.paper }}>
+                <span style={{ background: p.ink }} />
+                <span style={{ background: p.accent }} />
+              </div>
+              <span className="palette-label">{p.label}</span>
+            </button>
+          ))}
+        </div>
+        <TweakSection label="Notes" />
+        <div className="t-mono" style={{ fontSize: 11, opacity: 0.7, lineHeight: 1.5 }}>
+          Switch the seasonal palette to match the month, or flip to <em>Night</em> for late-evening reading. Photos render with placeholder hatching where image files aren't wired up yet.
+        </div>
+      </TweaksPanel>
+
       <style>{`
         .app-root { min-height: 100vh; }
         .crumb-bar {
@@ -165,6 +219,48 @@ function App() {
           padding: 22px clamp(14px, 3vw, 28px);
           min-height: 60vh;
           border-radius: 1px;
+        }
+
+        /* Palette tweak swatches */
+        .palette-grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 6px;
+          padding: 0 0 6px;
+        }
+        .palette-card {
+          background: transparent;
+          border: 1px solid rgba(0,0,0,0.08);
+          border-radius: 6px;
+          padding: 6px 4px 4px;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          font: inherit;
+        }
+        .palette-card:hover { border-color: rgba(0,0,0,0.2); }
+        .palette-card.is-on {
+          border-color: rgba(0,0,0,0.55);
+          background: rgba(0,0,0,0.04);
+        }
+        .palette-swatch {
+          width: 100%; aspect-ratio: 1.4;
+          border-radius: 4px;
+          position: relative;
+          overflow: hidden;
+          box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+        }
+        .palette-swatch span {
+          position: absolute; bottom: 4px; width: 28%; height: 28%; border-radius: 50%;
+        }
+        .palette-swatch span:nth-child(1) { left: 6px; }
+        .palette-swatch span:nth-child(2) { right: 6px; }
+        .palette-label {
+          font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+          font-size: 10px;
+          letter-spacing: 0.04em;
         }
       `}</style>
     </div>

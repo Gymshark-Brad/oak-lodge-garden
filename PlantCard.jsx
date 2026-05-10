@@ -4,13 +4,6 @@
 const { useEffect: useEffect_PC } = React;
 
 function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
-  const { useState: useState_PC } = React;
-  const [photoIdx, setPhotoIdx] = useState_PC(0);
-
-  useEffect_PC(() => {
-    setPhotoIdx(0);
-  }, [plant]);
-
   useEffect_PC(() => {
     const onKey = (e) => {
       if (e.key === "Escape") onClose();
@@ -59,47 +52,13 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
             </div>
           </div>
 
-          {/* Specimen body — left = photo or silhouette, right = naming */}
+          {/* Specimen body — left = silhouette, right = naming */}
           <div className="pc-body">
             <div className="pc-silhouette">
-              {plant.photos && plant.photos.length > 0 ? (
-                <>
-                  <img
-                    src={plant.photos[photoIdx]}
-                    alt={plant.name}
-                    style={{
-                      width: "100%",
-                      height: 200,
-                      objectFit: "cover",
-                      display: "block",
-                      borderBottom: "1px dashed var(--hairline)",
-                    }}
-                  />
-                  {plant.photos.length > 1 && (
-                    <div className="pc-thumbnails">
-                      {plant.photos.map((src, i) => (
-                        <img
-                          key={i}
-                          src={src}
-                          alt={`${plant.name} ${i + 1}`}
-                          onClick={() => setPhotoIdx(i)}
-                          className={i === photoIdx ? "pc-thumb pc-thumb-active" : "pc-thumb"}
-                        />
-                      ))}
-                    </div>
-                  )}
-                  <div className="t-mono" style={{ textAlign: "center", opacity: 0.6, marginTop: 6 }}>
-                    Oak Lodge · May 2026
-                  </div>
-                </>
-              ) : (
-                <>
-                  <PlantSilhouette plant={plant} />
-                  <div className="t-mono" style={{ textAlign: "center", opacity: 0.6, marginTop: 6 }}>
-                    impression · pencil & wash
-                  </div>
-                </>
-              )}
+              <PlantSilhouette plant={plant} />
+              <div className="t-mono" style={{ textAlign: "center", opacity: 0.6, marginTop: 6 }}>
+                impression · pencil & wash
+              </div>
             </div>
 
             <div className="pc-naming">
@@ -199,26 +158,10 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
         }
         .pc-silhouette {
           display: flex; flex-direction: column; align-items: center;
-          padding: 0;
+          padding: 14px;
           background: color-mix(in oklab, var(--paper) 92%, var(--paper-deep) 8%);
           border: 1px dashed var(--hairline);
-          overflow: hidden;
         }
-        .pc-silhouette > svg, .pc-silhouette > .t-mono:last-child {
-          padding: 14px;
-        }
-        .pc-thumbnails {
-          display: flex; gap: 4px; padding: 6px;
-          background: color-mix(in oklab, var(--paper-deep) 80%, transparent);
-          width: 100%; box-sizing: border-box;
-        }
-        .pc-thumb {
-          flex: 1; height: 40px; object-fit: cover;
-          border: 1px solid var(--hairline);
-          cursor: pointer; opacity: 0.65; transition: opacity 160ms;
-        }
-        .pc-thumb:hover { opacity: 1; }
-        .pc-thumb-active { opacity: 1; border-color: var(--accent); }
         .pc-fields {
           display: grid;
           grid-template-columns: 1fr 1fr;
