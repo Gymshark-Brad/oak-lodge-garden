@@ -143,6 +143,7 @@ window.OAK = (function () {
       {
         name: "Japanese Maple",
         latin: "Acer palmatum",
+        photos: ["images/plants/japanese-maple.webp", "images/plants/japanese-maple-1.webp"],
         position: "Back centre — dominant canopy",
         light: "Dappled shade to partial sun. Sheltered from harsh afternoon sun.",
         water: "Keep soil consistently moist but never waterlogged.",
@@ -152,6 +153,7 @@ window.OAK = (function () {
       {
         name: "Japanese Aralia",
         latin: "Fatsia japonica 'Spider's Web'",
+        photos: ["images/plants/japanese-aralia.webp", "images/plants/japanese-aralia-2.webp", "images/plants/japanese-aralia-3.webp"],
         position: "Mid-centre, under the Acer",
         light: "Shade to partial shade. Tolerates deep shade.",
         water: "Moderate; let top inch dry between waterings.",
@@ -161,6 +163,7 @@ window.OAK = (function () {
       {
         name: "Rhododendron",
         latin: "Rhododendron 'Goldflimmer'",
+        photos: ["images/plants/rhododendron.webp", "images/plants/rhododendron-2.webp"],
         position: "Mid-left, variegated evergreen",
         light: "Partial shade. Avoid hot, dry sun.",
         water: "Even moisture; never waterlogged.",
@@ -170,6 +173,7 @@ window.OAK = (function () {
       {
         name: "Astilbe",
         latin: "Astilbe",
+        photos: ["images/plants/astilbe.webp"],
         position: "Right side — feathery plumes in summer",
         light: "Partial shade; tolerates more sun if soil stays moist.",
         water: "Loves moisture. Water freely in dry spells.",
@@ -179,6 +183,7 @@ window.OAK = (function () {
       {
         name: "Hosta",
         latin: "Hosta",
+        photos: ["images/plants/hosta-gold-standard.webp", "images/plants/hosta-patriot.webp", "images/plants/hosta-patriot-2.webp", "images/plants/hosta-francee.webp"],
         position: "Front-left, green/white variegation",
         light: "Shade to partial shade.",
         water: "Keep soil moist; mulch to retain moisture.",
@@ -188,6 +193,7 @@ window.OAK = (function () {
       {
         name: "Angel Wings",
         latin: "Senecio candicans",
+        photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp", "images/plants/angel-wings-3.webp"],
         position: "Front-centre — silvery-white leaves",
         light: "Full sun to partial sun.",
         water: "Drought-tolerant once established. Avoid overwatering.",
@@ -197,6 +203,7 @@ window.OAK = (function () {
       {
         name: "Box Hedging",
         latin: "Buxus sempervirens",
+        photos: [],
         position: "Full right edge — clipped",
         light: "Sun or partial shade.",
         water: "Moderate; established plants tolerate dry spells.",
@@ -206,6 +213,7 @@ window.OAK = (function () {
       {
         name: "Euonymus",
         latin: "Euonymus fortunei (golden)",
+        photos: [],
         position: "Front-left corner",
         light: "Sun or partial shade.",
         water: "Moderate; very tolerant once established.",
@@ -213,8 +221,19 @@ window.OAK = (function () {
         seasonal: "Golden-variegated evergreen; pink tints in cold weather.",
       },
       {
+        name: "Hardy Geranium",
+        latin: "Geranium spp.",
+        photos: ["images/plants/hardy-geranium.webp"],
+        position: "Front-right — spreading low clumps",
+        light: "Sun to partial shade. Very adaptable.",
+        water: "Low to moderate once established.",
+        care: "Cut back hard after first flush for a second showing. Divide every 3–4 years.",
+        seasonal: "Deeply lobed foliage from April; purple-blue flowers May–July, often a second flush in autumn.",
+      },
+      {
         name: "English Daisy",
         latin: "Bellis perennis",
+        photos: [],
         position: "Front-centre — pink pom-poms",
         light: "Sun to partial shade.",
         water: "Moderate.",
@@ -226,6 +245,7 @@ window.OAK = (function () {
       {
         name: "Weeping Cherry",
         latin: "Prunus species",
+        photos: ["images/plants/weeping-cherry.webp", "images/plants/weeping-cherry-1.webp", "images/plants/weeping-cherry-2.webp"],
         position: "Upper section — overhanging the wall",
         light: "Full sun.",
         water: "Moderate; deep watering when young.",
@@ -235,6 +255,7 @@ window.OAK = (function () {
       {
         name: "Variegated Dogwood",
         latin: "Cornus alba 'Elegantissima'",
+        photos: ["images/plants/variegated-dogwood.webp"],
         position: "Upper section — red winter stems",
         light: "Sun or partial shade.",
         water: "Moisture-loving; tolerates wet soil.",
@@ -244,6 +265,7 @@ window.OAK = (function () {
       {
         name: "Peony",
         latin: "Paeonia lactiflora",
+        photos: ["images/plants/peony.webp"],
         position: "Lower section",
         light: "Full sun, sheltered.",
         water: "Moderate; deep watering when budding.",
@@ -253,6 +275,7 @@ window.OAK = (function () {
       {
         name: "Weigela",
         latin: "Weigela florida",
+        photos: ["images/plants/weigela.webp"],
         position: "Mid section",
         light: "Full sun.",
         water: "Moderate.",
@@ -262,6 +285,7 @@ window.OAK = (function () {
       {
         name: "Silverbush",
         latin: "Convolvulus cneorum",
+        photos: ["images/plants/silverbush.webp", "images/plants/silverbush-2.webp", "images/plants/silverbush-3.webp"],
         position: "Mid-right — silvery foliage",
         light: "Full sun.",
         water: "Drought-tolerant. Hates wet feet.",
@@ -287,8 +311,19 @@ window.OAK = (function () {
         seasonal: "Silver foliage all season.",
       },
       {
+        name: "Kerria",
+        latin: "Kerria japonica",
+        photos: ["images/plants/kerria.webp", "images/plants/kerria-1.webp"],
+        position: "Against the wall — arching stems with yellow flowers",
+        light: "Partial shade to full sun.",
+        water: "Low to moderate. Tolerates dry shade.",
+        care: "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
+        seasonal: "Bright single yellow flowers April–May; arching green stems attractive all year.",
+      },
+      {
         name: "Forget-me-not",
         latin: "Myosotis",
+        photos: ["images/plants/forget-me-not.webp"],
         position: "Lower — small blue flowers",
         light: "Sun to partial shade.",
         water: "Moderate.",
@@ -298,6 +333,7 @@ window.OAK = (function () {
       {
         name: "Maiden Pink",
         latin: "Dianthus deltoides",
+        photos: ["images/plants/maiden-pink.webp"],
         position: "Between walls — pink flowers",
         light: "Full sun.",
         water: "Low; sharp drainage.",
@@ -305,8 +341,19 @@ window.OAK = (function () {
         seasonal: "Pink stars June–August.",
       },
       {
+        name: "Garden Pink",
+        latin: "Dianthus plumarius",
+        photos: ["images/plants/dianthus.webp", "images/plants/dianthus-1.webp", "images/plants/dianthus-2.webp"],
+        position: "Lower front — compact fragrant mound",
+        light: "Full sun.",
+        water: "Low. Sharp drainage essential.",
+        care: "Deadhead to extend flowering. Cut back after main flush. Replace plants every 3 years as they become woody.",
+        seasonal: "Fragrant double pink flowers June–August; silver-grey cushion foliage year-round.",
+      },
+      {
         name: "Nemesia",
         latin: "Nemesia spp.",
+        photos: ["images/plants/nemesia.webp", "images/plants/nemesia-1.webp", "images/plants/nemesia-2.webp"],
         position: "Between walls — orange/coral",
         light: "Full sun.",
         water: "Moderate; don't let pots dry out.",
@@ -318,6 +365,7 @@ window.OAK = (function () {
       {
         name: "Apple Tree",
         latin: "Malus domestica",
+        photos: ["images/plants/apple-tree.webp", "images/plants/apple-tree-1.webp"],
         position: "Centre — with bird feeders",
         light: "Full sun.",
         water: "Deep watering in dry spells, especially when fruiting.",
@@ -327,6 +375,7 @@ window.OAK = (function () {
       {
         name: "Avens",
         latin: "Geum",
+        photos: ["images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp", "images/plants/avens-orange-3.webp"],
         position: "Front-left — orange flowers",
         light: "Sun or partial shade.",
         water: "Moderate.",
@@ -336,6 +385,7 @@ window.OAK = (function () {
       {
         name: "Wintercreeper",
         latin: "Euonymus fortunei",
+        photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp", "images/plants/wintercreeper-3.webp"],
         position: "Front-right — variegated evergreen",
         light: "Sun or partial shade.",
         water: "Moderate.",
@@ -347,6 +397,7 @@ window.OAK = (function () {
       {
         name: "Wisteria",
         latin: "Wisteria spp.",
+        photos: ["images/plants/wisteria.webp", "images/plants/wisteria-1.webp", "images/plants/wisteria-2.webp"],
         position: "Top — cascading over the wall",
         light: "Full sun.",
         water: "Deep watering when young; established plants tolerate drought.",
@@ -356,6 +407,7 @@ window.OAK = (function () {
       {
         name: "New Zealand Flax",
         latin: "Phormium",
+        photos: ["images/plants/phormium-yellow.webp"],
         position: "Upper-mid — sword-shaped leaves",
         light: "Full sun.",
         water: "Moderate; drought-tolerant established.",
@@ -365,6 +417,7 @@ window.OAK = (function () {
       {
         name: "Rose",
         latin: "Rosa",
+        photos: ["images/plants/rose.webp"],
         position: "Mid — on trellis/support",
         light: "Full sun.",
         water: "Deep watering, mulch in spring.",
@@ -374,6 +427,7 @@ window.OAK = (function () {
       {
         name: "Yucca",
         latin: "Yucca filamentosa",
+        photos: ["images/plants/yucca.webp", "images/plants/yucca-1.webp"],
         position: "Lower-left — spiky, architectural",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -383,6 +437,7 @@ window.OAK = (function () {
       {
         name: "Lavender",
         latin: "Lavandula angustifolia",
+        photos: [],
         position: "Right — grey-green foliage",
         light: "Full sun.",
         water: "Drought-tolerant.",
@@ -394,6 +449,7 @@ window.OAK = (function () {
       {
         name: "Aubrieta",
         latin: "Aubrieta deltoidea",
+        photos: ["images/plants/aubrieta.webp"],
         position: "Left end — purple spring flowers",
         light: "Full sun.",
         water: "Low.",
@@ -403,6 +459,7 @@ window.OAK = (function () {
       {
         name: "Houseleeks",
         latin: "Sempervivum",
+        photos: ["images/plants/houseleek.webp"],
         position: "Left-centre — rosettes in gravel",
         light: "Full sun.",
         water: "Very low. Hates wet.",
@@ -412,6 +469,7 @@ window.OAK = (function () {
       {
         name: "Stonecrop",
         latin: "Sedum (trailing)",
+        photos: ["images/plants/stonecrop-1.webp", "images/plants/stonecrop-2.webp", "images/plants/stonecrop-3.webp"],
         position: "Centre-left",
         light: "Full sun.",
         water: "Low.",
@@ -421,6 +479,7 @@ window.OAK = (function () {
       {
         name: "New Zealand Flax (dark)",
         latin: "Phormium 'Platt's Black'",
+        photos: ["images/plants/phormium.webp", "images/plants/phormium-1.webp"],
         position: "Centre — dark burgundy spikes",
         light: "Full sun.",
         water: "Moderate; drought-tolerant once established.",
@@ -430,6 +489,7 @@ window.OAK = (function () {
       {
         name: "Rosemary",
         latin: "Salvia rosmarinus",
+        photos: ["images/plants/rosemary.webp"],
         position: "Centre-right — grey-green needles",
         light: "Full sun.",
         water: "Low.",
@@ -439,6 +499,7 @@ window.OAK = (function () {
       {
         name: "Cabbage Tree",
         latin: "Cordyline australis 'Red Star'",
+        photos: ["images/plants/cordyline.webp"],
         position: "Right — large palm-like tree",
         light: "Full sun.",
         water: "Moderate; established plants tolerate drought.",
@@ -446,8 +507,19 @@ window.OAK = (function () {
         seasonal: "Evergreen burgundy fountain of leaves.",
       },
       {
+        name: "Hebe",
+        latin: "Hebe (syn. Veronica) cultivar",
+        photos: ["images/plants/hebe.webp"],
+        position: "Stone Bed — variegated foliage shrub",
+        light: "Full sun to partial shade.",
+        water: "Moderate. Good drainage. Dislikes waterlogging.",
+        care: "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest \'Heartbreaker\' or a closely related variegated cultivar.",
+        seasonal: "Evergreen variegated foliage year-round; small purple-white flower spikes in summer.",
+      },
+      {
         name: "Honeysuckle",
         latin: "Lonicera",
+        photos: [],
         position: "Far right",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
@@ -459,6 +531,7 @@ window.OAK = (function () {
       {
         name: "Clematis",
         latin: "Clematis montana",
+        photos: ["images/plants/clematis.webp"],
         position: "Left side of house wall — mature woody stems",
         light: "Sun, with shaded roots.",
         water: "Moderate.",
@@ -470,6 +543,7 @@ window.OAK = (function () {
       {
         name: "Pear Tree",
         latin: "Pyrus",
+        photos: ["images/plants/pear-tree.webp", "images/plants/pear-tree-1.webp", "images/plants/pear-tree-2.webp"],
         position: "Upper terrace — near the gate",
         light: "Full sun.",
         water: "Deep watering in dry summers.",
@@ -484,41 +558,72 @@ window.OAK = (function () {
     "may-2026": {
       label: "May 2026",
       bed1: [
-        { src: "images/may-2026/bed1.jpg", caption: "Overview from paving" },
-        { src: "images/may-2026/bed1-close1.jpg", caption: "Japanese Maple area" },
-        { src: "images/may-2026/bed1-close2.jpg", caption: "Front planting" },
+        { src: "images/may-2026/bed1.jpg",        caption: "Overview from paving" },
+        { src: "images/may-2026/bed1-close1.jpg",  caption: "Japanese Maple area" },
+        { src: "images/may-2026/bed1-close2.jpg",  caption: "Front planting" },
+        { src: "images/may-2026/bed1-3.webp",      caption: "From above" },
+        { src: "images/may-2026/bed1-4.webp",      caption: "From upper terrace" },
+        { src: "images/may-2026/bed1-wide.webp",   caption: "Wide shot from street" },
+        { src: "images/may-2026/bed1-wide-2.webp", caption: "From gate, angle 2" },
+        { src: "images/may-2026/bed1-maple.webp",  caption: "Japanese Maple from street" },
+        { src: "images/may-2026/bed1-close3.webp", caption: "Box edging detail" },
+        { src: "images/may-2026/bed1-7.webp",      caption: "Box hedging close" },
       ],
       bed2: [
-        { src: "images/may-2026/bed2-1.jpg", caption: "Overview, angle 1" },
-        { src: "images/may-2026/bed2-2.jpg", caption: "Overview, angle 2" },
+        { src: "images/may-2026/bed2-1.jpg",       caption: "Overview, angle 1" },
+        { src: "images/may-2026/bed2-2.jpg",       caption: "Overview, angle 2" },
         { src: "images/may-2026/bed2-kitchen.jpg", caption: "From the patio kitchen" },
-        { src: "images/may-2026/bed2-steps.jpg", caption: "From the steps" },
-        { src: "images/may-2026/bed2-south1.jpg", caption: "South angle 1" },
-        { src: "images/may-2026/bed2-south2.jpg", caption: "South angle 2" },
+        { src: "images/may-2026/bed2-steps.jpg",   caption: "From the steps" },
+        { src: "images/may-2026/bed2-south1.jpg",  caption: "South angle 1" },
+        { src: "images/may-2026/bed2-south2.jpg",  caption: "South angle 2" },
+        { src: "images/may-2026/bed2-wide.webp",   caption: "Wide overview" },
+        { src: "images/may-2026/bed2-3.webp",      caption: "From lower paving" },
+        { src: "images/may-2026/bed2-4.webp",      caption: "Steps side" },
+        { src: "images/may-2026/bed2-5.webp",      caption: "Lower angle" },
+        { src: "images/may-2026/bed2-6.webp",      caption: "From patio" },
       ],
       bed3: [
-        { src: "images/may-2026/bed3.jpg", caption: "Apple tree & avens" },
-        { src: "images/may-2026/bed3-detail.jpg", caption: "From lower paving" },
+        { src: "images/may-2026/bed3.jpg",         caption: "Apple tree & avens" },
+        { src: "images/may-2026/bed3-detail.jpg",  caption: "From lower paving" },
+        { src: "images/may-2026/bed3-3.webp",      caption: "Apple tree & bird feeders" },
       ],
       bed4: [
-        { src: "images/may-2026/bed4.jpg", caption: "Wisteria overview" },
-        { src: "images/may-2026/bed4-wide.jpg", caption: "Wider angle" },
+        { src: "images/may-2026/bed4.jpg",         caption: "Wisteria overview" },
+        { src: "images/may-2026/bed4-wide.jpg",    caption: "Wider angle" },
+        { src: "images/may-2026/bed4-3.webp",      caption: "Wisteria in full flower" },
       ],
       stone: [
-        { src: "images/may-2026/stone-bed.jpg", caption: "Overview" },
-        { src: "images/may-2026/stone-bed-wide.jpg", caption: "From the patio" },
+        { src: "images/may-2026/stone-bed.jpg",         caption: "Overview" },
+        { src: "images/may-2026/stone-bed-wide.jpg",    caption: "From the patio" },
         { src: "images/may-2026/stone-bed-detail1.jpg", caption: "Phormium & houseleeks" },
-        { src: "images/may-2026/stone-bed-detail2.jpg", caption: "Cordyline 'Red Star'" },
+        { src: "images/may-2026/stone-bed-detail2.jpg", caption: "Cordyline Red Star" },
+        { src: "images/may-2026/stone-bed-5.webp",      caption: "Stone bed & decking" },
+        { src: "images/may-2026/stone-bed-6.webp",      caption: "From above" },
+        { src: "images/may-2026/stone-bed-wide-2.webp", caption: "Wide, from patio" },
+        { src: "images/may-2026/stone-bed-7.webp",      caption: "With Cordyline" },
       ],
       patio: [
-        { src: "images/may-2026/patio.jpg", caption: "Decking" },
-        { src: "images/may-2026/patio-door.jpg", caption: "Towards the house" },
-        { src: "images/may-2026/patio-clematis.jpg", caption: "Clematis montana" },
+        { src: "images/may-2026/patio.jpg",            caption: "Decking" },
+        { src: "images/may-2026/patio-door.jpg",       caption: "Towards the house" },
+        { src: "images/may-2026/patio-clematis.jpg",   caption: "Clematis montana" },
+        { src: "images/may-2026/patio-clematis-2.webp",caption: "Clematis in full bloom" },
+        { src: "images/may-2026/patio-2.webp",         caption: "Circular paving" },
+        { src: "images/may-2026/patio-3.webp",         caption: "Decking full length" },
       ],
-      steps: [{ src: "images/may-2026/steps.jpg", caption: "Steps between levels" }],
+      steps: [
+        { src: "images/may-2026/steps.jpg",        caption: "Steps between levels" },
+        { src: "images/may-2026/steps-2.webp",     caption: "Steps from front" },
+        { src: "images/may-2026/steps-wide.webp",  caption: "Wide view from above" },
+        { src: "images/may-2026/steps-3.webp",     caption: "Upper terrace looking down" },
+      ],
       kitchen: [],
-      lounge: [],
-      pear: [],
+      lounge: [
+        { src: "images/may-2026/lounge.webp", caption: "Side passage" },
+      ],
+      pear: [
+        { src: "images/may-2026/pear.webp",   caption: "Pear tree area" },
+        { src: "images/may-2026/pear-2.webp", caption: "Upper garden overview" },
+      ],
     },
   };
 
@@ -536,6 +641,7 @@ window.OAK = (function () {
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
       { name: "English Daisy", x: 60, y: 90, r: 5, hue: 340 },
+      { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
@@ -548,6 +654,8 @@ window.OAK = (function () {
       { name: "Forget-me-not", x: 46, y: 78, r: 5, hue: 220 },
       { name: "Maiden Pink", x: 70, y: 78, r: 5, hue: 330 },
       { name: "Nemesia", x: 86, y: 78, r: 5, hue: 25 },
+      { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
+      { name: "Garden Pink", x: 72, y: 88, r: 5, hue: 340 },
     ],
     bed3: [
       { name: "Apple Tree", x: 50, y: 38, r: 22, hue: 105 },
@@ -569,6 +677,7 @@ window.OAK = (function () {
       { name: "Rosemary", x: 64, y: 50, r: 7, hue: 200 },
       { name: "Cabbage Tree", x: 80, y: 50, r: 11, hue: 350 },
       { name: "Honeysuckle", x: 94, y: 50, r: 7, hue: 50 },
+      { name: "Hebe", x: 14, y: 72, r: 6, hue: 260 },
     ],
     patio: [
       { name: "Clematis", x: 18, y: 50, r: 14, hue: 320 },
