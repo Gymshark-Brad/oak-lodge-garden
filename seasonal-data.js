@@ -51,6 +51,7 @@
         { task: "Prune Wintercreeper to shape", plants: ["Wintercreeper"], bed: "Bed 3" },
         { task: "Mulch the Clematis base with compost or leaf mould", plants: ["Clematis"], bed: "Patio" },
         { task: "Watch for box caterpillar — check leaves regularly", plants: ["Box Hedging"], bed: "Bed 1" },
+        { task: "Check Dahlia tuber for signs of life — new shoots should appear at the crown. Remove mulch gradually.", plants: ["Dahlia"], bed: "Bed 1" },
       ],
     },
 
@@ -64,11 +65,13 @@
         { plant: "Japanese Maple", bed: "Bed 1", note: "New leaves emerging red-bronze before turning green." },
         { plant: "Forget-me-not", bed: "Bed 2", note: "Sky-blue clouds at ground level." },
         { plant: "Hosta", bed: "Bed 1", note: "Tightly furled shoots pushing up through the leaf litter." },
+        { plant: "Dahlia", bed: "Bed 1", note: "Dark shoots emerging from the crown — the foliage show begins." },
       ],
       tasks: [
         { task: "Watch for slugs on Hostas — check after rain, especially at dusk", plants: ["Hosta"], bed: "Bed 1" },
         { task: "Start deadheading English Daisies to prolong flowering", plants: ["English Daisy"], bed: "Bed 1" },
         { task: "Begin regular rose watering and feed; mulch around the base", plants: ["Rose"], bed: "Bed 4" },
+        { task: "Cut back Fuchsia hard to a low framework — new growth will come from the base", plants: ["Fuchsia"], bed: "Big Pot 1" },
       ],
     },
 
@@ -82,6 +85,7 @@
         { plant: "Weigela", bed: "Bed 2", note: "Pink trumpet flowers covering the shrub." },
         { plant: "Avens", bed: "Bed 3", note: "Bright orange flowers at the foot of the apple tree." },
         { plant: "Aubrieta", bed: "Stone Bed", note: "Last of the purple before the shear." },
+        { plant: "Dahlia", bed: "Bed 1", note: "Newly planted — striking dark bronze-black foliage, buds forming." },
       ],
       tasks: [
         { task: "Deadhead Rhododendron carefully after flowering — snap the spent trusses cleanly", plants: ["Rhododendron"], bed: "Bed 1" },
@@ -89,6 +93,8 @@
         { task: "Shear Aubrieta hard back after blooming to keep it compact", plants: ["Aubrieta"], bed: "Stone Bed" },
         { task: "Deadhead Avens to encourage a second flush", plants: ["Avens"], bed: "Bed 3" },
         { task: "First clip of the box hedging (late May)", plants: ["Box Hedging"], bed: "Bed 1" },
+        { task: "Plant up pots with summer bedding — water in well and feed fortnightly from now", plants: ["Fuchsia", "Verbena", "Petunia", "Lobelia", "Calibrachoa", "Geranium"], bed: "Big Pot 1" },
+        { task: "Pinch out Dahlia growing tip to encourage bushiness", plants: ["Dahlia"], bed: "Bed 1" },
       ],
     },
 
@@ -102,6 +108,8 @@
         { plant: "Honeysuckle", bed: "Stone Bed", note: "Fragrant flowers — strongest in the evening." },
         { plant: "Yucca", bed: "Bed 4", note: "Spire of creamy bell flowers if the plant's mature enough." },
         { plant: "Silverbush", bed: "Bed 2", note: "White trumpet flowers on the silver mound." },
+        { plant: "Fuchsia", bed: "Big Pot 1", note: "Red and purple pendant flowers starting — both big pots coming alive." },
+        { plant: "Geranium", bed: "Little Pot 2", note: "Red-and-white bicolour heads bright against the blue pot." },
       ],
       tasks: [
         { task: "Prune Weigela after flowering — one in three old stems out", plants: ["Weigela"], bed: "Bed 2" },
@@ -109,6 +117,8 @@
         { task: "Deadhead Maiden Pink and trim back lightly", plants: ["Maiden Pink"], bed: "Bed 2" },
         { task: "Trim Nemesia hard after first flush for a second show", plants: ["Nemesia"], bed: "Bed 2" },
         { task: "Make sure peony supports are doing their job — heavy heads after rain", plants: ["Peony"], bed: "Bed 2" },
+        { task: "Feed pots weekly with liquid tomato food — don't let them dry out", plants: ["Calibrachoa", "Petunia", "Lobelia"], bed: "Big Pot 1" },
+        { task: "Stake Dahlia if it's getting tall — it'll need support once flowers form", plants: ["Dahlia"], bed: "Bed 1" },
       ],
     },
 
@@ -121,12 +131,17 @@
         { plant: "Hosta", bed: "Bed 1", note: "Lilac flower spikes rising above the leaves." },
         { plant: "Stonecrop", bed: "Stone Bed", note: "Yellow trailing flowers along the gravel." },
         { plant: "Yucca", bed: "Bed 4", note: "Tall white flower spires in their full glory." },
+        { plant: "Dahlia", bed: "Bed 1", note: "First red flowers opening against that dark foliage — a real statement." },
+        { plant: "Calibrachoa", bed: "Big Pot 1", note: "Pink star flowers trailing over the pot rim." },
       ],
       tasks: [
         { task: "Deadhead lavender — never cut into the old woody growth", plants: ["Lavender"], bed: "Bed 4" },
         { task: "Continue deadheading roses; feed with rose food after first flush", plants: ["Rose"], bed: "Bed 4" },
         { task: "Water Astilbe deeply — never let the soil dry out", plants: ["Astilbe"], bed: "Bed 1" },
         { task: "Prune Honeysuckle lightly after flowering", plants: ["Honeysuckle"], bed: "Stone Bed" },
+        { task: "Deadhead Dahlia regularly — red flowers will keep coming until frost", plants: ["Dahlia"], bed: "Bed 1" },
+        { task: "Keep on top of pot watering — daily in hot weather, twice daily if baking", plants: ["Fuchsia", "Petunia", "Lobelia"], bed: "Big Pot 1" },
+        { task: "Trim back leggy Lobelia mid-season for a fresh flush", plants: ["Lobelia"], bed: "Big Pot 2" },
       ],
     },
 
@@ -139,6 +154,7 @@
         { plant: "Rose", bed: "Bed 4", note: "Second flush carrying on through the heat." },
         { plant: "Maiden Pink", bed: "Bed 2", note: "Still throwing out pink stars." },
         { plant: "Astilbe", bed: "Bed 1", note: "Plumes fading to russet — leave for autumn structure." },
+        { plant: "Dahlia", bed: "Bed 1", note: "Red flowers at their peak against the dark leaves — the best month." },
       ],
       tasks: [
         { task: "Second clip of the box hedging", plants: ["Box Hedging"], bed: "Bed 1" },
@@ -146,6 +162,8 @@
         { task: "Continue deadheading roses", plants: ["Rose"], bed: "Bed 4" },
         { task: "Harvest apples and pears as they ripen — taste-test daily", plants: ["Apple Tree", "Pear Tree"], bed: "Bed 3" },
         { task: "Trim Stonecrop back if it's getting leggy", plants: ["Stonecrop"], bed: "Stone Bed" },
+        { task: "Keep deadheading Dahlia — regular removal keeps them flowering until frost", plants: ["Dahlia"], bed: "Bed 1" },
+        { task: "Continue weekly feeding of all pots", plants: ["Calibrachoa", "Petunia", "Verbena"], bed: "Big Pot 1" },
       ],
     },
 
@@ -173,12 +191,16 @@
         { plant: "Variegated Dogwood", bed: "Bed 2", note: "Cream-edged leaves dropping to reveal the red stems beneath." },
         { plant: "Apple Tree", bed: "Bed 3", note: "Last apples; leaves yellowing." },
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Cream globe flowers opening — odd, alien, lovely." },
+        { plant: "Dahlia", bed: "Bed 1", note: "Last flowers before the first frost finishes the show." },
       ],
       tasks: [
         { task: "Protect Angel Wings from the first frosts — fleece or move to shelter", plants: ["Angel Wings"], bed: "Bed 1" },
         { task: "Mulch Phormium crowns to insulate against the wet cold", plants: ["New Zealand Flax", "New Zealand Flax (dark)"], bed: "Bed 4" },
         { task: "Tidy Houseleek rosettes — remove any spent flowering rosettes", plants: ["Houseleeks"], bed: "Stone Bed" },
         { task: "Clear fallen leaves off the gravel beds and stone bed", plants: [], bed: "Stone Bed" },
+        { task: "After first frost blackens the Dahlia foliage, cut stems to 15cm and mulch the crown heavily — or lift the tuber and store dry", plants: ["Dahlia"], bed: "Bed 1" },
+        { task: "Empty and clean pots once annuals are spent — compost the bedding, store pots frost-free if glazed", plants: ["Petunia", "Lobelia", "Calibrachoa", "Verbena"], bed: "Big Pot 1" },
+        { task: "Bring Geraniums (Pelargoniums) indoors to overwinter if you want to keep them — or compost", plants: ["Geranium"], bed: "Little Pot 1" },
       ],
     },
 
@@ -224,6 +246,10 @@
     "Stone Bed": "stone",
     "Patio": "patio",
     "Tree": "pear",
+    "Big Pot 1": "bigpot1",
+    "Big Pot 2": "bigpot2",
+    "Little Pot 1": "littlepot1",
+    "Little Pot 2": "littlepot2",
   };
 
   window.OAK = window.OAK || {};

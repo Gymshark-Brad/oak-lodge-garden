@@ -65,7 +65,7 @@ Deliberate choice. Brad is not an engineer. The repo needs to be updatable by dr
 Everything lives in `data.js` as `window.OAK`. Four objects:
 
 ### ZONES
-One entry per clickable area on the garden plan. Keys: `bed1`, `bed2`, `bed3`, `bed4`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`.
+One entry per clickable area on the garden plan. Keys: `bed1`, `bed2`, `bed3`, `bed4`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`, `bigpot1`, `bigpot2`, `littlepot1`, `littlepot2`.
 
 ```javascript
 bed1: {
@@ -90,7 +90,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 }
 ```
 
-Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"`, `"Tree"`
+Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Little Pot 1"`, `"Little Pot 2"`
 
 ### PHOTOS_BY_MONTH
 ```javascript
@@ -120,15 +120,19 @@ Clickable plant positions on the bed detail map. Each entry:
 Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 **Upper level (north, gate end)**
-- Flower Bed 1 (2.6m × 2.6m) — Japanese Maple dominant, raised timber bed
+- Flower Bed 1 (2.6m × 2.6m) — Japanese Maple dominant, raised timber bed, Dahlia (dark-leaved) in centre
 - Pear Tree — mature fruit tree, upper terrace
+- Big Pot 2 — large blue glazed pot on upper paving
 - Flower Bed 4 (2m × 3.8m, mirrored L) — Wisteria over right wall
+- Little Pot 2 — small blue pot near Bed 4 entrance
 
 **Transition**
 - Steps (~3m × 3m) — block paving, several levels
+- Little Pot 1 — small blue pot at top of steps
 - Flower Bed 3 (0.8m × 0.8m) — Apple tree with bird feeders
 
 **Lower level (south, house end)**
+- Big Pot 1 — large blue glazed pot at foot of steps
 - Flower Bed 2 (T-shape, between brick walls) — Weeping cherry, peony, dogwood
 - Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks, rosemary
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
@@ -136,17 +140,21 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 ---
 
-## Plant inventory summary (36 plants)
+## Plant inventory summary (53 plants)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 9 | Japanese Maple, Fatsia japonica, Rhododendron 'Goldflimmer', Box Hedging (full right edge) |
+| Bed 1 | 11 | Japanese Maple, Fatsia japonica, Rhododendron 'Goldflimmer', Box Hedging (full right edge), Dahlia (dark-leaved) |
 | Bed 2 | 10 | Weeping Cherry, Variegated Dogwood, Peony, Weigela, Silverbush |
 | Bed 3 | 3 | Apple Tree, Avens (Geum), Wintercreeper |
 | Bed 4 | 5 | Wisteria, NZ Flax, Rose, Yucca, Lavender |
 | Stone Bed | 7 | Cordyline australis, dark Phormium, Aubrieta, Houseleeks, Rosemary |
 | Patio | 1 | Clematis montana (left side of house wall) |
 | Tree | 1 | Pear Tree (Pyrus) |
+| Big Pot 1 | 6 | Fuchsia 'Mrs Popple', Verbena, Calibrachoa, Nepeta, Lobelia, Petunia 'Midnight Sky' |
+| Big Pot 2 | 5 | Lobelia, Verbena 'Venturi Pink Bicolour', Petunia, Nepeta, Fuchsia 'Mrs Popple' |
+| Little Pot 1 | 2 | Geranium 'Trend Sophie Dark Red', Petunia 'Vivini Blue Star' |
+| Little Pot 2 | 2 | Geranium 'Summer Twist Red White', Petunia 'Purple Vein' |
 
 Full care data (light, water, care, seasonal) for every plant is in `data.js` PLANTS object.
 

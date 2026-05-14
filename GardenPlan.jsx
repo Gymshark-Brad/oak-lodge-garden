@@ -8,10 +8,11 @@ function GardenPlan({ onOpenZone, dark }) {
   const Z = window.OAK.ZONES;
   const [hover, setHover] = useState(null);
 
-  // Zones rendered in z-order: hardscape first, beds on top
+  // Zones rendered in z-order: hardscape first, beds on top, pots on top
   const order = [
     "patio", "kitchen", "lounge", "steps",
     "stone", "bed1", "bed2", "bed3", "bed4", "pear",
+    "bigpot1", "bigpot2", "littlepot1", "littlepot2",
   ];
 
   const RoughDefs = (
@@ -45,13 +46,15 @@ function GardenPlan({ onOpenZone, dark }) {
   const renderZone = (key) => {
     const z = Z[key];
     const isHover = hover === key;
+    const isPot = z.isPot;
     const isInteractive = z.plantKey || ["patio", "stone", "pear"].includes(key);
     const c = z.color;
 
-    // hardscape vs bed visual treatment
+    // hardscape vs bed vs pot visual treatment
     const isHard = ["steps", "patio", "kitchen", "lounge"].includes(key);
     const isOutdoorRoom = ["kitchen", "lounge"].includes(key);
     const fillPattern =
+      isPot ? null :
       key === "steps" ? "url(#hatch-paving)" :
       key === "patio" ? "url(#hatch-paving)" :
       key === "stone" ? "url(#hatch-gravel)" :
@@ -80,17 +83,27 @@ function GardenPlan({ onOpenZone, dark }) {
         <g filter="url(#rough)">
           {React.cloneElement(shapeEl, {
             fill: c,
-            fillOpacity: isOutdoorRoom ? (dark ? 0.78 : 0.7) : (dark ? 0.42 : 0.32),
+            fillOpacity: isPot ? (dark ? 0.85 : 0.7) : isOutdoorRoom ? (dark ? 0.78 : 0.7) : (dark ? 0.42 : 0.32),
             stroke: c,
             strokeOpacity: 0.0,
           })}
         </g>
-        {/* hatch overlay (skipped for solid-filled outdoor rooms) */}
+        {/* hatch overlay (skipped for solid-filled outdoor rooms and pots) */}
         {fillPattern && (
           <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
             {React.cloneElement(shapeEl, {
               fill: fillPattern,
               fillOpacity: 0.6,
+            })}
+          </g>
+        )}
+        {/* pot rim highlight */}
+        {isPot && (
+          <g filter="url(#rough)" style={{ pointerEvents: "none" }}>
+            {React.cloneElement(shapeEl, {
+              fill: "none",
+              stroke: dark ? "rgba(255,255,255,0.35)" : "rgba(255,255,255,0.55)",
+              strokeWidth: 2.2,
             })}
           </g>
         )}
@@ -192,6 +205,7 @@ function GardenPlan({ onOpenZone, dark }) {
           if (!z.labelXY) return null;
           const [lx, ly] = z.labelXY;
           const tilt = ((key.charCodeAt(0) % 5) - 2) * 0.6;
+          const isPot = z.isPot;
           return (
             <g key={`label-${key}`} style={{ pointerEvents: "none" }} transform={`rotate(${tilt}, ${lx}, ${ly})`}>
               <text
@@ -199,13 +213,13 @@ function GardenPlan({ onOpenZone, dark }) {
                 y={ly}
                 textAnchor="middle"
                 fontFamily="var(--hand)"
-                fontSize="20"
-                fill="var(--ink)"
+                fontSize={isPot ? "14" : "20"}
+                fill={isPot ? "var(--accent)" : "var(--ink)"}
                 opacity={hover === key ? "1" : "0.85"}
               >
                 {z.title}
               </text>
-              {z.dims && (
+              {z.dims && !isPot && (
                 <text
                   x={lx}
                   y={ly + 14}
@@ -257,7 +271,7 @@ function GardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {["bed1", "bed2", "bed3", "bed4", "stone", "patio", "pear"].map((k) => {
+          {["bed1", "bed2", "bed3", "bed4", "stone", "patio", "pear", "bigpot1", "bigpot2", "littlepot1", "littlepot2"].map((k) => {
             const z = Z[k];
             return (
               <button
