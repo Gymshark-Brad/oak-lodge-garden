@@ -1,5 +1,5 @@
 // Oak Lodge Garden — data module
-// Zones, plants (per the brief), photo paths (May 2026), and bed plant maps.
+// Zones, plants (per the brief), photo paths (May + June 2026), and bed plant maps.
 
 window.OAK = (function () {
   // ─── ZONES ────────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ window.OAK = (function () {
       dims: "0.8m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Tiny pocket bed at the foot of the steps. An apple tree with bird feeders, hemmed in by avens and wintercreeper.",
+        "Tiny pocket bed at the foot of the steps. An apple tree with bird feeders and a clump of avens.",
       shape: { kind: "rect", x: 490, y: 267, w: 40, h: 40 },
       color: "#c7a54a",
       labelXY: [510, 257],
@@ -190,6 +190,20 @@ window.OAK = (function () {
       plantKey: "Little Pot 2",
       isPot: true,
     },
+    baskets: {
+      id: "baskets",
+      title: "Hanging Baskets",
+      badge: "Front of house",
+      dims: "3 baskets",
+      where: "Front of house wall",
+      desc:
+        "Three hanging baskets on the front of the house wall. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
+      shape: { kind: "circle", cx: 625, cy: 510, r: 12 },
+      color: "#c06a2a",
+      labelXY: [625, 496],
+      plantKey: "Baskets",
+      isPot: true,
+    },
   };
 
   // ─── PLANTS ───────────────────────────────────────────────────────
@@ -297,6 +311,16 @@ window.OAK = (function () {
         seasonal: "Deeply lobed foliage from April; purple-blue flowers May–July, often a second flush in autumn.",
       },
       {
+        name: "Wintercreeper",
+        latin: "Euonymus fortunei",
+        photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp", "images/plants/wintercreeper-3.webp"],
+        position: "Front-right — spreading variegated evergreen",
+        light: "Sun or partial shade.",
+        water: "Moderate.",
+        care: "Trim to shape in spring. Very tough and low-care.",
+        seasonal: "Evergreen white-and-green leaves year-round; pink tints in cold weather.",
+      },
+      {
         name: "Dahlia",
         latin: "Dahlia (dark-leaved, Bishop type)",
         photos: ["images/plants/dahlia-1.webp", "images/plants/dahlia-2.webp", "images/plants/dahlia-3.webp"],
@@ -362,7 +386,7 @@ window.OAK = (function () {
         name: "Hosta",
         latin: "Hosta",
         photos: ["images/plants/hosta-gold-standard.webp"],
-        position: "Lower, front-left",
+        position: "Lower, next to Weigela",
         light: "Shade to partial shade.",
         water: "Keep moist.",
         care: "Slug protection; divide every few years.",
@@ -418,6 +442,42 @@ window.OAK = (function () {
         care: "Deadhead to extend flowering. Cut back after main flush. Replace plants every 3 years as they become woody.",
         seasonal: "Fragrant double pink flowers June–August; silver-grey cushion foliage year-round.",
       },
+      {
+        name: "Centaurea 'Snowy Owl'",
+        latin: "Centaurea montana 'Snowy Owl'",
+        position: "Against the wall — white cornflower flowers",
+        light: "Full sun.",
+        water: "Low to moderate.",
+        care: "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
+        seasonal: "White cornflower blooms May–July; ferny silver-green foliage.",
+      },
+      {
+        name: "Hydrangea petiolaris",
+        latin: "Hydrangea anomala subsp. petiolaris",
+        position: "Against the far wall — self-clinging climber",
+        light: "Partial shade to full shade. Tolerates north-facing walls.",
+        water: "Moist but well-drained.",
+        care: "Slow to establish; once settled it is vigorous. Light prune to shape after flowering.",
+        seasonal: "White lace-cap flowers June–July; golden autumn leaf colour; interesting bark in winter.",
+      },
+      {
+        name: "Red Hot Poker",
+        latin: "Kniphofia",
+        position: "Lower section — torch-like flower spikes to come",
+        light: "Full sun.",
+        water: "Moderate; drought-tolerant once established.",
+        care: "Cut back old foliage in spring. Mulch crown in cold winters. Clump-forming — divide every 4–5 years.",
+        seasonal: "Bold orange-red poker spikes July–September; evergreen grassy foliage.",
+      },
+      {
+        name: "Euonymus 'Emerald Gaiety'",
+        latin: "Euonymus fortunei 'Emerald Gaiety'",
+        position: "Lower section — spreading, white-margined leaves",
+        light: "Sun or partial shade.",
+        water: "Moderate; tolerates dry spells once established.",
+        care: "Trim to shape in spring. Very hardy and low-maintenance. Moved from Bed 3, June 2026.",
+        seasonal: "Evergreen white-margined leaves year-round; pink blush to the margins in cold spells.",
+      },
     ],
     "Bed 3": [
       {
@@ -440,16 +500,6 @@ window.OAK = (function () {
         care: "Deadhead. Divide every few years.",
         seasonal: "Orange flowers May–July, often a second flush.",
       },
-      {
-        name: "Wintercreeper",
-        latin: "Euonymus fortunei",
-        photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp", "images/plants/wintercreeper-3.webp"],
-        position: "Front-right — variegated evergreen",
-        light: "Sun or partial shade.",
-        water: "Moderate.",
-        care: "Trim to shape in spring.",
-        seasonal: "Evergreen; pink tints in cold.",
-      },
     ],
     "Bed 4": [
       {
@@ -461,16 +511,6 @@ window.OAK = (function () {
         water: "Deep watering when young; established plants tolerate drought.",
         care: "Prune twice yearly: August (long shoots to 6 leaves) and February (back to 2–3 buds).",
         seasonal: "Lilac racemes May; bare gnarled stems winter.",
-      },
-      {
-        name: "New Zealand Flax",
-        latin: "Phormium",
-        photos: ["images/plants/phormium-yellow.webp"],
-        position: "Upper-mid — sword-shaped leaves",
-        light: "Full sun.",
-        water: "Moderate; drought-tolerant established.",
-        care: "Remove old leaves at the base. Tough, almost no maintenance.",
-        seasonal: "Evergreen architectural foliage year-round.",
       },
       {
         name: "Rose",
@@ -504,16 +544,6 @@ window.OAK = (function () {
       },
     ],
     "Stone Bed": [
-      {
-        name: "Aubrieta",
-        latin: "Aubrieta deltoidea",
-        photos: ["images/plants/aubrieta.webp"],
-        position: "Left end — purple spring flowers",
-        light: "Full sun.",
-        water: "Low.",
-        care: "Trim hard after flowering.",
-        seasonal: "Sheets of purple April–May.",
-      },
       {
         name: "Houseleeks",
         latin: "Sempervivum",
@@ -571,7 +601,7 @@ window.OAK = (function () {
         position: "Stone Bed — variegated foliage shrub",
         light: "Full sun to partial shade.",
         water: "Moderate. Good drainage. Dislikes waterlogging.",
-        care: "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest \'Heartbreaker\' or a closely related variegated cultivar.",
+        care: "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest 'Heartbreaker' or a closely related variegated cultivar.",
         seasonal: "Evergreen variegated foliage year-round; small purple-white flower spikes in summer.",
       },
     ],
@@ -767,9 +797,47 @@ window.OAK = (function () {
         seasonal: "Purple-veined trumpet flowers May–October.",
       },
     ],
+    "Baskets": [
+      {
+        name: "Trailing Fuchsia",
+        latin: "Fuchsia (trailing cultivar)",
+        position: "Main trailing plant",
+        light: "Partial shade to full sun.",
+        water: "Daily in hot weather; never let dry out completely.",
+        care: "Feed weekly. Deadhead spent flowers. Not frost-hardy — replace each year.",
+        seasonal: "Pendant bicolour flowers June–October.",
+      },
+      {
+        name: "Bacopa",
+        latin: "Sutera cordata",
+        position: "Trailing filler",
+        light: "Sun to partial shade.",
+        water: "Keep evenly moist.",
+        care: "Self-cleaning; no deadheading needed. Trim back if leggy. Tender annual.",
+        seasonal: "Tiny white flowers May–October; neat trailing habit.",
+      },
+      {
+        name: "Trailing Lobelia",
+        latin: "Lobelia erinus (trailing)",
+        position: "Trailing — blue cascade",
+        light: "Sun to partial shade.",
+        water: "Keep moist; hates drying out.",
+        care: "Trim back mid-season if it gets straggly. Tender annual.",
+        seasonal: "Blue trailing flowers May–October.",
+      },
+      {
+        name: "Trailing Verbena",
+        latin: "Verbena (trailing cultivar)",
+        position: "Trailing — mixed colours",
+        light: "Full sun.",
+        water: "Regular; don't let dry out.",
+        care: "Deadhead to extend flowering. Tender annual.",
+        seasonal: "Clusters of flowers June–October.",
+      },
+    ],
   };
 
-  // ─── PHOTOS (May 2026) ────────────────────────────────────────────
+  // ─── PHOTOS (by month) ────────────────────────────────────────────
   const PHOTOS_BY_MONTH = {
     "may-2026": {
       label: "May 2026",
@@ -855,7 +923,232 @@ window.OAK = (function () {
       littlepot2: [
         { src: "images/plants/little-pot-2.webp", caption: "Little Pot 2 — geranium & petunia" },
       ],
+      baskets: [],
     },
+    "june-2026": {
+      label: "June 2026",
+      bed1: [
+        { src: "images/june-2026/japanese-maple.webp",  caption: "Japanese Maple — full summer canopy" },
+        { src: "images/june-2026/hosta-bed1-1.webp",    caption: "Hosta — Bed 1" },
+        { src: "images/june-2026/hosta-bed1-2.webp",    caption: "Hosta — close-up" },
+        { src: "images/june-2026/dahlia-context.webp",  caption: "Dahlia in context" },
+        { src: "images/june-2026/dahlia.webp",          caption: "Dahlia — close-up of foliage" },
+        { src: "images/june-2026/angel-wings.webp",     caption: "Angel Wings" },
+        { src: "images/june-2026/euonymus.webp",        caption: "Euonymus" },
+        { src: "images/june-2026/fatsia.webp",          caption: "Fatsia japonica" },
+        { src: "images/june-2026/astilbe-1.webp",       caption: "Astilbe — flower spike emerging" },
+        { src: "images/june-2026/astilbe-2.webp",       caption: "Astilbe — foliage close-up" },
+      ],
+      bed2: [
+        { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
+        { src: "images/june-2026/centaurea-snowy-owl-2.webp", caption: "Centaurea — close-up" },
+        { src: "images/june-2026/silverbush.webp",            caption: "Silverbush" },
+        { src: "images/june-2026/maiden-pink.webp",           caption: "Maiden Pink" },
+        { src: "images/june-2026/variegated-dogwood.webp",    caption: "Variegated Dogwood" },
+        { src: "images/june-2026/hydrangea-petiolaris.webp",  caption: "Hydrangea petiolaris — newly identified" },
+        { src: "images/june-2026/peony.webp",                 caption: "Peony" },
+        { src: "images/june-2026/hosta-bed2.webp",            caption: "Hosta — Bed 2" },
+        { src: "images/june-2026/weigela.webp",               caption: "Weigela" },
+        { src: "images/june-2026/red-hot-poker.webp",         caption: "Red Hot Poker — not yet flowered" },
+        { src: "images/june-2026/weeping-cherry-june-1.webp", caption: "Weeping Cherry — full summer canopy" },
+        { src: "images/june-2026/weeping-cherry-june-2.webp", caption: "Weeping Cherry — wide shot" },
+        { src: "images/june-2026/forget-me-not.webp",         caption: "Forget-me-not" },
+        { src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Euonymus 'Emerald Gaiety' — newly moved from Bed 3" },
+      ],
+      bed3: [
+        { src: "images/june-2026/apple-tree.webp", caption: "Apple Tree" },
+        { src: "images/june-2026/avens-1.webp",    caption: "Avens — orange flowers" },
+        { src: "images/june-2026/avens-2.webp",    caption: "Avens — close-up" },
+        { src: "images/june-2026/avens-3.webp",    caption: "Avens — cluster" },
+        { src: "images/june-2026/avens-4.webp",    caption: "Avens — wide" },
+      ],
+      bed4: [
+        { src: "images/june-2026/wisteria.webp", caption: "Wisteria" },
+        { src: "images/june-2026/rose.webp",     caption: "Rose" },
+        { src: "images/june-2026/lavender.webp", caption: "Lavender" },
+        { src: "images/june-2026/yucca.webp",    caption: "Yucca" },
+      ],
+      stone: [
+        { src: "images/june-2026/cordyline-1.webp",   caption: "Cordyline" },
+        { src: "images/june-2026/cordyline-2.webp",   caption: "Cordyline — mid-shot" },
+        { src: "images/june-2026/cordyline-3.webp",   caption: "Cordyline — close-up" },
+        { src: "images/june-2026/houseleeks-1.webp",  caption: "Houseleeks" },
+        { src: "images/june-2026/houseleeks-2.webp",  caption: "Houseleeks — rosettes" },
+        { src: "images/june-2026/stonecrop-1.webp",   caption: "Stonecrop" },
+        { src: "images/june-2026/stonecrop-2.webp",   caption: "Stonecrop — mid-shot" },
+        { src: "images/june-2026/stonecrop-3.webp",   caption: "Stonecrop — close-up" },
+        { src: "images/june-2026/phormium-dark.webp", caption: "Dark Phormium" },
+        { src: "images/june-2026/rosemary.webp",      caption: "Rosemary" },
+      ],
+      patio: [
+        { src: "images/june-2026/honeysuckle-1.webp", caption: "Honeysuckle" },
+        { src: "images/june-2026/honeysuckle-2.webp", caption: "Honeysuckle — flowers" },
+        { src: "images/june-2026/clematis.webp",      caption: "Clematis montana" },
+      ],
+      steps: [],
+      kitchen: [],
+      lounge: [],
+      pear: [
+        { src: "images/june-2026/pear-tree.webp", caption: "Pear Tree — June" },
+      ],
+      bigpot1: [
+        { src: "images/june-2026/big-pot-1-wide.webp", caption: "Big Pot 1 — wide" },
+        { src: "images/june-2026/big-pot-1.webp",      caption: "Big Pot 1" },
+      ],
+      bigpot2: [
+        { src: "images/june-2026/big-pot-2-wide.webp", caption: "Big Pot 2 — wide" },
+        { src: "images/june-2026/big-pot-2.webp",      caption: "Big Pot 2" },
+      ],
+      littlepot1: [
+        { src: "images/june-2026/little-pot-1-wide.webp", caption: "Little Pot 1 — wide" },
+        { src: "images/june-2026/little-pot-1.webp",      caption: "Little Pot 1" },
+      ],
+      littlepot2: [
+        { src: "images/june-2026/little-pot-2.webp", caption: "Little Pot 2" },
+      ],
+      baskets: [
+        { src: "images/june-2026/hanging-basket-1.webp", caption: "Hanging Basket — front of house" },
+        { src: "images/june-2026/hanging-basket-2.webp", caption: "Hanging Basket — close-up" },
+      ],
+    },
+  };
+
+  // ─── PLANT PHOTOS ─────────────────────────────────────────────────
+  // Per-plant photo journal. Keyed by plant name, newest month first.
+  // Each entry: { month, label, photos: [{src, caption}] }
+  const PLANT_PHOTOS = {
+    "Japanese Maple": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/japanese-maple.webp", caption: "Full summer canopy" }] },
+      { month: "may-2026",  label: "May 2026",  photos: [{ src: "images/may-2026/bed1-close1.jpg",      caption: "Japanese Maple area" }] },
+    ],
+    "Japanese Aralia": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/fatsia.webp", caption: "Fatsia japonica" }] },
+    ],
+    "Dahlia": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/dahlia-context.webp", caption: "In context" },
+        { src: "images/june-2026/dahlia.webp",         caption: "Close-up of dark foliage" },
+      ]},
+    ],
+    "Angel Wings": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/angel-wings.webp", caption: "Angel Wings — silvery leaves" }] },
+    ],
+    "Euonymus": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus.webp", caption: "Euonymus — golden foliage" }] },
+    ],
+    "Hosta": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/hosta-bed1-1.webp", caption: "Hosta — Bed 1" },
+        { src: "images/june-2026/hosta-bed1-2.webp", caption: "Hosta — Bed 1, close-up" },
+        { src: "images/june-2026/hosta-bed2.webp",   caption: "Hosta — Bed 2" },
+      ]},
+    ],
+    "Weeping Cherry": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/weeping-cherry-june-1.webp", caption: "Full summer canopy" },
+        { src: "images/june-2026/weeping-cherry-june-2.webp", caption: "Wide shot" },
+      ]},
+    ],
+    "Variegated Dogwood": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/variegated-dogwood.webp", caption: "Variegated Dogwood" }] },
+    ],
+    "Peony": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/peony.webp", caption: "Peony — full bloom" }] },
+    ],
+    "Weigela": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/weigela.webp", caption: "Weigela" }] },
+    ],
+    "Silverbush": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/silverbush.webp", caption: "Silverbush in flower" }] },
+    ],
+    "Maiden Pink": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/maiden-pink.webp", caption: "Maiden Pink" }] },
+    ],
+    "Centaurea 'Snowy Owl'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
+        { src: "images/june-2026/centaurea-snowy-owl-2.webp", caption: "Close-up" },
+      ]},
+    ],
+    "Hydrangea petiolaris": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/hydrangea-petiolaris.webp", caption: "Hydrangea petiolaris — newly identified" }] },
+    ],
+    "Red Hot Poker": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/red-hot-poker.webp", caption: "Red Hot Poker — not yet flowered" }] },
+    ],
+    "Forget-me-not": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/forget-me-not.webp", caption: "Forget-me-not — tiny blue flowers" }] },
+    ],
+    "Astilbe": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/astilbe-1.webp", caption: "Astilbe — flower spike emerging" },
+        { src: "images/june-2026/astilbe-2.webp", caption: "Astilbe — foliage close-up" },
+      ]},
+    ],
+    "Yucca": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/yucca.webp", caption: "Yucca — architectural form" }] },
+    ],
+    "Euonymus 'Emerald Gaiety'": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Newly moved from Bed 3 — white-margined leaves" }] },
+    ],
+    "Apple Tree": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/apple-tree.webp", caption: "Apple Tree" }] },
+    ],
+    "Avens": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/avens-1.webp", caption: "Avens" },
+        { src: "images/june-2026/avens-2.webp", caption: "Close-up" },
+        { src: "images/june-2026/avens-3.webp", caption: "Cluster" },
+        { src: "images/june-2026/avens-4.webp", caption: "Wide" },
+      ]},
+    ],
+    "Wisteria": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/wisteria.webp", caption: "Wisteria — June" }] },
+    ],
+    "Rose": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/rose.webp", caption: "Rose" }] },
+    ],
+    "Lavender": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/lavender.webp", caption: "Lavender — coming into flower" }] },
+    ],
+    "Houseleeks": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/houseleeks-1.webp", caption: "Houseleeks" },
+        { src: "images/june-2026/houseleeks-2.webp", caption: "Rosette detail" },
+      ]},
+    ],
+    "Stonecrop": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/stonecrop-1.webp", caption: "Stonecrop" },
+        { src: "images/june-2026/stonecrop-2.webp", caption: "Mid-shot" },
+        { src: "images/june-2026/stonecrop-3.webp", caption: "Close-up" },
+      ]},
+    ],
+    "New Zealand Flax (dark)": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/phormium-dark.webp", caption: "Dark Phormium" }] },
+    ],
+    "Rosemary": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/rosemary.webp", caption: "Rosemary" }] },
+    ],
+    "Cabbage Tree": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/cordyline-1.webp", caption: "Cordyline" },
+        { src: "images/june-2026/cordyline-2.webp", caption: "Mid-shot" },
+        { src: "images/june-2026/cordyline-3.webp", caption: "Close-up" },
+      ]},
+    ],
+    "Honeysuckle": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/honeysuckle-1.webp", caption: "Honeysuckle" },
+        { src: "images/june-2026/honeysuckle-2.webp", caption: "Flowers" },
+      ]},
+    ],
+    "Clematis": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/clematis.webp", caption: "Clematis montana" }] },
+    ],
+    "Pear Tree": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/pear-tree.webp", caption: "Pear Tree — June" }] },
+    ],
   };
 
   // ─── BED PLANT MAPS ───────────────────────────────────────────────
@@ -874,34 +1167,36 @@ window.OAK = (function () {
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
       { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
       { name: "Nemesia", x: 65, y: 88, r: 5, hue: 25 },
+      { name: "Wintercreeper", x: 78, y: 75, r: 7, hue: 55 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
       { name: "Variegated Dogwood", x: 22, y: 42, r: 11, hue: 0 },
+      { name: "Hydrangea petiolaris", x: 52, y: 12, r: 10, hue: 210 },
       { name: "Weigela", x: 56, y: 56, r: 10, hue: 320 },
+      { name: "Hosta", x: 40, y: 56, r: 8, hue: 105 },
       { name: "Silverbush", x: 76, y: 56, r: 8, hue: 70 },
       { name: "Peony", x: 22, y: 70, r: 12, hue: 350 },
-      { name: "Hosta", x: 14, y: 88, r: 7, hue: 105 },
+      { name: "Centaurea 'Snowy Owl'", x: 88, y: 35, r: 7, hue: 200 },
+      { name: "Red Hot Poker", x: 86, y: 68, r: 7, hue: 25 },
       { name: "Angel Wings", x: 30, y: 88, r: 7, hue: 70 },
       { name: "Forget-me-not", x: 46, y: 78, r: 5, hue: 220 },
-      { name: "Maiden Pink", x: 70, y: 78, r: 5, hue: 330 },
+      { name: "Maiden Pink", x: 62, y: 78, r: 5, hue: 330 },
       { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
       { name: "Garden Pink", x: 72, y: 88, r: 5, hue: 340 },
+      { name: "Euonymus 'Emerald Gaiety'", x: 86, y: 88, r: 6, hue: 110 },
     ],
     bed3: [
       { name: "Apple Tree", x: 50, y: 38, r: 22, hue: 105 },
-      { name: "Avens", x: 26, y: 78, r: 9, hue: 25 },
-      { name: "Wintercreeper", x: 74, y: 78, r: 9, hue: 55 },
+      { name: "Avens", x: 50, y: 80, r: 11, hue: 25 },
     ],
     bed4: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
-      { name: "New Zealand Flax", x: 28, y: 42, r: 10, hue: 130 },
       { name: "Rose", x: 56, y: 50, r: 10, hue: 350 },
       { name: "Yucca", x: 24, y: 72, r: 9, hue: 90 },
       { name: "Lavender", x: 76, y: 76, r: 9, hue: 270 },
     ],
     stone: [
-      { name: "Aubrieta", x: 8, y: 50, r: 7, hue: 280 },
       { name: "Houseleeks", x: 22, y: 50, r: 7, hue: 130 },
       { name: "Stonecrop", x: 36, y: 50, r: 7, hue: 90 },
       { name: "New Zealand Flax (dark)", x: 50, y: 50, r: 9, hue: 0 },
@@ -938,6 +1233,12 @@ window.OAK = (function () {
     littlepot2: [
       { name: "Geranium", x: 45, y: 32, r: 18, hue: 0 },
       { name: "Petunia", x: 50, y: 72, r: 16, hue: 280 },
+    ],
+    baskets: [
+      { name: "Trailing Fuchsia", x: 22, y: 50, r: 16, hue: 340 },
+      { name: "Bacopa", x: 52, y: 25, r: 12, hue: 200 },
+      { name: "Trailing Lobelia", x: 78, y: 50, r: 12, hue: 230 },
+      { name: "Trailing Verbena", x: 50, y: 75, r: 12, hue: 330 },
     ],
   };
 
@@ -1002,5 +1303,5 @@ window.OAK = (function () {
     },
   };
 
-  return { ZONES, PLANTS, PHOTOS_BY_MONTH, BED_PLANT_MAPS, PALETTES };
+  return { ZONES, PLANTS, PHOTOS_BY_MONTH, PLANT_PHOTOS, BED_PLANT_MAPS, PALETTES };
 })();

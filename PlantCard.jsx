@@ -5,9 +5,10 @@ const { useEffect: useEffect_PC, useState: useState_PC } = React;
 
 function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
   const [photoIdx, setPhotoIdx] = useState_PC(0);
+  const [journalLightbox, setJournalLightbox] = useState_PC(null);
 
   // Reset photo index when plant changes
-  useEffect_PC(() => { setPhotoIdx(0); }, [plant]);
+  useEffect_PC(() => { setPhotoIdx(0); setJournalLightbox(null); }, [plant]);
 
   useEffect_PC(() => {
     const onKey = (e) => {
@@ -21,8 +22,15 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
 
   if (!plant) return null;
 
+  // Per-plant monthly photo journal from PLANT_PHOTOS
+  const plantPhotos = (window.OAK.PLANT_PHOTOS || {})[plant.name] || [];
+  const latestEntry  = plantPhotos.length > 0 ? plantPhotos[0] : null;
+  const latestPhoto  = latestEntry && latestEntry.photos.length > 0 ? latestEntry.photos[0] : null;
+
+  // Main image: use latest journal photo if available, else fall back to plant.photos carousel
   const photos = plant.photos || [];
   const hasPhotos = photos.length > 0;
+  const useJournalMain = !!latestPhoto;
 
   const fields = [
     { label: "Light",          icon: "☀", text: plant.light    },
@@ -66,7 +74,21 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
 
             {/* Left: photo or silhouette */}
             <div className="pc-silhouette">
-              {hasPhotos ? (
+              {useJournalMain ? (
+                <div className="pc-photo-wrap">
+                  <img
+                    key={latestPhoto.src}
+                    src={latestPhoto.src}
+                    alt={latestPhoto.caption || plant.name}
+                    className="pc-photo"
+                    onClick={() => setJournalLightbox(latestPhoto)}
+                    style={{ cursor: "zoom-in" }}
+                  />
+                  <div className="t-mono" style={{ textAlign: "center", opacity: 0.55, marginTop: 6, fontSize: 10 }}>
+                    Oak Lodge · {latestEntry.label}
+                  </div>
+                </div>
+              ) : hasPhotos ? (
                 <div className="pc-photo-wrap">
                   <img
                     key={photos[photoIdx]}
@@ -84,7 +106,7 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
                     </div>
                   )}
                   <div className="t-mono" style={{ textAlign: "center", opacity: 0.55, marginTop: 6, fontSize: 10 }}>
-                    Oak Lodge · May 2026
+                    Oak Lodge · reference
                   </div>
                 </div>
               ) : (
@@ -129,6 +151,31 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
             ))}
           </div>
 
+          {/* Photo Journal */}
+          {plantPhotos.length > 0 && (
+            <div className="pc-journal">
+              <div className="rule" style={{ margin: "8px 0 14px" }} />
+              <div className="t-stamp" style={{ marginBottom: 12 }}>Photo journal</div>
+              {plantPhotos.map((entry) => (
+                <div key={entry.month} className="pc-journal-month">
+                  <div className="pc-journal-month-label">{entry.label}</div>
+                  <div className="pc-journal-thumbs">
+                    {entry.photos.map((ph) => (
+                      <button
+                        key={ph.src}
+                        className="pc-thumb-btn"
+                        onClick={(e) => { e.stopPropagation(); setJournalLightbox(ph); }}
+                        title={ph.caption}
+                      >
+                        <img src={ph.src} alt={ph.caption} className="pc-thumb" loading="lazy" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
           {/* Footer */}
           <div className="pc-foot">
             <div className="t-mono" style={{ opacity: 0.65 }}>
@@ -146,6 +193,18 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
           </div>
         </div>
       </div>
+
+      {/* Journal lightbox — inline overlay on the card */}
+      {journalLightbox && (
+        <div
+          className="pc-journal-lb"
+          onClick={() => setJournalLightbox(null)}
+        >
+          <img src={journalLightbox.src} alt={journalLightbox.caption} className="pc-journal-lb-img" />
+          <div className="pc-journal-lb-cap t-hand">{journalLightbox.caption}</div>
+          <button className="ghostbtn pc-journal-lb-close" onClick={() => setJournalLightbox(null)}>close ✕</button>
+        </div>
+      )}
 
       <style>{`
         .pc-backdrop {
@@ -257,6 +316,73 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
           padding-top: 12px;
           border-top: 1px solid var(--hairline);
           margin-top: 8px;
+        }
+
+        /* Photo journal */
+        .pc-journal { margin-top: 4px; }
+        .pc-journal-month { margin-bottom: 14px; }
+        .pc-journal-month-label {
+          font-family: var(--type);
+          font-size: 10px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--pencil);
+          margin-bottom: 6px;
+        }
+        .pc-journal-thumbs {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+        .pc-thumb-btn {
+          background: none;
+          border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+          padding: 0;
+          cursor: zoom-in;
+          border-radius: 1px;
+          overflow: hidden;
+          flex-shrink: 0;
+          transition: border-color 0.15s, transform 0.15s;
+        }
+        .pc-thumb-btn:hover {
+          border-color: var(--accent);
+          transform: scale(1.04);
+          z-index: 1;
+        }
+        .pc-thumb {
+          width: 72px;
+          height: 72px;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* Journal lightbox */
+        .pc-journal-lb {
+          position: fixed; inset: 0; z-index: 900;
+          background: rgba(0, 0, 0, 0.88);
+          display: grid; place-items: center;
+          padding: 32px;
+          animation: fadeIn 180ms ease;
+        }
+        .pc-journal-lb-img {
+          max-width: min(700px, 90vw);
+          max-height: 80vh;
+          object-fit: contain;
+          display: block;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .pc-journal-lb-cap {
+          position: absolute;
+          bottom: 32px; left: 0; right: 0;
+          text-align: center;
+          color: rgba(255,255,255,0.85);
+          font-size: 22px;
+        }
+        .pc-journal-lb-close {
+          position: absolute;
+          top: 20px; right: 20px;
+          color: rgba(255,255,255,0.8);
+          border-color: rgba(255,255,255,0.3);
         }
       `}</style>
     </div>

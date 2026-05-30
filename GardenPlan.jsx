@@ -12,7 +12,7 @@ function GardenPlan({ onOpenZone, dark }) {
   const order = [
     "patio", "kitchen", "lounge", "steps",
     "stone", "bed1", "bed2", "bed3", "bed4", "pear",
-    "bigpot1", "bigpot2", "littlepot1", "littlepot2",
+    "bigpot1", "bigpot2", "littlepot1", "littlepot2", "baskets",
   ];
 
   const RoughDefs = (
@@ -271,7 +271,7 @@ function GardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {["bed1", "bed2", "bed3", "bed4", "stone", "patio", "pear", "bigpot1", "bigpot2", "littlepot1", "littlepot2"].map((k) => {
+          {["bed1", "bed2", "bed3", "bed4", "stone", "patio", "pear", "bigpot1", "bigpot2", "littlepot1", "littlepot2", "baskets"].map((k) => {
             const z = Z[k];
             return (
               <button

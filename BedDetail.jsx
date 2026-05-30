@@ -6,7 +6,10 @@ const { useState: useState_BD, useMemo: useMemo_BD } = React;
 function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const Z = window.OAK.ZONES[zoneKey];
   const plants = Z.plantKey ? window.OAK.PLANTS[Z.plantKey] : [];
-  const photos = (window.OAK.PHOTOS_BY_MONTH["may-2026"][zoneKey] || []);
+  const _monthKeys = Object.keys(window.OAK.PHOTOS_BY_MONTH);
+  const _latestMonth = _monthKeys[_monthKeys.length - 1];
+  const _latestMonthData = window.OAK.PHOTOS_BY_MONTH[_latestMonth] || {};
+  const photos = (_latestMonthData[zoneKey] || []);
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
 
@@ -108,7 +111,7 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
       <div style={{ marginTop: 36 }}>
         <div className="row" style={{ alignItems: "baseline", gap: 14 }}>
           <div className="t-display" style={{ fontSize: 32 }}>Photographs</div>
-          <div className="t-stamp">May 2026 · {photos.length} {photos.length === 1 ? "exposure" : "exposures"}</div>
+          <div className="t-stamp">{_latestMonthData.label || _latestMonth} · {photos.length} {photos.length === 1 ? "exposure" : "exposures"}</div>
         </div>
         <div className="rule" style={{ margin: "10px 0 20px" }} />
 
