@@ -65,7 +65,7 @@ Deliberate choice. Brad is not an engineer. The repo needs to be updatable by dr
 Everything lives in `data.js` as `window.OAK`. Four objects:
 
 ### ZONES
-One entry per clickable area on the garden plan. Keys: `bed1`, `bed2`, `bed3`, `bed4`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`, `bigpot1`, `bigpot2`, `littlepot1`, `littlepot2`.
+One entry per clickable area on the garden plan. Keys: `bed1`, `bed2`, `bed3`, `bed4`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`, `bigpot1`, `bigpot2`, `littlepot1`, `littlepot2`, `frontpot`.
 
 ```javascript
 bed1: {
@@ -90,7 +90,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 }
 ```
 
-Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Little Pot 1"`, `"Little Pot 2"`
+Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Little Pot 1"`, `"Little Pot 2"`, `"Front Pot"`
 
 ### PHOTOS_BY_MONTH
 ```javascript
@@ -103,7 +103,9 @@ Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"
   }
 }
 ```
-**Adding a new month:** add a new top-level key (e.g. `"jun-2026"`) with the same structure. BedDetail.jsx currently reads `may-2026` hardcoded — this needs updating when multi-month timeline is built.
+**Adding a new month:** add a new top-level key (e.g. `"jul-2026"`) with the same structure. BedDetail.jsx reads the last key alphabetically — no hardcoding, just keep keys in alphabetical order.
+
+**Archive photos:** If a bed is replanted, add a `{zoneKey}Archive` sub-key in the same month entry (e.g. `bed3Archive`). BedDetail.jsx renders these in a separate "As it was" section with a sepia-toned polaroid style. Currently used for Bed 3 (June 2026 replant).
 
 ### BED_PLANT_MAPS
 Clickable plant positions on the bed detail map. Each entry:
@@ -137,24 +139,26 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks, rosemary
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Patio Kitchen + Patio Lounge — hardscape, no plants
+- Front Pot — glazed pot at the front door; Gazania, Calibrachoa, Bacopa White (added June 2026)
 
 ---
 
-## Plant inventory summary (53 plants)
+## Plant inventory summary (updated June 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 11 | Japanese Maple, Fatsia japonica, Rhododendron 'Goldflimmer', Box Hedging (full right edge), Dahlia (dark-leaved) |
-| Bed 2 | 10 | Weeping Cherry, Variegated Dogwood, Peony, Weigela, Silverbush |
-| Bed 3 | 3 | Apple Tree, Avens (Geum), Wintercreeper |
+| Bed 1 | 14 | Japanese Maple, Fatsia japonica, Rhododendron, Box Hedging, Dahlia, Avens (moved from Bed 3), Dahlia (yellow, new June 2026) |
+| Bed 2 | 13 | Weeping Cherry, Variegated Dogwood, Peony, Weigela, Silverbush, Hydrangea petiolaris |
+| Bed 3 | 5 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope' — replanted June 2026 |
 | Bed 4 | 5 | Wisteria, NZ Flax, Rose, Yucca, Lavender |
-| Stone Bed | 7 | Cordyline australis, dark Phormium, Aubrieta, Houseleeks, Rosemary |
+| Stone Bed | 7 | Cordyline australis, dark Phormium, Houseleeks, Rosemary, Cabbage Tree, Hebe |
 | Patio | 1 | Clematis montana (left side of house wall) |
 | Tree | 1 | Pear Tree (Pyrus) |
-| Big Pot 1 | 6 | Fuchsia 'Mrs Popple', Verbena, Calibrachoa, Nepeta, Lobelia, Petunia 'Midnight Sky' |
-| Big Pot 2 | 5 | Lobelia, Verbena 'Venturi Pink Bicolour', Petunia, Nepeta, Fuchsia 'Mrs Popple' |
-| Little Pot 1 | 2 | Geranium 'Trend Sophie Dark Red', Petunia 'Vivini Blue Star' |
-| Little Pot 2 | 2 | Geranium 'Summer Twist Red White', Petunia 'Purple Vein' |
+| Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |
+| Big Pot 2 | 5 | Lobelia, Verbena, Petunia, Nepeta, Fuchsia |
+| Little Pot 1 | 2 | Geranium, Petunia |
+| Little Pot 2 | 2 | Geranium, Petunia |
+| Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
 
 Full care data (light, water, care, seasonal) for every plant is in `data.js` PLANTS object.
 
@@ -219,12 +223,15 @@ view = { name: "plan" }
 - **Bed 4 polygon coords** were adjusted from the original wireframe: `715,55 765,55 765,255 585,255 585,205 715,205` (Design version, slightly different from the prototype).
 - **`plantKey` is null** for `steps`, `kitchen`, `lounge` — no plants there, don't add a plant list to those views.
 - **Clematis is in Patio zone**, not Stone Bed. It was moved. Left side of the house wall.
+- **`frontpot` must be in GardenPlan.jsx `order` array** — the zone render order is hardcoded. Any new zone must be added there explicitly (and to the legend array below it).
+- **Archive photo system** — `{zoneKey}Archive` sub-keys in `PHOTOS_BY_MONTH` hold historical photos for replanted beds. BedDetail.jsx renders them as a sepia "As it was / Pre-June 2026" section. Currently only `bed3Archive` is used.
+- **`june-2026-updates/` folder** — WebP conversions of the June 2026 update photos (replant, new dahlia, front pot etc). Distinct from `june-2026/` which holds the full-bed photos taken earlier that month.
 
 ---
 
 ## Current known gaps (photos)
 
-As of 10 May 2026, photo gaps have been filled. New photos taken and processed via CoWork. Full end-to-end test (June HEICs → CoWork → git push) still pending — waiting on June photos.
+As of June 2026, all beds and new zones have photos. June update photos (Bed 3 replant, new Dahlia, Avens in Bed 1, Front Pot) are in `images/june-2026-updates/`. Older June photos (pre-update) are in `images/june-2026/`.
 
 ---
 
@@ -232,16 +239,17 @@ As of 10 May 2026, photo gaps have been filled. New photos taken and processed v
 
 See `BACKLOG.md` for the full prioritised list. Current top items:
 
-1. **End-to-end photo test** — drop June HEICs into `Incoming Photos`, run "run the monthly photos" in CoWork. Confirms full pipeline works.
-2. **Wire up new photos into data.js** — after CoWork pushes images, add new `PHOTOS_BY_MONTH` entry in `data.js`. Quick job in a new conversation.
-3. **Monthly timeline view** — once June photos exist, build month tabs or before/after slider per bed. `BedDetail.jsx` currently hardcodes `may-2026`.
-4. **Mobile swipe on photo gallery** — polaroid layout needs touch/swipe support on iPhone.
-5. **CoWork auto-update of data.js** — close the last manual step in the monthly workflow.
+1. **Monthly timeline view** — build month tabs or before/after slider per bed. BedDetail.jsx already reads the last month key dynamically — just needs the UI.
+2. **Mobile swipe on photo gallery** — polaroid layout needs touch/swipe support on iPhone.
+3. **CoWork auto-update of data.js** — close the last manual step in the monthly workflow.
 
 **Done and off the list:**
 - Seasonal care calendar (`SeasonalCalendar.jsx` + `seasonal-data.js`) — live
 - CoWork skill installed and active (`garden-monthly-photos.skill`)
-- Photo gaps filled (May 2026)
+- Photo gaps filled (May + June 2026)
+- Bed 3 replanted June 2026 — new plants, archive photos system added
+- Front Pot zone added (`frontpot`) — Gazania, Calibrachoa, Bacopa White
+- Avens moved Bed 3 → Bed 1; Dahlia (yellow) added to Bed 1
 
 ---
 

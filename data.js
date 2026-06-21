@@ -41,7 +41,7 @@ window.OAK = (function () {
       dims: "0.8m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Tiny pocket bed at the foot of the steps. An apple tree with bird feeders and a clump of avens.",
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders at the centre. Completely replanted in June 2026 — Callistemon, Achillea, Gaillardia and Abelia 'Kaleidoscope' now fill the underplanting.",
       shape: { kind: "rect", x: 490, y: 267, w: 40, h: 40 },
       color: "#c7a54a",
       labelXY: [510, 257],
@@ -204,6 +204,20 @@ window.OAK = (function () {
       plantKey: "Baskets",
       isPot: true,
     },
+    frontpot: {
+      id: "frontpot",
+      title: "Front Door Pot",
+      badge: "Front of house",
+      dims: "Medium glazed pot",
+      where: "Front of house, by the front door",
+      desc:
+        "A colourful pot planted up in June 2026, sitting by the front door. Bold Gazania daisies in cream and orange, with trailing Calibrachoa and Bacopa White for a long season of colour.",
+      shape: { kind: "circle", cx: 750, cy: 490, r: 12 },
+      color: "#c06a2a",
+      labelXY: [750, 474],
+      plantKey: "Front Pot",
+      isPot: true,
+    },
   };
 
   // ─── PLANTS ───────────────────────────────────────────────────────
@@ -329,6 +343,26 @@ window.OAK = (function () {
         water: "Regular watering, especially in dry spells. Don't let soil dry out completely.",
         care: "Rich, well-drained soil. Mulch the crown. Stake if it gets tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early to encourage bushiness. Deadhead spent flowers for continuous blooming.",
         seasonal: "Dark bronze-black foliage from May; red flowers July–October; dies back after first hard frost. Tubers overwinter underground with protection.",
+      },
+      {
+        name: "Avens",
+        latin: "Geum",
+        photos: ["images/june-2026-updates/avens-bed1.webp", "images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp"],
+        position: "Front — orange flowers. Moved from Bed 3 in June 2026.",
+        light: "Sun or partial shade.",
+        water: "Moderate.",
+        care: "Deadhead to encourage a second flush. Divide clumps every few years.",
+        seasonal: "Orange flowers May–July, often a second flush in late summer.",
+      },
+      {
+        name: "Dahlia (yellow)",
+        latin: "Dahlia (dark-leaved, yellow-flowered Bishop type)",
+        photos: ["images/june-2026-updates/dahlia-black-yellow-1.webp", "images/june-2026-updates/dahlia-black-yellow-2.webp"],
+        position: "Centre — dark foliage, yellow flowers to come. Added June 2026.",
+        light: "Full sun. Needs warmth to thrive.",
+        water: "Regular watering, especially in dry spells. Don't let soil dry out completely.",
+        care: "Rich, well-drained soil. Mulch the crown. Stake if tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early. Deadhead for continuous blooming.",
+        seasonal: "Dark bronze-black foliage from May; yellow flowers July–October; dies back after first hard frost. Tubers overwinter with protection.",
       },
     ],
     "Bed 2": [
@@ -491,14 +525,44 @@ window.OAK = (function () {
         seasonal: "Blossom April; fruit August–October; bare winter.",
       },
       {
-        name: "Avens",
-        latin: "Geum",
-        photos: ["images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp", "images/plants/avens-orange-3.webp"],
-        position: "Front-left — orange flowers",
-        light: "Sun or partial shade.",
-        water: "Moderate.",
-        care: "Deadhead. Divide every few years.",
-        seasonal: "Orange flowers May–July, often a second flush.",
+        name: "Callistemon 'Inferno'",
+        latin: "Callistemon citrinus 'Inferno'",
+        photos: ["images/june-2026-updates/callistemon-inferno-1.webp", "images/june-2026-updates/callistemon-inferno-2.webp"],
+        position: "Front-left — vivid red bottlebrush flowers",
+        light: "Full sun. Thrives in a warm, sheltered spot.",
+        water: "Moderate. Drought-tolerant once established. Good drainage essential.",
+        care: "Minimal pruning — light shaping after flowering if needed. Mulch in first winter. Hardy to around -10°C but shelter from cold winds.",
+        seasonal: "Evergreen; vivid red bottlebrush flowers June–August, sometimes a repeat flush in autumn. Architectural foliage year-round.",
+      },
+      {
+        name: "Achillea",
+        latin: "Achillea millefolium",
+        photos: ["images/june-2026-updates/achillea.webp"],
+        position: "Left — flat-headed flower clusters",
+        light: "Full sun.",
+        water: "Low to moderate. Drought-tolerant once established.",
+        care: "Cut back after first flush for a second showing. Divide clumps every 2–3 years to keep vigorous. Good for cutting.",
+        seasonal: "Flat-headed flower clusters in red, pink or yellow June–September; feathery aromatic foliage through the season.",
+      },
+      {
+        name: "Gaillardia",
+        latin: "Gaillardia × grandiflora",
+        photos: ["images/june-2026-updates/gaillardia.webp"],
+        position: "Right — vivid daisy flowers",
+        light: "Full sun.",
+        water: "Low to moderate. Sharp drainage essential — hates wet feet.",
+        care: "Deadhead regularly for near-continuous bloom. Cut back hard in autumn. Short-lived perennial — may need replacing every 2–3 years.",
+        seasonal: "Vivid red, orange and yellow daisy-like flowers June–October; near-continuous if deadheaded.",
+      },
+      {
+        name: "Abelia 'Kaleidoscope'",
+        latin: "Abelia × grandiflora 'Kaleidoscope'",
+        photos: ["images/june-2026-updates/abelia-kaleidoscope.webp"],
+        position: "Front-right — variegated foliage shrub",
+        light: "Full sun to partial shade. Best foliage colour in full sun.",
+        water: "Moderate. Good drainage.",
+        care: "Light trim after flowering to maintain shape. Very low maintenance. Semi-evergreen — may drop some leaves in a hard winter but recovers readily.",
+        seasonal: "Variegated yellow and green leaves spring–summer, turning orange-red in autumn; small white fragrant flowers July–September. Semi-evergreen.",
       },
     ],
     "Bed 4": [
@@ -797,6 +861,48 @@ window.OAK = (function () {
         seasonal: "Purple-veined trumpet flowers May–October.",
       },
     ],
+    "Front Pot": [
+      {
+        name: "Gazania 'Sunny Side Up'",
+        latin: "Gazania rigens 'Sunny Side Up'",
+        photos: ["images/june-2026-updates/gazania-sunny-side-up.webp"],
+        position: "Left — large cream and white daisy flowers",
+        light: "Full sun. Flowers close in shade and on overcast days.",
+        water: "Low to moderate. Drought-tolerant. Sharp drainage.",
+        care: "Deadhead spent flowers to encourage more. Tender annual — replace each year. Does not recover from frost.",
+        seasonal: "Large cream-white daisy flowers with contrasting dark centres May–October; closes at night and on dull days.",
+      },
+      {
+        name: "Gazania 'Orange Flame'",
+        latin: "Gazania rigens 'Orange Flame'",
+        photos: ["images/june-2026-updates/gazania-orange-flame.webp"],
+        position: "Right — vivid orange daisy flowers",
+        light: "Full sun. Flowers close in shade.",
+        water: "Low to moderate. Drought-tolerant.",
+        care: "Deadhead to extend flowering. Tender annual — replace each year. Not frost-hardy.",
+        seasonal: "Vivid orange flame-patterned daisy flowers May–October; closes at night and on dull days.",
+      },
+      {
+        name: "Calibrachoa",
+        latin: "Calibrachoa spp.",
+        photos: ["images/june-2026-updates/calibrachoa-front-pot.webp"],
+        position: "Trailing — around the pot edge",
+        light: "Full sun.",
+        water: "Keep evenly moist. Hates drying out.",
+        care: "Feed weekly with liquid tomato food. Self-cleaning — no deadheading needed. Tender annual.",
+        seasonal: "Masses of small petunia-like flowers May–October. Continuous if fed.",
+      },
+      {
+        name: "Bacopa White",
+        latin: "Sutera cordata (white cultivar)",
+        photos: ["images/june-2026-updates/bacopa-white.webp"],
+        position: "Trailing — delicate white flowers at the edges",
+        light: "Sun to partial shade.",
+        water: "Keep evenly moist.",
+        care: "Self-cleaning; no deadheading needed. Trim back if leggy. Tender annual.",
+        seasonal: "Tiny white flowers May–October; neat trailing habit.",
+      },
+    ],
     "Baskets": [
       {
         name: "Trailing Fuchsia",
@@ -938,6 +1044,9 @@ window.OAK = (function () {
         { src: "images/june-2026/fatsia.webp",          caption: "Fatsia japonica" },
         { src: "images/june-2026/astilbe-1.webp",       caption: "Astilbe — flower spike emerging" },
         { src: "images/june-2026/astilbe-2.webp",       caption: "Astilbe — foliage close-up" },
+        { src: "images/june-2026-updates/avens-bed1.webp",             caption: "Avens — moved from Bed 3, June 2026" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",  caption: "Dahlia (yellow) — dark foliage, newly planted" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",  caption: "Dahlia (yellow) — close-up" },
       ],
       bed2: [
         { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
@@ -956,11 +1065,23 @@ window.OAK = (function () {
         { src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Euonymus 'Emerald Gaiety' — newly moved from Bed 3" },
       ],
       bed3: [
-        { src: "images/june-2026/apple-tree.webp", caption: "Apple Tree" },
+        { src: "images/june-2026-updates/bed3-after-wide-1.webp",      caption: "Bed 3 — after replanting" },
+        { src: "images/june-2026-updates/bed3-after-wide-2.webp",      caption: "Bed 3 — wide shot" },
+        { src: "images/june-2026-updates/callistemon-inferno-1.webp",  caption: "Callistemon 'Inferno'" },
+        { src: "images/june-2026-updates/callistemon-inferno-2.webp",  caption: "Callistemon 'Inferno' — close-up" },
+        { src: "images/june-2026-updates/achillea.webp",               caption: "Achillea" },
+        { src: "images/june-2026-updates/gaillardia.webp",             caption: "Gaillardia" },
+        { src: "images/june-2026-updates/abelia-kaleidoscope.webp",    caption: "Abelia 'Kaleidoscope'" },
+        { src: "images/june-2026/apple-tree.webp",                     caption: "Apple Tree — June" },
+      ],
+      bed3Archive: [
         { src: "images/june-2026/avens-1.webp",    caption: "Avens — orange flowers" },
         { src: "images/june-2026/avens-2.webp",    caption: "Avens — close-up" },
         { src: "images/june-2026/avens-3.webp",    caption: "Avens — cluster" },
-        { src: "images/june-2026/avens-4.webp",    caption: "Avens — wide" },
+        { src: "images/june-2026/avens-4.webp",    caption: "Avens — wide shot" },
+        { src: "images/may-2026/bed3.jpg",         caption: "Bed 3 — May 2026 overview" },
+        { src: "images/may-2026/bed3-detail.jpg",  caption: "Bed 3 — May 2026 detail" },
+        { src: "images/may-2026/bed3-3.webp",      caption: "Bed 3 — May 2026, apple tree" },
       ],
       bed4: [
         { src: "images/june-2026/wisteria.webp", caption: "Wisteria" },
@@ -1009,6 +1130,13 @@ window.OAK = (function () {
       baskets: [
         { src: "images/june-2026/hanging-basket-1.webp", caption: "Hanging Basket — front of house" },
         { src: "images/june-2026/hanging-basket-2.webp", caption: "Hanging Basket — close-up" },
+      ],
+      frontpot: [
+        { src: "images/june-2026-updates/front-pot-overview.webp",     caption: "Front door pot — overview" },
+        { src: "images/june-2026-updates/gazania-sunny-side-up.webp",  caption: "Gazania 'Sunny Side Up'" },
+        { src: "images/june-2026-updates/gazania-orange-flame.webp",   caption: "Gazania 'Orange Flame'" },
+        { src: "images/june-2026-updates/calibrachoa-front-pot.webp",  caption: "Calibrachoa — trailing" },
+        { src: "images/june-2026-updates/bacopa-white.webp",           caption: "Bacopa White" },
       ],
     },
   };
@@ -1095,8 +1223,11 @@ window.OAK = (function () {
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/apple-tree.webp", caption: "Apple Tree" }] },
     ],
     "Avens": [
-      { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026/avens-1.webp", caption: "Avens" },
+      { month: "june-2026", label: "June 2026 (Bed 1 — new location)", photos: [
+        { src: "images/june-2026-updates/avens-bed1.webp", caption: "Avens — in Bed 1" },
+      ]},
+      { month: "june-2026", label: "June 2026 (Bed 3 — before move)", photos: [
+        { src: "images/june-2026/avens-1.webp", caption: "Avens — orange flowers" },
         { src: "images/june-2026/avens-2.webp", caption: "Close-up" },
         { src: "images/june-2026/avens-3.webp", caption: "Cluster" },
         { src: "images/june-2026/avens-4.webp", caption: "Wide" },
@@ -1149,6 +1280,43 @@ window.OAK = (function () {
     "Pear Tree": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/pear-tree.webp", caption: "Pear Tree — June" }] },
     ],
+    "Dahlia (yellow)": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp", caption: "Dark foliage, yellow buds — newly planted" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp", caption: "Close-up" },
+      ]},
+    ],
+    "Callistemon 'Inferno'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/callistemon-inferno-1.webp", caption: "Callistemon 'Inferno'" },
+        { src: "images/june-2026-updates/callistemon-inferno-2.webp", caption: "Callistemon 'Inferno' — close-up" },
+      ]},
+    ],
+    "Achillea": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/achillea.webp", caption: "Achillea — flat-headed flower clusters" },
+      ]},
+    ],
+    "Gaillardia": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/gaillardia.webp", caption: "Gaillardia — vivid daisy flowers" },
+      ]},
+    ],
+    "Abelia 'Kaleidoscope'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/abelia-kaleidoscope.webp", caption: "Abelia 'Kaleidoscope' — variegated foliage" },
+      ]},
+    ],
+    "Gazania 'Sunny Side Up'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/gazania-sunny-side-up.webp", caption: "Gazania 'Sunny Side Up'" },
+      ]},
+    ],
+    "Gazania 'Orange Flame'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-updates/gazania-orange-flame.webp", caption: "Gazania 'Orange Flame'" },
+      ]},
+    ],
   };
 
   // ─── BED PLANT MAPS ───────────────────────────────────────────────
@@ -1168,6 +1336,8 @@ window.OAK = (function () {
       { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
       { name: "Nemesia", x: 65, y: 88, r: 5, hue: 25 },
       { name: "Wintercreeper", x: 78, y: 75, r: 7, hue: 55 },
+      { name: "Avens", x: 38, y: 93, r: 6, hue: 30 },
+      { name: "Dahlia (yellow)", x: 63, y: 68, r: 8, hue: 55 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
@@ -1187,8 +1357,11 @@ window.OAK = (function () {
       { name: "Euonymus 'Emerald Gaiety'", x: 86, y: 88, r: 6, hue: 110 },
     ],
     bed3: [
-      { name: "Apple Tree", x: 50, y: 38, r: 22, hue: 105 },
-      { name: "Avens", x: 50, y: 80, r: 11, hue: 25 },
+      { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
+      { name: "Callistemon 'Inferno'", x: 18, y: 72, r: 10, hue: 0   },
+      { name: "Achillea",             x: 50, y: 80, r: 9,  hue: 55  },
+      { name: "Gaillardia",           x: 78, y: 64, r: 8,  hue: 25  },
+      { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
     ],
     bed4: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
@@ -1239,6 +1412,12 @@ window.OAK = (function () {
       { name: "Bacopa", x: 52, y: 25, r: 12, hue: 200 },
       { name: "Trailing Lobelia", x: 78, y: 50, r: 12, hue: 230 },
       { name: "Trailing Verbena", x: 50, y: 75, r: 12, hue: 330 },
+    ],
+    frontpot: [
+      { name: "Gazania 'Sunny Side Up'", x: 28, y: 28, r: 16, hue: 60  },
+      { name: "Gazania 'Orange Flame'",  x: 72, y: 28, r: 16, hue: 25  },
+      { name: "Calibrachoa",             x: 25, y: 72, r: 12, hue: 350 },
+      { name: "Bacopa White",            x: 72, y: 72, r: 12, hue: 200 },
     ],
   };
 

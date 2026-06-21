@@ -10,6 +10,8 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const _latestMonth = _monthKeys[_monthKeys.length - 1];
   const _latestMonthData = window.OAK.PHOTOS_BY_MONTH[_latestMonth] || {};
   const photos = (_latestMonthData[zoneKey] || []);
+  // Archive photos — stored under `{zoneKey}Archive` in the latest month data
+  const archivePhotos = (_latestMonthData[zoneKey + "Archive"] || []);
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
 
@@ -137,6 +139,34 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
         )}
       </div>
 
+      {/* Archive / before photos — shown when a bed has been replanted */}
+      {archivePhotos.length > 0 && (
+        <div style={{ marginTop: 48 }}>
+          <div className="row" style={{ alignItems: "baseline", gap: 14 }}>
+            <div className="t-display" style={{ fontSize: 28 }}>As it was</div>
+            <div className="t-stamp">Pre-June 2026 · {archivePhotos.length} {archivePhotos.length === 1 ? "exposure" : "exposures"}</div>
+          </div>
+          <p className="t-hand" style={{ fontSize: 18, color: "var(--pencil)", margin: "6px 0 16px" }}>
+            The bed before the June 2026 replanting — kept here for the record.
+          </p>
+          <div className="rule" style={{ margin: "0 0 20px" }} />
+          <div className="photo-scatter">
+            {archivePhotos.map((ph, i) => {
+              const tilt = ((i % 5) - 2) * 1.2;
+              return (
+                <div key={ph.src} className="polaroid polaroid--archive" style={{ transform: `rotate(${tilt}deg)` }}>
+                  <span className="tape" style={{ top: -10, left: "50%", transform: "translateX(-50%) rotate(-2deg)" }} />
+                  <div className="frame" style={{ width: 200, height: 270 }}>
+                    <PhotoOrFallback src={ph.src} caption={ph.caption} onClick={() => onOpenLightbox(ph)} />
+                  </div>
+                  <div className="caption">{ph.caption}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <div style={{ marginTop: 56, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <button className="inkbtn" onClick={onBack}>
@@ -204,6 +234,14 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
           flex-wrap: wrap;
           gap: 28px 26px;
           padding: 12px 0;
+        }
+        .polaroid--archive {
+          opacity: 0.82;
+          filter: sepia(20%);
+        }
+        .polaroid--archive:hover {
+          opacity: 1;
+          filter: none;
         }
       `}</style>
     </div>
