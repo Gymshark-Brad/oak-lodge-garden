@@ -12,6 +12,7 @@
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Tropical speckled leaves carry on regardless." },
         { plant: "New Zealand Flax (dark)", bed: "Stone Bed", note: "Burgundy sword leaves arching low over the gravel." },
         { plant: "Cabbage Tree", bed: "Stone Bed", note: "Evergreen burgundy fountain — the focal point of the lower terrace." },
+        { plant: "Little Heath", bed: "Bed 1", note: "White-tipped pink flowers low along the front edge — the only thing in full bloom right now." },
       ],
       tasks: [
         { task: "Prune apple tree while dormant", plants: ["Apple Tree"], bed: "Bed 3" },
@@ -30,6 +31,7 @@
         { plant: "Variegated Dogwood", bed: "Bed 2", note: "Red stems still glowing — the last big show before they're cut down." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Steady green presence while everything else is bare." },
         { plant: "Houseleeks", bed: "Stone Bed", note: "Tight winter rosettes, sometimes with a red flush." },
+        { plant: "Little Heath", bed: "Bed 1", note: "Still flowering along the front edge — one of the very few things in colour." },
       ],
       tasks: [
         { task: "Coppice dogwood — cut a third of stems to ground for next year's colour", plants: ["Variegated Dogwood"], bed: "Bed 2" },
@@ -47,8 +49,11 @@
         { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom buds breaking — the beginning of the show." },
         { plant: "Pear Tree", bed: "Tree", note: "White blossom appearing at the gate." },
         { plant: "English Daisy", bed: "Bed 1", note: "Pink pom-poms beginning along the front edge." },
+        { plant: "Little Heath", bed: "Bed 1", note: "Tail end of the flowers — gold-tipped foliage taking over for the rest of the year." },
+        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Vivid orange-red new growth emerging — one of the loudest spring foliage moments in the garden." },
       ],
       tasks: [
+        { task: "Prune Spiraea 'Double Play Big Bang' hard in early spring before growth gets going — cut back hard to encourage vivid new growth and flowers", plants: ["Spiraea 'Double Play Big Bang'"], bed: "Bed 2" },
         { task: "Cut old leaves from Phormium / New Zealand Flax at the base", plants: ["New Zealand Flax", "New Zealand Flax (dark)"], bed: "Bed 4" },
         { task: "Prune Euonymus to shape", plants: ["Euonymus"], bed: "Bed 1" },
         { task: "Prune Wintercreeper to shape", plants: ["Wintercreeper"], bed: "Bed 1" },
@@ -62,6 +67,7 @@
     April: {
       mood: "Everything emerges at once. New leaves the colour of copper.",
       highlights: [
+        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Brilliant orange-red new foliage at peak — stunning before the flowers arrive." },
         { plant: "Aubrieta", bed: "Stone Bed", note: "Sheets of purple at peak." },
         { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom in full cascade over the wall." },
         { plant: "Pear Tree", bed: "Tree", note: "White blossom against bare branches." },
@@ -72,6 +78,7 @@
         { plant: "Dahlia", bed: "Bed 1", note: "Dark shoots emerging from the crown — the foliage show begins." },
       ],
       tasks: [
+        { task: "Trim Little Heath lightly after flowering to keep it compact — do not cut into old wood", plants: ["Little Heath"], bed: "Bed 1" },
         { task: "Watch for slugs on Hostas — check after rain, especially at dusk", plants: ["Hosta"], bed: "Bed 1" },
         { task: "Start deadheading English Daisies to prolong flowering", plants: ["English Daisy"], bed: "Bed 1" },
         { task: "Begin regular rose watering and feed; mulch around the base", plants: ["Rose"], bed: "Bed 4" },
@@ -121,6 +128,10 @@
         { plant: "Achillea", bed: "Bed 3", note: "Flat-headed flower clusters beginning above the ferny foliage." },
         { plant: "Gazania 'Sunny Side Up'", bed: "Front Pot", note: "Large cream-white daisies — only open in sun, but bright when they do." },
         { plant: "Gazania 'Orange Flame'", bed: "Front Pot", note: "Vivid orange flames — stunning in the morning sun by the front door." },
+        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Bright pink flowers opening against the vivid orange-red foliage — a genuinely striking combination." },
+        { plant: "Celosia", bed: "Bed 1", note: "Purple, yellow and red crested plumes in the gaps — vivid and exotic-looking." },
+        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Mixed red, yellow and pink trailing flowers tumbling from the stair wall — something to look at on the way down." },
+        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Cheerful yellow daisies in the blue pot on the wall — simple and effective." },
       ],
       tasks: [
         { task: "Prune Weigela after flowering — one in three old stems out", plants: ["Weigela"], bed: "Bed 2" },
@@ -133,6 +144,9 @@
         { task: "Deadhead Gaillardia — regular removal is essential for continuous flowering", plants: ["Gaillardia"], bed: "Bed 3" },
         { task: "Feed front door pot weekly with liquid tomato food — Gazania, Calibrachoa and Bacopa all benefit", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
         { task: "Deadhead Gazania spent flowers to keep them going", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'"], bed: "Front Pot" },
+        { task: "Feed wall pots weekly with liquid tomato food — Calibrachoa and Coreopsis both respond well", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
+        { task: "Deadhead Celosia spent plumes to keep more flowers coming", plants: ["Celosia"], bed: "Bed 1" },
+        { task: "Remove dead flower heads from Spiraea to tidy; do not cut hard until next spring", plants: ["Spiraea 'Double Play Big Bang'"], bed: "Bed 2" },
       ],
     },
 
@@ -153,6 +167,10 @@
         { plant: "Dahlia (yellow)", bed: "Bed 1", note: "First yellow flowers opening against that dark bronze foliage — a strong contrast." },
         { plant: "Avens", bed: "Bed 1", note: "Second flush of orange flowers if well deadheaded through June." },
         { plant: "Gazania 'Orange Flame'", bed: "Front Pot", note: "Orange flame daisies at their most vivid in the summer sun." },
+        { plant: "Celosia", bed: "Bed 1", note: "Vivid crested plumes in full — purple, yellow and red all going at once." },
+        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Pink flowers against orange foliage — still going strong." },
+        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Trailing flowers in full flow — earning its spot on the wall." },
+        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Golden daisy flowers at peak — bees love them." },
       ],
       tasks: [
         { task: "Deadhead lavender — never cut into the old woody growth", plants: ["Lavender"], bed: "Bed 4" },
@@ -165,6 +183,9 @@
         { task: "Deadhead Gaillardia and Callistemon spent flowers — keeps both performing", plants: ["Gaillardia", "Callistemon 'Inferno'"], bed: "Bed 3" },
         { task: "Deadhead Dahlia (yellow) regularly — same as the red, consistent deadheading keeps it going", plants: ["Dahlia (yellow)"], bed: "Bed 1" },
         { task: "Keep front pot well watered — Gazania and Calibrachoa suffer quickly if they dry out in heat", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa"], bed: "Front Pot" },
+        { task: "Keep wall pots watered daily in hot weather — small pots dry out fast", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
+        { task: "Cut Coreopsis back by half in midsummer for a strong second flush", plants: ["Coreopsis Gold"], bed: "Wall Pot 2" },
+        { task: "Deadhead Celosia regularly — keeps the plumes coming", plants: ["Celosia"], bed: "Bed 1" },
       ],
     },
 
@@ -181,6 +202,9 @@
         { plant: "Dahlia (yellow)", bed: "Bed 1", note: "Yellow flowers at their peak — a vivid companion to the red." },
         { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Still flowering; foliage beginning its late-season colour change." },
         { plant: "Gaillardia", bed: "Bed 3", note: "Still going strong if kept deadheaded — one of the longest-flowering plants in the garden." },
+        { plant: "Celosia", bed: "Bed 1", note: "Plumes still vivid — more flowers forming if it's been deadheaded." },
+        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Second flush of yellow daisies after the midsummer cut-back." },
+        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Still trailing and flowering — keep it fed and watered." },
       ],
       tasks: [
         { task: "Second clip of the box hedging", plants: ["Box Hedging"], bed: "Bed 1" },
@@ -193,6 +217,8 @@
         { task: "Cut Achillea back after its second flush — tidy up and mulch lightly", plants: ["Achillea"], bed: "Bed 3" },
         { task: "Trim Abelia 'Kaleidoscope' lightly after flowering to maintain shape — never cut hard", plants: ["Abelia 'Kaleidoscope'"], bed: "Bed 3" },
         { task: "Continue deadheading Gazania and feeding the front pot weekly", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'"], bed: "Front Pot" },
+        { task: "Continue feeding wall pots weekly and keep watered — Calibrachoa especially dislikes drying out", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
+        { task: "Continue deadheading Celosia — keep removing finished plumes to extend the show", plants: ["Celosia"], bed: "Bed 1" },
       ],
     },
 
@@ -204,6 +230,8 @@
         { plant: "Honeysuckle", bed: "Stone Bed", note: "Small red berries appearing where the flowers were." },
         { plant: "Nemesia", bed: "Bed 2", note: "Still flowering after the second trim." },
         { plant: "Silverbush", bed: "Bed 2", note: "Last of the white flowers on silver foliage." },
+        { plant: "Celosia", bed: "Bed 1", note: "Still holding colour but beginning to fade — enjoy the last of it." },
+        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Late flowers if the summer cut-back worked — winding down now." },
       ],
       tasks: [
         { task: "Cut back peony foliage as it yellows and dies down", plants: ["Peony"], bed: "Bed 2" },
@@ -223,6 +251,7 @@
         { plant: "Dahlia", bed: "Bed 1", note: "Last flowers before the first frost finishes the show." },
         { plant: "Dahlia (yellow)", bed: "Bed 1", note: "Last yellow flowers — enjoy them while they last." },
         { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Foliage turning orange and flame-red — best autumn colour of the bed." },
+        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Foliage turning orange-red again — bookends the season nicely." },
       ],
       tasks: [
         { task: "Protect Angel Wings from the first frosts — fleece or move to shelter", plants: ["Angel Wings"], bed: "Bed 1" },
@@ -233,6 +262,8 @@
         { task: "Empty and clean pots once annuals are spent — compost the bedding, store pots frost-free if glazed", plants: ["Petunia", "Lobelia", "Calibrachoa", "Verbena"], bed: "Big Pot 1" },
         { task: "Bring Geraniums (Pelargoniums) indoors to overwinter if you want to keep them — or compost", plants: ["Geranium"], bed: "Little Pot 1" },
         { task: "Clear the front door pot — Gazania, Calibrachoa and Bacopa are tender annuals. Compost them and store the pot for winter", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
+        { task: "Clear wall pots once frost finishes Celosia and Calibrachoa — compost the tender plants, store pots dry", plants: ["Candy House Mix", "Celosia"], bed: "Wall Pot 1" },
+        { task: "Cut Coreopsis Gold back to the crown for winter — it's a hardy perennial and should return next year", plants: ["Coreopsis Gold"], bed: "Wall Pot 2" },
         { task: "Cut Gaillardia back hard to the crown — some may not survive winter, have replacements in mind", plants: ["Gaillardia"], bed: "Bed 3" },
         { task: "Shelter Callistemon 'Inferno' from the worst cold winds if possible — it's hardy but first winters are the riskiest", plants: ["Callistemon 'Inferno'"], bed: "Bed 3" },
       ],
@@ -286,6 +317,8 @@
     "Little Pot 1": "littlepot1",
     "Little Pot 2": "littlepot2",
     "Front Pot": "frontpot",
+    "Wall Pot 1": "wallpot1",
+    "Wall Pot 2": "wallpot2",
   };
 
   window.OAK = window.OAK || {};

@@ -204,6 +204,32 @@ window.OAK = (function () {
       plantKey: "Baskets",
       isPot: true,
     },
+    wallpot1: {
+      id: "wallpot1",
+      title: "Wall Pot — Candy House",
+      badge: "Stair wall pot",
+      dims: "Small pot",
+      where: "Left wall of the steps",
+      desc: "A small pot sitting on the left retaining wall of the steps, planted with Candy House Mix — a tumbling mix of colourful trailing flowers for long season colour.",
+      shape: { kind: "circle", cx: 290, cy: 278, r: 10 },
+      color: "#c06a2a",
+      labelXY: [290, 262],
+      plantKey: "Wall Pot 1",
+      isPot: true,
+    },
+    wallpot2: {
+      id: "wallpot2",
+      title: "Wall Pot — Coreopsis",
+      badge: "Stair wall pot",
+      dims: "Small blue pot",
+      where: "Left wall of the steps",
+      desc: "A small blue glazed pot on the left retaining wall of the steps. Coreopsis Gold fills the pot with cheerful yellow daisy flowers all summer.",
+      shape: { kind: "circle", cx: 290, cy: 318, r: 10 },
+      color: "#c06a2a",
+      labelXY: [290, 302],
+      plantKey: "Wall Pot 2",
+      isPot: true,
+    },
     frontpot: {
       id: "frontpot",
       title: "Front Door Pot",
@@ -384,6 +410,26 @@ window.OAK = (function () {
         care: "Cut back old foliage in spring. Mulch crown in cold winters. Clump-forming — divide every 4–5 years.",
         seasonal: "Bold orange-red poker spikes July–September; evergreen grassy foliage.",
       },
+      {
+        name: "Little Heath",
+        latin: "Erica carnea 'Little Heath'",
+        photos: ["images/june-2026-update-2/little-heath-1.webp", "images/june-2026-update-2/little-heath-2.webp", "images/june-2026-update-2/little-heath-3.webp", "images/june-2026-update-2/little-heath-4.webp", "images/june-2026-update-2/little-heath-5.webp"],
+        position: "Front edge — 7 plants forming a low border. Added June 2026.",
+        light: "Full sun to partial shade.",
+        water: "Low to moderate. Tolerates dry spells once established.",
+        care: "Trim lightly after flowering to maintain compact shape. Acid to neutral soil preferred. Very hardy. Do not cut into old wood.",
+        seasonal: "White-tipped pink flowers January–April; green and gold variegated foliage year-round.",
+      },
+      {
+        name: "Celosia",
+        latin: "Celosia argentea var. cristata",
+        photos: ["images/june-2026-update-2/celosia.webp"],
+        position: "Gaps in the bed — purple, yellow and red varieties. Added June 2026.",
+        light: "Full sun.",
+        water: "Moderate; water at the base, avoid wetting the plumes.",
+        care: "Annual. Deadhead spent plumes to encourage more flowers. Tender — plant out after last frost. Feed fortnightly with a balanced liquid feed.",
+        seasonal: "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
+      },
     ],
     "Bed 2": [
       {
@@ -512,6 +558,16 @@ window.OAK = (function () {
         water: "Moderate; tolerates dry spells once established.",
         care: "Trim to shape in spring. Very hardy and low-maintenance. Moved from Bed 3, June 2026.",
         seasonal: "Evergreen white-margined leaves year-round; pink blush to the margins in cold spells.",
+      },
+      {
+        name: "Spiraea 'Double Play Big Bang'",
+        latin: "Spiraea japonica 'Double Play Big Bang'",
+        photos: ["images/june-2026-update-2/spiraea-big-bang-1.webp", "images/june-2026-update-2/spiraea-big-bang-2.webp", "images/june-2026-update-2/spiraea-big-bang-3.webp", "images/june-2026-update-2/spiraea-big-bang-4.webp", "images/june-2026-update-2/spiraea-big-bang-5.webp"],
+        position: "Against the wall — 3 plants. Added June 2026.",
+        light: "Full sun to partial shade.",
+        water: "Moderate. Water well until established; tolerates dry spells after.",
+        care: "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
+        seasonal: "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
       },
     ],
     "Bed 3": [
@@ -904,6 +960,30 @@ window.OAK = (function () {
         seasonal: "Tiny white flowers May–October; neat trailing habit.",
       },
     ],
+    "Wall Pot 1": [
+      {
+        name: "Candy House Mix",
+        latin: "Calibrachoa 'Candy House Mix'",
+        photos: ["images/june-2026-update-2/candy-house-mix.webp"],
+        position: "Left wall of steps — trailing mix of red, yellow and pink flowers",
+        light: "Full sun.",
+        water: "Regular; do not let dry out. Water at the base.",
+        care: "Feed weekly with liquid tomato food. Deadhead spent flowers. Tender annual — replace each season. Trim back if leggy to encourage bushy growth.",
+        seasonal: "Prolific trailing flowers in mixed red, yellow and pink June–October; dies with first frost.",
+      },
+    ],
+    "Wall Pot 2": [
+      {
+        name: "Coreopsis Gold",
+        latin: "Coreopsis 'Gold'",
+        photos: ["images/june-2026-update-2/coreopsis-gold-1.webp", "images/june-2026-update-2/coreopsis-gold-2.webp"],
+        position: "Left wall of steps — cheerful yellow daisy flowers",
+        light: "Full sun.",
+        water: "Moderate; drought-tolerant once established.",
+        care: "Deadhead regularly for continuous flowering. Cut back by half in midsummer for a second flush. Hardy perennial — leave in the pot over winter.",
+        seasonal: "Bright golden-yellow daisy flowers June–September; fine ferny foliage.",
+      },
+    ],
     "Baskets": [
       {
         name: "Trailing Fuchsia",
@@ -1048,8 +1128,14 @@ window.OAK = (function () {
         { src: "images/june-2026/astilbe-1.webp",       caption: "Astilbe — flower spike emerging" },
         { src: "images/june-2026/astilbe-2.webp",       caption: "Astilbe — foliage close-up" },
         { src: "images/june-2026-updates/avens-bed1.webp",             caption: "Avens — moved from Bed 3, June 2026" },
-        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",  caption: "Dahlia (yellow) — dark foliage, newly planted" },
-        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",  caption: "Dahlia (yellow) — close-up" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",   caption: "Dahlia (yellow) — dark foliage, newly planted" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",   caption: "Dahlia (yellow) — close-up" },
+        { src: "images/june-2026-update-2/little-heath-1.webp",         caption: "Little Heath — border planting" },
+        { src: "images/june-2026-update-2/little-heath-2.webp",         caption: "Little Heath — close-up" },
+        { src: "images/june-2026-update-2/little-heath-3.webp",         caption: "Little Heath — foliage" },
+        { src: "images/june-2026-update-2/little-heath-4.webp",         caption: "Little Heath — group" },
+        { src: "images/june-2026-update-2/little-heath-5.webp",         caption: "Little Heath — in bed" },
+        { src: "images/june-2026-update-2/celosia.webp",                caption: "Celosia — mixed colours" },
       ],
       bed2: [
         { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
@@ -1062,8 +1148,13 @@ window.OAK = (function () {
         { src: "images/june-2026/weigela.webp",               caption: "Weigela" },
         { src: "images/june-2026/weeping-cherry-june-1.webp", caption: "Weeping Cherry — full summer canopy" },
         { src: "images/june-2026/weeping-cherry-june-2.webp", caption: "Weeping Cherry — wide shot" },
-        { src: "images/june-2026/forget-me-not.webp",         caption: "Forget-me-not" },
-        { src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Euonymus 'Emerald Gaiety' — newly moved from Bed 3" },
+        { src: "images/june-2026/forget-me-not.webp",             caption: "Forget-me-not" },
+        { src: "images/june-2026/euonymus-emerald-gaiety.webp",  caption: "Euonymus 'Emerald Gaiety' — newly moved from Bed 3" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-1.webp", caption: "Spiraea 'Double Play Big Bang'" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-2.webp", caption: "Spiraea — against the wall" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-3.webp", caption: "Spiraea — close-up" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-4.webp", caption: "Spiraea — flowers" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-5.webp", caption: "Spiraea — wide" },
       ],
       bed3: [
         { src: "images/june-2026-updates/bed3-after-wide-1.webp",      caption: "Bed 3 — after replanting" },
@@ -1139,6 +1230,13 @@ window.OAK = (function () {
         { src: "images/june-2026-updates/calibrachoa-front-pot.webp",  caption: "Calibrachoa — trailing" },
         { src: "images/june-2026-updates/bacopa-white.webp",           caption: "Bacopa White" },
       ],
+      wallpot1: [
+        { src: "images/june-2026-update-2/candy-house-mix.webp", caption: "Candy House Mix — stair wall pot" },
+      ],
+      wallpot2: [
+        { src: "images/june-2026-update-2/coreopsis-gold-1.webp", caption: "Coreopsis Gold — in blue pot" },
+        { src: "images/june-2026-update-2/coreopsis-gold-2.webp", caption: "Coreopsis Gold — top down" },
+      ],
     },
   };
 
@@ -1208,6 +1306,40 @@ window.OAK = (function () {
     ],
     "Red Hot Poker": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/red-hot-poker.webp", caption: "Red Hot Poker — not yet flowered" }] },
+    ],
+    "Little Heath": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-update-2/little-heath-1.webp", caption: "Little Heath — border planting" },
+        { src: "images/june-2026-update-2/little-heath-2.webp", caption: "Little Heath — close-up" },
+        { src: "images/june-2026-update-2/little-heath-3.webp", caption: "Little Heath — foliage" },
+        { src: "images/june-2026-update-2/little-heath-4.webp", caption: "Little Heath — group" },
+        { src: "images/june-2026-update-2/little-heath-5.webp", caption: "Little Heath — in bed" },
+      ]},
+    ],
+    "Celosia": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-update-2/celosia.webp", caption: "Celosia — mixed colours" },
+      ]},
+    ],
+    "Spiraea 'Double Play Big Bang'": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-update-2/spiraea-big-bang-1.webp", caption: "Spiraea 'Double Play Big Bang'" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-2.webp", caption: "Spiraea — against the wall" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-3.webp", caption: "Spiraea — close-up" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-4.webp", caption: "Spiraea — flowers" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-5.webp", caption: "Spiraea — wide" },
+      ]},
+    ],
+    "Candy House Mix": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-update-2/candy-house-mix.webp", caption: "Candy House Mix — stair wall pot" },
+      ]},
+    ],
+    "Coreopsis Gold": [
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026-update-2/coreopsis-gold-1.webp", caption: "Coreopsis Gold — in blue pot" },
+        { src: "images/june-2026-update-2/coreopsis-gold-2.webp", caption: "Coreopsis Gold — top down" },
+      ]},
     ],
     "Forget-me-not": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/forget-me-not.webp", caption: "Forget-me-not — tiny blue flowers" }] },
@@ -1345,6 +1477,8 @@ window.OAK = (function () {
       { name: "Dahlia (yellow)", x: 63, y: 68, r: 8, hue: 55 },
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
       { name: "Red Hot Poker", x: 10, y: 62, r: 7, hue: 25 },
+      { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
+      { name: "Celosia", x: 28, y: 62, r: 7, hue: 350 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
@@ -1360,6 +1494,7 @@ window.OAK = (function () {
       { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
       { name: "Garden Pink", x: 72, y: 88, r: 5, hue: 340 },
       { name: "Euonymus 'Emerald Gaiety'", x: 86, y: 88, r: 6, hue: 110 },
+      { name: "Spiraea 'Double Play Big Bang'", x: 72, y: 68, r: 9, hue: 330 },
     ],
     bed3: [
       { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
@@ -1423,6 +1558,12 @@ window.OAK = (function () {
       { name: "Gazania 'Orange Flame'",  x: 72, y: 28, r: 16, hue: 25  },
       { name: "Calibrachoa",             x: 25, y: 72, r: 12, hue: 350 },
       { name: "Bacopa White",            x: 72, y: 72, r: 12, hue: 200 },
+    ],
+    wallpot1: [
+      { name: "Candy House Mix", x: 50, y: 50, r: 36, hue: 350 },
+    ],
+    wallpot2: [
+      { name: "Coreopsis Gold", x: 50, y: 50, r: 36, hue: 55 },
     ],
   };
 
