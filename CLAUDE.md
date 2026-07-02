@@ -14,6 +14,22 @@ A personal interactive garden journal for Oak Lodge, Bromsgrove. Built and maint
 
 ---
 
+## Deployment
+
+Deploying = pushing to `main`. GitHub Pages rebuilds automatically (~1 min). There is no CI/build step.
+
+**One command, run in Terminal from the repo root:**
+
+```bash
+./deploy.sh "short description of the change"
+```
+
+`deploy.sh` stages all changes, commits, and pushes to `origin main`. It also clears any stale git lock and keeps commits authored as the personal identity (`Bradley Gregg <bradg4@hotmail.com>`, repo-local config only — does not touch global git). Run with no message to get a timestamped default.
+
+Note for Cowork/Claude sessions: file edits can be made directly in the mounted repo, but `git push` must run on Brad's own machine (SSH key + network live there, not in the sandbox). So the workflow is: make the file changes, then hand Brad the `./deploy.sh "…"` line to run.
+
+---
+
 ## File structure
 
 ```
@@ -28,6 +44,8 @@ oak-lodge-garden/
   PlantCard.jsx       # Herbarium-style plant care card (slides up as overlay)
   SeasonalCalendar.jsx  # Monthly care calendar — click a month to see all tasks
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
+  WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
+  watering-data.js    # Water frequency band (1–5) per plant, keyed like PLANTS
   BACKLOG.md          # Prioritised improvements list
   CLAUDE.md           # This file
   README.md           # Basic repo info
@@ -115,6 +133,18 @@ Clickable plant positions on the bed detail map. Each entry:
 // name must exactly match the plant name in PLANTS
 ```
 
+### WATER_BANDS (watering-data.js)
+Lives in its own file, same pattern as `SEASONAL` in `seasonal-data.js` — keeps `data.js` from having to be touched for this feature. Registered as `window.OAK.WATER_BANDS` and `window.OAK.WATER_BAND_INFO`.
+
+```javascript
+WATER_BANDS = {
+  "Bed 1": { "Japanese Maple": 3, "Angel Wings": 1, ... },  // keyed exactly like PLANTS
+  ...
+}
+```
+
+Band is an integer 1–5 (1 = rarely/drought-tolerant, 5 = daily). `WATER_BAND_INFO[band]` gives the label, chip text, one-line care note, and a 7-slot `days` array (Mon→Sun) used to plot the weekly grid. **Adding a new plant:** add it to `PLANTS` in `data.js` as normal, then add a matching entry to `WATER_BANDS` in `watering-data.js` — if you skip the second step the plant is silently left out of the watering guide (no error).
+
 ---
 
 ## Garden layout
@@ -193,11 +223,15 @@ The aesthetic is a hand-drawn garden notebook. Paper textures, slightly rough SV
 No router library. Simple state in `app.jsx`:
 ```javascript
 view = { name: "plan" }
+         | { name: "calendar" }
+         | { name: "watering" }
          | { name: "bed", zoneKey: "bed1" }
          | { name: "plant", zoneKey: "bed1", plantIndex: 2 }
 ```
 
 `setView()` replaces the whole object. `window.scrollTo({ top: 0 })` on every transition.
+
+**Plant-card return path:** opening a plant card from somewhere other than its bed (Seasonal calendar or Watering guide) needs to know where "back" goes. This is tracked with a dedicated boolean per source — `calendarPlantReturn` / `wateringPlantReturn` — set in `openPlant()` via a `fromCalendar` / `fromWatering` flag, and checked in `closePlant()` to route back to the right view. Adding a third entry point means adding a third boolean + flag, following the same pattern (there's no generic "return to" field — this was a deliberate small duplication rather than a premature abstraction).
 
 ---
 
@@ -244,6 +278,7 @@ See `BACKLOG.md` for the full prioritised list. Current top items:
 3. **CoWork auto-update of data.js** — close the last manual step in the monthly workflow.
 
 **Done and off the list:**
+- Watering guide (`WateringGuide.jsx` + `watering-data.js`) — weekly frequency grid by zone, plus an "overwatering watch" section flagging drought-tolerant plants sharing a bed/pot with thirstier neighbours (July 2026)
 - Seasonal care calendar (`SeasonalCalendar.jsx` + `seasonal-data.js`) — live
 - CoWork skill installed and active (`garden-monthly-photos.skill`)
 - Photo gaps filled (May + June 2026)

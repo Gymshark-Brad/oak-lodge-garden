@@ -10,8 +10,9 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  const [view, setView] = useState_App({ name: "plan" }); // plan | calendar | bed | plant
+  const [view, setView] = useState_App({ name: "plan" }); // plan | calendar | watering | bed | plant
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
+  const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
 
   const Z = window.OAK.ZONES;
@@ -46,8 +47,9 @@ function App() {
     setView({ name: "bed", zoneKey });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const openPlant = ({ zoneKey, plantIndex, plantName, fromCalendar }) => {
+  const openPlant = ({ zoneKey, plantIndex, plantName, fromCalendar, fromWatering }) => {
     if (fromCalendar) setCalendarPlantReturn(true);
+    if (fromWatering) setWateringPlantReturn(true);
     setView((prev) => ({
       name: "plant",
       zoneKey: zoneKey || prev.zoneKey,
@@ -56,10 +58,14 @@ function App() {
     }));
   };
   const openPlantFromCalendar = (args) => openPlant({ ...args, fromCalendar: true });
+  const openPlantFromWatering = (args) => openPlant({ ...args, fromWatering: true });
   const closePlant = () => {
     if (calendarPlantReturn) {
       setCalendarPlantReturn(false);
       setView({ name: "calendar" });
+    } else if (wateringPlantReturn) {
+      setWateringPlantReturn(false);
+      setView({ name: "watering" });
     } else {
       setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
     }
@@ -68,15 +74,20 @@ function App() {
     setView({ name: "calendar" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const goWatering = () => {
+    setView({ name: "watering" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const goPlanFromBed = () => {
     setView({ name: "plan" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Crumbs / chrome content depends on view
-  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn);
+  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn);
   const breadcrumb = inBed ? Z[view.zoneKey].title : null;
   const inCalendar = view.name === "calendar" || (view.name === "plant" && calendarPlantReturn);
+  const inWatering = view.name === "watering" || (view.name === "plant" && wateringPlantReturn);
 
   return (
     <div className="app-root" data-palette={t.palette}>
@@ -89,7 +100,7 @@ function App() {
           <button
             className="ghostbtn"
             aria-pressed={view.name === "plan" || inBed}
-            onClick={() => { setCalendarPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ minHeight: 32 }}
           >
             Garden plan
@@ -101,6 +112,14 @@ function App() {
             style={{ minHeight: 32 }}
           >
             Seasonal calendar
+          </button>
+          <button
+            className="ghostbtn"
+            aria-pressed={inWatering}
+            onClick={goWatering}
+            style={{ minHeight: 32 }}
+          >
+            Watering guide
           </button>
           {inBed && (
             <>
@@ -122,7 +141,12 @@ function App() {
               onOpenPlant={openPlantFromCalendar}
             />
           )}
-          {(view.name === "bed" || (view.name === "plant" && !calendarPlantReturn)) && (
+          {inWatering && (
+            <WateringGuide
+              onOpenPlant={openPlantFromWatering}
+            />
+          )}
+          {(view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn)) && (
             <BedDetail
               key={view.zoneKey}
               zoneKey={view.zoneKey}
