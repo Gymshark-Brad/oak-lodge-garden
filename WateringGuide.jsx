@@ -27,9 +27,12 @@ function WateringGuide({ onOpenPlant }) {
   const ZONES = window.OAK.ZONES;
   const WATER_BANDS = window.OAK.WATER_BANDS || {};
   const BAND_INFO = window.OAK.WATER_BAND_INFO || {};
+  const WATER_SIGNS = window.OAK.WATER_SIGNS || {};
+  const POT_WATER_SIGNS = window.OAK.POT_WATER_SIGNS || {};
 
   const { dates: weekDates, todayIndex, fortnightOn } = useMemo_WG(() => wgGetWeek(), []);
   const [plantFilter, setPlantFilter] = useState_WG("");
+  const [overFilter, setOverFilter] = useState_WG("");
 
   const zoneRows = useMemo_WG(() => {
     const rows = [];
@@ -48,12 +51,15 @@ function WateringGuide({ onOpenPlant }) {
   const watchList = useMemo_WG(() => {
     const items = [];
     zoneRows.forEach(({ key, zone, maxBand }) => {
+      // Pots are watered as a single unit, so there's no way to actually skip
+      // just the drought-tolerant plant in a shared pot — only ground beds,
+      // where individual plants can be watered separately, are actionable here.
+      if (zone.isPot) return;
       const bands = WATER_BANDS[zone.plantKey];
       Object.entries(bands).forEach(([name, band]) => {
-        const gap = maxBand - band;
-        const flagged = zone.isPot ? gap >= 2 : band === 1 && maxBand >= 3;
+        const flagged = band === 1 && maxBand >= 3;
         if (flagged) {
-          items.push({ zoneKey: key, zoneTitle: zone.title, plantName: name, band, maxBand, isPot: !!zone.isPot });
+          items.push({ zoneKey: key, zoneTitle: zone.title, plantName: name, band, maxBand, isPot: false });
         }
       });
     });
@@ -85,13 +91,78 @@ function WateringGuide({ onOpenPlant }) {
     return items;
   }, []);
 
+  const [sortKey, setSortKey] = useState_WG("zone"); // "plant" | "zone" | "frequency"
+  const [sortDir, setSortDir] = useState_WG("asc");
+
+  const handleSort = (key) => {
+    if (sortKey === key) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortKey(key);
+      setSortDir("asc");
+    }
+  };
+
   const filteredPlants = useMemo_WG(() => {
     const q = plantFilter.trim().toLowerCase();
-    if (!q) return allPlants;
-    return allPlants.filter(
-      (p) => p.plantName.toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
+    const list = allPlants.filter(
+      (p) => !q || p.plantName.toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
     );
-  }, [allPlants, plantFilter]);
+    const sorted = [...list].sort((a, b) => {
+      let cmp;
+      if (sortKey === "plant") cmp = a.plantName.localeCompare(b.plantName);
+      else if (sortKey === "frequency") cmp = a.band - b.band || a.zoneTitle.localeCompare(b.zoneTitle);
+      else cmp = a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || a.plantName.localeCompare(b.plantName);
+      return sortDir === "asc" ? cmp : -cmp;
+    });
+    return sorted;
+  }, [allPlants, plantFilter, sortKey, sortDir]);
+
+  const watchKeySet = useMemo_WG(
+    () => new Set(watchList.map((w) => w.zoneKey + "::" + w.plantName)),
+    [watchList]
+  );
+
+  // Plants genuinely susceptible to overwatering — band 1 (rarely) or band 2
+  // (fortnightly), since these are the drought-tolerant ones where root rot
+  // from too much water is the real risk. Shows the specific symptom to look
+  // for, plus a flag if it also shares soil/compost with thirstier neighbours
+  // (cross-referencing the watch list above).
+  const overSignsList = useMemo_WG(() => {
+    const items = [];
+    Object.keys(ZONES).forEach((key) => {
+      const zone = ZONES[key];
+      if (!zone.plantKey) return;
+      const bands = WATER_BANDS[zone.plantKey];
+      if (!bands) return;
+      Object.entries(bands).forEach(([name, band]) => {
+        if (band > 2) return;
+        const over = zone.isPot
+          ? (POT_WATER_SIGNS[zone.plantKey] || {}).over
+          : ((WATER_SIGNS[zone.plantKey] || {})[name] || {}).over;
+        if (!over) return;
+        items.push({
+          zoneKey: key,
+          zoneTitle: zone.title,
+          plantName: name,
+          band,
+          isPot: !!zone.isPot,
+          over,
+          sharesRisk: watchKeySet.has(key + "::" + name),
+        });
+      });
+    });
+    items.sort((a, b) => a.band - b.band || a.zoneTitle.localeCompare(b.zoneTitle) || a.plantName.localeCompare(b.plantName));
+    return items;
+  }, [watchKeySet]);
+
+  const filteredOverSigns = useMemo_WG(() => {
+    const q = overFilter.trim().toLowerCase();
+    if (!q) return overSignsList;
+    return overSignsList.filter(
+      (item) => (item.plantName || "").toLowerCase().includes(q) || item.zoneTitle.toLowerCase().includes(q)
+    );
+  }, [overSignsList, overFilter]);
 
   const handlePlantClick = (zoneKey, plantName) => {
     onOpenPlant({ zoneKey, plantName, fromWatering: true });
@@ -230,6 +301,48 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">iii.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Reference</div>
+              <div className="t-display wg-section-title">Susceptible to overwatering</div>
+            </div>
+            <div className="wg-section-count t-mono">{overSignsList.length} plants</div>
+          </header>
+
+          <input
+            type="text"
+            className="wg-filter"
+            placeholder="Filter by plant or zone…"
+            value={overFilter}
+            onChange={(e) => setOverFilter(e.target.value)}
+          />
+
+          <ul className="wg-over-list">
+            {filteredOverSigns.map((item) => (
+              <li key={item.zoneKey + "-" + item.plantName} className="wg-over-item">
+                <div className="wg-over-head">
+                  <button className="wg-plant-link wg-over-name" onClick={() => handlePlantClick(item.zoneKey, item.plantName)}>
+                    {item.plantName}
+                  </button>
+                  <span className="t-mono wg-over-zone">{item.zoneTitle}</span>
+                  <span className={"wg-band-chip wg-band-" + item.band}>{BAND_INFO[item.band].chip}</span>
+                  {item.sharesRisk && (
+                    <span className="wg-over-tag">shares soil with thirstier neighbours</span>
+                  )}
+                </div>
+                <p className="wg-over-text">{item.over}</p>
+              </li>
+            ))}
+          </ul>
+          {filteredOverSigns.length === 0 && (
+            <p className="t-hand wg-empty">no plants match "{overFilter}"</p>
+          )}
+        </section>
+
+        <div className="wg-divider" aria-hidden="true"><div className="rule" /></div>
+
+        <section className="wg-section">
+          <header className="wg-section-head">
+            <div className="wg-section-num t-display">iv.</div>
+            <div>
+              <div className="t-stamp" style={{ color: "var(--accent)" }}>Reference</div>
               <div className="t-display wg-section-title">The five bands</div>
             </div>
           </header>
@@ -248,7 +361,7 @@ function WateringGuide({ onOpenPlant }) {
 
         <section className="wg-section">
           <header className="wg-section-head">
-            <div className="wg-section-num t-display">iv.</div>
+            <div className="wg-section-num t-display">v.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Full list</div>
               <div className="t-display wg-section-title">All plants at a glance</div>
@@ -268,9 +381,21 @@ function WateringGuide({ onOpenPlant }) {
             <table className="wg-table">
               <thead>
                 <tr>
-                  <th>Plant</th>
-                  <th>Zone</th>
-                  <th>Frequency</th>
+                  <th>
+                    <button className="wg-th-sort" onClick={() => handleSort("plant")}>
+                      Plant{sortKey === "plant" && (sortDir === "asc" ? " ▲" : " ▼")}
+                    </button>
+                  </th>
+                  <th>
+                    <button className="wg-th-sort" onClick={() => handleSort("zone")}>
+                      Zone{sortKey === "zone" && (sortDir === "asc" ? " ▲" : " ▼")}
+                    </button>
+                  </th>
+                  <th>
+                    <button className="wg-th-sort" onClick={() => handleSort("frequency")}>
+                      Frequency{sortKey === "frequency" && (sortDir === "asc" ? " ▲" : " ▼")}
+                    </button>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -283,7 +408,7 @@ function WateringGuide({ onOpenPlant }) {
                     </td>
                     <td className="t-mono wg-table-zone">{p.zoneTitle}</td>
                     <td>
-                      <span className={"wg-band-chip wg-band-" + p.band}>{BAND_INFO[p.band].chip}</span>
+                      <span className={"wg-freq-text wg-freq-" + p.band}>{BAND_INFO[p.band].everyDays}</span>
                     </td>
                   </tr>
                 ))}
@@ -399,6 +524,21 @@ function WateringGuide({ onOpenPlant }) {
 
         .wg-watch-note { font-family: var(--serif); font-size: 15px; color: var(--ink-soft); margin: 0; text-wrap: pretty; }
 
+        /* Overwatering signs */
+        .wg-over-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+        .wg-over-item {
+          padding: 12px 16px; border: 1px dashed var(--hairline);
+          background: color-mix(in oklab, var(--paper) 94%, var(--paper-deep) 6%);
+        }
+        .wg-over-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+        .wg-over-name { font-size: 19px; }
+        .wg-over-zone { opacity: 0.65; font-size: 11px; }
+        .wg-over-tag {
+          font-family: var(--type); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+          color: var(--pencil); opacity: 0.7; margin-left: 4px;
+        }
+        .wg-over-text { font-family: var(--serif); font-size: 15px; line-height: 1.5; color: var(--ink-soft); margin: 0; text-wrap: pretty; }
+
         /* Legend */
         .wg-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
         .wg-legend-row { display: grid; grid-template-columns: 100px 140px 1fr; align-items: center; gap: 12px; }
@@ -429,16 +569,28 @@ function WateringGuide({ onOpenPlant }) {
         .wg-table thead th {
           position: sticky; top: 0; z-index: 1;
           text-align: left;
-          font-family: var(--type); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
-          color: var(--pencil);
-          padding: 8px 10px;
+          padding: 0;
           border-bottom: 1px solid var(--hairline);
           background: color-mix(in oklab, var(--paper) 96%, white 4%);
         }
+        .wg-th-sort {
+          display: inline-flex; align-items: center; gap: 2px;
+          width: 100%; margin: 0; padding: 8px 10px;
+          background: none; border: 0; cursor: pointer; text-align: left;
+          font-family: var(--type); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+          color: var(--pencil);
+        }
+        .wg-th-sort:hover { color: var(--accent); }
         .wg-table tbody tr { border-bottom: 1px dotted var(--hairline); }
         .wg-table tbody tr:hover { background: color-mix(in oklab, var(--accent) 5%, transparent); }
         .wg-table td { padding: 7px 10px; vertical-align: middle; }
         .wg-table-zone { opacity: 0.75; white-space: nowrap; font-size: 13px; }
+        .wg-freq-text { font-family: var(--serif); font-size: 15px; white-space: nowrap; }
+        .wg-freq-5 { color: var(--stamp); }
+        .wg-freq-4 { color: var(--accent); }
+        .wg-freq-3 { color: var(--green); }
+        .wg-freq-2 { color: var(--pencil); }
+        .wg-freq-1 { color: var(--ink-faint); }
       `}</style>
     </div>
   );

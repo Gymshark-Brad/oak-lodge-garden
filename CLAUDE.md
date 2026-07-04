@@ -260,6 +260,7 @@ view = { name: "plan" }
 - **`frontpot` must be in GardenPlan.jsx `order` array** — the zone render order is hardcoded. Any new zone must be added there explicitly (and to the legend array below it).
 - **Archive photo system** — `{zoneKey}Archive` sub-keys in `PHOTOS_BY_MONTH` hold historical photos for replanted beds. BedDetail.jsx renders them as a sepia "As it was / Pre-June 2026" section. Currently only `bed3Archive` is used.
 - **`june-2026-updates/` folder** — WebP conversions of the June 2026 update photos (replant, new dahlia, front pot etc). Distinct from `june-2026/` which holds the full-bed photos taken earlier that month.
+- **Cache-busting query strings** — every local script/stylesheet tag in `index.html` has a `?v=YYYYMMDD` suffix (e.g. `watering-data.js?v=20260704`). Without this, browsers (and GitHub Pages' CDN) can keep serving a stale cached copy of `data.js`/`watering-data.js`/the `.jsx` files after a deploy, so an update looks like it silently didn't take effect. **Bump the date in every `?v=` suffix in `index.html` whenever you edit any of those files** — a shared date is fine, it doesn't need to be per-file.
 
 ---
 
