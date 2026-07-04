@@ -1,7 +1,7 @@
 // Oak Lodge Garden — WateringGuide.jsx
 // Weekly watering view: what needs water, how often, and what to leave alone.
 
-const { useMemo: useMemo_WG } = React;
+const { useMemo: useMemo_WG, useState: useState_WG } = React;
 
 const WG_DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const WG_MONTH_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -29,6 +29,7 @@ function WateringGuide({ onOpenPlant }) {
   const BAND_INFO = window.OAK.WATER_BAND_INFO || {};
 
   const { dates: weekDates, todayIndex, fortnightOn } = useMemo_WG(() => wgGetWeek(), []);
+  const [plantFilter, setPlantFilter] = useState_WG("");
 
   const zoneRows = useMemo_WG(() => {
     const rows = [];
@@ -68,6 +69,30 @@ function WateringGuide({ onOpenPlant }) {
     return Array.from(map.values());
   }, [watchList]);
 
+  const allPlants = useMemo_WG(() => {
+    const items = [];
+    Object.keys(ZONES).forEach((key) => {
+      const zone = ZONES[key];
+      const bands = zone.plantKey && WATER_BANDS[zone.plantKey];
+      if (!bands) return;
+      Object.entries(bands).forEach(([name, band]) => {
+        items.push({ zoneKey: key, zoneTitle: zone.title, plantName: name, band, isPot: !!zone.isPot });
+      });
+    });
+    items.sort((a, b) =>
+      a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || a.plantName.localeCompare(b.plantName)
+    );
+    return items;
+  }, []);
+
+  const filteredPlants = useMemo_WG(() => {
+    const q = plantFilter.trim().toLowerCase();
+    if (!q) return allPlants;
+    return allPlants.filter(
+      (p) => p.plantName.toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
+    );
+  }, [allPlants, plantFilter]);
+
   const handlePlantClick = (zoneKey, plantName) => {
     onOpenPlant({ zoneKey, plantName, fromWatering: true });
   };
@@ -93,7 +118,7 @@ function WateringGuide({ onOpenPlant }) {
         <div className="wg-stamp-panel">
           <div className="stamp">Vol. iii · weekly</div>
           <div className="t-mono" style={{ marginTop: 12 }}>
-            {zoneRows.length} zones &nbsp;·&nbsp; 5 water bands<br />
+            {zoneRows.length} zones &nbsp;·&nbsp; {allPlants.length} plants<br />
             {watchList.length} on overwatering watch<br />
             recorder · b. h.
           </div>
@@ -218,6 +243,57 @@ function WateringGuide({ onOpenPlant }) {
             ))}
           </ul>
         </section>
+
+        <div className="wg-divider" aria-hidden="true"><div className="rule" /></div>
+
+        <section className="wg-section">
+          <header className="wg-section-head">
+            <div className="wg-section-num t-display">iv.</div>
+            <div>
+              <div className="t-stamp" style={{ color: "var(--accent)" }}>Full list</div>
+              <div className="t-display wg-section-title">All plants at a glance</div>
+            </div>
+            <div className="wg-section-count t-mono">{allPlants.length} plants</div>
+          </header>
+
+          <input
+            type="text"
+            className="wg-filter"
+            placeholder="Filter by plant or zone…"
+            value={plantFilter}
+            onChange={(e) => setPlantFilter(e.target.value)}
+          />
+
+          <div className="wg-table-wrap">
+            <table className="wg-table">
+              <thead>
+                <tr>
+                  <th>Plant</th>
+                  <th>Zone</th>
+                  <th>Frequency</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredPlants.map((p) => (
+                  <tr key={p.zoneKey + "-" + p.plantName}>
+                    <td>
+                      <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantName)}>
+                        {p.plantName}
+                      </button>
+                    </td>
+                    <td className="t-mono wg-table-zone">{p.zoneTitle}</td>
+                    <td>
+                      <span className={"wg-band-chip wg-band-" + p.band}>{BAND_INFO[p.band].chip}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {filteredPlants.length === 0 && (
+              <p className="t-hand wg-empty">no plants match "{plantFilter}"</p>
+            )}
+          </div>
+        </section>
       </article>
 
       <style>{`
@@ -332,6 +408,37 @@ function WateringGuide({ onOpenPlant }) {
           .wg-legend-row { grid-template-columns: 90px 1fr; }
           .wg-legend-note { grid-column: 1 / -1; }
         }
+
+        /* All-plants table */
+        .wg-filter {
+          display: block;
+          width: 100%;
+          max-width: 320px;
+          margin-bottom: 14px;
+          padding: 8px 12px;
+          font-family: var(--serif);
+          font-size: 15px;
+          color: var(--ink);
+          background: color-mix(in oklab, var(--paper) 94%, white 6%);
+          border: 1px solid var(--hairline);
+          border-radius: 3px;
+        }
+        .wg-filter:focus { outline: none; border-color: var(--accent); }
+        .wg-table-wrap { overflow-x: auto; }
+        .wg-table { width: 100%; border-collapse: collapse; }
+        .wg-table thead th {
+          position: sticky; top: 0; z-index: 1;
+          text-align: left;
+          font-family: var(--type); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+          color: var(--pencil);
+          padding: 8px 10px;
+          border-bottom: 1px solid var(--hairline);
+          background: color-mix(in oklab, var(--paper) 96%, white 4%);
+        }
+        .wg-table tbody tr { border-bottom: 1px dotted var(--hairline); }
+        .wg-table tbody tr:hover { background: color-mix(in oklab, var(--accent) 5%, transparent); }
+        .wg-table td { padding: 7px 10px; vertical-align: middle; }
+        .wg-table-zone { opacity: 0.75; white-space: nowrap; font-size: 13px; }
       `}</style>
     </div>
   );
