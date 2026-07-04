@@ -163,6 +163,7 @@ function App() {
         <PlantCard
           plant={currentPlant}
           zoneTitle={Z[view.zoneKey].title}
+          plantKey={Z[view.zoneKey].plantKey}
           onClose={closePlant}
           onPrev={
             currentPlantIndex > 0

@@ -3,7 +3,7 @@
 
 const { useEffect: useEffect_PC, useState: useState_PC } = React;
 
-function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
+function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
   const [photoIdx, setPhotoIdx] = useState_PC(0);
   const [journalLightbox, setJournalLightbox] = useState_PC(null);
 
@@ -32,9 +32,21 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
   const hasPhotos = photos.length > 0;
   const useJournalMain = !!latestPhoto;
 
+  const waterBand = plantKey ? (window.OAK.WATER_BANDS[plantKey] || {})[plant.name] : null;
+  const waterBandInfo = waterBand ? window.OAK.WATER_BAND_INFO[waterBand] : null;
+  const waterSigns = plantKey
+    ? ((window.OAK.WATER_SIGNS[plantKey] || {})[plant.name] || window.OAK.POT_WATER_SIGNS[plantKey] || null)
+    : null;
+
   const fields = [
     { label: "Light",          icon: "☀", text: plant.light    },
-    { label: "Water",          icon: "◌", text: plant.water    },
+    {
+      label: "Water", icon: "◌", text: plant.water,
+      chip: waterBandInfo ? waterBandInfo.chip : null,
+      band: waterBand,
+      freq: waterBandInfo ? waterBandInfo.freq : null,
+      signs: waterSigns,
+    },
     { label: "Care & soil",    icon: "✦", text: plant.care     },
     { label: "Through the year", icon: "❋", text: plant.seasonal },
   ];
@@ -145,8 +157,18 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
                 <div className="pc-field-label">
                   <span className="pc-icon" aria-hidden="true">{f.icon}</span>
                   {f.label}
+                  {f.chip && (
+                    <span className={"pc-water-chip pc-water-" + f.band}>{f.chip}</span>
+                  )}
                 </div>
+                {f.freq && <div className="pc-field-freq t-hand">{f.freq}</div>}
                 <div className="pc-field-text">{f.text}</div>
+                {f.signs && (
+                  <div className="pc-field-signs">
+                    <div><span className="pc-field-signs-label pc-signs-under">Too little</span> {f.signs.under}</div>
+                    <div><span className="pc-field-signs-label pc-signs-over">Too much</span> {f.signs.over}</div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -304,6 +326,44 @@ function PlantCard({ plant, zoneTitle, onClose, onPrev, onNext }) {
           margin-bottom: 6px;
         }
         .pc-icon { color: var(--accent); font-size: 13px; }
+        .pc-water-chip {
+          font-family: var(--type);
+          font-size: 10px;
+          letter-spacing: 0.06em;
+          text-transform: none;
+          padding: 2px 8px;
+          border-radius: 20px;
+          margin-left: 4px;
+        }
+        .pc-water-5 { background: color-mix(in oklab, var(--stamp) 22%, var(--paper) 78%); color: var(--stamp); }
+        .pc-water-4 { background: color-mix(in oklab, var(--accent) 20%, var(--paper) 80%); color: var(--accent); }
+        .pc-water-3 { background: color-mix(in oklab, var(--green) 18%, var(--paper) 82%); color: var(--green); }
+        .pc-water-2 { background: color-mix(in oklab, var(--pencil) 18%, var(--paper) 82%); color: var(--pencil); }
+        .pc-water-1 { background: color-mix(in oklab, var(--ink) 8%, var(--paper) 92%); color: var(--ink-faint); }
+        .pc-field-freq {
+          font-size: 16px;
+          color: var(--accent);
+          margin-bottom: 4px;
+        }
+        .pc-field-signs {
+          font-family: var(--serif);
+          font-style: italic;
+          font-size: 14px;
+          line-height: 1.4;
+          color: var(--pencil);
+          margin-top: 6px;
+        }
+        .pc-field-signs > div + div { margin-top: 6px; }
+        .pc-field-signs-label {
+          font-family: var(--type);
+          font-style: normal;
+          font-size: 10px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          opacity: 0.85;
+        }
+        .pc-signs-under { color: var(--stamp); }
+        .pc-signs-over { color: var(--accent); }
         .pc-field-text {
           font-family: var(--serif);
           font-size: 17px;
