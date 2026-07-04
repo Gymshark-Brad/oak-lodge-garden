@@ -91,6 +91,28 @@ function WateringGuide({ onOpenPlant }) {
     return items;
   }, []);
 
+  // For the table, pots/baskets collapse to one row per container (using its
+  // thirstiest resident's band) — you water the whole pot as a unit, so a
+  // per-plant breakdown there isn't actionable. Ground beds stay per-plant.
+  const tableRows = useMemo_WG(() => {
+    const rows = [];
+    const potGroups = new Map();
+    allPlants.forEach((p) => {
+      if (!p.isPot) {
+        rows.push(p);
+        return;
+      }
+      const existing = potGroups.get(p.zoneKey);
+      if (existing) existing.band = Math.max(existing.band, p.band);
+      else potGroups.set(p.zoneKey, { zoneKey: p.zoneKey, zoneTitle: p.zoneTitle, plantName: null, band: p.band, isPot: true });
+    });
+    rows.push(...potGroups.values());
+    rows.sort((a, b) =>
+      a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || (a.plantName || "").localeCompare(b.plantName || "")
+    );
+    return rows;
+  }, [allPlants]);
+
   const [sortKey, setSortKey] = useState_WG("zone"); // "plant" | "zone" | "frequency"
   const [sortDir, setSortDir] = useState_WG("asc");
 
@@ -105,18 +127,18 @@ function WateringGuide({ onOpenPlant }) {
 
   const filteredPlants = useMemo_WG(() => {
     const q = plantFilter.trim().toLowerCase();
-    const list = allPlants.filter(
-      (p) => !q || p.plantName.toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
+    const list = tableRows.filter(
+      (p) => !q || (p.plantName || "").toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
     );
     const sorted = [...list].sort((a, b) => {
       let cmp;
-      if (sortKey === "plant") cmp = a.plantName.localeCompare(b.plantName);
+      if (sortKey === "plant") cmp = (a.plantName || a.zoneTitle).localeCompare(b.plantName || b.zoneTitle);
       else if (sortKey === "frequency") cmp = a.band - b.band || a.zoneTitle.localeCompare(b.zoneTitle);
-      else cmp = a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || a.plantName.localeCompare(b.plantName);
+      else cmp = a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || (a.plantName || "").localeCompare(b.plantName || "");
       return sortDir === "asc" ? cmp : -cmp;
     });
     return sorted;
-  }, [allPlants, plantFilter, sortKey, sortDir]);
+  }, [tableRows, plantFilter, sortKey, sortDir]);
 
   const watchKeySet = useMemo_WG(
     () => new Set(watchList.map((w) => w.zoneKey + "::" + w.plantName)),
@@ -400,13 +422,19 @@ function WateringGuide({ onOpenPlant }) {
               </thead>
               <tbody>
                 {filteredPlants.map((p) => (
-                  <tr key={p.zoneKey + "-" + p.plantName}>
+                  <tr key={p.zoneKey + "-" + (p.plantName || "pot")}>
                     <td>
-                      <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantName)}>
-                        {p.plantName}
-                      </button>
+                      {p.plantName ? (
+                        <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantName)}>
+                          {p.plantName}
+                        </button>
+                      ) : (
+                        <span className="t-hand wg-table-pot-name">
+                          {p.zoneTitle} <span className="wg-over-tag">whole pot</span>
+                        </span>
+                      )}
                     </td>
-                    <td className="t-mono wg-table-zone">{p.zoneTitle}</td>
+                    <td className="t-mono wg-table-zone">{p.plantName ? p.zoneTitle : "—"}</td>
                     <td>
                       <span className={"wg-freq-text wg-freq-" + p.band}>{BAND_INFO[p.band].everyDays}</span>
                     </td>
@@ -585,6 +613,7 @@ function WateringGuide({ onOpenPlant }) {
         .wg-table tbody tr:hover { background: color-mix(in oklab, var(--accent) 5%, transparent); }
         .wg-table td { padding: 7px 10px; vertical-align: middle; }
         .wg-table-zone { opacity: 0.75; white-space: nowrap; font-size: 13px; }
+        .wg-table-pot-name { font-size: 17px; }
         .wg-freq-text { font-family: var(--serif); font-size: 15px; white-space: nowrap; }
         .wg-freq-5 { color: var(--stamp); }
         .wg-freq-4 { color: var(--accent); }
