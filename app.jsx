@@ -10,7 +10,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  const [view, setView] = useState_App({ name: "plan" }); // plan | calendar | watering | bed | plant
+  const [view, setView] = useState_App({ name: "plan" }); // plan | frontplan | calendar | watering | bed | plant
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
@@ -78,13 +78,18 @@ function App() {
     setView({ name: "watering" });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  // Front-garden zones live on their own plan; "back to the garden" from one
+  // of these must return to the front plan, not the back-garden plan.
+  const isFrontZone = (k) =>
+    ["frontEntrance", "frontWallBed", "frontCornerBush", "frontBoundaryBed"].includes(k);
   const goPlanFromBed = () => {
-    setView({ name: "plan" });
+    setView((prev) => ({ name: isFrontZone(prev.zoneKey) ? "frontplan" : "plan" }));
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Crumbs / chrome content depends on view
   const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn);
+  const inFrontBed = inBed && isFrontZone(view.zoneKey);
   const breadcrumb = inBed ? Z[view.zoneKey].title : null;
   const inCalendar = view.name === "calendar" || (view.name === "plant" && calendarPlantReturn);
   const inWatering = view.name === "watering" || (view.name === "plant" && wateringPlantReturn);
@@ -99,7 +104,7 @@ function App() {
         <div className="crumb-bar">
           <button
             className="ghostbtn"
-            aria-pressed={view.name === "plan" || inBed}
+            aria-pressed={view.name === "plan" || (inBed && !inFrontBed)}
             onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ minHeight: 32 }}
           >
@@ -121,6 +126,14 @@ function App() {
           >
             Watering guide
           </button>
+          <button
+            className="ghostbtn"
+            aria-pressed={view.name === "frontplan" || inFrontBed}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            style={{ minHeight: 32 }}
+          >
+            Front garden
+          </button>
           {inBed && (
             <>
               <span className="t-mono" style={{ opacity: 0.5, padding: "0 6px" }}>›</span>
@@ -135,6 +148,9 @@ function App() {
         <div className="sheet sheet-page">
           {view.name === "plan" && (
             <GardenPlan onOpenZone={openZone} dark={dark} />
+          )}
+          {view.name === "frontplan" && (
+            <FrontGardenPlan onOpenZone={openZone} dark={dark} />
           )}
           {(view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
             <SeasonalCalendar

@@ -116,6 +116,30 @@
       "Trailing Lobelia": 5,
       "Trailing Verbena": 4,
     },
+    "Front Entrance": {
+      "Honeysuckle": 3,
+      "Hosta": 4,
+      "Box": 3,
+      "Hydrangea": 4,
+      "Lavender": 1,
+    },
+    "Front Wall Bed": {
+      "Cotoneaster": 2,
+      "Climbing Rose (white-pink)": 3,
+      "Fern": 4,
+      "Rose (pink)": 3,
+      "Weigela": 3,
+      "Hosta": 4,
+    },
+    "Front Corner Bush": {
+      "Viburnum": 2,
+    },
+    "Front Boundary Bed": {
+      "Cherry Laurel": 2,
+      "Mexican Orange Blossom": 2,
+      "Climber (unidentified)": 3,
+      "Thyme": 1,
+    },
   };
 
   const WATER_BAND_INFO = {

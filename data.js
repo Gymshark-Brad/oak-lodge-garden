@@ -244,6 +244,60 @@ window.OAK = (function () {
       plantKey: "Front Pot",
       isPot: true,
     },
+
+    // ── Front garden (own plan, viewBox 0 0 1000 640 — see FrontGardenPlan.jsx)
+    frontEntrance: {
+      id: "frontEntrance",
+      title: "Front Entrance",
+      badge: "Door, pots & box",
+      dims: "Porch & forecourt",
+      where: "Front elevation, by the front door",
+      desc:
+        "The approach to the front garden — recessed front door under the timber porch, a clipped box ball on the porch return, the blue glazed pot, and the stone trough. Hydrangea and lavender at the study-window end; honeysuckle over the entrance.",
+      shape: { kind: "rect", x: 335, y: 430, w: 180, h: 110 },
+      color: "#6b8e4e",
+      labelXY: [420, 472],
+      plantKey: "Front Entrance",
+    },
+    frontWallBed: {
+      id: "frontWallBed",
+      title: "Front · House-Wall Bed",
+      badge: "Raised bed under the windows",
+      dims: "Long border",
+      where: "Along the house wall, Bedroom 3 → ensuite",
+      desc:
+        "Timber/brick raised bed running under the front windows. Climbing roses on the wall and an arch trellis, a large fern, a weigela in front of the ensuite (due a hard cut-back), cotoneaster at the near end, hostas below.",
+      shape: { kind: "rect", x: 505, y: 258, w: 398, h: 34 },
+      color: "#8b5e3c",
+      labelXY: [704, 280],
+      plantKey: "Front Wall Bed",
+    },
+    frontCornerBush: {
+      id: "frontCornerBush",
+      title: "Front · Corner Bush",
+      badge: "Specimen shrub",
+      dims: "Large shrub",
+      where: "Corner, over the ensuite window",
+      desc:
+        "A large evergreen shrub at the corner where the house wall meets the boundary, spreading over the ensuite window — glossy leaves with red-pink berry/flower clusters (likely Viburnum tinus, to confirm).",
+      shape: { kind: "circle", cx: 898, cy: 302, r: 72 },
+      color: "#4f6d35",
+      labelXY: [905, 308],
+      plantKey: "Front Corner Bush",
+    },
+    frontBoundaryBed: {
+      id: "frontBoundaryBed",
+      title: "Front · Boundary Bed",
+      badge: "Border along the wall",
+      dims: "Runs south down the right",
+      where: "Along the brick boundary wall",
+      desc:
+        "Border running south down the right side against the brick boundary wall. Cherry laurel, a lime-variegated Choisya, a wall-trained climber at the far end, and thyme at the near corner.",
+      shape: { kind: "rect", x: 905, y: 360, w: 62, h: 215 },
+      color: "#587a3a",
+      labelXY: [936, 470],
+      plantKey: "Front Boundary Bed",
+    },
   };
 
   // ─── PLANTS ───────────────────────────────────────────────────────
@@ -1022,6 +1076,176 @@ window.OAK = (function () {
         seasonal: "Clusters of flowers June–October.",
       },
     ],
+
+    // ── Front garden ──────────────────────────────────────────────
+    "Front Entrance": [
+      {
+        name: "Honeysuckle",
+        latin: "Lonicera periclymenum", // CONFIRM — Brad unsure it's honeysuckle
+        photos: ["images/jul-2026/honeysuckle.webp"],
+        position: "Arching over the entrance",
+        light: "Sun to part shade.",
+        water: "Keep roots cool and moist; mulch.",
+        care: "Prune after flowering; thin congested growth. Give it support over the entrance.",
+        seasonal: "Scented flowers June–Aug; berries after. Semi-evergreen.",
+      },
+      {
+        name: "Hosta",
+        latin: "Hosta",
+        photos: ["images/jul-2026/hosta-trough.webp"],
+        position: "In the stone trough by the entrance",
+        light: "Part to full shade.",
+        water: "Keep moist; never bone-dry in the trough.",
+        care: "Watch for slugs/snails. Divide clumps in spring.",
+        seasonal: "Fresh leaves spring; dies back over winter.",
+      },
+      {
+        name: "Box",
+        latin: "Buxus sempervirens", // CONFIRM — box vs privet vs Lonicera nitida
+        photos: ["images/jul-2026/box-close.webp"],
+        position: "Clipped ball by the front door",
+        light: "Sun to part shade.",
+        water: "Moderate; don't let it dry out.",
+        care: "Clip to shape May and late summer. Watch for box blight/caterpillar.",
+        seasonal: "Evergreen year-round.",
+      },
+      {
+        name: "Hydrangea",
+        latin: "Hydrangea macrophylla",
+        photos: ["images/jul-2026/front-door.webp"],
+        position: "Left of the front door",
+        light: "Morning sun, afternoon shade.",
+        water: "Thirsty — water well in dry spells.",
+        care: "Leave old flower heads over winter; prune to a strong bud in spring.",
+        seasonal: "Mophead flowers July–Sept; bare in winter.",
+      },
+      {
+        name: "Lavender",
+        latin: "Lavandula angustifolia",
+        photos: ["images/jul-2026/study-gate.webp"],
+        position: "By the study-window brick pier",
+        light: "Full sun.",
+        water: "Drought-tolerant.",
+        care: "Trim after flowering and again in spring; don't cut into old wood.",
+        seasonal: "Purple spikes June–Aug; aromatic year-round.",
+      },
+    ],
+    "Front Wall Bed": [
+      {
+        name: "Cotoneaster",
+        latin: "Cotoneaster", // CONFIRM
+        photos: ["images/jul-2026/wallbed-start.webp", "images/jul-2026/cotoneaster.webp"],
+        position: "Near end of the bed",
+        light: "Sun to part shade.",
+        water: "Low once established.",
+        care: "Trim to shape after berrying. Very tough.",
+        seasonal: "Small flowers spring; red berries autumn–winter.",
+      },
+      {
+        name: "Climbing Rose (white-pink)",
+        latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4020 / 4022)
+        photos: ["images/jul-2026/climbing-rose.webp"],
+        position: "On the wall by the Bedroom 3 window",
+        light: "Sun.",
+        water: "Deep watering, mulch in spring.",
+        care: "Tie in new growth; prune late winter. Feed spring and after first flush.",
+        seasonal: "Flowers June–Sept; bare winter.",
+      },
+      {
+        name: "Fern",
+        latin: "Dryopteris filix-mas", // CONFIRM
+        photos: ["images/jul-2026/fern-window.webp"],
+        position: "Below the Bedroom 1 window",
+        light: "Shade to part shade.",
+        water: "Keep moist.",
+        care: "Cut back tired fronds in late winter. Low-care.",
+        seasonal: "Fresh fronds unfurl spring; semi-evergreen.",
+      },
+      {
+        name: "Rose (pink)",
+        latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4023)
+        photos: ["images/jul-2026/pink-rose.webp"],
+        position: "Between the Bedroom 1 window and the ensuite",
+        light: "Sun.",
+        water: "Deep watering, mulch in spring.",
+        care: "Prune late winter; deadhead through summer.",
+        seasonal: "Flowers June–Sept; bare winter.",
+      },
+      {
+        name: "Weigela",
+        latin: "Weigela florida", // CONFIRM
+        photos: ["images/jul-2026/weigela.webp"],
+        position: "In front of the ensuite window",
+        light: "Sun to part shade.",
+        water: "Moderate.",
+        care: "TO DO: hard cut-back — overgrown across the ensuite window. Prune after flowering, removing a third of old stems.",
+        seasonal: "Pink flowers May–June; deciduous.",
+      },
+      {
+        name: "Hosta",
+        latin: "Hosta",
+        photos: ["images/jul-2026/weigela.webp"],
+        position: "Below the weigela",
+        light: "Shade.",
+        water: "Keep moist.",
+        care: "Slug watch; divide in spring.",
+        seasonal: "Leaves spring–autumn; dies back winter.",
+      },
+    ],
+    "Front Corner Bush": [
+      {
+        name: "Viburnum",
+        latin: "Viburnum tinus", // IDENTIFY (IMG_4025-4027)
+        photos: ["images/jul-2026/corner-bush.webp", "images/jul-2026/corner-bush-berries.webp"],
+        position: "Corner, spreading over the ensuite window",
+        light: "Sun to part shade.",
+        water: "Low once established.",
+        care: "Can take a hard prune after flowering to keep it off the window. Evergreen, tough.",
+        seasonal: "Clusters of small flowers; metallic-blue/red berries.",
+      },
+    ],
+    "Front Boundary Bed": [
+      {
+        name: "Cherry Laurel",
+        latin: "Prunus laurocerasus", // CONFIRM
+        photos: ["images/jul-2026/laurel.webp"],
+        position: "Along the boundary wall",
+        light: "Sun to shade.",
+        water: "Low once established.",
+        care: "Prune with secateurs (not shears) late spring/summer. Vigorous.",
+        seasonal: "Evergreen; white flower spikes spring.",
+      },
+      {
+        name: "Mexican Orange Blossom",
+        latin: "Choisya ternata 'Sundance'", // CONFIRM
+        photos: ["images/jul-2026/choisya.webp", "images/jul-2026/choisya-flowers.webp"],
+        position: "Mid boundary bed — lime-yellow foliage",
+        light: "Sun for best colour.",
+        water: "Moderate.",
+        care: "Light prune after flowering to shape. Low-care.",
+        seasonal: "Golden evergreen foliage; scented white flowers spring & again autumn.",
+      },
+      {
+        name: "Climber (unidentified)",
+        latin: "IDENTIFY", // IDENTIFY (IMG_4034 / 4035) — pinnate leaves + red berry clusters; rose hips? Sorbus?
+        photos: ["images/jul-2026/climber.webp", "images/jul-2026/climber-berries.webp"],
+        position: "Far end, trained up the brick wall",
+        light: "Sun.",
+        water: "Moderate.",
+        care: "TBC once identified.",
+        seasonal: "Red berry clusters noted July.",
+      },
+      {
+        name: "Thyme",
+        latin: "Thymus", // CONFIRM
+        photos: ["images/jul-2026/boundary-thyme.webp"],
+        position: "Near corner of the boundary bed",
+        light: "Full sun.",
+        water: "Drought-tolerant.",
+        care: "Trim after flowering. Sharp drainage.",
+        seasonal: "Aromatic evergreen; flowers early summer.",
+      },
+    ],
   };
 
   // ─── PHOTOS (by month) ────────────────────────────────────────────
@@ -1236,6 +1460,40 @@ window.OAK = (function () {
       wallpot2: [
         { src: "images/june-2026-update-2/coreopsis-gold-1.webp", caption: "Coreopsis Gold — in blue pot" },
         { src: "images/june-2026-update-2/coreopsis-gold-2.webp", caption: "Coreopsis Gold — top down" },
+      ],
+    },
+    "jul-2026": {
+      label: "July 2026",
+      frontEntrance: [
+        { src: "images/jul-2026/front-door.webp",       caption: "Front door & porch, hydrangea at the base" },
+        { src: "images/jul-2026/study-gate.webp",        caption: "Study window & side gate — hydrangea and lavender" },
+        { src: "images/jul-2026/porch-nameplate.webp",   caption: "Porch, name plate, box ball and blue pot" },
+        { src: "images/jul-2026/entrance-troughs.webp",  caption: "Entrance — box ball and stone trough" },
+        { src: "images/jul-2026/hosta-trough.webp",      caption: "Hosta in the stone trough" },
+        { src: "images/jul-2026/honeysuckle.webp",       caption: "Honeysuckle over the entrance" },
+        { src: "images/jul-2026/box-close.webp",         caption: "Box bush by the front door (close)" },
+      ],
+      frontWallBed: [
+        { src: "images/jul-2026/overview.webp",      caption: "Front garden overview from the entrance" },
+        { src: "images/jul-2026/wallbed-start.webp", caption: "Start of the bed — cotoneaster, WC & Bedroom 3 windows" },
+        { src: "images/jul-2026/climbing-rose.webp", caption: "Climbing rose on the wall by Bedroom 3" },
+        { src: "images/jul-2026/fern-window.webp",   caption: "Fern & climbing rose by the Bedroom 1 window" },
+        { src: "images/jul-2026/pink-rose.webp",     caption: "Pink rose between Bedroom 1 and the ensuite" },
+        { src: "images/jul-2026/weigela.webp",       caption: "Big bush in front of the ensuite window (to cut back)" },
+        { src: "images/jul-2026/cotoneaster.webp",   caption: "Cotoneaster (close)" },
+      ],
+      frontCornerBush: [
+        { src: "images/jul-2026/corner-bush.webp",         caption: "The large corner bush" },
+        { src: "images/jul-2026/corner-bush-berries.webp", caption: "Corner bush — berry clusters (close)" },
+      ],
+      frontBoundaryBed: [
+        { src: "images/jul-2026/boundary-corner.webp", caption: "Boundary corner — box topiary & variegated shrub" },
+        { src: "images/jul-2026/boundary-thyme.webp",  caption: "Left of the boundary bed — herb/thyme" },
+        { src: "images/jul-2026/laurel.webp",          caption: "Boundary bed running back toward the entrance" },
+        { src: "images/jul-2026/choisya.webp",         caption: "Variegated Choisya against the wall" },
+        { src: "images/jul-2026/choisya-flowers.webp", caption: "Choisya with pink flowers at the corner" },
+        { src: "images/jul-2026/climber.webp",         caption: "Climber trained up the wall — end of the run" },
+        { src: "images/jul-2026/climber-berries.webp", caption: "Climber — pinnate leaves & red berries (close)" },
       ],
     },
   };
@@ -1564,6 +1822,30 @@ window.OAK = (function () {
     ],
     wallpot2: [
       { name: "Coreopsis Gold", x: 50, y: 50, r: 36, hue: 55 },
+    ],
+    frontEntrance: [
+      { name: "Box",          x: 30, y: 35, r: 12, hue: 130 },
+      { name: "Hosta",        x: 62, y: 40, r: 10, hue: 105 },
+      { name: "Hydrangea",    x: 48, y: 65, r: 12, hue: 300 },
+      { name: "Lavender",     x: 22, y: 72, r: 9,  hue: 275 },
+      { name: "Honeysuckle",  x: 78, y: 68, r: 9,  hue: 45  },
+    ],
+    frontWallBed: [
+      { name: "Cotoneaster",                 x: 12, y: 55, r: 10, hue: 15  },
+      { name: "Climbing Rose (white-pink)",  x: 34, y: 30, r: 11, hue: 340 },
+      { name: "Fern",                        x: 52, y: 60, r: 10, hue: 120 },
+      { name: "Rose (pink)",                 x: 70, y: 32, r: 10, hue: 330 },
+      { name: "Weigela",                     x: 86, y: 52, r: 12, hue: 320 },
+      { name: "Hosta",                       x: 86, y: 78, r: 8,  hue: 105 },
+    ],
+    frontCornerBush: [
+      { name: "Viburnum", x: 50, y: 45, r: 26, hue: 140 },
+    ],
+    frontBoundaryBed: [
+      { name: "Cherry Laurel",           x: 50, y: 22, r: 13, hue: 135 },
+      { name: "Mexican Orange Blossom",  x: 50, y: 46, r: 12, hue: 70  },
+      { name: "Climber (unidentified)",  x: 50, y: 68, r: 10, hue: 10  },
+      { name: "Thyme",                   x: 50, y: 88, r: 8,  hue: 90  },
     ],
   };
 

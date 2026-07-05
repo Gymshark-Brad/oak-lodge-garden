@@ -6,8 +6,14 @@ const { useState: useState_BD, useMemo: useMemo_BD } = React;
 function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const Z = window.OAK.ZONES[zoneKey];
   const plants = Z.plantKey ? window.OAK.PLANTS[Z.plantKey] : [];
+  // Latest month that actually has photos for THIS zone (front-garden zones
+  // only exist in jul-2026; back-garden zones resolve to earlier months).
   const _monthKeys = Object.keys(window.OAK.PHOTOS_BY_MONTH);
-  const _latestMonth = _monthKeys[_monthKeys.length - 1];
+  let _latestMonth = _monthKeys[_monthKeys.length - 1];
+  for (let i = _monthKeys.length - 1; i >= 0; i--) {
+    const md = window.OAK.PHOTOS_BY_MONTH[_monthKeys[i]];
+    if (md && (md[zoneKey] || md[zoneKey + "Archive"])) { _latestMonth = _monthKeys[i]; break; }
+  }
   const _latestMonthData = window.OAK.PHOTOS_BY_MONTH[_latestMonth] || {};
   const photos = (_latestMonthData[zoneKey] || []);
   // Archive photos — stored under `{zoneKey}Archive` in the latest month data
