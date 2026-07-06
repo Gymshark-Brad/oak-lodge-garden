@@ -116,29 +116,30 @@
       "Trailing Lobelia": 5,
       "Trailing Verbena": 4,
     },
-    "Front Entrance": {
-      "Honeysuckle": 3,
+    "Front Bed 1": {
+      "Hydrangea": 4, "Lavender": 1,
+    },
+    "Front Bed 2": {
+      "Box": 3, "Honeysuckle": 3,
+    },
+    "Front Bed 3": {
+      "Cotoneaster": 2, "Climbing Rose (white-pink)": 3, "Fern": 4,
+      "Rose (pink)": 3, "Weigela": 3, "Hosta": 4, "Viburnum": 2,
+    },
+    "Front Bed 4": {
+      "Cherry Laurel": 2, "Mexican Orange Blossom": 2, "Climber (unidentified)": 3, "Thyme": 1,
+    },
+    "Front Stone Trough": {
       "Hosta": 4,
-      "Box": 3,
-      "Hydrangea": 4,
-      "Lavender": 1,
     },
-    "Front Wall Bed": {
-      "Cotoneaster": 2,
-      "Climbing Rose (white-pink)": 3,
-      "Fern": 4,
-      "Rose (pink)": 3,
-      "Weigela": 3,
-      "Hosta": 4,
+    "Front Box Hedge": {
+      "Box Hedging": 3,
     },
-    "Front Corner Bush": {
-      "Viburnum": 2,
+    "Front Hedge": {
+      "Hedge (to identify)": 2,
     },
-    "Front Boundary Bed": {
-      "Cherry Laurel": 2,
-      "Mexican Orange Blossom": 2,
-      "Climber (unidentified)": 3,
-      "Thyme": 1,
+    "Front Apple Tree": {
+      "Apple Tree": 2,
     },
   };
 

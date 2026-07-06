@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Front Garden — measured wireframe v2 (review)</title>
+<style>
+  :root {
+    --paper:#f2ecd9; --ink:#3a3428; --pencil:#6b6455;
+    --stamp:#a2542f; --accent:#b0483a; --green:#5a7a4a; --hairline:#d8d0ba;
+  }
+  body { background:var(--paper); color:var(--ink); font-family:Georgia,serif; margin:0; padding:24px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 2px; }
+  .sub { font-family:"Courier New",monospace; font-size:12px; color:var(--pencil); letter-spacing:.08em; text-transform:uppercase; }
+  .controls { margin:14px 0; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .controls label { font-family:"Courier New",monospace; font-size:12px; cursor:pointer; border:1px dashed var(--hairline); padding:4px 10px; user-select:none; }
+  #info { font-family:"Courier New",monospace; font-size:12px; color:var(--stamp); min-height:18px; margin:6px 0; }
+  svg { width:100%; display:block; background:var(--paper); border:1px solid var(--hairline); }
+  .zone { cursor:pointer; }
+  .zone:hover .zfill { fill-opacity:.5; }
+  .zone:hover .zline { stroke-width:2; stroke-opacity:1; }
+  .flags { margin-top:26px; border-top:1px dashed var(--hairline); padding-top:14px; }
+  .flags h2 { font-size:16px; }
+  .flags li { margin:8px 0; font-size:14px; line-height:1.45; }
+  .flags b { color:var(--stamp); }
+  .t-mono { font-family:"Courier New",monospace; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Front garden — measured wireframe v2</h1>
+  <div class="sub">Oak Lodge · reconstructed from Brad's survey · 57 SVG-units = 1m · viewBox 1000×640</div>
+  <div class="controls">
+    <label><input type="checkbox" id="dims"> survey measurements (removed from the final plan)</label>
+    <label><input type="checkbox" id="names" checked> zone labels</label>
+    <span class="t-mono" style="font-size:12px;color:var(--pencil)">click a zone to test its hit area</span>
+  </div>
+  <div id="info">&nbsp;</div>
+
+<svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pv" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="var(--paper)"/>
+      <path d="M0 7 L14 7 M7 0 L7 14" stroke="var(--ink)" stroke-opacity=".16" stroke-width=".6"/>
+    </pattern>
+    <pattern id="sl" width="22" height="16" patternUnits="userSpaceOnUse">
+      <rect width="22" height="16" fill="var(--paper)"/>
+      <path d="M0 8 L22 8 M11 0 L11 8 M5 8 L5 16 M17 8 L17 16" stroke="var(--ink)" stroke-opacity=".15" stroke-width=".6"/>
+    </pattern>
+    <pattern id="gv" width="5" height="5" patternUnits="userSpaceOnUse">
+      <rect width="5" height="5" fill="var(--paper)"/>
+      <circle cx="1" cy="1" r=".5" fill="var(--ink)" fill-opacity=".25"/>
+      <circle cx="3" cy="3.5" r=".5" fill="var(--ink)" fill-opacity=".25"/>
+    </pattern>
+    <pattern id="so" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+      <rect width="6" height="6" fill="var(--paper)"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="var(--ink)" stroke-opacity=".22" stroke-width=".6"/>
+    </pattern>
+  </defs>
+
+  <!-- HOUSE wash -->
+  <path d="M52 281 L268 281 L268 201 L336 201 L439 190 L439 201 L547 201 L547 42 L958 42 L958 32 L52 32 Z"
+        fill="var(--ink)" fill-opacity=".08"/>
+  <text x="270" y="120" class="t-mono" font-size="11" fill="var(--ink)" opacity=".55" letter-spacing="4">T H E   H O U S E   ·   f r o n t   e l e v a t i o n</text>
+
+  <!-- Path -->
+  <polygon points="336,201 439,190 439,271 469,404 336,404" fill="url(#pv)" fill-opacity=".75"/>
+  <polyline points="336,201 336,404" fill="none" stroke="var(--ink)" stroke-opacity=".45" stroke-width="1.1"/>
+  <polyline points="439,271 469,404" fill="none" stroke="var(--ink)" stroke-opacity=".45" stroke-width="1.1"/>
+  <text x="390" y="330" text-anchor="middle" font-size="17" font-style="italic" fill="var(--ink)" opacity=".55">Path</text>
+
+  <!-- Gravel west -->
+  <polygon points="440,272 539,272 539,292 547,292 547,372 619,372 619,430 472,430" fill="url(#gv)" fill-opacity=".7"/>
+  <text x="497" y="325" text-anchor="middle" font-size="13" font-style="italic" fill="var(--ink)" opacity=".5">Gravel</text>
+  <text x="497" y="339" text-anchor="middle" font-size="13" font-style="italic" fill="var(--ink)" opacity=".5">Forecourt</text>
+
+  <!-- Slabbed patio — ends in the arrow point at the knee -->
+  <polygon points="547,87 775,87 880,170 815,292 547,292" fill="url(#sl)" fill-opacity=".85"
+           stroke="var(--ink)" stroke-opacity=".35" stroke-width=".9"/>
+  <text x="685" y="185" text-anchor="middle" font-size="21" font-style="italic" fill="var(--ink)" opacity=".6">Slabbed Patio</text>
+
+  <!-- Gravel — pocket below the steps, bounded east by the level-change line -->
+  <polygon points="619,372 760,372 827,386 827,475 619,475" fill="url(#gv)" fill-opacity=".7"/>
+  <text x="722" y="432" text-anchor="middle" font-size="13" font-style="italic" fill="var(--ink)" opacity=".5">Gravel Forecourt</text>
+
+  <!-- Steps — gravel treads with timber sleepers (per Brad's photo) -->
+  <rect x="547" y="292" width="213" height="80" fill="url(#gv)" fill-opacity=".7"/>
+  <g>
+    <rect x="630" y="308" width="114" height="6" rx="1.5" fill="#8b6a44" fill-opacity=".6" stroke="var(--ink)" stroke-opacity=".45" stroke-width=".8"/>
+    <rect x="630" y="331" width="114" height="6" rx="1.5" fill="#8b6a44" fill-opacity=".6" stroke="var(--ink)" stroke-opacity=".45" stroke-width=".8"/>
+    <rect x="630" y="354" width="114" height="6" rx="1.5" fill="#8b6a44" fill-opacity=".6" stroke="var(--ink)" stroke-opacity=".45" stroke-width=".8"/>
+  </g>
+  <rect x="547" y="292" width="213" height="80" fill="none" stroke="#8b6a44" stroke-opacity=".7" stroke-width="2.4"/>
+  <rect x="547" y="292" width="213" height="80" fill="none" stroke="var(--ink)" stroke-opacity=".3" stroke-width=".8"/>
+  <text x="678" y="337" text-anchor="middle" font-size="17" font-style="italic" fill="var(--ink)" opacity=".6">Steps</text>
+  <text x="650" y="384" text-anchor="middle" font-family="monospace" font-size="7.5" fill="var(--pencil)">timber sleepers set in the gravel</text>
+
+  <!-- Skinny brick wall -->
+  <rect x="539" y="201" width="8" height="91" fill="var(--stamp)" fill-opacity=".55" stroke="var(--ink)" stroke-opacity=".6" stroke-width="1"/>
+  <text x="560" y="222" class="t-mono" font-size="7.5" fill="var(--stamp)" transform="rotate(90,560,222)">skinny brick wall</text>
+
+  <!-- HOUSE WALL -->
+  <path d="M52 281 L268 281 L268 201 L336 201 L439 190 L439 201 L547 201 L547 42 L958 42"
+        fill="none" stroke="var(--ink)" stroke-opacity=".85" stroke-width="2.4"/>
+
+  <!-- windows & door -->
+  <line x1="120" y1="281" x2="222" y2="281" stroke="var(--accent)" stroke-width="5" stroke-opacity=".9"/>
+  <text x="171" y="302" text-anchor="middle" font-size="15" font-style="italic" fill="var(--ink)">Study Window</text>
+  <line x1="346" y1="200" x2="429" y2="191" stroke="var(--accent)" stroke-width="5" stroke-opacity=".9"/>
+  <text x="388" y="172" text-anchor="middle" font-size="15" font-style="italic" fill="var(--ink)">Front Door</text>
+  <g opacity=".8">
+    <line x1="600" y1="42" x2="660" y2="42" stroke="var(--ink)" stroke-width="5" stroke-opacity=".5"/>
+    <text x="630" y="30" text-anchor="middle" font-size="12" font-style="italic" fill="var(--ink)">Bedroom 3 *</text>
+    <line x1="700" y1="42" x2="760" y2="42" stroke="var(--ink)" stroke-width="5" stroke-opacity=".5"/>
+    <text x="730" y="30" text-anchor="middle" font-size="12" font-style="italic" fill="var(--ink)">Bedroom 1 *</text>
+    <line x1="840" y1="42" x2="895" y2="42" stroke="var(--ink)" stroke-width="5" stroke-opacity=".5"/>
+    <text x="867" y="30" text-anchor="middle" font-size="12" font-style="italic" fill="var(--ink)">Ensuite *</text>
+  </g>
+
+  <!-- Boundary wall -->
+  <path d="M962 42 L962 590" fill="none" stroke="var(--ink)" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="7 4"/>
+  <text x="978" y="300" class="t-mono" font-size="9" fill="var(--ink)" opacity=".5" transform="rotate(90,978,300)">— — BRICK BOUNDARY WALL — —</text>
+
+  <!-- ZONES -->
+  <g id="zones">
+    <g class="zone" data-k="Bed 3 — house-wall bed, wraps the corner; fills the whole space east of the patio's 2m diagonal down to the knee · cotoneaster, climbing rose, fern, pink rose, weigela, hosta, viburnum">
+      <polygon class="zfill" points="547,42 958,42 958,170 880,170 775,88 547,88" fill="#8b5e3c" fill-opacity=".32"/>
+      <polygon fill="url(#so)" fill-opacity=".6" points="547,42 958,42 958,170 880,170 775,88 547,88" pointer-events="none"/>
+      <polygon class="zline" points="547,42 958,42 958,170 880,170 775,88 547,88" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Bed 4 — the whole space right of the steps: from the patio point and the timber steps out to the boundary wall · laurel, choisya, climber, thyme">
+      <polygon class="zfill" points="880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" fill="#587a3a" fill-opacity=".32"/>
+      <polygon fill="url(#so)" fill-opacity=".6" points="880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" pointer-events="none"/>
+      <polygon class="zline" points="880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Bed 1 — L-shaped study-window bed, wraps into the front-door corner · hydrangea, pillar, lavender">
+      <polygon class="zfill" points="222,281 268,281 268,201 336,201 336,372 222,372" fill="#6b8e4e" fill-opacity=".32"/>
+      <polygon fill="url(#so)" fill-opacity=".6" points="222,281 268,281 268,201 336,201 336,372 222,372" pointer-events="none"/>
+      <polygon class="zline" points="222,281 268,281 268,201 336,201 336,372 222,372" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Bed 2 — right of the front door · box ball, honeysuckle (CONFIRM plants)">
+      <rect class="zfill" x="439" y="201" width="63" height="69" rx="3" fill="#7f8f4a" fill-opacity=".32"/>
+      <rect fill="url(#so)" fill-opacity=".6" x="439" y="201" width="63" height="69" pointer-events="none"/>
+      <rect class="zline" x="439" y="201" width="63" height="69" rx="3" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Stone Trough — 1.2m × 0.8m, hosta — its own clickable area">
+      <rect class="zfill" x="547" y="292" width="72" height="40" rx="3" fill="#8a8676" fill-opacity=".38"/>
+      <rect fill="url(#gv)" fill-opacity=".6" x="547" y="292" width="72" height="40" pointer-events="none"/>
+      <rect class="zline" x="547" y="292" width="72" height="40" rx="3" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Hedge — small hedge right of the door (species to identify)">
+      <rect class="zfill" x="502" y="201" width="37" height="69" rx="3" fill="#4f7d45" fill-opacity=".6"/>
+      <rect class="zline" x="502" y="201" width="37" height="69" rx="3" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Box Hedge — 2m clipped screen between forecourt and patio">
+      <rect class="zfill" x="527" y="87" width="20" height="114" rx="3" fill="#3f6d35" fill-opacity=".6"/>
+      <rect class="zline" x="527" y="87" width="20" height="114" rx="3" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+    </g>
+    <g class="zone" data-k="Apple Tree — corner below Bed 4, against the boundary wall (needs photos)">
+      <rect class="zfill" x="912" y="475" width="46" height="102" rx="3" fill="#4f6d35" fill-opacity=".32"/>
+      <rect fill="url(#so)" fill-opacity=".6" x="912" y="475" width="46" height="102" pointer-events="none"/>
+      <rect class="zline" x="912" y="475" width="46" height="102" rx="3" fill="none" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.1"/>
+      <circle cx="935" cy="520" r="20" fill="var(--green)" fill-opacity=".4" stroke="var(--ink)" stroke-opacity=".4" pointer-events="none"/>
+    </g>
+  </g>
+
+  <!-- Pillar + bed 1 notes -->
+  <rect x="222" y="315" width="34" height="34" fill="var(--paper)" stroke="var(--ink)" stroke-opacity=".7" stroke-width="1.2" pointer-events="none"/>
+  <text x="262" y="336" class="t-mono" font-size="7.5" fill="var(--pencil)" pointer-events="none">pillar</text>
+  <text x="302" y="242" text-anchor="middle" class="t-mono" font-size="7.5" fill="var(--pencil)" pointer-events="none">hydrangea</text>
+  <text x="284" y="364" text-anchor="middle" class="t-mono" font-size="7.5" fill="var(--pencil)" pointer-events="none">lavender</text>
+
+  <!-- Zone labels -->
+  <g id="zlabels" font-style="italic" fill="var(--ink)" pointer-events="none">
+    <text x="700" y="66" text-anchor="middle" font-size="18">Bed 3</text>
+    <text x="860" y="330" text-anchor="middle" font-size="16">Bed 4</text>
+    <text x="292" y="326" text-anchor="middle" font-size="18">Bed 1</text>
+    <text x="470" y="240" text-anchor="middle" font-size="15">Bed 2</text>
+    <text x="583" y="316" text-anchor="middle" font-size="11">Stone Trough</text>
+    <text x="537" y="142" text-anchor="middle" font-size="12" transform="rotate(90,537,142)">Box hedge</text>
+    <text x="520" y="236" text-anchor="middle" font-size="11" transform="rotate(90,520,236)">Hedge</text>
+    <text x="912" y="592" text-anchor="middle" font-size="13">Apple Tree</text>
+  </g>
+
+  <!-- Survey measurements -->
+  <g id="zdims" style="display:none" class="t-mono" font-size="9" fill="var(--accent)" text-anchor="middle" pointer-events="none">
+    <text x="97" y="274">0.8</text><text x="171" y="274">1.8</text><text x="245" y="274">0.8</text>
+    <text x="252" y="243">1.4m</text><text x="302" y="194">1.2m</text><text x="387" y="183">1.8</text>
+    <text x="493" y="194">1.8m</text>
+    <text x="430" y="238" transform="rotate(-90,430,238)">1.2m</text>
+    <text x="328" y="290" transform="rotate(-90,328,290)">3m</text>
+    <text x="556" y="247" transform="rotate(-90,556,247)">1.6m</text>
+    <text x="522" y="144" transform="rotate(-90,522,144)">2m</text>
+    <text x="553" y="144" transform="rotate(-90,553,144)">2m</text>
+    <text x="581" y="80">1.2</text>
+    <text x="558" y="65" transform="rotate(-90,558,65)">0.8</text>
+    <text x="672" y="80">3.2</text>
+    <text x="824" y="118" transform="rotate(42,824,118)">2m</text>
+    <text x="846" y="228" transform="rotate(-70,846,228)">2.4m</text>
+    <text x="950" y="66" transform="rotate(-90,950,66)">0.8</text>
+    <text x="583" y="287">1.2</text>
+    <text x="540" y="313" transform="rotate(-90,540,313)">0.8</text>
+    <text x="935" y="287">0.8</text>
+  </g>
+</svg>
+
+  <div class="flags">
+    <h2>Things to check before build (flagged assumptions)</h2>
+    <ol>
+      <li><b>Bed 3 west end.</b> Your survey shows a 1.2 top segment with two 0.8 drops. I read it as: the bed starts directly above the box hedge and is a uniform 0.8m deep along its whole run. If the west 1.2m stub is deeper/shallower than the rest, say so.</li>
+      <li><b>Bed 3 corner diagonals.</b> I honoured your declared measurements (2m then 2.4m) exactly, which puts the corner "knee" slightly less far east than your sketch draws it. Measurements win over sketch — flag if wrong.</li>
+      <li><b>Bed 3 west edge</b> aligned to the house return wall (the box hedge line). Your sketch has it ~0.35m further west; I simplified. Flag if the bed really overhangs the wall line.</li>
+      <li><b>Bedroom window positions</b> (marked *) along the top wall are approximate — the survey doesn't dimension them. Correct positions welcome; they're decorative only.</li>
+      <li><b>Path & gravel south edges</b> are open survey boundaries — I ended them arbitrarily where your sketch fades out.</li>
+      <li><b>Bed 2 plants</b> assumed: box ball + honeysuckle (hosta moved to the Stone Trough, hydrangea/lavender to Bed 1). Confirm.</li>
+    </ol>
+    <h2>Applied from your updates (rounds 2 &amp; 3)</h2>
+    <ol>
+      <li>Bed 1 now L-shaped — extends up into the corner by the front-door step.</li>
+      <li>Red survey measurements removed from the final plan (toggle above shows them for reference only).</li>
+      <li>Steps redrawn from your photo: gravel treads with timber sleepers set in, timber edging around the run.</li>
+      <li><b>Corrected diagram:</b> the patio ends in the arrow point — 2m diagonal to the knee, 2.4m diagonal back to the steps corner, with the short link from the knee to Bed 4's edge.</li>
+      <li><b>Round 4:</b> Bed 3 fills the whole space east of the patio's 2m diagonal, down to the knee — not just the boundary strip.</li>
+      <li><b>Round 4:</b> Bed 4 fills the whole space right of the steps — bounded by the patio point diagonals, the timber steps' east edge, the level-change line below the steps corner, the boundary wall, and the bottom edge. Gravel remains only in the pocket below the steps, west of the level-change line.</li>
+      <li><b>Round 4:</b> apple tree (≈0.8m wide) tucked into the corner below Bed 4, against the boundary wall.</li>
+    </ol>
+  </div>
+</div>
+
+<script>
+  const info = document.getElementById('info');
+  document.querySelectorAll('.zone').forEach(z => {
+    z.addEventListener('click', () => { info.textContent = '✓ clicked: ' + z.dataset.k; });
+    z.addEventListener('mouseenter', () => { info.textContent = z.dataset.k; });
+    z.addEventListener('mouseleave', () => { info.textContent = ' '; });
+  });
+  document.getElementById('dims').addEventListener('change', e =>
+    document.getElementById('zdims').style.display = e.target.checked ? '' : 'none');
+  document.getElementById('names').addEventListener('change', e =>
+    document.getElementById('zlabels').style.display = e.target.checked ? '' : 'none');
+</script>
+</body>
+</html>
