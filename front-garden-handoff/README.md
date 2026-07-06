@@ -1,5 +1,7 @@
 # Front Garden — build handoff for Claude Code
 
+> ⚠️ **SUPERSEDED (July 2026).** Use `../front-garden-handoff-v2/` instead — it's built from Brad's measured survey and replaces the geometry, zone model, and data blocks below. The photos and sketches in this folder remain valid reference. Do not build from this file.
+
 Everything needed to add the **Front Garden** to the Oak Lodge site. Read `CLAUDE.md` first, then work through the steps below in order. Data blocks are copy-paste ready; the JSX steps are precise edits.
 
 **Visual reference:** `wireframe.html` (the annotated plan Brad signed off). The layout, bed order and plant list below all match it.
