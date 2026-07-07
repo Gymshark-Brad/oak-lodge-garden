@@ -123,10 +123,12 @@
       "Box": 3, "Honeysuckle": 3,
     },
     "Front Bed 3": {
-      "Cotoneaster": 2, "Climbing Rose (white-pink)": 3, "Fern": 4,
-      "Rose (pink)": 3, "Weigela": 3, "Hosta": 4, "Viburnum": 2,
+      "Climbing Rose (white-pink)": 3, "Fern": 4, "Rose (pink)": 3,
     },
     "Front Bed 4": {
+      "Photinia": 2, "Spiraea": 3,
+    },
+    "Front Bed 5": {
       "Cherry Laurel": 2, "Mexican Orange Blossom": 2, "Climber (unidentified)": 3, "Thyme": 1,
     },
     "Front Stone Trough": {

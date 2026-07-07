@@ -275,19 +275,32 @@ window.OAK = (function () {
     frontBed3: {
       id: "frontBed3",
       title: "Front · Bed 3",
-      badge: "House-wall bed · wraps the corner",
-      dims: "≈7.2m run · 0.8m deep",
-      where: "Under the bedroom windows, wrapping the corner to the knee",
+      badge: "House-wall bed · wall run",
+      dims: "≈4.0m run · 0.8m deep",
+      where: "Under the Bedroom 3 and Bedroom 1 windows",
       desc:
-        "The long house-wall bed running under the Bedroom 3, Bedroom 1 and ensuite windows, wrapping around the corner as far as the patio's arrow point — Bed 4 continues beyond it out to the boundary. Climbing roses on the wall, a large fern, a weigela due a hard cut-back, cotoneaster at the near end, hostas below, and the big corner viburnum over the ensuite window.",
-      shape: { kind: "polygon", points: "547,42 958,42 958,170 880,170 775,88 547,88" },
+        "The house-wall bed running under the Bedroom 3 and Bedroom 1 windows, up to the vertical line between the Bedroom 1 window and the ensuite where Bed 4 takes over. Climbing roses on the wall, a large fern, and a pink rose near the corner end.",
+      shape: { kind: "polygon", points: "547,42 775,42 775,88 547,88" },
       color: "#8b5e3c",
-      labelXY: [700, 66],
+      labelXY: [661, 65],
       plantKey: "Front Bed 3",
     },
     frontBed4: {
       id: "frontBed4",
       title: "Front · Bed 4",
+      badge: "Corner bed · under the ensuite window",
+      dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
+      where: "Under the ensuite window, wrapping the corner down to the knee",
+      desc:
+        "The bed under the ensuite window, wrapping the corner down to the knee where Bed 5 takes over. Centred on a multi-stem Photinia trained as a canopy tree against the wall, with a Spiraea underneath it — both hard-pruned back in July 2026. Cleared of debris and ready for infill planting; see the planning note below the plant list.",
+      shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
+      color: "#77613f",
+      labelXY: [867, 106],
+      plantKey: "Front Bed 4",
+    },
+    frontBed5: {
+      id: "frontBed5",
+      title: "Front · Bed 5",
       badge: "Boundary bed",
       dims: "Irregular · patio point to boundary wall",
       where: "From the steps out to the brick boundary wall",
@@ -296,7 +309,7 @@ window.OAK = (function () {
       shape: { kind: "polygon", points: "880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" },
       color: "#587a3a",
       labelXY: [860, 330],
-      plantKey: "Front Bed 4",
+      plantKey: "Front Bed 5",
     },
     frontStone: {
       id: "frontStone",
@@ -319,7 +332,7 @@ window.OAK = (function () {
       where: "Against the house return wall, screening the patio",
       desc:
         "A 2m run of clipped box standing against the house return wall, screening the slabbed patio from the front door approach.",
-      shape: { kind: "rect", x: 527, y: 87, w: 20, h: 114 },
+      shape: { kind: "rect", x: 547, y: 87, w: 20, h: 114 },
       color: "#3f6d35",
       labelXY: [537, 142],
       plantKey: "Front Box Hedge",
@@ -342,9 +355,9 @@ window.OAK = (function () {
       title: "Front · Apple Tree",
       badge: "Fruit tree",
       dims: "≈0.8m × 1.8m",
-      where: "Corner below Bed 4, against the boundary wall",
+      where: "Corner below Bed 5, against the boundary wall",
       desc:
-        "The apple tree tucked into the corner below Bed 4, against the boundary wall.",
+        "The apple tree tucked into the corner below Bed 5, against the boundary wall.",
       shape: { kind: "rect", x: 912, y: 475, w: 46, h: 102 },
       color: "#4f6d35",
       labelXY: [912, 592],
@@ -1176,16 +1189,6 @@ window.OAK = (function () {
     ],
     "Front Bed 3": [
       {
-        name: "Cotoneaster",
-        latin: "Cotoneaster", // CONFIRM
-        photos: ["images/jul-2026/wallbed-start.webp", "images/jul-2026/cotoneaster.webp"],
-        position: "Near end of the bed",
-        light: "Sun to part shade.",
-        water: "Low once established.",
-        care: "Trim to shape after berrying. Very tough.",
-        seasonal: "Small flowers spring; red berries autumn–winter.",
-      },
-      {
         name: "Climbing Rose (white-pink)",
         latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4020 / 4022)
         photos: ["images/jul-2026/climbing-rose.webp"],
@@ -1209,44 +1212,39 @@ window.OAK = (function () {
         name: "Rose (pink)",
         latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4023)
         photos: ["images/jul-2026/pink-rose.webp"],
-        position: "Between the Bedroom 1 window and the ensuite",
+        position: "Between the Bedroom 1 window and the ensuite corner",
         light: "Sun.",
         water: "Deep watering, mulch in spring.",
         care: "Prune late winter; deadhead through summer.",
         seasonal: "Flowers June–Sept; bare winter.",
       },
+    ],
+    // PLANNED (autumn 2026): Sarcococca confusa + Mahonia × media as an evergreen shade backdrop
+    // behind/around the Photinia and Spiraea — see the planting-plan note at the end of the
+    // front-garden-handoff-v2/bed3-split-and-corner-bed.md doc before adding them here as real entries.
+    "Front Bed 4": [
       {
-        name: "Weigela",
-        latin: "Weigela florida", // CONFIRM
-        photos: ["images/jul-2026/weigela.webp"],
-        position: "In front of the ensuite window",
+        name: "Photinia",
+        latin: "Photinia × fraseri", // CONFIRM — likely 'Red Robin'; check for a coppery-red new-growth flush next spring to be sure
+        photos: ["images/jul-2026/corner-bush.webp", "images/jul-2026/corner-bush-berries.webp"], // pre-prune — TODO: add post-prune photos
+        position: "The corner, trained as a multi-stem canopy tree over the ensuite window",
         light: "Sun to part shade.",
-        water: "Moderate.",
-        care: "TO DO: hard cut-back — overgrown across the ensuite window. Prune after flowering, removing a third of old stems.",
-        seasonal: "Pink flowers May–June; deciduous.",
+        water: "Moderate; extra while re-establishing after the July 2026 prune.",
+        care: "Prune to shape after the spring flush; watch for leaf spot in wet years. Evergreen, tolerates hard pruning well.",
+        seasonal: "Coppery-red new growth in spring; small white flowers in flat clusters late spring, fading to rust-brown through summer; evergreen year-round.",
       },
       {
-        name: "Hosta",
-        latin: "Hosta",
-        photos: ["images/jul-2026/weigela.webp"],
-        position: "Below the weigela",
-        light: "Shade.",
-        water: "Keep moist.",
-        care: "Slug watch; divide in spring.",
-        seasonal: "Leaves spring–autumn; dies back winter.",
-      },
-      {
-        name: "Viburnum",
-        latin: "Viburnum tinus", // IDENTIFY (IMG_4025-4027)
-        photos: ["images/jul-2026/corner-bush.webp", "images/jul-2026/corner-bush-berries.webp"],
-        position: "The corner, spreading over the ensuite window",
+        name: "Spiraea",
+        latin: "Spiraea thunbergii", // CONFIRM — narrow finely-serrated leaves on arching stems; confirm with small white flowers on bare wood in April
+        photos: ["images/jul-2026/weigela.webp"], // pre-prune, was mislabeled Weigela — TODO: add post-prune photos
+        position: "At the base of the corner tree, in front of the ensuite window",
         light: "Sun to part shade.",
-        water: "Low once established.",
-        care: "Can take a hard prune after flowering to keep it off the window. Evergreen, tough.",
-        seasonal: "Clusters of small flowers; metallic-blue/red berries.",
+        water: "Moderate; extra while re-establishing after the July 2026 prune.",
+        care: "Flowers on old wood — prune immediately after flowering if needed, thinning rather than cutting hard into old wood.",
+        seasonal: "Small white flowers smother the bare stems in April, before the narrow leaves emerge; fine deciduous foliage through summer.",
       },
     ],
-    "Front Bed 4": [
+    "Front Bed 5": [
       {
         name: "Cherry Laurel",
         latin: "Prunus laurocerasus", // CONFIRM
@@ -1304,7 +1302,7 @@ window.OAK = (function () {
       {
         name: "Box Hedging",
         latin: "Buxus sempervirens", // CONFIRM
-        photos: [], // TODO — no photo yet, next photo walk
+        photos: ["images/jul-2026/wallbed-start.webp", "images/jul-2026/cotoneaster.webp"],
         position: "2m clipped screen against the house return wall",
         light: "Sun to part shade.",
         water: "Moderate.",
@@ -1565,17 +1563,19 @@ window.OAK = (function () {
         { src: "images/jul-2026/box-close.webp",        caption: "Box bush by the front door (close)" },
       ],
       frontBed3: [
-        { src: "images/jul-2026/overview.webp",            caption: "Front garden overview from the entrance" },
-        { src: "images/jul-2026/wallbed-start.webp",       caption: "Start of the bed — cotoneaster, WC & Bedroom 3 windows" },
-        { src: "images/jul-2026/climbing-rose.webp",       caption: "Climbing rose on the wall by Bedroom 3" },
-        { src: "images/jul-2026/fern-window.webp",         caption: "Fern & climbing rose by the Bedroom 1 window" },
-        { src: "images/jul-2026/pink-rose.webp",           caption: "Pink rose between Bedroom 1 and the ensuite" },
-        { src: "images/jul-2026/weigela.webp",             caption: "Weigela in front of the ensuite window (to cut back)" },
-        { src: "images/jul-2026/cotoneaster.webp",         caption: "Cotoneaster (close)" },
-        { src: "images/jul-2026/corner-bush.webp",         caption: "The corner viburnum, wrapping to the boundary" },
-        { src: "images/jul-2026/corner-bush-berries.webp", caption: "Corner viburnum — berry clusters (close)" },
+        { src: "images/jul-2026/overview.webp",      caption: "Front garden overview from the entrance" },
+        { src: "images/jul-2026/climbing-rose.webp", caption: "Climbing rose on the wall by Bedroom 3" },
+        { src: "images/jul-2026/fern-window.webp",   caption: "Fern & climbing rose by the Bedroom 1 window" },
+        { src: "images/jul-2026/pink-rose.webp",     caption: "Pink rose between Bedroom 1 and the ensuite corner" },
       ],
       frontBed4: [
+        { src: "images/jul-2026/corner-bush.webp",         caption: "Photinia — before pruning" },
+        { src: "images/jul-2026/corner-bush-berries.webp", caption: "Photinia — flower/berry clusters (close), before pruning" },
+        { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before pruning" },
+        // TODO Brad: add the post-prune corner photos (tree + bush + cleared ground) once exported —
+        // taken July 2026, currently only on your phone.
+      ],
+      frontBed5: [
         { src: "images/jul-2026/boundary-corner.webp", caption: "Boundary corner — box topiary & variegated shrub" },
         { src: "images/jul-2026/boundary-thyme.webp",  caption: "Near corner of the boundary bed — thyme" },
         { src: "images/jul-2026/laurel.webp",          caption: "Boundary bed running back toward the entrance" },
@@ -1584,11 +1584,15 @@ window.OAK = (function () {
         { src: "images/jul-2026/climber.webp",         caption: "Climber trained up the wall — end of the run" },
         { src: "images/jul-2026/climber-berries.webp", caption: "Climber — pinnate leaves & red berries (close)" },
       ],
+      frontBoxHedge: [
+        { src: "images/jul-2026/wallbed-start.webp", caption: "Box hedge at the start of the wall run" },
+        { src: "images/jul-2026/cotoneaster.webp",   caption: "Box hedge (close) — previously mislabeled Cotoneaster" },
+      ],
       frontStone: [
         { src: "images/jul-2026/hosta-trough.webp",     caption: "Hosta in the stone trough" },
         { src: "images/jul-2026/entrance-troughs.webp", caption: "The stone trough by the entrance" },
       ],
-      // frontBoxHedge, frontHedge, frontApple — no photos yet (next photo walk)
+      // frontHedge, frontApple — still no photos (next photo walk)
     },
   };
 
@@ -1926,15 +1930,15 @@ window.OAK = (function () {
       { name: "Honeysuckle", x: 68, y: 65, r: 11, hue: 45  },
     ],
     frontBed3: [
-      { name: "Cotoneaster",                x: 7,  y: 55, r: 9,  hue: 15  },
-      { name: "Climbing Rose (white-pink)", x: 22, y: 32, r: 10, hue: 340 },
-      { name: "Fern",                       x: 36, y: 60, r: 9,  hue: 120 },
-      { name: "Rose (pink)",                x: 50, y: 32, r: 9,  hue: 330 },
-      { name: "Weigela",                    x: 62, y: 55, r: 11, hue: 320 },
-      { name: "Hosta",                      x: 62, y: 80, r: 7,  hue: 105 },
-      { name: "Viburnum",                   x: 85, y: 50, r: 16, hue: 140 },
+      { name: "Climbing Rose (white-pink)", x: 20, y: 35, r: 11, hue: 340 },
+      { name: "Fern",                       x: 50, y: 60, r: 10, hue: 120 },
+      { name: "Rose (pink)",                x: 80, y: 35, r: 10, hue: 330 },
     ],
     frontBed4: [
+      { name: "Photinia", x: 60, y: 35, r: 20, hue: 130 },
+      { name: "Spiraea",  x: 35, y: 70, r: 12, hue: 90  },
+    ],
+    frontBed5: [
       { name: "Cherry Laurel",          x: 50, y: 20, r: 13, hue: 135 },
       { name: "Mexican Orange Blossom", x: 50, y: 45, r: 12, hue: 70  },
       { name: "Climber (unidentified)", x: 50, y: 68, r: 10, hue: 10  },
