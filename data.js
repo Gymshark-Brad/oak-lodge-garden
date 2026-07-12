@@ -539,16 +539,6 @@ window.OAK = (function () {
         care: "Trim lightly after flowering to maintain compact shape. Acid to neutral soil preferred. Very hardy. Do not cut into old wood.",
         seasonal: "White-tipped pink flowers January–April; green and gold variegated foliage year-round.",
       },
-      {
-        name: "Celosia",
-        latin: "Celosia argentea var. cristata",
-        photos: ["images/june-2026-update-2/celosia.webp"],
-        position: "Gaps in the bed — purple, yellow and red varieties. Added June 2026.",
-        light: "Full sun.",
-        water: "Moderate; water at the base, avoid wetting the plumes.",
-        care: "Annual. Deadhead spent plumes to encourage more flowers. Tender — plant out after last frost. Feed fortnightly with a balanced liquid feed.",
-        seasonal: "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
-      },
     ],
     "Bed 2": [
       {
@@ -739,6 +729,16 @@ window.OAK = (function () {
         water: "Moderate. Good drainage.",
         care: "Light trim after flowering to maintain shape. Very low maintenance. Semi-evergreen — may drop some leaves in a hard winter but recovers readily.",
         seasonal: "Variegated yellow and green leaves spring–summer, turning orange-red in autumn; small white fragrant flowers July–September. Semi-evergreen.",
+      },
+      {
+        name: "Celosia",
+        latin: "Celosia argentea var. cristata",
+        photos: ["images/june-2026-update-2/celosia.webp"],
+        position: "Front of the bed — purple, yellow and red varieties. Moved from Bed 1 in July 2026.",
+        light: "Full sun.",
+        water: "Moderate; water at the base, avoid wetting the plumes.",
+        care: "Annual. Deadhead spent plumes to encourage more flowers. Tender — plant out after last frost. Feed fortnightly with a balanced liquid feed.",
+        seasonal: "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
       },
     ],
     "Bed 4": [
@@ -1447,7 +1447,6 @@ window.OAK = (function () {
         { src: "images/june-2026-update-2/little-heath-3.webp",         caption: "Little Heath — foliage" },
         { src: "images/june-2026-update-2/little-heath-4.webp",         caption: "Little Heath — group" },
         { src: "images/june-2026-update-2/little-heath-5.webp",         caption: "Little Heath — in bed" },
-        { src: "images/june-2026-update-2/celosia.webp",                caption: "Celosia — mixed colours" },
       ],
       bed2: [
         { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
@@ -1477,6 +1476,7 @@ window.OAK = (function () {
         { src: "images/june-2026-updates/gaillardia.webp",             caption: "Gaillardia" },
         { src: "images/june-2026-updates/abelia-kaleidoscope.webp",    caption: "Abelia 'Kaleidoscope'" },
         { src: "images/june-2026/apple-tree.webp",                     caption: "Apple Tree — June" },
+        { src: "images/june-2026-update-2/celosia.webp",               caption: "Celosia — mixed colours" },
       ],
       bed3Archive: [
         { src: "images/june-2026/avens-1.webp",    caption: "Avens — orange flowers" },
@@ -1834,7 +1834,6 @@ window.OAK = (function () {
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
       { name: "Red Hot Poker", x: 10, y: 62, r: 7, hue: 25 },
       { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
-      { name: "Celosia", x: 28, y: 62, r: 7, hue: 350 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
@@ -1858,6 +1857,7 @@ window.OAK = (function () {
       { name: "Achillea",             x: 50, y: 80, r: 9,  hue: 55  },
       { name: "Gaillardia",           x: 78, y: 64, r: 8,  hue: 25  },
       { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
+      { name: "Celosia", x: 28, y: 88, r: 7, hue: 350 },
     ],
     bed4: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },

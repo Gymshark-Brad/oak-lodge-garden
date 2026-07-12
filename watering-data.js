@@ -29,7 +29,6 @@
       "Hosta (gold)": 3,
       "Red Hot Poker": 2,
       "Little Heath": 2,
-      "Celosia": 4,
     },
     "Bed 2": {
       "Weeping Cherry": 3,
@@ -53,6 +52,7 @@
       "Achillea": 2,
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
+      "Celosia": 4,
     },
     "Bed 4": {
       "Wisteria": 1,
