@@ -335,21 +335,27 @@ hasn't been merged to `main` yet as of 2026-07-07).
 
 ## Planting plan for the new Bed 4 (not yet in the ground — don't add as PLANTS entries until planted)
 
-Bed 4 already has its structure: the Photinia canopy and the Spiraea skirt beneath it, both just
-hard-pruned. It's dry shade — wall on one side, tree canopy overhead — so the infill plan leans on
-plants that take that combination well, in two phases:
+In July 2026 the Spiraea/old hedge was removed, the retained multi-stem Photinia canopy was
+trimmed, rubble and membrane were cleared, and the bed was composted. Stepping stones now provide
+access and a narrow Cotswold-stone drainage strip runs along the front edge.
 
-**Autumn 2026** (once the ground's had a season to settle post-prune): work compost or leaf mould
-into the soil, then plant the next structural layer —
-- *Sarcococca confusa* near the path/entrance edge, for the winter scent
-- *Mahonia × media* toward the back corner (give it room — it gets to 2–3m)
+**Autumn 2026**: the two climbers are David Austin English climbing roses, planted one each on
+separate wire sections:
 
-Both are evergreen, shade-tolerant, and give winter interest when the Photinia and Spiraea are
-doing nothing.
+- *The Pilgrim* (Auswalker) on the more shaded/tree-side section. Its soft-yellow, repeat-flowering
+  blooms will brighten the darker corner; David Austin lists it at about 3.75m.
+- *The Generous Gardener* (Ausdrawn) on the brighter, more open wall section. Its pale-pink,
+  strongly fragrant repeat flowers will complement The Pilgrim; it reaches about 4.5m.
+
+Both tolerate partial shade but must be trained horizontally along sturdy wires rather than allowed
+to climb into the Photinia. Plant them 30–45cm out from the wall, keep at least 60cm clear of the
+Photinia's trunk and major roots, and give each its own section of support. They are substantial
+climbers, so one of each is sufficient.
 
 **Spring 2027**: underplant once a full growing season has shown exactly how much light reaches
-ground level under the canopy — hardy ferns for texture, hellebores for late-winter flower. Safer
-to wait on this layer; guessing at light levels now risks buying plants that sulk.
+ground level under the canopy. Use hardy ferns, hellebores and other lower shade-tolerant plants
+around the tree-side section, with sunnier flowering perennials toward the front. This avoids
+guessing at the light while the roses establish.
 
-The existing drip irrigation line runs along the wall already — reroute emitters to the new
-planting spots once positions are chosen, rather than assuming the current layout covers them.
+The existing drip irrigation line runs along the wall already — reroute emitters to the two rose
+planting spots, and water deeply while they establish.

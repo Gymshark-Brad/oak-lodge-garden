@@ -292,7 +292,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "The bed under the ensuite window, wrapping the corner down to the knee where Bed 5 takes over. Centred on a multi-stem Photinia trained as a canopy tree against the wall, with a Spiraea underneath it — both hard-pruned back in July 2026. Cleared of debris and ready for infill planting; see the planning note below the plant list.",
+        "The bed under the ensuite window, wrapping the corner down to the knee where Bed 5 takes over. The multi-stem Photinia canopy was trimmed and the Spiraea/old hedge removed in July 2026; the soil was cleared, composted and given stepping stones. Two David Austin climbing roses — The Pilgrim and The Generous Gardener — are planned for the wall, with lower planting to follow once they are established.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -1219,9 +1219,9 @@ window.OAK = (function () {
         seasonal: "Flowers June–Sept; bare winter.",
       },
     ],
-    // PLANNED (autumn 2026): Sarcococca confusa + Mahonia × media as an evergreen shade backdrop
-    // behind/around the Photinia and Spiraea — see the planting-plan note at the end of the
-    // front-garden-handoff-v2/bed3-split-and-corner-bed.md doc before adding them here as real entries.
+    // PLANNED (autumn 2026): David Austin climbing roses The Pilgrim (Auswalker) and
+    // The Generous Gardener (Ausdrawn). See the planting-plan note in
+    // front-garden-handoff-v2/bed3-split-and-corner-bed.md before adding them as real entries.
     "Front Bed 4": [
       {
         name: "Photinia",
@@ -1232,16 +1232,6 @@ window.OAK = (function () {
         water: "Moderate; extra while re-establishing after the July 2026 prune.",
         care: "Prune to shape after the spring flush; watch for leaf spot in wet years. Evergreen, tolerates hard pruning well.",
         seasonal: "Coppery-red new growth in spring; small white flowers in flat clusters late spring, fading to rust-brown through summer; evergreen year-round.",
-      },
-      {
-        name: "Spiraea",
-        latin: "Spiraea thunbergii", // CONFIRM — narrow finely-serrated leaves on arching stems; confirm with small white flowers on bare wood in April
-        photos: ["images/jul-2026/weigela.webp"], // pre-prune, was mislabeled Weigela — TODO: add post-prune photos
-        position: "At the base of the corner tree, in front of the ensuite window",
-        light: "Sun to part shade.",
-        water: "Moderate; extra while re-establishing after the July 2026 prune.",
-        care: "Flowers on old wood — prune immediately after flowering if needed, thinning rather than cutting hard into old wood.",
-        seasonal: "Small white flowers smother the bare stems in April, before the narrow leaves emerge; fine deciduous foliage through summer.",
       },
     ],
     "Front Bed 5": [
@@ -1571,7 +1561,7 @@ window.OAK = (function () {
       frontBed4: [
         { src: "images/jul-2026/corner-bush.webp",         caption: "Photinia — before pruning" },
         { src: "images/jul-2026/corner-bush-berries.webp", caption: "Photinia — flower/berry clusters (close), before pruning" },
-        { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before pruning" },
+        { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before removal" },
         // TODO Brad: add the post-prune corner photos (tree + bush + cleared ground) once exported —
         // taken July 2026, currently only on your phone.
       ],
@@ -1936,7 +1926,6 @@ window.OAK = (function () {
     ],
     frontBed4: [
       { name: "Photinia", x: 60, y: 35, r: 20, hue: 130 },
-      { name: "Spiraea",  x: 35, y: 70, r: 12, hue: 90  },
     ],
     frontBed5: [
       { name: "Cherry Laurel",          x: 50, y: 20, r: 13, hue: 135 },
