@@ -113,7 +113,15 @@ function App() {
             onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ minHeight: 32 }}
           >
-            Garden plan
+            Back Garden
+          </button>
+          <button
+            className="ghostbtn"
+            aria-pressed={view.name === "frontplan" || inFrontBed}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            style={{ minHeight: 32 }}
+          >
+            Front Garden
           </button>
           <button
             className="ghostbtn"
@@ -130,14 +138,6 @@ function App() {
             style={{ minHeight: 32 }}
           >
             Watering guide
-          </button>
-          <button
-            className="ghostbtn"
-            aria-pressed={view.name === "frontplan" || inFrontBed}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{ minHeight: 32 }}
-          >
-            Front garden
           </button>
           {inBed && (
             <>
