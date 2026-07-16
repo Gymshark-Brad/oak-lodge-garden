@@ -83,7 +83,7 @@ Deliberate choice. Brad is not an engineer. The repo needs to be updatable by dr
 Everything lives in `data.js` as `window.OAK`. Four objects:
 
 ### ZONES
-One entry per clickable area on the garden plan. Keys: `bed1`, `bed2`, `bed3`, `bed4`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`, `bigpot1`, `bigpot2`, `littlepot1`, `littlepot2`, `frontpot`.
+One entry per clickable area on the back-garden plan. Keys include `bed1`–`bed5`, `stone`, `steps`, `patio`, `kitchen`, `lounge`, `pear`, `bigpot1`, `bigpot2`, `lobeliapot`, `littlepot1`, `littlepot2`, `frontpot`, the wall pots and baskets. Front-garden zones use the `front…` prefix.
 
 ```javascript
 bed1: {
@@ -108,7 +108,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 }
 ```
 
-Zone labels: `"Bed 1"`, `"Bed 2"`, `"Bed 3"`, `"Bed 4"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Little Pot 1"`, `"Little Pot 2"`, `"Front Pot"`
+Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 
 ### PHOTOS_BY_MONTH
 ```javascript
@@ -155,21 +155,24 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Flower Bed 1 (2.6m × 2.6m) — Japanese Maple dominant, raised timber bed, Dahlia (dark-leaved) in centre
 - Pear Tree — mature fruit tree, upper terrace
 - Big Pot 2 — large blue glazed pot on upper paving
-- Flower Bed 4 (2m × 3.8m, mirrored L) — Wisteria over right wall
-- Little Pot 2 — small blue pot near Bed 4 entrance
+- Flower Bed 5 — narrow Wisteria boundary bed on the right wall
+- Little Pot 2 — small blue pot immediately south of the Pear Tree
 
 **Transition**
 - Steps (~3m × 3m) — block paving, several levels
 - Little Pot 1 — small blue pot at top of steps
-- Flower Bed 3 (0.8m × 0.8m) — Apple tree with bird feeders
+- Flower Bed 4 (≈1.8m × 0.8m) — Apple tree with bird feeders; occupies the first third above the Stone Bed
 
 **Lower level (south, house end)**
 - Big Pot 1 — large blue glazed pot at foot of steps
-- Flower Bed 2 (T-shape, between brick walls) — Weeping cherry, peony, dogwood
+- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, dogwood
+- Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Weigela, Silverbush, Hydrangea petiolaris, Spiraea and smaller perennials
 - Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks, rosemary
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
+- Lobelia Pot — blue pot at the foot of the stairs; Lobelia 'Starship Scarlet Bronze Leaf'
+- The two wall pots sit inside the Steps footprint; the Hanging Baskets marker sits inside Patio Kitchen.
 - Patio Kitchen + Patio Lounge — hardscape, no plants
-- Front Pot — glazed pot at the front door; Gazania, Calibrachoa, Bacopa White (added June 2026)
+- Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
 ---
 
@@ -178,9 +181,10 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Zone | Count | Key plants |
 |------|-------|-----------|
 | Bed 1 | 14 | Japanese Maple, Fatsia japonica, Rhododendron, Box Hedging, Dahlia, Avens (moved from Bed 3), Dahlia (yellow, new June 2026) |
-| Bed 2 | 13 | Weeping Cherry, Variegated Dogwood, Peony, Weigela, Silverbush, Hydrangea petiolaris |
-| Bed 3 | 5 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope' — replanted June 2026 |
-| Bed 4 | 5 | Wisteria, NZ Flax, Rose, Yucca, Lavender |
+| Bed 2 | 4 | Weeping Cherry, Variegated Dogwood, Peony, Angel Wings |
+| Bed 3 | 10 | Weigela, Silverbush, Hydrangea petiolaris, Spiraea, Dianthus and smaller perennials |
+| Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope', Celosia — replanted June 2026 |
+| Bed 5 | 4 | Wisteria, Rose, Yucca, Lavender |
 | Stone Bed | 7 | Cordyline australis, dark Phormium, Houseleeks, Rosemary, Cabbage Tree, Hebe |
 | Patio | 1 | Clematis montana (left side of house wall) |
 | Tree | 1 | Pear Tree (Pyrus) |
@@ -188,6 +192,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Big Pot 2 | 5 | Lobelia, Verbena, Petunia, Nepeta, Fuchsia |
 | Little Pot 1 | 2 | Geranium, Petunia |
 | Little Pot 2 | 2 | Geranium, Petunia |
+| Lobelia Pot | 1 | Lobelia 'Starship Scarlet Bronze Leaf' — added July 2026 |
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
 
 Full care data (light, water, care, seasonal) for every plant is in `data.js` PLANTS object.
@@ -254,7 +259,7 @@ view = { name: "plan" }
 - **Babel compiles JSX in the browser.** This means `<script type="text/babel">`. Don't change these to `type="module"` — it breaks.
 - **Photos are JPG not WebP** in the current `may-2026` folder (converted from HEIC via pillow-heif). Future months will be WebP via CoWork.
 - **`stone` not `stoneBed`** — the zone key in `data.js` is `stone`, not `stoneBed` as it was in the earlier prototype. Don't confuse them.
-- **Bed 4 polygon coords** were adjusted from the original wireframe: `715,55 765,55 765,255 585,255 585,205 715,205` (Design version, slightly different from the prototype).
+- **July 2026 back-plan correction:** old Bed 2 was split into Bed 2 + Bed 3; the apple-tree bed became Bed 4; the Wisteria bed became Bed 5. Above the full-width Stone Bed, Bed 4 uses the first third, the middle third is open, and Bed 5's mirrored-L arm uses the final third. The steps retain their original rectangular footprint.
 - **`plantKey` is null** for `steps`, `kitchen`, `lounge` — no plants there, don't add a plant list to those views.
 - **Clematis is in Patio zone**, not Stone Bed. It was moved. Left side of the house wall.
 - **`frontpot` must be in GardenPlan.jsx `order` array** — the zone render order is hardcoded. Any new zone must be added there explicitly (and to the legend array below it).

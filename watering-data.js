@@ -34,9 +34,11 @@
       "Weeping Cherry": 3,
       "Variegated Dogwood": 4,
       "Peony": 3,
+      "Angel Wings": 1,
+    },
+    "Bed 3": {
       "Weigela": 3,
       "Silverbush": 1,
-      "Angel Wings": 1,
       "Kerria": 2,
       "Forget-me-not": 3,
       "Maiden Pink": 1,
@@ -46,7 +48,7 @@
       "Euonymus 'Emerald Gaiety'": 2,
       "Spiraea 'Double Play Big Bang'": 3,
     },
-    "Bed 3": {
+    "Bed 4": {
       "Apple Tree": 2,
       "Callistemon 'Inferno'": 3,
       "Achillea": 2,
@@ -54,7 +56,7 @@
       "Abelia 'Kaleidoscope'": 3,
       "Celosia": 4,
     },
-    "Bed 4": {
+    "Bed 5": {
       "Wisteria": 1,
       "Rose": 3,
       "Yucca": 1,
@@ -98,6 +100,9 @@
       "Geranium": 3,
       "Petunia": 4,
     },
+    "Lobelia Pot": {
+      "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
+    },
     "Front Pot": {
       "Gazania 'Sunny Side Up'": 2,
       "Gazania 'Orange Flame'": 2,
@@ -119,17 +124,15 @@
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
     },
-    "Front Bed 2": {
-      "Box": 3, "Honeysuckle": 3,
-    },
+    "Front Bed 2": {},
     "Front Bed 3": {
       "Climbing Rose (white-pink)": 3, "Fern": 4, "Rose (pink)": 3,
     },
     "Front Bed 4": {
-      "Photinia": 2,
+      "The Pilgrim": 3, "The Generous Gardener": 3,
     },
     "Front Bed 5": {
-      "Cherry Laurel": 2, "Mexican Orange Blossom": 2, "Climber (unidentified)": 3, "Thyme": 1,
+      "Cherry Laurel": 2, "Mexican Orange Blossom": 2, "Climber (unidentified)": 3,
     },
     "Front Stone Trough": {
       "Hosta": 4,
@@ -407,6 +410,32 @@
     },
   };
 
+  // Apply the July 2026 back-bed split and renumbering to the detailed signs
+  // without duplicating the long plant-specific guidance above.
+  const bed2SignsBeforeSplit = WATER_SIGNS["Bed 2"];
+  const formerBed3Signs = WATER_SIGNS["Bed 3"];
+  const formerBed4Signs = WATER_SIGNS["Bed 4"];
+  const bed3Names = new Set([
+    "Weigela",
+    "Silverbush",
+    "Kerria",
+    "Forget-me-not",
+    "Maiden Pink",
+    "Garden Pink",
+    "Centaurea 'Snowy Owl'",
+    "Hydrangea petiolaris",
+    "Euonymus 'Emerald Gaiety'",
+    "Spiraea 'Double Play Big Bang'",
+  ]);
+  WATER_SIGNS["Bed 2"] = Object.fromEntries(
+    Object.entries(bed2SignsBeforeSplit).filter(([name]) => !bed3Names.has(name))
+  );
+  WATER_SIGNS["Bed 3"] = Object.fromEntries(
+    Object.entries(bed2SignsBeforeSplit).filter(([name]) => bed3Names.has(name))
+  );
+  WATER_SIGNS["Bed 4"] = formerBed3Signs;
+  WATER_SIGNS["Bed 5"] = formerBed4Signs;
+
   // Pot and hanging-basket zones get ONE combined signs entry for the whole
   // container rather than one per plant — in practice the pot is watered as
   // a single unit, so the useful thing to watch for is the container's
@@ -427,6 +456,10 @@
     "Little Pot 2": {
       under: "Compost pulling away from the pot's edge, or the pot feeling noticeably light, means it's dried right out. The geranium's leaves going crisp and brown at the edges, or the petunia's flowers closing up and leaves going matte and floppy, confirm it.",
       over: "A sodden saucer, or compost still dark and wet a day after watering, means it's too much. The geranium is the one to watch — soft, yellowing lower leaves or a mushy stem base is a clear sign; it rots fast if kept wet.",
+    },
+    "Lobelia Pot": {
+      under: "Check the top 2–3cm daily in warm weather. Drooping flower spikes, limp bronze leaves or compost pulling away from the rim mean the pot needs a thorough drink.",
+      over: "Compost staying dark and sodden for days, yellowing lower leaves or a soft crown mean drainage is poor or watering is too frequent.",
     },
     "Front Pot": {
       under: "Pot feeling light, compost pulling away from the edge, or water running straight through without darkening the compost all mean it's dried out. The Calibrachoa and Bacopa will show it first — flowers dropping and leaves going limp — since they're the thirstiest plants in this pot.",

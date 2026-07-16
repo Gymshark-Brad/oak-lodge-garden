@@ -11,8 +11,8 @@ function GardenPlan({ onOpenZone, dark }) {
   // Zones rendered in z-order: hardscape first, beds on top, pots on top
   const order = [
     "patio", "kitchen", "lounge", "steps",
-    "stone", "bed1", "bed2", "bed3", "bed4", "pear",
-    "bigpot1", "bigpot2", "littlepot1", "littlepot2", "baskets", "frontpot", "wallpot1", "wallpot2",
+    "stone", "bed1", "bed2", "bed3", "bed4", "bed5", "pear",
+    "bigpot1", "bigpot2", "lobeliapot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2",
   ];
 
   const RoughDefs = (
@@ -271,7 +271,7 @@ function GardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {["bed1", "bed2", "bed3", "bed4", "stone", "patio", "pear", "bigpot1", "bigpot2", "littlepot1", "littlepot2", "baskets", "frontpot", "wallpot1", "wallpot2"].map((k) => {
+          {["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "patio", "pear", "bigpot1", "bigpot2", "lobeliapot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2"].map((k) => {
             const z = Z[k];
             return (
               <button

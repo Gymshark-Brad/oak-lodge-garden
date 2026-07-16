@@ -18,6 +18,10 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const photos = (_latestMonthData[zoneKey] || []);
   // Archive photos — stored under `{zoneKey}Archive` in the latest month data
   const archivePhotos = (_latestMonthData[zoneKey + "Archive"] || []);
+  const archivePeriod = zoneKey === "frontBed4" ? "Before July 2026" : "Pre-June 2026";
+  const archiveNote = zoneKey === "frontBed4"
+    ? "The corner bed before it was cleared and replanted with the two climbing roses — kept here for the record."
+    : "The bed before the June 2026 replanting — kept here for the record.";
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
 
@@ -150,10 +154,10 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
         <div style={{ marginTop: 48 }}>
           <div className="row" style={{ alignItems: "baseline", gap: 14 }}>
             <div className="t-display" style={{ fontSize: 28 }}>As it was</div>
-            <div className="t-stamp">Pre-June 2026 · {archivePhotos.length} {archivePhotos.length === 1 ? "exposure" : "exposures"}</div>
+            <div className="t-stamp">{archivePeriod} · {archivePhotos.length} {archivePhotos.length === 1 ? "exposure" : "exposures"}</div>
           </div>
           <p className="t-hand" style={{ fontSize: 18, color: "var(--pencil)", margin: "6px 0 16px" }}>
-            The bed before the June 2026 replanting — kept here for the record.
+            {archiveNote}
           </p>
           <div className="rule" style={{ margin: "0 0 20px" }} />
           <div className="photo-scatter">

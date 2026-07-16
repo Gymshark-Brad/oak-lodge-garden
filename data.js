@@ -21,15 +21,12 @@ window.OAK = (function () {
     bed2: {
       id: "bed2",
       title: "Flower Bed 2",
-      badge: "Long border",
-      dims: "T-shape, between walls",
+      badge: "Boundary border",
+      dims: "≈2m × 4.5m",
       where: "Lower level, west boundary",
       desc:
-        "T-shaped border running between two brick walls. Weeping cherry overhangs the back, with peony, dogwood and weigela through the body. Maiden pink spills from the wall gap.",
-      shape: {
-        kind: "polygon",
-        points: "30,250 130,250 130,335 300,335 300,395 130,395 130,475 30,475",
-      },
+        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry, variegated dogwood and peony give it blossom, winter stems and early-summer flowers.",
+      shape: { kind: "rect", x: 30, y: 250, w: 100, h: 225 },
       color: "#6b8e4e",
       labelXY: [80, 290],
       plantKey: "Bed 2",
@@ -37,31 +34,44 @@ window.OAK = (function () {
     bed3: {
       id: "bed3",
       title: "Flower Bed 3",
-      badge: "Compact bed",
-      dims: "0.8m × 0.8m",
-      where: "Junction of steps and stone bed",
+      badge: "Wall-gap border",
+      dims: "≈3.4m × 1.6m",
+      where: "Lower level, running east from Bed 2",
       desc:
-        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders at the centre. Completely replanted in June 2026 — Callistemon, Achillea, Gaillardia and Abelia 'Kaleidoscope' now fill the underplanting.",
-      shape: { kind: "rect", x: 490, y: 267, w: 40, h: 40 },
-      color: "#c7a54a",
-      labelXY: [510, 257],
+        "The horizontal arm split from the former T-shaped Bed 2. A sunny run between the brick walls, planted with weigela, silverbush, dianthus, climbing hydrangea and bright Spiraea.",
+      shape: { kind: "rect", x: 130, y: 335, w: 170, h: 78 },
+      color: "#7f9b58",
+      labelXY: [215, 366],
       plantKey: "Bed 3",
     },
     bed4: {
       id: "bed4",
       title: "Flower Bed 4",
+      badge: "Compact bed",
+      dims: "≈1.8m × 0.8m",
+      where: "Junction of steps and stone bed",
+      desc:
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders at the centre. Completely replanted in June 2026 — Callistemon, Achillea, Gaillardia and Abelia 'Kaleidoscope' now fill the underplanting.",
+      shape: { kind: "rect", x: 488, y: 215, w: 92, h: 40 },
+      color: "#c7a54a",
+      labelXY: [534, 198],
+      plantKey: "Bed 4",
+    },
+    bed5: {
+      id: "bed5",
+      title: "Flower Bed 5",
       badge: "Boundary bed",
-      dims: "2m × 3.8m, mirrored L",
+      dims: "≈1m × 4m",
       where: "Right boundary wall, upper",
       desc:
-        "Mirrored-L bed against the right boundary. Wisteria cascading from the wall, with phormium, yucca and lavender giving year-round structure. A climbing rose on the trellis.",
+        "Long boundary bed against the right wall. Wisteria cascades from above, with yucca and lavender giving year-round structure and a climbing rose on the trellis.",
       shape: {
         kind: "polygon",
-        points: "715,55 765,55 765,255 585,255 585,205 715,205",
+        points: "715,55 765,55 765,255 673,255 673,205 715,205",
       },
       color: "#8e6fbf",
       labelXY: [665, 140],
-      plantKey: "Bed 4",
+      plantKey: "Bed 5",
     },
     stone: {
       id: "stone",
@@ -70,8 +80,8 @@ window.OAK = (function () {
       dims: "≈4.8m × 1m",
       where: "Decking edge, lower level",
       desc:
-        "Narrow gravel bed running along the decking edge. Mediterranean planting — houseleeks, sedum, rosemary — anchored by a Cordyline and a dark Phormium.",
-      shape: { kind: "rect", x: 530, y: 267, w: 225, h: 48 },
+        "Narrow gravel bed running the full length of the decking edge. Mediterranean planting — houseleeks, sedum, rosemary — anchored by a Cordyline and a dark Phormium.",
+      shape: { kind: "rect", x: 488, y: 267, w: 277, h: 48 },
       color: "#7a8f9a",
       labelXY: [640, 290],
       plantKey: "Stone Bed",
@@ -104,12 +114,12 @@ window.OAK = (function () {
       id: "kitchen",
       title: "Patio Kitchen",
       badge: "Outdoor room",
-      dims: "1.6m × 1.4m",
+      dims: "≈3m × 1.2m",
       where: "Sheltered between brick walls",
       desc: "Sheltered outdoor kitchen tucked between the walls.",
-      shape: { kind: "rect", x: 175, y: 400, w: 105, h: 70 },
+      shape: { kind: "rect", x: 130, y: 413, w: 150, h: 60 },
       color: "#5c6b54",
-      labelXY: [228, 435],
+      labelXY: [205, 443],
     },
     lounge: {
       id: "lounge",
@@ -148,6 +158,20 @@ window.OAK = (function () {
       plantKey: "Big Pot 1",
       isPot: true,
     },
+    lobeliapot: {
+      id: "lobeliapot",
+      title: "Lobelia Pot",
+      badge: "Glazed pot",
+      dims: "Medium blue pot",
+      where: "Left of the stairs at the bottom, looking down from the upper garden",
+      desc:
+        "A blue glazed pot at the foot of the stairs, planted with Lobelia 'Starship Scarlet Bronze Leaf' — vivid scarlet flower spikes above dramatic bronze foliage.",
+      shape: { kind: "circle", cx: 468, cy: 420, r: 13 },
+      color: "#2b5c9e",
+      labelXY: [468, 443],
+      plantKey: "Lobelia Pot",
+      isPot: true,
+    },
     bigpot2: {
       id: "bigpot2",
       title: "Big Pot 2",
@@ -181,12 +205,12 @@ window.OAK = (function () {
       title: "Little Pot 2",
       badge: "Small pot",
       dims: "Small square blue pot",
-      where: "Upper level, near Bed 4 entrance",
+      where: "Upper level, immediately south of the Pear Tree",
       desc:
-        "A small blue pot on the upper level between the pear tree and Bed 4. Red-and-white geranium with purple-veined petunia.",
-      shape: { kind: "circle", cx: 548, cy: 118, r: 12 },
+        "A small blue pot sitting centrally just south of the Pear Tree. Red-and-white geranium with purple-veined petunia.",
+      shape: { kind: "circle", cx: 480, cy: 116, r: 12 },
       color: "#3a7abf",
-      labelXY: [548, 100],
+      labelXY: [480, 140],
       plantKey: "Little Pot 2",
       isPot: true,
     },
@@ -195,12 +219,12 @@ window.OAK = (function () {
       title: "Hanging Baskets",
       badge: "Front of house",
       dims: "3 baskets",
-      where: "Front of house wall",
+      where: "Inside the Patio Kitchen area",
       desc:
-        "Three hanging baskets on the front of the house wall. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
-      shape: { kind: "circle", cx: 625, cy: 510, r: 12 },
+        "Three hanging baskets grouped within the Patio Kitchen area. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
+      shape: { kind: "circle", cx: 255, cy: 450, r: 11 },
       color: "#c06a2a",
-      labelXY: [625, 496],
+      labelXY: [225, 430],
       plantKey: "Baskets",
       isPot: true,
     },
@@ -211,9 +235,9 @@ window.OAK = (function () {
       dims: "Small pot",
       where: "Left wall of the steps",
       desc: "A small pot sitting on the left retaining wall of the steps, planted with Candy House Mix — a tumbling mix of colourful trailing flowers for long season colour.",
-      shape: { kind: "circle", cx: 290, cy: 278, r: 10 },
+      shape: { kind: "circle", cx: 330, cy: 285, r: 10 },
       color: "#c06a2a",
-      labelXY: [290, 262],
+      labelXY: [375, 286],
       plantKey: "Wall Pot 1",
       isPot: true,
     },
@@ -224,9 +248,9 @@ window.OAK = (function () {
       dims: "Small blue pot",
       where: "Left wall of the steps",
       desc: "A small blue glazed pot on the left retaining wall of the steps. Coreopsis Gold fills the pot with cheerful yellow daisy flowers all summer.",
-      shape: { kind: "circle", cx: 290, cy: 318, r: 10 },
+      shape: { kind: "circle", cx: 330, cy: 370, r: 10 },
       color: "#c06a2a",
-      labelXY: [290, 302],
+      labelXY: [375, 371],
       plantKey: "Wall Pot 2",
       isPot: true,
     },
@@ -235,12 +259,12 @@ window.OAK = (function () {
       title: "Front Door Pot",
       badge: "Front of house",
       dims: "Medium glazed pot",
-      where: "Front of house, by the front door",
+      where: "Front garden gravel, immediately south of Bed 2",
       desc:
-        "A colourful pot planted up in June 2026, sitting by the front door. Bold Gazania daisies in cream and orange, with trailing Calibrachoa and Bacopa White for a long season of colour.",
-      shape: { kind: "circle", cx: 750, cy: 490, r: 12 },
+        "A colourful pot on the gravel immediately south of Front Bed 2. Bold Gazania daisies in cream and orange, with trailing Calibrachoa and Bacopa White for a long season of colour.",
+      shape: { kind: "circle", cx: 470, cy: 310, r: 14 },
       color: "#c06a2a",
-      labelXY: [750, 474],
+      labelXY: [470, 338],
       plantKey: "Front Pot",
       isPot: true,
     },
@@ -266,7 +290,7 @@ window.OAK = (function () {
       dims: "1.1m × 1.2m",
       where: "Right of the front door, against the hedge",
       desc:
-        "Small bed tucked between the front door and the hedge — the clipped box ball on the porch return and the honeysuckle arching over the entrance.",
+        "Small bed tucked between the front door and the hedge. The former box and honeysuckle have been removed, leaving the bed clear for its next planting.",
       shape: { kind: "rect", x: 439, y: 201, w: 63, h: 69 },
       color: "#7f8f4a",
       labelXY: [470, 240],
@@ -292,7 +316,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "The bed under the ensuite window, wrapping the corner down to the knee where Bed 5 takes over. The multi-stem Photinia canopy was trimmed and the Spiraea/old hedge removed in July 2026; the soil was cleared, composted and given stepping stones. Two David Austin climbing roses — The Pilgrim and The Generous Gardener — are planned for the wall, with lower planting to follow once they are established.",
+        "The bed under the ensuite window, wrapping the corner down to the knee where Bed 5 takes over. The previous shrubs have been removed and the cleared, composted bed is now planted with two David Austin climbing roses — The Pilgrim and The Generous Gardener.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -305,7 +329,7 @@ window.OAK = (function () {
       dims: "Irregular · patio point to boundary wall",
       where: "From the steps out to the brick boundary wall",
       desc:
-        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. Cherry laurel, a lime-variegated Choisya, a wall-trained climber at the far end, and thyme at the near corner.",
+        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. Cherry laurel, a lime-variegated Choisya and a wall-trained climber fill the run.",
       shape: { kind: "polygon", points: "880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" },
       color: "#587a3a",
       labelXY: [860, 330],
@@ -679,7 +703,7 @@ window.OAK = (function () {
         seasonal: "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
       },
     ],
-    "Bed 3": [
+    "Bed 4": [
       {
         name: "Apple Tree",
         latin: "Malus domestica",
@@ -741,7 +765,7 @@ window.OAK = (function () {
         seasonal: "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
       },
     ],
-    "Bed 4": [
+    "Bed 5": [
       {
         name: "Wisteria",
         latin: "Wisteria spp.",
@@ -1103,6 +1127,21 @@ window.OAK = (function () {
         seasonal: "Bright golden-yellow daisy flowers June–September; fine ferny foliage.",
       },
     ],
+    "Lobelia Pot": [
+      {
+        name: "Lobelia 'Starship Scarlet Bronze Leaf'",
+        latin: "Lobelia × speciosa 'Starship Scarlet Bronze Leaf'",
+        photos: [
+          "images/jul-2026/lobelia-starship-scarlet-pot.jpeg",
+          "images/jul-2026/lobelia-starship-scarlet-close.jpeg",
+        ],
+        position: "Single specimen filling the pot",
+        light: "Full sun to partial shade. Best flowering with at least half a day of sun.",
+        water: "Keep evenly moist; do not allow the compost to dry out in summer.",
+        care: "Deadhead spent spikes to encourage more flowers. Feed fortnightly while flowering. Hardy in the ground, but protect the pot from prolonged hard frost and winter waterlogging.",
+        seasonal: "Bronze foliage from spring; tall scarlet flower spikes July–September; dies back in winter and returns from the crown.",
+      },
+    ],
     "Baskets": [
       {
         name: "Trailing Fuchsia",
@@ -1165,28 +1204,7 @@ window.OAK = (function () {
         seasonal: "Purple spikes June–Aug; aromatic year-round.",
       },
     ],
-    "Front Bed 2": [
-      {
-        name: "Box",
-        latin: "Buxus sempervirens", // CONFIRM — box vs privet vs Lonicera nitida
-        photos: ["images/jul-2026/box-close.webp"],
-        position: "Clipped ball by the front door",
-        light: "Sun to part shade.",
-        water: "Moderate; don't let it dry out.",
-        care: "Clip to shape May and late summer. Watch for box blight/caterpillar.",
-        seasonal: "Evergreen year-round.",
-      },
-      {
-        name: "Honeysuckle",
-        latin: "Lonicera periclymenum", // CONFIRM — Brad unsure it's honeysuckle
-        photos: ["images/jul-2026/honeysuckle.webp"],
-        position: "Arching over the entrance",
-        light: "Sun to part shade.",
-        water: "Keep roots cool and moist; mulch.",
-        care: "Prune after flowering; thin congested growth. Give it support over the entrance.",
-        seasonal: "Scented flowers June–Aug; berries after. Semi-evergreen.",
-      },
-    ],
+    "Front Bed 2": [],
     "Front Bed 3": [
       {
         name: "Climbing Rose (white-pink)",
@@ -1219,19 +1237,26 @@ window.OAK = (function () {
         seasonal: "Flowers June–Sept; bare winter.",
       },
     ],
-    // PLANNED (autumn 2026): David Austin climbing roses The Pilgrim (Auswalker) and
-    // The Generous Gardener (Ausdrawn). See the planting-plan note in
-    // front-garden-handoff-v2/bed3-split-and-corner-bed.md before adding them as real entries.
     "Front Bed 4": [
       {
-        name: "Photinia",
-        latin: "Photinia × fraseri", // CONFIRM — likely 'Red Robin'; check for a coppery-red new-growth flush next spring to be sure
-        photos: ["images/jul-2026/corner-bush.webp", "images/jul-2026/corner-bush-berries.webp"], // pre-prune — TODO: add post-prune photos
-        position: "The corner, trained as a multi-stem canopy tree over the ensuite window",
-        light: "Sun to part shade.",
-        water: "Moderate; extra while re-establishing after the July 2026 prune.",
-        care: "Prune to shape after the spring flush; watch for leaf spot in wet years. Evergreen, tolerates hard pruning well.",
-        seasonal: "Coppery-red new growth in spring; small white flowers in flat clusters late spring, fading to rust-brown through summer; evergreen year-round.",
+        name: "The Pilgrim",
+        latin: "Rosa 'Auswalker'",
+        photos: ["images/jul-2026/rose-the-pilgrim.jpeg"],
+        position: "Against the wall, left side of the bed",
+        light: "Full sun to light partial shade. Aim for at least four hours of direct sun.",
+        water: "Deep water at the base during dry spells, especially while establishing.",
+        care: "David Austin medium climber. Tie new canes into the support, fanning them horizontally where possible. Feed and mulch in spring; deadhead through summer; prune in late winter.",
+        seasonal: "Soft yellow, rosette-shaped flowers with a tea fragrance from June into autumn; deciduous in winter.",
+      },
+      {
+        name: "The Generous Gardener",
+        latin: "Rosa 'Ausdrawn'",
+        photos: ["images/jul-2026/rose-the-generous-gardener.jpeg"],
+        position: "Against the wall, right side of the bed",
+        light: "Full sun to light partial shade. Tolerates a little less sun than many climbing roses.",
+        water: "Deep water at the base during dry spells, especially in its first two years.",
+        care: "David Austin medium climber. Train and tie in long shoots, feed and mulch in spring, deadhead repeat flowers and prune in late winter. Good disease resistance.",
+        seasonal: "Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance; repeat flowers June–autumn.",
       },
     ],
     "Front Bed 5": [
@@ -1264,16 +1289,6 @@ window.OAK = (function () {
         water: "Moderate.",
         care: "TBC once identified.",
         seasonal: "Red berry clusters noted July.",
-      },
-      {
-        name: "Thyme",
-        latin: "Thymus", // CONFIRM
-        photos: ["images/jul-2026/boundary-thyme.webp"],
-        position: "Near corner of the boundary bed",
-        light: "Full sun.",
-        water: "Drought-tolerant.",
-        care: "Trim after flowering. Sharp drainage.",
-        seasonal: "Aromatic evergreen; flowers early summer.",
       },
     ],
     "Front Stone Trough": [
@@ -1326,6 +1341,24 @@ window.OAK = (function () {
     ],
   };
 
+  // Bed 2's former sideways-T footprint is now two separate beds. The plant
+  // records remain authored together above, then are divided here by their
+  // physical side of the split so care cards and maps stay in sync.
+  const BED3_PLANT_NAMES = new Set([
+    "Weigela",
+    "Silverbush",
+    "Kerria",
+    "Forget-me-not",
+    "Maiden Pink",
+    "Garden Pink",
+    "Centaurea 'Snowy Owl'",
+    "Hydrangea petiolaris",
+    "Euonymus 'Emerald Gaiety'",
+    "Spiraea 'Double Play Big Bang'",
+  ]);
+  PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_NAMES.has(plant.name));
+  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_NAMES.has(plant.name));
+
   // ─── PHOTOS (by month) ────────────────────────────────────────────
   const PHOTOS_BY_MONTH = {
     "may-2026": {
@@ -1359,11 +1392,17 @@ window.OAK = (function () {
         { src: "images/may-2026/bed2-6.webp",      caption: "From patio" },
       ],
       bed3: [
+        { src: "images/may-2026/bed2-kitchen.jpg", caption: "Horizontal border from the patio kitchen" },
+        { src: "images/may-2026/bed2-steps.jpg",   caption: "Horizontal border from the steps" },
+        { src: "images/may-2026/bed2-south1.jpg",  caption: "Wall-gap border, south angle" },
+        { src: "images/may-2026/bed2-south2.jpg",  caption: "Wall-gap border, second south angle" },
+      ],
+      bed4: [
         { src: "images/may-2026/bed3.jpg",         caption: "Apple tree & avens" },
         { src: "images/may-2026/bed3-detail.jpg",  caption: "From lower paving" },
         { src: "images/may-2026/bed3-3.webp",      caption: "Apple tree & bird feeders" },
       ],
-      bed4: [
+      bed5: [
         { src: "images/may-2026/bed4.jpg",         caption: "Wisteria overview" },
         { src: "images/may-2026/bed4-wide.jpg",    caption: "Wider angle" },
         { src: "images/may-2026/bed4-3.webp",      caption: "Wisteria in full flower" },
@@ -1458,8 +1497,20 @@ window.OAK = (function () {
         { src: "images/june-2026-update-2/spiraea-big-bang-5.webp", caption: "Spiraea — wide" },
       ],
       bed3: [
-        { src: "images/june-2026-updates/bed3-after-wide-1.webp",      caption: "Bed 3 — after replanting" },
-        { src: "images/june-2026-updates/bed3-after-wide-2.webp",      caption: "Bed 3 — wide shot" },
+        { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
+        { src: "images/june-2026/centaurea-snowy-owl-2.webp", caption: "Centaurea — close-up" },
+        { src: "images/june-2026/silverbush.webp",            caption: "Silverbush" },
+        { src: "images/june-2026/maiden-pink.webp",           caption: "Maiden Pink" },
+        { src: "images/june-2026/hydrangea-petiolaris.webp",  caption: "Hydrangea petiolaris" },
+        { src: "images/june-2026/weigela.webp",               caption: "Weigela" },
+        { src: "images/june-2026/forget-me-not.webp",         caption: "Forget-me-not" },
+        { src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Euonymus 'Emerald Gaiety'" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-1.webp", caption: "Spiraea 'Double Play Big Bang'" },
+        { src: "images/june-2026-update-2/spiraea-big-bang-4.webp", caption: "Spiraea — flowers" },
+      ],
+      bed4: [
+        { src: "images/june-2026-updates/bed3-after-wide-1.webp",      caption: "Bed 4 — after replanting (formerly Bed 3)" },
+        { src: "images/june-2026-updates/bed3-after-wide-2.webp",      caption: "Bed 4 — wide shot (formerly Bed 3)" },
         { src: "images/june-2026-updates/callistemon-inferno-1.webp",  caption: "Callistemon 'Inferno'" },
         { src: "images/june-2026-updates/callistemon-inferno-2.webp",  caption: "Callistemon 'Inferno' — close-up" },
         { src: "images/june-2026-updates/achillea.webp",               caption: "Achillea" },
@@ -1468,16 +1519,16 @@ window.OAK = (function () {
         { src: "images/june-2026/apple-tree.webp",                     caption: "Apple Tree — June" },
         { src: "images/june-2026-update-2/celosia.webp",               caption: "Celosia — mixed colours" },
       ],
-      bed3Archive: [
+      bed4Archive: [
         { src: "images/june-2026/avens-1.webp",    caption: "Avens — orange flowers" },
         { src: "images/june-2026/avens-2.webp",    caption: "Avens — close-up" },
         { src: "images/june-2026/avens-3.webp",    caption: "Avens — cluster" },
         { src: "images/june-2026/avens-4.webp",    caption: "Avens — wide shot" },
-        { src: "images/may-2026/bed3.jpg",         caption: "Bed 3 — May 2026 overview" },
-        { src: "images/may-2026/bed3-detail.jpg",  caption: "Bed 3 — May 2026 detail" },
-        { src: "images/may-2026/bed3-3.webp",      caption: "Bed 3 — May 2026, apple tree" },
+        { src: "images/may-2026/bed3.jpg",         caption: "Bed 4 (then Bed 3) — May 2026 overview" },
+        { src: "images/may-2026/bed3-detail.jpg",  caption: "Bed 4 (then Bed 3) — May 2026 detail" },
+        { src: "images/may-2026/bed3-3.webp",      caption: "Bed 4 (then Bed 3) — May 2026, apple tree" },
       ],
-      bed4: [
+      bed5: [
         { src: "images/june-2026/wisteria.webp", caption: "Wisteria" },
         { src: "images/june-2026/rose.webp",     caption: "Rose" },
         { src: "images/june-2026/lavender.webp", caption: "Lavender" },
@@ -1542,6 +1593,10 @@ window.OAK = (function () {
     },
     "jul-2026": {
       label: "July 2026",
+      lobeliapot: [
+        { src: "images/jul-2026/lobelia-starship-scarlet-pot.jpeg", caption: "Lobelia 'Starship Scarlet Bronze Leaf' in its blue pot at the foot of the stairs" },
+        { src: "images/jul-2026/lobelia-starship-scarlet-close.jpeg", caption: "Scarlet flower spikes and bronze foliage, close-up" },
+      ],
       frontBed1: [
         { src: "images/jul-2026/front-door.webp",  caption: "Front door & porch, hydrangea at the base" },
         { src: "images/jul-2026/study-gate.webp",  caption: "Study window & side gate — hydrangea and lavender" },
@@ -1549,8 +1604,6 @@ window.OAK = (function () {
       frontBed2: [
         { src: "images/jul-2026/porch-nameplate.webp",  caption: "Porch, name plate, box ball and blue pot" },
         { src: "images/jul-2026/entrance-troughs.webp", caption: "Entrance — box ball and stone trough" },
-        { src: "images/jul-2026/honeysuckle.webp",      caption: "Honeysuckle over the entrance" },
-        { src: "images/jul-2026/box-close.webp",        caption: "Box bush by the front door (close)" },
       ],
       frontBed3: [
         { src: "images/jul-2026/overview.webp",      caption: "Front garden overview from the entrance" },
@@ -1559,15 +1612,17 @@ window.OAK = (function () {
         { src: "images/jul-2026/pink-rose.webp",     caption: "Pink rose between Bedroom 1 and the ensuite corner" },
       ],
       frontBed4: [
-        { src: "images/jul-2026/corner-bush.webp",         caption: "Photinia — before pruning" },
-        { src: "images/jul-2026/corner-bush-berries.webp", caption: "Photinia — flower/berry clusters (close), before pruning" },
+        { src: "images/jul-2026/front-bed-4-roses.jpeg", caption: "Front Bed 4 cleared, composted and planted with the two climbing roses" },
+        { src: "images/jul-2026/rose-the-pilgrim.jpeg", caption: "The Pilgrim — soft yellow David Austin climbing rose" },
+        { src: "images/jul-2026/rose-the-generous-gardener.jpeg", caption: "The Generous Gardener — pale pink David Austin climbing rose" },
+      ],
+      frontBed4Archive: [
+        { src: "images/jul-2026/corner-bush.webp",         caption: "Photinia — before removal" },
+        { src: "images/jul-2026/corner-bush-berries.webp", caption: "Photinia flower clusters — before removal" },
         { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before removal" },
-        // TODO Brad: add the post-prune corner photos (tree + bush + cleared ground) once exported —
-        // taken July 2026, currently only on your phone.
       ],
       frontBed5: [
         { src: "images/jul-2026/boundary-corner.webp", caption: "Boundary corner — box topiary & variegated shrub" },
-        { src: "images/jul-2026/boundary-thyme.webp",  caption: "Near corner of the boundary bed — thyme" },
         { src: "images/jul-2026/laurel.webp",          caption: "Boundary bed running back toward the entrance" },
         { src: "images/jul-2026/choisya.webp",         caption: "Variegated Choisya against the wall" },
         { src: "images/jul-2026/choisya-flowers.webp", caption: "Choisya with flowers at the corner" },
@@ -1800,6 +1855,22 @@ window.OAK = (function () {
         { src: "images/june-2026-updates/gazania-orange-flame.webp", caption: "Gazania 'Orange Flame'" },
       ]},
     ],
+    "Lobelia 'Starship Scarlet Bronze Leaf'": [
+      { month: "jul-2026", label: "July 2026", photos: [
+        { src: "images/jul-2026/lobelia-starship-scarlet-pot.jpeg", caption: "In its blue pot at the foot of the stairs" },
+        { src: "images/jul-2026/lobelia-starship-scarlet-close.jpeg", caption: "Scarlet flower spikes and bronze foliage" },
+      ]},
+    ],
+    "The Pilgrim": [
+      { month: "jul-2026", label: "July 2026", photos: [
+        { src: "images/jul-2026/rose-the-pilgrim.jpeg", caption: "The Pilgrim, newly planted against the wall" },
+      ]},
+    ],
+    "The Generous Gardener": [
+      { month: "jul-2026", label: "July 2026", photos: [
+        { src: "images/jul-2026/rose-the-generous-gardener.jpeg", caption: "The Generous Gardener, newly planted against the wall" },
+      ]},
+    ],
   };
 
   // ─── BED PLANT MAPS ───────────────────────────────────────────────
@@ -1828,12 +1899,14 @@ window.OAK = (function () {
     bed2: [
       { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
       { name: "Variegated Dogwood", x: 22, y: 42, r: 11, hue: 0 },
-      { name: "Hydrangea petiolaris", x: 52, y: 12, r: 10, hue: 210 },
-      { name: "Weigela", x: 56, y: 56, r: 10, hue: 320 },
-      { name: "Silverbush", x: 76, y: 56, r: 8, hue: 70 },
       { name: "Peony", x: 22, y: 70, r: 12, hue: 350 },
-      { name: "Centaurea 'Snowy Owl'", x: 88, y: 35, r: 7, hue: 200 },
       { name: "Angel Wings", x: 30, y: 88, r: 7, hue: 70 },
+    ],
+    bed3: [
+      { name: "Hydrangea petiolaris", x: 18, y: 20, r: 10, hue: 210 },
+      { name: "Weigela", x: 35, y: 52, r: 10, hue: 320 },
+      { name: "Silverbush", x: 55, y: 52, r: 8, hue: 70 },
+      { name: "Centaurea 'Snowy Owl'", x: 78, y: 28, r: 7, hue: 200 },
       { name: "Forget-me-not", x: 46, y: 78, r: 5, hue: 220 },
       { name: "Maiden Pink", x: 62, y: 78, r: 5, hue: 330 },
       { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
@@ -1841,7 +1914,7 @@ window.OAK = (function () {
       { name: "Euonymus 'Emerald Gaiety'", x: 86, y: 88, r: 6, hue: 110 },
       { name: "Spiraea 'Double Play Big Bang'", x: 72, y: 68, r: 9, hue: 330 },
     ],
-    bed3: [
+    bed4: [
       { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
       { name: "Callistemon 'Inferno'", x: 18, y: 72, r: 10, hue: 0   },
       { name: "Achillea",             x: 50, y: 80, r: 9,  hue: 55  },
@@ -1849,7 +1922,7 @@ window.OAK = (function () {
       { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
       { name: "Celosia", x: 28, y: 88, r: 7, hue: 350 },
     ],
-    bed4: [
+    bed5: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
       { name: "Rose", x: 56, y: 50, r: 10, hue: 350 },
       { name: "Yucca", x: 24, y: 72, r: 9, hue: 90 },
@@ -1893,6 +1966,9 @@ window.OAK = (function () {
       { name: "Geranium", x: 45, y: 32, r: 18, hue: 0 },
       { name: "Petunia", x: 50, y: 72, r: 16, hue: 280 },
     ],
+    lobeliapot: [
+      { name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 50, y: 50, r: 34, hue: 8 },
+    ],
     baskets: [
       { name: "Trailing Fuchsia", x: 22, y: 50, r: 16, hue: 340 },
       { name: "Bacopa", x: 52, y: 25, r: 12, hue: 200 },
@@ -1915,23 +1991,20 @@ window.OAK = (function () {
       { name: "Hydrangea", x: 68, y: 25, r: 14, hue: 300 },
       { name: "Lavender",  x: 35, y: 78, r: 11, hue: 275 },
     ],
-    frontBed2: [
-      { name: "Box",         x: 35, y: 40, r: 14, hue: 130 },
-      { name: "Honeysuckle", x: 68, y: 65, r: 11, hue: 45  },
-    ],
+    frontBed2: [],
     frontBed3: [
       { name: "Climbing Rose (white-pink)", x: 20, y: 35, r: 11, hue: 340 },
       { name: "Fern",                       x: 50, y: 60, r: 10, hue: 120 },
       { name: "Rose (pink)",                x: 80, y: 35, r: 10, hue: 330 },
     ],
     frontBed4: [
-      { name: "Photinia", x: 60, y: 35, r: 20, hue: 130 },
+      { name: "The Pilgrim", x: 34, y: 45, r: 15, hue: 55 },
+      { name: "The Generous Gardener", x: 70, y: 58, r: 15, hue: 345 },
     ],
     frontBed5: [
       { name: "Cherry Laurel",          x: 50, y: 20, r: 13, hue: 135 },
       { name: "Mexican Orange Blossom", x: 50, y: 45, r: 12, hue: 70  },
       { name: "Climber (unidentified)", x: 50, y: 68, r: 10, hue: 10  },
-      { name: "Thyme",                  x: 50, y: 88, r: 8,  hue: 90  },
     ],
     frontStone: [
       { name: "Hosta", x: 50, y: 50, r: 22, hue: 105 },

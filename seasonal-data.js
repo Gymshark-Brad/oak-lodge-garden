@@ -303,12 +303,41 @@
     },
   };
 
+  // Keep the calendar aligned with the July 2026 back-garden split:
+  // old Bed 3 → Bed 4, old Bed 4 → Bed 5, and the horizontal arm of
+  // old Bed 2 → the new Bed 3.
+  const NEW_BED3_PLANTS = new Set([
+    "Weigela",
+    "Silverbush",
+    "Kerria",
+    "Forget-me-not",
+    "Maiden Pink",
+    "Garden Pink",
+    "Centaurea 'Snowy Owl'",
+    "Hydrangea petiolaris",
+    "Euonymus 'Emerald Gaiety'",
+    "Spiraea 'Double Play Big Bang'",
+  ]);
+  Object.values(SEASONAL).forEach((month) => {
+    [...month.highlights, ...month.tasks].forEach((entry) => {
+      if (entry.bed === "Bed 4") {
+        entry.bed = "Bed 5";
+      } else if (entry.bed === "Bed 3") {
+        entry.bed = "Bed 4";
+      } else if (entry.bed === "Bed 2") {
+        const names = entry.plants || (entry.plant ? [entry.plant] : []);
+        if (names.some((name) => NEW_BED3_PLANTS.has(name))) entry.bed = "Bed 3";
+      }
+    });
+  });
+
   // Reverse lookup: bed display name → zoneKey
   const BED_TO_ZONE = {
     "Bed 1": "bed1",
     "Bed 2": "bed2",
     "Bed 3": "bed3",
     "Bed 4": "bed4",
+    "Bed 5": "bed5",
     "Stone Bed": "stone",
     "Patio": "patio",
     "Tree": "pear",
@@ -316,6 +345,7 @@
     "Big Pot 2": "bigpot2",
     "Little Pot 1": "littlepot1",
     "Little Pot 2": "littlepot2",
+    "Lobelia Pot": "lobeliapot",
     "Front Pot": "frontpot",
     "Wall Pot 1": "wallpot1",
     "Wall Pot 2": "wallpot2",

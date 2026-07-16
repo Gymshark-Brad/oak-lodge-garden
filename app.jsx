@@ -81,7 +81,7 @@ function App() {
   // Front-garden zones live on their own plan; "back to the garden" from one
   // of these must return to the front plan, not the back-garden plan.
   const isFrontZone = (k) =>
-    ["frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5",
+    ["frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5", "frontpot",
      "frontStone", "frontBoxHedge", "frontHedge", "frontApple"].includes(k);
   const goPlanFromBed = () => {
     setView((prev) => ({ name: isFrontZone(prev.zoneKey) ? "frontplan" : "plan" }));

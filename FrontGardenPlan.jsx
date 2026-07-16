@@ -20,7 +20,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
   // z-order: big beds first, small features on top
   const order = [
     "frontBed3", "frontBed4", "frontBed5", "frontBed1", "frontBed2",
-    "frontStone", "frontHedge", "frontBoxHedge", "frontApple",
+    "frontStone", "frontHedge", "frontBoxHedge", "frontApple", "frontpot",
   ];
   const verticalLabels = ["frontBoxHedge", "frontHedge"];
 
@@ -61,6 +61,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
     const c = z.color;
     const isHedge = ["frontBoxHedge", "frontHedge"].includes(key);
     const isStone = key === "frontStone";
+    const isPot = !!z.isPot;
 
     let shapeEl = null;
     if (z.shape.kind === "rect") {
@@ -83,16 +84,25 @@ function FrontGardenPlan({ onOpenZone, dark }) {
         <g filter="url(#rough)">
           {React.cloneElement(shapeEl, {
             fill: c,
-            fillOpacity: isHedge ? (dark ? 0.75 : 0.6) : (dark ? 0.42 : 0.32),
+            fillOpacity: isPot ? (dark ? 0.85 : 0.7) : isHedge ? (dark ? 0.75 : 0.6) : (dark ? 0.42 : 0.32),
             stroke: c,
             strokeOpacity: 0.0,
           })}
         </g>
-        {!isHedge && (
+        {!isHedge && !isPot && (
           <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
             {React.cloneElement(shapeEl, {
               fill: isStone ? "url(#hatch-gravel)" : "url(#hatch-soil)",
               fillOpacity: 0.6,
+            })}
+          </g>
+        )}
+        {isPot && (
+          <g filter="url(#rough)" style={{ pointerEvents: "none" }}>
+            {React.cloneElement(shapeEl, {
+              fill: "none",
+              stroke: dark ? "rgba(255,255,255,0.35)" : "rgba(255,255,255,0.55)",
+              strokeWidth: 2.2,
             })}
           </g>
         )}
