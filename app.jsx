@@ -1,7 +1,7 @@
 // Oak Lodge Garden — app.jsx
 // Main shell: routing between plan / bed / plant, palette tweaks, lightbox.
 
-const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App } = React;
+const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App, useRef: useRef_App } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "palette": "spring",
@@ -14,6 +14,7 @@ function App() {
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
+  const lightboxCloseRef = useRef_App(null);
 
   const Z = window.OAK.ZONES;
   const PLANTS = window.OAK.PLANTS;
@@ -33,6 +34,7 @@ function App() {
 
   const currentPlant = useMemo_App(() => {
     if (view.name !== "plant") return null;
+    if (view.plantId) return plantList.find((p) => p.id === view.plantId);
     if (typeof view.plantIndex === "number") return plantList[view.plantIndex];
     if (view.plantName) return plantList.find((p) => p.name === view.plantName);
     return null;
@@ -47,13 +49,14 @@ function App() {
     setView({ name: "bed", zoneKey });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const openPlant = ({ zoneKey, plantIndex, plantName, fromCalendar, fromWatering }) => {
+  const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering }) => {
     if (fromCalendar) setCalendarPlantReturn(true);
     if (fromWatering) setWateringPlantReturn(true);
     setView((prev) => ({
       name: "plant",
       zoneKey: zoneKey || prev.zoneKey,
       plantIndex,
+      plantId,
       plantName,
     }));
   };
@@ -97,6 +100,7 @@ function App() {
 
   return (
     <div className="app-root" data-palette={t.palette}>
+      <div id="app-content">
       <header className="chrome">
         <div className="brand">
           <span className="crest">Oak Lodge</span>
@@ -176,40 +180,6 @@ function App() {
         </div>
       </main>
 
-      {view.name === "plant" && currentPlant && (
-        <PlantCard
-          plant={currentPlant}
-          zoneTitle={Z[view.zoneKey].title}
-          plantKey={Z[view.zoneKey].plantKey}
-          onClose={closePlant}
-          onPrev={
-            currentPlantIndex > 0
-              ? () => openPlant({ zoneKey: view.zoneKey, plantIndex: currentPlantIndex - 1 })
-              : null
-          }
-          onNext={
-            currentPlantIndex >= 0 && currentPlantIndex < plantList.length - 1
-              ? () => openPlant({ zoneKey: view.zoneKey, plantIndex: currentPlantIndex + 1 })
-              : null
-          }
-        />
-      )}
-
-      {lightbox && (
-        <div className="lightbox" onClick={() => setLightbox(null)}>
-          <PhotoOrFallback src={lightbox.src} caption={lightbox.caption} />
-          <div className="t-hand" style={{
-            position: "absolute", bottom: 28, left: 0, right: 0, textAlign: "center",
-            color: "var(--paper)", fontSize: 24
-          }}>
-            {lightbox.caption}
-          </div>
-          <button className="ghostbtn" style={{
-            position: "absolute", top: 22, right: 22, color: "var(--paper)", borderColor: "rgba(255,255,255,0.4)"
-          }} onClick={() => setLightbox(null)}>close ✕</button>
-        </div>
-      )}
-
       {/* Tweaks panel — palette switcher */}
       <TweaksPanel title="Tweaks">
         <TweakSection label="Season / palette" />
@@ -240,6 +210,49 @@ function App() {
           Switch the seasonal palette to match the month, or flip to <em>Night</em> for late-evening reading. Photos render with placeholder hatching where image files aren't wired up yet.
         </div>
       </TweaksPanel>
+      </div>
+
+      {view.name === "plant" && currentPlant && (
+        <PlantCard
+          plant={currentPlant}
+          zoneTitle={Z[view.zoneKey].title}
+          plantKey={Z[view.zoneKey].plantKey}
+          onClose={closePlant}
+          onPrev={
+            currentPlantIndex > 0
+              ? () => openPlant({ zoneKey: view.zoneKey, plantIndex: currentPlantIndex - 1 })
+              : null
+          }
+          onNext={
+            currentPlantIndex >= 0 && currentPlantIndex < plantList.length - 1
+              ? () => openPlant({ zoneKey: view.zoneKey, plantIndex: currentPlantIndex + 1 })
+              : null
+          }
+        />
+      )}
+
+      {lightbox && (
+        <AccessibleModal
+          className="lightbox"
+          panelClassName="lightbox-panel"
+          onClose={() => setLightbox(null)}
+          ariaLabel={lightbox.caption || "Garden photograph"}
+          initialFocusRef={lightboxCloseRef}
+          backgroundId="app-content"
+          zIndex={1000}
+        >
+          <PhotoOrFallback src={lightbox.src} caption={lightbox.caption} interactive={false} />
+          <div className="t-hand" style={{
+            position: "absolute", bottom: 28, left: 0, right: 0, textAlign: "center",
+            color: "var(--paper)", fontSize: 24
+          }}>
+            {lightbox.caption}
+          </div>
+          <button ref={lightboxCloseRef} className="ghostbtn" style={{
+            position: "absolute", top: 22, right: 22, color: "var(--paper)", borderColor: "rgba(255,255,255,0.4)"
+          }} onClick={() => setLightbox(null)}>close ✕</button>
+        </AccessibleModal>
+      )}
 
       <style>{`
         .app-root { min-height: 100vh; }

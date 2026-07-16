@@ -94,24 +94,27 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
               const m = plantWithMap(p.name);
               const isHover = hoverPlant === p.name;
               return (
-                <li
-                  key={p.name + i}
-                  className={"plant-row" + (isHover ? " is-hover" : "")}
-                  onMouseEnter={() => setHoverPlant(p.name)}
-                  onMouseLeave={() => setHoverPlant(null)}
-                  onClick={() => onOpenPlant({ zoneKey, plantIndex: i })}
-                >
-                  <div className="plant-no">№ {String(i + 1).padStart(2, "0")}</div>
-                  <div className="plant-name-block">
-                    <div className="t-display plant-name" style={{ fontSize: 26, lineHeight: 1.1 }}>
-                      {p.name}
+                <li key={p.id}>
+                  <button
+                    className={"plant-row" + (isHover ? " is-hover" : "")}
+                    onMouseEnter={() => setHoverPlant(p.name)}
+                    onMouseLeave={() => setHoverPlant(null)}
+                    onFocus={() => setHoverPlant(p.name)}
+                    onBlur={() => setHoverPlant(null)}
+                    onClick={() => onOpenPlant({ zoneKey, plantId: p.id })}
+                  >
+                    <div className="plant-no">№ {String(i + 1).padStart(2, "0")}</div>
+                    <div className="plant-name-block">
+                      <div className="t-display plant-name" style={{ fontSize: 26, lineHeight: 1.1 }}>
+                        {p.name}
+                      </div>
+                      <div className="t-latin" style={{ fontSize: 17 }}>
+                        {p.latin}
+                      </div>
                     </div>
-                    <div className="t-latin" style={{ fontSize: 17 }}>
-                      {p.latin}
-                    </div>
-                  </div>
-                  <div className="plant-pos t-mono">{p.position}</div>
-                  <div className="plant-arrow">→</div>
+                    <div className="plant-pos t-mono">{p.position}</div>
+                    <div className="plant-arrow">→</div>
+                  </button>
                 </li>
               );
             })}
@@ -218,6 +221,7 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
 
         .plant-list { list-style: none; margin: 0; padding: 0; }
         .plant-row {
+          width: 100%;
           display: grid;
           grid-template-columns: 50px 1fr auto 24px;
           align-items: center;
@@ -226,10 +230,17 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
           border-bottom: 1px dotted var(--hairline);
           cursor: pointer;
           transition: background 140ms ease;
+          background: transparent;
+          color: inherit;
+          border: 0;
+          border-bottom: 1px dotted var(--hairline);
+          text-align: left;
+          font: inherit;
         }
-        .plant-row:hover, .plant-row.is-hover {
+        .plant-row:hover, .plant-row.is-hover, .plant-row:focus-visible {
           background: color-mix(in oklab, var(--ink) 5%, transparent);
         }
+        .plant-row:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
         .plant-no { font-family: var(--type); font-size: 11px; color: var(--pencil); letter-spacing: 0.1em; }
         .plant-pos { max-width: 220px; text-align: right; opacity: 0.7; }
         .plant-arrow { font-family: var(--serif); font-size: 22px; color: var(--pencil); transition: transform 180ms ease; }
@@ -253,6 +264,16 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
           opacity: 1;
           filter: none;
         }
+        .photo-open-btn {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          cursor: zoom-in;
+        }
+        .photo-open-btn:focus-visible { outline: 4px solid var(--accent); outline-offset: -4px; }
       `}</style>
     </div>
   );
@@ -296,9 +317,20 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
         <g
           key={m.name + i}
           className="plant-pin"
-          onClick={() => onOpenPlant({ zoneKey: zone.id, plantName: m.name })}
+          role="button"
+          tabIndex="0"
+          aria-label={`Open ${m.name} plant card`}
+          onClick={() => onOpenPlant({ zoneKey: zone.id, plantId: m.plantId, plantName: m.name })}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              onOpenPlant({ zoneKey: zone.id, plantId: m.plantId, plantName: m.name });
+            }
+          }}
           onMouseEnter={() => setHoverPlant(m.name)}
           onMouseLeave={() => setHoverPlant(null)}
+          onFocus={() => setHoverPlant(m.name)}
+          onBlur={() => setHoverPlant(null)}
         >
           {/* glow halo */}
           <circle
@@ -349,28 +381,32 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
 }
 
 // ── Photo or fallback ─────────────────────────────────────────────────
-function PhotoOrFallback({ src, caption, onClick }) {
+function PhotoOrFallback({ src, caption, onClick, interactive = true }) {
   const [errored, setErrored] = useState_BD(false);
-  if (errored || !src) {
-    return (
-      <div
-        className="imgfallback"
-        style={{ width: "100%", height: "100%", cursor: "pointer" }}
-        onClick={onClick}
-      >
-        <span>{caption || "photo"}</span>
-      </div>
-    );
-  }
-  return (
+  const content = errored || !src ? (
+    <div className="imgfallback" style={{ width: "100%", height: "100%" }}>
+      <span>{caption || "photo"}</span>
+    </div>
+  ) : (
     <img
       src={src}
       alt={caption}
       loading="lazy"
-      onClick={onClick}
       onError={() => setErrored(true)}
-      style={{ cursor: "zoom-in" }}
     />
+  );
+  if (!interactive) return content;
+  if (errored || !src) {
+    return (
+      <button className="photo-open-btn" onClick={onClick} aria-label={`Open ${caption || "photo"}`}>
+        {content}
+      </button>
+    );
+  }
+  return (
+    <button className="photo-open-btn" onClick={onClick} aria-label={`Enlarge ${caption || "photo"}`}>
+      {content}
+    </button>
   );
 }
 

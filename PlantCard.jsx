@@ -1,29 +1,31 @@
 // Oak Lodge Garden — PlantCard.jsx
 // Herbarium specimen-style card. Slides up from the bottom when a plant is opened.
 
-const { useEffect: useEffect_PC, useState: useState_PC } = React;
+const { useEffect: useEffect_PC, useState: useState_PC, useRef: useRef_PC } = React;
 
 function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
   const [photoIdx, setPhotoIdx] = useState_PC(0);
   const [journalLightbox, setJournalLightbox] = useState_PC(null);
+  const closeButtonRef = useRef_PC(null);
+  const journalCloseRef = useRef_PC(null);
 
   // Reset photo index when plant changes
   useEffect_PC(() => { setPhotoIdx(0); setJournalLightbox(null); }, [plant]);
 
   useEffect_PC(() => {
     const onKey = (e) => {
-      if (e.key === "Escape") onClose();
-      else if (e.key === "ArrowLeft" && onPrev) onPrev();
+      if (journalLightbox) return;
+      if (e.key === "ArrowLeft" && onPrev) onPrev();
       else if (e.key === "ArrowRight" && onNext) onNext();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [onClose, onPrev, onNext]);
+  }, [onPrev, onNext, journalLightbox]);
 
   if (!plant) return null;
 
   // Per-plant monthly photo journal from PLANT_PHOTOS
-  const plantPhotos = (window.OAK.PLANT_PHOTOS || {})[plant.name] || [];
+  const plantPhotos = (window.OAK.PLANT_PHOTOS_BY_ID || {})[plant.id] || [];
   const latestEntry  = plantPhotos.length > 0 ? plantPhotos[0] : null;
   const latestPhoto  = latestEntry && latestEntry.photos.length > 0 ? latestEntry.photos[0] : null;
 
@@ -61,8 +63,16 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
   const nextPhoto = () => setPhotoIdx((i) => (i + 1) % photos.length);
 
   return (
-    <div className="pc-backdrop" onClick={onClose}>
-      <div className="pc-shell" onClick={(e) => e.stopPropagation()}>
+    <AccessibleModal
+      className="pc-backdrop"
+      panelClassName="pc-shell"
+      onClose={onClose}
+      titleId="plant-card-title"
+      initialFocusRef={closeButtonRef}
+      escapeDisabled={!!journalLightbox}
+      backgroundId="app-content"
+      zIndex={800}
+    >
         <span className="tape" style={{ top: -10, left: 60, transform: "rotate(-6deg)" }} />
         <span className="tape" style={{ top: -10, right: 60, transform: "rotate(5deg)" }} />
 
@@ -76,6 +86,7 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
               </div>
             </div>
             <div className="pc-band-right">
+              <button ref={closeButtonRef} className="ghostbtn pc-top-close" onClick={onClose} title="Close (esc)">close ✕</button>
               <div className="t-mono" style={{ textAlign: "right" }}>No. {specNo}</div>
               <div className="t-mono" style={{ textAlign: "right", opacity: 0.7 }}>09 · v · 2026</div>
             </div>
@@ -88,14 +99,18 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
             <div className="pc-silhouette">
               {useJournalMain ? (
                 <div className="pc-photo-wrap">
-                  <img
-                    key={latestPhoto.src}
-                    src={latestPhoto.src}
-                    alt={latestPhoto.caption || plant.name}
-                    className="pc-photo"
+                  <button
+                    className="pc-main-photo-btn"
                     onClick={() => setJournalLightbox(latestPhoto)}
-                    style={{ cursor: "zoom-in" }}
-                  />
+                    aria-label={`Enlarge ${latestPhoto.caption || plant.name}`}
+                  >
+                    <img
+                      key={latestPhoto.src}
+                      src={latestPhoto.src}
+                      alt={latestPhoto.caption || plant.name}
+                      className="pc-photo"
+                    />
+                  </button>
                   <div className="t-mono" style={{ textAlign: "center", opacity: 0.55, marginTop: 6, fontSize: 10 }}>
                     Oak Lodge · {latestEntry.label}
                   </div>
@@ -134,7 +149,7 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
             {/* Right: naming */}
             <div className="pc-naming">
               <div className="t-stamp">Common name</div>
-              <div className="t-display" style={{ fontSize: 56, lineHeight: 1, marginTop: 4 }}>
+              <div id="plant-card-title" className="t-display" style={{ fontSize: 56, lineHeight: 1, marginTop: 4 }}>
                 {plant.name}
               </div>
               <div className="t-latin" style={{ fontSize: 26, marginTop: 8 }}>
@@ -214,18 +229,20 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
             </div>
           </div>
         </div>
-      </div>
-
       {/* Journal lightbox — inline overlay on the card */}
       {journalLightbox && (
-        <div
+        <AccessibleModal
           className="pc-journal-lb"
-          onClick={() => setJournalLightbox(null)}
+          panelClassName="pc-journal-lb-panel"
+          onClose={() => setJournalLightbox(null)}
+          ariaLabel={journalLightbox.caption || `${plant.name} photograph`}
+          initialFocusRef={journalCloseRef}
+          zIndex={900}
         >
           <img src={journalLightbox.src} alt={journalLightbox.caption} className="pc-journal-lb-img" />
           <div className="pc-journal-lb-cap t-hand">{journalLightbox.caption}</div>
-          <button className="ghostbtn pc-journal-lb-close" onClick={() => setJournalLightbox(null)}>close ✕</button>
-        </div>
+          <button ref={journalCloseRef} className="ghostbtn pc-journal-lb-close" onClick={() => setJournalLightbox(null)}>close ✕</button>
+        </AccessibleModal>
       )}
 
       <style>{`
@@ -284,6 +301,15 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           width: 100%;
           display: flex; flex-direction: column; align-items: center;
         }
+        .pc-main-photo-btn {
+          width: 100%;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          cursor: zoom-in;
+        }
+        .pc-main-photo-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+        .pc-top-close { margin-bottom: 8px; }
         .pc-photo {
           width: 100%;
           aspect-ratio: 3/4;
@@ -424,6 +450,13 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           padding: 32px;
           animation: fadeIn 180ms ease;
         }
+        .pc-journal-lb-panel {
+          position: relative;
+          width: min(760px, 94vw);
+          height: min(86vh, 900px);
+          display: grid;
+          place-items: center;
+        }
         .pc-journal-lb-img {
           max-width: min(700px, 90vw);
           max-height: 80vh;
@@ -445,7 +478,7 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           border-color: rgba(255,255,255,0.3);
         }
       `}</style>
-    </div>
+    </AccessibleModal>
   );
 }
 

@@ -7,7 +7,6 @@ function SeasonalCalendar({ onOpenPlant }) {
   const SEASONAL = window.OAK.SEASONAL;
   const MONTHS = window.OAK.MONTHS;
   const MONTHS_SHORT = window.OAK.MONTHS_SHORT;
-  const BED_TO_ZONE = window.OAK.BED_TO_ZONE;
 
   const realMonth = new Date().getMonth();
   const [activeIndex, setActiveIndex] = useState_SC(realMonth);
@@ -32,10 +31,9 @@ function SeasonalCalendar({ onOpenPlant }) {
   const monthName = MONTHS[activeIndex];
   const monthData = SEASONAL[monthName] || { highlights: [], tasks: [], mood: "" };
 
-  const handlePlantClick = (plantName, bedName) => {
-    const zoneKey = BED_TO_ZONE[bedName];
-    if (!zoneKey) return;
-    onOpenPlant({ zoneKey, plantName });
+  const handlePlantClick = (reference) => {
+    if (!reference) return;
+    onOpenPlant(reference);
   };
 
   return (
@@ -53,7 +51,7 @@ function SeasonalCalendar({ onOpenPlant }) {
         <div className="cal-stamp-panel">
           <div className="stamp">Vol. ii · cyclical</div>
           <div className="t-mono" style={{ marginTop: 12 }}>
-            36 plants &nbsp;·&nbsp; 12 months<br />
+            {Object.keys(window.OAK.PLANT_BY_ID || {}).length} plants &nbsp;·&nbsp; 12 months<br />
             site · oak lodge, bromsgrove<br />
             recorder · b. h.
           </div>
@@ -141,7 +139,7 @@ function SeasonalCalendar({ onOpenPlant }) {
                   <li key={i} className="cal-highlight">
                     <button
                       className="cal-plant-link t-hand"
-                      onClick={() => handlePlantClick(h.plant, h.bed)}
+                      onClick={() => handlePlantClick(h.reference)}
                       title={`Open ${h.plant} card`}
                     >
                       {h.plant}
@@ -181,17 +179,17 @@ function SeasonalCalendar({ onOpenPlant }) {
                       {t.plants && t.plants.length > 0 && (
                         <div className="cal-task-plants">
                           {t.plants.map((pn, j) => {
-                            const zone = BED_TO_ZONE[t.bed];
-                            const clickable = !!zone;
+                            const reference = (t.references || [])[j];
+                            const clickable = !!reference;
                             return (
                               <React.Fragment key={pn}>
                                 {j > 0 && <span className="cal-plants-sep">·</span>}
                                 {clickable ? (
-                                  <button className="cal-plant-link-sm" onClick={() => handlePlantClick(pn, t.bed)}>
+                                  <button className="cal-plant-link-sm" onClick={() => handlePlantClick(reference)}>
                                     {pn}
                                   </button>
                                 ) : (
-                                  <span className="cal-plant-static">{pn}</span>
+                                  <span className="cal-plant-static" title="Plant reference needs attention">{pn} ⚠</span>
                                 )}
                               </React.Fragment>
                             );

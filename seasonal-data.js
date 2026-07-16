@@ -12,11 +12,10 @@
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Tropical speckled leaves carry on regardless." },
         { plant: "New Zealand Flax (dark)", bed: "Stone Bed", note: "Burgundy sword leaves arching low over the gravel." },
         { plant: "Cabbage Tree", bed: "Stone Bed", note: "Evergreen burgundy fountain — the focal point of the lower terrace." },
-        { plant: "Little Heath", bed: "Bed 1", note: "White-tipped pink flowers low along the front edge — the only thing in full bloom right now." },
       ],
       tasks: [
         { task: "Prune apple tree while dormant", plants: ["Apple Tree"], bed: "Bed 3" },
-        { task: "Cut back Callistemon lightly if needed — only ever after flowering, never into old wood", plants: ["Callistemon 'Inferno'"], bed: "Bed 3" },
+        { task: "Check Callistemon winter protection after severe weather; do not prune in winter", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
         { task: "Check Gaillardia — cut back any dead growth. Replace if it hasn't survived the winter", plants: ["Gaillardia"], bed: "Bed 3" },
         { task: "Prune pear tree while dormant", plants: ["Pear Tree"], bed: "Tree" },
         { task: "Prune roses hard", plants: ["Rose"], bed: "Bed 4" },
@@ -31,7 +30,6 @@
         { plant: "Variegated Dogwood", bed: "Bed 2", note: "Red stems still glowing — the last big show before they're cut down." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Steady green presence while everything else is bare." },
         { plant: "Houseleeks", bed: "Stone Bed", note: "Tight winter rosettes, sometimes with a red flush." },
-        { plant: "Little Heath", bed: "Bed 1", note: "Still flowering along the front edge — one of the very few things in colour." },
       ],
       tasks: [
         { task: "Coppice dogwood — cut a third of stems to ground for next year's colour", plants: ["Variegated Dogwood"], bed: "Bed 2" },
@@ -45,11 +43,9 @@
     March: {
       mood: "Things wake up. The first blossom catches you off guard.",
       highlights: [
-        { plant: "Aubrieta", bed: "Stone Bed", note: "First purple flowers tumbling over the gravel edge." },
         { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom buds breaking — the beginning of the show." },
         { plant: "Pear Tree", bed: "Tree", note: "White blossom appearing at the gate." },
-        { plant: "English Daisy", bed: "Bed 1", note: "Pink pom-poms beginning along the front edge." },
-        { plant: "Little Heath", bed: "Bed 1", note: "Tail end of the flowers — gold-tipped foliage taking over for the rest of the year." },
+        { plant: "Little Heath", bed: "Bed 1", note: "Red young shoots and white spring flowers beginning above the cream-edged evergreen foliage." },
         { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Vivid orange-red new growth emerging — one of the loudest spring foliage moments in the garden." },
       ],
       tasks: [
@@ -68,7 +64,6 @@
       mood: "Everything emerges at once. New leaves the colour of copper.",
       highlights: [
         { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Brilliant orange-red new foliage at peak — stunning before the flowers arrive." },
-        { plant: "Aubrieta", bed: "Stone Bed", note: "Sheets of purple at peak." },
         { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom in full cascade over the wall." },
         { plant: "Pear Tree", bed: "Tree", note: "White blossom against bare branches." },
         { plant: "Apple Tree", bed: "Bed 3", note: "Pink-tinged blossom around the bird feeders." },
@@ -78,9 +73,8 @@
         { plant: "Dahlia", bed: "Bed 1", note: "Dark shoots emerging from the crown — the foliage show begins." },
       ],
       tasks: [
-        { task: "Trim Little Heath lightly after flowering to keep it compact — do not cut into old wood", plants: ["Little Heath"], bed: "Bed 1" },
+        { task: "Remove faded Little Heath flower trusses and any damaged growth; routine pruning is rarely needed", plants: ["Little Heath"], bed: "Bed 1" },
         { task: "Watch for slugs on Hostas — check after rain, especially at dusk", plants: ["Hosta"], bed: "Bed 1" },
-        { task: "Start deadheading English Daisies to prolong flowering", plants: ["English Daisy"], bed: "Bed 1" },
         { task: "Begin regular rose watering and feed; mulch around the base", plants: ["Rose"], bed: "Bed 4" },
         { task: "Cut back Fuchsia hard to a low framework — new growth will come from the base", plants: ["Fuchsia"], bed: "Big Pot 1" },
         { task: "New growth on Abelia 'Kaleidoscope' — no action needed, just enjoy the emerging variegation", plants: ["Abelia 'Kaleidoscope'"], bed: "Bed 3" },
@@ -96,17 +90,15 @@
         { plant: "Peony", bed: "Bed 2", note: "Huge fragrant flowers — the heaviest week of the year." },
         { plant: "Weigela", bed: "Bed 2", note: "Pink trumpet flowers covering the shrub." },
         { plant: "Avens", bed: "Bed 1", note: "Bright orange flowers — moved from Bed 3 in June 2026, now at home in the front of Bed 1." },
-        { plant: "Aubrieta", bed: "Stone Bed", note: "Last of the purple before the shear." },
         { plant: "Dahlia", bed: "Bed 1", note: "Newly planted — striking dark bronze-black foliage, buds forming." },
       ],
       tasks: [
         { task: "Deadhead Rhododendron carefully after flowering — snap the spent trusses cleanly", plants: ["Rhododendron"], bed: "Bed 1" },
         { task: "Prune Clematis montana lightly after flowering, tie in new growth", plants: ["Clematis"], bed: "Patio" },
-        { task: "Shear Aubrieta hard back after blooming to keep it compact", plants: ["Aubrieta"], bed: "Stone Bed" },
         { task: "Deadhead Avens to encourage a second flush", plants: ["Avens"], bed: "Bed 1" },
         { task: "Plant up front door pot with summer bedding — water in well and feed fortnightly from now", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
         { task: "First clip of the box hedging (late May)", plants: ["Box Hedging"], bed: "Bed 1" },
-        { task: "Plant up pots with summer bedding — water in well and feed fortnightly from now", plants: ["Fuchsia", "Verbena", "Petunia", "Lobelia", "Calibrachoa", "Geranium"], bed: "Big Pot 1" },
+        { task: "Plant up pots with summer bedding — water in well and feed fortnightly from now", plants: ["Fuchsia", "Verbena", "Petunia", "Lobelia", "Calibrachoa"], bed: "Big Pot 1" },
         { task: "Pinch out Dahlia growing tip to encourage bushiness", plants: ["Dahlia"], bed: "Bed 1" },
       ],
     },
@@ -119,7 +111,7 @@
         { plant: "Maiden Pink", bed: "Bed 2", note: "Pink stars spilling from the wall gap." },
         { plant: "Nemesia", bed: "Bed 2", note: "Coral and orange flowers between the walls." },
         { plant: "Honeysuckle", bed: "Stone Bed", note: "Fragrant flowers — strongest in the evening." },
-        { plant: "Yucca", bed: "Bed 4", note: "Spire of creamy bell flowers if the plant's mature enough." },
+        { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Striped sword-shaped foliage giving the boundary bed strong structure; mature plants may raise a tall flower stem." },
         { plant: "Silverbush", bed: "Bed 2", note: "White trumpet flowers on the silver mound." },
         { plant: "Fuchsia", bed: "Big Pot 1", note: "Red and purple pendant flowers starting — both big pots coming alive." },
         { plant: "Geranium", bed: "Little Pot 2", note: "Red-and-white bicolour heads bright against the blue pot." },
@@ -158,7 +150,7 @@
         { plant: "Rose", bed: "Bed 4", note: "Second wave coming through if deadheaded." },
         { plant: "Hosta", bed: "Bed 1", note: "Lilac flower spikes rising above the leaves." },
         { plant: "Stonecrop", bed: "Stone Bed", note: "Yellow trailing flowers along the gravel." },
-        { plant: "Yucca", bed: "Bed 4", note: "Tall white flower spires in their full glory." },
+        { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Architectural striped foliage at its strongest; remove only damaged leaves at the base." },
         { plant: "Dahlia", bed: "Bed 1", note: "First red flowers opening against that dark foliage — a real statement." },
         { plant: "Calibrachoa", bed: "Big Pot 1", note: "Pink star flowers trailing over the pot rim." },
         { plant: "Callistemon 'Inferno'", bed: "Bed 3", note: "Bottlebrush flowers in full cry — bright red against the summer foliage." },
@@ -265,7 +257,7 @@
         { task: "Remove Celosia after the first frost — compost this tender annual", plants: ["Celosia"], bed: "Bed 3" },
         { task: "Cut Coreopsis Gold back to the crown for winter — it's a hardy perennial and should return next year", plants: ["Coreopsis Gold"], bed: "Wall Pot 2" },
         { task: "Cut Gaillardia back hard to the crown — some may not survive winter, have replacements in mind", plants: ["Gaillardia"], bed: "Bed 3" },
-        { task: "Shelter Callistemon 'Inferno' from the worst cold winds if possible — it's hardy but first winters are the riskiest", plants: ["Callistemon 'Inferno'"], bed: "Bed 3" },
+        { task: "Protect Callistemon thoroughly from severe cold and winter winds — RHS H3 means it needs a warm, sheltered position", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
       ],
     },
 
@@ -296,40 +288,12 @@
       tasks: [
         { task: "Enjoy the dogwood stems — best in low winter sun", plants: ["Variegated Dogwood"], bed: "Bed 2" },
         { task: "Protect tender plants from hard frost — fleece Angel Wings, Silverbush, Cordyline", plants: ["Angel Wings", "Silverbush", "Cabbage Tree"], bed: "Bed 1" },
-        { task: "Check Callistemon 'Inferno' — tie up if exposed to cold winds. First winter is the most vulnerable", plants: ["Callistemon 'Inferno'"], bed: "Bed 3" },
+        { task: "Check Callistemon frost protection and keep it sheltered from severe cold and winter winds", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
         { task: "Plan changes for spring — sketch in the notebook before catalogues arrive", plants: [], bed: "Bed 1" },
         { task: "Winter prune wisteria — long shoots back to 2–3 buds (can do late Dec or Feb)", plants: ["Wisteria"], bed: "Bed 4" },
       ],
     },
   };
-
-  // Keep the calendar aligned with the July 2026 back-garden split:
-  // old Bed 3 → Bed 4, old Bed 4 → Bed 5, and the horizontal arm of
-  // old Bed 2 → the new Bed 3.
-  const NEW_BED3_PLANTS = new Set([
-    "Weigela",
-    "Silverbush",
-    "Kerria",
-    "Forget-me-not",
-    "Maiden Pink",
-    "Garden Pink",
-    "Centaurea 'Snowy Owl'",
-    "Hydrangea petiolaris",
-    "Euonymus 'Emerald Gaiety'",
-    "Spiraea 'Double Play Big Bang'",
-  ]);
-  Object.values(SEASONAL).forEach((month) => {
-    [...month.highlights, ...month.tasks].forEach((entry) => {
-      if (entry.bed === "Bed 4") {
-        entry.bed = "Bed 5";
-      } else if (entry.bed === "Bed 3") {
-        entry.bed = "Bed 4";
-      } else if (entry.bed === "Bed 2") {
-        const names = entry.plants || (entry.plant ? [entry.plant] : []);
-        if (names.some((name) => NEW_BED3_PLANTS.has(name))) entry.bed = "Bed 3";
-      }
-    });
-  });
 
   // Reverse lookup: bed display name → zoneKey
   const BED_TO_ZONE = {
@@ -350,6 +314,80 @@
     "Wall Pot 1": "wallpot1",
     "Wall Pot 2": "wallpot2",
   };
+
+  const SEASONAL_NAME_ALIASES = {
+    "Callistemon 'Inferno'": "Callistemon Inferno ('Yanferno')",
+    "Clematis montana": "Clematis",
+    "Yucca": "New Zealand Flax (cultivar to confirm)",
+    "New Zealand Flax": "New Zealand Flax (cultivar to confirm)",
+  };
+  const DUPLICATE_NAME_DEFAULTS = {
+    "Angel Wings": "bed1",
+    "Apple Tree": "bed4",
+    "Box Hedging": "bed1",
+    "Hosta": "bed1",
+    "Lavender": "bed5",
+  };
+
+  function resolvePlantReference(plantName, bedHint) {
+    const resolvedName = SEASONAL_NAME_ALIASES[plantName] || plantName;
+    const hintedZone = BED_TO_ZONE[bedHint];
+    if (hintedZone && (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[hintedZone] || {})[resolvedName]) {
+      return {
+        zoneKey: hintedZone,
+        plantId: window.OAK.PLANT_ID_BY_ZONE_AND_NAME[hintedZone][resolvedName],
+        plantName: resolvedName,
+      };
+    }
+    const defaultZone = DUPLICATE_NAME_DEFAULTS[resolvedName];
+    if (defaultZone && (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[defaultZone] || {})[resolvedName]) {
+      return {
+        zoneKey: defaultZone,
+        plantId: window.OAK.PLANT_ID_BY_ZONE_AND_NAME[defaultZone][resolvedName],
+        plantName: resolvedName,
+      };
+    }
+    const matches = Object.entries(window.OAK.PLANT_ID_BY_ZONE_AND_NAME)
+      .filter(([, names]) => names[resolvedName])
+      .map(([zoneKey, names]) => ({ zoneKey, plantId: names[resolvedName], plantName: resolvedName }));
+    return matches.length === 1 ? matches[0] : null;
+  }
+
+  // Replace legacy bed/name links with validated stable references. Tasks
+  // mentioning plants in more than one zone are split so every rendered task
+  // has one unambiguous location.
+  Object.entries(SEASONAL).forEach(([monthName, month]) => {
+    month.highlights = month.highlights.map((entry, index) => {
+      const reference = resolvePlantReference(entry.plant, entry.bed);
+      if (!reference) throw new Error(`Unresolved seasonal reference: ${monthName} highlight ${index} (${entry.plant})`);
+      return {
+        ...entry,
+        plant: reference.plantName,
+        bed: window.OAK.ZONES[reference.zoneKey].plantKey,
+        reference,
+      };
+    });
+    month.tasks = month.tasks.flatMap((entry, index) => {
+      const names = entry.plants || [];
+      if (names.length === 0) return [{ ...entry, references: [] }];
+      const references = names.map((name) => resolvePlantReference(name, entry.bed));
+      const unresolved = references.findIndex((reference) => !reference);
+      if (unresolved >= 0) {
+        throw new Error(`Unresolved seasonal reference: ${monthName} task ${index} (${names[unresolved]})`);
+      }
+      const byZone = new Map();
+      references.forEach((reference) => {
+        if (!byZone.has(reference.zoneKey)) byZone.set(reference.zoneKey, []);
+        byZone.get(reference.zoneKey).push(reference);
+      });
+      return Array.from(byZone.entries()).map(([zoneKey, zoneReferences]) => ({
+        ...entry,
+        plants: zoneReferences.map((reference) => reference.plantName),
+        bed: window.OAK.ZONES[zoneKey].plantKey,
+        references: zoneReferences,
+      }));
+    });
+  });
 
   window.OAK = window.OAK || {};
   window.OAK.SEASONAL = SEASONAL;

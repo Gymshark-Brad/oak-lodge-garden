@@ -395,6 +395,7 @@ window.OAK = (function () {
     "Bed 1": [
       {
         name: "Japanese Maple",
+        id: "bed1-japanese-maple",
         latin: "Acer palmatum",
         photos: ["images/plants/japanese-maple.webp", "images/plants/japanese-maple-1.webp"],
         position: "Back centre — dominant canopy",
@@ -405,6 +406,7 @@ window.OAK = (function () {
       },
       {
         name: "Japanese Aralia",
+        id: "bed1-japanese-aralia",
         latin: "Fatsia japonica 'Spider's Web'",
         photos: ["images/plants/japanese-aralia.webp", "images/plants/japanese-aralia-2.webp", "images/plants/japanese-aralia-3.webp"],
         position: "Mid-centre, under the Acer",
@@ -415,6 +417,7 @@ window.OAK = (function () {
       },
       {
         name: "Rhododendron",
+        id: "bed1-rhododendron",
         latin: "Rhododendron 'Goldflimmer'",
         photos: ["images/plants/rhododendron.webp", "images/plants/rhododendron-2.webp"],
         position: "Mid-left, variegated evergreen",
@@ -425,6 +428,7 @@ window.OAK = (function () {
       },
       {
         name: "Astilbe",
+        id: "bed1-astilbe",
         latin: "Astilbe",
         photos: ["images/plants/astilbe.webp"],
         position: "Right side — feathery plumes in summer",
@@ -435,6 +439,7 @@ window.OAK = (function () {
       },
       {
         name: "Hosta",
+        id: "bed1-hosta",
         latin: "Hosta",
         photos: ["images/plants/hosta-patriot.webp", "images/plants/hosta-patriot-2.webp", "images/plants/hosta-francee.webp"],
         position: "Front-left, green/white variegation",
@@ -445,6 +450,7 @@ window.OAK = (function () {
       },
       {
         name: "Angel Wings",
+        id: "bed1-angel-wings",
         latin: "Senecio candicans",
         photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp", "images/plants/angel-wings-3.webp"],
         position: "Front-centre — silvery-white leaves",
@@ -455,6 +461,7 @@ window.OAK = (function () {
       },
       {
         name: "Box Hedging",
+        id: "bed1-box-hedging",
         latin: "Buxus sempervirens",
         photos: ["images/plants/box-hedging.webp", "images/plants/box-hedging-1.webp"],
         position: "Full right edge — clipped",
@@ -465,6 +472,7 @@ window.OAK = (function () {
       },
       {
         name: "Euonymus",
+        id: "bed1-euonymus",
         latin: "Euonymus fortunei (golden)",
         photos: ["images/plants/euonymus.webp", "images/plants/euonymus-1.webp"],
         position: "Front-left corner",
@@ -475,6 +483,7 @@ window.OAK = (function () {
       },
       {
         name: "Nemesia",
+        id: "bed1-nemesia",
         latin: "Nemesia spp.",
         photos: ["images/plants/nemesia.webp", "images/plants/nemesia-1.webp", "images/plants/nemesia-2.webp"],
         position: "Front edge — orange/coral",
@@ -485,6 +494,7 @@ window.OAK = (function () {
       },
       {
         name: "Hardy Geranium",
+        id: "bed1-hardy-geranium",
         latin: "Geranium spp.",
         photos: ["images/plants/hardy-geranium.webp"],
         position: "Front-right — spreading low clumps",
@@ -495,6 +505,7 @@ window.OAK = (function () {
       },
       {
         name: "Wintercreeper",
+        id: "bed1-wintercreeper",
         latin: "Euonymus fortunei",
         photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp", "images/plants/wintercreeper-3.webp"],
         position: "Front-right — spreading variegated evergreen",
@@ -505,6 +516,7 @@ window.OAK = (function () {
       },
       {
         name: "Dahlia",
+        id: "bed1-dahlia",
         latin: "Dahlia (dark-leaved, Bishop type)",
         photos: ["images/plants/dahlia-1.webp", "images/plants/dahlia-2.webp", "images/plants/dahlia-3.webp"],
         position: "Centre — dark foliage, red flowers to come",
@@ -515,6 +527,7 @@ window.OAK = (function () {
       },
       {
         name: "Avens",
+        id: "bed1-avens",
         latin: "Geum",
         photos: ["images/june-2026-updates/avens-bed1.webp", "images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp"],
         position: "Front — orange flowers. Moved from Bed 3 in June 2026.",
@@ -525,6 +538,7 @@ window.OAK = (function () {
       },
       {
         name: "Dahlia (yellow)",
+        id: "bed1-dahlia-yellow",
         latin: "Dahlia (dark-leaved, yellow-flowered Bishop type)",
         photos: ["images/june-2026-updates/dahlia-black-yellow-1.webp", "images/june-2026-updates/dahlia-black-yellow-2.webp"],
         position: "Centre — dark foliage, yellow flowers to come. Added June 2026.",
@@ -535,6 +549,7 @@ window.OAK = (function () {
       },
       {
         name: "Hosta (gold)",
+        id: "bed1-hosta-gold",
         latin: "Hosta 'Gold Standard'",
         photos: ["images/plants/hosta-gold-standard.webp", "images/june-2026/hosta-bed2.webp"],
         position: "Mid-bed — moved from Bed 2, June 2026",
@@ -545,6 +560,7 @@ window.OAK = (function () {
       },
       {
         name: "Red Hot Poker",
+        id: "bed1-red-hot-poker",
         latin: "Kniphofia",
         photos: ["images/june-2026/red-hot-poker.webp"],
         position: "Mid-bed — torch-like flower spikes. Moved from Bed 2, June 2026.",
@@ -555,18 +571,20 @@ window.OAK = (function () {
       },
       {
         name: "Little Heath",
-        latin: "Erica carnea 'Little Heath'",
+        id: "bed1-little-heath",
+        latin: "Pieris japonica 'Little Heath'",
         photos: ["images/june-2026-update-2/little-heath-1.webp", "images/june-2026-update-2/little-heath-2.webp", "images/june-2026-update-2/little-heath-3.webp", "images/june-2026-update-2/little-heath-4.webp", "images/june-2026-update-2/little-heath-5.webp"],
         position: "Front edge — 7 plants forming a low border. Added June 2026.",
-        light: "Full sun to partial shade.",
-        water: "Low to moderate. Tolerates dry spells once established.",
-        care: "Trim lightly after flowering to maintain compact shape. Acid to neutral soil preferred. Very hardy. Do not cut into old wood.",
-        seasonal: "White-tipped pink flowers January–April; green and gold variegated foliage year-round.",
+        light: "Partial shade, sheltered from cold drying winds. Tolerates sun if the soil stays moist.",
+        water: "Keep evenly moist, especially while establishing. Do not allow the root ball to dry out or sit waterlogged.",
+        care: "Grow in humus-rich, acidic soil or ericaceous compost. Mulch with leaf mould or composted bark. Remove faded flowers and damaged growth only; little routine pruning is needed.",
+        seasonal: "Cream-edged evergreen foliage year-round; red young shoots and white spring flowers, usually March–May.",
       },
     ],
     "Bed 2": [
       {
         name: "Weeping Cherry",
+        id: "bed2-weeping-cherry",
         latin: "Prunus species",
         photos: ["images/plants/weeping-cherry.webp", "images/plants/weeping-cherry-1.webp", "images/plants/weeping-cherry-2.webp"],
         position: "Upper section — overhanging the wall",
@@ -577,6 +595,7 @@ window.OAK = (function () {
       },
       {
         name: "Variegated Dogwood",
+        id: "bed2-variegated-dogwood",
         latin: "Cornus alba 'Elegantissima'",
         photos: ["images/plants/variegated-dogwood.webp"],
         position: "Upper section — red winter stems",
@@ -587,6 +606,7 @@ window.OAK = (function () {
       },
       {
         name: "Peony",
+        id: "bed2-peony",
         latin: "Paeonia lactiflora",
         photos: ["images/plants/peony.webp"],
         position: "Lower section",
@@ -597,6 +617,7 @@ window.OAK = (function () {
       },
       {
         name: "Weigela",
+        id: "bed2-weigela",
         latin: "Weigela florida",
         photos: ["images/plants/weigela.webp"],
         position: "Mid section",
@@ -607,6 +628,7 @@ window.OAK = (function () {
       },
       {
         name: "Silverbush",
+        id: "bed2-silverbush",
         latin: "Convolvulus cneorum",
         photos: ["images/plants/silverbush.webp", "images/plants/silverbush-2.webp", "images/plants/silverbush-3.webp"],
         position: "Mid-right — silvery foliage",
@@ -617,6 +639,7 @@ window.OAK = (function () {
       },
       {
         name: "Angel Wings",
+        id: "bed2-angel-wings",
         latin: "Senecio candicans",
         photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp", "images/plants/angel-wings-3.webp"],
         position: "Lower, front",
@@ -627,6 +650,7 @@ window.OAK = (function () {
       },
       {
         name: "Kerria",
+        id: "bed2-kerria",
         latin: "Kerria japonica",
         photos: ["images/plants/kerria.webp", "images/plants/kerria-1.webp"],
         position: "Against the wall — arching stems with yellow flowers",
@@ -637,6 +661,7 @@ window.OAK = (function () {
       },
       {
         name: "Forget-me-not",
+        id: "bed2-forget-me-not",
         latin: "Myosotis",
         photos: ["images/plants/forget-me-not.webp"],
         position: "Lower — small blue flowers",
@@ -647,6 +672,7 @@ window.OAK = (function () {
       },
       {
         name: "Maiden Pink",
+        id: "bed2-maiden-pink",
         latin: "Dianthus deltoides",
         photos: ["images/plants/maiden-pink.webp"],
         position: "Between walls — pink flowers",
@@ -657,6 +683,7 @@ window.OAK = (function () {
       },
       {
         name: "Garden Pink",
+        id: "bed2-garden-pink",
         latin: "Dianthus plumarius",
         photos: ["images/plants/dianthus.webp", "images/plants/dianthus-1.webp", "images/plants/dianthus-2.webp"],
         position: "Lower front — compact fragrant mound",
@@ -667,6 +694,7 @@ window.OAK = (function () {
       },
       {
         name: "Centaurea 'Snowy Owl'",
+        id: "bed2-centaurea-snowy-owl",
         latin: "Centaurea montana 'Snowy Owl'",
         position: "Against the wall — white cornflower flowers",
         light: "Full sun.",
@@ -676,6 +704,7 @@ window.OAK = (function () {
       },
       {
         name: "Hydrangea petiolaris",
+        id: "bed2-hydrangea-petiolaris",
         latin: "Hydrangea anomala subsp. petiolaris",
         position: "Against the far wall — self-clinging climber",
         light: "Partial shade to full shade. Tolerates north-facing walls.",
@@ -685,6 +714,7 @@ window.OAK = (function () {
       },
       {
         name: "Euonymus 'Emerald Gaiety'",
+        id: "bed2-euonymus-emerald-gaiety",
         latin: "Euonymus fortunei 'Emerald Gaiety'",
         position: "Lower section — spreading, white-margined leaves",
         light: "Sun or partial shade.",
@@ -694,6 +724,7 @@ window.OAK = (function () {
       },
       {
         name: "Spiraea 'Double Play Big Bang'",
+        id: "bed2-spiraea-double-play-big-bang",
         latin: "Spiraea japonica 'Double Play Big Bang'",
         photos: ["images/june-2026-update-2/spiraea-big-bang-1.webp", "images/june-2026-update-2/spiraea-big-bang-2.webp", "images/june-2026-update-2/spiraea-big-bang-3.webp", "images/june-2026-update-2/spiraea-big-bang-4.webp", "images/june-2026-update-2/spiraea-big-bang-5.webp"],
         position: "Against the wall — 3 plants. Added June 2026.",
@@ -706,6 +737,7 @@ window.OAK = (function () {
     "Bed 4": [
       {
         name: "Apple Tree",
+        id: "bed4-apple-tree",
         latin: "Malus domestica",
         photos: ["images/plants/apple-tree.webp", "images/plants/apple-tree-1.webp"],
         position: "Centre — with bird feeders",
@@ -715,17 +747,19 @@ window.OAK = (function () {
         seasonal: "Blossom April; fruit August–October; bare winter.",
       },
       {
-        name: "Callistemon 'Inferno'",
-        latin: "Callistemon citrinus 'Inferno'",
+        name: "Callistemon Inferno ('Yanferno')",
+        id: "bed4-callistemon-inferno-yanferno",
+        latin: "Callistemon Inferno ('Yanferno')",
         photos: ["images/june-2026-updates/callistemon-inferno-1.webp", "images/june-2026-updates/callistemon-inferno-2.webp"],
         position: "Front-left — vivid red bottlebrush flowers",
         light: "Full sun. Thrives in a warm, sheltered spot.",
         water: "Moderate. Drought-tolerant once established. Good drainage essential.",
-        care: "Minimal pruning — light shaping after flowering if needed. Mulch in first winter. Hardy to around -10°C but shelter from cold winds.",
+        care: "RHS hardiness H3 (about −5°C to 1°C). Keep in a warm, sheltered position and protect thoroughly from severe cold and winter winds. Prune only in summer immediately after flowering, removing a little older growth at a time.",
         seasonal: "Evergreen; vivid red bottlebrush flowers June–August, sometimes a repeat flush in autumn. Architectural foliage year-round.",
       },
       {
         name: "Achillea",
+        id: "bed4-achillea",
         latin: "Achillea millefolium",
         photos: ["images/june-2026-updates/achillea.webp"],
         position: "Left — flat-headed flower clusters",
@@ -736,6 +770,7 @@ window.OAK = (function () {
       },
       {
         name: "Gaillardia",
+        id: "bed4-gaillardia",
         latin: "Gaillardia × grandiflora",
         photos: ["images/june-2026-updates/gaillardia.webp"],
         position: "Right — vivid daisy flowers",
@@ -746,6 +781,7 @@ window.OAK = (function () {
       },
       {
         name: "Abelia 'Kaleidoscope'",
+        id: "bed4-abelia-kaleidoscope",
         latin: "Abelia × grandiflora 'Kaleidoscope'",
         photos: ["images/june-2026-updates/abelia-kaleidoscope.webp"],
         position: "Front-right — variegated foliage shrub",
@@ -756,6 +792,7 @@ window.OAK = (function () {
       },
       {
         name: "Celosia",
+        id: "bed4-celosia",
         latin: "Celosia argentea var. cristata",
         photos: ["images/june-2026-update-2/celosia.webp"],
         position: "Front of the bed — purple, yellow and red varieties. Moved from Bed 1 in July 2026.",
@@ -768,6 +805,7 @@ window.OAK = (function () {
     "Bed 5": [
       {
         name: "Wisteria",
+        id: "bed5-wisteria",
         latin: "Wisteria spp.",
         photos: ["images/plants/wisteria.webp", "images/plants/wisteria-1.webp", "images/plants/wisteria-2.webp"],
         position: "Top — cascading over the wall",
@@ -778,6 +816,7 @@ window.OAK = (function () {
       },
       {
         name: "Rose",
+        id: "bed5-rose",
         latin: "Rosa",
         photos: ["images/plants/rose.webp"],
         position: "Mid — on trellis/support",
@@ -787,17 +826,19 @@ window.OAK = (function () {
         seasonal: "Flowers June–September; bare winter.",
       },
       {
-        name: "Yucca",
-        latin: "Yucca filamentosa",
+        name: "New Zealand Flax (cultivar to confirm)",
+        id: "bed5-new-zealand-flax-cultivar-to-confirm",
+        latin: "Phormium (cultivar to confirm)",
         photos: ["images/plants/yucca.webp", "images/plants/yucca-1.webp"],
-        position: "Lower-left — spiky, architectural",
-        light: "Full sun.",
-        water: "Drought-tolerant.",
-        care: "Free-draining soil. Almost indestructible.",
-        seasonal: "Evergreen; spire of white bell flowers in summer when mature.",
+        position: "Lower-left — striped, architectural foliage",
+        light: "Full sun to partial shade; shelter from cold drying winds.",
+        water: "Moderate while establishing; drought-tolerant later, but avoid prolonged waterlogging.",
+        care: "Grow in fertile, well-drained soil. Remove damaged leaves at the base in spring and mulch the crown before hard frost. Cultivar still needs confirmation from a label or diagnostic photos.",
+        seasonal: "Evergreen sword-shaped foliage year-round; mature plants may produce tall flower stems in summer.",
       },
       {
         name: "Lavender",
+        id: "bed5-lavender",
         latin: "Lavandula angustifolia",
         photos: ["images/plants/lavender.webp", "images/plants/lavender-1.webp"],
         position: "Right — grey-green foliage",
@@ -810,6 +851,7 @@ window.OAK = (function () {
     "Stone Bed": [
       {
         name: "Houseleeks",
+        id: "stone-houseleeks",
         latin: "Sempervivum",
         photos: ["images/plants/houseleek.webp"],
         position: "Left-centre — rosettes in gravel",
@@ -820,6 +862,7 @@ window.OAK = (function () {
       },
       {
         name: "Stonecrop",
+        id: "stone-stonecrop",
         latin: "Sedum (trailing)",
         photos: ["images/plants/stonecrop-1.webp", "images/plants/stonecrop-2.webp", "images/plants/stonecrop-3.webp"],
         position: "Centre-left",
@@ -830,6 +873,7 @@ window.OAK = (function () {
       },
       {
         name: "New Zealand Flax (dark)",
+        id: "stone-new-zealand-flax-dark",
         latin: "Phormium 'Platt's Black'",
         photos: ["images/plants/phormium.webp", "images/plants/phormium-1.webp"],
         position: "Centre — dark burgundy spikes",
@@ -840,6 +884,7 @@ window.OAK = (function () {
       },
       {
         name: "Rosemary",
+        id: "stone-rosemary",
         latin: "Salvia rosmarinus",
         photos: ["images/plants/rosemary.webp"],
         position: "Centre-right — grey-green needles",
@@ -850,6 +895,7 @@ window.OAK = (function () {
       },
       {
         name: "Cabbage Tree",
+        id: "stone-cabbage-tree",
         latin: "Cordyline australis 'Red Star'",
         photos: ["images/plants/cordyline.webp"],
         position: "Right — large palm-like tree",
@@ -860,6 +906,7 @@ window.OAK = (function () {
       },
       {
         name: "Hebe",
+        id: "stone-hebe",
         latin: "Hebe (syn. Veronica) cultivar",
         photos: ["images/plants/hebe.webp"],
         position: "Stone Bed — variegated foliage shrub",
@@ -872,6 +919,7 @@ window.OAK = (function () {
     Patio: [
       {
         name: "Honeysuckle",
+        id: "stone-honeysuckle",
         latin: "Lonicera",
         photos: ["images/plants/honeysuckle.webp", "images/plants/honeysuckle-1.webp", "images/plants/honeysuckle-2.webp"],
         position: "Far right — climbing on support",
@@ -882,6 +930,7 @@ window.OAK = (function () {
       },
       {
         name: "Clematis",
+        id: "stone-clematis",
         latin: "Clematis montana",
         photos: ["images/plants/clematis.webp"],
         position: "Left side of house wall — mature woody stems",
@@ -894,6 +943,7 @@ window.OAK = (function () {
     Tree: [
       {
         name: "Pear Tree",
+        id: "stone-pear-tree",
         latin: "Pyrus",
         photos: ["images/plants/pear-tree.webp", "images/plants/pear-tree-1.webp", "images/plants/pear-tree-2.webp"],
         position: "Upper terrace — near the gate",
@@ -906,6 +956,7 @@ window.OAK = (function () {
     "Big Pot 1": [
       {
         name: "Fuchsia",
+        id: "bigpot1-fuchsia",
         latin: "Fuchsia 'Mrs Popple'",
         photos: ["images/plants/big-pot-1.webp", "images/plants/big-pot-1-2.webp"],
         position: "Back centre — upright",
@@ -916,6 +967,7 @@ window.OAK = (function () {
       },
       {
         name: "Verbena",
+        id: "bigpot1-verbena",
         latin: "Verbena 'Showboat Light Pink'",
         photos: ["images/plants/big-pot-1.webp"],
         position: "Front-left — trailing clusters",
@@ -926,6 +978,7 @@ window.OAK = (function () {
       },
       {
         name: "Calibrachoa",
+        id: "bigpot1-calibrachoa",
         latin: "Calibrachoa 'Cabaret Special Pink Star'",
         photos: ["images/plants/big-pot-1.webp"],
         position: "Front — trailing",
@@ -936,6 +989,7 @@ window.OAK = (function () {
       },
       {
         name: "Nepeta",
+        id: "bigpot1-nepeta",
         latin: "Nepeta (catmint)",
         photos: ["images/plants/big-pot-1.webp"],
         position: "Mid — aromatic foliage",
@@ -946,6 +1000,7 @@ window.OAK = (function () {
       },
       {
         name: "Lobelia",
+        id: "bigpot1-lobelia",
         latin: "Lobelia 'Waterfall Deep Blue Ice'",
         photos: ["images/plants/big-pot-1.webp"],
         position: "Edge — trailing cascade",
@@ -956,6 +1011,7 @@ window.OAK = (function () {
       },
       {
         name: "Petunia",
+        id: "bigpot1-petunia",
         latin: "Petunia 'Midnight Sky'",
         photos: ["images/plants/big-pot-1.webp"],
         position: "Front-right — dark purple trumpet flowers",
@@ -968,6 +1024,7 @@ window.OAK = (function () {
     "Big Pot 2": [
       {
         name: "Lobelia",
+        id: "bigpot2-lobelia",
         latin: "Lobelia 'Waterfall Deep Blue Ice'",
         photos: ["images/plants/big-pot-2.webp", "images/plants/big-pot-2-2.webp"],
         position: "Edge — trailing cascade",
@@ -978,6 +1035,7 @@ window.OAK = (function () {
       },
       {
         name: "Verbena",
+        id: "bigpot2-verbena",
         latin: "Verbena 'Venturi Pink Bicolour'",
         photos: ["images/plants/big-pot-2.webp"],
         position: "Front — pink and white clusters",
@@ -988,6 +1046,7 @@ window.OAK = (function () {
       },
       {
         name: "Petunia",
+        id: "bigpot2-petunia",
         latin: "Petunia 'Sky Purple White Sky'",
         photos: ["images/plants/big-pot-2.webp"],
         position: "Front — purple and white trumpets",
@@ -998,6 +1057,7 @@ window.OAK = (function () {
       },
       {
         name: "Nepeta",
+        id: "bigpot2-nepeta",
         latin: "Nepeta (catmint)",
         photos: ["images/plants/big-pot-2.webp"],
         position: "Mid — aromatic foliage",
@@ -1008,6 +1068,7 @@ window.OAK = (function () {
       },
       {
         name: "Fuchsia",
+        id: "bigpot2-fuchsia",
         latin: "Fuchsia 'Mrs Popple'",
         photos: ["images/plants/big-pot-2.webp"],
         position: "Back centre — upright",
@@ -1020,6 +1081,7 @@ window.OAK = (function () {
     "Little Pot 1": [
       {
         name: "Geranium",
+        id: "littlepot1-geranium",
         latin: "Pelargonium 'Trend Sophie Dark Red'",
         photos: ["images/plants/little-pot-1.webp"],
         position: "Back — upright dark red flowers",
@@ -1030,6 +1092,7 @@ window.OAK = (function () {
       },
       {
         name: "Petunia",
+        id: "littlepot1-petunia",
         latin: "Petunia 'Vivini Blue Star'",
         photos: ["images/plants/little-pot-1.webp"],
         position: "Front — blue and white star pattern",
@@ -1042,6 +1105,7 @@ window.OAK = (function () {
     "Little Pot 2": [
       {
         name: "Geranium",
+        id: "littlepot2-geranium",
         latin: "Pelargonium 'Summer Twist Red White'",
         photos: ["images/plants/little-pot-2.webp"],
         position: "Back — red and white bicolour flowers",
@@ -1052,6 +1116,7 @@ window.OAK = (function () {
       },
       {
         name: "Petunia",
+        id: "littlepot2-petunia",
         latin: "Petunia 'Purple Vein'",
         photos: ["images/plants/little-pot-2.webp"],
         position: "Front — purple veined trumpets",
@@ -1064,6 +1129,7 @@ window.OAK = (function () {
     "Front Pot": [
       {
         name: "Gazania 'Sunny Side Up'",
+        id: "frontpot-gazania-sunny-side-up",
         latin: "Gazania rigens 'Sunny Side Up'",
         photos: ["images/june-2026-updates/gazania-sunny-side-up.webp"],
         position: "Left — large cream and white daisy flowers",
@@ -1074,6 +1140,7 @@ window.OAK = (function () {
       },
       {
         name: "Gazania 'Orange Flame'",
+        id: "frontpot-gazania-orange-flame",
         latin: "Gazania rigens 'Orange Flame'",
         photos: ["images/june-2026-updates/gazania-orange-flame.webp"],
         position: "Right — vivid orange daisy flowers",
@@ -1084,6 +1151,7 @@ window.OAK = (function () {
       },
       {
         name: "Calibrachoa",
+        id: "frontpot-calibrachoa",
         latin: "Calibrachoa spp.",
         photos: ["images/june-2026-updates/calibrachoa-front-pot.webp"],
         position: "Trailing — around the pot edge",
@@ -1094,6 +1162,7 @@ window.OAK = (function () {
       },
       {
         name: "Bacopa White",
+        id: "frontpot-bacopa-white",
         latin: "Sutera cordata (white cultivar)",
         photos: ["images/june-2026-updates/bacopa-white.webp"],
         position: "Trailing — delicate white flowers at the edges",
@@ -1106,6 +1175,7 @@ window.OAK = (function () {
     "Wall Pot 1": [
       {
         name: "Candy House Mix",
+        id: "wallpot1-candy-house-mix",
         latin: "Calibrachoa 'Candy House Mix'",
         photos: ["images/june-2026-update-2/candy-house-mix.webp"],
         position: "Left wall of steps — trailing mix of red, yellow and pink flowers",
@@ -1118,6 +1188,7 @@ window.OAK = (function () {
     "Wall Pot 2": [
       {
         name: "Coreopsis Gold",
+        id: "wallpot2-coreopsis-gold",
         latin: "Coreopsis 'Gold'",
         photos: ["images/june-2026-update-2/coreopsis-gold-1.webp", "images/june-2026-update-2/coreopsis-gold-2.webp"],
         position: "Left wall of steps — cheerful yellow daisy flowers",
@@ -1130,6 +1201,7 @@ window.OAK = (function () {
     "Lobelia Pot": [
       {
         name: "Lobelia 'Starship Scarlet Bronze Leaf'",
+        id: "lobeliapot-lobelia-starship-scarlet-bronze-leaf",
         latin: "Lobelia × speciosa 'Starship Scarlet Bronze Leaf'",
         photos: [
           "images/jul-2026/lobelia-starship-scarlet-pot.jpeg",
@@ -1145,6 +1217,7 @@ window.OAK = (function () {
     "Baskets": [
       {
         name: "Trailing Fuchsia",
+        id: "baskets-trailing-fuchsia",
         latin: "Fuchsia (trailing cultivar)",
         position: "Main trailing plant",
         light: "Partial shade to full sun.",
@@ -1154,6 +1227,7 @@ window.OAK = (function () {
       },
       {
         name: "Bacopa",
+        id: "baskets-bacopa",
         latin: "Sutera cordata",
         position: "Trailing filler",
         light: "Sun to partial shade.",
@@ -1163,6 +1237,7 @@ window.OAK = (function () {
       },
       {
         name: "Trailing Lobelia",
+        id: "baskets-trailing-lobelia",
         latin: "Lobelia erinus (trailing)",
         position: "Trailing — blue cascade",
         light: "Sun to partial shade.",
@@ -1172,6 +1247,7 @@ window.OAK = (function () {
       },
       {
         name: "Trailing Verbena",
+        id: "baskets-trailing-verbena",
         latin: "Verbena (trailing cultivar)",
         position: "Trailing — mixed colours",
         light: "Full sun.",
@@ -1185,6 +1261,7 @@ window.OAK = (function () {
     "Front Bed 1": [
       {
         name: "Hydrangea",
+        id: "frontBed1-hydrangea",
         latin: "Hydrangea macrophylla",
         photos: ["images/jul-2026/front-door.webp"],
         position: "Top of the bed, nearest the front door",
@@ -1195,6 +1272,7 @@ window.OAK = (function () {
       },
       {
         name: "Lavender",
+        id: "frontBed1-lavender",
         latin: "Lavandula angustifolia",
         photos: ["images/jul-2026/study-gate.webp"],
         position: "Bottom of the bed, below the brick pillar",
@@ -1208,6 +1286,7 @@ window.OAK = (function () {
     "Front Bed 3": [
       {
         name: "Climbing Rose (white-pink)",
+        id: "frontBed3-climbing-rose-white-pink",
         latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4020 / 4022)
         photos: ["images/jul-2026/climbing-rose.webp"],
         position: "On the wall by the Bedroom 3 window",
@@ -1218,6 +1297,7 @@ window.OAK = (function () {
       },
       {
         name: "Fern",
+        id: "frontBed3-fern",
         latin: "Dryopteris filix-mas", // CONFIRM
         photos: ["images/jul-2026/fern-window.webp"],
         position: "Below the Bedroom 1 window",
@@ -1228,6 +1308,7 @@ window.OAK = (function () {
       },
       {
         name: "Rose (pink)",
+        id: "frontBed3-rose-pink",
         latin: "Rosa — IDENTIFY", // IDENTIFY (IMG_4023)
         photos: ["images/jul-2026/pink-rose.webp"],
         position: "Between the Bedroom 1 window and the ensuite corner",
@@ -1240,6 +1321,7 @@ window.OAK = (function () {
     "Front Bed 4": [
       {
         name: "The Pilgrim",
+        id: "frontBed4-the-pilgrim",
         latin: "Rosa 'Auswalker'",
         photos: ["images/jul-2026/rose-the-pilgrim.jpeg"],
         position: "Against the wall, left side of the bed",
@@ -1250,6 +1332,7 @@ window.OAK = (function () {
       },
       {
         name: "The Generous Gardener",
+        id: "frontBed4-the-generous-gardener",
         latin: "Rosa 'Ausdrawn'",
         photos: ["images/jul-2026/rose-the-generous-gardener.jpeg"],
         position: "Against the wall, right side of the bed",
@@ -1262,6 +1345,7 @@ window.OAK = (function () {
     "Front Bed 5": [
       {
         name: "Cherry Laurel",
+        id: "frontBed5-cherry-laurel",
         latin: "Prunus laurocerasus", // CONFIRM
         photos: ["images/jul-2026/laurel.webp"],
         position: "Along the boundary wall",
@@ -1272,6 +1356,7 @@ window.OAK = (function () {
       },
       {
         name: "Mexican Orange Blossom",
+        id: "frontBed5-mexican-orange-blossom",
         latin: "Choisya ternata 'Sundance'", // CONFIRM
         photos: ["images/jul-2026/choisya.webp", "images/jul-2026/choisya-flowers.webp"],
         position: "Mid boundary bed — lime-yellow foliage",
@@ -1282,6 +1367,7 @@ window.OAK = (function () {
       },
       {
         name: "Climber (unidentified)",
+        id: "frontBed5-climber-unidentified",
         latin: "IDENTIFY", // IDENTIFY (IMG_4034 / 4035) — pinnate leaves + red berry clusters
         photos: ["images/jul-2026/climber.webp", "images/jul-2026/climber-berries.webp"],
         position: "Far end, trained up the brick wall",
@@ -1294,6 +1380,7 @@ window.OAK = (function () {
     "Front Stone Trough": [
       {
         name: "Hosta",
+        id: "frontStone-hosta",
         latin: "Hosta",
         photos: ["images/jul-2026/hosta-trough.webp"],
         position: "Filling the stone trough",
@@ -1305,19 +1392,21 @@ window.OAK = (function () {
     ],
     "Front Box Hedge": [
       {
-        name: "Box Hedging",
-        latin: "Buxus sempervirens", // CONFIRM
+        name: "Wall Cotoneaster (species to confirm)",
+        id: "frontBoxHedge-wall-cotoneaster-species-to-confirm",
+        latin: "Cotoneaster (species to confirm)",
         photos: ["images/jul-2026/wallbed-start.webp", "images/jul-2026/cotoneaster.webp"],
-        position: "2m clipped screen against the house return wall",
+        position: "Arching screen against the house return wall",
         light: "Sun to part shade.",
-        water: "Moderate.",
-        care: "Clip May and late summer. Watch for box blight/caterpillar.",
-        seasonal: "Evergreen year-round.",
+        water: "Water while establishing; once settled, water only in prolonged dry spells.",
+        care: "Train or lightly prune after flowering to keep growth clear of paths and masonry. Do not use box-blight or box-caterpillar treatments. Confirm the species from flowers, berries and leaf undersides.",
+        seasonal: "Small leaves on herringbone stems; flowers in late spring or summer followed by red berries. Evergreen or semi-evergreen depending on species and winter.",
       },
     ],
     "Front Hedge": [
       {
         name: "Hedge (to identify)",
+        id: "frontHedge-hedge-to-identify",
         latin: "IDENTIFY",
         photos: [], // TODO — no photo yet, next photo walk
         position: "Right of the front door, in front of the skinny brick wall",
@@ -1330,6 +1419,7 @@ window.OAK = (function () {
     "Front Apple Tree": [
       {
         name: "Apple Tree",
+        id: "frontApple-apple-tree",
         latin: "Malus domestica",
         photos: [], // TODO — no photo yet, next photo walk
         position: "Bottom of the drive, by the boundary wall",
@@ -1751,7 +1841,7 @@ window.OAK = (function () {
         { src: "images/june-2026/astilbe-2.webp", caption: "Astilbe — foliage close-up" },
       ]},
     ],
-    "Yucca": [
+    "New Zealand Flax (cultivar to confirm)": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/yucca.webp", caption: "Yucca — architectural form" }] },
     ],
     "Euonymus 'Emerald Gaiety'": [
@@ -1824,7 +1914,7 @@ window.OAK = (function () {
         { src: "images/june-2026-updates/dahlia-black-yellow-2.webp", caption: "Close-up" },
       ]},
     ],
-    "Callistemon 'Inferno'": [
+    "Callistemon Inferno ('Yanferno')": [
       { month: "june-2026", label: "June 2026", photos: [
         { src: "images/june-2026-updates/callistemon-inferno-1.webp", caption: "Callistemon 'Inferno'" },
         { src: "images/june-2026-updates/callistemon-inferno-2.webp", caption: "Callistemon 'Inferno' — close-up" },
@@ -1916,7 +2006,7 @@ window.OAK = (function () {
     ],
     bed4: [
       { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
-      { name: "Callistemon 'Inferno'", x: 18, y: 72, r: 10, hue: 0   },
+      { name: "Callistemon Inferno ('Yanferno')", x: 18, y: 72, r: 10, hue: 0   },
       { name: "Achillea",             x: 50, y: 80, r: 9,  hue: 55  },
       { name: "Gaillardia",           x: 78, y: 64, r: 8,  hue: 25  },
       { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
@@ -1925,7 +2015,7 @@ window.OAK = (function () {
     bed5: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
       { name: "Rose", x: 56, y: 50, r: 10, hue: 350 },
-      { name: "Yucca", x: 24, y: 72, r: 9, hue: 90 },
+      { name: "New Zealand Flax (cultivar to confirm)", x: 24, y: 72, r: 9, hue: 90 },
       { name: "Lavender", x: 76, y: 76, r: 9, hue: 270 },
     ],
     stone: [
@@ -2010,7 +2100,7 @@ window.OAK = (function () {
       { name: "Hosta", x: 50, y: 50, r: 22, hue: 105 },
     ],
     frontBoxHedge: [
-      { name: "Box Hedging", x: 50, y: 50, r: 24, hue: 130 },
+      { name: "Wall Cotoneaster (species to confirm)", x: 50, y: 50, r: 24, hue: 130 },
     ],
     frontHedge: [
       { name: "Hedge (to identify)", x: 50, y: 50, r: 22, hue: 120 },
@@ -2081,5 +2171,61 @@ window.OAK = (function () {
     },
   };
 
-  return { ZONES, PLANTS, PHOTOS_BY_MONTH, PLANT_PHOTOS, BED_PLANT_MAPS, PALETTES };
+  // Stable plant identity. Display names can change after an identification,
+  // but these zone-scoped IDs remain unique and are used by maps, calendars,
+  // watering links and photo journals.
+  const slugify = (value) => String(value)
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+  const PLANT_BY_ID = {};
+  const PLANT_ID_BY_ZONE_AND_NAME = {};
+  Object.entries(ZONES).forEach(([zoneKey, zone]) => {
+    if (!zone.plantKey) return;
+    const zonePlants = PLANTS[zone.plantKey] || [];
+    PLANT_ID_BY_ZONE_AND_NAME[zoneKey] = {};
+    zonePlants.forEach((plant) => {
+      plant.id = plant.id || `${zoneKey}-${slugify(plant.name)}`;
+      if (PLANT_BY_ID[plant.id]) throw new Error(`Duplicate plant id: ${plant.id}`);
+      PLANT_BY_ID[plant.id] = { plant, zoneKey, plantKey: zone.plantKey };
+      PLANT_ID_BY_ZONE_AND_NAME[zoneKey][plant.name] = plant.id;
+    });
+    (BED_PLANT_MAPS[zoneKey] || []).forEach((pin) => {
+      pin.plantId = PLANT_ID_BY_ZONE_AND_NAME[zoneKey][pin.name] || null;
+    });
+  });
+
+  // Migrate the original name-keyed journals to stable IDs. Ambiguous common
+  // names are attached explicitly to the photographed specimen only.
+  const PLANT_PHOTOS_BY_ID = {};
+  Object.entries(PLANT_PHOTOS).forEach(([plantName, entries]) => {
+    const matches = Object.values(PLANT_ID_BY_ZONE_AND_NAME)
+      .map((names) => names[plantName])
+      .filter(Boolean);
+    if (matches.length === 1) PLANT_PHOTOS_BY_ID[matches[0]] = entries;
+  });
+  const journalZoneOverrides = {
+    "Angel Wings": "bed1",
+    "Apple Tree": "bed4",
+    "Hosta": "bed1",
+    "Lavender": "bed5",
+  };
+  Object.entries(journalZoneOverrides).forEach(([plantName, zoneKey]) => {
+    const plantId = (PLANT_ID_BY_ZONE_AND_NAME[zoneKey] || {})[plantName];
+    if (plantId && PLANT_PHOTOS[plantName]) PLANT_PHOTOS_BY_ID[plantId] = PLANT_PHOTOS[plantName];
+  });
+
+  return {
+    ZONES,
+    PLANTS,
+    PHOTOS_BY_MONTH,
+    PLANT_PHOTOS,
+    PLANT_PHOTOS_BY_ID,
+    PLANT_BY_ID,
+    PLANT_ID_BY_ZONE_AND_NAME,
+    BED_PLANT_MAPS,
+    PALETTES,
+  };
 })();

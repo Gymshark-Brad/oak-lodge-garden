@@ -142,9 +142,11 @@ body {
 }
 
 .plant-pin { cursor: pointer; transition: transform 180ms ease; transform-origin: center; }
-.plant-pin:hover { transform: scale(1.08); }
-.plant-pin:hover .plant-pin-glow { opacity: 1; }
+.plant-pin:hover, .plant-pin:focus { transform: scale(1.08); }
+.plant-pin:hover .plant-pin-glow, .plant-pin:focus .plant-pin-glow { opacity: 1; }
 .plant-pin-glow { opacity: 0; transition: opacity 180ms ease; }
+.plant-pin:focus { outline: none; }
+.plant-pin:focus circle:not(.plant-pin-glow) { stroke: var(--accent); stroke-width: 1.5; }
 
 .inkbtn {
   font-family: var(--hand); font-size: 22px;
@@ -190,6 +192,13 @@ body {
   animation: fadeIn 240ms ease;
 }
 .lightbox img { max-width: min(92vw, 1100px); max-height: 88vh; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); }
+.lightbox-panel {
+  position: relative;
+  width: min(92vw, 1100px);
+  height: min(88vh, 900px);
+  display: grid;
+  place-items: center;
+}
 
 .imgfallback {
   background:

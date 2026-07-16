@@ -1,13 +1,9 @@
 // Oak Lodge Garden — watering-data.js
-// Watering frequency band (1–5) per plant, keyed the same way as PLANTS in data.js.
+// Moisture-check priority band (1–5) per plant, keyed the same way as PLANTS in data.js.
 // Registered onto window.OAK.WATER_BANDS / window.OAK.WATER_BAND_INFO.
 //
 // Bands:
-//   5  Daily          — thirsty pot & basket annuals, check every day in hot weather
-//   4  2–3x a week     — regular pot annuals / moisture-loving border plants
-//   3  Weekly          — most established shrubs & perennials, a weekly soak
-//   2  Fortnightly     — established, drought-tolerant-ish; only in dry spells
-//   1  Rarely          — drought-tolerant, hates wet feet; leave well alone
+// These are prompts to inspect moisture, never automatic watering instructions.
 
 (function () {
   const WATER_BANDS = {
@@ -50,7 +46,7 @@
     },
     "Bed 4": {
       "Apple Tree": 2,
-      "Callistemon 'Inferno'": 3,
+      "Callistemon Inferno ('Yanferno')": 3,
       "Achillea": 2,
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
@@ -59,7 +55,7 @@
     "Bed 5": {
       "Wisteria": 1,
       "Rose": 3,
-      "Yucca": 1,
+      "New Zealand Flax (cultivar to confirm)": 2,
       "Lavender": 1,
     },
     "Stone Bed": {
@@ -138,7 +134,7 @@
       "Hosta": 4,
     },
     "Front Box Hedge": {
-      "Box Hedging": 3,
+      "Wall Cotoneaster (species to confirm)": 2,
     },
     "Front Hedge": {
       "Hedge (to identify)": 2,
@@ -150,38 +146,38 @@
 
   const WATER_BAND_INFO = {
     5: {
-      label: "Daily",
-      chip: "daily",
-      everyDays: "Every day",
-      freq: "Water every day in hot weather — these dry out fast.",
+      label: "Check daily",
+      chip: "check daily",
+      everyDays: "Check daily",
+      freq: "Check compost daily in warm or windy weather; water only when the moisture test says it is needed.",
       days: [1, 1, 1, 1, 1, 1, 1],
     },
     4: {
-      label: "2–3× a week",
-      chip: "2–3×/wk",
-      everyDays: "Every 2–3 days",
-      freq: "Water two or three times a week; more in a heatwave.",
+      label: "Check 2–3× a week",
+      chip: "check 2–3×",
+      everyDays: "Check every 2–3 days",
+      freq: "Inspect two or three times a week, increasing checks in heat or wind; do not water automatically.",
       days: [1, 0, 1, 0, 1, 0, 0],
     },
     3: {
-      label: "Weekly",
-      chip: "weekly",
-      everyDays: "Every 7 days",
-      freq: "A good weekly soak is usually enough.",
+      label: "Check weekly",
+      chip: "check weekly",
+      everyDays: "Check weekly",
+      freq: "Check the root zone about weekly in dry weather. Established border plants may need no water after rain.",
       days: [0, 0, 0, 0, 0, 0, 1],
     },
     2: {
-      label: "Fortnightly",
-      chip: "fortnightly",
-      everyDays: "Every 14 days",
-      freq: "Established — only every couple of weeks, or in a dry spell.",
+      label: "Check in dry spells",
+      chip: "dry spells",
+      everyDays: "Check during dry spells",
+      freq: "Established plants usually cope without routine watering; inspect during prolonged dry spells.",
       days: [0, 0, 0, 0, 0, 0, 1],
     },
     1: {
-      label: "Rarely",
-      chip: "rarely",
-      everyDays: "Every 21+ days",
-      freq: "Drought-tolerant — leave alone unless there's a proper dry spell.",
+      label: "Check only if stressed",
+      chip: "stress check",
+      everyDays: "Check only if stressed",
+      freq: "Drought-tolerant or wet-sensitive: leave alone unless the plant shows stress and the root zone is dry.",
       days: [0, 0, 0, 0, 0, 0, 0],
     },
   };
@@ -331,7 +327,7 @@
         under: "Check moisture 15–20cm down at the drip line. Leaves curling and yellowing, or fruit dropping early, is the sign it needs a deep soak — especially once fruit is swelling.",
         over: "Waterlogged roots show as yellowing leaves despite wet soil, or fungal patches at the base of the trunk — apple trees need good drainage.",
       },
-      "Callistemon 'Inferno'": {
+      "Callistemon Inferno ('Yanferno')": {
         under: "Newly planted (June 2026) — check the top 5cm and water weekly through its first year, especially in hot spells. Leaves turning dull red-bronze all over or drooping is the sign.",
         over: "Yellowing leaves and root rot are the real risk for this one — good drainage matters more than frequent watering; ease off if leaves drop despite wet soil.",
       },
@@ -357,7 +353,7 @@
         under: "Check 8–10cm down. Wilting leaves and buds failing to open or 'balling' can be a drought sign — give it a deep soak at the base rather than a light sprinkle.",
         over: "Yellowing leaves, black spot, or stem dieback near the base can follow from waterlogged roots — good drainage matters as much as watering.",
       },
-      "Yucca": {
+      "New Zealand Flax (cultivar to confirm)": {
         under: "Barely needs checking — look for a proper drought before watering at all. Leaves going limp or pale is the rare sign it actually needs a drink.",
         over: "Soft, mushy leaf bases or yellowing at the crown mean it's been overwatered — the biggest risk for this one by far.",
       },

@@ -1,5 +1,5 @@
 // Oak Lodge Garden — WateringGuide.jsx
-// Weekly watering view: what needs water, how often, and what to leave alone.
+// Moisture-check guide: what to inspect first, and what to leave alone.
 
 const { useMemo: useMemo_WG, useState: useState_WG } = React;
 
@@ -41,6 +41,7 @@ function WateringGuide({ onOpenPlant }) {
       const bands = zone.plantKey && WATER_BANDS[zone.plantKey];
       if (!bands) return;
       const values = Object.values(bands);
+      if (values.length === 0) return;
       const maxBand = Math.max(...values);
       rows.push({ key, zone, maxBand });
     });
@@ -59,7 +60,15 @@ function WateringGuide({ onOpenPlant }) {
       Object.entries(bands).forEach(([name, band]) => {
         const flagged = band === 1 && maxBand >= 3;
         if (flagged) {
-          items.push({ zoneKey: key, zoneTitle: zone.title, plantName: name, band, maxBand, isPot: false });
+          items.push({
+            zoneKey: key,
+            zoneTitle: zone.title,
+            plantName: name,
+            plantId: (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[key] || {})[name] || null,
+            band,
+            maxBand,
+            isPot: false,
+          });
         }
       });
     });
@@ -82,7 +91,17 @@ function WateringGuide({ onOpenPlant }) {
       const bands = zone.plantKey && WATER_BANDS[zone.plantKey];
       if (!bands) return;
       Object.entries(bands).forEach(([name, band]) => {
-        items.push({ zoneKey: key, zoneTitle: zone.title, plantName: name, band, isPot: !!zone.isPot });
+        const plant = (window.OAK.PLANTS[zone.plantKey] || []).find((p) => p.name === name);
+        const position = (plant && plant.position) || "";
+        items.push({
+          zoneKey: key,
+          zoneTitle: zone.title,
+          plantName: name,
+          plantId: (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[key] || {})[name] || null,
+          band,
+          isPot: !!zone.isPot,
+          isEstablishing: /added|moved|newly planted/i.test(position),
+        });
       });
     });
     items.sort((a, b) =>
@@ -91,22 +110,8 @@ function WateringGuide({ onOpenPlant }) {
     return items;
   }, []);
 
-  // For the table, pots/baskets collapse to one row per container (using its
-  // thirstiest resident's band) — you water the whole pot as a unit, so a
-  // per-plant breakdown there isn't actionable. Ground beds stay per-plant.
   const tableRows = useMemo_WG(() => {
-    const rows = [];
-    const potGroups = new Map();
-    allPlants.forEach((p) => {
-      if (!p.isPot) {
-        rows.push(p);
-        return;
-      }
-      const existing = potGroups.get(p.zoneKey);
-      if (existing) existing.band = Math.max(existing.band, p.band);
-      else potGroups.set(p.zoneKey, { zoneKey: p.zoneKey, zoneTitle: p.zoneTitle, plantName: null, band: p.band, isPot: true });
-    });
-    rows.push(...potGroups.values());
+    const rows = [...allPlants];
     rows.sort((a, b) =>
       a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || (a.plantName || "").localeCompare(b.plantName || "")
     );
@@ -186,8 +191,8 @@ function WateringGuide({ onOpenPlant }) {
     );
   }, [overSignsList, overFilter]);
 
-  const handlePlantClick = (zoneKey, plantName) => {
-    onOpenPlant({ zoneKey, plantName, fromWatering: true });
+  const handlePlantClick = (zoneKey, plantId, plantName) => {
+    onOpenPlant({ zoneKey, plantId, plantName, fromWatering: true });
   };
 
   const dayHeader = weekDates.map((d, i) => ({
@@ -205,11 +210,11 @@ function WateringGuide({ onOpenPlant }) {
             Watering guide
           </h1>
           <div className="t-hand" style={{ fontSize: 22, color: "var(--pencil)" }}>
-            what needs water &nbsp;·&nbsp; and what to leave alone
+            what to check first &nbsp;·&nbsp; and what to leave alone
           </div>
         </div>
         <div className="wg-stamp-panel">
-          <div className="stamp">Vol. iii · weekly</div>
+          <div className="stamp">Vol. iii · moisture checks</div>
           <div className="t-mono" style={{ marginTop: 12 }}>
             {zoneRows.length} zones &nbsp;·&nbsp; {allPlants.length} plants<br />
             {watchList.length} on overwatering watch<br />
@@ -222,12 +227,23 @@ function WateringGuide({ onOpenPlant }) {
         <span className="tape" style={{ top: -10, left: "8%", transform: "rotate(-3deg)" }} />
         <span className="tape" style={{ top: -10, right: "12%", transform: "rotate(2.4deg)" }} />
 
+        <aside className="wg-safety-note" aria-labelledby="watering-rule-title">
+          <div id="watering-rule-title" className="t-stamp">The watering rule</div>
+          <p><strong>Check moisture before every watering.</strong> The marks below are reminders to inspect, not instructions to water.</p>
+          <ul>
+            <li>Skip established beds after meaningful rain; check 5–15cm down near the roots, not just the surface.</li>
+            <li>Check pots and baskets separately because compost, sun and wind can dry them much faster than borders.</li>
+            <li>Newly planted or moved plants need closer checks until rooted in, even when the mature plant is drought-tolerant.</li>
+            <li>In cool or wet weather, reduce checks. In heat or strong wind, inspect containers more often.</li>
+          </ul>
+        </aside>
+
         <section className="wg-section">
           <header className="wg-section-head">
             <div className="wg-section-num t-display">i.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>This week</div>
-              <div className="t-display wg-section-title">Watering by zone</div>
+              <div className="t-display wg-section-title">Moisture-check priority by zone</div>
             </div>
             <div className="t-mono wg-section-note">week of {dayHeader[0].date}</div>
           </header>
@@ -235,7 +251,7 @@ function WateringGuide({ onOpenPlant }) {
           <div className="wg-grid-wrap">
             <div className="wg-grid" style={{ gridTemplateColumns: `minmax(150px, auto) 100px repeat(7, 34px)` }}>
               <div className="wg-grid-head wg-grid-corner" />
-              <div className="wg-grid-head t-mono">frequency</div>
+              <div className="wg-grid-head t-mono">highest priority</div>
               {dayHeader.map((d) => (
                 <div key={d.label} className={"wg-grid-head wg-day-head" + (d.isToday ? " is-today" : "")}>
                   <span className="wg-day-label">{d.label}</span>
@@ -256,7 +272,7 @@ function WateringGuide({ onOpenPlant }) {
                     </div>
                     {days.map((on, i) => (
                       <div key={i} className={"wg-cell" + (dayHeader[i].isToday ? " is-today" : "")}>
-                        {on ? <span className="wg-drop" aria-hidden="true">●</span> : null}
+                        {on ? <span className="wg-drop" aria-label="Suggested moisture-check day">○</span> : null}
                       </div>
                     ))}
                   </React.Fragment>
@@ -266,7 +282,7 @@ function WateringGuide({ onOpenPlant }) {
           </div>
           {zoneRows.some(({ maxBand }) => maxBand === 2) && !fortnightOn && (
             <p className="t-hand wg-fortnight-note">
-              This is an "off" week for fortnightly plants — skip them unless it's been properly dry.
+              Low-priority plants have no reminder this week. Only inspect them if it has been properly dry or they show stress.
             </p>
           )}
         </section>
@@ -294,21 +310,21 @@ function WateringGuide({ onOpenPlant }) {
                   <div className="wg-watch-head">
                     <span className="t-hand wg-watch-zone">{w.zoneTitle}</span>
                     <span className="t-mono wg-watch-context">
-                      {w.isPot ? "shared pot" : "shared bed"} · watered for {BAND_INFO[w.maxBand].label.toLowerCase()}
+                      shared bed · highest check priority: {BAND_INFO[w.maxBand].label.toLowerCase()}
                     </span>
                   </div>
                   <ul className="wg-watch-plants">
                     {w.plants.map((p) => (
                       <li key={p.plantName} className="wg-watch-plant">
-                        <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantName)}>
+                        <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantId, p.plantName)}>
                           {p.plantName}
                         </button>
-                        <span className="t-mono wg-watch-band">wants {BAND_INFO[p.band].label.toLowerCase()}</span>
+                        <span className="t-mono wg-watch-band">{BAND_INFO[p.band].label.toLowerCase()}</span>
                       </li>
                     ))}
                   </ul>
                   <p className="wg-watch-note">
-                    Don't add extra water for {w.plants.length === 1 ? "this one" : "these"} — good drainage matters more than less water for the whole {w.isPot ? "pot" : "bed"}.
+                    Check these plants individually before watering the surrounding bed. Their roots can stay wet while thirstier neighbours are dry.
                   </p>
                 </li>
               ))}
@@ -340,7 +356,7 @@ function WateringGuide({ onOpenPlant }) {
             {filteredOverSigns.map((item) => (
               <li key={item.zoneKey + "-" + item.plantName} className="wg-over-item">
                 <div className="wg-over-head">
-                  <button className="wg-plant-link wg-over-name" onClick={() => handlePlantClick(item.zoneKey, item.plantName)}>
+                  <button className="wg-plant-link wg-over-name" onClick={() => handlePlantClick(item.zoneKey, item.plantId, item.plantName)}>
                     {item.plantName}
                   </button>
                   <span className="t-mono wg-over-zone">{item.zoneTitle}</span>
@@ -415,7 +431,7 @@ function WateringGuide({ onOpenPlant }) {
                   </th>
                   <th>
                     <button className="wg-th-sort" onClick={() => handleSort("frequency")}>
-                      Frequency{sortKey === "frequency" && (sortDir === "asc" ? " ▲" : " ▼")}
+                      Check priority{sortKey === "frequency" && (sortDir === "asc" ? " ▲" : " ▼")}
                     </button>
                   </th>
                 </tr>
@@ -424,17 +440,14 @@ function WateringGuide({ onOpenPlant }) {
                 {filteredPlants.map((p) => (
                   <tr key={p.zoneKey + "-" + (p.plantName || "pot")}>
                     <td>
-                      {p.plantName ? (
-                        <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantName)}>
-                          {p.plantName}
-                        </button>
-                      ) : (
-                        <span className="t-hand wg-table-pot-name">
-                          {p.zoneTitle} <span className="wg-over-tag">whole pot</span>
-                        </span>
-                      )}
+                      <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantId, p.plantName)}>
+                        {p.plantName}
+                      </button>
+                      {p.isEstablishing && <span className="wg-over-tag">establishing</span>}
                     </td>
-                    <td className="t-mono wg-table-zone">{p.plantName ? p.zoneTitle : "—"}</td>
+                    <td className="t-mono wg-table-zone">
+                      {p.zoneTitle} · {p.isPot ? "container" : "bed"}
+                    </td>
                     <td>
                       <span className={"wg-freq-text wg-freq-" + p.band}>{BAND_INFO[p.band].everyDays}</span>
                     </td>
@@ -481,6 +494,17 @@ function WateringGuide({ onOpenPlant }) {
           opacity: 0.5; mix-blend-mode: multiply; pointer-events: none;
         }
         [data-palette="night"] .wg-sheet::before { mix-blend-mode: overlay; opacity: 0.35; }
+
+        .wg-safety-note {
+          position: relative;
+          margin: 0 0 34px;
+          padding: 18px 20px;
+          border: 2px solid var(--accent);
+          background: color-mix(in oklab, var(--accent) 7%, var(--paper) 93%);
+        }
+        .wg-safety-note p { margin: 6px 0 8px; font-size: 18px; }
+        .wg-safety-note ul { margin: 0; padding-left: 22px; }
+        .wg-safety-note li + li { margin-top: 4px; }
 
         .wg-section { position: relative; margin-bottom: 28px; }
         .wg-section:last-child { margin-bottom: 0; }

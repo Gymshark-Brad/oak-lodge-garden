@@ -4,26 +4,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oak Lodge — A Garden Notebook</title>
-  <link rel="stylesheet" href="paper.css?v=20260716" />
+  <link rel="stylesheet" href="paper.css?v=20260716e" />
 
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
 
-  <script src="data.js?v=20260716"></script>
-  <script src="seasonal-data.js?v=20260716"></script>
-  <script src="watering-data.js?v=20260716"></script>
+  <script src="data.js?v=20260716e"></script>
+  <script src="seasonal-data.js?v=20260716e"></script>
+  <script src="watering-data.js?v=20260716e"></script>
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    if (window.location.protocol === "file:") {
+      document.getElementById("root").innerHTML = `
+        <main style="max-width:720px;margin:8vh auto;padding:32px;font-family:Georgia,serif;line-height:1.6;color:#2b271c;background:#f3ecda;border:1px solid #cfc3a5">
+          <h1 style="font-weight:normal;margin-top:0">Oak Lodge needs a local web address</h1>
+          <p>Chrome and Safari block this journal's local JSX files when <code>index.html</code> is opened directly.</p>
+          <p>Double-click <strong>preview.command</strong> in this folder, then use the browser window it opens. You can also use the live GitHub Pages site.</p>
+        </main>`;
+    }
+  </script>
 
-  <script type="text/babel" src="palette.js?v=20260716"></script>
-  <script type="text/babel" src="GardenPlan.jsx?v=20260716"></script>
-  <script type="text/babel" src="FrontGardenPlan.jsx?v=20260716"></script>
-  <script type="text/babel" src="BedDetail.jsx?v=20260716"></script>
-  <script type="text/babel" src="PlantCard.jsx?v=20260716"></script>
-  <script type="text/babel" src="SeasonalCalendar.jsx?v=20260716"></script>
-  <script type="text/babel" src="WateringGuide.jsx?v=20260716"></script>
-  <script type="text/babel" src="app.jsx?v=20260716"></script>
+  <script type="text/babel" src="palette.js?v=20260716e"></script>
+  <script type="text/babel" src="GardenPlan.jsx?v=20260716e"></script>
+  <script type="text/babel" src="FrontGardenPlan.jsx?v=20260716e"></script>
+  <script type="text/babel" src="AccessibleModal.jsx?v=20260716e"></script>
+  <script type="text/babel" src="BedDetail.jsx?v=20260716e"></script>
+  <script type="text/babel" src="PlantCard.jsx?v=20260716e"></script>
+  <script type="text/babel" src="SeasonalCalendar.jsx?v=20260716e"></script>
+  <script type="text/babel" src="WateringGuide.jsx?v=20260716e"></script>
+  <script type="text/babel" src="app.jsx?v=20260716e"></script>
 </body>
 </html>
