@@ -243,7 +243,7 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">i.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>This week</div>
-              <div className="t-display wg-section-title">Moisture-check priority by zone</div>
+              <h2 className="t-display wg-section-title">Moisture-check priority by zone</h2>
             </div>
             <div className="t-mono wg-section-note">week of {dayHeader[0].date}</div>
           </header>
@@ -294,7 +294,7 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">ii.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Overwatering watch</div>
-              <div className="t-display wg-section-title">Plants sharing soil with thirstier neighbours</div>
+              <h2 className="t-display wg-section-title">Plants sharing soil with thirstier neighbours</h2>
             </div>
             <div className="wg-section-count t-mono">
               {watchByZone.length} {watchByZone.length === 1 ? "zone" : "zones"}
@@ -339,15 +339,17 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">iii.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Reference</div>
-              <div className="t-display wg-section-title">Susceptible to overwatering</div>
+              <h2 className="t-display wg-section-title">Susceptible to overwatering</h2>
             </div>
             <div className="wg-section-count t-mono">{overSignsList.length} plants</div>
           </header>
 
+          <label className="t-stamp wg-filter-label" htmlFor="overwatering-filter">Filter the overwatering list</label>
           <input
-            type="text"
+            id="overwatering-filter"
+            type="search"
             className="wg-filter"
-            placeholder="Filter by plant or zone…"
+            placeholder="Plant or zone…"
             value={overFilter}
             onChange={(e) => setOverFilter(e.target.value)}
           />
@@ -381,7 +383,7 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">iv.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Reference</div>
-              <div className="t-display wg-section-title">The five bands</div>
+              <h2 className="t-display wg-section-title">The five bands</h2>
             </div>
           </header>
           <ul className="wg-legend">
@@ -402,34 +404,37 @@ function WateringGuide({ onOpenPlant }) {
             <div className="wg-section-num t-display">v.</div>
             <div>
               <div className="t-stamp" style={{ color: "var(--accent)" }}>Full list</div>
-              <div className="t-display wg-section-title">All plants at a glance</div>
+              <h2 className="t-display wg-section-title">All plants at a glance</h2>
             </div>
             <div className="wg-section-count t-mono">{allPlants.length} plants</div>
           </header>
 
+          <label className="t-stamp wg-filter-label" htmlFor="plant-list-filter">Filter the full plant list</label>
           <input
-            type="text"
+            id="plant-list-filter"
+            type="search"
             className="wg-filter"
-            placeholder="Filter by plant or zone…"
+            placeholder="Plant or zone…"
             value={plantFilter}
             onChange={(e) => setPlantFilter(e.target.value)}
           />
 
           <div className="wg-table-wrap">
             <table className="wg-table">
+              <caption className="sr-only">Plants and their moisture-check priorities by garden zone</caption>
               <thead>
                 <tr>
-                  <th>
+                  <th scope="col" aria-sort={sortKey === "plant" ? (sortDir === "asc" ? "ascending" : "descending") : "none"}>
                     <button className="wg-th-sort" onClick={() => handleSort("plant")}>
                       Plant{sortKey === "plant" && (sortDir === "asc" ? " ▲" : " ▼")}
                     </button>
                   </th>
-                  <th>
+                  <th scope="col" aria-sort={sortKey === "zone" ? (sortDir === "asc" ? "ascending" : "descending") : "none"}>
                     <button className="wg-th-sort" onClick={() => handleSort("zone")}>
                       Zone{sortKey === "zone" && (sortDir === "asc" ? " ▲" : " ▼")}
                     </button>
                   </th>
-                  <th>
+                  <th scope="col" aria-sort={sortKey === "frequency" ? (sortDir === "asc" ? "ascending" : "descending") : "none"}>
                     <button className="wg-th-sort" onClick={() => handleSort("frequency")}>
                       Check priority{sortKey === "frequency" && (sortDir === "asc" ? " ▲" : " ▼")}
                     </button>
@@ -515,7 +520,7 @@ function WateringGuide({ onOpenPlant }) {
           align-items: end; gap: 16px; margin-bottom: 18px;
         }
         .wg-section-num { font-size: 56px; line-height: 0.9; color: var(--pencil); opacity: 0.85; }
-        .wg-section-title { font-size: clamp(24px, 3vw, 34px); line-height: 1.05; margin-top: 2px; }
+        .wg-section-title { font-size: clamp(24px, 3vw, 34px); line-height: 1.05; margin: 2px 0 0; }
         .wg-section-count, .wg-section-note { align-self: end; padding-bottom: 6px; opacity: 0.6; white-space: nowrap; }
 
         .wg-empty { font-size: 22px; color: var(--pencil); font-style: italic; }
@@ -566,7 +571,8 @@ function WateringGuide({ onOpenPlant }) {
         .wg-watch-plants { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
         .wg-watch-plant { display: flex; align-items: baseline; gap: 6px; }
         .wg-plant-link {
-          background: transparent; border: 0; padding: 0; cursor: pointer;
+          background: transparent; border: 0; padding: 8px 2px; min-height: 44px; cursor: pointer;
+          display: inline-flex; align-items: center;
           font-family: var(--serif); font-size: 17px; color: var(--accent);
           text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--accent) 40%, transparent);
           text-underline-offset: 3px;
@@ -608,6 +614,7 @@ function WateringGuide({ onOpenPlant }) {
           max-width: 320px;
           margin-bottom: 14px;
           padding: 8px 12px;
+          min-height: 44px;
           font-family: var(--serif);
           font-size: 15px;
           color: var(--ink);
@@ -615,7 +622,8 @@ function WateringGuide({ onOpenPlant }) {
           border: 1px solid var(--hairline);
           border-radius: 3px;
         }
-        .wg-filter:focus { outline: none; border-color: var(--accent); }
+        .wg-filter-label { display: block; margin-bottom: 7px; color: var(--ink-soft); }
+        .wg-filter:focus { border-color: var(--accent); }
         .wg-table-wrap { overflow-x: auto; }
         .wg-table { width: 100%; border-collapse: collapse; }
         .wg-table thead th {
@@ -627,7 +635,7 @@ function WateringGuide({ onOpenPlant }) {
         }
         .wg-th-sort {
           display: inline-flex; align-items: center; gap: 2px;
-          width: 100%; margin: 0; padding: 8px 10px;
+          width: 100%; min-height: 44px; margin: 0; padding: 8px 10px;
           background: none; border: 0; cursor: pointer; text-align: left;
           font-family: var(--type); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
           color: var(--pencil);

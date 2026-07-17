@@ -4,6 +4,17 @@
 **Target:** `main` at `df9c7ba` and the deployed GitHub Pages site  
 **Scope:** Read-only audit; this report is the only repository change
 
+## Remediation status
+
+Updated 16 July 2026 after the audit remediation work:
+
+- **Completed and deployed:** H-01–H-07.
+- **Completed in the current accessibility/polish batch:** M-01, M-02, M-07, M-09, L-01, L-02 and L-03.
+- **Partially addressed:** M-03 (seasonal/watering migrations removed; the Bed 2/3 runtime split remains), M-10 (data validation added; broad staging/removal behaviour remains) and L-09 (data integrity guard added; browser smoke testing is not yet part of deployment).
+- **Still open after this batch:** M-03–M-06, M-08, M-10–M-13 and L-04–L-09 — **9 Medium and 6 Low findings**.
+
+The original audit evidence below is retained as the baseline record.
+
 ## Executive summary
 
 The site is visually distinctive, stable at the tested desktop and mobile widths, and unusually well documented for a personal project. Its central zone/plant/map/watering/photo relationships are mostly sound: all 29 zones resolve, all 90 plant records have watering entries, every plant-map marker resolves, and all 259 image paths referenced by the runtime exist.

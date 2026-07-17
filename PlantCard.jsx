@@ -88,7 +88,9 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
             <div className="pc-band-right">
               <button ref={closeButtonRef} className="ghostbtn pc-top-close" onClick={onClose} title="Close (esc)">close ✕</button>
               <div className="t-mono" style={{ textAlign: "right" }}>No. {specNo}</div>
-              <div className="t-mono" style={{ textAlign: "right", opacity: 0.7 }}>09 · v · 2026</div>
+              <div className="t-mono" style={{ textAlign: "right", opacity: 0.75 }}>
+                {latestEntry ? `updated · ${latestEntry.label.toLowerCase()}` : "current garden record"}
+              </div>
             </div>
           </div>
 
@@ -327,7 +329,9 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           color: var(--ink);
           font-family: var(--serif);
           font-size: 16px;
-          padding: 2px 8px;
+          padding: 8px 12px;
+          min-width: 44px;
+          min-height: 44px;
           cursor: pointer;
           border-radius: 2px;
           opacity: 0.7;

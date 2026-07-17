@@ -58,7 +58,7 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
         <div className="bed-stamp-panel">
           <div className="stamp">Specimen No. {String(zoneKey).toUpperCase().padStart(6, "0")}</div>
           <div className="t-mono" style={{ marginTop: 14 }}>
-            recorded · 09 may 2026<br />
+            recorded · {(_latestMonthData.label || _latestMonth).toLowerCase()}<br />
             site · oak lodge, bromsgrove<br />
             recorder · b. h.
           </div>

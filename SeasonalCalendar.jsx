@@ -22,7 +22,7 @@ function SeasonalCalendar({ onOpenPlant }) {
       if (tabRect.left < containerRect.left || tabRect.right > containerRect.right) {
         container.scrollTo({
           left: tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2,
-          behavior: "smooth",
+          behavior: window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
         });
       }
     }
@@ -34,6 +34,29 @@ function SeasonalCalendar({ onOpenPlant }) {
   const handlePlantClick = (reference) => {
     if (!reference) return;
     onOpenPlant(reference);
+  };
+  const selectTab = (index) => {
+    const nextIndex = (index + MONTHS.length) % MONTHS.length;
+    setActiveIndex(nextIndex);
+    window.requestAnimationFrame(() => {
+      const nextTab = tabsRef.current && tabsRef.current.querySelector(`[data-tab-index="${nextIndex}"]`);
+      if (nextTab) nextTab.focus();
+    });
+  };
+  const handleTabKeyDown = (event, index) => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      selectTab(index + 1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      selectTab(index - 1);
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      selectTab(0);
+    } else if (event.key === "End") {
+      event.preventDefault();
+      selectTab(MONTHS.length - 1);
+    }
   };
 
   return (
@@ -60,7 +83,7 @@ function SeasonalCalendar({ onOpenPlant }) {
 
       <div className="cal-tabs-wrap">
         <div className="t-stamp" style={{ marginBottom: 8 }}>Choose a month →</div>
-        <div className="cal-tabs" ref={tabsRef} role="tablist">
+        <div className="cal-tabs" ref={tabsRef} role="tablist" aria-label="Seasonal calendar month">
           {MONTHS.map((m, i) => {
             const active = i === activeIndex;
             const isToday = i === realMonth;
@@ -69,9 +92,14 @@ function SeasonalCalendar({ onOpenPlant }) {
                 key={m}
                 ref={active ? activeTabRef : null}
                 role="tab"
+                id={`calendar-month-tab-${i}`}
+                aria-controls="calendar-month-panel"
                 aria-selected={active}
+                tabIndex={active ? 0 : -1}
+                data-tab-index={i}
                 className={"cal-tab" + (active ? " is-active" : "")}
                 onClick={() => setActiveIndex(i)}
+                onKeyDown={(event) => handleTabKeyDown(event, i)}
                 title={m}
               >
                 <span className="cal-tab-label">{MONTHS_SHORT[i]}</span>
@@ -96,7 +124,14 @@ function SeasonalCalendar({ onOpenPlant }) {
         </div>
       </div>
 
-      <article className="cal-sheet" key={monthName}>
+      <article
+        className="cal-sheet"
+        key={monthName}
+        id="calendar-month-panel"
+        role="tabpanel"
+        aria-labelledby={`calendar-month-tab-${activeIndex}`}
+        tabIndex="0"
+      >
         <span className="tape" style={{ top: -10, left: "8%", transform: "rotate(-3deg)" }} />
         <span className="tape" style={{ top: -10, right: "12%", transform: "rotate(2.4deg)" }} />
 
@@ -124,7 +159,7 @@ function SeasonalCalendar({ onOpenPlant }) {
               <div className="cal-section-num t-display">i.</div>
               <div>
                 <div className="t-stamp" style={{ color: "var(--accent)" }}>What's looking good</div>
-                <div className="t-display cal-section-title">In flower &amp; in colour</div>
+                <h3 className="t-display cal-section-title">In flower &amp; in colour</h3>
               </div>
               <div className="cal-section-count t-mono">
                 {monthData.highlights.length} {monthData.highlights.length === 1 ? "entry" : "entries"}
@@ -160,7 +195,7 @@ function SeasonalCalendar({ onOpenPlant }) {
               <div className="cal-section-num t-display">ii.</div>
               <div>
                 <div className="t-stamp" style={{ color: "var(--accent)" }}>What needs doing</div>
-                <div className="t-display cal-section-title">To-do &amp; to-prune</div>
+                <h3 className="t-display cal-section-title">To-do &amp; to-prune</h3>
               </div>
               <div className="cal-section-count t-mono">
                 {monthData.tasks.length} {monthData.tasks.length === 1 ? "task" : "tasks"}
@@ -299,7 +334,7 @@ function SeasonalCalendar({ onOpenPlant }) {
           align-items: end; gap: 16px; margin-bottom: 18px;
         }
         .cal-section-num { font-size: 56px; line-height: 0.9; color: var(--pencil); opacity: 0.85; }
-        .cal-section-title { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; margin-top: 2px; }
+        .cal-section-title { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; margin: 2px 0 0; }
         .cal-section-count { align-self: end; padding-bottom: 6px; opacity: 0.6; }
 
         .cal-empty { font-size: 22px; color: var(--pencil); font-style: italic; }
@@ -377,8 +412,9 @@ function SeasonalCalendar({ onOpenPlant }) {
           display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline;
         }
         .cal-plant-link-sm {
-          background: transparent; border: 0; padding: 0;
+          background: transparent; border: 0; padding: 8px 2px; min-height: 44px;
           font: inherit; color: var(--accent); cursor: pointer;
+          display: inline-flex; align-items: center;
           text-decoration: underline;
           text-decoration-color: color-mix(in oklab, var(--accent) 40%, transparent);
           text-underline-offset: 3px;

@@ -2110,67 +2110,6 @@ window.OAK = (function () {
     ],
   };
 
-  // ─── PALETTES ─────────────────────────────────────────────────────
-  // All palettes use the same paper-and-ink semantics so the rest of
-  // the app just reads CSS vars.
-  const PALETTES = {
-    spring: {
-      label: "Spring · cream paper",
-      paper: "#f3ecda",
-      paperDeep: "#e8dec5",
-      ink: "#2b271c",
-      pencil: "#7a6e54",
-      stamp: "#a23a2c",
-      green: "#4f6d35",
-      accent: "#9c5a2c",
-      tape: "#e7d9b8",
-    },
-    summer: {
-      label: "Summer · sun-faded",
-      paper: "#f6efd9",
-      paperDeep: "#ead9b0",
-      ink: "#3a2f1d",
-      pencil: "#8c7a4f",
-      stamp: "#c0762a",
-      green: "#6a8a3a",
-      accent: "#bb6a2c",
-      tape: "#ecd99b",
-    },
-    autumn: {
-      label: "Autumn · oxidized",
-      paper: "#ece1c9",
-      paperDeep: "#d9c8a3",
-      ink: "#2d2014",
-      pencil: "#7a5a3a",
-      stamp: "#8a3a18",
-      green: "#5a5a25",
-      accent: "#a8501f",
-      tape: "#d6b876",
-    },
-    winter: {
-      label: "Winter · cool linen",
-      paper: "#ecebe3",
-      paperDeep: "#d8d6c9",
-      ink: "#1f2024",
-      pencil: "#5d6166",
-      stamp: "#5a6a85",
-      green: "#3f5a45",
-      accent: "#6a7e8c",
-      tape: "#cfd3c4",
-    },
-    night: {
-      label: "Night · graphite",
-      paper: "#1c2018",
-      paperDeep: "#141911",
-      ink: "#e7e0cb",
-      pencil: "#a59a7e",
-      stamp: "#cf7a4a",
-      green: "#a3c06a",
-      accent: "#d6a168",
-      tape: "#3a4030",
-    },
-  };
-
   // Stable plant identity. Display names can change after an identification,
   // but these zone-scoped IDs remain unique and are used by maps, calendars,
   // watering links and photo journals.
@@ -2226,6 +2165,5 @@ window.OAK = (function () {
     PLANT_BY_ID,
     PLANT_ID_BY_ZONE_AND_NAME,
     BED_PLANT_MAPS,
-    PALETTES,
   };
 })();

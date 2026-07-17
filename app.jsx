@@ -1,15 +1,10 @@
 // Oak Lodge Garden — app.jsx
-// Main shell: routing between plan / bed / plant, palette tweaks, lightbox.
+// Main shell: routing between plan / bed / plant, palette, lightbox.
 
 const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App, useRef: useRef_App } = React;
 
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "palette": "spring",
-  "showMarginNotes": true
-}/*EDITMODE-END*/;
-
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [palette, setPalette] = useState_App(window.loadPalette());
   const [view, setView] = useState_App({ name: "plan" }); // plan | frontplan | calendar | watering | bed | plant
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
@@ -19,11 +14,16 @@ function App() {
   const Z = window.OAK.ZONES;
   const PLANTS = window.OAK.PLANTS;
 
-  const dark = t.palette === "night";
+  const dark = palette === "night";
+  const prefersReducedMotion = () =>
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+  };
 
   useEffect_App(() => {
-    document.documentElement.dataset.palette = t.palette || "spring";
-  }, [t.palette]);
+    window.applyPalette(palette || "spring");
+  }, [palette]);
 
   // Plant navigation within a bed (prev/next)
   const plantList = useMemo_App(() => {
@@ -47,7 +47,7 @@ function App() {
 
   const openZone = (zoneKey) => {
     setView({ name: "bed", zoneKey });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   };
   const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering }) => {
     if (fromCalendar) setCalendarPlantReturn(true);
@@ -75,11 +75,11 @@ function App() {
   };
   const goCalendar = () => {
     setView({ name: "calendar" });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   };
   const goWatering = () => {
     setView({ name: "watering" });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   };
   // Front-garden zones live on their own plan; "back to the garden" from one
   // of these must return to the front plan, not the back-garden plan.
@@ -88,7 +88,7 @@ function App() {
      "frontStone", "frontBoxHedge", "frontHedge", "frontApple"].includes(k);
   const goPlanFromBed = () => {
     setView((prev) => ({ name: isFrontZone(prev.zoneKey) ? "frontplan" : "plan" }));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   };
 
   // Crumbs / chrome content depends on view
@@ -99,27 +99,25 @@ function App() {
   const inWatering = view.name === "watering" || (view.name === "plant" && wateringPlantReturn);
 
   return (
-    <div className="app-root" data-palette={t.palette}>
+    <div className="app-root" data-palette={palette}>
       <div id="app-content">
       <header className="chrome">
         <div className="brand">
           <span className="crest">Oak Lodge</span>
           <span className="sub">— a garden notebook</span>
         </div>
-        <div className="crumb-bar">
+        <nav className="crumb-bar" aria-label="Garden journal">
           <button
             className="ghostbtn"
             aria-pressed={view.name === "plan" || (inBed && !inFrontBed)}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{ minHeight: 32 }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); scrollToTop(); }}
           >
             Back Garden
           </button>
           <button
             className="ghostbtn"
             aria-pressed={view.name === "frontplan" || inFrontBed}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{ minHeight: 32 }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); scrollToTop(); }}
           >
             Front Garden
           </button>
@@ -127,7 +125,6 @@ function App() {
             className="ghostbtn"
             aria-pressed={inCalendar}
             onClick={goCalendar}
-            style={{ minHeight: 32 }}
           >
             Seasonal calendar
           </button>
@@ -135,7 +132,6 @@ function App() {
             className="ghostbtn"
             aria-pressed={inWatering}
             onClick={goWatering}
-            style={{ minHeight: 32 }}
           >
             Watering guide
           </button>
@@ -145,8 +141,11 @@ function App() {
               <span className="t-mono" style={{ color: "var(--ink)" }}>{breadcrumb}</span>
             </>
           )}
+        </nav>
+        <PaletteSwitcher active={palette} onChange={setPalette} />
+        <div className="t-mono journal-count">
+          {Object.keys(window.OAK.PLANT_BY_ID || {}).length} plants
         </div>
-        <div className="t-mono" style={{ opacity: 0.7 }}>v.2026.05</div>
       </header>
 
       <main className="paper-main">
@@ -180,36 +179,6 @@ function App() {
         </div>
       </main>
 
-      {/* Tweaks panel — palette switcher */}
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Season / palette" />
-        <div className="palette-grid">
-          {[
-            { id: "spring", label: "Spring", paper: "#f3ecda", ink: "#2b271c", accent: "#9c5a2c" },
-            { id: "summer", label: "Summer", paper: "#f6efd9", ink: "#3a2f1d", accent: "#bb6a2c" },
-            { id: "autumn", label: "Autumn", paper: "#ece1c9", ink: "#2d2014", accent: "#a8501f" },
-            { id: "winter", label: "Winter", paper: "#ecebe3", ink: "#1f2024", accent: "#6a7e8c" },
-            { id: "night",  label: "Night",  paper: "#1c2018", ink: "#e7e0cb", accent: "#d6a168" },
-          ].map((p) => (
-            <button
-              key={p.id}
-              className={"palette-card" + (t.palette === p.id ? " is-on" : "")}
-              onClick={() => setTweak("palette", p.id)}
-              title={p.label}
-            >
-              <div className="palette-swatch" style={{ background: p.paper }}>
-                <span style={{ background: p.ink }} />
-                <span style={{ background: p.accent }} />
-              </div>
-              <span className="palette-label">{p.label}</span>
-            </button>
-          ))}
-        </div>
-        <TweakSection label="Notes" />
-        <div className="t-mono" style={{ fontSize: 11, opacity: 0.7, lineHeight: 1.5 }}>
-          Switch the seasonal palette to match the month, or flip to <em>Night</em> for late-evening reading. Photos render with placeholder hatching where image files aren't wired up yet.
-        </div>
-      </TweaksPanel>
       </div>
 
       {view.name === "plant" && currentPlant && (
@@ -260,10 +229,14 @@ function App() {
           display: flex; align-items: center; gap: 4px;
           flex: 2; justify-content: center;
         }
+        .journal-count { opacity: 0.75; white-space: nowrap; }
+        @media (max-width: 900px) {
+          .journal-count { display: none; }
+        }
         @media (max-width: 700px) {
           .chrome { padding: 10px 14px; flex-wrap: wrap; gap: 6px; }
           .chrome .brand .sub { display: none; }
-          .crumb-bar { flex: 1; justify-content: flex-end; }
+          .crumb-bar { order: 3; flex: 1 0 100%; justify-content: flex-start; overflow-x: auto; padding-bottom: 2px; }
         }
         .paper-main {
           padding: 28px clamp(14px, 4vw, 56px) 60px;
@@ -276,47 +249,6 @@ function App() {
           border-radius: 1px;
         }
 
-        /* Palette tweak swatches */
-        .palette-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 6px;
-          padding: 0 0 6px;
-        }
-        .palette-card {
-          background: transparent;
-          border: 1px solid rgba(0,0,0,0.08);
-          border-radius: 6px;
-          padding: 6px 4px 4px;
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 4px;
-          font: inherit;
-        }
-        .palette-card:hover { border-color: rgba(0,0,0,0.2); }
-        .palette-card.is-on {
-          border-color: rgba(0,0,0,0.55);
-          background: rgba(0,0,0,0.04);
-        }
-        .palette-swatch {
-          width: 100%; aspect-ratio: 1.4;
-          border-radius: 4px;
-          position: relative;
-          overflow: hidden;
-          box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
-        }
-        .palette-swatch span {
-          position: absolute; bottom: 4px; width: 28%; height: 28%; border-radius: 50%;
-        }
-        .palette-swatch span:nth-child(1) { left: 6px; }
-        .palette-swatch span:nth-child(2) { right: 6px; }
-        .palette-label {
-          font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-          font-size: 10px;
-          letter-spacing: 0.04em;
-        }
       `}</style>
     </div>
   );

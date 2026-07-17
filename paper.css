@@ -11,31 +11,31 @@
   --paper: #f3ecda;
   --paper-deep: #e8dec5;
   --ink: #2b271c;
-  --pencil: #7a6e54;
+  --pencil: #6f624a;
   --stamp: #a23a2c;
   --green: #4f6d35;
   --accent: #9c5a2c;
   --tape: #e7d9b8;
 
   --ink-soft: color-mix(in oklab, var(--ink) 70%, var(--paper) 30%);
-  --ink-faint: color-mix(in oklab, var(--ink) 35%, var(--paper) 65%);
-  --hairline: color-mix(in oklab, var(--ink) 18%, var(--paper) 82%);
+  --ink-faint: color-mix(in oklab, var(--ink) 68%, var(--paper) 32%);
+  --hairline: color-mix(in oklab, var(--ink) 50%, var(--paper) 50%);
 }
 
 [data-palette="summer"] {
   --paper: #f6efd9; --paper-deep: #ead9b0; --ink: #3a2f1d;
-  --pencil: #8c7a4f; --stamp: #c0762a; --green: #6a8a3a;
-  --accent: #bb6a2c; --tape: #ecd99b;
+  --pencil: #6d5b38; --stamp: #84450f; --green: #49641f;
+  --accent: #874711; --tape: #ecd99b;
 }
 [data-palette="autumn"] {
   --paper: #ece1c9; --paper-deep: #d9c8a3; --ink: #2d2014;
   --pencil: #7a5a3a; --stamp: #8a3a18; --green: #5a5a25;
-  --accent: #a8501f; --tape: #d6b876;
+  --accent: #8c3e16; --tape: #d6b876;
 }
 [data-palette="winter"] {
   --paper: #ecebe3; --paper-deep: #d8d6c9; --ink: #1f2024;
   --pencil: #5d6166; --stamp: #5a6a85; --green: #3f5a45;
-  --accent: #6a7e8c; --tape: #cfd3c4;
+  --accent: #4d6370; --tape: #cfd3c4;
 }
 [data-palette="night"] {
   --paper: #1c2018; --paper-deep: #141911; --ink: #e7e0cb;
@@ -44,6 +44,8 @@
 }
 
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 html, body {
   margin: 0;
@@ -62,6 +64,30 @@ body {
     radial-gradient(ellipse at 30% 20%, color-mix(in oklab, var(--paper) 96%, var(--ink) 4%) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 80%, color-mix(in oklab, var(--paper-deep) 80%, var(--ink) 20%) 0%, transparent 70%),
     var(--paper-deep);
+}
+
+button, input {
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+input:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .sheet {
@@ -147,11 +173,12 @@ body {
 .plant-pin-glow { opacity: 0; transition: opacity 180ms ease; }
 .plant-pin:focus { outline: none; }
 .plant-pin:focus circle:not(.plant-pin-glow) { stroke: var(--accent); stroke-width: 1.5; }
+.plant-pin:focus-visible circle:not(.plant-pin-glow) { stroke-width: 2.5; }
 
 .inkbtn {
   font-family: var(--hand); font-size: 22px;
   background: transparent; color: var(--ink); border: 0; cursor: pointer;
-  padding: 4px 8px; display: inline-flex; align-items: center; gap: 8px; line-height: 1;
+  padding: 8px; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; line-height: 1;
 }
 .inkbtn:hover { color: var(--accent); }
 .inkbtn .arr { font-family: var(--serif); font-size: 22px; }
@@ -159,7 +186,7 @@ body {
 .ghostbtn {
   font-family: var(--type); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
   background: transparent; border: 1px solid var(--hairline); color: var(--ink-soft);
-  padding: 8px 12px; cursor: pointer; border-radius: 1px;
+  padding: 8px 12px; min-height: 44px; cursor: pointer; border-radius: 1px;
 }
 .ghostbtn:hover { background: color-mix(in oklab, var(--ink) 5%, transparent); color: var(--ink); }
 .ghostbtn[aria-pressed="true"] {
@@ -226,3 +253,15 @@ body {
 .gap-2 { gap: 8px; } .gap-3 { gap: 12px; } .gap-4 { gap: 16px; } .gap-5 { gap: 20px; } .gap-6 { gap: 24px; } .gap-8 { gap: 32px; }
 
 ::selection { background: color-mix(in oklab, var(--accent) 30%, transparent); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

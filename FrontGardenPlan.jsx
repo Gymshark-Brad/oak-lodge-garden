@@ -124,7 +124,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
       <header className="plan-head">
         <div>
           <div className="t-stamp">Plot · Oak Lodge · Bromsgrove · front elevation</div>
-          <div className="t-display plan-title">The front garden, drawn from above</div>
+          <h1 className="t-display plan-title">The front garden, drawn from above</h1>
           <div className="t-hand" style={{ fontSize: 22, color: "var(--pencil)", marginTop: 6 }}>
             measured survey, july 2026 · tap any bed to open it ·
           </div>
@@ -366,6 +366,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
           background: transparent;
           border: 0;
           padding: 6px 4px;
+          min-height: 44px;
           cursor: pointer;
           text-align: left;
           border-bottom: 1px dotted var(--hairline);
@@ -388,7 +389,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
         }
         .plan-title {
           font-size: clamp(28px, 4.4vw, 52px);
-          line-height: 1.04; margin-top: 6px; max-width: 16ch;
+          line-height: 1.04; margin: 6px 0 0; max-width: 16ch;
         }
         .plan-compass { text-align: right; flex-shrink: 0; }
         @media (max-width: 600px) {
