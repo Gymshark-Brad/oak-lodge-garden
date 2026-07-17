@@ -281,11 +281,14 @@ As of June 2026, all beds and new zones have photos. June update photos (Bed 3 r
 
 ## Backlog
 
-See `BACKLOG.md` for the full prioritised list. Current top items:
+See `BACKLOG.md` for the full prioritised list. Audit remediation is ordered ahead of new product work:
 
-1. **Monthly timeline view** — build month tabs or before/after slider per bed. BedDetail.jsx already reads the last month key dynamically — just needs the UI.
-2. **Mobile swipe on photo gallery** — polaroid layout needs touch/swipe support on iPhone.
-3. **CoWork auto-update of data.js** — close the last manual step in the monthly workflow.
+1. **Data and deployment foundations** — remove the Bed 2/3 runtime mutation, regenerate stale data copies from `data.js`, and harden `deploy.sh`.
+2. **Resilient loading and navigation** — self-host pinned runtime dependencies, add hash routing/history, and add browser smoke checks.
+3. **Repository cleanup** — remove raw and duplicate assets only after Brad confirms the external backups and stale branch decision.
+4. **Plant identity and safety** — confirm generic plant records from labels/photos, then add relevant toxicity and handling cautions.
+
+Product work retained for after remediation: monthly bed timelines, mobile gallery swipe and automatic registration of monthly photos in `data.js`.
 
 **Done and off the list:**
 - Watering guide (`WateringGuide.jsx` + `watering-data.js`) — weekly frequency grid by zone, plus an "overwatering watch" section flagging drought-tolerant plants sharing a bed/pot with thirstier neighbours (July 2026)
