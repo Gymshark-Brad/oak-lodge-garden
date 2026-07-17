@@ -7,6 +7,8 @@ const { useMemo, useState } = React;
 function GardenPlan({ onOpenZone, dark }) {
   const Z = window.OAK.ZONES;
   const [hover, setHover] = useState(null);
+  const hasPhotos = (key) => Object.values(window.OAK.PHOTOS_BY_MONTH)
+    .some((month) => month[key] && month[key].length > 0);
 
   // Zones rendered in z-order: hardscape first, beds on top, pots on top
   const order = [
@@ -47,7 +49,7 @@ function GardenPlan({ onOpenZone, dark }) {
     const z = Z[key];
     const isHover = hover === key;
     const isPot = z.isPot;
-    const isInteractive = z.plantKey || ["patio", "stone", "pear"].includes(key);
+    const isInteractive = !!z.plantKey || hasPhotos(key);
     const c = z.color;
 
     // hardscape vs bed vs pot visual treatment
@@ -250,7 +252,7 @@ function GardenPlan({ onOpenZone, dark }) {
         </g>
 
         {/* Tooltip on hover */}
-        {hover && Z[hover] && Z[hover].plantKey && (
+        {hover && Z[hover] && (Z[hover].plantKey || hasPhotos(hover)) && (
           <g style={{ pointerEvents: "none" }}>
             <text
               x={Z[hover].labelXY ? Z[hover].labelXY[0] : 400}
@@ -271,7 +273,7 @@ function GardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "patio", "pear", "bigpot1", "bigpot2", "lobeliapot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2"].map((k) => {
+          {["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "patio", "steps", "lounge", "pear", "bigpot1", "bigpot2", "lobeliapot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2"].map((k) => {
             const z = Z[k];
             return (
               <button

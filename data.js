@@ -2156,6 +2156,16 @@ window.OAK = (function () {
     if (plantId && PLANT_PHOTOS[plantName]) PLANT_PHOTOS_BY_ID[plantId] = PLANT_PHOTOS[plantName];
   });
 
+  // Cards and galleries use lightweight display derivatives. Originals stay
+  // available for the full-screen lightboxes, and components fall back to
+  // them automatically if a newly added thumbnail has not been generated yet.
+  const thumbnailFor = (src) => {
+    if (!src || !src.startsWith("images/") || src.startsWith("images/thumbs/")) return src;
+    return src
+      .replace(/^images\//, "images/thumbs/")
+      .replace(/\.(?:jpe?g|webp)$/i, ".webp");
+  };
+
   return {
     ZONES,
     PLANTS,
@@ -2165,5 +2175,6 @@ window.OAK = (function () {
     PLANT_BY_ID,
     PLANT_ID_BY_ZONE_AND_NAME,
     BED_PLANT_MAPS,
+    thumbnailFor,
   };
 })();

@@ -46,12 +46,14 @@ oak-lodge-garden/
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
   WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
   watering-data.js    # Water frequency band (1–5) per plant, keyed like PLANTS
+  generate-thumbnails.py  # Builds fast display copies; originals remain for lightboxes
   BACKLOG.md          # Prioritised improvements list
   AGENTS.md           # This file
   README.md           # Basic repo info
   data/
     plants.json       # Plant data as standalone JSON (mirrors data.js PLANTS)
   images/
+    thumbs/           # Generated 360×540 max WebP display derivatives
     may-2026/         # 21 photos, all WebP, max 1200px
       bed1.jpg, bed1-close1.jpg, bed1-close2.jpg
       bed2-1.jpg, bed2-2.jpg, bed2-kitchen.jpg, bed2-steps.jpg,
@@ -246,9 +248,11 @@ view = { name: "plan" }
 2. Drops into `iCloud Drive > Documents > Personal > OperationDodford > Garden > Incoming Photos`
 3. CoWork automation (`garden-photo-sync.sh`) picks them up, converts to WebP, files to `images/[mon]-[year]/`, commits and pushes
 4. **Manual step still needed:** update `PHOTOS_BY_MONTH` in `data.js` with the new month's paths
+5. Run `python3 generate-thumbnails.py` in the repo after adding photo paths. The site falls back to originals if a thumbnail is missing, but cards and galleries will be slower until this runs.
 
 **Script location:** `~/oak-lodge-garden/garden-photo-sync.sh`
 **Naming convention:** `images/jun-2026/bed1.webp`, `images/jun-2026/patio.webp`, etc.
+**Display thumbnails:** generated under `images/thumbs/` at a maximum of 480×720px; originals are retained for full-screen viewing.
 
 ---
 

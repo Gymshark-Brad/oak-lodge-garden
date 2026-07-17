@@ -157,7 +157,10 @@ input:focus-visible,
   display: inline-block;
 }
 .polaroid .frame {
-  background: color-mix(in oklab, var(--ink) 80%, var(--paper) 20%);
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--paper-deep) 78%, var(--paper) 22%) 0 8px,
+      color-mix(in oklab, var(--paper-deep) 62%, var(--paper) 38%) 8px 16px);
   position: relative;
   overflow: hidden;
 }

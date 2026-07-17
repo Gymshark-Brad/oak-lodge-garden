@@ -59,9 +59,33 @@ function run(argv) {
     });
   });
 
+  const imageSources = new Set();
+  Object.values(OAK.PLANTS).forEach((plants) => {
+    plants.forEach((plant) => (plant.photos || []).forEach((src) => imageSources.add(src)));
+  });
+  Object.values(OAK.PHOTOS_BY_MONTH).forEach((month) => {
+    Object.values(month).forEach((entries) => {
+      if (!Array.isArray(entries)) return;
+      entries.forEach((entry) => entry && entry.src && imageSources.add(entry.src));
+    });
+  });
+  Object.values(OAK.PLANT_PHOTOS).forEach((months) => {
+    months.forEach((month) => (month.photos || []).forEach((photo) => imageSources.add(photo.src)));
+  });
+  imageSources.forEach((src) => {
+    const originalPath = `${root}/${src}`;
+    const thumbnailPath = `${root}/${OAK.thumbnailFor(src)}`;
+    if (!$.NSFileManager.defaultManager.fileExistsAtPath($(originalPath))) {
+      errors.push(`missing image: ${src}`);
+    }
+    if (!$.NSFileManager.defaultManager.fileExistsAtPath($(thumbnailPath))) {
+      errors.push(`missing thumbnail: ${OAK.thumbnailFor(src)}`);
+    }
+  });
+
   if (errors.length) {
     errors.forEach((error) => console.log(`ERROR: ${error}`));
     throw new Error(`Data audit failed with ${errors.length} error(s)`);
   }
-  console.log(`Data audit passed: ${ids.length} unique plants and all references resolved.`);
+  console.log(`Data audit passed: ${ids.length} unique plants, ${imageSources.size} image thumbnails and all references resolved.`);
 }

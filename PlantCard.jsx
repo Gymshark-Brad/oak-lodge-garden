@@ -61,6 +61,13 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
 
   const prevPhoto = () => setPhotoIdx((i) => (i - 1 + photos.length) % photos.length);
   const nextPhoto = () => setPhotoIdx((i) => (i + 1) % photos.length);
+  const displayPhoto = (src) => window.OAK.thumbnailFor(src);
+  const fallBackToOriginal = (event, original) => {
+    const image = event.currentTarget;
+    if (image.dataset.originalFallback === "true") return;
+    image.dataset.originalFallback = "true";
+    image.src = original;
+  };
 
   return (
     <AccessibleModal
@@ -108,9 +115,12 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
                   >
                     <img
                       key={latestPhoto.src}
-                      src={latestPhoto.src}
+                      src={displayPhoto(latestPhoto.src)}
                       alt={latestPhoto.caption || plant.name}
                       className="pc-photo"
+                      decoding="async"
+                      fetchPriority="high"
+                      onError={(event) => fallBackToOriginal(event, latestPhoto.src)}
                     />
                   </button>
                   <div className="t-mono" style={{ textAlign: "center", opacity: 0.55, marginTop: 6, fontSize: 10 }}>
@@ -121,9 +131,12 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
                 <div className="pc-photo-wrap">
                   <img
                     key={photos[photoIdx]}
-                    src={photos[photoIdx]}
+                    src={displayPhoto(photos[photoIdx])}
                     alt={plant.name}
                     className="pc-photo"
+                    decoding="async"
+                    fetchPriority="high"
+                    onError={(event) => fallBackToOriginal(event, photos[photoIdx])}
                   />
                   {photos.length > 1 && (
                     <div className="pc-photo-nav">
@@ -206,7 +219,14 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
                         onClick={(e) => { e.stopPropagation(); setJournalLightbox(ph); }}
                         title={ph.caption}
                       >
-                        <img src={ph.src} alt={ph.caption} className="pc-thumb" loading="lazy" />
+                        <img
+                          src={displayPhoto(ph.src)}
+                          alt={ph.caption}
+                          className="pc-thumb"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(event) => fallBackToOriginal(event, ph.src)}
+                        />
                       </button>
                     ))}
                   </div>
@@ -241,7 +261,13 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           initialFocusRef={journalCloseRef}
           zIndex={900}
         >
-          <img src={journalLightbox.src} alt={journalLightbox.caption} className="pc-journal-lb-img" />
+          <img
+            src={journalLightbox.src}
+            alt={journalLightbox.caption}
+            className="pc-journal-lb-img"
+            decoding="async"
+            fetchPriority="high"
+          />
           <div className="pc-journal-lb-cap t-hand">{journalLightbox.caption}</div>
           <button ref={journalCloseRef} className="ghostbtn pc-journal-lb-close" onClick={() => setJournalLightbox(null)}>close ✕</button>
         </AccessibleModal>

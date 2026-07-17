@@ -1,7 +1,7 @@
 // Oak Lodge Garden — BedDetail.jsx
 // One bed: description, hand-drawn plant map, plant list, photo gallery.
 
-const { useState: useState_BD, useMemo: useMemo_BD } = React;
+const { useState: useState_BD, useMemo: useMemo_BD, useEffect: useEffect_BD } = React;
 
 function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const Z = window.OAK.ZONES[zoneKey];
@@ -12,7 +12,12 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   let _latestMonth = _monthKeys[_monthKeys.length - 1];
   for (let i = _monthKeys.length - 1; i >= 0; i--) {
     const md = window.OAK.PHOTOS_BY_MONTH[_monthKeys[i]];
-    if (md && (md[zoneKey] || md[zoneKey + "Archive"])) { _latestMonth = _monthKeys[i]; break; }
+    const currentPhotos = md && md[zoneKey];
+    const currentArchive = md && md[zoneKey + "Archive"];
+    if ((currentPhotos && currentPhotos.length > 0) || (currentArchive && currentArchive.length > 0)) {
+      _latestMonth = _monthKeys[i];
+      break;
+    }
   }
   const _latestMonthData = window.OAK.PHOTOS_BY_MONTH[_latestMonth] || {};
   const photos = (_latestMonthData[zoneKey] || []);
@@ -24,6 +29,19 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
     : "The bed before the June 2026 replanting — kept here for the record.";
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
+
+  // Warm the small card images as soon as a bed opens. This keeps plant cards
+  // instant on touch devices, where there is no hover event to preload from.
+  useEffect_BD(() => {
+    plants.forEach((plant) => {
+      const journal = (window.OAK.PLANT_PHOTOS_BY_ID || {})[plant.id] || [];
+      const journalPhoto = journal[0] && journal[0].photos && journal[0].photos[0];
+      const src = journalPhoto ? journalPhoto.src : (plant.photos || [])[0];
+      if (!src) return;
+      const image = new Image();
+      image.src = window.OAK.thumbnailFor(src);
+    });
+  }, [zoneKey]);
 
   // Each plant in the list joined with its map circle by name (some plants appear once in map)
   const plantWithMap = (name) => map.find((m) => m.name === name) || null;
@@ -67,8 +85,8 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
 
       <div className="rule" style={{ margin: "20px 0 24px" }} />
 
-      {/* Map + plant list, two columns */}
-      <div className="bed-grid">
+      {/* Map + plant list, two columns. Hardscape folios go straight to photos. */}
+      {plants.length > 0 && <div className="bed-grid">
         <div className="bed-map-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>Plant map · top-down</div>
           <div className="bed-map-frame">
@@ -120,7 +138,7 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
             })}
           </ul>
         </div>
-      </div>
+      </div>}
 
       {/* Photo gallery */}
       <div style={{ marginTop: 36 }}>
@@ -383,16 +401,33 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
 // ── Photo or fallback ─────────────────────────────────────────────────
 function PhotoOrFallback({ src, caption, onClick, interactive = true }) {
   const [errored, setErrored] = useState_BD(false);
+  const displaySrc = interactive ? window.OAK.thumbnailFor(src) : src;
+  const [resolvedSrc, setResolvedSrc] = useState_BD(displaySrc);
+
+  useEffect_BD(() => {
+    setErrored(false);
+    setResolvedSrc(displaySrc);
+  }, [displaySrc]);
+
+  const handleError = () => {
+    if (resolvedSrc !== src) {
+      setResolvedSrc(src);
+    } else {
+      setErrored(true);
+    }
+  };
   const content = errored || !src ? (
     <div className="imgfallback" style={{ width: "100%", height: "100%" }}>
       <span>{caption || "photo"}</span>
     </div>
   ) : (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={caption}
       loading="lazy"
-      onError={() => setErrored(true)}
+      decoding="async"
+      fetchPriority={interactive ? "auto" : "high"}
+      onError={handleError}
     />
   );
   if (!interactive) return content;
