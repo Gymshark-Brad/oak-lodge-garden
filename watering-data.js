@@ -122,10 +122,16 @@
     },
     "Front Bed 2": {},
     "Front Bed 3": {
-      "Climbing Rose (white-pink)": 3, "Fern": 4, "Rose (pink)": 3,
+      "Climbing Rose 'Super Fairy'": 3, "Fern": 4, "Rose (pink)": 3,
     },
     "Front Bed 4": {
+      "Photinia (existing canopy)": 2,
       "The Pilgrim": 3, "The Generous Gardener": 3,
+      "Little Devil 1": 3, "Little Devil 2": 3,
+      "Lady in Red 1": 3, "Lady in Red 2": 3,
+      "Magic Carpet": 2, "Purple Gem": 2, "Flaming Silver": 3,
+      "Festuca 'Elijah Blue' (3 plants)": 1,
+      "Astrantia trio": 3,
     },
     "Front Bed 5": {
       "Cherry Laurel": 2, "Mexican Orange Blossom": 2, "Climber (unidentified)": 3,
