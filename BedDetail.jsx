@@ -45,6 +45,16 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
 
   // Each plant in the list joined with its map circle by name (some plants appear once in map)
   const plantWithMap = (name) => map.find((m) => m.name === name) || null;
+  const plantGroups = plants.reduce((groups, plant, index) => {
+    const label = plant.group || "";
+    let group = groups.find((entry) => entry.label === label);
+    if (!group) {
+      group = { label, items: [] };
+      groups.push(group);
+    }
+    group.items.push({ plant, index });
+    return groups;
+  }, []);
 
   return (
     <div className="bed-detail page-turn">
@@ -108,34 +118,43 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
             Plants · {plants.length} recorded
           </div>
           <ul className="plant-list">
-            {plants.map((p, i) => {
-              const m = plantWithMap(p.name);
-              const isHover = hoverPlant === p.name;
-              return (
-                <li key={p.id}>
-                  <button
-                    className={"plant-row" + (isHover ? " is-hover" : "")}
-                    onMouseEnter={() => setHoverPlant(p.name)}
-                    onMouseLeave={() => setHoverPlant(null)}
-                    onFocus={() => setHoverPlant(p.name)}
-                    onBlur={() => setHoverPlant(null)}
-                    onClick={() => onOpenPlant({ zoneKey, plantId: p.id })}
-                  >
-                    <div className="plant-no">№ {String(i + 1).padStart(2, "0")}</div>
-                    <div className="plant-name-block">
-                      <div className="t-display plant-name" style={{ fontSize: 26, lineHeight: 1.1 }}>
-                        {p.name}
-                      </div>
-                      <div className="t-latin" style={{ fontSize: 17 }}>
-                        {p.latin}
-                      </div>
-                    </div>
-                    <div className="plant-pos t-mono">{p.position}</div>
-                    <div className="plant-arrow">→</div>
-                  </button>
-                </li>
-              );
-            })}
+            {plantGroups.map((group) => (
+              <React.Fragment key={group.label || "plants"}>
+                {group.label && (
+                  <li className="plant-group-label">
+                    <span className="t-stamp">{group.label}</span>
+                  </li>
+                )}
+                {group.items.map(({ plant: p, index: i }) => {
+                  const m = plantWithMap(p.name);
+                  const isHover = hoverPlant === p.name;
+                  return (
+                    <li key={p.id}>
+                      <button
+                        className={"plant-row" + (isHover ? " is-hover" : "")}
+                        onMouseEnter={() => setHoverPlant(p.name)}
+                        onMouseLeave={() => setHoverPlant(null)}
+                        onFocus={() => setHoverPlant(p.name)}
+                        onBlur={() => setHoverPlant(null)}
+                        onClick={() => onOpenPlant({ zoneKey, plantId: p.id })}
+                      >
+                        <div className="plant-no">№ {String(i + 1).padStart(2, "0")}</div>
+                        <div className="plant-name-block">
+                          <div className="t-display plant-name" style={{ fontSize: 26, lineHeight: 1.1 }}>
+                            {p.name}
+                          </div>
+                          <div className="t-latin" style={{ fontSize: 17 }}>
+                            {p.latin}
+                          </div>
+                        </div>
+                        <div className="plant-pos t-mono">{p.position}</div>
+                        <div className="plant-arrow">→</div>
+                      </button>
+                    </li>
+                  );
+                })}
+              </React.Fragment>
+            ))}
           </ul>
         </div>
       </div>}
@@ -238,6 +257,13 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
         }
 
         .plant-list { list-style: none; margin: 0; padding: 0; }
+        .plant-group-label {
+          margin: 22px 0 4px;
+          padding: 0 10px 6px;
+          border-bottom: 1px dashed var(--hairline);
+          color: var(--accent);
+        }
+        .plant-group-label:first-child { margin-top: 0; }
         .plant-row {
           width: 100%;
           display: grid;

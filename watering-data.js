@@ -57,6 +57,11 @@
       "Rose": 3,
       "New Zealand Flax (cultivar to confirm)": 2,
       "Lavender": 1,
+      "Alstroemeria": 4,
+      "Petunia 'Bee's Knees'": 4,
+      "Vinca minor 'Illumination'": 3,
+      "Lythrum 'Robin'": 4,
+      "Begonia 'Carmen'": 4,
     },
     "Stone Bed": {
       "Houseleeks": 1,
@@ -120,7 +125,12 @@
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
     },
-    "Front Bed 2": {},
+    "Front Bed 2": {
+      "Coprosma 'Inferno'": 2,
+      "Coprosma 'Pina Colada'": 2,
+      "Hebe 'Kiwi' (Horopito)": 3,
+      "Wax Begonia": 4,
+    },
     "Front Bed 3": {
       "Climbing Rose 'Super Fairy'": 3, "Fern": 4, "Rose (pink)": 3,
     },
