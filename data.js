@@ -25,7 +25,7 @@ window.OAK = (function () {
       dims: "≈2m × 4.5m",
       where: "Lower level, west boundary",
       desc:
-        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry, variegated dogwood and peony give it blossom, winter stems and early-summer flowers.",
+        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry, variegated dogwood and peony are joined by Weigela, Silverbush, Maiden Pink, climbing Hydrangea, Euonymus 'Emerald Gaiety' and Avens.",
       shape: { kind: "rect", x: 30, y: 250, w: 100, h: 225 },
       color: "#6b8e4e",
       labelXY: [80, 290],
@@ -38,7 +38,7 @@ window.OAK = (function () {
       dims: "≈3.4m × 1.6m",
       where: "Lower level, running east from Bed 2",
       desc:
-        "The horizontal arm split from the former T-shaped Bed 2. A sunny run between the brick walls, planted with weigela, silverbush, dianthus, climbing hydrangea and bright Spiraea.",
+        "The horizontal arm split from the former T-shaped Bed 2. A sunny run between the brick walls, planted with Kerria, Forget-me-not, Centaurea 'Snowy Owl' and bright Spiraea.",
       shape: { kind: "rect", x: 130, y: 335, w: 170, h: 78 },
       color: "#7f9b58",
       labelXY: [215, 366],
@@ -104,7 +104,7 @@ window.OAK = (function () {
       dims: "≈6m × 3m",
       where: "Lower level, by the house",
       desc:
-        "Composite decking running along the back of the house. A mature Clematis montana climbs the left house wall.",
+        "Composite decking running along the back of the house. A mature Clematis montana and Honeysuckle climb the house wall, with the Lavender moved here from Bed 5 in July 2026.",
       shape: { kind: "rect", x: 488, y: 318, w: 277, h: 155 },
       color: "#8a7e6b",
       labelXY: [625, 395],
@@ -430,7 +430,7 @@ window.OAK = (function () {
         name: "Astilbe",
         id: "bed1-astilbe",
         latin: "Astilbe",
-        photos: ["images/plants/astilbe.webp"],
+        photos: ["images/plants/astilbe.webp", "images/plants/hardy-geranium.webp"],
         position: "Right side — feathery plumes in summer",
         light: "Partial shade; tolerates more sun if soil stays moist.",
         water: "Loves moisture. Water freely in dry spells.",
@@ -493,17 +493,6 @@ window.OAK = (function () {
         seasonal: "Continuous flowers May–October.",
       },
       {
-        name: "Hardy Geranium",
-        id: "bed1-hardy-geranium",
-        latin: "Geranium spp.",
-        photos: ["images/plants/hardy-geranium.webp"],
-        position: "Front-right — spreading low clumps",
-        light: "Sun to partial shade. Very adaptable.",
-        water: "Low to moderate once established.",
-        care: "Cut back hard after first flush for a second showing. Divide every 3–4 years.",
-        seasonal: "Deeply lobed foliage from April; purple-blue flowers May–July, often a second flush in autumn.",
-      },
-      {
         name: "Wintercreeper",
         id: "bed1-wintercreeper",
         latin: "Euonymus fortunei",
@@ -524,17 +513,6 @@ window.OAK = (function () {
         water: "Regular watering, especially in dry spells. Don't let soil dry out completely.",
         care: "Rich, well-drained soil. Mulch the crown. Stake if it gets tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early to encourage bushiness. Deadhead spent flowers for continuous blooming.",
         seasonal: "Dark bronze-black foliage from May; red flowers July–October; dies back after first hard frost. Tubers overwinter underground with protection.",
-      },
-      {
-        name: "Avens",
-        id: "bed1-avens",
-        latin: "Geum",
-        photos: ["images/june-2026-updates/avens-bed1.webp", "images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp"],
-        position: "Front — orange flowers. Moved from Bed 3 in June 2026.",
-        light: "Sun or partial shade.",
-        water: "Moderate.",
-        care: "Deadhead to encourage a second flush. Divide clumps every few years.",
-        seasonal: "Orange flowers May–July, often a second flush in late summer.",
       },
       {
         name: "Dahlia (yellow)",
@@ -649,6 +627,17 @@ window.OAK = (function () {
         seasonal: "Silver foliage all season.",
       },
       {
+        name: "Avens",
+        id: "bed2-avens",
+        latin: "Geum",
+        photos: ["images/june-2026-updates/avens-bed1.webp", "images/plants/avens-orange.webp", "images/plants/avens-red-orange.webp", "images/plants/avens-orange-2.webp"],
+        position: "Lower section — orange flowers. Moved from Bed 1 in July 2026.",
+        light: "Sun or partial shade.",
+        water: "Moderate.",
+        care: "Deadhead to encourage a second flush. Divide clumps every few years.",
+        seasonal: "Orange flowers May–July, often a second flush in late summer.",
+      },
+      {
         name: "Kerria",
         id: "bed2-kerria",
         latin: "Kerria japonica",
@@ -674,23 +663,12 @@ window.OAK = (function () {
         name: "Maiden Pink",
         id: "bed2-maiden-pink",
         latin: "Dianthus deltoides",
-        photos: ["images/plants/maiden-pink.webp"],
+        photos: ["images/plants/maiden-pink.webp", "images/plants/dianthus.webp", "images/plants/dianthus-1.webp", "images/plants/dianthus-2.webp"],
         position: "Between walls — pink flowers",
         light: "Full sun.",
         water: "Low; sharp drainage.",
         care: "Trim after flowering. Mat-forming.",
         seasonal: "Pink stars June–August.",
-      },
-      {
-        name: "Garden Pink",
-        id: "bed2-garden-pink",
-        latin: "Dianthus plumarius",
-        photos: ["images/plants/dianthus.webp", "images/plants/dianthus-1.webp", "images/plants/dianthus-2.webp"],
-        position: "Lower front — compact fragrant mound",
-        light: "Full sun.",
-        water: "Low. Sharp drainage essential.",
-        care: "Deadhead to extend flowering. Cut back after main flush. Replace plants every 3 years as they become woody.",
-        seasonal: "Fragrant double pink flowers June–August; silver-grey cushion foliage year-round.",
       },
       {
         name: "Centaurea 'Snowy Owl'",
@@ -838,18 +816,6 @@ window.OAK = (function () {
         water: "Moderate while establishing; drought-tolerant later, but avoid prolonged waterlogging.",
         care: "Grow in fertile, well-drained soil. Remove damaged leaves at the base in spring and mulch the crown before hard frost. Cultivar still needs confirmation from a label or diagnostic photos.",
         seasonal: "Evergreen sword-shaped foliage year-round; mature plants may produce tall flower stems in summer.",
-      },
-      {
-        name: "Lavender",
-        id: "bed5-lavender",
-        latin: "Lavandula angustifolia",
-        photos: ["images/plants/lavender.webp", "images/plants/lavender-1.webp"],
-        group: "In the bed",
-        position: "Right — grey-green foliage",
-        light: "Full sun.",
-        water: "Drought-tolerant.",
-        care: "Trim lightly after flowering and again in spring. Don't cut into old wood.",
-        seasonal: "Purple flower spikes June–August; aromatic year-round.",
       },
       {
         name: "Alstroemeria",
@@ -1019,6 +985,17 @@ window.OAK = (function () {
         water: "Moderate.",
         care: "Group 1 clematis — light prune after flowering only. Tie in new growth.",
         seasonal: "Sheets of pale pink flowers May; vigorous summer growth.",
+      },
+      {
+        name: "Lavender",
+        id: "patio-lavender",
+        latin: "Lavandula angustifolia",
+        photos: ["images/plants/lavender.webp", "images/plants/lavender-1.webp"],
+        position: "On the decking — moved from Bed 5 in July 2026",
+        light: "Full sun.",
+        water: "Drought-tolerant.",
+        care: "Trim lightly after flowering and again in spring. Don't cut into old wood.",
+        seasonal: "Purple flower spikes June–August; aromatic year-round.",
       },
     ],
     Tree: [
@@ -1688,15 +1665,9 @@ window.OAK = (function () {
   // records remain authored together above, then are divided here by their
   // physical side of the split so care cards and maps stay in sync.
   const BED3_PLANT_NAMES = new Set([
-    "Weigela",
-    "Silverbush",
     "Kerria",
     "Forget-me-not",
-    "Maiden Pink",
-    "Garden Pink",
     "Centaurea 'Snowy Owl'",
-    "Hydrangea petiolaris",
-    "Euonymus 'Emerald Gaiety'",
     "Spiraea 'Double Play Big Bang'",
   ]);
   PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_NAMES.has(plant.name));
@@ -1811,7 +1782,7 @@ window.OAK = (function () {
         { src: "images/june-2026/fatsia.webp",          caption: "Fatsia japonica" },
         { src: "images/june-2026/astilbe-1.webp",       caption: "Astilbe — flower spike emerging" },
         { src: "images/june-2026/astilbe-2.webp",       caption: "Astilbe — foliage close-up" },
-        { src: "images/june-2026-updates/avens-bed1.webp",             caption: "Avens — moved from Bed 3, June 2026" },
+        { src: "images/june-2026-updates/avens-bed1.webp",             caption: "Avens in Bed 1 — before the July move to Bed 2" },
         { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",   caption: "Dahlia (yellow) — dark foliage, newly planted" },
         { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",   caption: "Dahlia (yellow) — close-up" },
         { src: "images/june-2026-update-2/little-heath-1.webp",         caption: "Little Heath — border planting" },
@@ -1842,12 +1813,7 @@ window.OAK = (function () {
       bed3: [
         { src: "images/june-2026/centaurea-snowy-owl-1.webp", caption: "Centaurea 'Snowy Owl'" },
         { src: "images/june-2026/centaurea-snowy-owl-2.webp", caption: "Centaurea — close-up" },
-        { src: "images/june-2026/silverbush.webp",            caption: "Silverbush" },
-        { src: "images/june-2026/maiden-pink.webp",           caption: "Maiden Pink" },
-        { src: "images/june-2026/hydrangea-petiolaris.webp",  caption: "Hydrangea petiolaris" },
-        { src: "images/june-2026/weigela.webp",               caption: "Weigela" },
         { src: "images/june-2026/forget-me-not.webp",         caption: "Forget-me-not" },
-        { src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Euonymus 'Emerald Gaiety'" },
         { src: "images/june-2026-update-2/spiraea-big-bang-1.webp", caption: "Spiraea 'Double Play Big Bang'" },
         { src: "images/june-2026-update-2/spiraea-big-bang-4.webp", caption: "Spiraea — flowers" },
       ],
@@ -2085,7 +2051,12 @@ window.OAK = (function () {
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/silverbush.webp", caption: "Silverbush in flower" }] },
     ],
     "Maiden Pink": [
-      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/maiden-pink.webp", caption: "Maiden Pink" }] },
+      { month: "june-2026", label: "June 2026", photos: [
+        { src: "images/june-2026/maiden-pink.webp", caption: "Maiden Pink" },
+        { src: "images/plants/dianthus.webp", caption: "Maiden Pink in flower" },
+        { src: "images/plants/dianthus-1.webp", caption: "Pink flower detail" },
+        { src: "images/plants/dianthus-2.webp", caption: "Established clump" },
+      ]},
     ],
     "Centaurea 'Snowy Owl'": [
       { month: "june-2026", label: "June 2026", photos: [
@@ -2140,20 +2111,21 @@ window.OAK = (function () {
       { month: "june-2026", label: "June 2026", photos: [
         { src: "images/june-2026/astilbe-1.webp", caption: "Astilbe — flower spike emerging" },
         { src: "images/june-2026/astilbe-2.webp", caption: "Astilbe — foliage close-up" },
+        { src: "images/plants/hardy-geranium.webp", caption: "Astilbe foliage — additional view" },
       ]},
     ],
     "New Zealand Flax (cultivar to confirm)": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/yucca.webp", caption: "Yucca — architectural form" }] },
     ],
     "Euonymus 'Emerald Gaiety'": [
-      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "Newly moved from Bed 3 — white-margined leaves" }] },
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus-emerald-gaiety.webp", caption: "White-margined leaves; now in Bed 2" }] },
     ],
     "Apple Tree": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/apple-tree.webp", caption: "Apple Tree" }] },
     ],
     "Avens": [
-      { month: "june-2026", label: "June 2026 (Bed 1 — new location)", photos: [
-        { src: "images/june-2026-updates/avens-bed1.webp", caption: "Avens — in Bed 1" },
+      { month: "june-2026", label: "June 2026 (Bed 1 — before move to Bed 2)", photos: [
+        { src: "images/june-2026-updates/avens-bed1.webp", caption: "Avens in its former Bed 1 position" },
       ]},
       { month: "june-2026", label: "June 2026 (Bed 3 — before move)", photos: [
         { src: "images/june-2026/avens-1.webp", caption: "Avens — orange flowers" },
@@ -2169,7 +2141,7 @@ window.OAK = (function () {
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/rose.webp", caption: "Rose" }] },
     ],
     "Lavender": [
-      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/lavender.webp", caption: "Lavender — coming into flower" }] },
+      { month: "june-2026", label: "June 2026 (Bed 5 — before move to the decking)", photos: [{ src: "images/june-2026/lavender.webp", caption: "Lavender coming into flower in its former Bed 5 position" }] },
     ],
     "Houseleeks": [
       { month: "june-2026", label: "June 2026", photos: [
@@ -2333,32 +2305,30 @@ window.OAK = (function () {
       { name: "Angel Wings", x: 50, y: 80, r: 8, hue: 70 },
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
-      { name: "Hardy Geranium", x: 82, y: 88, r: 6, hue: 280 },
       { name: "Nemesia", x: 65, y: 88, r: 5, hue: 25 },
       { name: "Wintercreeper", x: 78, y: 75, r: 7, hue: 55 },
-      { name: "Avens", x: 38, y: 93, r: 6, hue: 30 },
       { name: "Dahlia (yellow)", x: 63, y: 68, r: 8, hue: 55 },
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
       { name: "Red Hot Poker", x: 10, y: 62, r: 7, hue: 25 },
       { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
     ],
     bed2: [
-      { name: "Weeping Cherry", x: 22, y: 18, r: 14, hue: 340 },
-      { name: "Variegated Dogwood", x: 22, y: 42, r: 11, hue: 0 },
-      { name: "Peony", x: 22, y: 70, r: 12, hue: 350 },
-      { name: "Angel Wings", x: 30, y: 88, r: 7, hue: 70 },
+      { name: "Weeping Cherry", x: 24, y: 16, r: 14, hue: 340 },
+      { name: "Variegated Dogwood", x: 66, y: 18, r: 11, hue: 0 },
+      { name: "Hydrangea petiolaris", x: 86, y: 34, r: 9, hue: 210 },
+      { name: "Weigela", x: 24, y: 42, r: 10, hue: 320 },
+      { name: "Silverbush", x: 58, y: 43, r: 8, hue: 70 },
+      { name: "Peony", x: 22, y: 68, r: 11, hue: 350 },
+      { name: "Maiden Pink", x: 50, y: 65, r: 6, hue: 330 },
+      { name: "Euonymus 'Emerald Gaiety'", x: 78, y: 66, r: 7, hue: 110 },
+      { name: "Avens", x: 48, y: 87, r: 7, hue: 30 },
+      { name: "Angel Wings", x: 78, y: 88, r: 7, hue: 70 },
     ],
     bed3: [
-      { name: "Hydrangea petiolaris", x: 18, y: 20, r: 10, hue: 210 },
-      { name: "Weigela", x: 35, y: 52, r: 10, hue: 320 },
-      { name: "Silverbush", x: 55, y: 52, r: 8, hue: 70 },
-      { name: "Centaurea 'Snowy Owl'", x: 78, y: 28, r: 7, hue: 200 },
-      { name: "Forget-me-not", x: 46, y: 78, r: 5, hue: 220 },
-      { name: "Maiden Pink", x: 62, y: 78, r: 5, hue: 330 },
-      { name: "Kerria", x: 58, y: 88, r: 6, hue: 55 },
-      { name: "Garden Pink", x: 72, y: 88, r: 5, hue: 340 },
-      { name: "Euonymus 'Emerald Gaiety'", x: 86, y: 88, r: 6, hue: 110 },
-      { name: "Spiraea 'Double Play Big Bang'", x: 72, y: 68, r: 9, hue: 330 },
+      { name: "Centaurea 'Snowy Owl'", x: 22, y: 34, r: 8, hue: 200 },
+      { name: "Forget-me-not", x: 42, y: 72, r: 6, hue: 220 },
+      { name: "Kerria", x: 52, y: 32, r: 10, hue: 55 },
+      { name: "Spiraea 'Double Play Big Bang'", x: 78, y: 58, r: 12, hue: 330 },
     ],
     bed4: [
       { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
@@ -2372,7 +2342,6 @@ window.OAK = (function () {
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
       { name: "Rose", x: 56, y: 50, r: 10, hue: 350 },
       { name: "New Zealand Flax (cultivar to confirm)", x: 24, y: 72, r: 9, hue: 90 },
-      { name: "Lavender", x: 76, y: 76, r: 9, hue: 270 },
       { name: "Alstroemeria", x: 18, y: 91, r: 7, hue: 20 },
       { name: "Petunia 'Bee's Knees'", x: 34, y: 91, r: 6, hue: 75 },
       { name: "Vinca minor 'Illumination'", x: 48, y: 91, r: 6, hue: 110 },
@@ -2390,6 +2359,7 @@ window.OAK = (function () {
     patio: [
       { name: "Clematis", x: 18, y: 50, r: 14, hue: 320 },
       { name: "Honeysuckle", x: 82, y: 50, r: 10, hue: 50 },
+      { name: "Lavender", x: 50, y: 78, r: 9, hue: 270 },
     ],
     pear: [
       { name: "Pear Tree", x: 50, y: 50, r: 30, hue: 100 },
@@ -2525,7 +2495,7 @@ window.OAK = (function () {
     "Angel Wings": "bed1",
     "Apple Tree": "bed4",
     "Hosta": "bed1",
-    "Lavender": "bed5",
+    "Lavender": "patio",
   };
   Object.entries(journalZoneOverrides).forEach(([plantName, zoneKey]) => {
     const plantId = (PLANT_ID_BY_ZONE_AND_NAME[zoneKey] || {})[plantName];

@@ -53,7 +53,7 @@
         { task: "Cut old leaves from Phormium / New Zealand Flax at the base", plants: ["New Zealand Flax", "New Zealand Flax (dark)"], bed: "Bed 4" },
         { task: "Prune Euonymus to shape", plants: ["Euonymus"], bed: "Bed 1" },
         { task: "Prune Wintercreeper to shape", plants: ["Wintercreeper"], bed: "Bed 1" },
-        { task: "Check Avens for signs of life and clear dead foliage", plants: ["Avens"], bed: "Bed 1" },
+        { task: "Check Avens for signs of life and clear dead foliage", plants: ["Avens"], bed: "Bed 2" },
         { task: "Mulch the Clematis base with compost or leaf mould", plants: ["Clematis"], bed: "Patio" },
         { task: "Watch for box caterpillar — check leaves regularly", plants: ["Box Hedging"], bed: "Bed 1" },
         { task: "Check Dahlia tuber for signs of life — new shoots should appear at the crown. Remove mulch gradually.", plants: ["Dahlia"], bed: "Bed 1" },
@@ -89,13 +89,13 @@
         { plant: "Rhododendron", bed: "Bed 1", note: "Lavender-purple flowers against golden variegated leaves." },
         { plant: "Peony", bed: "Bed 2", note: "Huge fragrant flowers — the heaviest week of the year." },
         { plant: "Weigela", bed: "Bed 2", note: "Pink trumpet flowers covering the shrub." },
-        { plant: "Avens", bed: "Bed 1", note: "Bright orange flowers — moved from Bed 3 in June 2026, now at home in the front of Bed 1." },
+        { plant: "Avens", bed: "Bed 2", note: "Bright orange flowers — moved from Bed 1 into Bed 2 in July 2026." },
         { plant: "Dahlia", bed: "Bed 1", note: "Newly planted — striking dark bronze-black foliage, buds forming." },
       ],
       tasks: [
         { task: "Deadhead Rhododendron carefully after flowering — snap the spent trusses cleanly", plants: ["Rhododendron"], bed: "Bed 1" },
         { task: "Prune Clematis montana lightly after flowering, tie in new growth", plants: ["Clematis"], bed: "Patio" },
-        { task: "Deadhead Avens to encourage a second flush", plants: ["Avens"], bed: "Bed 1" },
+        { task: "Deadhead Avens to encourage a second flush", plants: ["Avens"], bed: "Bed 2" },
         { task: "Plant up front door pot with summer bedding — water in well and feed fortnightly from now", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
         { task: "First clip of the box hedging (late May)", plants: ["Box Hedging"], bed: "Bed 1" },
         { task: "Plant up pots with summer bedding — water in well and feed fortnightly from now", plants: ["Fuchsia", "Verbena", "Petunia", "Lobelia", "Calibrachoa"], bed: "Big Pot 1" },
@@ -145,7 +145,7 @@
     July: {
       mood: "Lavender and bees. The hot middle of the year.",
       highlights: [
-        { plant: "Lavender", bed: "Bed 4", note: "Purple flower spikes at peak — bees from dawn." },
+        { plant: "Lavender", bed: "Patio", note: "Purple flower spikes at peak on the decking — bees from dawn." },
         { plant: "Astilbe", bed: "Bed 1", note: "Feathery pink plumes at full height." },
         { plant: "Rose", bed: "Bed 4", note: "Second wave coming through if deadheaded." },
         { plant: "Hosta", bed: "Bed 1", note: "Lilac flower spikes rising above the leaves." },
@@ -157,7 +157,7 @@
         { plant: "Gaillardia", bed: "Bed 3", note: "Peak flowering — bold oranges and reds if kept deadheaded." },
         { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Small white fragrant flowers appearing among the variegated foliage." },
         { plant: "Dahlia (yellow)", bed: "Bed 1", note: "First yellow flowers opening against that dark bronze foliage — a strong contrast." },
-        { plant: "Avens", bed: "Bed 1", note: "Second flush of orange flowers if well deadheaded through June." },
+        { plant: "Avens", bed: "Bed 2", note: "Second flush of orange flowers if well deadheaded through June." },
         { plant: "Gazania 'Orange Flame'", bed: "Front Pot", note: "Orange flame daisies at their most vivid in the summer sun." },
         { plant: "Celosia", bed: "Bed 3", note: "Vivid crested plumes in full — purple, yellow and red all going at once." },
         { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Pink flowers against orange foliage — still going strong." },
@@ -165,7 +165,7 @@
         { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Golden daisy flowers at peak — bees love them." },
       ],
       tasks: [
-        { task: "Deadhead lavender — never cut into the old woody growth", plants: ["Lavender"], bed: "Bed 4" },
+        { task: "Deadhead lavender — never cut into the old woody growth", plants: ["Lavender"], bed: "Patio" },
         { task: "Continue deadheading roses; feed with rose food after first flush", plants: ["Rose"], bed: "Bed 4" },
         { task: "Water Astilbe deeply — never let the soil dry out", plants: ["Astilbe"], bed: "Bed 1" },
         { task: "Prune Honeysuckle lightly after flowering", plants: ["Honeysuckle"], bed: "Stone Bed" },
@@ -184,7 +184,7 @@
     August: {
       mood: "Heavy with fruit. The garden looks lush but ready for its second clip.",
       highlights: [
-        { plant: "Lavender", bed: "Bed 4", note: "Still flowering, slightly faded — clip after." },
+        { plant: "Lavender", bed: "Patio", note: "Still flowering on the decking, slightly faded — clip after." },
         { plant: "Apple Tree", bed: "Bed 3", note: "First apples colouring up on the branches." },
         { plant: "Pear Tree", bed: "Tree", note: "Pears swelling, near ready." },
         { plant: "Rose", bed: "Bed 4", note: "Second flush carrying on through the heat." },
@@ -326,7 +326,7 @@
     "Apple Tree": "bed4",
     "Box Hedging": "bed1",
     "Hosta": "bed1",
-    "Lavender": "bed5",
+    "Lavender": "patio",
   };
 
   function resolvePlantReference(plantName, bedHint) {

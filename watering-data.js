@@ -17,10 +17,8 @@
       "Box Hedging": 2,
       "Euonymus": 2,
       "Nemesia": 4,
-      "Hardy Geranium": 2,
       "Wintercreeper": 2,
       "Dahlia": 4,
-      "Avens": 3,
       "Dahlia (yellow)": 4,
       "Hosta (gold)": 3,
       "Red Hot Poker": 2,
@@ -31,17 +29,17 @@
       "Variegated Dogwood": 4,
       "Peony": 3,
       "Angel Wings": 1,
-    },
-    "Bed 3": {
       "Weigela": 3,
       "Silverbush": 1,
-      "Kerria": 2,
-      "Forget-me-not": 3,
       "Maiden Pink": 1,
-      "Garden Pink": 1,
-      "Centaurea 'Snowy Owl'": 2,
       "Hydrangea petiolaris": 4,
       "Euonymus 'Emerald Gaiety'": 2,
+      "Avens": 3,
+    },
+    "Bed 3": {
+      "Kerria": 2,
+      "Forget-me-not": 3,
+      "Centaurea 'Snowy Owl'": 2,
       "Spiraea 'Double Play Big Bang'": 3,
     },
     "Bed 4": {
@@ -56,7 +54,6 @@
       "Wisteria": 1,
       "Rose": 3,
       "New Zealand Flax (cultivar to confirm)": 2,
-      "Lavender": 1,
       "Alstroemeria": 4,
       "Petunia 'Bee's Knees'": 4,
       "Vinca minor 'Illumination'": 3,
@@ -74,6 +71,7 @@
     "Patio": {
       "Honeysuckle": 3,
       "Clematis": 3,
+      "Lavender": 1,
     },
     "Tree": {
       "Pear Tree": 1,
@@ -243,10 +241,6 @@
         under: "Shallow-rooted — check the top 2–3cm and water as soon as it's dry there. Flowering slows and leaves go limp quickly once it dries out.",
         over: "Yellowing leaves, stem rot at the base, or fewer flowers despite frequent watering mean it's being overdone — let it dry slightly between waters.",
       },
-      "Hardy Geranium": {
-        under: "Check 6–8cm down. Leaves yellowing and going papery at the edges, or the whole clump flopping flat, means it's gone too long without water.",
-        over: "Rarely an issue once established, but soft, blackened stems at the base would signal it's being kept too wet.",
-      },
       "Wintercreeper": {
         under: "Check 8cm down and only water in a proper dry spell. A slight dulling of leaf colour is the only real cue.",
         over: "Very tough — yellowing leaves or soft stems at the base would be the rare overwatering sign.",
@@ -256,7 +250,7 @@
         over: "Yellowing lower leaves or soft, black patches on the stem near the base mean it's been kept too wet — dahlias rot easily in waterlogged soil.",
       },
       "Avens": {
-        under: "Check 5–6cm down. This clump was only just moved from Bed 3 (June 2026), so keep a slightly closer eye than usual — flopping foliage or fading flowers means it needs a drink while it re-establishes.",
+        under: "Check 5–6cm down. This clump moved from Bed 1 into Bed 2 in July 2026, so keep a slightly closer eye than usual — flopping foliage or fading flowers means it needs a drink while it re-establishes.",
         over: "Yellowing leaves or a mushy crown mean it's sitting too wet — a bigger risk than usual while the disturbed roots recover from the move.",
       },
       "Dahlia (yellow)": {
@@ -317,10 +311,6 @@
         under: "Check 8–10cm down; this mat-forming pink hates sitting wet far more than it minds going dry. Foliage looking dull grey-green rather than blue-green is the sign.",
         over: "Yellowing or rotting at the base, especially over winter, means it's been kept too wet — sharp drainage is essential.",
       },
-      "Garden Pink": {
-        under: "Check 8–10cm down, and only water in a genuine dry spell. Silver-grey cushion foliage looking limp rather than upright is the underwater sign.",
-        over: "Yellowing or rotting at the base means too much water — this one is far more likely to suffer from overwatering than under.",
-      },
       "Centaurea 'Snowy Owl'": {
         under: "Check 6–8cm down. Silver-green foliage going limp and flower stems flopping is the sign to water.",
         over: "Yellowing foliage or stem rot at the base would mean it's sitting too wet — otherwise a tolerant short-lived perennial.",
@@ -330,7 +320,7 @@
         over: "Yellowing leaves and poor flowering despite regular watering can mean the roots are sitting too wet — check drainage if it happens.",
       },
       "Euonymus 'Emerald Gaiety'": {
-        under: "Check 8cm down. White leaf margins fading or browning at the tips is the sign. Moved here from Bed 3 in June 2026, so keep half an eye through this first season.",
+        under: "Check 8cm down. White leaf margins fading or browning at the tips is the sign. Moved from Bed 3 into Bed 2 in July 2026, so keep half an eye through this first season.",
         over: "Very tolerant — yellowing leaves or soft stems at the base would be the rare overwatering sign.",
       },
       "Spiraea 'Double Play Big Bang'": {
@@ -428,15 +418,9 @@
   const formerBed3Signs = WATER_SIGNS["Bed 3"];
   const formerBed4Signs = WATER_SIGNS["Bed 4"];
   const bed3Names = new Set([
-    "Weigela",
-    "Silverbush",
     "Kerria",
     "Forget-me-not",
-    "Maiden Pink",
-    "Garden Pink",
     "Centaurea 'Snowy Owl'",
-    "Hydrangea petiolaris",
-    "Euonymus 'Emerald Gaiety'",
     "Spiraea 'Double Play Big Bang'",
   ]);
   WATER_SIGNS["Bed 2"] = Object.fromEntries(
@@ -447,6 +431,10 @@
   );
   WATER_SIGNS["Bed 4"] = formerBed3Signs;
   WATER_SIGNS["Bed 5"] = formerBed4Signs;
+  WATER_SIGNS["Bed 2"].Avens = WATER_SIGNS["Bed 1"].Avens;
+  delete WATER_SIGNS["Bed 1"].Avens;
+  WATER_SIGNS.Patio.Lavender = WATER_SIGNS["Bed 5"].Lavender;
+  delete WATER_SIGNS["Bed 5"].Lavender;
 
   // Pot and hanging-basket zones get ONE combined signs entry for the whole
   // container rather than one per plant — in practice the pot is watered as
