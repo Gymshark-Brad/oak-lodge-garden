@@ -1947,6 +1947,8 @@ window.OAK = (function () {
         { src: "images/jul-2026/bed2-bed5-shopping-2.webp", caption: "The July plant selection before planting" },
       ],
       frontBed3: [
+        { src: "images/jul-2026/front-bed3-super-fairy-trained.jpg", caption: "‘Super Fairy’ after deadheading, with the long stems worked back into the trellis" },
+        { src: "images/jul-2026/front-bed3-pink-rose-trained.jpg", caption: "Pink rose after deadheading and training into the wall trellis" },
         { src: "images/jul-2026/overview.webp",      caption: "Front garden overview from the entrance" },
         { src: "images/jul-2026/climbing-rose.webp", caption: "Climbing rose on the wall by Bedroom 3" },
         { src: "images/jul-2026/fern-window.webp",   caption: "Fern & climbing rose by the Bedroom 1 window" },
@@ -2277,6 +2279,16 @@ window.OAK = (function () {
       { month: "jul-2026", label: "July 2026 · Front Bed 2", photos: [
         { src: "images/jul-2026/front-bed2-wax-begonia-1.webp", caption: "Pink-and-white edge planting" },
         { src: "images/jul-2026/front-bed2-wax-begonia-2.webp", caption: "Flower detail" },
+      ]},
+    ],
+    "Climbing Rose 'Super Fairy'": [
+      { month: "jul-2026", label: "July 2026 · Front Bed 3", photos: [
+        { src: "images/jul-2026/front-bed3-super-fairy-trained.jpg", caption: "Deadheaded, with the long stems worked back into the trellis" },
+      ]},
+    ],
+    "Rose (pink)": [
+      { month: "jul-2026", label: "July 2026 · Front Bed 3", photos: [
+        { src: "images/jul-2026/front-bed3-pink-rose-trained.jpg", caption: "Deadheaded and trained into the wall trellis" },
       ]},
     ],
     "The Pilgrim": [
