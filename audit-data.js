@@ -19,6 +19,7 @@ function run(argv) {
   const root = argv[0] || ".";
   const window = {};
   eval(readText(`${root}/data.js`));
+  eval(readText(`${root}/plant-profile-data.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
 
@@ -26,6 +27,24 @@ function run(argv) {
   const errors = [];
   const ids = Object.keys(OAK.PLANT_BY_ID || {});
   if (ids.length !== new Set(ids).size) errors.push("duplicate plant IDs");
+
+  const profileFields = [
+    "description", "facts", "careGuide", "waterSigns", "seasons",
+    "problems", "botanical", "oakLodge", "sources",
+  ];
+  Object.values(OAK.PLANT_BY_ID || {}).forEach((record) => {
+    const profile = record.plant.profile;
+    if (!profile) return;
+    profileFields.forEach((field) => {
+      if (!profile[field]) errors.push(`incomplete authored profile: ${record.plant.id} / ${field}`);
+    });
+    if (!Array.isArray(profile.facts) || profile.facts.length < 4) {
+      errors.push(`insufficient profile facts: ${record.plant.id}`);
+    }
+    if (!Array.isArray(profile.seasons) || profile.seasons.length !== 4) {
+      errors.push(`incomplete seasonal profile: ${record.plant.id}`);
+    }
+  });
 
   Object.entries(OAK.BED_PLANT_MAPS).forEach(([zoneKey, pins]) => {
     pins.forEach((pin) => {

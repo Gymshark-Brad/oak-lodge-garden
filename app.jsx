@@ -45,6 +45,12 @@ function App() {
     return plantList.findIndex((p) => p.name === currentPlant.name);
   }, [currentPlant, plantList]);
 
+  const fullPageProfile = view.name === "plant" && currentPlant && currentPlant.profile;
+
+  useEffect_App(() => {
+    if (fullPageProfile) scrollToTop();
+  }, [fullPageProfile]);
+
   const openZone = (zoneKey) => {
     setView({ name: "bed", zoneKey });
     scrollToTop();
@@ -63,6 +69,7 @@ function App() {
   const openPlantFromCalendar = (args) => openPlant({ ...args, fromCalendar: true });
   const openPlantFromWatering = (args) => openPlant({ ...args, fromWatering: true });
   const closePlant = () => {
+    const returningFromFullPage = !!fullPageProfile;
     if (calendarPlantReturn) {
       setCalendarPlantReturn(false);
       setView({ name: "calendar" });
@@ -72,6 +79,7 @@ function App() {
     } else {
       setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
     }
+    if (returningFromFullPage) scrollToTop();
   };
   const goCalendar = () => {
     setView({ name: "calendar" });
@@ -156,17 +164,17 @@ function App() {
           {view.name === "frontplan" && (
             <FrontGardenPlan onOpenZone={openZone} dark={dark} />
           )}
-          {(view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
+          {!fullPageProfile && (view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
             <SeasonalCalendar
               onOpenPlant={openPlantFromCalendar}
             />
           )}
-          {inWatering && (
+          {!fullPageProfile && inWatering && (
             <WateringGuide
               onOpenPlant={openPlantFromWatering}
             />
           )}
-          {(view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn)) && (
+          {!fullPageProfile && (view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn)) && (
             <BedDetail
               key={view.zoneKey}
               zoneKey={view.zoneKey}
@@ -176,12 +184,22 @@ function App() {
               onOpenLightbox={(ph) => setLightbox(ph)}
             />
           )}
+          {fullPageProfile && (
+            <PlantProfile
+              plant={currentPlant}
+              zoneTitle={Z[view.zoneKey].title}
+              backLabel={calendarPlantReturn ? "seasonal calendar" : wateringPlantReturn ? "watering guide" : Z[view.zoneKey].title}
+              plantKey={Z[view.zoneKey].plantKey}
+              onBack={closePlant}
+              onOpenLightbox={(ph) => setLightbox(ph)}
+            />
+          )}
         </div>
       </main>
 
       </div>
 
-      {view.name === "plant" && currentPlant && (
+      {view.name === "plant" && currentPlant && !fullPageProfile && (
         <PlantCard
           plant={currentPlant}
           zoneTitle={Z[view.zoneKey].title}
