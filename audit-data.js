@@ -24,6 +24,7 @@ function run(argv) {
   eval(readText(`${root}/front-garden-profile-data.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
+  eval(readText(`${root}/cultivar-resolution-data.js`));
 
   const OAK = window.OAK;
   const errors = [];
@@ -45,6 +46,18 @@ function run(argv) {
     }
     if (!Array.isArray(profile.seasons) || profile.seasons.length !== 4) {
       errors.push(`incomplete seasonal profile: ${record.plant.id}`);
+    }
+  });
+
+  Object.entries(OAK.CULTIVAR_RESOLUTIONS || {}).forEach(([plantId, resolution]) => {
+    const record = OAK.PLANT_BY_ID[plantId];
+    if (!record) errors.push(`unresolved cultivar-resolution id: ${plantId}`);
+    if (!resolution || !["assumed", "confirmed"].includes(resolution.status)) {
+      errors.push(`invalid cultivar-resolution status: ${plantId}`);
+    }
+    const expectedSuffix = resolution.status === "assumed" ? "— assumed" : "— label confirmed";
+    if (!resolution.name.endsWith(expectedSuffix)) {
+      errors.push(`missing visible cultivar-resolution suffix: ${plantId}`);
     }
   });
 
