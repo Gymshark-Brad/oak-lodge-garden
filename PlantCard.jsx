@@ -53,6 +53,18 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
     { label: "Through the year", icon: "❋", text: plant.seasonal },
   ];
 
+  const characteristics = plant.characteristics || {};
+  const characteristicFields = [
+    { label: "Sunlight", value: characteristics.sunlight, icon: "☀" },
+    { label: "Hardiness", value: characteristics.hardiness, icon: "❄" },
+    { label: "Flowering", value: characteristics.flowering, icon: "✿" },
+    { label: "Water tolerance", value: characteristics.water, icon: "◌" },
+    { label: "Habit", value: characteristics.habit, icon: "↟" },
+    { label: "Typical size", value: characteristics.size, icon: "↔" },
+    { label: "Foliage", value: characteristics.foliage, icon: "❧" },
+    { label: "Wildlife value", value: characteristics.wildlife, icon: "♢" },
+  ].filter((field) => field.value);
+
   const specNo = (plant.latin || plant.name)
     .replace(/[^A-Za-z0-9]/g, "")
     .toUpperCase()
@@ -178,9 +190,25 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
             </div>
           </div>
 
+          <section className="pc-profile" aria-labelledby="plant-profile-heading">
+            <div id="plant-profile-heading" className="t-stamp">About this plant</div>
+            <p className="pc-description">{plant.description}</p>
+            <div className="pc-characteristics" aria-label="Plant characteristics">
+              {characteristicFields.map((field) => (
+                <div key={field.label} className="pc-characteristic">
+                  <span className="pc-characteristic-icon" aria-hidden="true">{field.icon}</span>
+                  <span>
+                    <span className="pc-characteristic-label">{field.label}</span>
+                    <span className="pc-characteristic-value">{field.value}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <div className="rule" style={{ margin: "8px 0 16px" }} />
 
-          {/* Care fields */}
+          <div className="t-stamp pc-care-heading">Oak Lodge care notes</div>
           <div className="pc-fields">
             {fields.map((f) => (
               <div key={f.label} className="pc-field">
@@ -364,6 +392,76 @@ function PlantCard({ plant, zoneTitle, plantKey, onClose, onPrev, onNext }) {
           transition: opacity 0.15s;
         }
         .pc-photo-btn:hover { opacity: 1; }
+        .pc-profile {
+          margin: 2px 0 20px;
+          padding: 18px 20px;
+          border: 1px solid var(--hairline);
+          background:
+            linear-gradient(102deg, color-mix(in oklab, var(--paper-deep) 26%, transparent), transparent 46%),
+            color-mix(in oklab, var(--paper) 96%, var(--green) 4%);
+          position: relative;
+        }
+        .pc-profile::after {
+          content: "";
+          position: absolute;
+          inset: 4px;
+          border: 1px dashed color-mix(in oklab, var(--ink) 10%, transparent);
+          pointer-events: none;
+        }
+        .pc-description {
+          position: relative;
+          z-index: 1;
+          margin: 8px 0 16px;
+          max-width: 70ch;
+          font-family: var(--serif);
+          font-size: 19px;
+          line-height: 1.5;
+          color: var(--ink);
+          text-wrap: pretty;
+        }
+        .pc-characteristics {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 1px;
+          background: var(--hairline);
+          border: 1px solid var(--hairline);
+        }
+        .pc-characteristic {
+          min-width: 0;
+          display: grid;
+          grid-template-columns: 22px 1fr;
+          gap: 7px;
+          align-items: start;
+          padding: 10px;
+          background: color-mix(in oklab, var(--paper) 97%, var(--green) 3%);
+        }
+        .pc-characteristic-icon { color: var(--accent); line-height: 1.1; }
+        .pc-characteristic-label,
+        .pc-characteristic-value { display: block; }
+        .pc-characteristic-label {
+          margin-bottom: 3px;
+          font-family: var(--type);
+          font-size: 9px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--pencil);
+        }
+        .pc-characteristic-value {
+          font-family: var(--serif);
+          font-size: 13px;
+          line-height: 1.3;
+          color: var(--ink);
+        }
+        .pc-care-heading { margin: 0 0 8px; }
+        @media (max-width: 760px) {
+          .pc-characteristics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 420px) {
+          .pc-profile { padding: 16px 14px; }
+          .pc-characteristics { grid-template-columns: 1fr; }
+        }
         .pc-fields {
           display: grid;
           grid-template-columns: 1fr 1fr;

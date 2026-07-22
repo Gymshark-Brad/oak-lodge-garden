@@ -1,304 +1,2985 @@
 {
   "Bed 1": [
     {
-      "name": "Angel Wings",
-      "latin": "Senecio candicans",
-      "light": "Full sun",
-      "water": "Well-drained soil; drought-tolerant.",
-      "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.",
-      "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."
-    },
-    {
-      "name": "Astilbe",
-      "latin": "Astilbe",
-      "light": "Partial to full shade",
-      "water": "Moist to wet soil; do not let dry out.",
-      "care": "Leave dried flower heads for winter interest or cut back in autumn.",
-      "seasonal": "Herbaceous perennial. Dies back in winter. Feathery flower plumes appear in summer."
-    },
-    {
-      "name": "Box Hedging",
-      "latin": "Buxus sempervirens",
-      "light": "Full sun to full shade.",
-      "water": "Tolerates most well-drained soils. Water regularly when newly planted; established plants are fairly drought-tolerant.",
-      "care": "Clip twice a year (late spring and late summer) to maintain a neat shape. Watch for box blight and box tree caterpillar.",
-      "seasonal": "Evergreen. Retains dense, glossy green foliage year-round. Produces small insignificant flowers in spring."
-    },
-    {
-      "name": "English Daisy",
-      "latin": "Bellis perennis",
-      "light": "Full sun to partial shade.",
-      "water": "Moist, well-drained soil. Water regularly.",
-      "care": "Deadhead spent flowers to encourage continued blooming. Can self-seed freely.",
-      "seasonal": "Short-lived perennial often grown as a biennial. Produces pink, red, or white pom-pom flowers from early spring through summer. May die back in hot summers."
-    },
-    {
-      "name": "Euonymus",
-      "latin": "Euonymus fortunei (golden variety)",
-      "light": "Full sun to partial shade.",
-      "water": "Tolerates most soils; average watering.",
-      "care": "Prune in spring to maintain shape. Can be used as ground cover or trained upwards.",
-      "seasonal": "Evergreen. Keeps its bright golden-variegated foliage all year round. Colours may intensify in full sun."
-    },
-    {
-      "name": "Hosta (Plantain Lily)",
-      "latin": "Hosta",
-      "light": "Partial to full shade",
-      "water": "Rich moist soil.",
-      "care": "Watch out for slugs and snails!",
-      "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."
+      "name": "Japanese Maple",
+      "id": "bed1-japanese-maple",
+      "latin": "Acer palmatum",
+      "photos": [
+        "images/plants/japanese-maple.webp",
+        "images/plants/japanese-maple-1.webp"
+      ],
+      "position": "Back centre — dominant canopy",
+      "light": "Dappled shade to partial sun. Sheltered from harsh afternoon sun.",
+      "water": "Keep soil consistently moist but never waterlogged.",
+      "care": "Slightly acidic, well-drained loam. Mulch in spring; minimal pruning.",
+      "seasonal": "New leaves emerge red-bronze in April; fiery red autumn colour; bare and architectural in winter.",
+      "description": "Japanese Maple is a small deciduous tree grown at Oak Lodge for its distinctive garden character. New leaves emerge red-bronze in April.",
+      "characteristics": {
+        "sunlight": "Dappled shade to partial sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "New leaves emerge red-bronze in April",
+        "water": "Keep soil consistently moist but never waterlogged",
+        "habit": "Small deciduous tree",
+        "size": "4–8m high · 4–8m spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Shelter for insects and birds"
+      }
     },
     {
       "name": "Japanese Aralia",
-      "latin": "Fatsia japonica 'Spider''s Web'",
-      "light": "Partial to full shade",
-      "water": "Moist well-drained soil.",
-      "care": "Protect from harsh cold winds.",
-      "seasonal": "Evergreen. Keeps its speckled tropical leaves year-round."
-    },
-    {
-      "name": "Japanese Maple",
-      "latin": "Acer palmatum",
-      "light": "Dappled shade to partial sun.",
-      "water": "Keep soil consistently moist but not waterlogged.",
-      "care": "Slightly acidic, well-drained loam.",
-      "seasonal": "Requires minimal pruning. Remove dead or crossing branches during the dormant winter season."
+      "id": "bed1-japanese-aralia",
+      "latin": "Fatsia japonica 'Spider's Web'",
+      "photos": [
+        "images/plants/japanese-aralia.webp",
+        "images/plants/japanese-aralia-2.webp",
+        "images/plants/japanese-aralia-3.webp"
+      ],
+      "position": "Mid-centre, under the Acer",
+      "light": "Shade to partial shade. Tolerates deep shade.",
+      "water": "Moderate; let top inch dry between waterings.",
+      "care": "Rich, well-drained soil. Cut back leggy stems in spring.",
+      "seasonal": "Evergreen with cream-flecked leaves; cream globe flowers October–November.",
+      "description": "Japanese Aralia is an evergreen architectural shrub grown at Oak Lodge for its distinctive garden character. Evergreen with cream-flecked leaves.",
+      "characteristics": {
+        "sunlight": "Shade to partial shade",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Evergreen with cream-flecked leaves",
+        "water": "Moderate",
+        "habit": "Evergreen architectural shrub",
+        "size": "1.5–2.5m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
     },
     {
       "name": "Rhododendron",
+      "id": "bed1-rhododendron",
       "latin": "Rhododendron 'Goldflimmer'",
-      "light": "Partial shade",
-      "water": "Acidic (ericaceous) moist well-drained soil.",
-      "care": "Deadhead carefully after flowering. Needs ericaceous compost/fertiliser.",
-      "seasonal": "Evergreen. Keeps its variegated leaves all year. Blooms with purple flowers in late spring."
+      "photos": [
+        "images/plants/rhododendron.webp",
+        "images/plants/rhododendron-2.webp"
+      ],
+      "position": "Mid-left, variegated evergreen",
+      "light": "Partial shade. Avoid hot, dry sun.",
+      "water": "Even moisture; never waterlogged.",
+      "care": "Acidic, ericaceous soil. Mulch with leaf mould; deadhead spent flowers.",
+      "seasonal": "Evergreen golden-variegated leaves year-round; lavender-purple flowers May.",
+      "description": "Rhododendron is an evergreen flowering shrub grown at Oak Lodge for its distinctive garden character. Evergreen golden-variegated leaves year-round.",
+      "characteristics": {
+        "sunlight": "Partial shade",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Evergreen golden-variegated leaves year-round",
+        "water": "Even moisture",
+        "habit": "Evergreen flowering shrub",
+        "size": "1–1.5m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Early nectar for pollinators"
+      }
+    },
+    {
+      "name": "Astilbe",
+      "id": "bed1-astilbe",
+      "latin": "Astilbe",
+      "photos": [
+        "images/plants/astilbe.webp",
+        "images/plants/hardy-geranium.webp"
+      ],
+      "position": "Right side — feathery plumes in summer",
+      "light": "Partial shade; tolerates more sun if soil stays moist.",
+      "water": "Loves moisture. Water freely in dry spells.",
+      "care": "Humus-rich soil. Cut back to ground in late winter.",
+      "seasonal": "Pink feathery plumes June–August; ferny foliage spring–autumn.",
+      "description": "Astilbe is a clump-forming herbaceous perennial grown at Oak Lodge for its distinctive garden character. Pink feathery plumes June–August.",
+      "characteristics": {
+        "sunlight": "Partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Pink feathery plumes June–August",
+        "water": "Loves moisture",
+        "habit": "Clump-forming herbaceous perennial",
+        "size": "45–90cm high · 45–60cm spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Hosta",
+      "id": "bed1-hosta",
+      "latin": "Hosta",
+      "photos": [
+        "images/plants/hosta-patriot.webp",
+        "images/plants/hosta-patriot-2.webp",
+        "images/plants/hosta-francee.webp"
+      ],
+      "position": "Front-left, green/white variegation",
+      "light": "Shade to partial shade.",
+      "water": "Keep soil moist; mulch to retain moisture.",
+      "care": "Watch for slugs and snails. Divide clumps every few years.",
+      "seasonal": "Foliage emerges April; lilac flowers July; dies back in autumn.",
+      "description": "Hosta is a clump-forming herbaceous perennial grown at Oak Lodge for its distinctive garden character. Foliage emerges April.",
+      "characteristics": {
+        "sunlight": "Shade to partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Foliage emerges April",
+        "water": "Keep soil moist",
+        "habit": "Clump-forming herbaceous perennial",
+        "size": "30–90cm high and wide",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by bees"
+      }
+    },
+    {
+      "name": "Angel Wings",
+      "id": "bed1-angel-wings",
+      "latin": "Senecio candicans",
+      "photos": [
+        "images/plants/angel-wings-1.webp",
+        "images/plants/angel-wings-2.webp",
+        "images/plants/angel-wings-3.webp"
+      ],
+      "position": "Front-centre — silvery-white leaves",
+      "light": "Full sun to partial sun.",
+      "water": "Drought-tolerant once established. Avoid overwatering.",
+      "care": "Free-draining soil. Tender — protect or lift in hard winters.",
+      "seasonal": "Silver-white furry leaves all season; small yellow flowers if happy.",
+      "description": "Angel Wings is an evergreen foliage perennial grown at Oak Lodge for its distinctive garden character. Silver-white furry leaves all season.",
+      "characteristics": {
+        "sunlight": "Full sun to partial sun",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Silver-white furry leaves all season",
+        "water": "Drought-tolerant once established",
+        "habit": "Evergreen foliage perennial",
+        "size": "40–50cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Box Hedging",
+      "id": "bed1-box-hedging",
+      "latin": "Buxus sempervirens",
+      "photos": [
+        "images/plants/box-hedging.webp",
+        "images/plants/box-hedging-1.webp"
+      ],
+      "position": "Full right edge — clipped",
+      "light": "Sun or partial shade.",
+      "water": "Moderate; established plants tolerate dry spells.",
+      "care": "Clip twice yearly (May and August). Watch for box blight.",
+      "seasonal": "Evergreen year-round.",
+      "description": "Box Hedging is a dense evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen year-round.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen year-round",
+        "water": "Moderate",
+        "habit": "Dense evergreen shrub",
+        "size": "Kept clipped at Oak Lodge",
+        "foliage": "Evergreen",
+        "wildlife": "Year-round shelter for small wildlife"
+      }
+    },
+    {
+      "name": "Euonymus",
+      "id": "bed1-euonymus",
+      "latin": "Euonymus fortunei (golden)",
+      "photos": [
+        "images/plants/euonymus.webp",
+        "images/plants/euonymus-1.webp"
+      ],
+      "position": "Front-left corner",
+      "light": "Sun or partial shade.",
+      "water": "Moderate; very tolerant once established.",
+      "care": "Trim to shape in spring. Tough and trouble-free.",
+      "seasonal": "Golden-variegated evergreen; pink tints in cold weather.",
+      "description": "Euonymus is a garden shrub grown at Oak Lodge for its distinctive garden character. Golden-variegated evergreen.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden-variegated evergreen",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Nemesia 'Aroma Heart of Gold'",
+      "id": "bed1-nemesia",
+      "latin": "Nemesia Aroma Heart of Gold (Aroma Series)",
+      "photos": [
+        "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp",
+        "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp"
+      ],
+      "position": "Front edge — burgundy, cream and yellow; added July 2026",
+      "light": "Full sun to partial shade in a sheltered position.",
+      "water": "Keep moist but well drained, watering in dry spells to maintain flowering.",
+      "care": "Pinch the growing tips for a bushy plant. Trim flowering shoots after the first flush to encourage more blooms; protect cuttings from frost if overwintering.",
+      "seasonal": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
+      "description": "Nemesia 'Aroma Heart of Gold' is a compact bushy half-hardy perennial grown at Oak Lodge for its distinctive garden character. Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a sheltered position",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn",
+        "water": "Keep moist but well drained, watering in dry spells to maintain flowering",
+        "habit": "Compact bushy half-hardy perennial",
+        "size": "20–35cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Fragrant flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Wintercreeper",
+      "id": "bed1-wintercreeper",
+      "latin": "Euonymus fortunei",
+      "photos": [
+        "images/plants/wintercreeper.webp",
+        "images/plants/wintercreeper-silver-queen.webp",
+        "images/plants/wintercreeper-3.webp"
+      ],
+      "position": "Front-right — spreading variegated evergreen",
+      "light": "Sun or partial shade.",
+      "water": "Moderate.",
+      "care": "Trim to shape in spring. Very tough and low-care.",
+      "seasonal": "Evergreen white-and-green leaves year-round; pink tints in cold weather.",
+      "description": "Wintercreeper is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen white-and-green leaves year-round.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen white-and-green leaves year-round",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Dahlia",
+      "id": "bed1-dahlia",
+      "latin": "Dahlia (dark-leaved, Bishop type)",
+      "photos": [
+        "images/plants/dahlia-1.webp",
+        "images/plants/dahlia-2.webp",
+        "images/plants/dahlia-3.webp"
+      ],
+      "position": "Centre — dark foliage, red flowers to come",
+      "light": "Full sun. Needs warmth to thrive.",
+      "water": "Regular watering, especially in dry spells. Don't let soil dry out completely.",
+      "care": "Rich, well-drained soil. Mulch the crown. Stake if it gets tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early to encourage bushiness. Deadhead spent flowers for continuous blooming.",
+      "seasonal": "Dark bronze-black foliage from May; red flowers July–October; dies back after first hard frost. Tubers overwinter underground with protection.",
+      "description": "Dahlia is a tuberous clump-forming perennial grown at Oak Lodge for its distinctive garden character. Dark bronze-black foliage from May.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3 · tubers need winter protection",
+        "flowering": "Dark bronze-black foliage from May",
+        "water": "Regular watering, especially in dry spells",
+        "habit": "Tuberous clump-forming perennial",
+        "size": "60–120cm high · 45–60cm spread",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Open flowers feed pollinators"
+      }
+    },
+    {
+      "name": "Dahlia (yellow)",
+      "id": "bed1-dahlia-yellow",
+      "latin": "Dahlia (dark-leaved, yellow-flowered Bishop type)",
+      "photos": [
+        "images/june-2026-updates/dahlia-black-yellow-1.webp",
+        "images/june-2026-updates/dahlia-black-yellow-2.webp"
+      ],
+      "position": "Centre — dark foliage, yellow flowers to come. Added June 2026.",
+      "light": "Full sun. Needs warmth to thrive.",
+      "water": "Regular watering, especially in dry spells. Don't let soil dry out completely.",
+      "care": "Rich, well-drained soil. Mulch the crown. Stake if tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early. Deadhead for continuous blooming.",
+      "seasonal": "Dark bronze-black foliage from May; yellow flowers July–October; dies back after first hard frost. Tubers overwinter with protection.",
+      "description": "Dahlia (yellow) is a tuberous clump-forming perennial grown at Oak Lodge for its distinctive garden character. Dark bronze-black foliage from May.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3 · tubers need winter protection",
+        "flowering": "Dark bronze-black foliage from May",
+        "water": "Regular watering, especially in dry spells",
+        "habit": "Tuberous clump-forming perennial",
+        "size": "60–120cm high · 45–60cm spread",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Open flowers feed pollinators"
+      }
+    },
+    {
+      "name": "Hosta (gold)",
+      "id": "bed1-hosta-gold",
+      "latin": "Hosta 'Gold Standard'",
+      "photos": [
+        "images/plants/hosta-gold-standard.webp",
+        "images/june-2026/hosta-bed2.webp"
+      ],
+      "position": "Mid-bed — moved from Bed 2, June 2026",
+      "light": "Shade to partial shade.",
+      "water": "Keep moist.",
+      "care": "Slug protection; divide every few years.",
+      "seasonal": "Emerges April; lilac flowers July.",
+      "description": "Hosta (gold) is a clump-forming herbaceous perennial grown at Oak Lodge for its distinctive garden character. Emerges April.",
+      "characteristics": {
+        "sunlight": "Shade to partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Emerges April",
+        "water": "Keep moist",
+        "habit": "Clump-forming herbaceous perennial",
+        "size": "45–60cm high · 90cm spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by bees"
+      }
+    },
+    {
+      "name": "Little Heath",
+      "id": "bed1-little-heath",
+      "latin": "Pieris japonica 'Little Heath'",
+      "photos": [
+        "images/june-2026-update-2/little-heath-1.webp",
+        "images/june-2026-update-2/little-heath-2.webp",
+        "images/june-2026-update-2/little-heath-3.webp",
+        "images/june-2026-update-2/little-heath-4.webp",
+        "images/june-2026-update-2/little-heath-5.webp"
+      ],
+      "position": "Front edge — 7 plants forming a low border. Added June 2026.",
+      "light": "Partial shade, sheltered from cold drying winds. Tolerates sun if the soil stays moist.",
+      "water": "Keep evenly moist, especially while establishing. Do not allow the root ball to dry out or sit waterlogged.",
+      "care": "Grow in humus-rich, acidic soil or ericaceous compost. Mulch with leaf mould or composted bark. Remove faded flowers and damaged growth only; little routine pruning is needed.",
+      "seasonal": "Cream-edged evergreen foliage year-round; red young shoots and white spring flowers, usually March–May.",
+      "description": "Little Heath is a compact evergreen shrub grown at Oak Lodge for its distinctive garden character. Cream-edged evergreen foliage year-round.",
+      "characteristics": {
+        "sunlight": "Partial shade, sheltered from cold drying winds",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Cream-edged evergreen foliage year-round",
+        "water": "Keep evenly moist, especially while establishing",
+        "habit": "Compact evergreen shrub",
+        "size": "50–100cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Spring flowers support pollinators"
+      }
     }
   ],
   "Bed 2": [
     {
-      "name": "Angel Wings",
-      "latin": "Senecio candicans",
-      "light": "Full sun",
-      "water": "Well-drained soil; drought-tolerant.",
-      "care": "Avoid getting water on the velvety leaves. Protect from hard frosts.",
-      "seasonal": "Evergreen in mild areas. Offers stunning silver foliage mostly spring to autumn."
-    },
-    {
-      "name": "Forget-me-not",
-      "latin": "Myosotis",
-      "light": "Partial shade.",
-      "water": "Keep soil consistently moist.",
-      "care": "Humus-rich, moisture-retentive soil.",
-      "seasonal": "Pull up plants after flowering to prevent excessive self-seeding, or leave them if naturalising is desired."
-    },
-    {
-      "name": "Hosta (Plantain Lily)",
-      "latin": "Hosta",
-      "light": "Partial to full shade",
-      "water": "Rich moist soil.",
-      "care": "Watch out for slugs and snails!",
-      "seasonal": "Herbaceous perennial. Dies back underground in winter. Lush leaves emerge in spring."
-    },
-    {
-      "name": "Maiden Pink",
-      "latin": "Dianthus deltoides",
-      "light": "Full sun",
-      "water": "Well-drained neutral to alkaline soil.",
-      "care": "Deadhead regularly to prolong flowering.",
-      "seasonal": "Evergreen mat of foliage. Blooms with bright pink/red flowers in summer."
-    },
-    {
-      "name": "Nemesia",
-      "latin": "Nemesiaspp.",
-      "light": "Full sun to partial shade.",
-      "water": "Regular; keep the soil moist but ensure it does not become soggy.",
-      "care": "Rich, well-drained compost or soil.",
-      "seasonal": "Trim the plant back slightly after the initial flush of flowers to encourage a second display."
+      "name": "Weeping Cherry",
+      "id": "bed2-weeping-cherry",
+      "latin": "Prunus species",
+      "photos": [
+        "images/plants/weeping-cherry.webp",
+        "images/plants/weeping-cherry-1.webp",
+        "images/plants/weeping-cherry-2.webp"
+      ],
+      "position": "Upper section — overhanging the wall",
+      "light": "Full sun.",
+      "water": "Moderate; deep watering when young.",
+      "care": "Light pruning after flowering; avoid heavy cuts.",
+      "seasonal": "Pink blossom April; green canopy summer; bare winter.",
+      "description": "Weeping Cherry is a small weeping deciduous tree grown at Oak Lodge for its distinctive garden character. Pink blossom April.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pink blossom April",
+        "water": "Moderate",
+        "habit": "Small weeping deciduous tree",
+        "size": "2.5–4m high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Spring blossom for pollinators"
+      }
     },
     {
       "name": "Peony",
+      "id": "bed2-peony",
       "latin": "Paeonia lactiflora",
-      "light": "Full sun to light shade",
-      "water": "Rich well-drained soil; moderate watering.",
-      "care": "Provide plant supports for heavy flower heads. Cut back dead foliage in late autumn.",
-      "seasonal": "Herbaceous perennial. Dies back completely in winter. Huge blooms in late spring/early summer."
-    },
-    {
-      "name": "Silverbush",
-      "latin": "Convolvulus cneorum",
-      "light": "Full sun",
-      "water": "Very well-drained soil; drought-tolerant.",
-      "care": "Protect from severe winter wet and cold.",
-      "seasonal": "Evergreen. Retains silver foliage year-round. Produces white/pink flowers in spring and summer."
-    },
-    {
-      "name": "Variegated Dogwood",
-      "latin": "Cornus alba",
-      "light": "Full sun to partial shade",
-      "water": "Tolerates most soils even damp ones.",
-      "care": "Prune hard (coppice) in late winter/early spring to encourage bright new stems.",
-      "seasonal": "Deciduous. Drops leaves in autumn to reveal striking bright red winter stems."
-    },
-    {
-      "name": "Weeping Cherry",
-      "latin": "Prunus\u00a0species",
-      "light": "Full sun.",
-      "water": "Needs moderately fertile, well-drained soil. Keep the ground consistently moist but avoid waterlogged conditions.",
-      "care": "Prune during the dormant winter period only to remove dead, diseased, or crossing branches. Avoid disrupting the natural weeping form. Apply a balanced fertiliser in early spring.",
-      "seasonal": "Deciduous. Exhibits prolific spring blossoms before or alongside leaf emergence. The canopy provides summer shade before leaves turn yellow or bronze and drop in autumn."
+      "photos": [
+        "images/plants/peony.webp"
+      ],
+      "position": "Lower section",
+      "light": "Full sun, sheltered.",
+      "water": "Moderate; deep watering when budding.",
+      "care": "Don't bury the crown. Stake floppy heads. Resents being moved.",
+      "seasonal": "Huge fragrant flowers May–June; foliage to ground in autumn.",
+      "description": "Peony is a clump-forming herbaceous perennial grown at Oak Lodge for its distinctive garden character. Huge fragrant flowers May–June.",
+      "characteristics": {
+        "sunlight": "Full sun, sheltered",
+        "hardiness": "H6 · fully hardy",
+        "flowering": "Huge fragrant flowers May–June",
+        "water": "Moderate",
+        "habit": "Clump-forming herbaceous perennial",
+        "size": "75–100cm high and wide",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
     },
     {
       "name": "Weigela",
+      "id": "bed2-weigela",
       "latin": "Weigela florida",
-      "light": "Full sun to partial shade",
-      "water": "Moist well-drained soil.",
-      "care": "Prune immediately after flowering.",
-      "seasonal": "Deciduous. Drops leaves in autumn. Blooms with trumpet flowers in late spring/early summer."
-    }
-  ],
-  "Bed 3": [
-    {
-      "name": "Apple Tree",
-      "latin": "Malus domestica",
+      "photos": [
+        "images/plants/weigela.webp"
+      ],
+      "position": "Mid section",
       "light": "Full sun.",
-      "water": "Regular watering, particularly during fruit development.",
-      "care": "Well-drained, fertile soil.",
-      "seasonal": "Prune in late winter while dormant to maintain structure and encourage fruiting spurs."
+      "water": "Moderate.",
+      "care": "Prune one in three old stems after flowering.",
+      "seasonal": "Pink trumpet flowers May–June; sometimes a second flush.",
+      "description": "Weigela is a garden shrub grown at Oak Lodge for its distinctive garden character. Pink trumpet flowers May–June.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pink trumpet flowers May–June",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Silverbush",
+      "id": "bed2-silverbush",
+      "latin": "Convolvulus cneorum",
+      "photos": [
+        "images/plants/silverbush.webp",
+        "images/plants/silverbush-2.webp",
+        "images/plants/silverbush-3.webp"
+      ],
+      "position": "Mid-right — silvery foliage",
+      "light": "Full sun.",
+      "water": "Drought-tolerant. Hates wet feet.",
+      "care": "Sharp drainage essential. Light trim after flowering.",
+      "seasonal": "White trumpet flowers May–September on silver mound.",
+      "description": "Silverbush is a garden shrub grown at Oak Lodge for its distinctive garden character. White trumpet flowers May–September on silver mound.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "White trumpet flowers May–September on silver mound",
+        "water": "Drought-tolerant",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Angel Wings",
+      "id": "bed2-angel-wings",
+      "latin": "Senecio candicans",
+      "photos": [
+        "images/plants/angel-wings-1.webp",
+        "images/plants/angel-wings-2.webp",
+        "images/plants/angel-wings-3.webp"
+      ],
+      "position": "Lower, front",
+      "light": "Full sun.",
+      "water": "Drought-tolerant.",
+      "care": "Free-draining soil; tender in hard winters.",
+      "seasonal": "Silver foliage all season.",
+      "description": "Angel Wings is an evergreen foliage perennial grown at Oak Lodge for its distinctive garden character. Silver foliage all season.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Silver foliage all season",
+        "water": "Drought-tolerant",
+        "habit": "Evergreen foliage perennial",
+        "size": "40–50cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
     },
     {
       "name": "Avens",
+      "id": "bed2-avens",
       "latin": "Geum",
-      "light": "Full sun to partial shade",
-      "water": "Moist but well-drained soil; water regularly.",
-      "care": "Deadhead spent flowers to encourage more blooms.",
-      "seasonal": "Herbaceous or semi-evergreen. Produces bright flowers from late spring through summer."
+      "photos": [
+        "images/june-2026-updates/avens-bed1.webp",
+        "images/plants/avens-orange.webp",
+        "images/plants/avens-red-orange.webp",
+        "images/plants/avens-orange-2.webp"
+      ],
+      "position": "Lower section — orange flowers. Moved from Bed 1 in July 2026.",
+      "light": "Sun or partial shade.",
+      "water": "Moderate.",
+      "care": "Deadhead to encourage a second flush. Divide clumps every few years.",
+      "seasonal": "Orange flowers May–July, often a second flush in late summer.",
+      "description": "Avens is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Orange flowers May–July, often a second flush in late summer.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Orange flowers May–July, often a second flush in late summer",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
     },
     {
-      "name": "Wintercreeper",
-      "latin": "Euonymus fortunei",
-      "light": "Full sun to full shade",
-      "water": "Tolerates most soils; average watering.",
-      "care": "Prune in spring to maintain shape.",
-      "seasonal": "Evergreen shrub. Keeps its bright variegated foliage all year round."
+      "name": "Maiden Pink",
+      "id": "bed2-maiden-pink",
+      "latin": "Dianthus deltoides",
+      "photos": [
+        "images/plants/maiden-pink.webp",
+        "images/plants/dianthus.webp",
+        "images/plants/dianthus-1.webp",
+        "images/plants/dianthus-2.webp"
+      ],
+      "position": "Between walls — pink flowers",
+      "light": "Full sun.",
+      "water": "Low; sharp drainage.",
+      "care": "Trim after flowering. Mat-forming.",
+      "seasonal": "Pink stars June–August.",
+      "description": "Maiden Pink is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Pink stars June–August.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pink stars June–August",
+        "water": "Low",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Hydrangea petiolaris",
+      "id": "bed2-hydrangea-petiolaris",
+      "latin": "Hydrangea anomala subsp. petiolaris",
+      "position": "Against the far wall — self-clinging climber",
+      "light": "Partial shade to full shade. Tolerates north-facing walls.",
+      "water": "Moist but well-drained.",
+      "care": "Slow to establish; once settled it is vigorous. Light prune to shape after flowering.",
+      "seasonal": "White lace-cap flowers June–July; golden autumn leaf colour; interesting bark in winter.",
+      "description": "Hydrangea petiolaris is a climbing plant grown at Oak Lodge for its distinctive garden character. White lace-cap flowers June–July.",
+      "characteristics": {
+        "sunlight": "Partial shade to full shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "White lace-cap flowers June–July",
+        "water": "Moist but well-drained",
+        "habit": "Climbing plant",
+        "size": "2–8m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Euonymus 'Emerald Gaiety'",
+      "id": "bed2-euonymus-emerald-gaiety",
+      "latin": "Euonymus fortunei 'Emerald Gaiety'",
+      "position": "Lower section — spreading, white-margined leaves",
+      "light": "Sun or partial shade.",
+      "water": "Moderate; tolerates dry spells once established.",
+      "care": "Trim to shape in spring. Very hardy and low-maintenance. Moved from Bed 3, June 2026.",
+      "seasonal": "Evergreen white-margined leaves year-round; pink blush to the margins in cold spells.",
+      "description": "Euonymus 'Emerald Gaiety' is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen white-margined leaves year-round.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen white-margined leaves year-round",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
     }
   ],
   "Bed 4": [
     {
-      "name": "Lavender",
-      "latin": "Lavandula angustifolia",
+      "name": "Apple Tree",
+      "id": "bed4-apple-tree",
+      "latin": "Malus domestica",
+      "photos": [
+        "images/plants/apple-tree.webp",
+        "images/plants/apple-tree-1.webp"
+      ],
+      "position": "Centre — with bird feeders",
       "light": "Full sun.",
-      "water": "Well-drained, poor to moderately fertile soil. Drought-tolerant once established.",
-      "care": "Prune after flowering in late summer, cutting back to just above the woody growth. Do not cut into old wood.",
-      "seasonal": "Evergreen. Grey-green aromatic foliage year-round. Produces fragrant purple flower spikes from mid to late summer. Attractive to bees and butterflies."
+      "water": "Deep watering in dry spells, especially when fruiting.",
+      "care": "Winter prune for shape. Thin fruit in June for size.",
+      "seasonal": "Blossom April; fruit August–October; bare winter.",
+      "description": "Apple Tree is a deciduous fruit tree grown at Oak Lodge for its distinctive garden character. Blossom April.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Blossom April",
+        "water": "Deep watering in dry spells, especially when fruiting",
+        "habit": "Deciduous fruit tree",
+        "size": "Rootstock dependent",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Blossom, fruit and shelter for wildlife"
+      }
     },
     {
-      "name": "New Zealand Flax",
-      "latin": "Phormium",
-      "light": "Full sun to partial shade.",
-      "water": "Moderate; keep evenly moist during the growing season.",
-      "care": "Versatile; prefers well-drained conditions.",
-      "seasonal": "Cut back old, damaged, or untidy leaves right to the base in spring."
+      "name": "Callistemon Inferno ('Yanferno')",
+      "id": "bed4-callistemon-inferno-yanferno",
+      "latin": "Callistemon Inferno ('Yanferno')",
+      "photos": [
+        "images/june-2026-updates/callistemon-inferno-1.webp",
+        "images/june-2026-updates/callistemon-inferno-2.webp"
+      ],
+      "position": "Front-left — vivid red bottlebrush flowers",
+      "light": "Full sun. Thrives in a warm, sheltered spot.",
+      "water": "Moderate. Drought-tolerant once established. Good drainage essential.",
+      "care": "RHS hardiness H3 (about −5°C to 1°C). Keep in a warm, sheltered position and protect thoroughly from severe cold and winter winds. Prune only in summer immediately after flowering, removing a little older growth at a time.",
+      "seasonal": "Evergreen; vivid red bottlebrush flowers June–August, sometimes a repeat flush in autumn. Architectural foliage year-round.",
+      "description": "Callistemon Inferno ('Yanferno') is a compact evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Evergreen",
+        "water": "Moderate",
+        "habit": "Compact evergreen shrub",
+        "size": "1–1.5m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Nectar-rich flowers for pollinators"
+      }
+    },
+    {
+      "name": "Achillea",
+      "id": "bed4-achillea",
+      "latin": "Achillea millefolium",
+      "photos": [
+        "images/june-2026-updates/achillea.webp"
+      ],
+      "position": "Left — flat-headed flower clusters",
+      "light": "Full sun.",
+      "water": "Low to moderate. Drought-tolerant once established.",
+      "care": "Cut back after first flush for a second showing. Divide clumps every 2–3 years to keep vigorous. Good for cutting.",
+      "seasonal": "Flat-headed flower clusters in red, pink or yellow June–September; feathery aromatic foliage through the season.",
+      "description": "Achillea is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Flat-headed flower clusters in red, pink or yellow June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Flat-headed flower clusters in red, pink or yellow June–September",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Gaillardia",
+      "id": "bed4-gaillardia",
+      "latin": "Gaillardia × grandiflora",
+      "photos": [
+        "images/june-2026-updates/gaillardia.webp"
+      ],
+      "position": "Right — vivid daisy flowers",
+      "light": "Full sun.",
+      "water": "Low to moderate. Sharp drainage essential — hates wet feet.",
+      "care": "Deadhead regularly for near-continuous bloom. Cut back hard in autumn. Short-lived perennial — may need replacing every 2–3 years.",
+      "seasonal": "Vivid red, orange and yellow daisy-like flowers June–October; near-continuous if deadheaded.",
+      "description": "Gaillardia is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Vivid red, orange and yellow daisy-like flowers June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Vivid red, orange and yellow daisy-like flowers June–October",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Abelia 'Kaleidoscope'",
+      "id": "bed4-abelia-kaleidoscope",
+      "latin": "Abelia × grandiflora 'Kaleidoscope'",
+      "photos": [
+        "images/june-2026-updates/abelia-kaleidoscope.webp"
+      ],
+      "position": "Front-right — variegated foliage shrub",
+      "light": "Full sun to partial shade. Best foliage colour in full sun.",
+      "water": "Moderate. Good drainage.",
+      "care": "Light trim after flowering to maintain shape. Very low maintenance. Semi-evergreen — may drop some leaves in a hard winter but recovers readily.",
+      "seasonal": "Variegated yellow and green leaves spring–summer, turning orange-red in autumn; small white fragrant flowers July–September. Semi-evergreen.",
+      "description": "Abelia 'Kaleidoscope' is a garden shrub grown at Oak Lodge for its distinctive garden character. Variegated yellow and green leaves spring–summer, turning orange-red in autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Variegated yellow and green leaves spring–summer, turning orange-red in autumn",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Semi-evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Celosia",
+      "id": "bed4-celosia",
+      "latin": "Celosia argentea var. cristata",
+      "photos": [
+        "images/june-2026-update-2/celosia.webp"
+      ],
+      "position": "Front of the bed — purple, yellow and red varieties. Moved from Bed 1 in July 2026.",
+      "light": "Full sun.",
+      "water": "Moderate; water at the base, avoid wetting the plumes.",
+      "care": "Annual. Deadhead spent plumes to encourage more flowers. Tender — plant out after last frost. Feed fortnightly with a balanced liquid feed.",
+      "seasonal": "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
+      "description": "Celosia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Vivid crested or plumed flowers June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Vivid crested or plumed flowers June–October",
+        "water": "Moderate",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Bed 5": [
+    {
+      "name": "Wisteria",
+      "id": "bed5-wisteria",
+      "latin": "Wisteria spp.",
+      "photos": [
+        "images/plants/wisteria.webp",
+        "images/plants/wisteria-1.webp",
+        "images/plants/wisteria-2.webp"
+      ],
+      "group": "In the bed",
+      "position": "Top — cascading over the wall",
+      "light": "Full sun.",
+      "water": "Deep watering when young; established plants tolerate drought.",
+      "care": "Prune twice yearly: August (long shoots to 6 leaves) and February (back to 2–3 buds).",
+      "seasonal": "Lilac racemes May; bare gnarled stems winter.",
+      "description": "Wisteria is a vigorous deciduous climber grown at Oak Lodge for its distinctive garden character. Lilac racemes May.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Lilac racemes May",
+        "water": "Deep watering when young",
+        "habit": "Vigorous deciduous climber",
+        "size": "8–12m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by bees"
+      }
     },
     {
       "name": "Rose",
+      "id": "bed5-rose",
       "latin": "Rosa",
+      "photos": [
+        "images/plants/rose.webp"
+      ],
+      "group": "In the bed",
+      "position": "Mid — on trellis/support",
       "light": "Full sun.",
-      "water": "Regular, deep watering at the base to avoid wetting the foliage.",
-      "care": "Rich, well-drained, slightly acidic loam.",
-      "seasonal": "Prune hard in late winter or early spring. Deadhead spent blooms regularly to encourage further flowering."
+      "water": "Deep watering, mulch in spring.",
+      "care": "Prune in late winter. Feed in spring and after first flush.",
+      "seasonal": "Flowers June–September; bare winter.",
+      "description": "Rose is a deciduous flowering shrub or climber grown at Oak Lodge for its distinctive garden character. Flowers June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Flowers June–September",
+        "water": "Deep watering, mulch in spring",
+        "habit": "Deciduous flowering shrub or climber",
+        "size": "Cultivar and training dependent",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers and hips can support wildlife"
+      }
     },
     {
-      "name": "Wisteria",
-      "latin": "Wisteriaspp.",
-      "light": "Full sun.",
-      "water": "Regular watering until a deep root system is established.",
-      "care": "Well-drained, fertile soil.",
-      "seasonal": "Requires bi-annual pruning (summer and winter) to control vigorous growth and promote flower buds."
+      "name": "New Zealand Flax (cultivar to confirm)",
+      "id": "bed5-new-zealand-flax-cultivar-to-confirm",
+      "latin": "Phormium (cultivar to confirm)",
+      "photos": [
+        "images/plants/yucca.webp",
+        "images/plants/yucca-1.webp"
+      ],
+      "group": "In the bed",
+      "position": "Lower-left — striped, architectural foliage",
+      "light": "Full sun to partial shade; shelter from cold drying winds.",
+      "water": "Moderate while establishing; drought-tolerant later, but avoid prolonged waterlogging.",
+      "care": "Grow in fertile, well-drained soil. Remove damaged leaves at the base in spring and mulch the crown before hard frost. Cultivar still needs confirmation from a label or diagnostic photos.",
+      "seasonal": "Evergreen sword-shaped foliage year-round; mature plants may produce tall flower stems in summer.",
+      "description": "New Zealand Flax (cultivar to confirm) is an architectural foliage plant grown at Oak Lodge for its distinctive garden character. Evergreen sword-shaped foliage year-round.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen sword-shaped foliage year-round",
+        "water": "Moderate while establishing",
+        "habit": "Architectural foliage plant",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
     },
     {
-      "name": "Yucca",
-      "latin": "Yucca filamentosa",
-      "light": "Full sun.",
-      "water": "Very well-drained soil; highly drought-tolerant once established.",
-      "care": "Low maintenance. Remove dead or damaged leaves at the base. Wear gloves as leaf tips can be sharp.",
-      "seasonal": "Evergreen. Spiky architectural rosettes provide year-round structure. Produces tall spikes of creamy-white bell flowers in summer."
+      "name": "Alstroemeria",
+      "id": "bed5-big-pot-alstroemeria",
+      "latin": "Alstroemeria hybrid",
+      "photos": [
+        "images/jul-2026/bed5-big-pot-alstroemeria-1.webp",
+        "images/jul-2026/bed5-big-pot-alstroemeria-2.webp"
+      ],
+      "group": "Big pot",
+      "position": "Big pot — upright centre planting",
+      "light": "Full sun to partial shade; flowering is strongest with plenty of light.",
+      "water": "Keep evenly moist in the growing season, but never waterlogged.",
+      "care": "Feed weekly while flowering. Pull spent flower stems cleanly from the base rather than cutting them. Protect the pot from hard frost in winter.",
+      "seasonal": "Red-and-gold flowers from summer into autumn above dark foliage; dies back in cold weather.",
+      "description": "Alstroemeria is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Red-and-gold flowers from summer into autumn above dark foliage.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Red-and-gold flowers from summer into autumn above dark foliage",
+        "water": "Keep evenly moist in the growing season, but never waterlogged",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia 'Bee's Knees'",
+      "id": "bed5-big-pot-petunia-bees-knees",
+      "latin": "Petunia 'Bee's Knees'",
+      "photos": [
+        "images/jul-2026/bed5-big-pot-petunia-bees-knees-1.webp",
+        "images/jul-2026/bed5-big-pot-petunia-bees-knees-2.webp"
+      ],
+      "group": "Big pot",
+      "position": "Big pot — yellow flowering edge",
+      "light": "Full sun for the most flowers; tolerates light partial shade.",
+      "water": "Water when the top of the compost begins to dry; pots may need daily checks in hot weather.",
+      "care": "Feed weekly with a high-potash liquid feed and deadhead or trim leggy growth to keep flowers coming.",
+      "seasonal": "Clear yellow flowers from summer until the first frost; grown as a tender annual.",
+      "description": "Petunia 'Bee's Knees' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Clear yellow flowers from summer until the first frost.",
+      "characteristics": {
+        "sunlight": "Full sun for the most flowers",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Clear yellow flowers from summer until the first frost",
+        "water": "Water when the top of the compost begins to dry",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Vinca minor 'Illumination'",
+      "id": "bed5-big-pot-vinca-minor-illumination",
+      "latin": "Vinca minor 'Illumination'",
+      "photos": [
+        "images/jul-2026/bed5-big-pot-vinca-illumination-1.webp",
+        "images/jul-2026/bed5-big-pot-vinca-illumination-2.webp"
+      ],
+      "group": "Big pot",
+      "position": "Big pot — trailing over the rim",
+      "light": "Sun to shade; the yellow-and-green foliage colours best in bright indirect light or partial shade.",
+      "water": "Moderate. Let the surface dry slightly between waterings, without letting the pot dry out completely.",
+      "care": "Trim trailing stems to shape. Hardy and evergreen, but vigorous if later planted into open ground.",
+      "seasonal": "Golden variegated foliage year-round with small violet-blue flowers mainly in spring.",
+      "description": "Vinca minor 'Illumination' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Golden variegated foliage year-round with small violet-blue flowers mainly in spring.",
+      "characteristics": {
+        "sunlight": "Sun to shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden variegated foliage year-round with small violet-blue flowers mainly in spring",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Nemesia",
+      "id": "bed5-big-pot-nemesia",
+      "latin": "Nemesia hybrid",
+      "photos": [
+        "images/jul-2026/july-update-bed-5-nemesia.webp",
+        "images/jul-2026/july-update-bed-5-big-pot-nemesia.webp"
+      ],
+      "group": "Big pot",
+      "position": "Big pot — compact flowering filler added July 2026",
+      "light": "Full sun to light partial shade; a little afternoon shade helps during hot spells.",
+      "water": "Keep the compost evenly moist but not waterlogged; check the pot frequently in warm or windy weather.",
+      "care": "Feed fortnightly while flowering. Deadhead or trim back tired stems by about a third to encourage a fresh flush.",
+      "seasonal": "Small, scented flowers from summer into autumn; usually grown as tender seasonal colour.",
+      "description": "Nemesia is a compact seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Small, scented flowers from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Small, scented flowers from summer into autumn",
+        "water": "Keep the compost evenly moist but not waterlogged",
+        "habit": "Compact seasonal flowering plant",
+        "size": "20–40cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lythrum 'Robin'",
+      "id": "bed5-medium-pot-lythrum-robin",
+      "latin": "Lythrum salicaria 'Robin'",
+      "photos": [
+        "images/jul-2026/bed5-medium-pot-lythrum-robin-1.webp",
+        "images/jul-2026/bed5-medium-pot-lythrum-robin-2.webp",
+        "images/jul-2026/bed5-medium-pot-lythrum-robin-3.webp",
+        "images/jul-2026/bed5-medium-pot-lythrum-robin-4.webp"
+      ],
+      "group": "Medium pot",
+      "position": "Medium pot — standalone pollinator plant",
+      "light": "Full sun to partial shade; flowers best in full sun.",
+      "water": "Moisture-loving. Keep the compost consistently moist, especially during flowering.",
+      "care": "Deadhead to prolong flowering or leave some seedheads for wildlife. Cut old stems down in late winter or early spring.",
+      "seasonal": "Dense magenta flower spikes in summer, popular with bees; herbaceous and dormant in winter.",
+      "description": "Lythrum 'Robin' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Dense magenta flower spikes in summer, popular with bees.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Dense magenta flower spikes in summer, popular with bees",
+        "water": "Moisture-loving",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Begonia 'Carmen'",
+      "id": "bed5-little-pot-begonia-carmen",
+      "latin": "Begonia 'Carmen'",
+      "photos": [
+        "images/jul-2026/bed5-little-pot-begonia-carmen-1.webp",
+        "images/jul-2026/bed5-little-pot-begonia-carmen-2.webp"
+      ],
+      "group": "Little pot",
+      "position": "Little pot — red double flowers",
+      "light": "Bright partial shade or gentle morning sun; protect from harsh midday sun.",
+      "water": "Keep evenly moist but not saturated. Water the compost rather than the leaves and flowers.",
+      "care": "Deadhead faded blooms and feed fortnightly in summer. Tender — protect from frost and overwinter under cover if keeping it.",
+      "seasonal": "Double red flowers through summer and early autumn; tender and dormant or discarded after frost.",
+      "description": "Begonia 'Carmen' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Double red flowers through summer and early autumn.",
+      "characteristics": {
+        "sunlight": "Bright partial shade or gentle morning sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Double red flowers through summer and early autumn",
+        "water": "Keep evenly moist but not saturated",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ],
   "Stone Bed": [
     {
-      "name": "Aubrieta (Rock Cress)",
-      "latin": "Aubrieta deltoidea",
-      "light": "Full sun",
-      "water": "Well-drained soil; drought-tolerant once established.",
-      "care": "Shear back after blooming to keep it compact.",
-      "seasonal": "Evergreen foliage. Bursts with purple flowers in spring."
-    },
-    {
-      "name": "Cabbage Tree",
-      "latin": "Cordyline australis",
-      "light": "Full sun to partial shade.",
-      "water": "Moderate; drought-tolerant when mature.",
-      "care": "Adaptable, but requires good drainage.",
-      "seasonal": "Remove dead or yellowing leaves from the base of the tufts to maintain a tidy appearance."
-    },
-    {
-      "name": "Honeysuckle",
-      "latin": "Lonicera",
-      "light": "Full sun.",
-      "water": "Adaptable to various soil types, provided they are moist and well-drained. Water regularly during the first growing season.",
-      "care": "Prune after flowering to control growth and remove congested stems. Train new shoots along supports as required.",
-      "seasonal": "Deciduous or semi-evergreen depending on the exact species. Characterised by rapid summer growth and fragrant tubular flowers, often followed by small berries in autumn."
-    },
-    {
-      "name": "Houseleeks (Hens and Chicks)",
+      "name": "Houseleeks",
+      "id": "stone-houseleeks",
       "latin": "Sempervivum",
-      "light": "Full sun",
-      "water": "Highly well-drained/gritty soil; water sparingly.",
-      "care": "Very low maintenance. Remove dead rosettes after they flower and die.",
-      "seasonal": "Evergreen rosettes. Forms offsets (chicks) during growing season."
-    },
-    {
-      "name": "New Zealand Flax (dark)",
-      "latin": "Phormium 'Platt's Black' or similar",
-      "light": "Full sun to partial shade.",
-      "water": "Moderate; keep evenly moist during the growing season. Versatile; prefers well-drained conditions.",
-      "care": "Cut back old, damaged, or untidy leaves right to the base in spring. Protect crown from severe frost with mulch.",
-      "seasonal": "Evergreen. Dark burgundy-black sword-shaped leaves provide dramatic year-round contrast against the grey slate chippings."
-    },
-    {
-      "name": "Rosemary",
-      "latin": "Salvia rosmarinus",
+      "photos": [
+        "images/plants/houseleek.webp"
+      ],
+      "position": "Left-centre — rosettes in gravel",
       "light": "Full sun.",
-      "water": "Low; highly drought-tolerant once established. Allow soil to dry between waterings.",
-      "care": "Poor to moderately fertile, very well-drained soil.",
-      "seasonal": "Prune lightly after flowering to maintain shape and prevent the centre from becoming overly woody."
+      "water": "Very low. Hates wet.",
+      "care": "Sharp drainage; almost no maintenance.",
+      "seasonal": "Evergreen rosettes; flowering rosettes die after blooming, replaced by offsets.",
+      "description": "Houseleeks is a mat-forming evergreen succulent grown at Oak Lodge for its distinctive garden character. Evergreen rosettes.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H5 · hardy with sharp drainage",
+        "flowering": "Evergreen rosettes",
+        "water": "Very low",
+        "habit": "Mat-forming evergreen succulent",
+        "size": "5–15cm high · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by bees"
+      }
     },
     {
       "name": "Stonecrop",
-      "latin": "Sedum (various trailing types)",
-      "light": "Full sun",
-      "water": "Well-drained soil; very drought-tolerant.",
-      "care": "Low maintenance. Trim back if it gets too leggy.",
-      "seasonal": "Mostly evergreen. Flowers in summer. Leaf colours may deepen in cooler weather."
+      "id": "stone-stonecrop",
+      "latin": "Sedum (trailing)",
+      "photos": [
+        "images/plants/stonecrop-1.webp",
+        "images/plants/stonecrop-2.webp",
+        "images/plants/stonecrop-3.webp"
+      ],
+      "position": "Centre-left",
+      "light": "Full sun.",
+      "water": "Low.",
+      "care": "Free-draining soil. Cut back in late winter.",
+      "seasonal": "Foliage year-round; flowers summer–autumn.",
+      "description": "Stonecrop is a trailing succulent perennial grown at Oak Lodge for its distinctive garden character. Foliage year-round.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H5 · hardy with sharp drainage",
+        "flowering": "Foliage year-round",
+        "water": "Low",
+        "habit": "Trailing succulent perennial",
+        "size": "10–30cm high · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Late nectar for pollinators"
+      }
+    },
+    {
+      "name": "New Zealand Flax (dark)",
+      "id": "stone-new-zealand-flax-dark",
+      "latin": "Phormium 'Platt's Black'",
+      "photos": [
+        "images/plants/phormium.webp",
+        "images/plants/phormium-1.webp"
+      ],
+      "position": "Centre — dark burgundy spikes",
+      "light": "Full sun.",
+      "water": "Moderate; drought-tolerant once established.",
+      "care": "Remove old leaves at base. Architectural and low-care.",
+      "seasonal": "Evergreen dark foliage year-round.",
+      "description": "New Zealand Flax (dark) is an architectural foliage plant grown at Oak Lodge for its distinctive garden character. Evergreen dark foliage year-round.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen dark foliage year-round",
+        "water": "Moderate",
+        "habit": "Architectural foliage plant",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Rosemary",
+      "id": "stone-rosemary",
+      "latin": "Salvia rosmarinus",
+      "photos": [
+        "images/plants/rosemary.webp"
+      ],
+      "position": "Centre-right — grey-green needles",
+      "light": "Full sun.",
+      "water": "Low.",
+      "care": "Sharp drainage. Light trim after flowering.",
+      "seasonal": "Evergreen aromatic; pale blue flowers spring.",
+      "description": "Rosemary is an aromatic evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen aromatic.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H4 · hardy in a sheltered, drained spot",
+        "flowering": "Evergreen aromatic",
+        "water": "Low",
+        "habit": "Aromatic evergreen shrub",
+        "size": "1–1.5m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Early nectar for bees"
+      }
+    },
+    {
+      "name": "Cabbage Tree",
+      "id": "stone-cabbage-tree",
+      "latin": "Cordyline australis 'Red Star'",
+      "photos": [
+        "images/plants/cordyline.webp"
+      ],
+      "position": "Right — large palm-like tree",
+      "light": "Full sun.",
+      "water": "Moderate; established plants tolerate drought.",
+      "care": "Tie up leaves in winter to protect crown if hard frost forecast.",
+      "seasonal": "Evergreen burgundy fountain of leaves.",
+      "description": "Cabbage Tree is an evergreen architectural tree grown at Oak Lodge for its distinctive garden character. Evergreen burgundy fountain of leaves.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3/H4 · protect in severe cold",
+        "flowering": "Evergreen burgundy fountain of leaves",
+        "water": "Moderate",
+        "habit": "Evergreen architectural tree",
+        "size": "2.5–4m high · 1–2m spread",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Hebe",
+      "id": "stone-hebe",
+      "latin": "Hebe (syn. Veronica) cultivar",
+      "photos": [
+        "images/plants/hebe.webp"
+      ],
+      "position": "Stone Bed — variegated foliage shrub",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate. Good drainage. Dislikes waterlogging.",
+      "care": "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest 'Heartbreaker' or a closely related variegated cultivar.",
+      "seasonal": "Evergreen variegated foliage year-round; small purple-white flower spikes in summer.",
+      "description": "Hebe is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen variegated foliage year-round.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen variegated foliage year-round",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ],
   "Patio": [
     {
+      "name": "Honeysuckle",
+      "id": "stone-honeysuckle",
+      "latin": "Lonicera",
+      "photos": [
+        "images/plants/honeysuckle.webp",
+        "images/plants/honeysuckle-1.webp",
+        "images/plants/honeysuckle-2.webp"
+      ],
+      "position": "Far right — climbing on support",
+      "light": "Sun, with shaded roots.",
+      "water": "Moderate.",
+      "care": "Light prune after flowering. Train onto support.",
+      "seasonal": "Fragrant flowers June–August.",
+      "description": "Honeysuckle is a twining deciduous climber grown at Oak Lodge for its distinctive garden character. Fragrant flowers June–August.",
+      "characteristics": {
+        "sunlight": "Sun, with shaded roots",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Fragrant flowers June–August",
+        "water": "Moderate",
+        "habit": "Twining deciduous climber",
+        "size": "4–8m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Nectar, berries and nesting cover"
+      }
+    },
+    {
       "name": "Clematis",
-      "latin": "Clematis\u00a0(likely\u00a0montana)",
+      "id": "stone-clematis",
+      "latin": "Clematis montana",
+      "photos": [
+        "images/plants/clematis.webp"
+      ],
+      "position": "Left side of house wall — mature woody stems",
+      "light": "Sun, with shaded roots.",
+      "water": "Moderate.",
+      "care": "Group 1 clematis — light prune after flowering only. Tie in new growth.",
+      "seasonal": "Sheets of pale pink flowers May; vigorous summer growth.",
+      "description": "Clematis is a vigorous deciduous climber grown at Oak Lodge for its distinctive garden character. Sheets of pale pink flowers May.",
+      "characteristics": {
+        "sunlight": "Sun, with shaded roots",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Sheets of pale pink flowers May",
+        "water": "Moderate",
+        "habit": "Vigorous deciduous climber",
+        "size": "8–12m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Early flowers and nesting cover"
+      }
+    },
+    {
+      "name": "Lavender",
+      "id": "patio-lavender",
+      "latin": "Lavandula angustifolia",
+      "photos": [
+        "images/plants/lavender.webp",
+        "images/plants/lavender-1.webp"
+      ],
+      "position": "On the decking — moved from Bed 5 in July 2026",
       "light": "Full sun.",
-      "water": "Requires moist, well-drained earth. Deep watering is necessary during extended dry spells.",
-      "care": "Pruning depends on the specific group; spring-flowering types generally need minimal pruning immediately after flowering to control size. Mulch around the base to keep roots cool.",
-      "seasonal": "Deciduous. Produces vigorous growth and abundant flowers in spring. Foliage drops in autumn, leaving bare woody stems over winter."
+      "water": "Drought-tolerant.",
+      "care": "Trim lightly after flowering and again in spring. Don't cut into old wood.",
+      "seasonal": "Purple flower spikes June–August; aromatic year-round.",
+      "description": "Lavender is a compact evergreen aromatic shrub grown at Oak Lodge for its distinctive garden character. Purple flower spikes June–August.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H5 · hardy with sharp drainage",
+        "flowering": "Purple flower spikes June–August",
+        "water": "Drought-tolerant",
+        "habit": "Compact evergreen aromatic shrub",
+        "size": "45–75cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Excellent nectar for bees"
+      }
     }
   ],
   "Tree": [
     {
       "name": "Pear Tree",
+      "id": "stone-pear-tree",
       "latin": "Pyrus",
+      "photos": [
+        "images/plants/pear-tree.webp",
+        "images/plants/pear-tree-1.webp",
+        "images/plants/pear-tree-2.webp"
+      ],
+      "position": "Upper terrace — near the gate",
       "light": "Full sun.",
-      "water": "Prefers well-drained, loamy soil. Requires regular watering during the establishment phase and prolonged dry periods, particularly when fruiting.",
-      "care": "Requires annual winter pruning to maintain shape, remove dead wood, and encourage productive fruiting spurs. Monitor for common pests like aphids and diseases such as pear rust.",
-      "seasonal": "Deciduous. Blossoms in early spring, followed by leaf emergence and fruit development through summer. Harvest typically occurs in late summer or autumn, preceding leaf fall."
+      "water": "Deep watering in dry summers.",
+      "care": "Winter prune for shape. Thin fruit if heavy.",
+      "seasonal": "White blossom April; fruit September; bare winter.",
+      "description": "Pear Tree is a deciduous fruit tree grown at Oak Lodge for its distinctive garden character. White blossom April.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "White blossom April",
+        "water": "Deep watering in dry summers",
+        "habit": "Deciduous fruit tree",
+        "size": "Rootstock dependent",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Blossom, fruit and shelter for wildlife"
+      }
+    }
+  ],
+  "Big Pot 1": [
+    {
+      "name": "Fuchsia",
+      "id": "bigpot1-fuchsia",
+      "latin": "Fuchsia 'Mrs Popple'",
+      "photos": [
+        "images/plants/big-pot-1.webp",
+        "images/plants/big-pot-1-2.webp"
+      ],
+      "position": "Back centre — upright",
+      "light": "Partial shade to full sun.",
+      "water": "Keep compost moist. Water daily in hot weather.",
+      "care": "Hardy bush fuchsia. Cut back hard in spring. Feed fortnightly through summer.",
+      "seasonal": "Red and purple pendant flowers June–October; deciduous in winter; new growth from the base in spring.",
+      "description": "Fuchsia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Red and purple pendant flowers June–October.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Red and purple pendant flowers June–October",
+        "water": "Keep compost moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Verbena",
+      "id": "bigpot1-verbena",
+      "latin": "Verbena 'Showboat Light Pink'",
+      "photos": [
+        "images/plants/big-pot-1.webp"
+      ],
+      "position": "Front-left — trailing clusters",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out.",
+      "care": "Deadhead to keep flowering. Tender annual — replace yearly.",
+      "seasonal": "Clusters of soft pink flowers June–October.",
+      "description": "Verbena is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Clusters of soft pink flowers June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Clusters of soft pink flowers June–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Calibrachoa",
+      "id": "bigpot1-calibrachoa",
+      "latin": "Calibrachoa 'Cabaret Special Pink Star'",
+      "photos": [
+        "images/plants/big-pot-1.webp"
+      ],
+      "position": "Front — trailing",
+      "light": "Full sun.",
+      "water": "Keep evenly moist. Hates drying out.",
+      "care": "Feed weekly with liquid tomato food. Tender annual.",
+      "seasonal": "Pink star-patterned flowers May–October. Continuous if fed.",
+      "description": "Calibrachoa is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Pink star-patterned flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Pink star-patterned flowers May–October",
+        "water": "Keep evenly moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Nepeta",
+      "id": "bigpot1-nepeta",
+      "latin": "Nepeta (catmint)",
+      "photos": [
+        "images/plants/big-pot-1.webp"
+      ],
+      "position": "Mid — aromatic foliage",
+      "light": "Full sun.",
+      "water": "Low to moderate. Drought-tolerant once established.",
+      "care": "Cut back after first flush for a repeat. Aromatic — cats love it.",
+      "seasonal": "Lavender-blue spikes June–September; grey-green aromatic foliage.",
+      "description": "Nepeta is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Lavender-blue spikes June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Lavender-blue spikes June–September",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lobelia",
+      "id": "bigpot1-lobelia",
+      "latin": "Lobelia 'Waterfall Deep Blue Ice'",
+      "photos": [
+        "images/plants/big-pot-1.webp"
+      ],
+      "position": "Edge — trailing cascade",
+      "light": "Partial shade to full sun.",
+      "water": "Keep moist at all times. Hates drying out.",
+      "care": "Trim back leggy growth mid-season. Tender annual.",
+      "seasonal": "Deep blue and white trailing flowers May–October.",
+      "description": "Lobelia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Deep blue and white trailing flowers May–October.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Deep blue and white trailing flowers May–October",
+        "water": "Keep moist at all times",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia",
+      "id": "bigpot1-petunia",
+      "latin": "Petunia 'Midnight Sky'",
+      "photos": [
+        "images/plants/big-pot-1.webp"
+      ],
+      "position": "Front-right — dark purple trumpet flowers",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out completely.",
+      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
+      "seasonal": "Dark purple-white trumpet flowers May–October.",
+      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Dark purple-white trumpet flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Dark purple-white trumpet flowers May–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Big Pot 2": [
+    {
+      "name": "Lobelia",
+      "id": "bigpot2-lobelia",
+      "latin": "Lobelia 'Waterfall Deep Blue Ice'",
+      "photos": [
+        "images/plants/big-pot-2.webp",
+        "images/plants/big-pot-2-2.webp"
+      ],
+      "position": "Edge — trailing cascade",
+      "light": "Partial shade to full sun.",
+      "water": "Keep moist at all times. Hates drying out.",
+      "care": "Trim back leggy growth mid-season. Tender annual.",
+      "seasonal": "Deep blue and white trailing flowers May–October.",
+      "description": "Lobelia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Deep blue and white trailing flowers May–October.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Deep blue and white trailing flowers May–October",
+        "water": "Keep moist at all times",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Verbena",
+      "id": "bigpot2-verbena",
+      "latin": "Verbena 'Venturi Pink Bicolour'",
+      "photos": [
+        "images/plants/big-pot-2.webp"
+      ],
+      "position": "Front — pink and white clusters",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out.",
+      "care": "Deadhead to keep flowering. Tender annual.",
+      "seasonal": "Pink bicolour flower clusters June–October.",
+      "description": "Verbena is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Pink bicolour flower clusters June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Pink bicolour flower clusters June–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia",
+      "id": "bigpot2-petunia",
+      "latin": "Petunia 'Sky Purple White Sky'",
+      "photos": [
+        "images/plants/big-pot-2.webp"
+      ],
+      "position": "Front — purple and white trumpets",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out completely.",
+      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
+      "seasonal": "Purple-white striped trumpet flowers May–October.",
+      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Purple-white striped trumpet flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Purple-white striped trumpet flowers May–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Nepeta",
+      "id": "bigpot2-nepeta",
+      "latin": "Nepeta (catmint)",
+      "photos": [
+        "images/plants/big-pot-2.webp"
+      ],
+      "position": "Mid — aromatic foliage",
+      "light": "Full sun.",
+      "water": "Low to moderate. Drought-tolerant once established.",
+      "care": "Cut back after first flush for a repeat. Aromatic.",
+      "seasonal": "Lavender-blue spikes June–September; grey-green aromatic foliage.",
+      "description": "Nepeta is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Lavender-blue spikes June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Lavender-blue spikes June–September",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Fuchsia",
+      "id": "bigpot2-fuchsia",
+      "latin": "Fuchsia 'Mrs Popple'",
+      "photos": [
+        "images/plants/big-pot-2.webp"
+      ],
+      "position": "Back centre — upright",
+      "light": "Partial shade to full sun.",
+      "water": "Keep compost moist. Water daily in hot weather.",
+      "care": "Hardy bush fuchsia. Cut back hard in spring. Feed fortnightly through summer.",
+      "seasonal": "Red and purple pendant flowers June–October; deciduous in winter.",
+      "description": "Fuchsia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Red and purple pendant flowers June–October.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Red and purple pendant flowers June–October",
+        "water": "Keep compost moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Little Pot 1": [
+    {
+      "name": "Geranium",
+      "id": "littlepot1-geranium",
+      "latin": "Pelargonium 'Trend Sophie Dark Red'",
+      "photos": [
+        "images/plants/little-pot-1.webp"
+      ],
+      "position": "Back — upright dark red flowers",
+      "light": "Full sun.",
+      "water": "Moderate. Let compost dry slightly between waterings.",
+      "care": "Deadhead regularly. Feed fortnightly. Not frost-hardy — overwinter indoors or treat as annual.",
+      "seasonal": "Dark red flower heads May–October; scented rounded leaves.",
+      "description": "Geranium is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Dark red flower heads May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Dark red flower heads May–October",
+        "water": "Moderate",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia",
+      "id": "littlepot1-petunia",
+      "latin": "Petunia 'Vivini Blue Star'",
+      "photos": [
+        "images/plants/little-pot-1.webp"
+      ],
+      "position": "Front — blue and white star pattern",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out completely.",
+      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
+      "seasonal": "Blue-white star-patterned flowers May–October.",
+      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Blue-white star-patterned flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Blue-white star-patterned flowers May–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Little Pot 2": [
+    {
+      "name": "Geranium",
+      "id": "littlepot2-geranium",
+      "latin": "Pelargonium 'Summer Twist Red White'",
+      "photos": [
+        "images/plants/little-pot-2.webp"
+      ],
+      "position": "Back — red and white bicolour flowers",
+      "light": "Full sun.",
+      "water": "Moderate. Let compost dry slightly between waterings.",
+      "care": "Deadhead regularly. Feed fortnightly. Not frost-hardy — overwinter indoors or treat as annual.",
+      "seasonal": "Red-white bicolour flower heads May–October; rounded leaves.",
+      "description": "Geranium is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Red-white bicolour flower heads May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Red-white bicolour flower heads May–October",
+        "water": "Moderate",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia",
+      "id": "littlepot2-petunia",
+      "latin": "Petunia 'Purple Vein'",
+      "photos": [
+        "images/plants/little-pot-2.webp"
+      ],
+      "position": "Front — purple veined trumpets",
+      "light": "Full sun.",
+      "water": "Regular; don't let compost dry out completely.",
+      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
+      "seasonal": "Purple-veined trumpet flowers May–October.",
+      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Purple-veined trumpet flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Purple-veined trumpet flowers May–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Front Pot": [
+    {
+      "name": "Gazania 'Sunny Side Up'",
+      "id": "frontpot-gazania-sunny-side-up",
+      "latin": "Gazania rigens 'Sunny Side Up'",
+      "photos": [
+        "images/june-2026-updates/gazania-sunny-side-up.webp"
+      ],
+      "position": "Left — large cream and white daisy flowers",
+      "light": "Full sun. Flowers close in shade and on overcast days.",
+      "water": "Low to moderate. Drought-tolerant. Sharp drainage.",
+      "care": "Deadhead spent flowers to encourage more. Tender annual — replace each year. Does not recover from frost.",
+      "seasonal": "Large cream-white daisy flowers with contrasting dark centres May–October; closes at night and on dull days.",
+      "description": "Gazania 'Sunny Side Up' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Large cream-white daisy flowers with contrasting dark centres May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Large cream-white daisy flowers with contrasting dark centres May–October",
+        "water": "Low to moderate",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Gazania 'Orange Flame'",
+      "id": "frontpot-gazania-orange-flame",
+      "latin": "Gazania rigens 'Orange Flame'",
+      "photos": [
+        "images/june-2026-updates/gazania-orange-flame.webp"
+      ],
+      "position": "Right — vivid orange daisy flowers",
+      "light": "Full sun. Flowers close in shade.",
+      "water": "Low to moderate. Drought-tolerant.",
+      "care": "Deadhead to extend flowering. Tender annual — replace each year. Not frost-hardy.",
+      "seasonal": "Vivid orange flame-patterned daisy flowers May–October; closes at night and on dull days.",
+      "description": "Gazania 'Orange Flame' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Vivid orange flame-patterned daisy flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Vivid orange flame-patterned daisy flowers May–October",
+        "water": "Low to moderate",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Calibrachoa",
+      "id": "frontpot-calibrachoa",
+      "latin": "Calibrachoa spp.",
+      "photos": [
+        "images/june-2026-updates/calibrachoa-front-pot.webp"
+      ],
+      "position": "Trailing — around the pot edge",
+      "light": "Full sun.",
+      "water": "Keep evenly moist. Hates drying out.",
+      "care": "Feed weekly with liquid tomato food. Self-cleaning — no deadheading needed. Tender annual.",
+      "seasonal": "Masses of small petunia-like flowers May–October. Continuous if fed.",
+      "description": "Calibrachoa is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Masses of small petunia-like flowers May–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Masses of small petunia-like flowers May–October",
+        "water": "Keep evenly moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Bacopa White",
+      "id": "frontpot-bacopa-white",
+      "latin": "Sutera cordata (white cultivar)",
+      "photos": [
+        "images/june-2026-updates/bacopa-white.webp"
+      ],
+      "position": "Trailing — delicate white flowers at the edges",
+      "light": "Sun to partial shade.",
+      "water": "Keep evenly moist.",
+      "care": "Self-cleaning; no deadheading needed. Trim back if leggy. Tender annual.",
+      "seasonal": "Tiny white flowers May–October; neat trailing habit.",
+      "description": "Bacopa White is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Tiny white flowers May–October.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Tiny white flowers May–October",
+        "water": "Keep evenly moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Wall Pot 1": [
+    {
+      "name": "Candy House Mix",
+      "id": "wallpot1-candy-house-mix",
+      "latin": "Calibrachoa 'Candy House Mix'",
+      "photos": [
+        "images/june-2026-update-2/candy-house-mix.webp"
+      ],
+      "position": "Left wall of steps — trailing mix of red, yellow and pink flowers",
+      "light": "Full sun.",
+      "water": "Regular; do not let dry out. Water at the base.",
+      "care": "Feed weekly with liquid tomato food. Deadhead spent flowers. Tender annual — replace each season. Trim back if leggy to encourage bushy growth.",
+      "seasonal": "Prolific trailing flowers in mixed red, yellow and pink June–October; dies with first frost.",
+      "description": "Candy House Mix is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Prolific trailing flowers in mixed red, yellow and pink June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Prolific trailing flowers in mixed red, yellow and pink June–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Wall Pot 2": [
+    {
+      "name": "Coreopsis Gold",
+      "id": "wallpot2-coreopsis-gold",
+      "latin": "Coreopsis 'Gold'",
+      "photos": [
+        "images/june-2026-update-2/coreopsis-gold-1.webp",
+        "images/june-2026-update-2/coreopsis-gold-2.webp"
+      ],
+      "position": "Left wall of steps — cheerful yellow daisy flowers",
+      "light": "Full sun.",
+      "water": "Moderate; drought-tolerant once established.",
+      "care": "Deadhead regularly for continuous flowering. Cut back by half in midsummer for a second flush. Hardy perennial — leave in the pot over winter.",
+      "seasonal": "Bright golden-yellow daisy flowers June–September; fine ferny foliage.",
+      "description": "Coreopsis Gold is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bright golden-yellow daisy flowers June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Bright golden-yellow daisy flowers June–September",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Lobelia Pot": [
+    {
+      "name": "Lobelia 'Starship Scarlet Bronze Leaf'",
+      "id": "lobeliapot-lobelia-starship-scarlet-bronze-leaf",
+      "latin": "Lobelia × speciosa 'Starship Scarlet Bronze Leaf'",
+      "photos": [
+        "images/jul-2026/lobelia-starship-scarlet-pot.jpeg",
+        "images/jul-2026/lobelia-starship-scarlet-close.jpeg"
+      ],
+      "position": "Single specimen filling the pot",
+      "light": "Full sun to partial shade. Best flowering with at least half a day of sun.",
+      "water": "Keep evenly moist; do not allow the compost to dry out in summer.",
+      "care": "Deadhead spent spikes to encourage more flowers. Feed fortnightly while flowering. Hardy in the ground, but protect the pot from prolonged hard frost and winter waterlogging.",
+      "seasonal": "Bronze foliage from spring; tall scarlet flower spikes July–September; dies back in winter and returns from the crown.",
+      "description": "Lobelia 'Starship Scarlet Bronze Leaf' is an upright herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bronze foliage from spring.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H4 · protect a container in hard frost",
+        "flowering": "Bronze foliage from spring",
+        "water": "Keep evenly moist",
+        "habit": "Upright herbaceous perennial",
+        "size": "60–90cm high · 30–45cm spread",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Nectar-rich spikes for pollinators"
+      }
+    }
+  ],
+  "Baskets": [
+    {
+      "name": "Trailing Fuchsia",
+      "id": "baskets-trailing-fuchsia",
+      "latin": "Fuchsia (trailing cultivar)",
+      "position": "Main trailing plant",
+      "light": "Partial shade to full sun.",
+      "water": "Daily in hot weather; never let dry out completely.",
+      "care": "Feed weekly. Deadhead spent flowers. Not frost-hardy — replace each year.",
+      "seasonal": "Pendant bicolour flowers June–October.",
+      "description": "Trailing Fuchsia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Pendant bicolour flowers June–October.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Pendant bicolour flowers June–October",
+        "water": "Daily in hot weather",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Bacopa",
+      "id": "baskets-bacopa",
+      "latin": "Sutera cordata",
+      "position": "Trailing filler",
+      "light": "Sun to partial shade.",
+      "water": "Keep evenly moist.",
+      "care": "Self-cleaning; no deadheading needed. Trim back if leggy. Tender annual.",
+      "seasonal": "Tiny white flowers May–October; neat trailing habit.",
+      "description": "Bacopa is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Tiny white flowers May–October.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Tiny white flowers May–October",
+        "water": "Keep evenly moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Trailing Lobelia",
+      "id": "baskets-trailing-lobelia",
+      "latin": "Lobelia erinus (trailing)",
+      "position": "Trailing — blue cascade",
+      "light": "Sun to partial shade.",
+      "water": "Keep moist; hates drying out.",
+      "care": "Trim back mid-season if it gets straggly. Tender annual.",
+      "seasonal": "Blue trailing flowers May–October.",
+      "description": "Trailing Lobelia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Blue trailing flowers May–October.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Blue trailing flowers May–October",
+        "water": "Keep moist",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Trailing Verbena",
+      "id": "baskets-trailing-verbena",
+      "latin": "Verbena (trailing cultivar)",
+      "position": "Trailing — mixed colours",
+      "light": "Full sun.",
+      "water": "Regular; don't let dry out.",
+      "care": "Deadhead to extend flowering. Tender annual.",
+      "seasonal": "Clusters of flowers June–October.",
+      "description": "Trailing Verbena is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Clusters of flowers June–October.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Clusters of flowers June–October",
+        "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Front Bed 1": [
+    {
+      "name": "Hydrangea",
+      "id": "frontBed1-hydrangea",
+      "latin": "Hydrangea macrophylla",
+      "photos": [
+        "images/jul-2026/front-door.webp"
+      ],
+      "position": "Top of the bed, nearest the front door",
+      "light": "Morning sun, afternoon shade.",
+      "water": "Thirsty — water well in dry spells.",
+      "care": "Leave old flower heads over winter; prune to a strong bud in spring.",
+      "seasonal": "Mophead flowers July–Sept; bare in winter.",
+      "description": "Hydrangea is a garden shrub grown at Oak Lodge for its distinctive garden character. Mophead flowers July–Sept.",
+      "characteristics": {
+        "sunlight": "Morning sun, afternoon shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Mophead flowers July–Sept",
+        "water": "Thirsty — water well in dry spells",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lavender",
+      "id": "frontBed1-lavender",
+      "latin": "Lavandula angustifolia",
+      "photos": [
+        "images/jul-2026/study-gate.webp"
+      ],
+      "position": "Bottom of the bed, below the brick pillar",
+      "light": "Full sun.",
+      "water": "Drought-tolerant.",
+      "care": "Trim after flowering and again in spring; don't cut into old wood.",
+      "seasonal": "Purple spikes June–Aug; aromatic year-round.",
+      "description": "Lavender is a compact evergreen aromatic shrub grown at Oak Lodge for its distinctive garden character. Purple spikes June–Aug.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H5 · hardy with sharp drainage",
+        "flowering": "Purple spikes June–Aug",
+        "water": "Drought-tolerant",
+        "habit": "Compact evergreen aromatic shrub",
+        "size": "45–75cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Excellent nectar for bees"
+      }
+    }
+  ],
+  "Front Bed 2": [
+    {
+      "name": "Coprosma 'Inferno'",
+      "id": "frontBed2-coprosma-inferno",
+      "latin": "Coprosma 'Inferno'",
+      "photos": [
+        "images/jul-2026/front-bed2-coprosma-inferno-1.webp",
+        "images/jul-2026/front-bed2-coprosma-inferno-2.webp"
+      ],
+      "position": "Back-left — upright red-edged foliage",
+      "light": "Full sun to partial shade; stronger light brings out the warm foliage colour.",
+      "water": "Moderate while establishing. Avoid waterlogged soil.",
+      "care": "Shelter from cold drying winds and protect in severe frost. Trim lightly in spring to keep a compact shape.",
+      "seasonal": "Glossy green, cream, orange and red foliage intensifies in cooler weather; evergreen in a sheltered spot.",
+      "description": "Coprosma 'Inferno' is a garden shrub grown at Oak Lodge for its distinctive garden character. Glossy green, cream, orange and red foliage intensifies in cooler weather.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Glossy green, cream, orange and red foliage intensifies in cooler weather",
+        "water": "Moderate while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Coprosma 'Pina Colada'",
+      "id": "frontBed2-coprosma-pina-colada",
+      "latin": "Coprosma 'Pina Colada'",
+      "photos": [
+        "images/jul-2026/front-bed2-coprosma-pina-colada-1.webp",
+        "images/jul-2026/front-bed2-coprosma-pina-colada-2.webp"
+      ],
+      "position": "Back-right — gold and orange foliage",
+      "light": "Full sun to partial shade; best colour in a bright, sheltered position.",
+      "water": "Moderate while establishing. Let the soil drain between waterings.",
+      "care": "Protect from severe frost and cold winds. Lightly trim any untidy growth in spring.",
+      "seasonal": "Golden foliage develops orange and bronze tones through autumn and winter; evergreen when sheltered.",
+      "description": "Coprosma 'Pina Colada' is a garden shrub grown at Oak Lodge for its distinctive garden character. Golden foliage develops orange and bronze tones through autumn and winter.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Golden foliage develops orange and bronze tones through autumn and winter",
+        "water": "Moderate while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Hebe 'Kiwi' (Horopito)",
+      "id": "frontBed2-hebe-kiwi-horopito",
+      "latin": "Hebe 'Kiwi'",
+      "photos": [
+        "images/jul-2026/front-bed2-hebe-kiwi-horopito.webp"
+      ],
+      "position": "Front-left — compact purple-flowering shrub",
+      "light": "Full sun to partial shade in a sheltered position.",
+      "water": "Moderate while establishing; avoid waterlogged winter soil.",
+      "care": "Deadhead faded spikes and trim lightly after flowering. Avoid cutting back into old bare wood.",
+      "seasonal": "Purple flower spikes in summer above glossy green leaves with dark new growth; evergreen.",
+      "description": "Hebe 'Kiwi' (Horopito) is a garden shrub grown at Oak Lodge for its distinctive garden character. Purple flower spikes in summer above glossy green leaves with dark new growth.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Purple flower spikes in summer above glossy green leaves with dark new growth",
+        "water": "Moderate while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Wax Begonia",
+      "id": "frontBed2-wax-begonia",
+      "latin": "Begonia Semperflorens-Cultorum Group",
+      "photos": [
+        "images/jul-2026/front-bed2-wax-begonia-1.webp",
+        "images/jul-2026/front-bed2-wax-begonia-2.webp"
+      ],
+      "position": "Front edge — low pink-and-white flowering plants",
+      "light": "Sun to partial shade; some afternoon shade helps in hot weather.",
+      "water": "Keep evenly moist but not waterlogged, watering at soil level.",
+      "care": "Deadhead if needed and feed every two weeks in summer. Tender annual bedding — replace or lift before frost.",
+      "seasonal": "Continuous pink and white flowers from summer until the first frost.",
+      "description": "Wax Begonia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Continuous pink and white flowers from summer until the first frost.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Tender · protect from frost",
+        "flowering": "Continuous pink and white flowers from summer until the first frost",
+        "water": "Keep evenly moist but not waterlogged, watering at soil level",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Front Bed 3": [
+    {
+      "name": "Climbing Rose 'Super Fairy'",
+      "id": "frontBed3-climbing-rose-white-pink",
+      "latin": "Rosa 'Helsufair'",
+      "photos": [
+        "images/jul-2026/front-bed-3-super-fairy-1.jpeg",
+        "images/jul-2026/front-bed-3-super-fairy-2.jpeg",
+        "images/jul-2026/front-bed-3-super-fairy-label.jpeg",
+        "images/jul-2026/front-bed-3-super-fairy-tag.jpeg"
+      ],
+      "position": "On the wall by the Bedroom 3 window",
+      "light": "Sun to light partial shade.",
+      "water": "Deep water at the base in dry spells, especially while establishing.",
+      "care": "Vigorous climber to about 2.5m high and 1.5m wide. Tie long shoots into the wall support and fan laterals out. Prune in late winter and deadhead after flowering.",
+      "seasonal": "Clusters of small, light-pink double flowers from June into autumn; deciduous in winter.",
+      "description": "Climbing Rose 'Super Fairy' is a repeat-flowering climbing rose grown at Oak Lodge for its distinctive garden character. Clusters of small, light-pink double flowers from June into autumn.",
+      "characteristics": {
+        "sunlight": "Sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Clusters of small, light-pink double flowers from June into autumn",
+        "water": "Deep water at the base in dry spells, especially while establishing",
+        "habit": "Repeat-flowering climbing rose",
+        "size": "About 2.5m high · 1.5m spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Variegated Dogwood",
+      "id": "bed2-variegated-dogwood",
+      "latin": "Cornus alba 'Elegantissima'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-3-dogwood.webp",
+        "images/jul-2026/july-update-front-bed-3-dogwood-2.webp",
+        "images/jul-2026/july-update-front-bed-3-dogwood-3.webp"
+      ],
+      "position": "Below the Bedroom 1 window — moved from Back Bed 2 in July 2026",
+      "light": "Sun or partial shade; the leaf colour and winter stems are strongest in good light.",
+      "water": "Moisture-loving. Water deeply while it re-establishes and during prolonged dry spells.",
+      "care": "Mulch after planting. Once settled, remove about a third of the oldest stems at the base in March to encourage vivid new winter stems.",
+      "seasonal": "Cream-edged leaves spring–autumn; brilliant red stems provide the main display in winter.",
+      "description": "Variegated Dogwood is a suckering deciduous shrub grown at Oak Lodge for its distinctive garden character. Cream-edged leaves spring–autumn.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "H6 · fully hardy",
+        "flowering": "Cream-edged leaves spring–autumn",
+        "water": "Moisture-loving",
+        "habit": "Suckering deciduous shrub",
+        "size": "2–3m high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers and fruit support wildlife"
+      }
+    },
+    {
+      "name": "Red Hot Poker",
+      "id": "bed1-red-hot-poker",
+      "latin": "Kniphofia",
+      "photos": [
+        "images/jul-2026/july-update-front-bed3-red-hot-poker.webp",
+        "images/june-2026/red-hot-poker.webp"
+      ],
+      "position": "Front of the wall bed — moved from Back Bed 1 in July 2026",
+      "light": "Full sun for the strongest flowering.",
+      "water": "Moderate while re-establishing; drought-tolerant once rooted, but dislikes winter waterlogging.",
+      "care": "Keep the crown clear and well drained. Remove spent flower stems, tidy old foliage in spring and divide congested clumps every four or five years.",
+      "seasonal": "Bold orange-red poker spikes July–September above strappy, mostly evergreen foliage.",
+      "description": "Red Hot Poker is a clump-forming evergreen perennial grown at Oak Lodge for its distinctive garden character. Bold orange-red poker spikes July–September above strappy, mostly evergreen foliage.",
+      "characteristics": {
+        "sunlight": "Full sun for the strongest flowering",
+        "hardiness": "H5 · hardy with good drainage",
+        "flowering": "Bold orange-red poker spikes July–September above strappy, mostly evergreen foliage",
+        "water": "Moderate while re-establishing",
+        "habit": "Clump-forming evergreen perennial",
+        "size": "90–150cm high · 60–90cm spread",
+        "foliage": "Evergreen",
+        "wildlife": "Nectar-rich flowers for bees"
+      }
+    },
+    {
+      "name": "Leucothoe 'Little Flames'",
+      "id": "frontBed3-leucothoe-little-flames",
+      "latin": "Leucothoe 'Little Flames'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-1.webp",
+        "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-2.webp"
+      ],
+      "position": "Below the wall trellis — compact evergreen added July 2026",
+      "light": "Full sun to partial shade; some shade helps the soil stay evenly moist.",
+      "water": "Keep moist but well drained, especially while establishing. Use rainwater where practical.",
+      "care": "Needs acidic soil. Mulch with leaf mould or composted bark and prune only to remove damaged growth or lightly reshape after flowering.",
+      "seasonal": "Evergreen leaves and stems flush vivid red when young, with clusters of small white urn-shaped flowers in spring.",
+      "description": "Leucothoe 'Little Flames' is a compact evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen leaves and stems flush vivid red when young, with clusters of small white urn-shaped flowers in spring.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H7 · exceptionally hardy",
+        "flowering": "Evergreen leaves and stems flush vivid red when young, with clusters of small white urn-shaped flowers in spring",
+        "water": "Keep moist but well drained, especially while establishing",
+        "habit": "Compact evergreen shrub",
+        "size": "Up to 50cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Spring flowers for pollinators"
+      }
+    },
+    {
+      "name": "Rose (pink)",
+      "id": "frontBed3-rose-pink",
+      "latin": "Rosa — IDENTIFY",
+      "photos": [
+        "images/jul-2026/pink-rose.webp"
+      ],
+      "position": "Between the Bedroom 1 window and the ensuite corner",
+      "light": "Sun.",
+      "water": "Deep watering, mulch in spring.",
+      "care": "Prune late winter; deadhead through summer.",
+      "seasonal": "Flowers June–Sept; bare winter.",
+      "description": "Rose (pink) is a garden shrub grown at Oak Lodge for its distinctive garden character. Flowers June–Sept.",
+      "characteristics": {
+        "sunlight": "Sun",
+        "hardiness": "To be confirmed",
+        "flowering": "Flowers June–Sept",
+        "water": "Deep watering, mulch in spring",
+        "habit": "Garden shrub",
+        "size": "To be confirmed",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Front Bed 4": [
+    {
+      "name": "Photinia (existing canopy)",
+      "id": "frontBed4-photinia-existing",
+      "latin": "Photinia (cultivar to confirm)",
+      "position": "Established multi-stem canopy on the return-wall side",
+      "light": "Sun to partial shade.",
+      "water": "Water deeply only in prolonged dry periods once established.",
+      "care": "Lightly prune after the spring flush if shaping is needed. Keep the new underplanting mulched and watered while it establishes around the existing roots.",
+      "seasonal": "Evergreen canopy; fresh growth is often bronze-red and white flower clusters can appear in spring.",
+      "description": "Photinia (existing canopy) is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen canopy.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Evergreen canopy",
+        "water": "Water deeply only in prolonged dry periods once established",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "The Pilgrim",
+      "id": "frontBed4-the-pilgrim",
+      "latin": "Rosa 'Auswalker'",
+      "photos": [
+        "images/jul-2026/rose-the-pilgrim.jpeg"
+      ],
+      "position": "Against the wall, left side of the bed",
+      "light": "Full sun to light partial shade. Aim for at least four hours of direct sun.",
+      "water": "Deep water at the base during dry spells, especially while establishing.",
+      "care": "David Austin medium climber. Tie new canes into the support, fanning them horizontally where possible. Feed and mulch in spring; deadhead through summer; prune in late winter.",
+      "seasonal": "Soft yellow, rosette-shaped flowers with a tea fragrance from June into autumn; deciduous in winter.",
+      "description": "The Pilgrim is a repeat-flowering climbing rose grown at Oak Lodge for its distinctive garden character. Soft yellow, rosette-shaped flowers with a tea fragrance from June into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Soft yellow, rosette-shaped flowers with a tea fragrance from June into autumn",
+        "water": "Deep water at the base during dry spells, especially while establishing",
+        "habit": "Repeat-flowering climbing rose",
+        "size": "3–3.75m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "The Generous Gardener",
+      "id": "frontBed4-the-generous-gardener",
+      "latin": "Rosa 'Ausdrawn'",
+      "photos": [
+        "images/jul-2026/rose-the-generous-gardener.jpeg"
+      ],
+      "position": "Against the wall, right side of the bed",
+      "light": "Full sun to light partial shade. Tolerates a little less sun than many climbing roses.",
+      "water": "Deep water at the base during dry spells, especially in its first two years.",
+      "care": "David Austin medium climber. Train and tie in long shoots, feed and mulch in spring, deadhead repeat flowers and prune in late winter. Good disease resistance.",
+      "seasonal": "Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance; repeat flowers June–autumn.",
+      "description": "The Generous Gardener is a repeat-flowering climbing rose grown at Oak Lodge for its distinctive garden character. Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance",
+        "water": "Deep water at the base during dry spells, especially in its first two years",
+        "habit": "Repeat-flowering climbing rose",
+        "size": "3–4.5m when trained",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Little Devil 1",
+      "id": "frontBed4-little-devil-1",
+      "latin": "Physocarpus opulifolius 'Little Devil'",
+      "photos": [
+        "images/jul-2026/front-bed-4-little-devil-1.jpeg"
+      ],
+      "position": "Under the window, between Rose 1 and the centre of the bed",
+      "light": "Sun to partial shade; foliage is darkest with good light.",
+      "water": "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+      "care": "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+      "seasonal": "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+      "description": "Little Devil 1 is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy-purple foliage spring to autumn.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Burgundy-purple foliage spring to autumn",
+        "water": "Water deeply in dry spells for the first two growing seasons",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Little Devil 2",
+      "id": "frontBed4-little-devil-2",
+      "latin": "Physocarpus opulifolius 'Little Devil'",
+      "photos": [
+        "images/jul-2026/front-bed-4-little-devil-2.jpeg"
+      ],
+      "position": "Return-wall side, above the Photinia canopy",
+      "light": "Sun to partial shade; foliage is darkest with good light.",
+      "water": "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+      "care": "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+      "seasonal": "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+      "description": "Little Devil 2 is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy-purple foliage spring to autumn.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Burgundy-purple foliage spring to autumn",
+        "water": "Water deeply in dry spells for the first two growing seasons",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lady in Red 1",
+      "id": "frontBed4-lady-in-red-1",
+      "latin": "Physocarpus opulifolius 'Lady in Red'",
+      "photos": [
+        "images/jul-2026/front-bed-4-lady-in-red-1.jpeg"
+      ],
+      "position": "Back of the bed, between the window and ivy corner",
+      "light": "Sun to partial shade; best foliage colour in brighter light.",
+      "water": "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
+      "care": "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
+      "seasonal": "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
+      "description": "Lady in Red 1 is a garden shrub grown at Oak Lodge for its distinctive garden character. Fresh red foliage matures bronze-purple.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Fresh red foliage matures bronze-purple",
+        "water": "Water deeply in dry spells while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lady in Red 2",
+      "id": "frontBed4-lady-in-red-2",
+      "latin": "Physocarpus opulifolius 'Lady in Red'",
+      "photos": [
+        "images/jul-2026/front-bed-4-lady-in-red-2.jpeg"
+      ],
+      "position": "In front of the Photinia canopy, beside the central stepping route",
+      "light": "Sun to partial shade; best foliage colour in brighter light.",
+      "water": "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
+      "care": "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
+      "seasonal": "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
+      "description": "Lady in Red 2 is a garden shrub grown at Oak Lodge for its distinctive garden character. Fresh red foliage matures bronze-purple.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Fresh red foliage matures bronze-purple",
+        "water": "Water deeply in dry spells while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Magic Carpet",
+      "id": "frontBed4-magic-carpet",
+      "latin": "Spiraea japonica 'Magic Carpet'",
+      "photos": [
+        "images/jul-2026/front-bed-4-magic-carpet.jpeg"
+      ],
+      "position": "Bright open centre, above the stepping stones",
+      "light": "Sun to light partial shade; brighter light gives the strongest gold foliage.",
+      "water": "Water regularly during its first summer, then only in prolonged dry spells.",
+      "care": "Lightly trim after flowering or cut back by about a third in early spring to encourage colourful new growth.",
+      "seasonal": "Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour; deciduous in winter.",
+      "description": "Magic Carpet is a garden shrub grown at Oak Lodge for its distinctive garden character. Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour.",
+      "characteristics": {
+        "sunlight": "Sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour",
+        "water": "Water regularly during its first summer, then only in prolonged dry spells",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Purple Gem",
+      "id": "frontBed4-purple-gem",
+      "latin": "Sarcococca hookeriana var. humilis 'Purple Gem'",
+      "photos": [
+        "images/jul-2026/front-bed-4-purple-gem.jpeg"
+      ],
+      "position": "Ivy corner, in the deepest shade",
+      "light": "Shade to partial shade.",
+      "water": "Water in dry spells while establishing; tolerates dry shade once settled.",
+      "care": "Evergreen winter-scented shrub. Keep ivy from engulfing it and prune only lightly after flowering if needed.",
+      "seasonal": "Glossy evergreen foliage and purple young stems; small fragrant winter flowers followed by dark berries.",
+      "description": "Purple Gem is a low evergreen suckering shrub grown at Oak Lodge for its distinctive garden character. Glossy evergreen foliage and purple young stems.",
+      "characteristics": {
+        "sunlight": "Shade to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Glossy evergreen foliage and purple young stems",
+        "water": "Water in dry spells while establishing",
+        "habit": "Low evergreen suckering shrub",
+        "size": "45–60cm high · 1m spread",
+        "foliage": "Evergreen",
+        "wildlife": "Winter scent and berries for wildlife"
+      }
+    },
+    {
+      "name": "Flaming Silver",
+      "id": "frontBed4-flaming-silver",
+      "latin": "Pieris japonica 'Flaming Silver'",
+      "photos": [
+        "images/jul-2026/front-bed-4-flaming-silver.jpeg"
+      ],
+      "position": "Lower return-wall side, between the Photinia and Rose 2",
+      "light": "Partial shade to sun, sheltered from harsh morning frost.",
+      "water": "Keep evenly moist, especially in dry spells; do not let the rootball dry out.",
+      "care": "Ericaceous shrub. Use rainwater where practical and mulch with ericaceous material; prune only lightly after flowering.",
+      "seasonal": "Evergreen, cream-edged leaves with red spring growth and cream flowers in spring.",
+      "description": "Flaming Silver is a compact evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen, cream-edged leaves with red spring growth and cream flowers in spring.",
+      "characteristics": {
+        "sunlight": "Partial shade to sun, sheltered from harsh morning frost",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Evergreen, cream-edged leaves with red spring growth and cream flowers in spring",
+        "water": "Keep evenly moist, especially in dry spells",
+        "habit": "Compact evergreen shrub",
+        "size": "1–1.5m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Spring flowers support pollinators"
+      }
+    },
+    {
+      "name": "Festuca 'Elijah Blue' (3 plants)",
+      "id": "frontBed4-festuca-elijah-blue",
+      "latin": "Festuca glauca 'Elijah Blue'",
+      "photos": [
+        "images/jul-2026/front-bed-4-festuca.jpeg"
+      ],
+      "position": "Three blue-grey tufts along the front-left edge",
+      "light": "Full sun to light partial shade.",
+      "water": "Water regularly during the first season; drought tolerant once established.",
+      "care": "Comb out dead leaves in spring and divide congested clumps every few years. Do not routinely shear hard.",
+      "seasonal": "Blue-grey, mostly evergreen foliage for year-round texture; airy flower stems in early summer.",
+      "description": "Festuca 'Elijah Blue' (3 plants) is a tuft-forming evergreen grass grown at Oak Lodge for its distinctive garden character. Blue-grey, mostly evergreen foliage for year-round texture.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Blue-grey, mostly evergreen foliage for year-round texture",
+        "water": "Water regularly during the first season",
+        "habit": "Tuft-forming evergreen grass",
+        "size": "20–30cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Seed and shelter for small wildlife"
+      }
+    },
+    {
+      "name": "Astrantia trio",
+      "id": "frontBed4-astrantia-trio",
+      "latin": "Astrantia major 'Buckland', 'Claret' & 'Star of Love'",
+      "photos": [
+        "images/jul-2026/front-bed-4-astrantia-selection.jpeg",
+        "images/jul-2026/front-bed-4-astrantia-1.jpeg",
+        "images/jul-2026/front-bed-4-astrantia-2.jpeg"
+      ],
+      "position": "Three-plant group in the open centre-front of the bed",
+      "light": "Sun to light shade.",
+      "water": "Keep consistently moist during dry weather, particularly while establishing.",
+      "care": "Mulch annually with organic matter. Deadhead to prolong flowering and cut back tired stems after flowering.",
+      "seasonal": "Pin-cushion flowers in blush, soft pink and claret shades through summer; foliage dies back in winter.",
+      "description": "Astrantia trio is a clump-forming herbaceous perennials grown at Oak Lodge for its distinctive garden character. Pin-cushion flowers in blush, soft pink and claret shades through summer.",
+      "characteristics": {
+        "sunlight": "Sun to light shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pin-cushion flowers in blush, soft pink and claret shades through summer",
+        "water": "Keep consistently moist during dry weather, particularly while establishing",
+        "habit": "Clump-forming herbaceous perennials",
+        "size": "50–75cm high · 45–60cm spread",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Excellent flowers for pollinators"
+      }
+    },
+    {
+      "name": "Delosperma 'Ice Cream Mix'",
+      "id": "frontBed4-delosperma-ice-cream-mix",
+      "latin": "Delosperma cooperi Ice Cream Series",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp",
+        "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp"
+      ],
+      "position": "Sunny open ground near the established canopy — added July 2026",
+      "light": "Full sun; flowers open best in bright, warm conditions.",
+      "water": "Drought-tolerant once established. Water sparingly and never leave the crown in wet winter soil.",
+      "care": "Sharp drainage is essential. Avoid rich feeding, trim away damaged growth in spring and protect from prolonged severe frost if the soil is wet.",
+      "seasonal": "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
+      "description": "Delosperma 'Ice Cream Mix' is a mat-forming evergreen succulent grown at Oak Lodge for its distinctive garden character. A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H4 · hardy with sharp drainage",
+        "flowering": "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn",
+        "water": "Drought-tolerant once established",
+        "habit": "Mat-forming evergreen succulent",
+        "size": "About 10cm high · 30–50cm spread",
+        "foliage": "Evergreen",
+        "wildlife": "Daisy flowers visited by pollinators"
+      }
+    }
+  ],
+  "Front Bed 5": [
+    {
+      "name": "Cherry Laurel",
+      "id": "frontBed5-cherry-laurel",
+      "latin": "Prunus laurocerasus",
+      "photos": [
+        "images/jul-2026/laurel.webp"
+      ],
+      "position": "Along the boundary wall",
+      "light": "Sun to shade.",
+      "water": "Low once established.",
+      "care": "Prune with secateurs (not shears) late spring/summer. Vigorous.",
+      "seasonal": "Evergreen; white flower spikes spring.",
+      "description": "Cherry Laurel is an ornamental tree grown at Oak Lodge for its distinctive garden character. Evergreen.",
+      "characteristics": {
+        "sunlight": "Sun to shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen",
+        "water": "Low once established",
+        "habit": "Ornamental tree",
+        "size": "Cultivar or rootstock dependent",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Mexican Orange Blossom",
+      "id": "frontBed5-mexican-orange-blossom",
+      "latin": "Choisya ternata 'Sundance'",
+      "photos": [
+        "images/jul-2026/choisya.webp",
+        "images/jul-2026/choisya-flowers.webp"
+      ],
+      "position": "Mid boundary bed — lime-yellow foliage",
+      "light": "Sun for best colour.",
+      "water": "Moderate.",
+      "care": "Light prune after flowering to shape. Low-care.",
+      "seasonal": "Golden evergreen foliage; scented white flowers spring & again autumn.",
+      "description": "Mexican Orange Blossom is a garden shrub grown at Oak Lodge for its distinctive garden character. Golden evergreen foliage.",
+      "characteristics": {
+        "sunlight": "Sun for best colour",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden evergreen foliage",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Climber (unidentified)",
+      "id": "frontBed5-climber-unidentified",
+      "latin": "IDENTIFY",
+      "photos": [
+        "images/jul-2026/climber.webp",
+        "images/jul-2026/climber-berries.webp"
+      ],
+      "position": "Far end, trained up the brick wall",
+      "light": "Sun.",
+      "water": "Moderate.",
+      "care": "TBC once identified.",
+      "seasonal": "Red berry clusters noted July.",
+      "description": "Climber (unidentified) is a climbing plant grown at Oak Lodge for its distinctive garden character. Red berry clusters noted July.",
+      "characteristics": {
+        "sunlight": "Sun",
+        "hardiness": "To be confirmed",
+        "flowering": "Red berry clusters noted July",
+        "water": "Moderate",
+        "habit": "Climbing plant",
+        "size": "To be confirmed",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Heather 'Bell's Extra Special'",
+      "id": "frontBed5-heather-bells-extra-special",
+      "latin": "Erica carnea 'Bell's Extra Special'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-heather-1-bell-s-extra-special.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-1-bell-s-extra-special-2.webp"
+      ],
+      "position": "Front edge — golden winter heath added July 2026",
+      "light": "Full sun to light partial shade; stronger light keeps the foliage richly coloured.",
+      "water": "Water while establishing, then only in prolonged dry spells. Do not allow winter waterlogging.",
+      "care": "Grow in well-drained soil. Unlike Calluna, winter heath tolerates neutral to mildly alkaline conditions. Trim lightly after flowering without cutting into bare old wood.",
+      "seasonal": "Golden evergreen foliage provides year-round colour, with small heath flowers in winter and early spring.",
+      "description": "Heather 'Bell's Extra Special' is a low evergreen winter heath grown at Oak Lodge for its distinctive garden character. Golden evergreen foliage provides year-round colour, with small heath flowers in winter and early spring.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "H6 · fully hardy",
+        "flowering": "Golden evergreen foliage provides year-round colour, with small heath flowers in winter and early spring",
+        "water": "Water while establishing, then only in prolonged dry spells",
+        "habit": "Low evergreen winter heath",
+        "size": "15–25cm high · 30–45cm spread",
+        "foliage": "Evergreen",
+        "wildlife": "Winter nectar for pollinators"
+      }
+    },
+    {
+      "name": "Heather 'Tib'",
+      "id": "frontBed5-heather-tib",
+      "latin": "Calluna vulgaris 'Tib'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-heather-2-tib.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-2-tib-2.webp"
+      ],
+      "position": "Front edge — pink-flowered heather added July 2026",
+      "light": "Full sun for compact growth and the best flower display.",
+      "water": "Water while establishing; afterwards it tolerates short dry spells but dislikes waterlogged soil.",
+      "care": "Needs acidic, well-drained soil. Clip the faded flower spikes lightly in early spring to keep the mound compact, never cutting into bare old wood.",
+      "seasonal": "Dark evergreen foliage carries double deep-pink flower spikes from July into early autumn.",
+      "description": "Heather 'Tib' is a compact evergreen heather grown at Oak Lodge for its distinctive garden character. Dark evergreen foliage carries double deep-pink flower spikes from July into early autumn.",
+      "characteristics": {
+        "sunlight": "Full sun for compact growth and the best flower display",
+        "hardiness": "H7 · exceptionally hardy",
+        "flowering": "Dark evergreen foliage carries double deep-pink flower spikes from July into early autumn",
+        "water": "Water while establishing",
+        "habit": "Compact evergreen heather",
+        "size": "30–45cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Late nectar for pollinators"
+      }
+    },
+    {
+      "name": "Bell Heather 'Providence' (2 plants)",
+      "id": "frontBed5-bell-heather-providence",
+      "latin": "Daboecia cantabrica 'Providence'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-heather-2-providence-left.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-3-providence-left-2.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-3-providence-right.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-3-providence-right-2.webp"
+      ],
+      "position": "Front edge — matching plants to the left and right of the central planting",
+      "light": "Full sun to partial shade in a position sheltered from cold drying winds.",
+      "water": "Keep evenly moist while establishing, using rainwater where practical; avoid both drought and waterlogging.",
+      "care": "Grow in acidic, humus-rich but freely drained soil. Lightly trim faded stems after flowering without cutting into old wood.",
+      "seasonal": "Evergreen mounds with comparatively large, deep rose-red bell flowers through summer and early autumn.",
+      "description": "Bell Heather 'Providence' (2 plants) is a low evergreen bell heather grown at Oak Lodge for its distinctive garden character. Evergreen mounds with comparatively large, deep rose-red bell flowers through summer and early autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a position sheltered from cold drying winds",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Evergreen mounds with comparatively large, deep rose-red bell flowers through summer and early autumn",
+        "water": "Keep evenly moist while establishing, using rainwater where practical",
+        "habit": "Low evergreen bell heather",
+        "size": "30–45cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Long-lasting nectar for pollinators"
+      }
+    },
+    {
+      "name": "Heather 'Leprechaun'",
+      "id": "frontBed5-heather-leprechaun",
+      "latin": "Calluna vulgaris 'Leprechaun'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-heather-4-leprechaun.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-4-leprechaun-2.webp"
+      ],
+      "position": "Front edge — low gold-and-pink heather added July 2026",
+      "light": "Full sun for the brightest foliage colour.",
+      "water": "Water while establishing; later, water only during prolonged dry spells and keep the roots well drained.",
+      "care": "Plant in acidic, freely drained soil. Clip faded flower spikes lightly in spring, avoiding cuts into bare old stems.",
+      "seasonal": "A low evergreen mound with bright lime-gold foliage, pink-tinted new growth and small late-summer flowers.",
+      "description": "Heather 'Leprechaun' is a low evergreen heather grown at Oak Lodge for its distinctive garden character. A low evergreen mound with bright lime-gold foliage, pink-tinted new growth and small late-summer flowers.",
+      "characteristics": {
+        "sunlight": "Full sun for the brightest foliage colour",
+        "hardiness": "H6 · fully hardy",
+        "flowering": "A low evergreen mound with bright lime-gold foliage, pink-tinted new growth and small late-summer flowers",
+        "water": "Water while establishing",
+        "habit": "Low evergreen heather",
+        "size": "20–40cm high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Late nectar for pollinators"
+      }
+    },
+    {
+      "name": "Heather 'Winter Chocolate'",
+      "id": "frontBed5-heather-winter-chocolate",
+      "latin": "Calluna vulgaris 'Winter Chocolate'",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-heather-5-winter-chocolate.webp",
+        "images/jul-2026/july-update-front-bed-5-heather-5-winter-chocolate-2.webp"
+      ],
+      "position": "Front edge — colour-changing heather added July 2026",
+      "light": "Full sun to light partial shade; full sun produces the strongest foliage colour.",
+      "water": "Water while establishing; once rooted it tolerates short dry spells but must not sit wet.",
+      "care": "Grow in acidic, well-drained soil. Lightly remove old flower spikes in March to prevent the mound becoming woody and leggy.",
+      "seasonal": "Golden foliage with pink tips in summer turns bronze and chocolate-red in winter; lavender flowers appear August–October.",
+      "description": "Heather 'Winter Chocolate' is a mat-forming evergreen heather grown at Oak Lodge for its distinctive garden character. Golden foliage with pink tips in summer turns bronze and chocolate-red in winter.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "H7 · exceptionally hardy",
+        "flowering": "Golden foliage with pink tips in summer turns bronze and chocolate-red in winter",
+        "water": "Water while establishing",
+        "habit": "Mat-forming evergreen heather",
+        "size": "20–40cm high · 30–50cm spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "RHS Plants for Pollinators"
+      }
+    },
+    {
+      "name": "Ceratostigma",
+      "id": "frontBed5-ceratostigma-plumbaginoides",
+      "latin": "Ceratostigma plumbaginoides",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides.webp",
+        "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides-2.webp",
+        "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides-3.webp"
+      ],
+      "position": "Low front planting — blue-flowered groundcover added July 2026",
+      "light": "Full sun to partial shade; flowers and autumn colour are strongest in sun.",
+      "water": "Water while establishing, then only in prolonged drought. Prefers soil that drains freely.",
+      "care": "Allow room for the rhizomes to spread. Cut old top growth to the ground in spring once new shoots begin to show.",
+      "seasonal": "Clear cobalt-blue flowers appear from late summer into autumn as the foliage develops vivid red tints; dormant in winter.",
+      "description": "Ceratostigma is a spreading herbaceous groundcover grown at Oak Lodge for its distinctive garden character. Clear cobalt-blue flowers appear from late summer into autumn as the foliage develops vivid red tints.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H5 · hardy in most UK gardens",
+        "flowering": "Clear cobalt-blue flowers appear from late summer into autumn as the foliage develops vivid red tints",
+        "water": "Water while establishing, then only in prolonged drought",
+        "habit": "Spreading herbaceous groundcover",
+        "size": "30–45cm high · spreading",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Late flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Hypericum (cultivar to confirm)",
+      "id": "frontBed5-hypericum-cultivar-to-confirm",
+      "latin": "Hypericum (cultivar to confirm)",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-hypericum.webp",
+        "images/jul-2026/july-update-front-bed-5-hypericum-2.webp",
+        "images/jul-2026/july-update-front-bed-5-hypericum-3.webp"
+      ],
+      "position": "Mid-bed — compact St John's wort added July 2026",
+      "light": "Full sun to partial shade; more sun generally gives stronger flowering.",
+      "water": "Water while establishing, then during prolonged dry spells only. Avoid persistently waterlogged soil.",
+      "care": "Trim lightly in early spring and remove any weak or damaged stems. Confirm the cultivar from its label, flowers and berries before cultivar-specific pruning.",
+      "seasonal": "A compact shrub grown for golden flowers with prominent stamens and, depending on cultivar, colourful ornamental berries.",
+      "description": "Hypericum (cultivar to confirm) is a garden shrub grown at Oak Lodge for its distinctive garden character. A compact shrub grown for golden flowers with prominent stamens and, depending on cultivar, colourful ornamental berries.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "A compact shrub grown for golden flowers with prominent stamens and, depending on cultivar, colourful ornamental berries",
+        "water": "Water while establishing, then during prolonged dry spells only",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Bluebell Creeper",
+      "id": "frontBed5-bluebell-creeper-sollya",
+      "latin": "Billardiera heterophylla (syn. Sollya heterophylla)",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-sollya.webp",
+        "images/jul-2026/july-update-front-bed-5-sollya-2.webp"
+      ],
+      "position": "Against the warm brick wall — blue-flowered climber added July 2026",
+      "light": "Full sun to partial shade in a warm, sheltered position.",
+      "water": "Keep evenly moist while establishing, then water during dry spells; avoid waterlogged winter soil.",
+      "care": "Tie new shoots into support and trim after flowering to control the twining growth. Protect the root area and young stems during hard frost.",
+      "seasonal": "A slender evergreen climber with nodding blue bell flowers from summer into autumn, followed by narrow berries when pollinated.",
+      "description": "Bluebell Creeper is a slender evergreen twining climber grown at Oak Lodge for its distinctive garden character. A slender evergreen climber with nodding blue bell flowers from summer into autumn, followed by narrow berries when pollinated.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a warm, sheltered position",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "A slender evergreen climber with nodding blue bell flowers from summer into autumn, followed by narrow berries when pollinated",
+        "water": "Keep evenly moist while establishing, then water during dry spells",
+        "habit": "Slender evergreen twining climber",
+        "size": "1.5–2.5m when trained",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Hebe 'Rhubarb and Custard'",
+      "id": "frontBed5-hebe-rhubarb-and-custard",
+      "latin": "Veronica 'Tull 302' (Rhubarb and Custard)",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-rhubarb-and-custard-hebe.webp",
+        "images/jul-2026/july-update-front-bed-5-rhubarb-and-custard-hebe-2.webp"
+      ],
+      "position": "Mid-bed — variegated evergreen shrub added July 2026",
+      "light": "Full sun to partial shade in a warm, sheltered spot.",
+      "water": "Moderate while establishing; drought-tolerant later, but avoid winter waterlogging.",
+      "care": "Lightly trim after flowering to keep its rounded shape and protect from severe frost or cold drying winds.",
+      "seasonal": "Cream-edged grey-green leaves flush pink and rhubarb-red in cold weather; short purple flower spikes appear in mid- to late summer.",
+      "description": "Hebe 'Rhubarb and Custard' is a rounded evergreen shrub grown at Oak Lodge for its distinctive garden character. Cream-edged grey-green leaves flush pink and rhubarb-red in cold weather.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a warm, sheltered spot",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Cream-edged grey-green leaves flush pink and rhubarb-red in cold weather",
+        "water": "Moderate while establishing",
+        "habit": "Rounded evergreen shrub",
+        "size": "About 60cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Summer flowers for pollinators"
+      }
+    },
+    {
+      "name": "Salvia 'Salgoon Lake Blueberry'",
+      "id": "frontBed5-salvia-salgoon-lake-blueberry",
+      "latin": "Salvia 'Tl1016' (Salgoon Lake Blueberry)",
+      "photos": [
+        "images/jul-2026/july-update-front-bed-5-salvia-salgoon-lake-blueberry.webp",
+        "images/jul-2026/july-update-front-bed-5-salvia-salgoon-lake-blueberry-2.webp"
+      ],
+      "position": "Against the brick wall — upright blue salvia added July 2026",
+      "light": "Full sun in a warm, sheltered position.",
+      "water": "Water regularly while establishing; once rooted it has good heat and drought tolerance, provided drainage is sharp.",
+      "care": "Deadhead to prolong flowering. Leave top growth over winter, mulch the crown and cut back after the worst frosts in spring; take cuttings as insurance in colder winters.",
+      "seasonal": "Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn.",
+      "description": "Salvia 'Salgoon Lake Blueberry' is a compact upright perennial grown at Oak Lodge for its distinctive garden character. Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun in a warm, sheltered position",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn",
+        "water": "Water regularly while establishing",
+        "habit": "Compact upright perennial",
+        "size": "40–60cm high · about 45cm spread",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Excellent nectar for bees and butterflies"
+      }
+    }
+  ],
+  "Front Stone Trough": [
+    {
+      "name": "Hosta",
+      "id": "frontStone-hosta",
+      "latin": "Hosta",
+      "photos": [
+        "images/jul-2026/hosta-trough.webp"
+      ],
+      "position": "Filling the stone trough",
+      "light": "Part to full shade.",
+      "water": "Keep moist; never bone-dry in the trough.",
+      "care": "Watch for slugs/snails. Divide clumps in spring.",
+      "seasonal": "Fresh leaves spring; dies back over winter.",
+      "description": "Hosta is a clump-forming herbaceous perennial grown at Oak Lodge for its distinctive garden character. Fresh leaves spring.",
+      "characteristics": {
+        "sunlight": "Part to full shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Fresh leaves spring",
+        "water": "Keep moist",
+        "habit": "Clump-forming herbaceous perennial",
+        "size": "30–90cm high and wide",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by bees"
+      }
+    }
+  ],
+  "Front Box Hedge": [
+    {
+      "name": "Wall Cotoneaster (species to confirm)",
+      "id": "frontBoxHedge-wall-cotoneaster-species-to-confirm",
+      "latin": "Cotoneaster (species to confirm)",
+      "photos": [
+        "images/jul-2026/wallbed-start.webp",
+        "images/jul-2026/cotoneaster.webp"
+      ],
+      "position": "Arching screen against the house return wall",
+      "light": "Sun to part shade.",
+      "water": "Water while establishing; once settled, water only in prolonged dry spells.",
+      "care": "Train or lightly prune after flowering to keep growth clear of paths and masonry. Do not use box-blight or box-caterpillar treatments. Confirm the species from flowers, berries and leaf undersides.",
+      "seasonal": "Small leaves on herringbone stems; flowers in late spring or summer followed by red berries. Evergreen or semi-evergreen depending on species and winter.",
+      "description": "Wall Cotoneaster (species to confirm) is a garden shrub grown at Oak Lodge for its distinctive garden character. Small leaves on herringbone stems.",
+      "characteristics": {
+        "sunlight": "Sun to part shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Small leaves on herringbone stems",
+        "water": "Water while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Semi-evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    }
+  ],
+  "Front Hedge": [
+    {
+      "name": "Hedge (to identify)",
+      "id": "frontHedge-hedge-to-identify",
+      "latin": "IDENTIFY",
+      "photos": [],
+      "position": "Right of the front door, in front of the skinny brick wall",
+      "light": "TBC.",
+      "water": "TBC.",
+      "care": "TBC once identified.",
+      "seasonal": "TBC.",
+      "description": "Hedge (to identify) is a garden shrub grown at Oak Lodge for its distinctive garden character. Seasonal interest is still being recorded.",
+      "characteristics": {
+        "sunlight": "Position to be confirmed",
+        "hardiness": "To be confirmed",
+        "flowering": "Seasonal interest is still being recorded",
+        "water": "Water needs to be confirmed",
+        "habit": "Garden shrub",
+        "size": "To be confirmed",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "Front Apple Tree": [
+    {
+      "name": "Apple Tree",
+      "id": "frontApple-apple-tree",
+      "latin": "Malus domestica",
+      "photos": [],
+      "position": "Bottom of the drive, by the boundary wall",
+      "light": "Full sun.",
+      "water": "Water well in dry spells while fruiting.",
+      "care": "Winter prune for shape and airflow; thin fruit in June if heavy.",
+      "seasonal": "Blossom April–May; fruit late summer–autumn.",
+      "description": "Apple Tree is a deciduous fruit tree grown at Oak Lodge for its distinctive garden character. Blossom April–May.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Blossom April–May",
+        "water": "Water well in dry spells while fruiting",
+        "habit": "Deciduous fruit tree",
+        "size": "Rootstock dependent",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Blossom, fruit and shelter for wildlife"
+      }
+    }
+  ],
+  "Bed 3": [
+    {
+      "name": "Kerria",
+      "id": "bed2-kerria",
+      "latin": "Kerria japonica",
+      "photos": [
+        "images/plants/kerria.webp",
+        "images/plants/kerria-1.webp"
+      ],
+      "position": "Against the wall — arching stems with yellow flowers",
+      "light": "Partial shade to full sun.",
+      "water": "Low to moderate. Tolerates dry shade.",
+      "care": "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
+      "seasonal": "Bright single yellow flowers April–May; arching green stems attractive all year.",
+      "description": "Kerria is a garden shrub grown at Oak Lodge for its distinctive garden character. Bright single yellow flowers April–May.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Bright single yellow flowers April–May",
+        "water": "Low to moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Forget-me-not",
+      "id": "bed2-forget-me-not",
+      "latin": "Myosotis",
+      "photos": [
+        "images/plants/forget-me-not.webp"
+      ],
+      "position": "Lower — small blue flowers",
+      "light": "Sun to partial shade.",
+      "water": "Moderate.",
+      "care": "Biennial; lets itself seed about. Pull spent plants in summer.",
+      "seasonal": "Sky-blue clouds April–June.",
+      "description": "Forget-me-not is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Sky-blue clouds April–June.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Sky-blue clouds April–June",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Centaurea 'Snowy Owl'",
+      "id": "bed2-centaurea-snowy-owl",
+      "latin": "Centaurea montana 'Snowy Owl'",
+      "position": "Against the wall — white cornflower flowers",
+      "light": "Full sun.",
+      "water": "Low to moderate.",
+      "care": "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
+      "seasonal": "White cornflower blooms May–July; ferny silver-green foliage.",
+      "description": "Centaurea 'Snowy Owl' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. White cornflower blooms May–July.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "White cornflower blooms May–July",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Spiraea 'Double Play Big Bang'",
+      "id": "bed2-spiraea-double-play-big-bang",
+      "latin": "Spiraea japonica 'Double Play Big Bang'",
+      "photos": [
+        "images/june-2026-update-2/spiraea-big-bang-1.webp",
+        "images/june-2026-update-2/spiraea-big-bang-2.webp",
+        "images/june-2026-update-2/spiraea-big-bang-3.webp",
+        "images/june-2026-update-2/spiraea-big-bang-4.webp",
+        "images/june-2026-update-2/spiraea-big-bang-5.webp"
+      ],
+      "position": "Against the wall — 3 plants. Added June 2026.",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate. Water well until established; tolerates dry spells after.",
+      "care": "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
+      "seasonal": "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
+      "description": "Spiraea 'Double Play Big Bang' is a garden shrub grown at Oak Lodge for its distinctive garden character. Vivid orange-red new growth in spring.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Vivid orange-red new growth in spring",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ]
 }

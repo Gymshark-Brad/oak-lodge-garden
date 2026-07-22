@@ -23,10 +23,22 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   const photos = (_latestMonthData[zoneKey] || []);
   // Archive photos — stored under `{zoneKey}Archive` in the latest month data
   const archivePhotos = (_latestMonthData[zoneKey + "Archive"] || []);
-  const archivePeriod = zoneKey === "frontBed4" ? "Before July 2026" : "Pre-June 2026";
-  const archiveNote = zoneKey === "frontBed4"
-    ? "The corner bed before it was cleared and replanted with the two climbing roses — kept here for the record."
-    : "The bed before the June 2026 replanting — kept here for the record.";
+  const archiveLabels = {
+    frontBed3: {
+      period: "Before the July 2026 update",
+      note: "The wall bed before the fern was removed and the dogwood, Red Hot Poker and Leucothoe were planted — kept here for the record.",
+    },
+    frontBed4: {
+      period: "Before July 2026",
+      note: "The corner bed before it was cleared and replanted with the two climbing roses — kept here for the record.",
+    },
+  };
+  const archiveLabel = archiveLabels[zoneKey] || {
+    period: "Pre-June 2026",
+    note: "The bed before the June 2026 replanting — kept here for the record.",
+  };
+  const archivePeriod = archiveLabel.period;
+  const archiveNote = archiveLabel.note;
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
 

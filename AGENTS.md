@@ -106,9 +106,13 @@ bed1: {
 Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 ```javascript
 {
-  name, latin, position, light, water, care, seasonal
+  name, latin, position, light, water, care, seasonal,
+  description,
+  characteristics: { sunlight, hardiness, flowering, water, habit, size, foliage, wildlife }
 }
 ```
+
+Profile fields are enriched centrally in `data.js` after the authored plant records are assembled. This guarantees every record has a description and the same eight at-a-glance characteristics, while named cultivars can override inferred values in `PROFILE_OVERRIDES`.
 
 Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 
@@ -167,8 +171,8 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 **Lower level (south, house end)**
 - Big Pot 1 — large blue glazed pot at foot of steps
-- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, dogwood
-- Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Weigela, Silverbush, Hydrangea petiolaris, Spiraea and smaller perennials
+- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush and smaller perennials
+- Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
 - Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks, rosemary
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Lobelia Pot — blue pot at the foot of the stairs; Lobelia 'Starship Scarlet Bronze Leaf'
@@ -178,17 +182,17 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 ---
 
-## Plant inventory summary (updated June 2026)
+## Plant inventory summary (updated July 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 14 | Japanese Maple, Fatsia japonica, Rhododendron, Box Hedging, Dahlia, Avens (moved from Bed 3), Dahlia (yellow, new June 2026) |
-| Bed 2 | 4 | Weeping Cherry, Variegated Dogwood, Peony, Angel Wings |
-| Bed 3 | 10 | Weigela, Silverbush, Hydrangea petiolaris, Spiraea, Dianthus and smaller perennials |
+| Bed 1 | 14 | Japanese Maple, Fatsia japonica, Rhododendron, Dahlia and Nemesia 'Aroma Heart of Gold'; Red Hot Poker moved out July 2026 |
+| Bed 2 | 9 | Weeping Cherry, Peony, Weigela, Silverbush and Hydrangea petiolaris; Dogwood moved out July 2026 |
+| Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
 | Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope', Celosia — replanted June 2026 |
-| Bed 5 | 4 | Wisteria, Rose, Yucca, Lavender |
-| Stone Bed | 7 | Cordyline australis, dark Phormium, Houseleeks, Rosemary, Cabbage Tree, Hebe |
-| Patio | 1 | Clematis montana (left side of house wall) |
+| Bed 5 | 9 | Wisteria, Rose, Phormium; big-pot Alstroemeria, Petunia, Vinca and Nemesia; two smaller planted pots |
+| Stone Bed | 6 | Houseleeks, Stonecrop, dark Phormium, Rosemary, Cabbage Tree, Hebe |
+| Patio | 3 | Clematis montana, Honeysuckle and Lavender |
 | Tree | 1 | Pear Tree (Pyrus) |
 | Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |
 | Big Pot 2 | 5 | Lobelia, Verbena, Petunia, Nepeta, Fuchsia |
@@ -196,8 +200,11 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Little Pot 2 | 2 | Geranium, Petunia |
 | Lobelia Pot | 1 | Lobelia 'Starship Scarlet Bronze Leaf' — added July 2026 |
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
+| Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
+| Front Bed 4 | 13 | Two climbing roses, Physocarpus, Spiraea, Sarcococca, Pieris, Festuca, Astrantia, Photinia and Delosperma 'Ice Cream Mix' |
+| Front Bed 5 | 13 | Established Laurel, Choisya and climber plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe and Salvia |
 
-Full care data (light, water, care, seasonal) for every plant is in `data.js` PLANTS object.
+Full descriptions, characteristics and care data for every plant are in the `data.js` PLANTS object.
 
 ---
 

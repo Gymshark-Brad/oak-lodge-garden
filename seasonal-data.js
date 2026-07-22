@@ -7,7 +7,7 @@
     January: {
       mood: "Bare bones and bright stems. The bones of the garden show through.",
       highlights: [
-        { plant: "Variegated Dogwood", bed: "Bed 2", note: "Bright red winter stems on full display." },
+        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bright red winter stems on full display." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Dense evergreen structure holds the bed shape through winter." },
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Tropical speckled leaves carry on regardless." },
         { plant: "New Zealand Flax (dark)", bed: "Stone Bed", note: "Burgundy sword leaves arching low over the gravel." },
@@ -27,12 +27,12 @@
     February: {
       mood: "Last of the winter colour, first stirrings underground.",
       highlights: [
-        { plant: "Variegated Dogwood", bed: "Bed 2", note: "Red stems still glowing — the last big show before they're cut down." },
+        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Red stems still glowing — the last big show before they're cut down." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Steady green presence while everything else is bare." },
         { plant: "Houseleeks", bed: "Stone Bed", note: "Tight winter rosettes, sometimes with a red flush." },
       ],
       tasks: [
-        { task: "Coppice dogwood — cut a third of stems to ground for next year's colour", plants: ["Variegated Dogwood"], bed: "Bed 2" },
+        { task: "Coppice dogwood — cut a third of stems to ground for next year's colour", plants: ["Variegated Dogwood"], bed: "Front Bed 3" },
         { task: "Continue winter pruning of fruit trees while still dormant", plants: ["Apple Tree", "Pear Tree"], bed: "Bed 3" },
         { task: "Prepare supports for peony before shoots emerge", plants: ["Peony"], bed: "Bed 2" },
         { task: "Winter prune wisteria — long shoots back to 2–3 buds", plants: ["Wisteria"], bed: "Bed 4" },
@@ -109,7 +109,7 @@
         { plant: "Rose", bed: "Bed 4", note: "First flush opening on the trellis." },
         { plant: "Astilbe", bed: "Bed 1", note: "Pink feathery plumes beginning above ferny foliage." },
         { plant: "Maiden Pink", bed: "Bed 2", note: "Pink stars spilling from the wall gap." },
-        { plant: "Nemesia", bed: "Bed 2", note: "Coral and orange flowers between the walls." },
+        { plant: "Nemesia 'Aroma Heart of Gold'", bed: "Bed 1", note: "Fragrant burgundy, cream and yellow flowers along the front edge." },
         { plant: "Honeysuckle", bed: "Stone Bed", note: "Fragrant flowers — strongest in the evening." },
         { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Striped sword-shaped foliage giving the boundary bed strong structure; mature plants may raise a tall flower stem." },
         { plant: "Silverbush", bed: "Bed 2", note: "White trumpet flowers on the silver mound." },
@@ -129,7 +129,7 @@
         { task: "Prune Weigela after flowering — one in three old stems out", plants: ["Weigela"], bed: "Bed 2" },
         { task: "Deadhead roses regularly to keep them flowering", plants: ["Rose"], bed: "Bed 4" },
         { task: "Deadhead Maiden Pink and trim back lightly", plants: ["Maiden Pink"], bed: "Bed 2" },
-        { task: "Trim Nemesia hard after first flush for a second show", plants: ["Nemesia"], bed: "Bed 2" },
+        { task: "Trim Nemesia hard after first flush for a second show", plants: ["Nemesia 'Aroma Heart of Gold'"], bed: "Bed 1" },
         { task: "Make sure peony supports are doing their job — heavy heads after rain", plants: ["Peony"], bed: "Bed 2" },
         { task: "Feed pots weekly with liquid tomato food — don't let them dry out", plants: ["Calibrachoa", "Petunia", "Lobelia"], bed: "Big Pot 1" },
         { task: "Stake Dahlia if it's getting tall — it'll need support once flowers form", plants: ["Dahlia", "Dahlia (yellow)"], bed: "Bed 1" },
@@ -220,7 +220,7 @@
         { plant: "Apple Tree", bed: "Bed 3", note: "Main harvest week — pick when they twist off in the hand." },
         { plant: "Pear Tree", bed: "Tree", note: "Pears ready — pick slightly under-ripe and ripen indoors." },
         { plant: "Honeysuckle", bed: "Stone Bed", note: "Small red berries appearing where the flowers were." },
-        { plant: "Nemesia", bed: "Bed 2", note: "Still flowering after the second trim." },
+        { plant: "Nemesia 'Aroma Heart of Gold'", bed: "Bed 1", note: "Still flowering after the second trim." },
         { plant: "Silverbush", bed: "Bed 2", note: "Last of the white flowers on silver foliage." },
         { plant: "Celosia", bed: "Bed 3", note: "Still holding colour but beginning to fade — enjoy the last of it." },
         { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Late flowers if the summer cut-back worked — winding down now." },
@@ -237,7 +237,7 @@
       highlights: [
         { plant: "Japanese Maple", bed: "Bed 1", note: "Fiery red autumn colour — peak fortnight of the year." },
         { plant: "Weeping Cherry", bed: "Bed 2", note: "Yellow and bronze leaves before they drop." },
-        { plant: "Variegated Dogwood", bed: "Bed 2", note: "Cream-edged leaves dropping to reveal the red stems beneath." },
+        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Cream-edged leaves dropping to reveal the red stems beneath." },
         { plant: "Apple Tree", bed: "Bed 3", note: "Last apples; leaves yellowing." },
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Cream globe flowers opening — odd, alien, lovely." },
         { plant: "Dahlia", bed: "Bed 1", note: "Last flowers before the first frost finishes the show." },
@@ -265,7 +265,7 @@
       mood: "Things settle. The garden's bones reassert themselves.",
       highlights: [
         { plant: "Japanese Maple", bed: "Bed 1", note: "Last of the red leaves clinging on." },
-        { plant: "Variegated Dogwood", bed: "Bed 2", note: "Bare red stems beginning to dominate." },
+        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bare red stems beginning to dominate." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Steady evergreen structure as everything else falls back." },
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Cream flowers fading; leaves still glossy." },
       ],
@@ -279,14 +279,14 @@
     December: {
       mood: "Quiet months. Read seed catalogues. Plan.",
       highlights: [
-        { plant: "Variegated Dogwood", bed: "Bed 2", note: "Bright red stems at peak — the winter focal point." },
+        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bright red stems at peak — the winter focal point." },
         { plant: "Box Hedging", bed: "Bed 1", note: "Dense green structure carrying the bed through winter." },
         { plant: "Japanese Aralia", bed: "Bed 1", note: "Glossy evergreen leaves — a tropical note in the cold." },
         { plant: "New Zealand Flax", bed: "Bed 4", note: "Architectural sword leaves regardless of weather." },
         { plant: "Cabbage Tree", bed: "Stone Bed", note: "Burgundy fountain holds its shape all winter." },
       ],
       tasks: [
-        { task: "Enjoy the dogwood stems — best in low winter sun", plants: ["Variegated Dogwood"], bed: "Bed 2" },
+        { task: "Enjoy the dogwood stems — best in low winter sun", plants: ["Variegated Dogwood"], bed: "Front Bed 3" },
         { task: "Protect tender plants from hard frost — fleece Angel Wings, Silverbush, Cordyline", plants: ["Angel Wings", "Silverbush", "Cabbage Tree"], bed: "Bed 1" },
         { task: "Check Callistemon frost protection and keep it sheltered from severe cold and winter winds", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
         { task: "Plan changes for spring — sketch in the notebook before catalogues arrive", plants: [], bed: "Bed 1" },
@@ -313,6 +313,11 @@
     "Front Pot": "frontpot",
     "Wall Pot 1": "wallpot1",
     "Wall Pot 2": "wallpot2",
+    "Front Bed 1": "frontBed1",
+    "Front Bed 2": "frontBed2",
+    "Front Bed 3": "frontBed3",
+    "Front Bed 4": "frontBed4",
+    "Front Bed 5": "frontBed5",
   };
 
   const SEASONAL_NAME_ALIASES = {

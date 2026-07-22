@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+
+# Local full-resolution intake folders. Curated WebP copies are stored under
+# images/jul-2026/ and are the versions deployed to GitHub Pages.
+images/July Front Garden Update/

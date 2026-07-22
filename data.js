@@ -303,7 +303,7 @@ window.OAK = (function () {
       dims: "≈4.0m run · 0.8m deep",
       where: "Under the Bedroom 3 and Bedroom 1 windows",
       desc:
-        "The house-wall bed running under the Bedroom 3 and Bedroom 1 windows, up to the vertical line between the Bedroom 1 window and the ensuite where Bed 4 takes over. Climbing roses on the wall, a large fern, and a pink rose near the corner end.",
+        "The house-wall bed running under the Bedroom 3 and Bedroom 1 windows, up to the vertical line between the Bedroom 1 window and the ensuite where Bed 4 takes over. Climbing roses cover the wall, with the relocated variegated dogwood and Red Hot Poker plus new Leucothoe 'Little Flames' below; the former fern was removed in July 2026.",
       shape: { kind: "polygon", points: "547,42 775,42 775,88 547,88" },
       color: "#8b5e3c",
       labelXY: [661, 65],
@@ -316,7 +316,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses climb the walls above a newly planted mix of burgundy Physocarpus, gold Spiraea, evergreen Sarcococca and Pieris, blue Festuca and an Astrantia trio; the established Photinia canopy remains at the return-wall side.",
+        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses climb the walls above burgundy Physocarpus, gold Spiraea, evergreen Sarcococca and Pieris, blue Festuca, Astrantia and a new mat of Delosperma 'Ice Cream Mix'; the established Photinia canopy remains at the return-wall side.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -329,7 +329,7 @@ window.OAK = (function () {
       dims: "Irregular · patio point to boundary wall",
       where: "From the steps out to the brick boundary wall",
       desc:
-        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. Cherry laurel, a lime-variegated Choisya and a wall-trained climber fill the run.",
+        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. Replanted in July 2026 around the established cherry laurel, Choisya and wall climber with colourful heathers, blue-flowered Sollya and Ceratostigma, Hypericum, Hebe 'Rhubarb and Custard' and Salvia 'Salgoon Lake Blueberry'.",
       shape: { kind: "polygon", points: "880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" },
       color: "#587a3a",
       labelXY: [860, 330],
@@ -482,15 +482,18 @@ window.OAK = (function () {
         seasonal: "Golden-variegated evergreen; pink tints in cold weather.",
       },
       {
-        name: "Nemesia",
+        name: "Nemesia 'Aroma Heart of Gold'",
         id: "bed1-nemesia",
-        latin: "Nemesia spp.",
-        photos: ["images/plants/nemesia.webp", "images/plants/nemesia-1.webp", "images/plants/nemesia-2.webp"],
-        position: "Front edge — orange/coral",
-        light: "Full sun.",
-        water: "Moderate; don't let pots dry out.",
-        care: "Deadhead and trim back to keep flowering.",
-        seasonal: "Continuous flowers May–October.",
+        latin: "Nemesia Aroma Heart of Gold (Aroma Series)",
+        photos: [
+          "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp",
+          "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp",
+        ],
+        position: "Front edge — burgundy, cream and yellow; added July 2026",
+        light: "Full sun to partial shade in a sheltered position.",
+        water: "Keep moist but well drained, watering in dry spells to maintain flowering.",
+        care: "Pinch the growing tips for a bushy plant. Trim flowering shoots after the first flush to encourage more blooms; protect cuttings from frost if overwintering.",
+        seasonal: "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
       },
       {
         name: "Wintercreeper",
@@ -537,17 +540,6 @@ window.OAK = (function () {
         seasonal: "Emerges April; lilac flowers July.",
       },
       {
-        name: "Red Hot Poker",
-        id: "bed1-red-hot-poker",
-        latin: "Kniphofia",
-        photos: ["images/june-2026/red-hot-poker.webp"],
-        position: "Mid-bed — torch-like flower spikes. Moved from Bed 2, June 2026.",
-        light: "Full sun.",
-        water: "Moderate; drought-tolerant once established.",
-        care: "Cut back old foliage in spring. Mulch crown in cold winters. Clump-forming — divide every 4–5 years.",
-        seasonal: "Bold orange-red poker spikes July–September; evergreen grassy foliage.",
-      },
-      {
         name: "Little Heath",
         id: "bed1-little-heath",
         latin: "Pieris japonica 'Little Heath'",
@@ -570,17 +562,6 @@ window.OAK = (function () {
         water: "Moderate; deep watering when young.",
         care: "Light pruning after flowering; avoid heavy cuts.",
         seasonal: "Pink blossom April; green canopy summer; bare winter.",
-      },
-      {
-        name: "Variegated Dogwood",
-        id: "bed2-variegated-dogwood",
-        latin: "Cornus alba 'Elegantissima'",
-        photos: ["images/plants/variegated-dogwood.webp"],
-        position: "Upper section — red winter stems",
-        light: "Sun or partial shade.",
-        water: "Moisture-loving; tolerates wet soil.",
-        care: "Cut a third of stems to ground each March for best winter colour.",
-        seasonal: "Cream-edged leaves spring–autumn; brilliant red stems winter.",
       },
       {
         name: "Peony",
@@ -861,6 +842,21 @@ window.OAK = (function () {
         water: "Moderate. Let the surface dry slightly between waterings, without letting the pot dry out completely.",
         care: "Trim trailing stems to shape. Hardy and evergreen, but vigorous if later planted into open ground.",
         seasonal: "Golden variegated foliage year-round with small violet-blue flowers mainly in spring.",
+      },
+      {
+        name: "Nemesia",
+        id: "bed5-big-pot-nemesia",
+        latin: "Nemesia hybrid",
+        photos: [
+          "images/jul-2026/july-update-bed-5-nemesia.webp",
+          "images/jul-2026/july-update-bed-5-big-pot-nemesia.webp",
+        ],
+        group: "Big pot",
+        position: "Big pot — compact flowering filler added July 2026",
+        light: "Full sun to light partial shade; a little afternoon shade helps during hot spells.",
+        water: "Keep the compost evenly moist but not waterlogged; check the pot frequently in warm or windy weather.",
+        care: "Feed fortnightly while flowering. Deadhead or trim back tired stems by about a third to encourage a fresh flush.",
+        seasonal: "Small, scented flowers from summer into autumn; usually grown as tender seasonal colour.",
       },
       {
         name: "Lythrum 'Robin'",
@@ -1413,15 +1409,47 @@ window.OAK = (function () {
         seasonal: "Clusters of small, light-pink double flowers from June into autumn; deciduous in winter.",
       },
       {
-        name: "Fern",
-        id: "frontBed3-fern",
-        latin: "Dryopteris filix-mas", // CONFIRM
-        photos: ["images/jul-2026/fern-window.webp"],
-        position: "Below the Bedroom 1 window",
-        light: "Shade to part shade.",
-        water: "Keep moist.",
-        care: "Cut back tired fronds in late winter. Low-care.",
-        seasonal: "Fresh fronds unfurl spring; semi-evergreen.",
+        name: "Variegated Dogwood",
+        id: "bed2-variegated-dogwood",
+        latin: "Cornus alba 'Elegantissima'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-3-dogwood.webp",
+          "images/jul-2026/july-update-front-bed-3-dogwood-2.webp",
+          "images/jul-2026/july-update-front-bed-3-dogwood-3.webp",
+        ],
+        position: "Below the Bedroom 1 window — moved from Back Bed 2 in July 2026",
+        light: "Sun or partial shade; the leaf colour and winter stems are strongest in good light.",
+        water: "Moisture-loving. Water deeply while it re-establishes and during prolonged dry spells.",
+        care: "Mulch after planting. Once settled, remove about a third of the oldest stems at the base in March to encourage vivid new winter stems.",
+        seasonal: "Cream-edged leaves spring–autumn; brilliant red stems provide the main display in winter.",
+      },
+      {
+        name: "Red Hot Poker",
+        id: "bed1-red-hot-poker",
+        latin: "Kniphofia",
+        photos: [
+          "images/jul-2026/july-update-front-bed3-red-hot-poker.webp",
+          "images/june-2026/red-hot-poker.webp",
+        ],
+        position: "Front of the wall bed — moved from Back Bed 1 in July 2026",
+        light: "Full sun for the strongest flowering.",
+        water: "Moderate while re-establishing; drought-tolerant once rooted, but dislikes winter waterlogging.",
+        care: "Keep the crown clear and well drained. Remove spent flower stems, tidy old foliage in spring and divide congested clumps every four or five years.",
+        seasonal: "Bold orange-red poker spikes July–September above strappy, mostly evergreen foliage.",
+      },
+      {
+        name: "Leucothoe 'Little Flames'",
+        id: "frontBed3-leucothoe-little-flames",
+        latin: "Leucothoe 'Little Flames'",
+        photos: [
+          "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-1.webp",
+          "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-2.webp",
+        ],
+        position: "Below the wall trellis — compact evergreen added July 2026",
+        light: "Full sun to partial shade; some shade helps the soil stay evenly moist.",
+        water: "Keep moist but well drained, especially while establishing. Use rainwater where practical.",
+        care: "Needs acidic soil. Mulch with leaf mould or composted bark and prune only to remove damaged growth or lightly reshape after flowering.",
+        seasonal: "Evergreen leaves and stems flush vivid red when young, with clusters of small white urn-shaped flowers in spring.",
       },
       {
         name: "Rose (pink)",
@@ -1571,6 +1599,20 @@ window.OAK = (function () {
         care: "Mulch annually with organic matter. Deadhead to prolong flowering and cut back tired stems after flowering.",
         seasonal: "Pin-cushion flowers in blush, soft pink and claret shades through summer; foliage dies back in winter.",
       },
+      {
+        name: "Delosperma 'Ice Cream Mix'",
+        id: "frontBed4-delosperma-ice-cream-mix",
+        latin: "Delosperma cooperi Ice Cream Series",
+        photos: [
+          "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp",
+          "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp",
+        ],
+        position: "Sunny open ground near the established canopy — added July 2026",
+        light: "Full sun; flowers open best in bright, warm conditions.",
+        water: "Drought-tolerant once established. Water sparingly and never leave the crown in wet winter soil.",
+        care: "Sharp drainage is essential. Avoid rich feeding, trim away damaged growth in spring and protect from prolonged severe frost if the soil is wet.",
+        seasonal: "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
+      },
     ],
     "Front Bed 5": [
       {
@@ -1605,6 +1647,150 @@ window.OAK = (function () {
         water: "Moderate.",
         care: "TBC once identified.",
         seasonal: "Red berry clusters noted July.",
+      },
+      {
+        name: "Heather 'Bell's Extra Special'",
+        id: "frontBed5-heather-bells-extra-special",
+        latin: "Erica carnea 'Bell's Extra Special'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-heather-1-bell-s-extra-special.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-1-bell-s-extra-special-2.webp",
+        ],
+        position: "Front edge — golden winter heath added July 2026",
+        light: "Full sun to light partial shade; stronger light keeps the foliage richly coloured.",
+        water: "Water while establishing, then only in prolonged dry spells. Do not allow winter waterlogging.",
+        care: "Grow in well-drained soil. Unlike Calluna, winter heath tolerates neutral to mildly alkaline conditions. Trim lightly after flowering without cutting into bare old wood.",
+        seasonal: "Golden evergreen foliage provides year-round colour, with small heath flowers in winter and early spring.",
+      },
+      {
+        name: "Heather 'Tib'",
+        id: "frontBed5-heather-tib",
+        latin: "Calluna vulgaris 'Tib'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-heather-2-tib.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-2-tib-2.webp",
+        ],
+        position: "Front edge — pink-flowered heather added July 2026",
+        light: "Full sun for compact growth and the best flower display.",
+        water: "Water while establishing; afterwards it tolerates short dry spells but dislikes waterlogged soil.",
+        care: "Needs acidic, well-drained soil. Clip the faded flower spikes lightly in early spring to keep the mound compact, never cutting into bare old wood.",
+        seasonal: "Dark evergreen foliage carries double deep-pink flower spikes from July into early autumn.",
+      },
+      {
+        name: "Bell Heather 'Providence' (2 plants)",
+        id: "frontBed5-bell-heather-providence",
+        latin: "Daboecia cantabrica 'Providence'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-heather-2-providence-left.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-3-providence-left-2.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-3-providence-right.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-3-providence-right-2.webp",
+        ],
+        position: "Front edge — matching plants to the left and right of the central planting",
+        light: "Full sun to partial shade in a position sheltered from cold drying winds.",
+        water: "Keep evenly moist while establishing, using rainwater where practical; avoid both drought and waterlogging.",
+        care: "Grow in acidic, humus-rich but freely drained soil. Lightly trim faded stems after flowering without cutting into old wood.",
+        seasonal: "Evergreen mounds with comparatively large, deep rose-red bell flowers through summer and early autumn.",
+      },
+      {
+        name: "Heather 'Leprechaun'",
+        id: "frontBed5-heather-leprechaun",
+        latin: "Calluna vulgaris 'Leprechaun'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-heather-4-leprechaun.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-4-leprechaun-2.webp",
+        ],
+        position: "Front edge — low gold-and-pink heather added July 2026",
+        light: "Full sun for the brightest foliage colour.",
+        water: "Water while establishing; later, water only during prolonged dry spells and keep the roots well drained.",
+        care: "Plant in acidic, freely drained soil. Clip faded flower spikes lightly in spring, avoiding cuts into bare old stems.",
+        seasonal: "A low evergreen mound with bright lime-gold foliage, pink-tinted new growth and small late-summer flowers.",
+      },
+      {
+        name: "Heather 'Winter Chocolate'",
+        id: "frontBed5-heather-winter-chocolate",
+        latin: "Calluna vulgaris 'Winter Chocolate'",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-heather-5-winter-chocolate.webp",
+          "images/jul-2026/july-update-front-bed-5-heather-5-winter-chocolate-2.webp",
+        ],
+        position: "Front edge — colour-changing heather added July 2026",
+        light: "Full sun to light partial shade; full sun produces the strongest foliage colour.",
+        water: "Water while establishing; once rooted it tolerates short dry spells but must not sit wet.",
+        care: "Grow in acidic, well-drained soil. Lightly remove old flower spikes in March to prevent the mound becoming woody and leggy.",
+        seasonal: "Golden foliage with pink tips in summer turns bronze and chocolate-red in winter; lavender flowers appear August–October.",
+      },
+      {
+        name: "Ceratostigma",
+        id: "frontBed5-ceratostigma-plumbaginoides",
+        latin: "Ceratostigma plumbaginoides",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides.webp",
+          "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides-2.webp",
+          "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides-3.webp",
+        ],
+        position: "Low front planting — blue-flowered groundcover added July 2026",
+        light: "Full sun to partial shade; flowers and autumn colour are strongest in sun.",
+        water: "Water while establishing, then only in prolonged drought. Prefers soil that drains freely.",
+        care: "Allow room for the rhizomes to spread. Cut old top growth to the ground in spring once new shoots begin to show.",
+        seasonal: "Clear cobalt-blue flowers appear from late summer into autumn as the foliage develops vivid red tints; dormant in winter.",
+      },
+      {
+        name: "Hypericum (cultivar to confirm)",
+        id: "frontBed5-hypericum-cultivar-to-confirm",
+        latin: "Hypericum (cultivar to confirm)",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-hypericum.webp",
+          "images/jul-2026/july-update-front-bed-5-hypericum-2.webp",
+          "images/jul-2026/july-update-front-bed-5-hypericum-3.webp",
+        ],
+        position: "Mid-bed — compact St John's wort added July 2026",
+        light: "Full sun to partial shade; more sun generally gives stronger flowering.",
+        water: "Water while establishing, then during prolonged dry spells only. Avoid persistently waterlogged soil.",
+        care: "Trim lightly in early spring and remove any weak or damaged stems. Confirm the cultivar from its label, flowers and berries before cultivar-specific pruning.",
+        seasonal: "A compact shrub grown for golden flowers with prominent stamens and, depending on cultivar, colourful ornamental berries.",
+      },
+      {
+        name: "Bluebell Creeper",
+        id: "frontBed5-bluebell-creeper-sollya",
+        latin: "Billardiera heterophylla (syn. Sollya heterophylla)",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-sollya.webp",
+          "images/jul-2026/july-update-front-bed-5-sollya-2.webp",
+        ],
+        position: "Against the warm brick wall — blue-flowered climber added July 2026",
+        light: "Full sun to partial shade in a warm, sheltered position.",
+        water: "Keep evenly moist while establishing, then water during dry spells; avoid waterlogged winter soil.",
+        care: "Tie new shoots into support and trim after flowering to control the twining growth. Protect the root area and young stems during hard frost.",
+        seasonal: "A slender evergreen climber with nodding blue bell flowers from summer into autumn, followed by narrow berries when pollinated.",
+      },
+      {
+        name: "Hebe 'Rhubarb and Custard'",
+        id: "frontBed5-hebe-rhubarb-and-custard",
+        latin: "Veronica 'Tull 302' (Rhubarb and Custard)",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-rhubarb-and-custard-hebe.webp",
+          "images/jul-2026/july-update-front-bed-5-rhubarb-and-custard-hebe-2.webp",
+        ],
+        position: "Mid-bed — variegated evergreen shrub added July 2026",
+        light: "Full sun to partial shade in a warm, sheltered spot.",
+        water: "Moderate while establishing; drought-tolerant later, but avoid winter waterlogging.",
+        care: "Lightly trim after flowering to keep its rounded shape and protect from severe frost or cold drying winds.",
+        seasonal: "Cream-edged grey-green leaves flush pink and rhubarb-red in cold weather; short purple flower spikes appear in mid- to late summer.",
+      },
+      {
+        name: "Salvia 'Salgoon Lake Blueberry'",
+        id: "frontBed5-salvia-salgoon-lake-blueberry",
+        latin: "Salvia 'Tl1016' (Salgoon Lake Blueberry)",
+        photos: [
+          "images/jul-2026/july-update-front-bed-5-salvia-salgoon-lake-blueberry.webp",
+          "images/jul-2026/july-update-front-bed-5-salvia-salgoon-lake-blueberry-2.webp",
+        ],
+        position: "Against the brick wall — upright blue salvia added July 2026",
+        light: "Full sun in a warm, sheltered position.",
+        water: "Water regularly while establishing; once rooted it has good heat and drought tolerance, provided drainage is sharp.",
+        care: "Deadhead to prolong flowering. Leave top growth over winter, mulch the crown and cut back after the worst frosts in spring; take cuttings as insurance in colder winters.",
+        seasonal: "Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn.",
       },
     ],
     "Front Stone Trough": [
@@ -1672,6 +1858,132 @@ window.OAK = (function () {
   ]);
   PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_NAMES.has(plant.name));
   PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_NAMES.has(plant.name));
+
+  // ─── PLANT PROFILES ───────────────────────────────────────────────
+  // Every specimen gets an RHS-style introduction and a consistent set of
+  // at-a-glance characteristics. Existing care prose remains the detailed
+  // source; these helpers turn it into compact, comparable card metadata and
+  // provide safe fallbacks for future plants as soon as they are registered.
+  const PROFILE_OVERRIDES = {
+    "Japanese Maple": { habit: "Small deciduous tree", size: "4–8m high · 4–8m spread", wildlife: "Shelter for insects and birds" },
+    "Japanese Aralia": { habit: "Evergreen architectural shrub", size: "1.5–2.5m high and wide", hardiness: "H5 · hardy in most UK gardens" },
+    "Rhododendron": { habit: "Evergreen flowering shrub", size: "1–1.5m high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Early nectar for pollinators" },
+    "Astilbe": { habit: "Clump-forming herbaceous perennial", size: "45–90cm high · 45–60cm spread", wildlife: "Flowers visited by pollinators" },
+    "Hosta": { habit: "Clump-forming herbaceous perennial", size: "30–90cm high and wide", wildlife: "Flowers visited by bees" },
+    "Hosta (gold)": { habit: "Clump-forming herbaceous perennial", size: "45–60cm high · 90cm spread", wildlife: "Flowers visited by bees" },
+    "Angel Wings": { habit: "Evergreen foliage perennial", size: "40–50cm high and wide", hardiness: "H3 · protect below −5°C" },
+    "Box Hedging": { habit: "Dense evergreen shrub", size: "Kept clipped at Oak Lodge", wildlife: "Year-round shelter for small wildlife" },
+    "Dahlia": { habit: "Tuberous clump-forming perennial", size: "60–120cm high · 45–60cm spread", hardiness: "H3 · tubers need winter protection", wildlife: "Open flowers feed pollinators" },
+    "Dahlia (yellow)": { habit: "Tuberous clump-forming perennial", size: "60–120cm high · 45–60cm spread", hardiness: "H3 · tubers need winter protection", wildlife: "Open flowers feed pollinators" },
+    "Little Heath": { habit: "Compact evergreen shrub", size: "50–100cm high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Spring flowers support pollinators" },
+    "Variegated Dogwood": { habit: "Suckering deciduous shrub", size: "2–3m high and wide", hardiness: "H6 · fully hardy", wildlife: "Flowers and fruit support wildlife" },
+    "Peony": { habit: "Clump-forming herbaceous perennial", size: "75–100cm high and wide", hardiness: "H6 · fully hardy", wildlife: "Flowers visited by pollinators" },
+    "Weeping Cherry": { habit: "Small weeping deciduous tree", size: "2.5–4m high and wide", wildlife: "Spring blossom for pollinators" },
+    "Red Hot Poker": { habit: "Clump-forming evergreen perennial", size: "90–150cm high · 60–90cm spread", hardiness: "H5 · hardy with good drainage", wildlife: "Nectar-rich flowers for bees" },
+    "Apple Tree": { habit: "Deciduous fruit tree", size: "Rootstock dependent", wildlife: "Blossom, fruit and shelter for wildlife" },
+    "Pear Tree": { habit: "Deciduous fruit tree", size: "Rootstock dependent", wildlife: "Blossom, fruit and shelter for wildlife" },
+    "Callistemon Inferno ('Yanferno')": { habit: "Compact evergreen shrub", size: "1–1.5m high and wide", hardiness: "H3 · protect below −5°C", wildlife: "Nectar-rich flowers for pollinators" },
+    "Wisteria": { habit: "Vigorous deciduous climber", size: "8–12m when trained", wildlife: "Flowers visited by bees" },
+    "Rose": { habit: "Deciduous flowering shrub or climber", size: "Cultivar and training dependent", wildlife: "Flowers and hips can support wildlife" },
+    "Houseleeks": { habit: "Mat-forming evergreen succulent", size: "5–15cm high · spreading", hardiness: "H5 · hardy with sharp drainage", wildlife: "Flowers visited by bees" },
+    "Stonecrop": { habit: "Trailing succulent perennial", size: "10–30cm high · spreading", hardiness: "H5 · hardy with sharp drainage", wildlife: "Late nectar for pollinators" },
+    "Rosemary": { habit: "Aromatic evergreen shrub", size: "1–1.5m high and wide", hardiness: "H4 · hardy in a sheltered, drained spot", wildlife: "Early nectar for bees" },
+    "Cabbage Tree": { habit: "Evergreen architectural tree", size: "2.5–4m high · 1–2m spread", hardiness: "H3/H4 · protect in severe cold" },
+    "Honeysuckle": { habit: "Twining deciduous climber", size: "4–8m when trained", wildlife: "Nectar, berries and nesting cover" },
+    "Clematis": { habit: "Vigorous deciduous climber", size: "8–12m when trained", wildlife: "Early flowers and nesting cover" },
+    "Lavender": { habit: "Compact evergreen aromatic shrub", size: "45–75cm high and wide", hardiness: "H5 · hardy with sharp drainage", wildlife: "Excellent nectar for bees" },
+    "Nemesia": { habit: "Compact seasonal flowering plant", size: "20–40cm high and wide", hardiness: "Tender · protect from frost", wildlife: "Flowers visited by pollinators" },
+    "Nemesia 'Aroma Heart of Gold'": { habit: "Compact bushy half-hardy perennial", size: "20–35cm high and wide", hardiness: "H3 · protect below −5°C", wildlife: "Fragrant flowers visited by pollinators" },
+    "Lobelia 'Starship Scarlet Bronze Leaf'": { habit: "Upright herbaceous perennial", size: "60–90cm high · 30–45cm spread", hardiness: "H4 · protect a container in hard frost", wildlife: "Nectar-rich spikes for pollinators" },
+    "Climbing Rose 'Super Fairy'": { habit: "Repeat-flowering climbing rose", size: "About 2.5m high · 1.5m spread", wildlife: "Flowers visited by pollinators" },
+    "Leucothoe 'Little Flames'": { habit: "Compact evergreen shrub", size: "Up to 50cm high and wide", hardiness: "H7 · exceptionally hardy", wildlife: "Spring flowers for pollinators" },
+    "The Pilgrim": { habit: "Repeat-flowering climbing rose", size: "3–3.75m when trained", wildlife: "Flowers visited by pollinators" },
+    "The Generous Gardener": { habit: "Repeat-flowering climbing rose", size: "3–4.5m when trained", wildlife: "Flowers visited by pollinators" },
+    "Purple Gem": { habit: "Low evergreen suckering shrub", size: "45–60cm high · 1m spread", wildlife: "Winter scent and berries for wildlife" },
+    "Flaming Silver": { habit: "Compact evergreen shrub", size: "1–1.5m high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Spring flowers support pollinators" },
+    "Festuca 'Elijah Blue' (3 plants)": { habit: "Tuft-forming evergreen grass", size: "20–30cm high and wide", wildlife: "Seed and shelter for small wildlife" },
+    "Astrantia trio": { habit: "Clump-forming herbaceous perennials", size: "50–75cm high · 45–60cm spread", wildlife: "Excellent flowers for pollinators" },
+    "Delosperma 'Ice Cream Mix'": { habit: "Mat-forming evergreen succulent", size: "About 10cm high · 30–50cm spread", hardiness: "H4 · hardy with sharp drainage", wildlife: "Daisy flowers visited by pollinators" },
+    "Heather 'Bell's Extra Special'": { habit: "Low evergreen winter heath", size: "15–25cm high · 30–45cm spread", hardiness: "H6 · fully hardy", wildlife: "Winter nectar for pollinators" },
+    "Heather 'Tib'": { habit: "Compact evergreen heather", size: "30–45cm high and wide", hardiness: "H7 · exceptionally hardy", wildlife: "Late nectar for pollinators" },
+    "Bell Heather 'Providence' (2 plants)": { habit: "Low evergreen bell heather", size: "30–45cm high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Long-lasting nectar for pollinators" },
+    "Heather 'Leprechaun'": { habit: "Low evergreen heather", size: "20–40cm high and wide", hardiness: "H6 · fully hardy", wildlife: "Late nectar for pollinators" },
+    "Heather 'Winter Chocolate'": { habit: "Mat-forming evergreen heather", size: "20–40cm high · 30–50cm spread", hardiness: "H7 · exceptionally hardy", wildlife: "RHS Plants for Pollinators" },
+    "Ceratostigma": { habit: "Spreading herbaceous groundcover", size: "30–45cm high · spreading", hardiness: "H5 · hardy in most UK gardens", wildlife: "Late flowers visited by pollinators" },
+    "Bluebell Creeper": { habit: "Slender evergreen twining climber", size: "1.5–2.5m when trained", hardiness: "H3 · protect below −5°C", wildlife: "Flowers visited by pollinators" },
+    "Hebe 'Rhubarb and Custard'": { habit: "Rounded evergreen shrub", size: "About 60cm high and wide", hardiness: "H3 · protect below −5°C", wildlife: "Summer flowers for pollinators" },
+    "Salvia 'Salgoon Lake Blueberry'": { habit: "Compact upright perennial", size: "40–60cm high · about 45cm spread", hardiness: "H3 · protect below −5°C", wildlife: "Excellent nectar for bees and butterflies" },
+  };
+
+  const firstSentence = (text, fallback) => {
+    if (!text || /^TBC\.?$/i.test(text.trim())) return fallback;
+    const match = text.trim().match(/^.*?(?:\.(?=\s|$)|;|$)/);
+    return (match ? match[0] : text).replace(/[.;]+$/, "");
+  };
+
+  const inferHabit = (plant) => {
+    const text = `${plant.name} ${plant.latin || ""}`;
+    if (/(Maple|Tree|Cherry|Pyrus|Malus|Cordyline)/i.test(text)) return "Ornamental tree";
+    if (/(Wisteria|Clematis|Honeysuckle|Climber|Sollya|Billardiera|climbing rose|Hydrangea anomala)/i.test(text)) return "Climbing plant";
+    if (/(Begonia|Petunia|Calibrachoa|Verbena|Lobelia|Celosia|Nemesia|Gazania|Bacopa|Pelargonium|Fuchsia)/i.test(text)) return "Seasonal flowering plant";
+    if (/(Sedum|Sempervivum|Delosperma|Stonecrop|Houseleek)/i.test(text)) return "Succulent groundcover";
+    if (/(Hebe|Heather|Calluna|Erica|Daboecia|Rose|Rhododendron|Hydrangea|Pieris|Spiraea|Euonymus|Box|Buxus|Dogwood|Cornus|Weigela|Abelia|Photinia|Laurel|Choisya|Hypericum|Coprosma|Sarcococca|Silverbush|Kerria|Physocarpus|Leucothoe|Cotoneaster|Hedge)/i.test(text)) return "Garden shrub";
+    if (/(Festuca|Phormium|Flax)/i.test(text)) return "Architectural foliage plant";
+    return "Herbaceous perennial";
+  };
+
+  const inferHardiness = (plant) => {
+    const text = `${plant.name} ${plant.latin || ""} ${plant.care || ""} ${plant.seasonal || ""}`;
+    if (/(IDENTIFY|to identify)/i.test(text)) return "To be confirmed";
+    if (/(tender annual|not frost-hardy|dies with the first|first hard frost|replace each year|tender seasonal)/i.test(text)) return "Tender · protect from frost";
+    if (/(Coprosma|Callistemon|Angel Wings|Sollya|Billardiera|Salgoon|Rhubarb and Custard)/i.test(text)) return "H3 · protect below −5°C";
+    if (/(Calluna|Erica carnea|Daboecia|Dogwood|Cornus|Hosta|Astilbe|Peony|Hydrangea|Apple|Pear|Wisteria|Clematis|Lythrum)/i.test(text)) return "Fully hardy in the UK";
+    return "Hardy in most UK gardens";
+  };
+
+  const inferSize = (plant, habit) => {
+    const text = `${plant.name} ${plant.latin || ""}`;
+    if (/(IDENTIFY|to identify)/i.test(text)) return "To be confirmed";
+    if (/Climbing plant/i.test(habit)) return "2–8m when trained";
+    if (/tree/i.test(habit)) return "Cultivar or rootstock dependent";
+    if (/Seasonal flowering plant/i.test(habit)) return "Typically 15–60cm";
+    if (/Succulent groundcover/i.test(habit)) return "Typically 5–30cm · spreading";
+    if (/Garden shrub/i.test(habit)) return "Typically 0.5–2m";
+    return "Typically 30–100cm";
+  };
+
+  const inferFoliage = (plant) => {
+    const text = `${plant.seasonal || ""} ${plant.care || ""}`;
+    if (/semi-evergreen/i.test(text)) return "Semi-evergreen";
+    if (/evergreen/i.test(text)) return "Evergreen";
+    if (/(bare in winter|dies back|dies with|dormant in winter|foliage to ground)/i.test(text)) return "Deciduous or dormant in winter";
+    return "Seasonal foliage";
+  };
+
+  const inferWildlife = (plant) => {
+    const text = `${plant.name} ${plant.latin || ""} ${plant.seasonal || ""}`;
+    if (/(Apple|Pear|Cherry|berry|berries|Honeysuckle|Cotoneaster)/i.test(text)) return "Flowers, fruit or shelter for wildlife";
+    if (/(flower|bloom|spike|raceme|daisy|blossom)/i.test(text)) return "Flowers visited by pollinators";
+    return "Foliage provides garden habitat";
+  };
+
+  Object.values(PLANTS).flat().forEach((plant) => {
+    const override = PROFILE_OVERRIDES[plant.name] || {};
+    const habit = override.habit || inferHabit(plant);
+    const seasonalDisplay = firstSentence(plant.seasonal, "Seasonal interest is still being recorded");
+    const article = /^[aeiou]/i.test(habit) ? "an" : "a";
+    plant.description = plant.description || `${plant.name} is ${article} ${habit.toLowerCase()} grown at Oak Lodge for its distinctive garden character. ${seasonalDisplay}.`;
+    plant.characteristics = {
+      sunlight: firstSentence(plant.light, "Position to be confirmed"),
+      hardiness: override.hardiness || inferHardiness(plant),
+      flowering: seasonalDisplay,
+      water: firstSentence(plant.water, "Water needs to be confirmed"),
+      habit,
+      size: override.size || inferSize(plant, habit),
+      foliage: override.foliage || inferFoliage(plant),
+      wildlife: override.wildlife || inferWildlife(plant),
+    };
+  });
 
   // ─── PHOTOS (by month) ────────────────────────────────────────────
   const PHOTOS_BY_MONTH = {
@@ -1902,6 +2214,18 @@ window.OAK = (function () {
     },
     "jul-2026": {
       label: "July 2026",
+      bed1: [
+        { src: "images/jul-2026/july-update-back-bed-1-before-changes.webp", caption: "Back Bed 1 before the July additions" },
+        { src: "images/jul-2026/july-update-back-bed-1-before-changes-2.webp", caption: "Back Bed 1 — second view before the July additions" },
+        { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp", caption: "Nemesia 'Aroma Heart of Gold' along the front edge" },
+        { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp", caption: "Nemesia — fragrant burgundy, cream and yellow flowers" },
+      ],
+      bed2: [
+        { src: "images/jul-2026/july-update-back-bed-2-before-changes.webp", caption: "Back Bed 2 before the dogwood moved to Front Bed 3" },
+      ],
+      bed3: [
+        { src: "images/jul-2026/july-update-back-bed-3-before-changes.webp", caption: "Back Bed 3 before the July garden update" },
+      ],
       bed5: [
         { src: "images/jul-2026/bed5-after-pruning-1.webp", caption: "Bed 5 after the Wisteria pruning and clearing — full view" },
         { src: "images/jul-2026/bed5-after-pruning-2.webp", caption: "The opened-up trellis, rose and lavender after pruning" },
@@ -1914,6 +2238,9 @@ window.OAK = (function () {
         { src: "images/jul-2026/bed5-big-pot-petunia-bees-knees-2.webp", caption: "Petunia 'Bee's Knees' in the big pot" },
         { src: "images/jul-2026/bed5-big-pot-vinca-illumination-1.webp", caption: "Vinca minor 'Illumination' trailing over the big pot" },
         { src: "images/jul-2026/bed5-big-pot-vinca-illumination-2.webp", caption: "Vinca minor 'Illumination' — plant label" },
+        { src: "images/jul-2026/july-update-bed-5-big-pot-update.webp", caption: "Bed 5 big pot after the July Nemesia addition" },
+        { src: "images/jul-2026/july-update-bed-5-nemesia.webp", caption: "Nemesia added to the Bed 5 big pot" },
+        { src: "images/jul-2026/july-update-bed-5-big-pot-nemesia.webp", caption: "Nemesia among the established big-pot planting" },
         { src: "images/jul-2026/bed5-medium-pot-lythrum-robin-1.webp", caption: "Lythrum 'Robin' — plant label" },
         { src: "images/jul-2026/bed5-medium-pot-lythrum-robin-2.webp", caption: "Lythrum 'Robin' in the medium pot" },
         { src: "images/jul-2026/bed5-medium-pot-lythrum-robin-3.webp", caption: "Lythrum 'Robin' — magenta flower spikes" },
@@ -1947,6 +2274,13 @@ window.OAK = (function () {
         { src: "images/jul-2026/bed2-bed5-shopping-2.webp", caption: "The July plant selection before planting" },
       ],
       frontBed3: [
+        { src: "images/jul-2026/july-update-front-bed-1.webp", caption: "Front Bed 3 after the July moves and additions" },
+        { src: "images/jul-2026/july-update-front-bed-2.webp", caption: "Front Bed 3 — full wall run after replanting" },
+        { src: "images/jul-2026/july-update-front-bed-3-dogwood.webp", caption: "Variegated Dogwood newly moved into Front Bed 3" },
+        { src: "images/jul-2026/july-update-front-bed-3-dogwood-2.webp", caption: "Dogwood foliage after the move" },
+        { src: "images/jul-2026/july-update-front-bed3-red-hot-poker.webp", caption: "Red Hot Poker newly moved into Front Bed 3" },
+        { src: "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-1.webp", caption: "Leucothoe 'Little Flames' newly planted" },
+        { src: "images/jul-2026/july-update-front-bed3-leucothoe-little-flame-2.webp", caption: "Leucothoe red new growth and plant label" },
         { src: "images/jul-2026/front-bed3-super-fairy-trained.jpg", caption: "‘Super Fairy’ after deadheading, with the long stems worked back into the trellis" },
         { src: "images/jul-2026/front-bed3-pink-rose-trained.jpg", caption: "Pink rose after deadheading and training into the wall trellis" },
         { src: "images/jul-2026/overview.webp",      caption: "Front garden overview from the entrance" },
@@ -1958,7 +2292,13 @@ window.OAK = (function () {
         { src: "images/jul-2026/front-bed-3-super-fairy-label.jpeg", caption: "Super Fairy plant label — Rosa 'Helsufair'" },
         { src: "images/jul-2026/front-bed-3-super-fairy-tag.jpeg", caption: "Super Fairy picture tag" },
       ],
+      frontBed3Archive: [
+        { src: "images/jul-2026/july-update-front-bed-3-removed-fern.webp", caption: "The fern removed before the July replant" },
+        { src: "images/jul-2026/fern-window.webp", caption: "Front Bed 3 with the former fern" },
+      ],
       frontBed4: [
+        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp", caption: "Delosperma 'Ice Cream Mix' newly planted" },
+        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp", caption: "Delosperma mixed daisy flowers" },
         { src: "images/jul-2026/front-bed-4-roses.jpeg", caption: "Front Bed 4 cleared, composted and planted with the two climbing roses" },
         { src: "images/jul-2026/rose-the-pilgrim.jpeg", caption: "The Pilgrim — soft yellow David Austin climbing rose" },
         { src: "images/jul-2026/rose-the-generous-gardener.jpeg", caption: "The Generous Gardener — pale pink David Austin climbing rose" },
@@ -1981,6 +2321,23 @@ window.OAK = (function () {
         { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before removal" },
       ],
       frontBed5: [
+        { src: "images/jul-2026/july-update-front-bed-7-preplanting.webp", caption: "The new Front Bed 5 plants set out before planting" },
+        { src: "images/jul-2026/july-update-front-bed-5-1.webp", caption: "Front Bed 5 after the July replant" },
+        { src: "images/jul-2026/july-update-front-bed-5-2.webp", caption: "Front Bed 5 — new planting from the boundary side" },
+        { src: "images/jul-2026/july-update-front-bed-5-3.webp", caption: "Front Bed 5 — new planting, view three" },
+        { src: "images/jul-2026/july-update-front-bed-5-4.webp", caption: "Front Bed 5 — new planting, view four" },
+        { src: "images/jul-2026/july-update-front-bed-5-5.webp", caption: "Front Bed 5 — new planting, view five" },
+        { src: "images/jul-2026/july-update-front-bed-5-6.webp", caption: "Front Bed 5 — new planting, view six" },
+        { src: "images/jul-2026/july-update-front-bed-5-ceratostigma-plumbaginoides.webp", caption: "Ceratostigma plumbaginoides" },
+        { src: "images/jul-2026/july-update-front-bed-5-heather-1-bell-s-extra-special.webp", caption: "Heather 'Bell's Extra Special'" },
+        { src: "images/jul-2026/july-update-front-bed-5-heather-2-tib.webp", caption: "Heather 'Tib'" },
+        { src: "images/jul-2026/july-update-front-bed-5-heather-3-providence-right.webp", caption: "Bell Heather 'Providence'" },
+        { src: "images/jul-2026/july-update-front-bed-5-heather-4-leprechaun.webp", caption: "Heather 'Leprechaun'" },
+        { src: "images/jul-2026/july-update-front-bed-5-heather-5-winter-chocolate.webp", caption: "Heather 'Winter Chocolate'" },
+        { src: "images/jul-2026/july-update-front-bed-5-hypericum.webp", caption: "New Hypericum" },
+        { src: "images/jul-2026/july-update-front-bed-5-rhubarb-and-custard-hebe.webp", caption: "Hebe 'Rhubarb and Custard'" },
+        { src: "images/jul-2026/july-update-front-bed-5-salvia-salgoon-lake-blueberry.webp", caption: "Salvia 'Salgoon Lake Blueberry'" },
+        { src: "images/jul-2026/july-update-front-bed-5-sollya.webp", caption: "Bluebell Creeper (Sollya)" },
         { src: "images/jul-2026/boundary-corner.webp", caption: "Boundary corner — box topiary & variegated shrub" },
         { src: "images/jul-2026/laurel.webp",          caption: "Boundary bed running back toward the entrance" },
         { src: "images/jul-2026/choisya.webp",         caption: "Variegated Choisya against the wall" },
@@ -2023,6 +2380,12 @@ window.OAK = (function () {
     "Euonymus": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus.webp", caption: "Euonymus — golden foliage" }] },
     ],
+    "Nemesia 'Aroma Heart of Gold'": [
+      { month: "jul-2026", label: "July 2026 · Back Bed 1", photos: [
+        { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp", caption: "Fragrant burgundy, cream and yellow flowers along the front edge" },
+        { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp", caption: "Nemesia 'Aroma Heart of Gold' in Back Bed 1" },
+      ]},
+    ],
     "Hosta": [
       { month: "june-2026", label: "June 2026", photos: [
         { src: "images/june-2026/hosta-bed1-1.webp", caption: "Hosta — Bed 1" },
@@ -2041,6 +2404,11 @@ window.OAK = (function () {
       ]},
     ],
     "Variegated Dogwood": [
+      { month: "jul-2026", label: "July 2026 · moved to Front Bed 3", photos: [
+        { src: "images/jul-2026/july-update-front-bed-3-dogwood.webp", caption: "New position in Front Bed 3" },
+        { src: "images/jul-2026/july-update-front-bed-3-dogwood-2.webp", caption: "Variegated foliage after the move" },
+        { src: "images/jul-2026/july-update-front-bed-3-dogwood-3.webp", caption: "Dogwood settling into the wall bed" },
+      ]},
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/variegated-dogwood.webp", caption: "Variegated Dogwood" }] },
     ],
     "Peony": [
@@ -2070,6 +2438,9 @@ window.OAK = (function () {
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/hydrangea-petiolaris.webp", caption: "Hydrangea petiolaris — newly identified" }] },
     ],
     "Red Hot Poker": [
+      { month: "jul-2026", label: "July 2026 · moved to Front Bed 3", photos: [
+        { src: "images/jul-2026/july-update-front-bed3-red-hot-poker.webp", caption: "New position below the brick wall" },
+      ]},
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/red-hot-poker.webp", caption: "Red Hot Poker — not yet flowered" }] },
     ],
     "Little Heath": [
@@ -2317,16 +2688,14 @@ window.OAK = (function () {
       { name: "Angel Wings", x: 50, y: 80, r: 8, hue: 70 },
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
-      { name: "Nemesia", x: 65, y: 88, r: 5, hue: 25 },
+      { name: "Nemesia 'Aroma Heart of Gold'", x: 65, y: 88, r: 5, hue: 25 },
       { name: "Wintercreeper", x: 78, y: 75, r: 7, hue: 55 },
       { name: "Dahlia (yellow)", x: 63, y: 68, r: 8, hue: 55 },
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
-      { name: "Red Hot Poker", x: 10, y: 62, r: 7, hue: 25 },
       { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 24, y: 16, r: 14, hue: 340 },
-      { name: "Variegated Dogwood", x: 66, y: 18, r: 11, hue: 0 },
       { name: "Hydrangea petiolaris", x: 86, y: 34, r: 9, hue: 210 },
       { name: "Weigela", x: 24, y: 42, r: 10, hue: 320 },
       { name: "Silverbush", x: 58, y: 43, r: 8, hue: 70 },
@@ -2357,6 +2726,7 @@ window.OAK = (function () {
       { name: "Alstroemeria", x: 18, y: 91, r: 7, hue: 20 },
       { name: "Petunia 'Bee's Knees'", x: 34, y: 91, r: 6, hue: 75 },
       { name: "Vinca minor 'Illumination'", x: 48, y: 91, r: 6, hue: 110 },
+      { name: "Nemesia", x: 58, y: 82, r: 6, hue: 25 },
       { name: "Lythrum 'Robin'", x: 66, y: 91, r: 7, hue: 325 },
       { name: "Begonia 'Carmen'", x: 84, y: 91, r: 7, hue: 10 },
     ],
@@ -2432,7 +2802,9 @@ window.OAK = (function () {
     ],
     frontBed3: [
       { name: "Climbing Rose 'Super Fairy'", x: 20, y: 35, r: 11, hue: 340 },
-      { name: "Fern",                       x: 50, y: 60, r: 10, hue: 120 },
+      { name: "Variegated Dogwood",          x: 46, y: 58, r: 11, hue: 10 },
+      { name: "Red Hot Poker",               x: 62, y: 76, r: 8, hue: 25 },
+      { name: "Leucothoe 'Little Flames'",   x: 34, y: 78, r: 8, hue: 5 },
       { name: "Rose (pink)",                x: 80, y: 35, r: 10, hue: 330 },
     ],
     frontBed4: [
@@ -2446,13 +2818,24 @@ window.OAK = (function () {
       { name: "Photinia (existing canopy)", x: 84, y: 62, r: 16, hue: 112 },
       { name: "Festuca 'Elijah Blue' (3 plants)", x: 23, y: 77, r: 12, hue: 215 },
       { name: "Astrantia trio", x: 52, y: 80, r: 11, hue: 335 },
+      { name: "Delosperma 'Ice Cream Mix'", x: 42, y: 94, r: 7, hue: 20 },
       { name: "Flaming Silver", x: 88, y: 86, r: 8, hue: 85 },
       { name: "The Generous Gardener", x: 93, y: 96, r: 11, hue: 345 },
     ],
     frontBed5: [
-      { name: "Cherry Laurel",          x: 50, y: 20, r: 13, hue: 135 },
-      { name: "Mexican Orange Blossom", x: 50, y: 45, r: 12, hue: 70  },
-      { name: "Climber (unidentified)", x: 50, y: 68, r: 10, hue: 10  },
+      { name: "Cherry Laurel",                         x: 24, y: 15, r: 10, hue: 135 },
+      { name: "Mexican Orange Blossom",                x: 50, y: 15, r: 9, hue: 70  },
+      { name: "Climber (unidentified)",                x: 78, y: 15, r: 8, hue: 10  },
+      { name: "Bluebell Creeper",                      x: 22, y: 38, r: 7, hue: 240 },
+      { name: "Salvia 'Salgoon Lake Blueberry'",       x: 50, y: 38, r: 8, hue: 270 },
+      { name: "Hebe 'Rhubarb and Custard'",            x: 78, y: 38, r: 8, hue: 340 },
+      { name: "Hypericum (cultivar to confirm)",       x: 28, y: 61, r: 7, hue: 55 },
+      { name: "Ceratostigma",                          x: 51, y: 61, r: 6, hue: 235 },
+      { name: "Bell Heather 'Providence' (2 plants)",  x: 74, y: 61, r: 7, hue: 335 },
+      { name: "Heather 'Bell's Extra Special'",        x: 14, y: 84, r: 6, hue: 75 },
+      { name: "Heather 'Tib'",                         x: 33, y: 84, r: 6, hue: 325 },
+      { name: "Heather 'Leprechaun'",                  x: 55, y: 84, r: 6, hue: 95 },
+      { name: "Heather 'Winter Chocolate'",            x: 78, y: 84, r: 6, hue: 45 },
     ],
     frontStone: [
       { name: "Hosta", x: 50, y: 50, r: 22, hue: 105 },
