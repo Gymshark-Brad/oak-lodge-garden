@@ -21,6 +21,7 @@ function run(argv) {
   eval(readText(`${root}/data.js`));
   eval(readText(`${root}/plant-profile-data.js`));
   eval(readText(`${root}/back-garden-profile-data.js`));
+  eval(readText(`${root}/front-garden-profile-data.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
 

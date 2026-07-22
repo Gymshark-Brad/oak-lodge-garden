@@ -45,6 +45,7 @@ oak-lodge-garden/
   PlantProfile.jsx    # Full-page researched plant profile for authored v2 records
   plant-profile-data.js # Authored, source-backed v2 profiles for Beds 1–2
   back-garden-profile-data.js # Authored v2 profiles for every remaining back-garden zone
+  front-garden-profile-data.js # Authored v2 profiles for every front-garden zone
   SeasonalCalendar.jsx  # Monthly care calendar — click a month to see all tasks
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
   WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
@@ -117,7 +118,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 
 Profile fields are enriched centrally in `data.js` after the authored plant records are assembled. This guarantees every record has a description and the same eight at-a-glance characteristics, while named cultivars can override inferred values in `PROFILE_OVERRIDES`.
 
-Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2) and `back-garden-profile-data.js` (all other back-garden zones), keyed by stable plant ID. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include source entries. Every active back-garden plant is fully migrated (July 2026); the front garden remains on the legacy card until researched.
+Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2), `back-garden-profile-data.js` (all other back-garden zones) and `front-garden-profile-data.js` (all front-garden zones), keyed by stable plant ID. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include source entries. Every active back- and front-garden plant is fully migrated (July 2026).
 
 Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 
