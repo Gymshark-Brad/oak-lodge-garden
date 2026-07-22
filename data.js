@@ -12,7 +12,7 @@ window.OAK = (function () {
       dims: "2.6m × 2.6m",
       where: "Corner by the gate, upper level",
       desc:
-        "Raised timber-edged bed dominated by a Japanese Maple. Layered shade-tolerant planting underneath — Fatsia, Hosta, Astilbe — with a clipped box edge.",
+        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. Layered shade-tolerant planting underneath — Fatsia and Hostas — with a clipped box edge.",
       shape: { kind: "rect", x: 75, y: 38, w: 130, h: 130 },
       color: "#8b5e3c",
       labelXY: [140, 105],
@@ -394,15 +394,15 @@ window.OAK = (function () {
   const PLANTS = {
     "Bed 1": [
       {
-        name: "Japanese Maple",
+        name: "Japanese Maple 'Bloodgood'",
         id: "bed1-japanese-maple",
-        latin: "Acer palmatum",
+        latin: "Acer palmatum 'Bloodgood'",
         photos: ["images/plants/japanese-maple.webp", "images/plants/japanese-maple-1.webp"],
         position: "Back centre — dominant canopy",
         light: "Dappled shade to partial sun. Sheltered from harsh afternoon sun.",
         water: "Keep soil consistently moist but never waterlogged.",
         care: "Slightly acidic, well-drained loam. Mulch in spring; minimal pruning.",
-        seasonal: "New leaves emerge red-bronze in April; fiery red autumn colour; bare and architectural in winter.",
+        seasonal: "Deep red-purple leaves open in April, hold their colour through summer and brighten to fiery red in autumn; bare and architectural in winter.",
       },
       {
         name: "Japanese Aralia",
@@ -427,20 +427,9 @@ window.OAK = (function () {
         seasonal: "Evergreen golden-variegated leaves year-round; lavender-purple flowers May.",
       },
       {
-        name: "Astilbe",
-        id: "bed1-astilbe",
-        latin: "Astilbe",
-        photos: ["images/plants/astilbe.webp", "images/plants/hardy-geranium.webp"],
-        position: "Right side — feathery plumes in summer",
-        light: "Partial shade; tolerates more sun if soil stays moist.",
-        water: "Loves moisture. Water freely in dry spells.",
-        care: "Humus-rich soil. Cut back to ground in late winter.",
-        seasonal: "Pink feathery plumes June–August; ferny foliage spring–autumn.",
-      },
-      {
-        name: "Hosta",
+        name: "Hosta 'Patriot'",
         id: "bed1-hosta",
-        latin: "Hosta",
+        latin: "Hosta 'Patriot'",
         photos: ["images/plants/hosta-patriot.webp", "images/plants/hosta-patriot-2.webp", "images/plants/hosta-francee.webp"],
         position: "Front-left, green/white variegation",
         light: "Shade to partial shade.",
@@ -471,9 +460,9 @@ window.OAK = (function () {
         seasonal: "Evergreen year-round.",
       },
       {
-        name: "Euonymus",
+        name: "Euonymus 'Emerald 'n' Gold'",
         id: "bed1-euonymus",
-        latin: "Euonymus fortunei (golden)",
+        latin: "Euonymus fortunei 'Emerald 'n' Gold'",
         photos: ["images/plants/euonymus.webp", "images/plants/euonymus-1.webp"],
         position: "Front-left corner",
         light: "Sun or partial shade.",
@@ -585,9 +574,9 @@ window.OAK = (function () {
         },
       },
       {
-        name: "Wintercreeper",
+        name: "Wintercreeper 'Emerald Gaiety'",
         id: "bed1-wintercreeper",
-        latin: "Euonymus fortunei",
+        latin: "Euonymus fortunei 'Emerald Gaiety'",
         photos: ["images/plants/wintercreeper.webp", "images/plants/wintercreeper-silver-queen.webp", "images/plants/wintercreeper-3.webp"],
         position: "Front-right — spreading variegated evergreen",
         light: "Sun or partial shade.",
@@ -596,26 +585,26 @@ window.OAK = (function () {
         seasonal: "Evergreen white-and-green leaves year-round; pink tints in cold weather.",
       },
       {
-        name: "Dahlia",
+        name: "Dahlia 'Double Dreamy Lilac'",
         id: "bed1-dahlia",
-        latin: "Dahlia (dark-leaved, Bishop type)",
+        latin: "Dahlia Double Dreamy Lilac (best-fit identification)",
         photos: ["images/plants/dahlia-1.webp", "images/plants/dahlia-2.webp", "images/plants/dahlia-3.webp"],
-        position: "Centre — dark foliage, red flowers to come",
+        position: "Centre — compact dark foliage and lilac-magenta double flowers",
         light: "Full sun. Needs warmth to thrive.",
         water: "Regular watering, especially in dry spells. Don't let soil dry out completely.",
-        care: "Rich, well-drained soil. Mulch the crown. Stake if it gets tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early to encourage bushiness. Deadhead spent flowers for continuous blooming.",
-        seasonal: "Dark bronze-black foliage from May; red flowers July–October; dies back after first hard frost. Tubers overwinter underground with protection.",
+        care: "Rich, well-drained soil. Mulch the crown and support only if the compact stems lean under their flowers. Lift tubers in autumn or mulch heavily for winter protection. Pinch early and deadhead for continuous blooming.",
+        seasonal: "Dark bronze-black foliage from May; fully double lilac-magenta flowers July–October; dies back after the first hard frost. Tubers overwinter with protection.",
       },
       {
-        name: "Dahlia (yellow)",
+        name: "Dahlia 'Double Dreamy Gold'",
         id: "bed1-dahlia-yellow",
-        latin: "Dahlia (dark-leaved, yellow-flowered Bishop type)",
+        latin: "Dahlia Double Dreamy Gold (best-fit identification)",
         photos: ["images/june-2026-updates/dahlia-black-yellow-1.webp", "images/june-2026-updates/dahlia-black-yellow-2.webp"],
-        position: "Centre — dark foliage, yellow flowers to come. Added June 2026.",
+        position: "Centre — compact dark foliage and golden double flowers. Added June 2026.",
         light: "Full sun. Needs warmth to thrive.",
         water: "Regular watering, especially in dry spells. Don't let soil dry out completely.",
-        care: "Rich, well-drained soil. Mulch the crown. Stake if tall. Lift tubers in autumn or mulch heavily for winter protection. Pinch out the growing tip early. Deadhead for continuous blooming.",
-        seasonal: "Dark bronze-black foliage from May; yellow flowers July–October; dies back after first hard frost. Tubers overwinter with protection.",
+        care: "Rich, well-drained soil. Mulch the crown and support only if the compact stems lean under their flowers. Lift tubers in autumn or mulch heavily for winter protection. Pinch early and deadhead for continuous blooming.",
+        seasonal: "Dark bronze-black foliage from May; fully double golden-yellow flowers July–October; dies back after the first hard frost. Tubers overwinter with protection.",
       },
       {
         name: "Hosta (gold)",
@@ -1954,16 +1943,15 @@ window.OAK = (function () {
   // source; these helpers turn it into compact, comparable card metadata and
   // provide safe fallbacks for future plants as soon as they are registered.
   const PROFILE_OVERRIDES = {
-    "Japanese Maple": { habit: "Small deciduous tree", size: "4–8m high · 4–8m spread", wildlife: "Shelter for insects and birds" },
+    "Japanese Maple 'Bloodgood'": { habit: "Small deciduous tree", size: "2.5–4m high and wide", wildlife: "Shelter for insects and birds" },
     "Japanese Aralia": { habit: "Evergreen architectural shrub", size: "1.5–2.5m high and wide", hardiness: "H5 · hardy in most UK gardens" },
     "Rhododendron": { habit: "Evergreen flowering shrub", size: "1–1.5m high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Early nectar for pollinators" },
-    "Astilbe": { habit: "Clump-forming herbaceous perennial", size: "45–90cm high · 45–60cm spread", wildlife: "Flowers visited by pollinators" },
-    "Hosta": { habit: "Clump-forming herbaceous perennial", size: "30–90cm high and wide", wildlife: "Flowers visited by bees" },
+    "Hosta 'Patriot'": { habit: "Clump-forming herbaceous perennial", size: "Up to 55cm high · 50–100cm spread", wildlife: "Flowers visited by bees" },
     "Hosta (gold)": { habit: "Clump-forming herbaceous perennial", size: "45–60cm high · 90cm spread", wildlife: "Flowers visited by bees" },
     "Angel Wings": { habit: "Evergreen foliage perennial", size: "40–50cm high and wide", hardiness: "H3 · protect below −5°C" },
     "Box Hedging": { habit: "Dense evergreen shrub", size: "Kept clipped at Oak Lodge", wildlife: "Year-round shelter for small wildlife" },
-    "Dahlia": { habit: "Tuberous clump-forming perennial", size: "60–120cm high · 45–60cm spread", hardiness: "H3 · tubers need winter protection", wildlife: "Open flowers feed pollinators" },
-    "Dahlia (yellow)": { habit: "Tuberous clump-forming perennial", size: "60–120cm high · 45–60cm spread", hardiness: "H3 · tubers need winter protection", wildlife: "Open flowers feed pollinators" },
+    "Dahlia 'Double Dreamy Lilac'": { habit: "Compact tuberous perennial", size: "About 40–50cm high and wide", hardiness: "H3 · tubers need winter protection" },
+    "Dahlia 'Double Dreamy Gold'": { habit: "Compact tuberous perennial", size: "About 40–50cm high and wide", hardiness: "H3 · tubers need winter protection" },
     "Little Heath": { habit: "Compact evergreen shrub", size: "50–100cm high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Spring flowers support pollinators" },
     "Variegated Dogwood": { habit: "Suckering deciduous shrub", size: "2–3m high and wide", hardiness: "H6 · fully hardy", wildlife: "Flowers and fruit support wildlife" },
     "Peony": { habit: "Clump-forming herbaceous perennial", size: "75–100cm high and wide", hardiness: "H6 · fully hardy", wildlife: "Flowers visited by pollinators" },
@@ -2026,7 +2014,7 @@ window.OAK = (function () {
     if (/(IDENTIFY|to identify)/i.test(text)) return "To be confirmed";
     if (/(tender annual|not frost-hardy|dies with the first|first hard frost|replace each year|tender seasonal)/i.test(text)) return "Tender · protect from frost";
     if (/(Coprosma|Callistemon|Angel Wings|Sollya|Billardiera|Salgoon|Rhubarb and Custard)/i.test(text)) return "H3 · protect below −5°C";
-    if (/(Calluna|Erica carnea|Daboecia|Dogwood|Cornus|Hosta|Astilbe|Peony|Hydrangea|Apple|Pear|Wisteria|Clematis|Lythrum)/i.test(text)) return "Fully hardy in the UK";
+    if (/(Calluna|Erica carnea|Daboecia|Dogwood|Cornus|Hosta|Peony|Hydrangea|Apple|Pear|Wisteria|Clematis|Lythrum)/i.test(text)) return "Fully hardy in the UK";
     return "Hardy in most UK gardens";
   };
 
@@ -2171,21 +2159,19 @@ window.OAK = (function () {
     "june-2026": {
       label: "June 2026",
       bed1: [
-        { src: "images/june-2026/japanese-maple.webp",  caption: "Japanese Maple — full summer canopy" },
-        { src: "images/june-2026/hosta-bed1-1.webp",    caption: "Hosta — Bed 1" },
-        { src: "images/june-2026/hosta-bed1-2.webp",    caption: "Hosta — close-up" },
+        { src: "images/june-2026/japanese-maple.webp",  caption: "Japanese Maple 'Bloodgood' — full summer canopy (best-fit identification)" },
+        { src: "images/june-2026/hosta-bed1-1.webp",    caption: "Hosta 'Patriot' — Bed 1" },
+        { src: "images/june-2026/hosta-bed1-2.webp",    caption: "Hosta 'Patriot' — close-up" },
         { src: "images/june-2026/hosta-bed2.webp",      caption: "Hosta (gold) — moved from Bed 2" },
         { src: "images/june-2026/red-hot-poker.webp",   caption: "Red Hot Poker — moved from Bed 2" },
-        { src: "images/june-2026/dahlia-context.webp",  caption: "Dahlia in context" },
-        { src: "images/june-2026/dahlia.webp",          caption: "Dahlia — close-up of foliage" },
+        { src: "images/june-2026/dahlia-context.webp",  caption: "Dahlia Double Dreamy Lilac — in context (best fit)" },
+        { src: "images/june-2026/dahlia.webp",          caption: "Dahlia Double Dreamy Lilac — flower and dark foliage (best fit)" },
         { src: "images/june-2026/angel-wings.webp",     caption: "Angel Wings" },
-        { src: "images/june-2026/euonymus.webp",        caption: "Euonymus" },
+        { src: "images/june-2026/euonymus.webp",        caption: "Euonymus 'Emerald 'n' Gold'" },
         { src: "images/june-2026/fatsia.webp",          caption: "Fatsia japonica" },
-        { src: "images/june-2026/astilbe-1.webp",       caption: "Astilbe — flower spike emerging" },
-        { src: "images/june-2026/astilbe-2.webp",       caption: "Astilbe — foliage close-up" },
         { src: "images/june-2026-updates/avens-bed1.webp",             caption: "Avens in Bed 1 — before the July move to Bed 2" },
-        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",   caption: "Dahlia (yellow) — dark foliage, newly planted" },
-        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",   caption: "Dahlia (yellow) — close-up" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp",   caption: "Dahlia Double Dreamy Gold — dark foliage, newly planted (best fit)" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp",   caption: "Dahlia Double Dreamy Gold — close-up (best fit)" },
         { src: "images/june-2026-update-2/little-heath-1.webp",         caption: "Little Heath — border planting" },
         { src: "images/june-2026-update-2/little-heath-2.webp",         caption: "Little Heath — close-up" },
         { src: "images/june-2026-update-2/little-heath-3.webp",         caption: "Little Heath — foliage" },
@@ -2450,24 +2436,24 @@ window.OAK = (function () {
   // Per-plant photo journal. Keyed by plant name, newest month first.
   // Each entry: { month, label, photos: [{src, caption}] }
   const PLANT_PHOTOS = {
-    "Japanese Maple": [
+    "Japanese Maple 'Bloodgood'": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/japanese-maple.webp", caption: "Full summer canopy" }] },
       { month: "may-2026",  label: "May 2026",  photos: [{ src: "images/may-2026/bed1-close1.jpg",      caption: "Japanese Maple area" }] },
     ],
     "Japanese Aralia": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/fatsia.webp", caption: "Fatsia japonica" }] },
     ],
-    "Dahlia": [
+    "Dahlia 'Double Dreamy Lilac'": [
       { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026/dahlia-context.webp", caption: "In context" },
-        { src: "images/june-2026/dahlia.webp",         caption: "Close-up of dark foliage" },
+        { src: "images/june-2026/dahlia-context.webp", caption: "Compact plant in context" },
+        { src: "images/june-2026/dahlia.webp",         caption: "Lilac-magenta double flower and dark foliage" },
       ]},
     ],
     "Angel Wings": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/angel-wings.webp", caption: "Angel Wings — silvery leaves" }] },
     ],
-    "Euonymus": [
-      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus.webp", caption: "Euonymus — golden foliage" }] },
+    "Euonymus 'Emerald 'n' Gold'": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/euonymus.webp", caption: "‘Emerald ’n’ Gold’ — golden foliage" }] },
     ],
     "Nemesia 'Aroma Heart of Gold'": [
       { month: "jul-2026", label: "July 2026 · Back Bed 1", photos: [
@@ -2475,10 +2461,10 @@ window.OAK = (function () {
         { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp", caption: "Nemesia 'Aroma Heart of Gold' in Back Bed 1" },
       ]},
     ],
-    "Hosta": [
+    "Hosta 'Patriot'": [
       { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026/hosta-bed1-1.webp", caption: "Hosta — Bed 1" },
-        { src: "images/june-2026/hosta-bed1-2.webp", caption: "Hosta — Bed 1, close-up" },
+        { src: "images/june-2026/hosta-bed1-1.webp", caption: "‘Patriot’ in Bed 1" },
+        { src: "images/june-2026/hosta-bed1-2.webp", caption: "‘Patriot’ foliage close-up" },
       ]},
     ],
     "Hosta (gold)": [
@@ -2569,12 +2555,8 @@ window.OAK = (function () {
     "Forget-me-not": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/forget-me-not.webp", caption: "Forget-me-not — tiny blue flowers" }] },
     ],
-    "Astilbe": [
-      { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026/astilbe-1.webp", caption: "Astilbe — flower spike emerging" },
-        { src: "images/june-2026/astilbe-2.webp", caption: "Astilbe — foliage close-up" },
-        { src: "images/plants/hardy-geranium.webp", caption: "Astilbe foliage — additional view" },
-      ]},
+    "Wintercreeper 'Emerald Gaiety'": [
+      { month: "june-2026", label: "June 2026", photos: [{ src: "images/plants/wintercreeper.webp", caption: "White-margined foliage in Bed 1" }] },
     ],
     "New Zealand Flax (cultivar to confirm)": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/yucca.webp", caption: "Yucca — architectural form" }] },
@@ -2643,10 +2625,10 @@ window.OAK = (function () {
     "Pear Tree": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/pear-tree.webp", caption: "Pear Tree — June" }] },
     ],
-    "Dahlia (yellow)": [
+    "Dahlia 'Double Dreamy Gold'": [
       { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp", caption: "Dark foliage, yellow buds — newly planted" },
-        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp", caption: "Close-up" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-1.webp", caption: "Dark foliage and golden buds — newly planted" },
+        { src: "images/june-2026-updates/dahlia-black-yellow-2.webp", caption: "Golden double flower close-up" },
       ]},
     ],
     "Callistemon Inferno ('Yanferno')": [
@@ -2768,18 +2750,17 @@ window.OAK = (function () {
   // Coordinates are in a 100×100 viewBox; the bed view scales it up.
   const BED_PLANT_MAPS = {
     bed1: [
-      { name: "Japanese Maple", x: 50, y: 28, r: 22, hue: 18 },
+      { name: "Japanese Maple 'Bloodgood'", x: 50, y: 28, r: 22, hue: 18 },
       { name: "Japanese Aralia", x: 45, y: 50, r: 11, hue: 90 },
       { name: "Rhododendron", x: 22, y: 48, r: 10, hue: 60 },
-      { name: "Astilbe", x: 78, y: 50, r: 9, hue: 350 },
-      { name: "Dahlia", x: 50, y: 62, r: 9, hue: 0 },
-      { name: "Hosta", x: 22, y: 75, r: 9, hue: 105 },
+      { name: "Dahlia 'Double Dreamy Lilac'", x: 50, y: 62, r: 9, hue: 0 },
+      { name: "Hosta 'Patriot'", x: 22, y: 75, r: 9, hue: 105 },
       { name: "Angel Wings", x: 50, y: 80, r: 8, hue: 70 },
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
-      { name: "Euonymus", x: 12, y: 88, r: 6, hue: 55 },
+      { name: "Euonymus 'Emerald 'n' Gold'", x: 12, y: 88, r: 6, hue: 55 },
       { name: "Nemesia 'Aroma Heart of Gold'", x: 65, y: 88, r: 5, hue: 25 },
-      { name: "Wintercreeper", x: 78, y: 75, r: 7, hue: 55 },
-      { name: "Dahlia (yellow)", x: 63, y: 68, r: 8, hue: 55 },
+      { name: "Wintercreeper 'Emerald Gaiety'", x: 78, y: 75, r: 7, hue: 55 },
+      { name: "Dahlia 'Double Dreamy Gold'", x: 63, y: 68, r: 8, hue: 55 },
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
       { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
     ],
@@ -2978,7 +2959,7 @@ window.OAK = (function () {
   const journalZoneOverrides = {
     "Angel Wings": "bed1",
     "Apple Tree": "bed4",
-    "Hosta": "bed1",
+    "Hosta 'Patriot'": "bed1",
     "Lavender": "patio",
   };
   Object.entries(journalZoneOverrides).forEach(([plantName, zoneKey]) => {

@@ -8,18 +8,17 @@
 (function () {
   const WATER_BANDS = {
     "Bed 1": {
-      "Japanese Maple": 3,
+      "Japanese Maple 'Bloodgood'": 3,
       "Japanese Aralia": 3,
       "Rhododendron": 3,
-      "Astilbe": 4,
-      "Hosta": 3,
+      "Hosta 'Patriot'": 3,
       "Angel Wings": 1,
       "Box Hedging": 2,
-      "Euonymus": 2,
+      "Euonymus 'Emerald 'n' Gold'": 2,
       "Nemesia 'Aroma Heart of Gold'": 4,
-      "Wintercreeper": 2,
-      "Dahlia": 4,
-      "Dahlia (yellow)": 4,
+      "Wintercreeper 'Emerald Gaiety'": 2,
+      "Dahlia 'Double Dreamy Lilac'": 4,
+      "Dahlia 'Double Dreamy Gold'": 4,
       "Hosta (gold)": 3,
       "Little Heath": 2,
     },
@@ -221,7 +220,7 @@
   // its long-term band suggests until it's rooted in.
   const WATER_SIGNS = {
     "Bed 1": {
-      "Japanese Maple": {
+      "Japanese Maple 'Bloodgood'": {
         under: "Check moisture about 15cm down near the root zone, not just the surface — raised beds dry faster than open ground. Leaf scorch or curling at the edges in hot spells is the clearest sign.",
         over: "A sudden flush of yellow leaves out of autumn season, or black, mushy patches at the base of the trunk, means it's sitting too wet.",
       },
@@ -233,11 +232,7 @@
         under: "Shallow-rooted — check the top 5–8cm. Leaves curling downward and still curled first thing in the morning (not just at midday) means it needs water.",
         over: "Yellowing leaves that drop despite moist soil, or soft dark patches at the base, point to waterlogging — a common problem in ericaceous soil that's too wet.",
       },
-      "Astilbe": {
-        under: "Check the top 5cm; it should feel damp, not just surface-wet. Crisping brown leaf edges or flopping plumes are a sure sign it's dried out — astilbe shows distress fast.",
-        over: "Yellowing leaves and a general lack of vigour despite regular watering can mean the crown is sitting too wet — improve drainage rather than watering more.",
-      },
-      "Hosta": {
+      "Hosta 'Patriot'": {
         under: "Feel the soil under the mulch; water once the top 4–5cm is dry. Leaves turning pale, thin and papery, or scorching at the tips, is the sign — slug damage can look similar, so check the soil first.",
         over: "Yellowing lower leaves and a mushy crown mean it's been kept too wet — hostas want moist, not waterlogged, soil.",
       },
@@ -249,7 +244,7 @@
         under: "Check 8cm down and only water through a proper dry spell. Sparse, thin foliage after a long drought is the underwater sign.",
         over: "Bronzing or orange patches are more often box blight or winter cold than thirst — don't water in response to leaf colour alone; overwatering can encourage the fungal disease.",
       },
-      "Euonymus": {
+      "Euonymus 'Emerald 'n' Gold'": {
         under: "Check 8cm down before watering. A slightly dulled leaf colour in a long dry spell is the only sign worth acting on.",
         over: "Very tolerant — yellowing leaves or soft stems at the base would be the rare overwatering sign.",
       },
@@ -257,11 +252,11 @@
         under: "Shallow-rooted — check the top 2–3cm and water as soon as it's dry there. Flowering slows and leaves go limp quickly once it dries out.",
         over: "Yellowing leaves, stem rot at the base, or fewer flowers despite frequent watering mean it's being overdone — let it dry slightly between waters.",
       },
-      "Wintercreeper": {
+      "Wintercreeper 'Emerald Gaiety'": {
         under: "Check 8cm down and only water in a proper dry spell. A slight dulling of leaf colour is the only real cue.",
         over: "Very tough — yellowing leaves or soft stems at the base would be the rare overwatering sign.",
       },
-      "Dahlia": {
+      "Dahlia 'Double Dreamy Lilac'": {
         under: "Check the top 3–4cm daily in hot weather. Leaves and stems going limp by mid-afternoon and not recovering by evening means it needs water now.",
         over: "Yellowing lower leaves or soft, black patches on the stem near the base mean it's been kept too wet — dahlias rot easily in waterlogged soil.",
       },
@@ -269,7 +264,7 @@
         under: "Check 5–6cm down. This clump moved from Bed 1 into Bed 2 in July 2026, so keep a slightly closer eye than usual — flopping foliage or fading flowers means it needs a drink while it re-establishes.",
         over: "Yellowing leaves or a mushy crown mean it's sitting too wet — a bigger risk than usual while the disturbed roots recover from the move.",
       },
-      "Dahlia (yellow)": {
+      "Dahlia 'Double Dreamy Gold'": {
         under: "As a brand-new tuber (planted June 2026), check the top 3–4cm daily in hot weather — limp stems by afternoon mean water now.",
         over: "Yellowing leaves or a soft, blackening stem near the base mean it's been kept too wet — a real risk for a newly planted tuber that hasn't rooted out yet.",
       },

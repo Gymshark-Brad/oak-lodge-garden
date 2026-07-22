@@ -148,7 +148,7 @@ Lives in its own file, same pattern as `SEASONAL` in `seasonal-data.js` — keep
 
 ```javascript
 WATER_BANDS = {
-  "Bed 1": { "Japanese Maple": 3, "Angel Wings": 1, ... },  // keyed exactly like PLANTS
+  "Bed 1": { "Japanese Maple 'Bloodgood'": 3, "Angel Wings": 1, ... },  // keyed exactly like PLANTS
   ...
 }
 ```
@@ -190,7 +190,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 14 | Japanese Maple, Fatsia japonica, Rhododendron, Dahlia and Nemesia 'Aroma Heart of Gold'; Red Hot Poker moved out July 2026 |
+| Bed 1 | 13 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits) and Nemesia 'Aroma Heart of Gold'; Astilbe removed July 2026 |
 | Bed 2 | 9 | Weeping Cherry, Peony, Weigela, Silverbush and Hydrangea petiolaris; Dogwood moved out July 2026 |
 | Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
 | Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope', Celosia — replanted June 2026 |
@@ -308,7 +308,7 @@ Product work retained for after remediation: monthly bed timelines, mobile galle
 - Photo gaps filled (May + June 2026)
 - Bed 3 replanted June 2026 — new plants, archive photos system added
 - Front Pot zone added (`frontpot`) — Gazania, Calibrachoa, Bacopa White
-- Avens moved Bed 3 → Bed 1; Dahlia (yellow) added to Bed 1
+- Avens moved Bed 3 → Bed 1; Dahlia 'Double Dreamy Gold' (best-fit identification) added to Bed 1
 
 ---
 
