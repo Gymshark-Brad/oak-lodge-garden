@@ -115,7 +115,7 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
       <section className="pp-section" aria-labelledby="care-heading">
         <SectionHeading eyebrow="Practical guide" title="Keeping it happy" id="care-heading" />
         <div className="pp-care-intro">
-          <p>The aim is steady growth and repeated flowering—not permanently wet soil.</p>
+          <p>The aim is resilient, balanced growth in the conditions this plant actually prefers.</p>
           {waterInfo && (
             <div className="pp-water-stamp">
               <span className="t-stamp">Oak Lodge watering band {waterBand}</span>

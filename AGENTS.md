@@ -116,7 +116,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 
 Profile fields are enriched centrally in `data.js` after the authored plant records are assembled. This guarantees every record has a description and the same eight at-a-glance characteristics, while named cultivars can override inferred values in `PROFILE_OVERRIDES`.
 
-Rich v2 profiles are authored separately in `plant-profile-data.js`, keyed by stable plant ID. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include source entries. Flower Bed 1 is the first fully migrated zone (July 2026).
+Rich v2 profiles are authored separately in `plant-profile-data.js`, keyed by stable plant ID. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include source entries. Flower Beds 1 and 2 are fully migrated (July 2026); later zones still use the legacy card until researched.
 
 Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 

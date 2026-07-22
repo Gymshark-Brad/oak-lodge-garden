@@ -732,7 +732,7 @@ window.OAK = (function () {
       {
         name: "Maiden Pink",
         id: "bed2-maiden-pink",
-        latin: "Dianthus deltoides",
+        latin: "Dianthus deltoides 'Leuchtfunk'",
         photos: ["images/plants/maiden-pink.webp", "images/plants/dianthus.webp", "images/plants/dianthus-1.webp", "images/plants/dianthus-2.webp"],
         position: "Between walls — pink flowers",
         light: "Full sun.",
