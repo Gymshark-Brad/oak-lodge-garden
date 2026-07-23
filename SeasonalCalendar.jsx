@@ -1,7 +1,7 @@
 // Oak Lodge Garden — SeasonalCalendar.jsx
 // Notebook-style monthly view: what's looking good + what needs doing.
 
-const { useState: useState_SC, useEffect: useEffect_SC, useRef: useRef_SC } = React;
+const { useState: useState_SC, useEffect: useEffect_SC, useMemo: useMemo_SC, useRef: useRef_SC } = React;
 
 function SeasonalCalendar({ onOpenPlant }) {
   const SEASONAL = window.OAK.SEASONAL;
@@ -10,6 +10,7 @@ function SeasonalCalendar({ onOpenPlant }) {
 
   const realMonth = new Date().getMonth();
   const [activeIndex, setActiveIndex] = useState_SC(realMonth);
+  const [seasonFilter, setSeasonFilter] = useState_SC("");
   const tabsRef = useRef_SC(null);
   const activeTabRef = useRef_SC(null);
 
@@ -30,6 +31,54 @@ function SeasonalCalendar({ onOpenPlant }) {
 
   const monthName = MONTHS[activeIndex];
   const monthData = SEASONAL[monthName] || { highlights: [], tasks: [], mood: "" };
+  const monthShort = MONTHS_SHORT[activeIndex];
+  const seasonName = activeIndex <= 1 || activeIndex === 11
+    ? "Winter"
+    : activeIndex <= 4
+      ? "Spring"
+      : activeIndex <= 7
+        ? "Summer"
+        : "Autumn";
+  const profileRecords = useMemo_SC(
+    () => Object.values(window.OAK.PLANT_BY_ID || {}).filter((record) => record.plant.profile),
+    []
+  );
+  const highlightedIds = new Set(
+    monthData.highlights.map((entry) => entry.reference && entry.reference.plantId).filter(Boolean)
+  );
+  const floweringExtras = profileRecords
+    .filter((record) => record.plant.profile.floweringMonths.includes(monthShort) && !highlightedIds.has(record.plant.id))
+    .sort((a, b) => {
+      const zoneA = window.OAK.ZONES[a.zoneKey];
+      const zoneB = window.OAK.ZONES[b.zoneKey];
+      return zoneA.title.localeCompare(zoneB.title) || a.plant.name.localeCompare(b.plant.name);
+    });
+  const seasonalGroups = useMemo_SC(() => {
+    const query = seasonFilter.trim().toLowerCase();
+    const groups = new Map();
+    profileRecords.forEach((record) => {
+      const profile = record.plant.profile;
+      const season = profile.seasons.find((item) => item.season === seasonName);
+      const zone = window.OAK.ZONES[record.zoneKey];
+      if (!season || !zone) return;
+      const searchText = `${record.plant.name} ${zone.title} ${season.action}`.toLowerCase();
+      if (query && !searchText.includes(query)) return;
+      if (!groups.has(record.zoneKey)) {
+        groups.set(record.zoneKey, { zoneKey: record.zoneKey, zoneTitle: zone.title, plants: [] });
+      }
+      groups.get(record.zoneKey).plants.push({
+        plantId: record.plant.id,
+        plantName: record.plant.name,
+        action: season.action,
+        caution: profile.caution || null,
+      });
+    });
+    return Array.from(groups.values()).map((group) => ({
+      ...group,
+      plants: group.plants.sort((a, b) => a.plantName.localeCompare(b.plantName)),
+    }));
+  }, [profileRecords, seasonFilter, seasonName]);
+  const seasonalResultCount = seasonalGroups.reduce((total, group) => total + group.plants.length, 0);
 
   const handlePlantClick = (reference) => {
     if (!reference) return;
@@ -186,6 +235,28 @@ function SeasonalCalendar({ onOpenPlant }) {
                 ))}
               </ul>
             )}
+
+            {floweringExtras.length > 0 && (
+              <div className="cal-also-flowering">
+                <div className="t-stamp">Also typically flowering this month</div>
+                <div className="cal-flower-chips">
+                  {floweringExtras.map((record) => (
+                    <button
+                      key={record.plant.id}
+                      className="cal-flower-chip"
+                      onClick={() => handlePlantClick({
+                        zoneKey: record.zoneKey,
+                        plantId: record.plant.id,
+                        plantName: record.plant.name,
+                      })}
+                    >
+                      <span>{record.plant.name}</span>
+                      <small>{window.OAK.ZONES[record.zoneKey].title}</small>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </section>
 
           <div className="cal-divider" aria-hidden="true"><div className="rule" /></div>
@@ -239,6 +310,68 @@ function SeasonalCalendar({ onOpenPlant }) {
             )}
           </section>
         </div>
+
+        <div className="rule" style={{ margin: "30px 0 24px" }} />
+
+        <section className="cal-season-reference" aria-labelledby="season-reference-heading">
+          <header className="cal-section-head">
+            <div className="cal-section-num t-display">iii.</div>
+            <div>
+              <div className="t-stamp" style={{ color: "var(--accent)" }}>The researched profiles</div>
+              <h3 id="season-reference-heading" className="t-display cal-section-title">{seasonName} notes, plant by plant</h3>
+            </div>
+            <div className="cal-section-count t-mono">{seasonalResultCount} plants</div>
+          </header>
+          <p className="cal-season-intro">
+            The monthly jobs above are deliberately specific. These profile notes are the wider seasonal reference—open a garden area when you need it.
+          </p>
+          <label className="t-stamp cal-season-filter-label" htmlFor="season-profile-filter">Find a plant, area or job</label>
+          <input
+            id="season-profile-filter"
+            type="search"
+            className="cal-season-filter"
+            placeholder={`Search ${seasonName.toLowerCase()} notes…`}
+            value={seasonFilter}
+            onChange={(event) => setSeasonFilter(event.target.value)}
+          />
+          <div className="cal-season-groups">
+            {seasonalGroups.map((group) => (
+              <details
+                className="cal-season-group"
+                key={`${group.zoneKey}-${seasonFilter ? "search" : "browse"}`}
+                open={!!seasonFilter}
+              >
+                <summary>
+                  <span className="t-hand">{group.zoneTitle}</span>
+                  <span className="t-mono">{group.plants.length} {group.plants.length === 1 ? "plant" : "plants"}</span>
+                </summary>
+                <ul>
+                  {group.plants.map((plant) => (
+                    <li key={plant.plantId}>
+                      <button
+                        className="cal-plant-link-sm cal-season-plant"
+                        onClick={() => handlePlantClick({
+                          zoneKey: group.zoneKey,
+                          plantId: plant.plantId,
+                          plantName: plant.plantName,
+                        })}
+                      >
+                        {plant.plantName}
+                      </button>
+                      <p>{plant.action}</p>
+                      {plant.caution && (
+                        <p className="cal-season-caution"><span className="t-stamp">Handling note</span>{plant.caution}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+          {seasonalGroups.length === 0 && (
+            <p className="t-hand cal-empty">no seasonal notes match “{seasonFilter}”</p>
+          )}
+        </section>
 
         <div className="rule" style={{ margin: "30px 0 18px" }} />
         <div className="cal-sheet-foot">
@@ -423,11 +556,91 @@ function SeasonalCalendar({ onOpenPlant }) {
         .cal-plant-static { color: var(--ink-soft); }
         .cal-plants-sep { color: var(--pencil); opacity: 0.6; }
 
+        .cal-also-flowering {
+          margin-top: 22px; padding-top: 18px;
+          border-top: 1px dashed var(--hairline);
+        }
+        .cal-flower-chips {
+          display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
+        }
+        .cal-flower-chip {
+          display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px;
+          max-width: 260px; min-height: 44px; padding: 8px 11px;
+          border: 1px solid var(--hairline); border-radius: 2px;
+          background: color-mix(in oklab, var(--paper) 91%, var(--green) 9%);
+          color: var(--ink); cursor: pointer; text-align: left;
+          font-family: var(--serif); font-size: 16px;
+        }
+        .cal-flower-chip:hover {
+          border-color: var(--green);
+          background: color-mix(in oklab, var(--paper) 84%, var(--green) 16%);
+        }
+        .cal-flower-chip small {
+          font-family: var(--type); font-size: 9px; letter-spacing: 0.12em;
+          text-transform: uppercase; color: var(--ink-soft);
+        }
+
+        .cal-season-reference { margin-top: 2px; }
+        .cal-season-intro {
+          max-width: 780px; margin: -4px 0 18px 72px;
+          color: var(--ink-soft); font-size: 17px; line-height: 1.5;
+        }
+        .cal-season-filter-label { display: block; margin: 0 0 7px 72px; }
+        .cal-season-filter {
+          width: min(100%, 520px); min-height: 44px; margin: 0 0 18px 72px; padding: 10px 12px;
+          border: 1px solid var(--hairline); border-radius: 0;
+          background: color-mix(in oklab, var(--paper) 96%, white 4%);
+          color: var(--ink); font: 17px var(--serif);
+        }
+        .cal-season-filter:focus {
+          outline: 2px solid var(--accent); outline-offset: 2px;
+        }
+        .cal-season-groups {
+          display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 10px; margin-left: 72px;
+        }
+        .cal-season-group {
+          align-self: start;
+          border: 1px dashed var(--hairline);
+          background: color-mix(in oklab, var(--paper) 96%, var(--paper-deep) 4%);
+        }
+        .cal-season-group summary {
+          display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
+          min-height: 48px; padding: 10px 13px; cursor: pointer;
+          list-style-position: inside;
+        }
+        .cal-season-group summary::marker { color: var(--accent); }
+        .cal-season-group summary .t-hand { font-size: 23px; }
+        .cal-season-group summary .t-mono { opacity: 0.65; white-space: nowrap; }
+        .cal-season-group[open] summary {
+          border-bottom: 1px dotted var(--hairline);
+          background: color-mix(in oklab, var(--paper) 91%, var(--accent) 9%);
+        }
+        .cal-season-group ul { list-style: none; margin: 0; padding: 0 13px; }
+        .cal-season-group li { padding: 11px 0 13px; }
+        .cal-season-group li + li { border-top: 1px dotted var(--hairline); }
+        .cal-season-plant { padding-left: 0; font-size: 17px; font-style: normal; }
+        .cal-season-group li > p {
+          margin: 2px 0 0; font-size: 15px; line-height: 1.45; color: var(--ink-soft);
+        }
+        .cal-season-group .cal-season-caution {
+          margin-top: 8px; padding: 8px 9px;
+          border-left: 3px solid var(--stamp);
+          background: color-mix(in oklab, var(--paper) 91%, var(--stamp) 9%);
+          color: var(--ink);
+        }
+        .cal-season-caution .t-stamp {
+          display: block; margin-bottom: 3px; color: var(--stamp); font-size: 9px;
+        }
+
         @media (max-width: 760px) {
           .cal-task { grid-template-columns: 28px 1fr; grid-template-rows: auto auto; }
           .cal-task .cal-bed {
             grid-column: 2 / 3; grid-row: 2; justify-self: start; margin-top: 6px;
           }
+          .cal-season-intro, .cal-season-filter-label, .cal-season-filter, .cal-season-groups { margin-left: 0; }
+          .cal-season-groups { grid-template-columns: 1fr; }
+          .cal-flower-chip { flex: 1 1 190px; }
         }
 
         .cal-checkbox { width: 22px; height: 22px; margin-top: 4px; flex-shrink: 0; }

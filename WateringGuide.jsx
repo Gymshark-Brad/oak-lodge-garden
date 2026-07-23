@@ -25,9 +25,9 @@ function wgGetWeek() {
 
 function WateringGuide({ onOpenPlant }) {
   const ZONES = window.OAK.ZONES;
-  const WATER_BANDS = window.OAK.WATER_BANDS || {};
+  const PLANT_BY_ID = window.OAK.PLANT_BY_ID || {};
+  const WATER_BANDS_BY_ID = window.OAK.WATER_BANDS_BY_ID || {};
   const BAND_INFO = window.OAK.WATER_BAND_INFO || {};
-  const WATER_SIGNS = window.OAK.WATER_SIGNS || {};
   const POT_WATER_SIGNS = window.OAK.POT_WATER_SIGNS || {};
 
   const { dates: weekDates, todayIndex, fortnightOn } = useMemo_WG(() => wgGetWeek(), []);
@@ -38,9 +38,10 @@ function WateringGuide({ onOpenPlant }) {
     const rows = [];
     Object.keys(ZONES).forEach((key) => {
       const zone = ZONES[key];
-      const bands = zone.plantKey && WATER_BANDS[zone.plantKey];
-      if (!bands) return;
-      const values = Object.values(bands);
+      const values = Object.values(PLANT_BY_ID)
+        .filter((record) => record.zoneKey === key)
+        .map((record) => WATER_BANDS_BY_ID[record.plant.id])
+        .filter(Boolean);
       if (values.length === 0) return;
       const maxBand = Math.max(...values);
       rows.push({ key, zone, maxBand });
@@ -56,21 +57,24 @@ function WateringGuide({ onOpenPlant }) {
       // just the drought-tolerant plant in a shared pot — only ground beds,
       // where individual plants can be watered separately, are actionable here.
       if (zone.isPot) return;
-      const bands = WATER_BANDS[zone.plantKey];
-      Object.entries(bands).forEach(([name, band]) => {
-        const flagged = band === 1 && maxBand >= 3;
-        if (flagged) {
-          items.push({
-            zoneKey: key,
-            zoneTitle: zone.title,
-            plantName: name,
-            plantId: (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[key] || {})[name] || null,
-            band,
-            maxBand,
-            isPot: false,
-          });
-        }
-      });
+      Object.values(PLANT_BY_ID)
+        .filter((record) => record.zoneKey === key)
+        .forEach((record) => {
+          const band = WATER_BANDS_BY_ID[record.plant.id];
+          const name = record.plant.name;
+          const flagged = band === 1 && maxBand >= 3;
+          if (flagged) {
+            items.push({
+              zoneKey: key,
+              zoneTitle: zone.title,
+              plantName: name,
+              plantId: record.plant.id,
+              band,
+              maxBand,
+              isPot: false,
+            });
+          }
+        });
     });
     return items;
   }, [zoneRows]);
@@ -88,21 +92,25 @@ function WateringGuide({ onOpenPlant }) {
     const items = [];
     Object.keys(ZONES).forEach((key) => {
       const zone = ZONES[key];
-      const bands = zone.plantKey && WATER_BANDS[zone.plantKey];
-      if (!bands) return;
-      Object.entries(bands).forEach(([name, band]) => {
-        const plant = (window.OAK.PLANTS[zone.plantKey] || []).find((p) => p.name === name);
-        const position = (plant && plant.position) || "";
-        items.push({
-          zoneKey: key,
-          zoneTitle: zone.title,
-          plantName: name,
-          plantId: (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[key] || {})[name] || null,
-          band,
-          isPot: !!zone.isPot,
-          isEstablishing: /added|moved|newly planted/i.test(position),
+      if (!zone.plantKey) return;
+      Object.values(PLANT_BY_ID)
+        .filter((record) => record.zoneKey === key)
+        .forEach((record) => {
+          const plant = record.plant;
+          const band = WATER_BANDS_BY_ID[plant.id];
+          if (!band) return;
+          const added = (plant.profile && plant.profile.oakLodge && plant.profile.oakLodge.added) || "";
+          items.push({
+            zoneKey: key,
+            zoneTitle: zone.title,
+            plantName: plant.name,
+            plantId: plant.id,
+            band,
+            isPot: !!zone.isPot,
+            isEstablishing: !!added && !/^Established before/i.test(added),
+            added,
+          });
         });
-      });
     });
     items.sort((a, b) =>
       a.zoneTitle.localeCompare(b.zoneTitle) || b.band - a.band || a.plantName.localeCompare(b.plantName)
@@ -157,31 +165,28 @@ function WateringGuide({ onOpenPlant }) {
   // (cross-referencing the watch list above).
   const overSignsList = useMemo_WG(() => {
     const items = [];
-    Object.keys(ZONES).forEach((key) => {
-      const zone = ZONES[key];
-      if (!zone.plantKey) return;
-      const bands = WATER_BANDS[zone.plantKey];
-      if (!bands) return;
-      Object.entries(bands).forEach(([name, band]) => {
-        if (band > 2) return;
-        const over = zone.isPot
-          ? (POT_WATER_SIGNS[zone.plantKey] || {}).over
-          : ((WATER_SIGNS[zone.plantKey] || {})[name] || {}).over;
-        if (!over) return;
-        items.push({
-          zoneKey: key,
-          zoneTitle: zone.title,
-          plantName: name,
-          band,
-          isPot: !!zone.isPot,
-          over,
-          sharesRisk: watchKeySet.has(key + "::" + name),
-        });
+    allPlants.forEach((plantItem) => {
+      if (plantItem.band > 2) return;
+      const zone = ZONES[plantItem.zoneKey];
+      const record = PLANT_BY_ID[plantItem.plantId];
+      const over = plantItem.isPot
+        ? (POT_WATER_SIGNS[zone.plantKey] || {}).over
+        : record && record.plant.profile && record.plant.profile.waterSigns.over;
+      if (!over) return;
+      items.push({
+        zoneKey: plantItem.zoneKey,
+        zoneTitle: plantItem.zoneTitle,
+        plantName: plantItem.plantName,
+        plantId: plantItem.plantId,
+        band: plantItem.band,
+        isPot: plantItem.isPot,
+        over,
+        sharesRisk: watchKeySet.has(plantItem.zoneKey + "::" + plantItem.plantName),
       });
     });
     items.sort((a, b) => a.band - b.band || a.zoneTitle.localeCompare(b.zoneTitle) || a.plantName.localeCompare(b.plantName));
     return items;
-  }, [watchKeySet]);
+  }, [watchKeySet, allPlants]);
 
   const filteredOverSigns = useMemo_WG(() => {
     const q = overFilter.trim().toLowerCase();
@@ -448,7 +453,7 @@ function WateringGuide({ onOpenPlant }) {
                       <button className="wg-plant-link" onClick={() => handlePlantClick(p.zoneKey, p.plantId, p.plantName)}>
                         {p.plantName}
                       </button>
-                      {p.isEstablishing && <span className="wg-over-tag">establishing</span>}
+                      {p.isEstablishing && <span className="wg-over-tag" title={p.added}>establishing</span>}
                     </td>
                     <td className="t-mono wg-table-zone">
                       {p.zoneTitle} · {p.isPot ? "container" : "bed"}

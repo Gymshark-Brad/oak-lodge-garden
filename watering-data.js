@@ -34,7 +34,7 @@
       "Avens": 3,
     },
     "Bed 3": {
-      "Kerria": 2,
+      "Kerria": 3,
       "Forget-me-not": 3,
       "Centaurea 'Snowy Owl'": 2,
       "Spiraea 'Double Play Big Bang'": 3,
@@ -50,7 +50,7 @@
     "Bed 5": {
       "Wisteria": 1,
       "Rose": 3,
-      "New Zealand Flax (cultivar to confirm)": 2,
+      "New Zealand Flax (cultivar to confirm)": 1,
       "Alstroemeria": 4,
       "Petunia 'Bee's Knees'": 4,
       "Vinca minor 'Illumination'": 3,
@@ -447,6 +447,18 @@
   WATER_SIGNS.Patio.Lavender = WATER_SIGNS["Bed 5"].Lavender;
   delete WATER_SIGNS["Bed 5"].Lavender;
 
+  // The researched profiles now own individual moisture symptoms. Refresh the
+  // compatibility object from them so older callers cannot drift away from the
+  // profile shown on the plant page. Shared pots keep their container-level
+  // observations below because they are watered as one unit.
+  Object.values(window.OAK.PLANT_BY_ID || {}).forEach((record) => {
+    const zone = window.OAK.ZONES[record.zoneKey];
+    const waterSigns = record.plant.profile && record.plant.profile.waterSigns;
+    if (!zone || zone.isPot || !waterSigns) return;
+    WATER_SIGNS[record.plantKey] = WATER_SIGNS[record.plantKey] || {};
+    WATER_SIGNS[record.plantKey][record.plant.name] = waterSigns;
+  });
+
   // Pot and hanging-basket zones get ONE combined signs entry for the whole
   // container rather than one per plant — in practice the pot is watered as
   // a single unit, so the useful thing to watch for is the container's
@@ -490,8 +502,18 @@
     },
   };
 
+  // Stable-ID view used by the current profile and watering interfaces. The
+  // original name-keyed object remains available for older views, but names
+  // are presentation data and may change when an identity is resolved.
+  const WATER_BANDS_BY_ID = {};
+  Object.values(window.OAK.PLANT_BY_ID || {}).forEach((record) => {
+    const band = (WATER_BANDS[record.plantKey] || {})[record.plant.name];
+    if (band) WATER_BANDS_BY_ID[record.plant.id] = band;
+  });
+
   window.OAK = window.OAK || {};
   window.OAK.WATER_BANDS = WATER_BANDS;
+  window.OAK.WATER_BANDS_BY_ID = WATER_BANDS_BY_ID;
   window.OAK.WATER_BAND_INFO = WATER_BAND_INFO;
   window.OAK.WATER_SIGNS = WATER_SIGNS;
   window.OAK.POT_WATER_SIGNS = POT_WATER_SIGNS;

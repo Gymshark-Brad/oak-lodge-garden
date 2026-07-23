@@ -37,7 +37,10 @@ function run(argv) {
   ];
   Object.values(OAK.PLANT_BY_ID || {}).forEach((record) => {
     const profile = record.plant.profile;
-    if (!profile) return;
+    if (!profile) {
+      errors.push(`missing authored profile: ${record.plant.id}`);
+      return;
+    }
     profileFields.forEach((field) => {
       if (!profile[field]) errors.push(`incomplete authored profile: ${record.plant.id} / ${field}`);
     });
@@ -46,6 +49,29 @@ function run(argv) {
     }
     if (!Array.isArray(profile.seasons) || profile.seasons.length !== 4) {
       errors.push(`incomplete seasonal profile: ${record.plant.id}`);
+    }
+    if (!profile.waterSigns.under || !profile.waterSigns.over) {
+      errors.push(`incomplete profile water signs: ${record.plant.id}`);
+    }
+    const waterBand = (OAK.WATER_BANDS_BY_ID || {})[record.plant.id];
+    if (![1, 2, 3, 4, 5].includes(waterBand)) {
+      errors.push(`missing stable-id watering band: ${record.plant.id}`);
+    }
+  });
+
+  const identityContentChecks = {
+    "bed2-kerria": { required: "Pseudofumaria", forbidden: "Kerria japonica makes" },
+    "bed5-new-zealand-flax-cultivar-to-confirm": { required: "Yucca filamentosa", forbidden: "This Phormium" },
+    "frontBed5-climber-unidentified": { required: "Rosa filipes", forbidden: "Unidentified woody wall plant" },
+    "frontHedge-hedge-to-identify": { required: "Ligustrum ovalifolium", forbidden: "Unidentified established hedge" },
+  };
+  Object.entries(identityContentChecks).forEach(([plantId, check]) => {
+    const record = OAK.PLANT_BY_ID[plantId];
+    const content = record && record.plant.profile
+      ? `${record.plant.profile.type} ${record.plant.profile.description} ${record.plant.profile.about}`
+      : "";
+    if (!content.includes(check.required) || content.includes(check.forbidden)) {
+      errors.push(`identity-specific profile content is stale: ${plantId}`);
     }
   });
 

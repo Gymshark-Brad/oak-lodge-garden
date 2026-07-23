@@ -14,7 +14,8 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
   const heroPhoto = latestPhoto || ((plant.photos || [])[0]
     ? { src: plant.photos[0], caption: plant.name }
     : null);
-  const waterBand = plantKey ? (window.OAK.WATER_BANDS[plantKey] || {})[plant.name] : null;
+  const waterBand = (window.OAK.WATER_BANDS_BY_ID || {})[plant.id]
+    || (plantKey ? (window.OAK.WATER_BANDS[plantKey] || {})[plant.name] : null);
   const waterInfo = waterBand ? window.OAK.WATER_BAND_INFO[waterBand] : null;
   const [heroSrc, setHeroSrc] = useState_PP(
     heroPhoto ? window.OAK.thumbnailFor(heroPhoto.src) : null

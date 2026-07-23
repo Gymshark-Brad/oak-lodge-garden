@@ -18,7 +18,7 @@
         { task: "Check Callistemon winter protection after severe weather; do not prune in winter", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
         { task: "Check Gaillardia — cut back any dead growth. Replace if it hasn't survived the winter", plants: ["Gaillardia"], bed: "Bed 3" },
         { task: "Prune pear tree while dormant", plants: ["Pear Tree"], bed: "Tree" },
-        { task: "Prune roses hard", plants: ["Rose"], bed: "Bed 4" },
+        { task: "Prune the Bed 5 climbing rose to a balanced framework, removing dead or unproductive canes without stripping out the whole structure", plants: ["Rose"], bed: "Bed 5" },
         { task: "Remove dead or crossing branches from the Japanese Maple only if necessary", plants: ["Japanese Maple 'Bloodgood'"], bed: "Bed 1" },
         { task: "Check Cordyline for frost damage; tie up leaves if hard frost forecast", plants: ["Cabbage Tree"], bed: "Stone Bed" },
       ],
@@ -50,7 +50,8 @@
       ],
       tasks: [
         { task: "Prune Spiraea 'Double Play Big Bang' hard in early spring before growth gets going — cut back hard to encourage vivid new growth and flowers", plants: ["Spiraea 'Double Play Big Bang'"], bed: "Bed 2" },
-        { task: "Cut old leaves from Phormium / New Zealand Flax at the base", plants: ["New Zealand Flax", "New Zealand Flax (dark)"], bed: "Bed 4" },
+        { task: "Pull away dead Yucca leaves with gloves and clear debris from the crown; do not cut into the live rosette", plants: ["Yucca"], bed: "Bed 5" },
+        { task: "Cut old leaves from the dark New Zealand Flax individually at the base", plants: ["New Zealand Flax (dark)"], bed: "Stone Bed" },
         { task: "Prune Euonymus to shape", plants: ["Euonymus 'Emerald 'n' Gold'"], bed: "Bed 1" },
         { task: "Prune Wintercreeper to shape", plants: ["Wintercreeper 'Emerald Gaiety'"], bed: "Bed 1" },
         { task: "Check Avens for signs of life and clear dead foliage", plants: ["Avens"], bed: "Bed 2" },
@@ -243,7 +244,8 @@
       ],
       tasks: [
         { task: "Protect Angel Wings from the first frosts — fleece or move to shelter", plants: ["Angel Wings"], bed: "Bed 1" },
-        { task: "Mulch Phormium crowns to insulate against the wet cold", plants: ["New Zealand Flax", "New Zealand Flax (dark)"], bed: "Bed 4" },
+        { task: "Clear fallen leaves from the Yucca crown and top-dress with grit; avoid moisture-trapping winter wrapping", plants: ["Yucca"], bed: "Bed 5" },
+        { task: "Clear debris around the dark New Zealand Flax and prepare loose crown protection only if severe frost is forecast", plants: ["New Zealand Flax (dark)"], bed: "Stone Bed" },
         { task: "Tidy Houseleek rosettes — remove any spent flowering rosettes", plants: ["Houseleeks"], bed: "Stone Bed" },
         { task: "Clear fallen leaves off the gravel beds and stone bed", plants: [], bed: "Stone Bed" },
         { task: "After first frost blackens the Dahlia foliage, cut stems to 15cm and mulch the crowns heavily — or lift the tubers and store dry", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
