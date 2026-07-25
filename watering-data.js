@@ -147,7 +147,15 @@
     "Front Bed 5": {
       "Cherry Laurel": 2,
       "Mexican Orange Blossom": 2,
-      "Climber (unidentified)": 3,
+      "Shrub Rose (cultivar to confirm)": 3,
+      "Bay Tree": 2,
+      "Japanese Skimmia": 3,
+      "Hardy Fuchsia (cultivar to confirm)": 3,
+      "Clematis (cultivar to confirm)": 3,
+      "Honeysuckle (cultivar to confirm)": 3,
+      "Pieris 'Polar Passion'": 3,
+      "Pittosporum 'Tom Thumb'": 2,
+      "Gaura 'Gaudi Red'": 2,
       "Heather 'Bell's Extra Special'": 2,
       "Heather 'Tib'": 2,
       "Bell Heather 'Providence' (2 plants)": 3,
@@ -168,8 +176,12 @@
     "Front Hedge": {
       "Hedge (to identify)": 2,
     },
-    "Front Apple Tree": {
+    "Front Fruit Trees": {
       "Apple Tree": 2,
+      "Damson Tree": 2,
+    },
+    "Front Gate Tree": {
+      "Weeping Crab Apple (cultivar to confirm)": 2,
     },
   };
 

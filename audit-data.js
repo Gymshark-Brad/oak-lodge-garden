@@ -62,7 +62,7 @@ function run(argv) {
   const identityContentChecks = {
     "bed2-kerria": { required: "Pseudofumaria", forbidden: "Kerria japonica makes" },
     "bed5-new-zealand-flax-cultivar-to-confirm": { required: "Yucca filamentosa", forbidden: "This Phormium" },
-    "frontBed5-climber-unidentified": { required: "Rosa filipes", forbidden: "Unidentified woody wall plant" },
+    "frontBed5-climber-unidentified": { required: "Rosa", forbidden: "Kiftsgate" },
     "frontHedge-hedge-to-identify": { required: "Ligustrum ovalifolium", forbidden: "Unidentified established hedge" },
   };
   Object.entries(identityContentChecks).forEach(([plantId, check]) => {

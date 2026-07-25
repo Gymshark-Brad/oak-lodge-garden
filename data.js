@@ -329,7 +329,7 @@ window.OAK = (function () {
       dims: "Irregular · patio point to boundary wall",
       where: "From the steps out to the brick boundary wall",
       desc:
-        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. Replanted in July 2026 around the established cherry laurel, Choisya and wall climber with colourful heathers, blue-flowered Sollya and Ceratostigma, Hypericum, Hebe 'Rhubarb and Custard' and Salvia 'Salgoon Lake Blueberry'.",
+        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. The July 2026 survey records the established cherry laurel, golden Choisya, shrub rose, bay, skimmia, hardy fuchsia, clematis and honeysuckle alongside the newer heathers, Pieris, Pittosporum, Gaura, Sollya, Ceratostigma, Hypericum, Hebe and Salvia.",
       shape: { kind: "polygon", points: "880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" },
       color: "#587a3a",
       labelXY: [860, 330],
@@ -376,16 +376,29 @@ window.OAK = (function () {
     },
     frontApple: {
       id: "frontApple",
-      title: "Front · Apple Tree",
-      badge: "Fruit tree",
+      title: "Front · Fruit Trees",
+      badge: "Apple & damson",
       dims: "≈0.8m × 1.8m",
       where: "Corner below Bed 5, against the boundary wall",
       desc:
-        "The apple tree tucked into the corner below Bed 5, against the boundary wall.",
+        "The apple and damson trees tucked into the corner below Bed 5, against the boundary wall.",
       shape: { kind: "rect", x: 912, y: 475, w: 46, h: 102 },
       color: "#4f6d35",
       labelXY: [912, 592],
-      plantKey: "Front Apple Tree",
+      plantKey: "Front Fruit Trees",
+    },
+    frontGateTree: {
+      id: "frontGateTree",
+      title: "Front · Gate Tree",
+      badge: "Weeping crab apple",
+      dims: "Canopy position approximate",
+      where: "At the gateway, on the drive side marked on the July plan",
+      desc:
+        "The small weeping ornamental tree beside the gateway. Its crab-apple identity is a strong photographic fit; the exact cultivar remains to be confirmed from spring flowers, ripe fruit and any surviving label.",
+      shape: { kind: "circle", cx: 292, cy: 530, r: 27 },
+      color: "#5d793e",
+      labelXY: [292, 574],
+      plantKey: "Front Gate Tree",
     },
   };
 
@@ -1716,15 +1729,130 @@ window.OAK = (function () {
         seasonal: "Golden evergreen foliage; scented white flowers spring & again autumn.",
       },
       {
-        name: "Climber (unidentified)",
+        name: "Shrub Rose (cultivar to confirm)",
         id: "frontBed5-climber-unidentified",
-        latin: "IDENTIFY", // IDENTIFY (IMG_4034 / 4035) — pinnate leaves + red berry clusters
-        photos: ["images/jul-2026/climber.webp", "images/jul-2026/climber-berries.webp"],
-        position: "Far end, trained up the brick wall",
-        light: "Sun.",
-        water: "Moderate.",
-        care: "TBC once identified.",
-        seasonal: "Red berry clusters noted July.",
+        latin: "Rosa (Shrub Group; cultivar to confirm)",
+        photos: [
+          "images/jul-2026/climber.webp",
+          "images/jul-2026/climber-berries.webp",
+          "images/jul-2026/front-260725-bed-5-shrub-rose-1.webp",
+          "images/jul-2026/front-260725-bed-5-shrub-rose-2.webp",
+          "images/jul-2026/front-260725-bed-5-shrub-rose-3.webp",
+        ],
+        position: "Boundary end of the bed — established shrub rose",
+        light: "Full sun for the strongest flowering; tolerates light partial shade.",
+        water: "Water deeply in sustained dry spells, especially while flowering and forming hips.",
+        care: "Remove dead, damaged and crossing stems in late winter. Thin congested growth and preserve sound hips where autumn colour and wildlife value are wanted.",
+        seasonal: "Flowers are followed by red-orange rose hips — the fruits seen in the July photographs.",
+      },
+      {
+        name: "Bay Tree",
+        id: "frontBed5-bay-tree",
+        latin: "Laurus nobilis",
+        photos: ["images/jul-2026/front-260725-bed-5-bay-tree-1-1.webp"],
+        position: "Established standard in the boundary bed",
+        light: "Full sun to partial shade in a sheltered position.",
+        water: "Water while establishing and during prolonged drought; avoid waterlogged winter soil.",
+        care: "Trim lightly in late spring or summer to retain the standard shape. Remove suckers and frost-damaged tips with secateurs.",
+        seasonal: "Aromatic evergreen leaves throughout the year; small spring flowers may be followed by dark berries on female plants.",
+      },
+      {
+        name: "Japanese Skimmia",
+        id: "frontBed5-japanese-skimmia",
+        latin: "Skimmia japonica (cultivar and sex to confirm)",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-1.webp",
+          "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-2.webp",
+        ],
+        position: "Established evergreen shrub beneath the boundary planting",
+        light: "Partial shade to shade; shelter from the hottest afternoon sun.",
+        water: "Keep evenly moist but well drained, especially in dry summer weather.",
+        care: "Mulch with leaf mould or ericaceous compost and prune only to remove damaged or awkward stems. Confirm sex and cultivar from flowers and fruit.",
+        seasonal: "Evergreen foliage and spring flower clusters; female or hermaphrodite forms can carry red berries when pollinated.",
+      },
+      {
+        name: "Hardy Fuchsia (cultivar to confirm)",
+        id: "frontBed5-hardy-fuchsia",
+        latin: "Fuchsia magellanica hybrid (cultivar to confirm)",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-1.webp",
+          "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-2.webp",
+        ],
+        position: "Established flowering shrub in the boundary bed",
+        light: "Full sun to partial shade, sheltered from cold drying winds.",
+        water: "Moist but well-drained soil; water in sustained dry spells while in flower.",
+        care: "Leave the top growth through winter, mulch the crown, then cut frost-damaged stems back to live buds in spring.",
+        seasonal: "Pendant flowers from summer into autumn; top growth may die back in hard winters and regrow from the base.",
+      },
+      {
+        name: "Clematis (cultivar to confirm)",
+        id: "frontBed5-clematis",
+        latin: "Clematis viticella (cultivar to confirm)",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-clematis-1.webp",
+          "images/jul-2026/front-260725-bed-5-clematis-2.webp",
+          "images/jul-2026/front-260725-bed-5-clematis-3.webp",
+        ],
+        position: "Twining through support at the boundary side",
+        light: "Sun to partial shade, with a cool shaded root run.",
+        water: "Keep moist but well drained; soak the root zone during prolonged drought.",
+        care: "Treat as pruning group 3 while the viticella identity remains the best fit: cut to strong buds 30–45cm above ground in late winter and tie in new shoots.",
+        seasonal: "Deciduous climber with abundant summer flowers on new growth.",
+      },
+      {
+        name: "Honeysuckle (cultivar to confirm)",
+        id: "frontBed5-honeysuckle",
+        latin: "Lonicera periclymenum (cultivar to confirm)",
+        photos: ["images/jul-2026/front-260725-bed-5-honey-suckle.webp"],
+        position: "Twining climber along the boundary support",
+        light: "Partial shade is ideal; tolerates sun when the roots remain cool and moist.",
+        water: "Moist but well-drained fertile soil; water during prolonged dry spells.",
+        care: "Tie in new stems and prune lightly after flowering to keep paths and neighbouring shrubs clear.",
+        seasonal: "Fragrant tubular summer flowers may be followed by glossy red ornamental berries.",
+      },
+      {
+        name: "Pieris 'Polar Passion'",
+        id: "frontBed5-pieris-polar-passion",
+        latin: "Pieris japonica 'Ppobas' (Polar Passion)",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-1.webp",
+          "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-2.webp",
+          "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-3.webp",
+        ],
+        position: "Acid-loving evergreen in the July planting",
+        light: "Partial shade, sheltered from cold winds and harsh early sun.",
+        water: "Keep evenly moist in acidic, well-drained soil; use rainwater where practical.",
+        care: "Mulch with ericaceous material and remove only spent flowers or damaged stems. Do not apply lime.",
+        seasonal: "Colourful young foliage and hanging clusters of spring flowers above evergreen leaves.",
+      },
+      {
+        name: "Pittosporum 'Tom Thumb'",
+        id: "frontBed5-pittosporum-tom-thumb",
+        latin: "Pittosporum tenuifolium 'Tom Thumb'",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-1.webp",
+          "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-2.webp",
+          "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-3.webp",
+        ],
+        position: "Compact dark-leaved evergreen in the July planting",
+        light: "Full sun to partial shade in a sheltered position.",
+        water: "Water while establishing; later only during prolonged drought. Avoid winter waterlogging.",
+        care: "Usually needs little pruning. Remove frost-damaged tips in late spring and protect from cold drying wind.",
+        seasonal: "Lime-green young leaves mature to deep purple, forming a dense rounded evergreen mound.",
+      },
+      {
+        name: "Gaura 'Gaudi Red'",
+        id: "frontBed5-gaura-gaudi-red",
+        latin: "Oenothera lindheimeri 'Florgaured' (Gaudi Red)",
+        photos: [
+          "images/jul-2026/front-260725-bed-5-gaura-goudi-red-1.webp",
+          "images/jul-2026/front-260725-bed-5-gaura-goudi-red-2.webp",
+        ],
+        position: "Sunny open pocket in the July planting",
+        light: "Full sun in a warm, sheltered position.",
+        water: "Water while establishing, then sparingly; sharp winter drainage is essential.",
+        care: "Deadhead for a longer display. Leave stems over winter and cut back after the worst frosts in spring.",
+        seasonal: "Deep pink-red flowers dance above burgundy-green foliage from summer into autumn.",
       },
       {
         name: "Heather 'Bell's Extra Special'",
@@ -1910,17 +2038,58 @@ window.OAK = (function () {
         seasonal: "TBC.",
       },
     ],
-    "Front Apple Tree": [
+    "Front Fruit Trees": [
       {
         name: "Apple Tree",
         id: "frontApple-apple-tree",
         latin: "Malus domestica",
-        photos: [], // TODO — no photo yet, next photo walk
+        photos: [
+          "images/jul-2026/front-260725-fruit-trees-apple-tree-1.webp",
+          "images/jul-2026/front-260725-fruit-trees-apple-tree-2.webp",
+          "images/jul-2026/front-260725-fruit-trees-apple-tree-3.webp",
+          "images/jul-2026/front-260725-fruit-trees-apple-tree-4.webp",
+          "images/jul-2026/front-260725-fruit-trees-apple-tree-5.webp",
+        ],
         position: "Bottom of the drive, by the boundary wall",
         light: "Full sun.",
         water: "Water well in dry spells while fruiting.",
         care: "Winter prune for shape and airflow; thin fruit in June if heavy.",
         seasonal: "Blossom April–May; fruit late summer–autumn.",
+      },
+      {
+        name: "Damson Tree",
+        id: "frontApple-damson-tree",
+        latin: "Prunus domestica subsp. insititia (cultivar to confirm)",
+        photos: [
+          "images/jul-2026/front-260725-fruit-trees-damson-tree-1.webp",
+          "images/jul-2026/front-260725-fruit-trees-damson-tree-2.webp",
+          "images/jul-2026/front-260725-fruit-trees-damson-tree-3.webp",
+          "images/jul-2026/front-260725-fruit-trees-damson-tree-4.webp",
+        ],
+        position: "Beside the apple tree at the bottom of the drive",
+        light: "Full sun for reliable blossom and fruit ripening.",
+        water: "Water deeply during prolonged dry spells, especially from fruit set to harvest.",
+        care: "Prune only in dry summer weather to reduce silver-leaf and canker risk; remove suckers from below the graft.",
+        seasonal: "White spring blossom followed by blue-black damsons in late summer or early autumn.",
+      },
+    ],
+    "Front Gate Tree": [
+      {
+        name: "Weeping Crab Apple (cultivar to confirm)",
+        id: "frontGateTree-weeping-crab-apple",
+        latin: "Malus (weeping cultivar; 'Red Jade' is a best-fit possibility)",
+        photos: [
+          "images/jul-2026/front-260725-gateway-tree.webp",
+          "images/jul-2026/front-260725-gateway-tree-2.webp",
+          "images/jul-2026/front-260725-gateway-tree-fruit-1.webp",
+          "images/jul-2026/front-260725-gateway-tree-fruit-2.webp",
+          "images/jul-2026/front-260725-gateway-tree-habit-3.webp",
+        ],
+        position: "Beside the gateway, at the location marked on the July plan",
+        light: "Full sun for the best blossom, fruit colour and balanced growth.",
+        water: "Water deeply during prolonged drought, particularly while establishing and while fruit is swelling.",
+        care: "Remove dead, damaged and crossing wood in winter, preserving the natural weeping framework. Record blossom and ripe-fruit details before naming the cultivar.",
+        seasonal: "Spring blossom followed by small ornamental crab apples that can persist into autumn and winter.",
       },
     ],
   };
@@ -2330,10 +2499,14 @@ window.OAK = (function () {
         { src: "images/jul-2026/lobelia-starship-scarlet-close.jpeg", caption: "Scarlet flower spikes and bronze foliage, close-up" },
       ],
       frontBed1: [
+        { src: "images/jul-2026/front-260725-bed-1-1.webp", caption: "Front Bed 1 — July overview from the drive" },
+        { src: "images/jul-2026/front-260725-bed-1-2.webp", caption: "Front Bed 1 — Hydrangea beneath the study window" },
+        { src: "images/jul-2026/front-260725-bed-1-3.webp", caption: "Front Bed 1 — planting at the gateway end" },
         { src: "images/jul-2026/front-door.webp",  caption: "Front door & porch, hydrangea at the base" },
         { src: "images/jul-2026/study-gate.webp",  caption: "Study window & side gate — hydrangea and lavender" },
       ],
       frontBed2: [
+        { src: "images/jul-2026/front-260725-bed-2-1.webp", caption: "Front Bed 2 — late-July overview" },
         { src: "images/jul-2026/front-bed2-after-bark-1.webp", caption: "Front Bed 2 after planting and bark mulching" },
         { src: "images/jul-2026/front-bed2-after-bark-2.webp", caption: "The finished planting from the front-door side" },
         { src: "images/jul-2026/front-bed2-before-bark-1.webp", caption: "New plants set out before the bark mulch" },
@@ -2349,6 +2522,7 @@ window.OAK = (function () {
         { src: "images/jul-2026/bed2-bed5-shopping-2.webp", caption: "The July plant selection before planting" },
       ],
       frontBed3: [
+        { src: "images/jul-2026/front-260725-bed-3-4-5-pano.webp", caption: "Panorama across Front Beds 3, 4 and 5" },
         { src: "images/jul-2026/july-update-front-bed-1.webp", caption: "Front Bed 3 after the July moves and additions" },
         { src: "images/jul-2026/july-update-front-bed-2.webp", caption: "Front Bed 3 — full wall run after replanting" },
         { src: "images/jul-2026/july-update-front-bed-3-dogwood.webp", caption: "Variegated Dogwood newly moved into Front Bed 3" },
@@ -2372,6 +2546,8 @@ window.OAK = (function () {
         { src: "images/jul-2026/fern-window.webp", caption: "Front Bed 3 with the former fern" },
       ],
       frontBed4: [
+        { src: "images/jul-2026/front-260725-bed-3-4-5-pano.webp", caption: "Panorama across Front Beds 3, 4 and 5" },
+        { src: "images/jul-2026/front-260725-bed-4-5-pano.webp", caption: "Panorama across Front Beds 4 and 5" },
         { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp", caption: "Delosperma 'Ice Cream Mix' newly planted" },
         { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp", caption: "Delosperma mixed daisy flowers" },
         { src: "images/jul-2026/front-bed-4-roses.jpeg", caption: "Front Bed 4 cleared, composted and planted with the two climbing roses" },
@@ -2396,6 +2572,33 @@ window.OAK = (function () {
         { src: "images/jul-2026/weigela.webp",             caption: "Spiraea — before removal" },
       ],
       frontBed5: [
+        { src: "images/jul-2026/front-260725-bed-3-4-5-pano.webp", caption: "Panorama across Front Beds 3, 4 and 5" },
+        { src: "images/jul-2026/front-260725-bed-4-5-pano.webp", caption: "Panorama across Front Beds 4 and 5" },
+        { src: "images/jul-2026/front-260725-bed-5-fruit-trees-1.webp", caption: "Front Bed 5 and the Fruit Trees beyond" },
+        { src: "images/jul-2026/front-260725-bed-5-fruit-trees-2.webp", caption: "Front Bed 5 meeting the Fruit Trees strip" },
+        { src: "images/jul-2026/front-260725-bed-5-1.webp", caption: "Front Bed 5 — established and July planting together" },
+        { src: "images/jul-2026/front-260725-bed-5-bay-tree-1-1.webp", caption: "Established bay tree" },
+        { src: "images/jul-2026/front-260725-bed-5-choisya-ternata-sundance-1.webp", caption: "Choisya ternata 'Sundance'" },
+        { src: "images/jul-2026/front-260725-bed-5-choisya-ternata-sundance3-2.webp", caption: "Golden Choisya foliage in context" },
+        { src: "images/jul-2026/front-260725-bed-5-clematis-1.webp", caption: "Established Clematis — habit and support" },
+        { src: "images/jul-2026/front-260725-bed-5-clematis-2.webp", caption: "Clematis foliage and stems" },
+        { src: "images/jul-2026/front-260725-bed-5-clematis-3.webp", caption: "Clematis close view" },
+        { src: "images/jul-2026/front-260725-bed-5-gaura-goudi-red-1.webp", caption: "Gaura 'Gaudi Red'" },
+        { src: "images/jul-2026/front-260725-bed-5-gaura-goudi-red-2.webp", caption: "Gaura 'Gaudi Red' flower detail" },
+        { src: "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-1.webp", caption: "Established hardy fuchsia" },
+        { src: "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-2.webp", caption: "Hardy fuchsia flowers" },
+        { src: "images/jul-2026/front-260725-bed-5-honey-suckle.webp", caption: "Established honeysuckle" },
+        { src: "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-1.webp", caption: "Japanese skimmia — corrected from the former bay-tree label" },
+        { src: "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-2.webp", caption: "Japanese skimmia foliage and habit" },
+        { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-1.webp", caption: "Pieris 'Polar Passion'" },
+        { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-2.webp", caption: "Pieris 'Polar Passion' foliage" },
+        { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-3.webp", caption: "Pieris 'Polar Passion' label and planting" },
+        { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-1.webp", caption: "Pittosporum 'Tom Thumb'" },
+        { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-2.webp", caption: "Pittosporum 'Tom Thumb' foliage" },
+        { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-3.webp", caption: "Pittosporum 'Tom Thumb' in the bed" },
+        { src: "images/jul-2026/front-260725-bed-5-shrub-rose-1.webp", caption: "Established shrub rose" },
+        { src: "images/jul-2026/front-260725-bed-5-shrub-rose-2.webp", caption: "Shrub rose foliage and hips" },
+        { src: "images/jul-2026/front-260725-bed-5-shrub-rose-3.webp", caption: "Rose hips — the fruits formed after flowering" },
         { src: "images/jul-2026/july-update-front-bed-7-preplanting.webp", caption: "The new Front Bed 5 plants set out before planting" },
         { src: "images/jul-2026/july-update-front-bed-5-1.webp", caption: "Front Bed 5 after the July replant" },
         { src: "images/jul-2026/july-update-front-bed-5-2.webp", caption: "Front Bed 5 — new planting from the boundary side" },
@@ -2417,8 +2620,29 @@ window.OAK = (function () {
         { src: "images/jul-2026/laurel.webp",          caption: "Boundary bed running back toward the entrance" },
         { src: "images/jul-2026/choisya.webp",         caption: "Variegated Choisya against the wall" },
         { src: "images/jul-2026/choisya-flowers.webp", caption: "Choisya with flowers at the corner" },
-        { src: "images/jul-2026/climber.webp",         caption: "Climber trained up the wall — end of the run" },
-        { src: "images/jul-2026/climber-berries.webp", caption: "Climber — pinnate leaves & red berries (close)" },
+        { src: "images/jul-2026/climber.webp",         caption: "Established shrub rose — formerly recorded as an unidentified climber" },
+        { src: "images/jul-2026/climber-berries.webp", caption: "Shrub rose with red-orange hips" },
+      ],
+      frontApple: [
+        { src: "images/jul-2026/front-260725-fruit-trees.webp", caption: "Apple and damson trees at the bottom of the drive" },
+        { src: "images/jul-2026/front-260725-bed-5-fruit-trees-1.webp", caption: "Fruit Trees beside Front Bed 5" },
+        { src: "images/jul-2026/front-260725-bed-5-fruit-trees-2.webp", caption: "Fruit Trees and the boundary planting" },
+        { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-1.webp", caption: "Apple tree — full habit" },
+        { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-2.webp", caption: "Apple tree canopy" },
+        { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-3.webp", caption: "Developing apples" },
+        { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-4.webp", caption: "Apple fruit and foliage detail" },
+        { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-5.webp", caption: "Apple tree from the boundary side" },
+        { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-1.webp", caption: "Damson tree — full habit" },
+        { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-2.webp", caption: "Damson canopy" },
+        { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-3.webp", caption: "Developing damsons" },
+        { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-4.webp", caption: "Damson fruit and foliage detail" },
+      ],
+      frontGateTree: [
+        { src: "images/jul-2026/front-260725-gateway-tree.webp", caption: "Gate Tree beside the drive entrance" },
+        { src: "images/jul-2026/front-260725-gateway-tree-2.webp", caption: "Weeping canopy and developing crab apples" },
+        { src: "images/jul-2026/front-260725-gateway-tree-fruit-1.webp", caption: "Developing crab apples among the serrated Malus foliage" },
+        { src: "images/jul-2026/front-260725-gateway-tree-fruit-2.webp", caption: "Developing fruit — useful evidence for the Malus identification" },
+        { src: "images/jul-2026/front-260725-gateway-tree-habit-3.webp", caption: "Pendulous branch habit supporting the weeping crab-apple identification" },
       ],
       frontBoxHedge: [
         { src: "images/jul-2026/wallbed-start.webp", caption: "Box hedge at the start of the wall run" },
@@ -2428,7 +2652,7 @@ window.OAK = (function () {
         { src: "images/jul-2026/hosta-trough.webp",     caption: "Hosta in the stone trough" },
         { src: "images/jul-2026/entrance-troughs.webp", caption: "The stone trough by the entrance" },
       ],
-      // frontHedge, frontApple — still no photos (next photo walk)
+      // frontHedge — still no photos (next photo walk)
     },
   };
 
@@ -2895,17 +3119,25 @@ window.OAK = (function () {
     frontBed5: [
       { name: "Cherry Laurel",                         x: 24, y: 15, r: 10, hue: 135 },
       { name: "Mexican Orange Blossom",                x: 50, y: 15, r: 9, hue: 70  },
-      { name: "Climber (unidentified)",                x: 78, y: 15, r: 8, hue: 10  },
-      { name: "Bluebell Creeper",                      x: 22, y: 38, r: 7, hue: 240 },
-      { name: "Salvia 'Salgoon Lake Blueberry'",       x: 50, y: 38, r: 8, hue: 270 },
-      { name: "Hebe 'Rhubarb and Custard'",            x: 78, y: 38, r: 8, hue: 340 },
-      { name: "Hypericum (cultivar to confirm)",       x: 28, y: 61, r: 7, hue: 55 },
-      { name: "Ceratostigma",                          x: 51, y: 61, r: 6, hue: 235 },
-      { name: "Bell Heather 'Providence' (2 plants)",  x: 74, y: 61, r: 7, hue: 335 },
-      { name: "Heather 'Bell's Extra Special'",        x: 14, y: 84, r: 6, hue: 75 },
-      { name: "Heather 'Tib'",                         x: 33, y: 84, r: 6, hue: 325 },
-      { name: "Heather 'Leprechaun'",                  x: 55, y: 84, r: 6, hue: 95 },
-      { name: "Heather 'Winter Chocolate'",            x: 78, y: 84, r: 6, hue: 45 },
+      { name: "Shrub Rose (cultivar to confirm)",      x: 78, y: 15, r: 8, hue: 10  },
+      { name: "Bay Tree",                              x: 91, y: 22, r: 8, hue: 125 },
+      { name: "Japanese Skimmia",                      x: 10, y: 34, r: 7, hue: 120 },
+      { name: "Hardy Fuchsia (cultivar to confirm)",   x: 31, y: 35, r: 7, hue: 335 },
+      { name: "Clematis (cultivar to confirm)",        x: 52, y: 34, r: 7, hue: 285 },
+      { name: "Honeysuckle (cultivar to confirm)",     x: 73, y: 34, r: 7, hue: 45 },
+      { name: "Pieris 'Polar Passion'",                x: 91, y: 42, r: 7, hue: 345 },
+      { name: "Bluebell Creeper",                      x: 15, y: 55, r: 7, hue: 240 },
+      { name: "Salvia 'Salgoon Lake Blueberry'",       x: 36, y: 55, r: 7, hue: 270 },
+      { name: "Hebe 'Rhubarb and Custard'",            x: 57, y: 55, r: 7, hue: 340 },
+      { name: "Pittosporum 'Tom Thumb'",               x: 78, y: 55, r: 7, hue: 320 },
+      { name: "Gaura 'Gaudi Red'",                     x: 92, y: 64, r: 6, hue: 350 },
+      { name: "Hypericum (cultivar to confirm)",       x: 18, y: 74, r: 6, hue: 55 },
+      { name: "Ceratostigma",                          x: 38, y: 74, r: 6, hue: 235 },
+      { name: "Bell Heather 'Providence' (2 plants)",  x: 58, y: 74, r: 6, hue: 335 },
+      { name: "Heather 'Bell's Extra Special'",        x: 12, y: 92, r: 5, hue: 75 },
+      { name: "Heather 'Tib'",                         x: 30, y: 92, r: 5, hue: 325 },
+      { name: "Heather 'Leprechaun'",                  x: 48, y: 92, r: 5, hue: 95 },
+      { name: "Heather 'Winter Chocolate'",            x: 66, y: 92, r: 5, hue: 45 },
     ],
     frontStone: [
       { name: "Hosta", x: 50, y: 50, r: 22, hue: 105 },
@@ -2917,7 +3149,11 @@ window.OAK = (function () {
       { name: "Hedge (to identify)", x: 50, y: 50, r: 22, hue: 120 },
     ],
     frontApple: [
-      { name: "Apple Tree", x: 50, y: 45, r: 28, hue: 110 },
+      { name: "Apple Tree",  x: 35, y: 42, r: 24, hue: 110 },
+      { name: "Damson Tree", x: 68, y: 62, r: 23, hue: 125 },
+    ],
+    frontGateTree: [
+      { name: "Weeping Crab Apple (cultivar to confirm)", x: 50, y: 50, r: 30, hue: 105 },
     ],
   };
 
@@ -2966,6 +3202,62 @@ window.OAK = (function () {
     const plantId = (PLANT_ID_BY_ZONE_AND_NAME[zoneKey] || {})[plantName];
     if (plantId && PLANT_PHOTOS[plantName]) PLANT_PHOTOS_BY_ID[plantId] = PLANT_PHOTOS[plantName];
   });
+  const julyJournal = (photos) => [{ month: "jul-2026", label: "July 2026", photos }];
+  PLANT_PHOTOS_BY_ID["frontBed5-climber-unidentified"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-shrub-rose-1.webp", caption: "Established shrub rose in Front Bed 5" },
+    { src: "images/jul-2026/front-260725-bed-5-shrub-rose-2.webp", caption: "Shrub rose foliage and hips" },
+    { src: "images/jul-2026/front-260725-bed-5-shrub-rose-3.webp", caption: "Red-orange rose hips after flowering" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-bay-tree"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-bay-tree-1-1.webp", caption: "Established bay tree" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-japanese-skimmia"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-1.webp", caption: "Japanese skimmia — corrected identification" },
+    { src: "images/jul-2026/front-260725-bed-5-japanese-skimmia-2-2.webp", caption: "Evergreen habit and foliage" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-hardy-fuchsia"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-1.webp", caption: "Established hardy fuchsia" },
+    { src: "images/jul-2026/front-260725-bed-5-hardy-fuchsia-1-2.webp", caption: "Pendant flowers" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-clematis"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-clematis-1.webp", caption: "Clematis on its support" },
+    { src: "images/jul-2026/front-260725-bed-5-clematis-2.webp", caption: "Clematis foliage and stems" },
+    { src: "images/jul-2026/front-260725-bed-5-clematis-3.webp", caption: "Close identification view" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-honeysuckle"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-honey-suckle.webp", caption: "Established honeysuckle" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-pieris-polar-passion"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-1.webp", caption: "Pieris 'Polar Passion'" },
+    { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-2.webp", caption: "Evergreen foliage" },
+    { src: "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-3.webp", caption: "Plant and retained label" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-pittosporum-tom-thumb"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-1.webp", caption: "Pittosporum 'Tom Thumb'" },
+    { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-2.webp", caption: "Purple mature foliage" },
+    { src: "images/jul-2026/front-260725-bed-5-pittosporum-tenuifolium-tom-thumb-3.webp", caption: "Compact habit in Front Bed 5" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-gaura-gaudi-red"] = julyJournal([
+    { src: "images/jul-2026/front-260725-bed-5-gaura-goudi-red-1.webp", caption: "Gaura 'Gaudi Red'" },
+    { src: "images/jul-2026/front-260725-bed-5-gaura-goudi-red-2.webp", caption: "Deep pink-red flowers" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontApple-apple-tree"] = julyJournal([
+    { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-1.webp", caption: "Front-garden apple tree" },
+    { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-3.webp", caption: "Developing apples" },
+    { src: "images/jul-2026/front-260725-fruit-trees-apple-tree-4.webp", caption: "Fruit and foliage detail" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontApple-damson-tree"] = julyJournal([
+    { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-1.webp", caption: "Damson tree beside the apple" },
+    { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-3.webp", caption: "Developing damsons" },
+    { src: "images/jul-2026/front-260725-fruit-trees-damson-tree-4.webp", caption: "Damson fruit and foliage detail" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontGateTree-weeping-crab-apple"] = julyJournal([
+    { src: "images/jul-2026/front-260725-gateway-tree.webp", caption: "Gate Tree at the drive entrance" },
+    { src: "images/jul-2026/front-260725-gateway-tree-2.webp", caption: "Weeping branches and developing crab apples" },
+    { src: "images/jul-2026/front-260725-gateway-tree-fruit-1.webp", caption: "Small developing crab apples and Malus foliage" },
+    { src: "images/jul-2026/front-260725-gateway-tree-fruit-2.webp", caption: "Fruit detail supporting Malus with very high confidence" },
+    { src: "images/jul-2026/front-260725-gateway-tree-habit-3.webp", caption: "Pendulous canopy supporting a weeping crab apple with high confidence" },
+  ]);
 
   // Cards and galleries use lightweight display derivatives. Originals stay
   // available for the full-screen lightboxes, and components fall back to

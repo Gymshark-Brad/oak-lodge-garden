@@ -5,8 +5,7 @@
 //   X = 40 + (metres_east + 0.6) * 57
 //   Y = 30 + (metres_south + 4.4) * 57   (y measured from the study-window wall line)
 //
-// Zones (8, all clickable): frontBed1, frontBed2, frontBed3, frontBed4,
-//   frontStone, frontBoxHedge, frontHedge, frontApple — defined in data.js ZONES.
+// Zones are defined in data.js, including the Fruit Trees strip and Gate Tree.
 // Scenery drawn here (non-interactive): house wall + windows + front door,
 //   path, gravel forecourt ×2, slabbed patio, steps, skinny brick wall,
 //   pillar in Bed 1, boundary wall, survey dimension labels.
@@ -20,7 +19,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
   // z-order: big beds first, small features on top
   const order = [
     "frontBed3", "frontBed4", "frontBed5", "frontBed1", "frontBed2",
-    "frontStone", "frontHedge", "frontBoxHedge", "frontApple", "frontpot",
+    "frontStone", "frontHedge", "frontBoxHedge", "frontApple", "frontGateTree", "frontpot",
   ];
   const verticalLabels = ["frontBoxHedge", "frontHedge"];
 
@@ -265,9 +264,10 @@ function FrontGardenPlan({ onOpenZone, dark }) {
           <text x="284" y="364" textAnchor="middle" fontFamily="var(--type)" fontSize="7.5" fill="var(--pencil)">lavender</text>
         </g>
 
-        {/* Apple tree canopy hint */}
+        {/* Fruit-tree canopy hints */}
         <g style={{ pointerEvents: "none" }}>
-          <circle cx="928" cy="520" r="22" fill="var(--green)" fillOpacity="0.4" stroke="var(--ink)" strokeOpacity="0.4" strokeWidth="1" filter="url(#rough)" />
+          <circle cx="925" cy="505" r="18" fill="var(--green)" fillOpacity="0.36" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
+          <circle cx="942" cy="545" r="17" fill="var(--green)" fillOpacity="0.32" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
         </g>
 
         {/* Margin notes */}
@@ -276,7 +276,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
             box hedge screens the patio ↗
           </text>
           <text x="770" y="610" textAnchor="middle" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7">
-            apple tree at the bottom of the drive ↑
+            apple &amp; damson at the bottom of the drive ↑
           </text>
         </g>
 

@@ -316,6 +316,8 @@
     "Front Bed 3": "frontBed3",
     "Front Bed 4": "frontBed4",
     "Front Bed 5": "frontBed5",
+    "Front Fruit Trees": "frontApple",
+    "Front Gate Tree": "frontGateTree",
   };
 
   const SEASONAL_NAME_ALIASES = {
