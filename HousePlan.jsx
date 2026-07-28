@@ -1,7 +1,7 @@
 // Oak Lodge Garden — HousePlan.jsx
-// Simplified hand-inked floor plans with fixed-size accessible pot markers.
-// Geometry is redrawn from the supplied layout; no source watermark, address
-// or estate-agent measurements are published.
+// Hand-inked floor plans traced from the supplied layout, with fixed-size
+// accessible pot markers. The source watermark, address and estate-agent
+// measurements are deliberately not reproduced.
 
 function HousePlan({ onOpenPlant, dark }) {
   const ZONES = window.OAK.ZONES;
@@ -83,68 +83,107 @@ function HousePlan({ onOpenPlant, dark }) {
             <span className="t-mono">{groundEntries.length} {groundEntries.length === 1 ? "pot" : "pots"}</span>
           </header>
           <div className="house-floor-canvas">
-            <svg viewBox="0 0 1000 430" role="img" aria-labelledby="ground-plan-title ground-plan-desc">
-              <title id="ground-plan-title">Simplified ground-floor plan of Oak Lodge</title>
-              <desc id="ground-plan-desc">Rooms are drawn in ink with the Kentia palm marked in the hallway beside the main staircase.</desc>
+            <svg viewBox="0 0 1300 620" role="img" aria-labelledby="ground-plan-title ground-plan-desc">
+              <title id="ground-plan-title">Ground-floor plan of Oak Lodge</title>
+              <desc id="ground-plan-desc">A close redrawing of the supplied floor plan, with the split-level rooms, two staircases and the Kentia palm marked in the hallway beside the central staircase.</desc>
               {RoughDefs("house-ground")}
 
               <g filter="url(#house-ground-rough-soft)">
                 <path
-                  d="M38 58 H560 V102 H620 V86 H960 V268 H735 V390 H555 V370 H392 V410 H270 V278 H38 Z"
+                  d="M105 55 H1235 V312 H905 V460 H845 V505 H665 V520 H520 V590 H375 V312 H50 Z"
                   fill="var(--paper-deep)" fillOpacity={dark ? "0.16" : "0.3"}
                 />
-                <path d="M38 58 H560 V102 H620 V86 H960 V268 H735 V390 H555 V370 H392 V410 H270 V278 H38 Z" fill="url(#house-ground-floorboards)" />
+                <path d="M105 55 H1235 V312 H905 V460 H845 V505 H665 V520 H520 V590 H375 V312 H50 Z" fill="url(#house-ground-floorboards)" />
               </g>
 
               <g filter="url(#house-ground-rough)" fill="none" stroke="var(--ink)" strokeWidth="3" strokeLinejoin="round">
-                <path d="M38 58 H560 V102 H620 V86 H960 V268 H735 V390 H555 V370 H392 V410 H270 V278 H38 Z" />
-                <path d="M260 58 V278 M38 190 H150 V278 M150 190 H260" />
-                <path d="M560 102 V258 M620 86 V258 M735 86 V258 M860 86 V258" />
-                <path d="M735 160 H960 M860 206 H960" />
-                <path d="M392 278 V410 M555 258 V390 M735 258 V390" />
-                <path d="M555 315 H735" />
+                {/* Exterior footprint, including the garage, study stair and porch projections. */}
+                <path d="M105 55 H1235 V312 H905 V460 H845 V505 H665 V520 H520 V590 H375 V312 H50 Z" />
+
+                {/* Kitchen, utility and sitting room. */}
+                <path d="M335 55 V312" />
+                <path d="M78 200 H198 V238" />
+                <path d="M198 270 V312" />
+                <path d="M292 55 H335 V166 H314" />
+
+                {/* Central split-level stair and bedroom wing. */}
+                <path d="M730 55 V122 M730 210 V312" />
+                <path d="M824 122 V312 M824 122 H958" />
+                <path d="M958 122 V312" />
+                <path d="M958 122 H1110 V188 H1152 V312" />
+                <path d="M1110 55 V188 M1110 188 H1235" />
+
+                {/* Garage, study, hall, cloakroom, main staircase and porch. */}
+                <path d="M375 312 H520 V590" />
+                <path d="M520 312 H665 V460" />
+                <path d="M665 312 V460" />
+                <path d="M845 312 V460 M905 312 V460" />
+                <path d="M845 365 H905" />
+                <path d="M520 460 H665 M665 460 H845" />
               </g>
 
               <g filter="url(#house-ground-rough-soft)" fill="none" stroke="var(--accent)" strokeWidth="5" strokeLinecap="round">
-                <path d="M70 58 H165 M320 58 H455 M650 86 H700 M765 86 H825 M884 86 H930" />
-                <path d="M38 100 V160 M38 215 V250 M450 410 H520" />
+                <path d="M145 55 H260 M430 55 H555 M615 55 H700 M855 55 H920 M990 55 H1060 M1150 55 H1205" />
+                <path d="M75 185 L63 242 M50 260 L46 292" />
+                <path d="M405 312 H470 M850 312 H905 M1010 312 H1070 M1180 312 H1210" />
+                <path d="M705 505 H805 M555 590 H625" />
               </g>
 
               <g className="house-room-labels" fill="var(--ink)" textAnchor="middle">
-                <text x="150" y="125">Kitchen / Dining</text>
-                <text x="95" y="232">Utility</text>
-                <text x="408" y="165">Sitting Room</text>
-                <text x="590" y="178">Stairs</text>
-                <text x="677" y="170">Bedroom 3</text>
-                <text x="797" y="170">Bedroom 1</text>
-                <text x="910" y="126">Bathroom</text>
-                <text x="910" y="232">Ensuite</text>
-                <text x="330" y="340">Garage</text>
-                <text x="472" y="340">Study</text>
-                <text x="645" y="355">Hallway</text>
+                <text x="205" y="145">Kitchen / Dining</text>
+                <text x="126" y="262">Utility</text>
+                <text x="528" y="174">Sitting Room</text>
+                <text x="890" y="214">Bedroom 3</text>
+                <text x="1048" y="214">Bedroom 1</text>
+                <text x="1172" y="102">Bathroom</text>
+                <text x="1192" y="260">Ensuite</text>
+                <text x="447" y="445">Garage</text>
+                <text x="592" y="388">Study</text>
+                <text x="776" y="405">Hallway</text>
+                <text x="754" y="490">Porch</text>
+                <text x="875" y="343" className="house-small-room-label">WC</text>
+                <text x="875" y="420" className="house-small-room-label">B</text>
               </g>
 
               <g className="house-stairs" filter="url(#house-ground-rough-soft)" stroke="var(--ink)" strokeWidth="1.2" opacity="0.65">
+                {[0, 1, 2, 3].map((step) => (
+                  <line key={`kitchen-${step}`} x1={300 + step * 9} y1="82" x2={300 + step * 9} y2="158" />
+                ))}
+                <path d="M326 106 H301 M301 106 L309 99 M301 106 L309 113" fill="none" />
+                {[0, 1, 2, 3].map((step) => (
+                  <line key={step} x1="730" y1={278 + step * 9} x2="824" y2={278 + step * 9} />
+                ))}
+                <path d="M777 303 V282 M777 282 L770 290 M777 282 L784 290" fill="none" />
                 {[0, 1, 2, 3, 4, 5].map((step) => (
-                  <line key={step} x1={568 + step * 8} y1="220" x2={568 + step * 8} y2="258" />
+                  <line key={`study-${step}`} x1={545 + step * 18} y1="465" x2={545 + step * 18} y2="515" />
                 ))}
-                <path d="M575 247 L607 230 M607 230 L600 230 M607 230 L607 238" fill="none" />
-                {[0, 1, 2, 3, 4].map((step) => (
-                  <line key={`study-${step}`} x1={430 + step * 16} y1="370" x2={430 + step * 16} y2="410" />
-                ))}
+                <path d="M555 495 H626 M626 495 L617 488 M626 495 L617 502" fill="none" />
+                <path d="M590 465 L645 515 M610 465 L665 515" fill="none" />
+              </g>
+
+              <g className="house-direction-labels" fill="var(--pencil)" textAnchor="middle">
+                <text x="318" y="181">up</text>
+                <text x="777" y="328">down</text>
+                <text x="545" y="494">up</text>
               </g>
 
               <g className="house-door-arcs" filter="url(#house-ground-rough-soft)" fill="none" stroke="var(--pencil)" strokeWidth="1.1">
-                <path d="M260 205 A34 34 0 0 1 226 239" />
-                <path d="M560 150 A30 30 0 0 1 530 180" />
-                <path d="M620 260 A32 32 0 0 0 652 292" />
-                <path d="M735 258 A32 32 0 0 1 703 290" />
-                <path d="M860 160 A28 28 0 0 1 888 188" />
+                <path d="M198 238 A34 34 0 0 1 232 272" />
+                <path d="M335 95 A38 38 0 0 0 297 57" />
+                <path d="M730 122 L704 148 L730 174 L704 200 L730 226" />
+                <path d="M824 122 A34 34 0 0 0 858 156" />
+                <path d="M958 122 A34 34 0 0 0 924 156" />
+                <path d="M1110 122 A34 34 0 0 0 1076 156" />
+                <path d="M1152 230 A34 34 0 0 1 1186 264" />
+                <path d="M665 338 A36 36 0 0 0 629 374" />
+                <path d="M845 344 A34 34 0 0 1 811 378" />
+                <path d="M845 414 A34 34 0 0 0 811 448" />
+                <path d="M720 460 A38 38 0 0 1 758 422" />
               </g>
 
-              <text x="58" y="400" className="house-margin-note" fill="var(--pencil)">the lived-in floor · rooms simplified for the plant journal</text>
+              <text x="62" y="570" className="house-margin-note" fill="var(--pencil)">clean tracing of the supplied plan · room shapes and split levels retained</text>
             </svg>
-            {groundEntries.map((entry) => renderMarker(entry, 1000, 430))}
+            {groundEntries.map((entry) => renderMarker(entry, 1300, 620))}
           </div>
         </section>
 
@@ -157,34 +196,37 @@ function HousePlan({ onOpenPlant, dark }) {
             <span className="t-mono">{firstEntries.length} {firstEntries.length === 1 ? "pot" : "pots"}</span>
           </header>
           <div className="house-floor-canvas">
-            <svg viewBox="0 0 440 300" role="img" aria-labelledby="first-plan-title first-plan-desc">
-              <title id="first-plan-title">Simplified first-floor plan of Oak Lodge</title>
-              <desc id="first-plan-desc">The first floor contains Bedroom 2 and its staircase; no plants are recorded here yet.</desc>
+            <svg viewBox="0 0 480 260" role="img" aria-labelledby="first-plan-title first-plan-desc">
+              <title id="first-plan-title">First-floor plan of Oak Lodge</title>
+              <desc id="first-plan-desc">A close redrawing of the supplied first-floor plan, with Bedroom 2, its sloping-ceiling lines and the staircase at the lower-right corner.</desc>
               {RoughDefs("house-first")}
               <g filter="url(#house-first-rough-soft)">
-                <rect x="50" y="62" width="340" height="170" fill="var(--paper-deep)" fillOpacity={dark ? "0.16" : "0.3"} />
-                <rect x="50" y="62" width="340" height="170" fill="url(#house-first-floorboards)" />
+                <rect x="42" y="42" width="396" height="168" fill="var(--paper-deep)" fillOpacity={dark ? "0.16" : "0.3"} />
+                <rect x="42" y="42" width="396" height="168" fill="url(#house-first-floorboards)" />
               </g>
               <g filter="url(#house-first-rough)" fill="none" stroke="var(--ink)" strokeWidth="3">
-                <rect x="50" y="62" width="340" height="170" />
-                <path d="M305 150 H390 M305 150 V232" />
+                <rect x="42" y="42" width="396" height="168" />
+                <path d="M334 144 H438 M334 144 V210" />
+              </g>
+              <g filter="url(#house-first-rough-soft)" fill="none" stroke="var(--pencil)" strokeWidth="1.2" strokeDasharray="9 7" opacity="0.7">
+                <path d="M58 68 H422 M58 184 H334" />
               </g>
               <g filter="url(#house-first-rough-soft)" stroke="var(--ink)" strokeWidth="1.2" opacity="0.65">
-                {[0, 1, 2, 3, 4].map((step) => (
-                  <line key={step} x1={320 + step * 14} y1="160" x2={320 + step * 14} y2="225" />
+                {[0, 1, 2, 3, 4, 5].map((step) => (
+                  <line key={step} x1={350 + step * 15} y1="150" x2={350 + step * 15} y2="205" />
                 ))}
-                <path d="M330 212 L370 175 M370 175 L360 176 M370 175 L370 185" fill="none" />
+                <path d="M425 158 L360 198 M360 198 L370 198 M360 198 L364 188" fill="none" />
               </g>
               <g className="house-room-labels" fill="var(--ink)" textAnchor="middle">
-                <text x="190" y="145">Bedroom 2</text>
-                <text x="347" y="194">Stairs</text>
+                <text x="212" y="128">Bedroom 2</text>
+                <text x="386" y="178">Stairs</text>
               </g>
               <g filter="url(#house-first-rough-soft)" fill="none" stroke="var(--accent)" strokeWidth="5" strokeLinecap="round">
-                <path d="M115 62 H190 M225 62 H280" />
+                <path d="M118 42 H190 M245 42 H315" />
               </g>
-              <text x="220" y="270" textAnchor="middle" className="house-margin-note" fill="var(--pencil)">no indoor specimens recorded here yet</text>
+              <text x="240" y="242" textAnchor="middle" className="house-margin-note" fill="var(--pencil)">no indoor specimens recorded here yet</text>
             </svg>
-            {firstEntries.map((entry) => renderMarker(entry, 440, 300))}
+            {firstEntries.map((entry) => renderMarker(entry, 480, 260))}
           </div>
         </section>
       </div>
@@ -256,14 +298,20 @@ function HousePlan({ onOpenPlant, dark }) {
         .house-room-labels {
           font-family: var(--hand); font-size: 19px; opacity: 0.8;
         }
+        .house-ground .house-room-labels { font-size: 26px; }
+        .house-small-room-label { font-size: 15px; }
+        .house-direction-labels {
+          font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+          letter-spacing: 0.08em; opacity: 0.75;
+        }
         .house-margin-note { font-family: var(--hand); font-size: 16px; }
         .house-pot-marker {
-          position: absolute; z-index: 3; width: 58px; height: 64px; padding: 0;
+          position: absolute; z-index: 3; width: 50px; height: 56px; padding: 0;
           transform: translate(-50%, -54%); border: 0; background: transparent;
           color: var(--ink); cursor: pointer; overflow: visible;
         }
         .house-pot-marker > svg {
-          display: block; width: 54px; height: 62px;
+          display: block; width: 48px; height: 55px;
           filter: drop-shadow(0 2px 1px color-mix(in oklab, var(--ink) 25%, transparent));
           transition: transform 150ms ease;
         }
@@ -312,6 +360,11 @@ function HousePlan({ onOpenPlant, dark }) {
           .house-plan-note { display: none; }
           .house-floor-card { padding: 10px; }
           .house-room-labels { font-size: 22px; }
+          .house-ground .house-room-labels { font-size: 30px; }
+          .house-pot-marker {
+            width: 44px; height: 44px; display: grid; place-items: center;
+          }
+          .house-pot-marker > svg { width: 30px; height: 35px; }
           .house-margin-note { display: none; }
           .house-pot-tag { display: none; }
           .house-ledger-row { grid-template-columns: 56px minmax(0, 1fr) 26px; gap: 10px; }

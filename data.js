@@ -282,7 +282,7 @@ window.OAK = (function () {
       environment: "indoor",
       floor: "Ground Floor",
       room: "Hallway",
-      marker: { floor: "ground", x: 585, y: 326 },
+      marker: { floor: "ground", x: 835, y: 342 },
     },
 
     // ── Front garden v2 (measured survey · own plan, viewBox 0 0 1000 640 — see FrontGardenPlan.jsx)
