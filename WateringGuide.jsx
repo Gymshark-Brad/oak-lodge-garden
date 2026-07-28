@@ -44,9 +44,17 @@ function WateringGuide({ onOpenPlant }) {
         .filter(Boolean);
       if (values.length === 0) return;
       const maxBand = Math.max(...values);
-      rows.push({ key, zone, maxBand });
+      const environment = zone.environment || "outdoor";
+      const displayTitle = environment === "indoor"
+        ? `${zone.floor} · ${zone.room}`
+        : zone.title;
+      rows.push({ key, zone, maxBand, environment, displayTitle });
     });
-    rows.sort((a, b) => b.maxBand - a.maxBand || a.zone.title.localeCompare(b.zone.title));
+    rows.sort((a, b) =>
+      (a.environment === "indoor") - (b.environment === "indoor")
+      || b.maxBand - a.maxBand
+      || a.displayTitle.localeCompare(b.displayTitle)
+    );
     return rows;
   }, []);
 
@@ -100,13 +108,16 @@ function WateringGuide({ onOpenPlant }) {
           const band = WATER_BANDS_BY_ID[plant.id];
           if (!band) return;
           const added = (plant.profile && plant.profile.oakLodge && plant.profile.oakLodge.added) || "";
+          const isIndoor = zone.environment === "indoor";
           items.push({
             zoneKey: key,
-            zoneTitle: zone.title,
+            zoneTitle: isIndoor ? `${zone.floor} · ${zone.room}` : zone.title,
             plantName: plant.name,
             plantId: plant.id,
             band,
             isPot: !!zone.isPot,
+            isIndoor,
+            contextLabel: isIndoor ? "houseplant" : zone.isPot ? "container" : "bed",
             isEstablishing: !!added && !/^Established before/i.test(added),
             added,
           });
@@ -141,7 +152,10 @@ function WateringGuide({ onOpenPlant }) {
   const filteredPlants = useMemo_WG(() => {
     const q = plantFilter.trim().toLowerCase();
     const list = tableRows.filter(
-      (p) => !q || (p.plantName || "").toLowerCase().includes(q) || p.zoneTitle.toLowerCase().includes(q)
+      (p) => !q
+        || (p.plantName || "").toLowerCase().includes(q)
+        || p.zoneTitle.toLowerCase().includes(q)
+        || p.contextLabel.includes(q)
     );
     const sorted = [...list].sort((a, b) => {
       let cmp;
@@ -169,7 +183,9 @@ function WateringGuide({ onOpenPlant }) {
       if (plantItem.band > 2) return;
       const zone = ZONES[plantItem.zoneKey];
       const record = PLANT_BY_ID[plantItem.plantId];
-      const over = plantItem.isPot
+      const over = plantItem.isIndoor
+        ? record && record.plant.profile && record.plant.profile.waterSigns.over
+        : plantItem.isPot
         ? (POT_WATER_SIGNS[zone.plantKey] || {}).over
         : record && record.plant.profile && record.plant.profile.waterSigns.over;
       if (!over) return;
@@ -205,6 +221,27 @@ function WateringGuide({ onOpenPlant }) {
     date: `${d.getDate()} ${WG_MONTH_SHORT[d.getMonth()]}`,
     isToday: i === todayIndex,
   }));
+  const outdoorZoneRows = zoneRows.filter((row) => row.environment !== "indoor");
+  const indoorZoneRows = zoneRows.filter((row) => row.environment === "indoor");
+  const renderZoneRows = (rows) => rows.map(({ key, zone, maxBand, displayTitle }) => {
+    const info = BAND_INFO[maxBand];
+    const days = maxBand === 2 ? (fortnightOn ? info.days : info.days.map(() => 0)) : info.days;
+    return (
+      <React.Fragment key={key}>
+        <span className="wg-zone-name t-hand" title={zone.title}>
+          {displayTitle}
+        </span>
+        <div className="wg-band-chip-cell">
+          <span className={"wg-band-chip wg-band-" + maxBand}>{info.chip}</span>
+        </div>
+        {days.map((on, i) => (
+          <div key={i} className={"wg-cell" + (dayHeader[i].isToday ? " is-today" : "")}>
+            {on ? <span className="wg-drop" aria-label="Suggested moisture-check day">○</span> : null}
+          </div>
+        ))}
+      </React.Fragment>
+    );
+  });
 
   return (
     <div className="wg-root page-turn">
@@ -240,6 +277,7 @@ function WateringGuide({ onOpenPlant }) {
             <li>Check pots and baskets separately because compost, sun and wind can dry them much faster than borders.</li>
             <li>Newly planted or moved plants need closer checks until rooted in, even when the mature plant is drought-tolerant.</li>
             <li>In cool or wet weather, reduce checks. In heat or strong wind, inspect containers more often.</li>
+            <li>For houseplants, test the compost and empty every cachepot after watering; room warmth and winter light matter more than outdoor rain.</li>
           </ul>
         </aside>
 
@@ -264,25 +302,12 @@ function WateringGuide({ onOpenPlant }) {
                 </div>
               ))}
 
-              {zoneRows.map(({ key, zone, maxBand }) => {
-                const info = BAND_INFO[maxBand];
-                const days = maxBand === 2 ? (fortnightOn ? info.days : info.days.map(() => 0)) : info.days;
-                return (
-                  <React.Fragment key={key}>
-                    <span className="wg-zone-name t-hand" title={zone.title}>
-                      {zone.title}
-                    </span>
-                    <div className="wg-band-chip-cell">
-                      <span className={"wg-band-chip wg-band-" + maxBand}>{info.chip}</span>
-                    </div>
-                    {days.map((on, i) => (
-                      <div key={i} className={"wg-cell" + (dayHeader[i].isToday ? " is-today" : "")}>
-                        {on ? <span className="wg-drop" aria-label="Suggested moisture-check day">○</span> : null}
-                      </div>
-                    ))}
-                  </React.Fragment>
-                );
-              })}
+              <div className="wg-grid-group">Gardens &amp; outdoor pots</div>
+              {renderZoneRows(outdoorZoneRows)}
+              {indoorZoneRows.length > 0 && (
+                <div className="wg-grid-group is-indoor">House plants · check compost, then empty cachepots</div>
+              )}
+              {renderZoneRows(indoorZoneRows)}
             </div>
           </div>
           {zoneRows.some(({ maxBand }) => maxBand === 2) && !fortnightOn && (
@@ -426,7 +451,7 @@ function WateringGuide({ onOpenPlant }) {
 
           <div className="wg-table-wrap">
             <table className="wg-table">
-              <caption className="sr-only">Plants and their moisture-check priorities by garden zone</caption>
+              <caption className="sr-only">Plants and their moisture-check priorities by garden or indoor location</caption>
               <thead>
                 <tr>
                   <th scope="col" aria-sort={sortKey === "plant" ? (sortDir === "asc" ? "ascending" : "descending") : "none"}>
@@ -456,7 +481,7 @@ function WateringGuide({ onOpenPlant }) {
                       {p.isEstablishing && <span className="wg-over-tag" title={p.added}>establishing</span>}
                     </td>
                     <td className="t-mono wg-table-zone">
-                      {p.zoneTitle} · {p.isPot ? "container" : "bed"}
+                      {p.zoneTitle} · {p.contextLabel}
                     </td>
                     <td>
                       <span className={"wg-freq-text wg-freq-" + p.band}>{BAND_INFO[p.band].everyDays}</span>
@@ -535,6 +560,16 @@ function WateringGuide({ onOpenPlant }) {
         .wg-grid { display: grid; row-gap: 4px; column-gap: 6px; align-items: center; min-width: 560px; }
         .wg-grid-head { font-family: var(--type); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pencil); padding-bottom: 8px; border-bottom: 1px solid var(--hairline); }
         .wg-grid-corner { border-bottom: 1px solid var(--hairline); }
+        .wg-grid-group {
+          grid-column: 1 / -1; margin-top: 6px; padding: 8px 4px 5px;
+          border-bottom: 1px dashed var(--hairline);
+          font-family: var(--type); font-size: 10px; letter-spacing: 0.12em;
+          text-transform: uppercase; color: var(--pencil);
+        }
+        .wg-grid-group.is-indoor {
+          margin-top: 14px; color: var(--green);
+          background: color-mix(in oklab, var(--green) 6%, transparent);
+        }
         .wg-day-head { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
         .wg-day-head.is-today { color: var(--accent); }
         .wg-day-label { font-size: 12px; }

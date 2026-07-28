@@ -22,6 +22,7 @@ function run(argv) {
   eval(readText(`${root}/plant-profile-data.js`));
   eval(readText(`${root}/back-garden-profile-data.js`));
   eval(readText(`${root}/front-garden-profile-data.js`));
+  eval(readText(`${root}/house-plant-profile-data.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
   eval(readText(`${root}/cultivar-resolution-data.js`));
@@ -95,6 +96,31 @@ function run(argv) {
     });
   });
 
+  Object.entries(OAK.ZONES).forEach(([zoneKey, zone]) => {
+    if (zone.environment !== "indoor") return;
+    const plants = OAK.PLANTS[zone.plantKey] || [];
+    if (!zone.floor || !zone.room) errors.push(`incomplete indoor location: ${zoneKey}`);
+    if (!zone.marker || !["ground", "first"].includes(zone.marker.floor)
+      || typeof zone.marker.x !== "number" || typeof zone.marker.y !== "number") {
+      errors.push(`invalid indoor marker: ${zoneKey}`);
+    }
+    if (plants.length !== 1) errors.push(`indoor pot must resolve to exactly one plant: ${zoneKey}`);
+    if (plants[0]) {
+      const record = OAK.PLANT_BY_ID[plants[0].id];
+      if (!record || record.zoneKey !== zoneKey) errors.push(`unresolved indoor specimen: ${zoneKey}`);
+      if (!plants[0].profile || plants[0].profile.environment !== "indoor") {
+        errors.push(`indoor specimen lacks indoor profile context: ${plants[0].id}`);
+      }
+    }
+  });
+
+  const kentia = OAK.PLANT_BY_ID["house-hallway-kentia-palm"];
+  if (!kentia || !kentia.plant.name.endsWith("— assumed")
+    || !kentia.plant.profile.petSafety
+    || kentia.plant.profile.petSafety.label !== "Non-toxic to cats & dogs") {
+    errors.push("Kentia identity qualification or pet-safety record is incomplete");
+  }
+
   Object.entries(OAK.SEASONAL).forEach(([monthName, month]) => {
     month.highlights.forEach((entry) => {
       if (!entry.reference || !OAK.PLANT_BY_ID[entry.reference.plantId]) {
@@ -132,6 +158,9 @@ function run(argv) {
   Object.values(OAK.PLANT_PHOTOS).forEach((months) => {
     months.forEach((month) => (month.photos || []).forEach((photo) => imageSources.add(photo.src)));
   });
+  Object.values(OAK.PLANT_PHOTOS_BY_ID || {}).forEach((months) => {
+    months.forEach((month) => (month.photos || []).forEach((photo) => imageSources.add(photo.src)));
+  });
   imageSources.forEach((src) => {
     const originalPath = `${root}/${src}`;
     const thumbnailPath = `${root}/${OAK.thumbnailFor(src)}`;
@@ -142,6 +171,11 @@ function run(argv) {
       errors.push(`missing thumbnail: ${OAK.thumbnailFor(src)}`);
     }
   });
+
+  const publicCopy = `${readText(`${root}/index.html`)} ${readText(`${root}/HousePlan.jsx`)}`.toLowerCase();
+  if (publicCopy.includes("fockbury") || publicCopy.includes("b61 9ap") || publicCopy.includes("metropix")) {
+    errors.push("private address or source watermark leaked into the public house plan");
+  }
 
   if (errors.length) {
     errors.forEach((error) => console.log(`ERROR: ${error}`));

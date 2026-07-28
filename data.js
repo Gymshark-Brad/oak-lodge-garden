@@ -268,6 +268,22 @@ window.OAK = (function () {
       plantKey: "Front Pot",
       isPot: true,
     },
+    houseHallKentia: {
+      id: "houseHallKentia",
+      title: "Hallway · Kentia Palm",
+      badge: "Indoor specimen",
+      dims: "Nursery pot in white cachepot",
+      where: "Ground-floor hallway, beside the main staircase",
+      desc:
+        "A dark-green architectural palm marking the turn beside the main staircase. The high-confidence Kentia identification remains visibly assumed until a retained label is found.",
+      color: "#4f7650",
+      plantKey: "House · Hallway · Kentia Palm",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Hallway",
+      marker: { floor: "ground", x: 585, y: 326 },
+    },
 
     // ── Front garden v2 (measured survey · own plan, viewBox 0 0 1000 640 — see FrontGardenPlan.jsx)
     frontBed1: {
@@ -2085,6 +2101,24 @@ window.OAK = (function () {
         seasonal: "Spring blossom followed by small ornamental crab apples that can persist into autumn and winter.",
       },
     ],
+    "House · Hallway · Kentia Palm": [
+      {
+        name: "Kentia Palm — assumed",
+        id: "house-hallway-kentia-palm",
+        latin: "Howea forsteriana",
+        photos: [
+          "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp",
+          "images/house-plants/jul-2026/kentia-palm-hallway-context.webp",
+          "images/house-plants/jul-2026/kentia-palm-hallway-detail.webp",
+          "images/house-plants/jul-2026/kentia-palm-hallway-condition.webp",
+        ],
+        position: "Ground-floor hallway, beside the main staircase",
+        light: "Bright indirect light; protect the fronds from strong direct sun.",
+        water: "Check the upper few centimetres of compost before watering, then drain fully and empty the white cachepot.",
+        care: "Maintain moderate humidity, keep away from cold draughts and radiators, and feed monthly during active spring and summer growth.",
+        seasonal: "Evergreen indoor foliage throughout the year; growth slows as light levels fall in winter.",
+      },
+    ],
   };
 
   // Bed 2's former sideways-T footprint is now two separate beds. The plant
@@ -2151,6 +2185,7 @@ window.OAK = (function () {
     "Bluebell Creeper": { habit: "Slender evergreen twining climber", size: "1.5–2.5m when trained", hardiness: "H3 · protect below −5°C", wildlife: "Flowers visited by pollinators" },
     "Hebe 'Rhubarb and Custard'": { habit: "Rounded evergreen shrub", size: "About 60cm high and wide", hardiness: "H3 · protect below −5°C", wildlife: "Summer flowers for pollinators" },
     "Salvia 'Salgoon Lake Blueberry'": { habit: "Compact upright perennial", size: "40–60cm high · about 45cm spread", hardiness: "H3 · protect below −5°C", wildlife: "Excellent nectar for bees and butterflies" },
+    "Kentia Palm — assumed": { habit: "Evergreen indoor palm", size: "1.5–3m indoors", hardiness: "H1A · keep above 15°C", foliage: "Evergreen arching fronds", wildlife: "Indoor foliage specimen" },
   };
 
   const firstSentence = (text, fallback) => {
@@ -3196,6 +3231,12 @@ window.OAK = (function () {
     if (plantId && PLANT_PHOTOS[plantName]) PLANT_PHOTOS_BY_ID[plantId] = PLANT_PHOTOS[plantName];
   });
   const julyJournal = (photos) => [{ month: "jul-2026", label: "July 2026", photos }];
+  PLANT_PHOTOS_BY_ID["house-hallway-kentia-palm"] = julyJournal([
+    { src: "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp", caption: "Kentia palm beside the ground-floor staircase" },
+    { src: "images/house-plants/jul-2026/kentia-palm-hallway-context.webp", caption: "The full grouped specimen in its hallway position" },
+    { src: "images/house-plants/jul-2026/kentia-palm-hallway-detail.webp", caption: "Broad, dark-green arching leaflets supporting the Kentia identification" },
+    { src: "images/house-plants/jul-2026/kentia-palm-hallway-condition.webp", caption: "July 2026 condition baseline — brown tips and irregular patches" },
+  ]);
   PLANT_PHOTOS_BY_ID["frontBed5-climber-unidentified"] = julyJournal([
     { src: "images/jul-2026/front-260725-bed-5-shrub-rose-1.webp", caption: "Established shrub rose in Front Bed 5" },
     { src: "images/jul-2026/front-260725-bed-5-shrub-rose-2.webp", caption: "Shrub rose foliage and hips" },

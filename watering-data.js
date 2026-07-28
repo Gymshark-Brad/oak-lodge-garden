@@ -182,6 +182,9 @@
     "Front Gate Tree": {
       "Weeping Crab Apple (cultivar to confirm)": 2,
     },
+    "House · Hallway · Kentia Palm": {
+      "Kentia Palm — assumed": 3,
+    },
   };
 
   const WATER_BAND_INFO = {

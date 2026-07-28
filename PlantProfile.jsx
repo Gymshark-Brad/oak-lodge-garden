@@ -7,7 +7,10 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
   if (!plant || !plant.profile) return null;
 
   const profile = plant.profile;
+  const display = profile.display || {};
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const floweringMonths = profile.floweringMonths || [];
+  const hasFloweringWindow = floweringMonths.length > 0;
   const journal = (window.OAK.PLANT_PHOTOS_BY_ID || {})[plant.id] || [];
   const latestEntry = journal[0] || null;
   const latestPhoto = latestEntry && latestEntry.photos ? latestEntry.photos[0] : null;
@@ -76,6 +79,11 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
           <div className="pp-badges" aria-label="Plant classifications">
             <span className="pp-type-badge">{profile.type}</span>
             {profile.badges.map((badge) => <span key={badge} className="pp-badge">{badge}</span>)}
+            {profile.petSafety && (
+              <span className={`pp-safety-badge pp-safety-${profile.petSafety.tone || "note"}`}>
+                {profile.petSafety.label}
+              </span>
+            )}
           </div>
           <p className="pp-lede">{profile.description}</p>
           <div className="pp-location-note">
@@ -91,15 +99,24 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
 
         <div className="pp-flowering">
           <div>
-            <div className="pp-subheading">Flowering period</div>
-            <div className="pp-small-note">Typical UK window; weather and trimming affect the length of the display.</div>
+            <div className="pp-subheading">{display.cycleTitle || "Flowering period"}</div>
+            <div className="pp-small-note">
+              {display.cycleNote || "Typical UK window; weather and trimming affect the length of the display."}
+            </div>
           </div>
-          <div className="pp-months" aria-label={`Flowers ${profile.floweringMonths.join(" to ")}`}>
-            {months.map((month) => {
-              const active = profile.floweringMonths.includes(month);
-              return <span key={month} className={active ? "is-flowering" : ""}>{month}</span>;
-            })}
-          </div>
+          {hasFloweringWindow ? (
+            <div className="pp-months" aria-label={`Flowers ${floweringMonths.join(" to ")}`}>
+              {months.map((month) => {
+                const active = floweringMonths.includes(month);
+                return <span key={month} className={active ? "is-flowering" : ""}>{month}</span>;
+              })}
+            </div>
+          ) : (
+            <div className="pp-cycle-empty" role="note" aria-label={display.cycleAria || "No flowering period recorded"}>
+              <span className="t-hand">{display.cycleEmpty || "no regular flowering period recorded"}</span>
+              <span className="t-mono">Jan — Dec</span>
+            </div>
+          )}
         </div>
 
         <div className="pp-facts">
@@ -119,9 +136,9 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
           <p>The aim is resilient, balanced growth in the conditions this plant actually prefers.</p>
           {waterInfo && (
             <div className="pp-water-stamp">
-              <span className="t-stamp">Oak Lodge watering band {waterBand}</span>
+              <span className="t-stamp">{profile.environment === "indoor" ? "Houseplant moisture-check band" : "Oak Lodge watering band"} {waterBand}</span>
               <strong>{waterInfo.chip}</strong>
-              <span>{waterInfo.freq}</span>
+              <span>{display.waterBandNote || waterInfo.freq}</span>
             </div>
           )}
         </div>
@@ -195,6 +212,12 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
                 <p>{profile.caution}</p>
               </div>
             )}
+            {profile.petSafety && (
+              <div className={`pp-pet-safety-note pp-safety-${profile.petSafety.tone || "note"}`} role="note" aria-label="Pet safety note">
+                <div className="t-stamp">{profile.petSafety.label}</div>
+                <p>{profile.petSafety.detail}</p>
+              </div>
+            )}
           </div>
           <dl className="pp-botanical-list">
             {profile.botanical.map((item) => (
@@ -213,11 +236,11 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
           <dl className="pp-oak-record">
             <div><dt>Position</dt><dd>{profile.oakLodge.location}</dd></div>
             <div><dt>Added</dt><dd>{profile.oakLodge.added}</dd></div>
-            <div><dt>Role in the bed</dt><dd>{profile.oakLodge.role}</dd></div>
+            <div><dt>{display.roleLabel || "Role in the bed"}</dt><dd>{profile.oakLodge.role}</dd></div>
             <div><dt>First observation</dt><dd>{profile.oakLodge.observation}</dd></div>
           </dl>
           <aside className="pp-field-note">
-            <div className="t-stamp">Field note · July ’26</div>
+            <div className="t-stamp">{display.fieldNoteLabel || "Field note · July ’26"}</div>
             <p className="t-hand">{profile.oakLodge.status}</p>
           </aside>
         </div>
@@ -254,8 +277,7 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
       <section className="pp-section pp-sources" aria-labelledby="sources-heading">
         <SectionHeading eyebrow="Research record" title="Sources & confidence" id="sources-heading" />
         <p className="pp-source-intro">
-          Cultivar facts are sourced; position, photographs and performance notes are Oak Lodge observations.
-          Where the plant has not yet been through a full season here, the profile says so.
+          {display.sourceIntro || "Cultivar facts are sourced; position, photographs and performance notes are Oak Lodge observations. Where the plant has not yet been through a full season here, the profile says so."}
         </p>
         <ol>
           {profile.sources.map((source) => (
@@ -306,13 +328,17 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
         }
         .pp-latin { font-size: clamp(22px, 2.4vw, 29px); line-height: 1.25; }
         .pp-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
-        .pp-badge, .pp-type-badge {
+        .pp-badge, .pp-type-badge, .pp-safety-badge {
           display: inline-flex; align-items: center; min-height: 30px; padding: 5px 10px;
           border: 1px solid var(--hairline); font-family: var(--type); font-size: 10px;
           letter-spacing: 0.08em; text-transform: uppercase;
           background: color-mix(in oklab, var(--paper) 90%, var(--green) 10%);
         }
         .pp-type-badge { color: var(--green); border-color: color-mix(in oklab, var(--green) 45%, var(--paper)); }
+        .pp-safety-badge.pp-safety-safe {
+          color: var(--green); border-color: color-mix(in oklab, var(--green) 55%, var(--paper));
+          background: color-mix(in oklab, var(--paper) 82%, var(--green) 18%);
+        }
         .pp-lede { font-size: clamp(19px, 2vw, 22px); line-height: 1.6; max-width: 64ch; margin: 0; }
         .pp-location-note {
           display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; align-items: baseline;
@@ -348,6 +374,13 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
           content: ""; position: absolute; left: 20%; right: 20%; bottom: 6px; height: 2px;
           background: color-mix(in oklab, var(--paper) 76%, transparent);
         }
+        .pp-cycle-empty {
+          min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+          padding: 12px 16px; border: 1px dashed color-mix(in oklab, var(--green) 42%, var(--hairline));
+          background: color-mix(in oklab, var(--paper) 92%, var(--green) 8%);
+        }
+        .pp-cycle-empty .t-hand { font-size: 23px; color: var(--green); }
+        .pp-cycle-empty .t-mono { color: var(--pencil); white-space: nowrap; }
         .pp-facts {
           display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
           margin-top: 18px; border: 1px solid var(--hairline);
@@ -406,6 +439,10 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
         .pp-caution { margin-top: 16px; padding: 16px 18px; border-left: 4px solid var(--stamp); background: color-mix(in oklab, var(--paper) 92%, var(--stamp) 8%); }
         .pp-caution .t-stamp { color: var(--stamp); }
         .pp-caution p { margin: 7px 0 0; font-size: 16px; }
+        .pp-pet-safety-note { margin-top: 16px; padding: 16px 18px; border-left: 4px solid var(--green); }
+        .pp-pet-safety-note.pp-safety-safe { background: color-mix(in oklab, var(--paper) 89%, var(--green) 11%); }
+        .pp-pet-safety-note .t-stamp { color: var(--green); }
+        .pp-pet-safety-note p { margin: 7px 0 0; font-size: 16px; }
         .pp-botanical-list { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--hairline); }
         .pp-botanical-list > div { padding: 14px 12px; border-bottom: 1px solid var(--hairline); }
         .pp-botanical-list dd { margin: 4px 0 0; line-height: 1.35; }

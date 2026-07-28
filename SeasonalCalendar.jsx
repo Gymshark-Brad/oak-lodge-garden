@@ -61,22 +61,36 @@ function SeasonalCalendar({ onOpenPlant }) {
       const season = profile.seasons.find((item) => item.season === seasonName);
       const zone = window.OAK.ZONES[record.zoneKey];
       if (!season || !zone) return;
-      const searchText = `${record.plant.name} ${zone.title} ${season.action}`.toLowerCase();
+      const isIndoor = zone.environment === "indoor";
+      const zoneTitle = isIndoor ? `${zone.floor} · ${zone.room}` : zone.title;
+      const groupKey = isIndoor ? `indoor:${zone.floor}:${zone.room}` : record.zoneKey;
+      const searchText = `${record.plant.name} ${zoneTitle} house plants ${season.action}`.toLowerCase();
       if (query && !searchText.includes(query)) return;
-      if (!groups.has(record.zoneKey)) {
-        groups.set(record.zoneKey, { zoneKey: record.zoneKey, zoneTitle: zone.title, plants: [] });
+      if (!groups.has(groupKey)) {
+        groups.set(groupKey, {
+          groupKey,
+          zoneTitle,
+          environment: isIndoor ? "indoor" : "outdoor",
+          plants: [],
+        });
       }
-      groups.get(record.zoneKey).plants.push({
+      groups.get(groupKey).plants.push({
+        zoneKey: record.zoneKey,
         plantId: record.plant.id,
         plantName: record.plant.name,
         action: season.action,
         caution: profile.caution || null,
       });
     });
-    return Array.from(groups.values()).map((group) => ({
-      ...group,
-      plants: group.plants.sort((a, b) => a.plantName.localeCompare(b.plantName)),
-    }));
+    return Array.from(groups.values())
+      .map((group) => ({
+        ...group,
+        plants: group.plants.sort((a, b) => a.plantName.localeCompare(b.plantName)),
+      }))
+      .sort((a, b) =>
+        (a.environment === "indoor") - (b.environment === "indoor")
+        || a.zoneTitle.localeCompare(b.zoneTitle)
+      );
   }, [profileRecords, seasonFilter, seasonName]);
   const seasonalResultCount = seasonalGroups.reduce((total, group) => total + group.plants.length, 0);
 
@@ -323,7 +337,7 @@ function SeasonalCalendar({ onOpenPlant }) {
             <div className="cal-section-count t-mono">{seasonalResultCount} plants</div>
           </header>
           <p className="cal-season-intro">
-            The monthly jobs above are deliberately specific. These profile notes are the wider seasonal reference—open a garden area when you need it.
+            The monthly jobs above are deliberately specific. These profile notes are the wider seasonal reference—open any garden or house plant when you need it.
           </p>
           <label className="t-stamp cal-season-filter-label" htmlFor="season-profile-filter">Find a plant, area or job</label>
           <input
@@ -337,12 +351,13 @@ function SeasonalCalendar({ onOpenPlant }) {
           <div className="cal-season-groups">
             {seasonalGroups.map((group) => (
               <details
-                className="cal-season-group"
-                key={`${group.zoneKey}-${seasonFilter ? "search" : "browse"}`}
+                className={"cal-season-group" + (group.environment === "indoor" ? " is-indoor" : "")}
+                key={`${group.groupKey}-${seasonFilter ? "search" : "browse"}`}
                 open={!!seasonFilter}
               >
                 <summary>
                   <span className="t-hand">{group.zoneTitle}</span>
+                  {group.environment === "indoor" && <span className="cal-indoor-label">house plants</span>}
                   <span className="t-mono">{group.plants.length} {group.plants.length === 1 ? "plant" : "plants"}</span>
                 </summary>
                 <ul>
@@ -351,7 +366,7 @@ function SeasonalCalendar({ onOpenPlant }) {
                       <button
                         className="cal-plant-link-sm cal-season-plant"
                         onClick={() => handlePlantClick({
-                          zoneKey: group.zoneKey,
+                          zoneKey: plant.zoneKey,
                           plantId: plant.plantId,
                           plantName: plant.plantName,
                         })}
@@ -604,6 +619,10 @@ function SeasonalCalendar({ onOpenPlant }) {
           border: 1px dashed var(--hairline);
           background: color-mix(in oklab, var(--paper) 96%, var(--paper-deep) 4%);
         }
+        .cal-season-group.is-indoor {
+          border-left: 4px solid var(--green);
+          background: color-mix(in oklab, var(--paper) 93%, var(--green) 7%);
+        }
         .cal-season-group summary {
           display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
           min-height: 48px; padding: 10px 13px; cursor: pointer;
@@ -612,6 +631,11 @@ function SeasonalCalendar({ onOpenPlant }) {
         .cal-season-group summary::marker { color: var(--accent); }
         .cal-season-group summary .t-hand { font-size: 23px; }
         .cal-season-group summary .t-mono { opacity: 0.65; white-space: nowrap; }
+        .cal-indoor-label {
+          margin-left: auto; padding: 3px 7px; border: 1px solid color-mix(in oklab, var(--green) 40%, var(--paper));
+          font-family: var(--type); font-size: 9px; letter-spacing: 0.1em;
+          text-transform: uppercase; color: var(--green); white-space: nowrap;
+        }
         .cal-season-group[open] summary {
           border-bottom: 1px dotted var(--hairline);
           background: color-mix(in oklab, var(--paper) 91%, var(--accent) 9%);

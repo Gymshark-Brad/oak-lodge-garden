@@ -5,9 +5,10 @@ const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App, 
 
 function App() {
   const [palette, setPalette] = useState_App(window.loadPalette());
-  const [view, setView] = useState_App({ name: "plan" }); // plan | frontplan | calendar | watering | bed | plant
+  const [view, setView] = useState_App({ name: "plan" }); // plan | houseplan | frontplan | calendar | watering | bed | plant
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
+  const [housePlantReturn, setHousePlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
   const lightboxCloseRef = useRef_App(null);
 
@@ -55,9 +56,10 @@ function App() {
     setView({ name: "bed", zoneKey });
     scrollToTop();
   };
-  const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering }) => {
+  const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering, fromHousePlan }) => {
     if (fromCalendar) setCalendarPlantReturn(true);
     if (fromWatering) setWateringPlantReturn(true);
+    if (fromHousePlan) setHousePlantReturn(true);
     setView((prev) => ({
       name: "plant",
       zoneKey: zoneKey || prev.zoneKey,
@@ -76,16 +78,25 @@ function App() {
     } else if (wateringPlantReturn) {
       setWateringPlantReturn(false);
       setView({ name: "watering" });
+    } else if (housePlantReturn) {
+      setHousePlantReturn(false);
+      setView({ name: "houseplan" });
     } else {
       setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
     }
     if (returningFromFullPage) scrollToTop();
   };
   const goCalendar = () => {
+    setCalendarPlantReturn(false);
+    setWateringPlantReturn(false);
+    setHousePlantReturn(false);
     setView({ name: "calendar" });
     scrollToTop();
   };
   const goWatering = () => {
+    setCalendarPlantReturn(false);
+    setWateringPlantReturn(false);
+    setHousePlantReturn(false);
     setView({ name: "watering" });
     scrollToTop();
   };
@@ -100,11 +111,12 @@ function App() {
   };
 
   // Crumbs / chrome content depends on view
-  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn);
+  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn);
   const inFrontBed = inBed && isFrontZone(view.zoneKey);
   const breadcrumb = inBed ? Z[view.zoneKey].title : null;
   const inCalendar = view.name === "calendar" || (view.name === "plant" && calendarPlantReturn);
   const inWatering = view.name === "watering" || (view.name === "plant" && wateringPlantReturn);
+  const inHouse = view.name === "houseplan" || (view.name === "plant" && housePlantReturn);
 
   return (
     <div className="app-root" data-palette={palette}>
@@ -112,20 +124,27 @@ function App() {
       <header className="chrome">
         <div className="brand">
           <span className="crest">Oak Lodge</span>
-          <span className="sub">— a garden notebook</span>
+          <span className="sub">— a garden &amp; houseplant notebook</span>
         </div>
         <nav className="crumb-bar" aria-label="Garden journal">
           <button
             className="ghostbtn"
             aria-pressed={view.name === "plan" || (inBed && !inFrontBed)}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "plan" }); scrollToTop(); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "plan" }); scrollToTop(); }}
           >
             Back Garden
           </button>
           <button
             className="ghostbtn"
+            aria-pressed={inHouse}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "houseplan" }); scrollToTop(); }}
+          >
+            House Plants
+          </button>
+          <button
+            className="ghostbtn"
             aria-pressed={view.name === "frontplan" || inFrontBed}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setView({ name: "frontplan" }); scrollToTop(); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "frontplan" }); scrollToTop(); }}
           >
             Front Garden
           </button>
@@ -164,6 +183,9 @@ function App() {
           {view.name === "frontplan" && (
             <FrontGardenPlan onOpenZone={openZone} dark={dark} />
           )}
+          {view.name === "houseplan" && (
+            <HousePlan onOpenPlant={openPlant} dark={dark} />
+          )}
           {!fullPageProfile && (view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
             <SeasonalCalendar
               onOpenPlant={openPlantFromCalendar}
@@ -174,7 +196,7 @@ function App() {
               onOpenPlant={openPlantFromWatering}
             />
           )}
-          {!fullPageProfile && (view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn)) && (
+          {!fullPageProfile && (view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn)) && (
             <BedDetail
               key={view.zoneKey}
               zoneKey={view.zoneKey}
@@ -188,7 +210,7 @@ function App() {
             <PlantProfile
               plant={currentPlant}
               zoneTitle={Z[view.zoneKey].title}
-              backLabel={calendarPlantReturn ? "seasonal calendar" : wateringPlantReturn ? "watering guide" : Z[view.zoneKey].title}
+              backLabel={calendarPlantReturn ? "seasonal calendar" : wateringPlantReturn ? "watering guide" : housePlantReturn ? "house plants" : Z[view.zoneKey].title}
               plantKey={Z[view.zoneKey].plantKey}
               onBack={closePlant}
               onOpenLightbox={(ph) => setLightbox(ph)}
