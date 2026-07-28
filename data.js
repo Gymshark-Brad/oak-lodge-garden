@@ -80,7 +80,7 @@ window.OAK = (function () {
       dims: "≈4.8m × 1m",
       where: "Decking edge, lower level",
       desc:
-        "Narrow gravel bed running the full length of the decking edge. Mediterranean planting — houseleeks, sedum, rosemary — anchored by a Cordyline and a dark Phormium.",
+        "Narrow gravel bed running the full length of the decking edge. Rosette succulents — hardy houseleeks and a tender grey Echeveria — are anchored by a Cordyline and a dark Phormium.",
       shape: { kind: "rect", x: 488, y: 267, w: 277, h: 48 },
       color: "#7a8f9a",
       labelXY: [640, 290],
@@ -995,15 +995,19 @@ window.OAK = (function () {
         seasonal: "Evergreen rosettes; flowering rosettes die after blooming, replaced by offsets.",
       },
       {
-        name: "Stonecrop",
-        id: "stone-stonecrop",
-        latin: "Sedum (trailing)",
-        photos: ["images/plants/stonecrop-1.webp", "images/plants/stonecrop-2.webp", "images/plants/stonecrop-3.webp"],
-        position: "Centre-left",
-        light: "Full sun.",
-        water: "Low.",
-        care: "Free-draining soil. Cut back in late winter.",
-        seasonal: "Foliage year-round; flowers summer–autumn.",
+        name: "Echeveria",
+        id: "stone-echeveria",
+        latin: "Echeveria cultivar",
+        photos: [
+          "images/jul-2026/stone-echeveria-perle-von-nurnberg-planted.webp",
+          "images/jul-2026/stone-echeveria-perle-von-nurnberg-1.webp",
+          "images/jul-2026/stone-echeveria-perle-von-nurnberg-2.webp",
+        ],
+        position: "Centre-left — grey rosette beside the houseleeks",
+        light: "Full sun or very bright light; acclimatise gradually to strong sun.",
+        water: "Low. Water only when the soil has dried; keep almost dry in winter.",
+        care: "Sharply drained soil. Tender: lift before frost and overwinter frost-free under cover.",
+        seasonal: "Evergreen powdery grey-purple rosette; pink-red flower stems may appear in summer.",
       },
       {
         name: "New Zealand Flax (dark)",
@@ -1015,17 +1019,6 @@ window.OAK = (function () {
         water: "Moderate; drought-tolerant once established.",
         care: "Remove old leaves at base. Architectural and low-care.",
         seasonal: "Evergreen dark foliage year-round.",
-      },
-      {
-        name: "Rosemary",
-        id: "stone-rosemary",
-        latin: "Salvia rosmarinus",
-        photos: ["images/plants/rosemary.webp"],
-        position: "Centre-right — grey-green needles",
-        light: "Full sun.",
-        water: "Low.",
-        care: "Sharp drainage. Light trim after flowering.",
-        seasonal: "Evergreen aromatic; pale blue flowers spring.",
       },
       {
         name: "Cabbage Tree",
@@ -2132,8 +2125,7 @@ window.OAK = (function () {
     "Wisteria": { habit: "Vigorous deciduous climber", size: "8–12m when trained", wildlife: "Flowers visited by bees" },
     "Rose": { habit: "Deciduous flowering shrub or climber", size: "Cultivar and training dependent", wildlife: "Flowers and hips can support wildlife" },
     "Houseleeks": { habit: "Mat-forming evergreen succulent", size: "5–15cm high · spreading", hardiness: "H5 · hardy with sharp drainage", wildlife: "Flowers visited by bees" },
-    "Stonecrop": { habit: "Trailing succulent perennial", size: "10–30cm high · spreading", hardiness: "H5 · hardy with sharp drainage", wildlife: "Late nectar for pollinators" },
-    "Rosemary": { habit: "Aromatic evergreen shrub", size: "1–1.5m high and wide", hardiness: "H4 · hardy in a sheltered, drained spot", wildlife: "Early nectar for bees" },
+    "Echeveria": { habit: "Rosette-forming tender succulent", size: "10–30cm high · 15–30cm wide", hardiness: "H2 · lift before frost", wildlife: "Flowers may be visited by pollinators" },
     "Cabbage Tree": { habit: "Evergreen architectural tree", size: "2.5–4m high · 1–2m spread", hardiness: "H3/H4 · protect in severe cold" },
     "Honeysuckle": { habit: "Twining deciduous climber", size: "4–8m when trained", wildlife: "Nectar, berries and nesting cover" },
     "Clematis": { habit: "Vigorous deciduous climber", size: "8–12m when trained", wildlife: "Early flowers and nesting cover" },
@@ -2172,7 +2164,7 @@ window.OAK = (function () {
     if (/(Maple|Tree|Cherry|Pyrus|Malus|Cordyline)/i.test(text)) return "Ornamental tree";
     if (/(Wisteria|Clematis|Honeysuckle|Climber|Sollya|Billardiera|climbing rose|Hydrangea anomala)/i.test(text)) return "Climbing plant";
     if (/(Begonia|Petunia|Calibrachoa|Verbena|Lobelia|Celosia|Nemesia|Gazania|Bacopa|Pelargonium|Fuchsia)/i.test(text)) return "Seasonal flowering plant";
-    if (/(Sedum|Sempervivum|Delosperma|Stonecrop|Houseleek)/i.test(text)) return "Succulent groundcover";
+    if (/(Echeveria|Sedum|Sempervivum|Delosperma|Stonecrop|Houseleek)/i.test(text)) return "Succulent groundcover";
     if (/(Hebe|Heather|Calluna|Erica|Daboecia|Rose|Rhododendron|Hydrangea|Pieris|Spiraea|Euonymus|Box|Buxus|Dogwood|Cornus|Weigela|Abelia|Photinia|Laurel|Choisya|Hypericum|Coprosma|Sarcococca|Silverbush|Kerria|Physocarpus|Leucothoe|Cotoneaster|Hedge)/i.test(text)) return "Garden shrub";
     if (/(Festuca|Phormium|Flax)/i.test(text)) return "Architectural foliage plant";
     return "Herbaceous perennial";
@@ -2469,6 +2461,11 @@ window.OAK = (function () {
       ],
       bed3: [
         { src: "images/jul-2026/july-update-back-bed-3-before-changes.webp", caption: "Back Bed 3 before the July garden update" },
+      ],
+      stone: [
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-planted.webp", caption: "New grey Echeveria planted beside the houseleeks — 28 July" },
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-1.webp", caption: "Powdery grey-purple rosette before planting" },
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-2.webp", caption: "Side view showing the pink leaf margins" },
       ],
       bed5: [
         { src: "images/jul-2026/bed5-after-pruning-1.webp", caption: "Bed 5 after the Wisteria pruning and clearing — full view" },
@@ -2817,18 +2814,15 @@ window.OAK = (function () {
         { src: "images/june-2026/houseleeks-2.webp", caption: "Rosette detail" },
       ]},
     ],
-    "Stonecrop": [
-      { month: "june-2026", label: "June 2026", photos: [
-        { src: "images/june-2026/stonecrop-1.webp", caption: "Stonecrop" },
-        { src: "images/june-2026/stonecrop-2.webp", caption: "Mid-shot" },
-        { src: "images/june-2026/stonecrop-3.webp", caption: "Close-up" },
+    "Echeveria": [
+      { month: "jul-2026", label: "July 2026 · newly planted", photos: [
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-planted.webp", caption: "Newly planted in the Stone Bed beside the houseleeks" },
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-1.webp", caption: "Powdery grey-purple rosette before planting" },
+        { src: "images/jul-2026/stone-echeveria-perle-von-nurnberg-2.webp", caption: "Pink-edged leaves viewed from the side" },
       ]},
     ],
     "New Zealand Flax (dark)": [
       { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/phormium-dark.webp", caption: "Dark Phormium" }] },
-    ],
-    "Rosemary": [
-      { month: "june-2026", label: "June 2026", photos: [{ src: "images/june-2026/rosemary.webp", caption: "Rosemary" }] },
     ],
     "Cabbage Tree": [
       { month: "june-2026", label: "June 2026", photos: [
@@ -3026,9 +3020,8 @@ window.OAK = (function () {
     ],
     stone: [
       { name: "Houseleeks", x: 22, y: 50, r: 7, hue: 130 },
-      { name: "Stonecrop", x: 36, y: 50, r: 7, hue: 90 },
+      { name: "Echeveria", x: 36, y: 50, r: 8, hue: 315 },
       { name: "New Zealand Flax (dark)", x: 50, y: 50, r: 9, hue: 0 },
-      { name: "Rosemary", x: 64, y: 50, r: 7, hue: 200 },
       { name: "Cabbage Tree", x: 80, y: 50, r: 11, hue: 350 },
       { name: "Hebe", x: 14, y: 72, r: 6, hue: 260 },
     ],

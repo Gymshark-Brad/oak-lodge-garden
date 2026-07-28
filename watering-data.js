@@ -60,9 +60,8 @@
     },
     "Stone Bed": {
       "Houseleeks": 1,
-      "Stonecrop": 1,
+      "Echeveria": 1,
       "New Zealand Flax (dark)": 2,
-      "Rosemary": 1,
       "Cabbage Tree": 2,
       "Hebe": 3,
     },
@@ -396,17 +395,13 @@
         under: "Never water on a schedule — rosettes looking a little deflated after a very long dry spell is the rare underwater sign.",
         over: "Rosettes going soft, mushy or translucent is a sign of overwatering/rot, which is the real risk here.",
       },
-      "Stonecrop": {
-        under: "Shrivelled, wrinkled foliage is the underwater sign, though this trailing sedum tolerates real drought.",
-        over: "Mushy, discoloured patches mean it's been too wet — let it dry out fully between waters.",
+      "Echeveria": {
+        under: "Wait until the root zone is dry; wrinkling or loss of firmness in the lower leaves is the sign it is genuinely thirsty.",
+        over: "Translucent leaves, blackening at the base or a soft centre means rot risk — stop watering and shelter it from rain.",
       },
       "New Zealand Flax (dark)": {
         under: "Check 8–10cm down. Leaf tips browning and curling, or the whole spike looking limp, is the sign to water.",
         over: "Yellowing at the base of the leaves or a soft, collapsing centre means it's sitting too wet.",
-      },
-      "Rosemary": {
-        under: "Check 10cm+ down; rosemary rarely needs help once established. Needles looking dull and slightly limp is the rare thirst sign.",
-        over: "Needles turning grey-brown and dropping, or a musty smell at the base, means it's been overwatered — far more common than underwatering for rosemary.",
       },
       "Cabbage Tree": {
         under: "Check 10cm down. The whole crown looking limp or pale is the sign to water.",

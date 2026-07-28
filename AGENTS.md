@@ -182,7 +182,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Big Pot 1 — large blue glazed pot at foot of steps
 - Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush and smaller perennials
 - Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
-- Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks, rosemary
+- Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks and a tender grey Echeveria planted July 2026
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Lobelia Pot — blue pot at the foot of the stairs; Lobelia 'Starship Scarlet Bronze Leaf'
 - The two wall pots sit inside the Steps footprint; the Hanging Baskets marker sits inside Patio Kitchen.
@@ -200,7 +200,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
 | Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope', Celosia — replanted June 2026 |
 | Bed 5 | 9 | Wisteria, Rose, Phormium; big-pot Alstroemeria, Petunia, Vinca and Nemesia; two smaller planted pots |
-| Stone Bed | 6 | Houseleeks, Stonecrop, dark Phormium, Rosemary, Cabbage Tree, Hebe |
+| Stone Bed | 5 | Houseleeks, Echeveria ‘Perle von Nürnberg’ (best fit; lift before frost), dark Phormium, Cabbage Tree, Hebe |
 | Patio | 3 | Clematis montana, Honeysuckle and Lavender |
 | Tree | 1 | Pear Tree (Pyrus) |
 | Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |

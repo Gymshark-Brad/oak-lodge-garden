@@ -1145,29 +1145,29 @@
       }
     },
     {
-      "name": "Stonecrop",
-      "id": "stone-stonecrop",
-      "latin": "Sedum (trailing)",
+      "name": "Echeveria",
+      "id": "stone-echeveria",
+      "latin": "Echeveria cultivar",
       "photos": [
-        "images/plants/stonecrop-1.webp",
-        "images/plants/stonecrop-2.webp",
-        "images/plants/stonecrop-3.webp"
+        "images/jul-2026/stone-echeveria-perle-von-nurnberg-planted.webp",
+        "images/jul-2026/stone-echeveria-perle-von-nurnberg-1.webp",
+        "images/jul-2026/stone-echeveria-perle-von-nurnberg-2.webp"
       ],
-      "position": "Centre-left",
-      "light": "Full sun.",
-      "water": "Low.",
-      "care": "Free-draining soil. Cut back in late winter.",
-      "seasonal": "Foliage year-round; flowers summer–autumn.",
-      "description": "Stonecrop is a trailing succulent perennial grown at Oak Lodge for its distinctive garden character. Foliage year-round.",
+      "position": "Centre-left — grey rosette beside the houseleeks",
+      "light": "Full sun or very bright light; acclimatise gradually to strong sun.",
+      "water": "Low. Water only when the soil has dried; keep almost dry in winter.",
+      "care": "Sharply drained soil. Tender: lift before frost and overwinter frost-free under cover.",
+      "seasonal": "Evergreen powdery grey-purple rosette; pink-red flower stems may appear in summer.",
+      "description": "Echeveria is a rosette-forming tender succulent grown at Oak Lodge for its distinctive garden character. Evergreen powdery grey-purple rosette.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H5 · hardy with sharp drainage",
-        "flowering": "Foliage year-round",
+        "sunlight": "Full sun or very bright light",
+        "hardiness": "H2 · lift before frost",
+        "flowering": "Evergreen powdery grey-purple rosette",
         "water": "Low",
-        "habit": "Trailing succulent perennial",
-        "size": "10–30cm high · spreading",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Late nectar for pollinators"
+        "habit": "Rosette-forming tender succulent",
+        "size": "10–30cm high · 15–30cm wide",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers may be visited by pollinators"
       }
     },
     {
@@ -1193,30 +1193,6 @@
         "size": "Typically 30–100cm",
         "foliage": "Evergreen",
         "wildlife": "Foliage provides garden habitat"
-      }
-    },
-    {
-      "name": "Rosemary",
-      "id": "stone-rosemary",
-      "latin": "Salvia rosmarinus",
-      "photos": [
-        "images/plants/rosemary.webp"
-      ],
-      "position": "Centre-right — grey-green needles",
-      "light": "Full sun.",
-      "water": "Low.",
-      "care": "Sharp drainage. Light trim after flowering.",
-      "seasonal": "Evergreen aromatic; pale blue flowers spring.",
-      "description": "Rosemary is an aromatic evergreen shrub grown at Oak Lodge for its distinctive garden character. Evergreen aromatic.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H4 · hardy in a sheltered, drained spot",
-        "flowering": "Evergreen aromatic",
-        "water": "Low",
-        "habit": "Aromatic evergreen shrub",
-        "size": "1–1.5m high and wide",
-        "foliage": "Evergreen",
-        "wildlife": "Early nectar for bees"
       }
     },
     {
