@@ -26,6 +26,8 @@ Deploying = pushing to `main`. GitHub Pages rebuilds automatically (~1 min). The
 
 `deploy.sh` stages all changes, commits, and pushes to `origin main`. It also clears any stale git lock and keeps commits authored as the personal identity (`Bradley Gregg <bradg4@hotmail.com>`, repo-local config only — does not touch global git). Run with no message to get a timestamped default.
 
+Every deployment now includes a garden-journal checkpoint. Answer **yes** for real-world planting, moving, removal, gardening work, plant-identification or new plant/garden photo updates; those deployments must also change `journal-data.js` or deployment stops before committing. Answer **no** only for bug fixes, styling, data plumbing or site administration with no public garden-history change.
+
 Note for Cowork/Codex sessions: file edits can be made directly in the mounted repo, but `git push` must run on Brad's own machine (SSH key + network live there, not in the sandbox). So the workflow is: make the file changes, then hand Brad the `./deploy.sh "…"` line to run.
 
 ---
@@ -51,6 +53,8 @@ oak-lodge-garden/
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
   WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
   watering-data.js    # Water frequency band (1–5) per plant, keyed like PLANTS
+  GardenJournal.jsx   # Visual newest-first diary of planting, moves, removals and photos
+  journal-data.js     # Explicit May 2026 onward journal history and selected collage photos
   generate-thumbnails.py  # Builds fast display copies; originals remain for lightboxes
   BACKLOG.md          # Prioritised improvements list
   AGENTS.md           # This file
@@ -160,6 +164,11 @@ WATER_BANDS = {
 
 Band is an integer 1–5 (1 = rarely/drought-tolerant, 5 = daily). `WATER_BAND_INFO[band]` gives the label, chip text, one-line care note, and a 7-slot `days` array (Mon→Sun) used to plot the weekly grid. **Adding a new plant:** add it to `PLANTS` in `data.js` as normal, then add a matching entry to `WATER_BANDS` in `watering-data.js` — if you skip the second step the plant is silently left out of the watering guide (no error).
 
+### JOURNAL (journal-data.js)
+The visual garden journal is an explicit historical record; never generate it at runtime from current profile prose. `window.OAK.JOURNAL.entries` is newest-first and each month contains a title, Brad's short diary note, 2–4 selected photographs and structured events.
+
+Allowed event types are `baseline`, `planted`, `moved`, `removed`, `work` and `photographed`. Store the historical title, note, date label and location wording directly on the event so later plant renames or removals do not rewrite the past. Dates use `datePrecision: "day"` only where the exact day is supported; otherwise use `"month"`. Current plants and zones may add `plantId` / `zoneKey`; removed plants intentionally remain readable without a live plant record.
+
 ---
 
 ## Garden layout
@@ -249,13 +258,14 @@ No router library. Simple state in `app.jsx`:
 view = { name: "plan" }
          | { name: "calendar" }
          | { name: "watering" }
+         | { name: "journal" }
          | { name: "bed", zoneKey: "bed1" }
          | { name: "plant", zoneKey: "bed1", plantIndex: 2 }
 ```
 
 `setView()` replaces the whole object. `window.scrollTo({ top: 0 })` on every transition.
 
-**Plant-card return path:** opening a plant card from somewhere other than its bed (Seasonal calendar or Watering guide) needs to know where "back" goes. This is tracked with a dedicated boolean per source — `calendarPlantReturn` / `wateringPlantReturn` — set in `openPlant()` via a `fromCalendar` / `fromWatering` flag, and checked in `closePlant()` to route back to the right view. Adding a third entry point means adding a third boolean + flag, following the same pattern (there's no generic "return to" field — this was a deliberate small duplication rather than a premature abstraction).
+**Plant-card return path:** opening a plant card from somewhere other than its bed needs to know where "back" goes. This is tracked with a dedicated boolean per source — `calendarPlantReturn`, `wateringPlantReturn`, `housePlantReturn` and `journalPlantReturn` — set in `openPlant()` by the matching source flag and checked in `closePlant()` to route back to the right view. Any new entry point must follow the same explicit pattern (there is no generic "return to" field — this is deliberate small duplication rather than a premature abstraction).
 
 ---
 
@@ -265,7 +275,8 @@ view = { name: "plan" }
 2. Drops into `iCloud Drive > Documents > Personal > OperationDodford > Garden > Incoming Photos`
 3. CoWork automation (`garden-photo-sync.sh`) picks them up, converts to WebP, files to `images/[mon]-[year]/`, commits and pushes
 4. **Manual step still needed:** update `PHOTOS_BY_MONTH` in `data.js` with the new month's paths
-5. Run `python3 generate-thumbnails.py` in the repo after adding photo paths. The site falls back to originals if a thumbnail is missing, but cards and galleries will be slower until this runs.
+5. If the photographs record new garden activity or add a public photo update, add or update that month in `journal-data.js` and select 2–4 representative collage photographs.
+6. Run `python3 generate-thumbnails.py` in the repo after adding photo paths. The site falls back to originals if a thumbnail is missing, but cards and galleries will be slower until this runs.
 
 **Script location:** `~/oak-lodge-garden/garden-photo-sync.sh`
 **Naming convention:** `images/jun-2026/bed1.webp`, `images/jun-2026/patio.webp`, etc.

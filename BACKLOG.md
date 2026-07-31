@@ -76,6 +76,7 @@ Acceptance checks:
 
 ## Product enhancements — after audit remediation
 
+- [x] **Visual garden change journal.** Newest-first monthly diary spreads record planting, moves, removals, garden work and photographs from May 2026 onward, with a mandatory garden-content deployment checkpoint.
 - [ ] **Monthly timeline view.** Add month tabs or a before/after comparison per bed.
 - [ ] **Mobile swipe for photo galleries.** Add natural touch navigation to the polaroid gallery and lightbox.
 - [ ] **Automatic monthly photo registration.** Extend the CoWork photo workflow so a new month is added to `PHOTOS_BY_MONTH` without the current manual edit.
@@ -85,6 +86,7 @@ Acceptance checks:
 - [ ] Run `node audit-data.js` successfully.
 - [ ] Test affected views at phone and desktop widths and in all five seasonal palettes.
 - [ ] Bump every local `?v=` cache suffix in `index.html` when a runtime file changes.
+- [ ] For real-world garden, identification or photo changes, update `journal-data.js`; otherwise explicitly mark the deploy as technical/admin-only at the checkpoint.
 - [ ] Deploy with `./deploy.sh "short description"`.
 - [ ] Verify the new commit and key behaviour on GitHub Pages after the rebuild.
 

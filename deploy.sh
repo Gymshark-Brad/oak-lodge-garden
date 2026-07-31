@@ -40,11 +40,38 @@ if git diff --cached --quiet; then
   exit 0
 fi
 
-# 7. Commit (use the message you passed, or a timestamped default)
+# 7. Every release must consider the public garden journal. Technical-only
+#    releases can continue, but real garden, identification or photo changes
+#    must include an explicit journal-data.js update in the same commit.
+echo ""
+echo "Garden journal checkpoint"
+echo "Does this release include real garden changes, plant identifications,"
+printf "or new plant/garden photographs? [y/N] "
+read -r JOURNAL_WORTHY
+case "${JOURNAL_WORTHY:-n}" in
+  y|Y|yes|YES|Yes)
+    if ! git diff --cached --name-only -- journal-data.js | grep -qx "journal-data.js"; then
+      echo ""
+      echo "Deployment stopped: update journal-data.js for this garden-content release."
+      echo "Record the month, event and selected photographs, then run deploy again."
+      exit 1
+    fi
+    echo "Journal update found — continuing."
+    ;;
+  n|N|no|NO|No|"")
+    echo "Marked as a technical or site-administration release."
+    ;;
+  *)
+    echo "Please answer y or n. Deployment stopped without committing."
+    exit 1
+    ;;
+esac
+
+# 8. Commit (use the message you passed, or a timestamped default)
 MSG="${1:-Update $(date '+%Y-%m-%d %H:%M')}"
 git commit -m "$MSG"
 
-# 8. Push — this is what makes it go live
+# 9. Push — this is what makes it go live
 git push origin main
 
 echo ""

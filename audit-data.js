@@ -26,6 +26,7 @@ function run(argv) {
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
   eval(readText(`${root}/cultivar-resolution-data.js`));
+  eval(readText(`${root}/journal-data.js`));
 
   const OAK = window.OAK;
   const errors = [];
@@ -145,6 +146,55 @@ function run(argv) {
     });
   });
 
+  const journal = OAK.JOURNAL;
+  const journalEntries = journal && Array.isArray(journal.entries) ? journal.entries : [];
+  const allowedJournalTypes = new Set(["baseline", "planted", "moved", "removed", "work", "photographed"]);
+  const allowedJournalAreas = new Set(["back", "front", "house"]);
+  const allowedDatePrecision = new Set(["month", "day"]);
+  const journalEntryIds = new Set();
+  const journalEventIds = new Set();
+  const journalPhotoIds = new Set();
+  if (!journal || journal.version !== 1 || journalEntries.length === 0) {
+    errors.push("missing or unsupported garden journal");
+  }
+  journalEntries.forEach((entry, index) => {
+    if (!entry.id || journalEntryIds.has(entry.id)) errors.push(`duplicate or missing journal entry id: ${entry.id || "unknown"}`);
+    journalEntryIds.add(entry.id);
+    if (!Number.isInteger(entry.year) || !Number.isInteger(entry.month) || entry.month < 1 || entry.month > 12) {
+      errors.push(`invalid journal month: ${entry.id}`);
+    }
+    if (index > 0) {
+      const previous = journalEntries[index - 1];
+      const previousOrder = previous.year * 12 + previous.month;
+      const currentOrder = entry.year * 12 + entry.month;
+      if (currentOrder >= previousOrder) errors.push(`journal is not newest-first: ${entry.id}`);
+    }
+    if (!entry.label || !entry.title || !entry.note) errors.push(`incomplete journal entry: ${entry.id}`);
+    if (!Array.isArray(entry.photos) || entry.photos.length < 2 || entry.photos.length > 4) {
+      errors.push(`journal entry must select 2-4 photos: ${entry.id}`);
+    }
+    if (!Array.isArray(entry.events) || entry.events.length === 0) errors.push(`journal entry has no events: ${entry.id}`);
+    (entry.photos || []).forEach((photo) => {
+      if (!photo.id || journalPhotoIds.has(photo.id)) errors.push(`duplicate or missing journal photo id: ${photo.id || entry.id}`);
+      journalPhotoIds.add(photo.id);
+      if (!allowedJournalAreas.has(photo.area)) errors.push(`invalid journal photo area: ${photo.id}`);
+      if (!photo.src || !photo.caption) errors.push(`incomplete journal photo: ${photo.id}`);
+    });
+    (entry.events || []).forEach((event) => {
+      if (!event.id || journalEventIds.has(event.id)) errors.push(`duplicate or missing journal event id: ${event.id || entry.id}`);
+      journalEventIds.add(event.id);
+      if (!allowedJournalTypes.has(event.type)) errors.push(`invalid journal event type: ${event.id}`);
+      if (!allowedJournalAreas.has(event.area)) errors.push(`invalid journal event area: ${event.id}`);
+      if (!allowedDatePrecision.has(event.datePrecision)) errors.push(`invalid journal date precision: ${event.id}`);
+      const expectedDate = event.datePrecision === "day" ? /^\d{4}-\d{2}-\d{2}$/ : /^\d{4}-\d{2}$/;
+      if (!expectedDate.test(event.date || "")) errors.push(`invalid journal date: ${event.id}`);
+      if (!event.dateLabel || !event.title || !event.note) errors.push(`incomplete journal event: ${event.id}`);
+      if (event.type === "moved" && (!event.from || !event.to)) errors.push(`journal move lacks from/to: ${event.id}`);
+      if (event.plantId && !OAK.PLANT_BY_ID[event.plantId]) errors.push(`unresolved journal plant: ${event.id} / ${event.plantId}`);
+      if (event.zoneKey && !OAK.ZONES[event.zoneKey]) errors.push(`unresolved journal zone: ${event.id} / ${event.zoneKey}`);
+    });
+  });
+
   const imageSources = new Set();
   Object.values(OAK.PLANTS).forEach((plants) => {
     plants.forEach((plant) => (plant.photos || []).forEach((src) => imageSources.add(src)));
@@ -161,6 +211,7 @@ function run(argv) {
   Object.values(OAK.PLANT_PHOTOS_BY_ID || {}).forEach((months) => {
     months.forEach((month) => (month.photos || []).forEach((photo) => imageSources.add(photo.src)));
   });
+  journalEntries.forEach((entry) => (entry.photos || []).forEach((photo) => imageSources.add(photo.src)));
   imageSources.forEach((src) => {
     const originalPath = `${root}/${src}`;
     const thumbnailPath = `${root}/${OAK.thumbnailFor(src)}`;

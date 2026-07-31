@@ -5,10 +5,11 @@ const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App, 
 
 function App() {
   const [palette, setPalette] = useState_App(window.loadPalette());
-  const [view, setView] = useState_App({ name: "plan" }); // plan | houseplan | frontplan | calendar | watering | bed | plant
+  const [view, setView] = useState_App({ name: "plan" }); // plan | houseplan | frontplan | journal | calendar | watering | bed | plant
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
   const [housePlantReturn, setHousePlantReturn] = useState_App(false);
+  const [journalPlantReturn, setJournalPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
   const lightboxCloseRef = useRef_App(null);
 
@@ -56,10 +57,11 @@ function App() {
     setView({ name: "bed", zoneKey });
     scrollToTop();
   };
-  const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering, fromHousePlan }) => {
+  const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering, fromHousePlan, fromJournal }) => {
     if (fromCalendar) setCalendarPlantReturn(true);
     if (fromWatering) setWateringPlantReturn(true);
     if (fromHousePlan) setHousePlantReturn(true);
+    if (fromJournal) setJournalPlantReturn(true);
     setView((prev) => ({
       name: "plant",
       zoneKey: zoneKey || prev.zoneKey,
@@ -70,6 +72,7 @@ function App() {
   };
   const openPlantFromCalendar = (args) => openPlant({ ...args, fromCalendar: true });
   const openPlantFromWatering = (args) => openPlant({ ...args, fromWatering: true });
+  const openPlantFromJournal = (args) => openPlant({ ...args, fromJournal: true });
   const closePlant = () => {
     const returningFromFullPage = !!fullPageProfile;
     if (calendarPlantReturn) {
@@ -81,6 +84,9 @@ function App() {
     } else if (housePlantReturn) {
       setHousePlantReturn(false);
       setView({ name: "houseplan" });
+    } else if (journalPlantReturn) {
+      setJournalPlantReturn(false);
+      setView({ name: "journal" });
     } else {
       setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
     }
@@ -90,6 +96,7 @@ function App() {
     setCalendarPlantReturn(false);
     setWateringPlantReturn(false);
     setHousePlantReturn(false);
+    setJournalPlantReturn(false);
     setView({ name: "calendar" });
     scrollToTop();
   };
@@ -97,7 +104,16 @@ function App() {
     setCalendarPlantReturn(false);
     setWateringPlantReturn(false);
     setHousePlantReturn(false);
+    setJournalPlantReturn(false);
     setView({ name: "watering" });
+    scrollToTop();
+  };
+  const goJournal = () => {
+    setCalendarPlantReturn(false);
+    setWateringPlantReturn(false);
+    setHousePlantReturn(false);
+    setJournalPlantReturn(false);
+    setView({ name: "journal" });
     scrollToTop();
   };
   // Front-garden zones live on their own plan; "back to the garden" from one
@@ -109,14 +125,20 @@ function App() {
     setView((prev) => ({ name: isFrontZone(prev.zoneKey) ? "frontplan" : "plan" }));
     scrollToTop();
   };
+  const openJournalZone = (zoneKey) => {
+    const zone = Z[zoneKey];
+    setView({ name: zone && zone.environment === "indoor" ? "houseplan" : "bed", ...(zone && zone.environment === "indoor" ? {} : { zoneKey }) });
+    scrollToTop();
+  };
 
   // Crumbs / chrome content depends on view
-  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn);
+  const inBed = view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn && !journalPlantReturn);
   const inFrontBed = inBed && isFrontZone(view.zoneKey);
   const breadcrumb = inBed ? Z[view.zoneKey].title : null;
   const inCalendar = view.name === "calendar" || (view.name === "plant" && calendarPlantReturn);
   const inWatering = view.name === "watering" || (view.name === "plant" && wateringPlantReturn);
   const inHouse = view.name === "houseplan" || (view.name === "plant" && housePlantReturn);
+  const inJournal = view.name === "journal" || (view.name === "plant" && journalPlantReturn);
 
   return (
     <div className="app-root" data-palette={palette}>
@@ -130,23 +152,30 @@ function App() {
           <button
             className="ghostbtn"
             aria-pressed={view.name === "plan" || (inBed && !inFrontBed)}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "plan" }); scrollToTop(); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setJournalPlantReturn(false); setView({ name: "plan" }); scrollToTop(); }}
           >
             Back Garden
           </button>
           <button
             className="ghostbtn"
             aria-pressed={inHouse}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "houseplan" }); scrollToTop(); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setJournalPlantReturn(false); setView({ name: "houseplan" }); scrollToTop(); }}
           >
             House Plants
           </button>
           <button
             className="ghostbtn"
             aria-pressed={view.name === "frontplan" || inFrontBed}
-            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setView({ name: "frontplan" }); scrollToTop(); }}
+            onClick={() => { setCalendarPlantReturn(false); setWateringPlantReturn(false); setHousePlantReturn(false); setJournalPlantReturn(false); setView({ name: "frontplan" }); scrollToTop(); }}
           >
             Front Garden
+          </button>
+          <button
+            className="ghostbtn"
+            aria-pressed={inJournal}
+            onClick={goJournal}
+          >
+            Garden journal
           </button>
           <button
             className="ghostbtn"
@@ -186,6 +215,13 @@ function App() {
           {view.name === "houseplan" && (
             <HousePlan onOpenPlant={openPlant} dark={dark} />
           )}
+          {!fullPageProfile && inJournal && (
+            <GardenJournal
+              onOpenPlant={openPlantFromJournal}
+              onOpenZone={openJournalZone}
+              onOpenLightbox={(ph) => setLightbox(ph)}
+            />
+          )}
           {!fullPageProfile && (view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
             <SeasonalCalendar
               onOpenPlant={openPlantFromCalendar}
@@ -196,7 +232,7 @@ function App() {
               onOpenPlant={openPlantFromWatering}
             />
           )}
-          {!fullPageProfile && (view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn)) && (
+          {!fullPageProfile && (view.name === "bed" || (view.name === "plant" && !calendarPlantReturn && !wateringPlantReturn && !housePlantReturn && !journalPlantReturn)) && (
             <BedDetail
               key={view.zoneKey}
               zoneKey={view.zoneKey}
@@ -210,7 +246,7 @@ function App() {
             <PlantProfile
               plant={currentPlant}
               zoneTitle={Z[view.zoneKey].title}
-              backLabel={calendarPlantReturn ? "seasonal calendar" : wateringPlantReturn ? "watering guide" : housePlantReturn ? "house plants" : Z[view.zoneKey].title}
+              backLabel={calendarPlantReturn ? "seasonal calendar" : wateringPlantReturn ? "watering guide" : housePlantReturn ? "house plants" : journalPlantReturn ? "garden journal" : Z[view.zoneKey].title}
               plantKey={Z[view.zoneKey].plantKey}
               onBack={closePlant}
               onOpenLightbox={(ph) => setLightbox(ph)}
@@ -273,10 +309,13 @@ function App() {
         @media (max-width: 900px) {
           .journal-count { display: none; }
         }
-        @media (max-width: 700px) {
-          .chrome { padding: 10px 14px; flex-wrap: wrap; gap: 6px; }
-          .chrome .brand .sub { display: none; }
+        @media (max-width: 980px) {
+          .chrome { flex-wrap: wrap; gap: 6px; }
           .crumb-bar { order: 3; flex: 1 0 100%; justify-content: flex-start; overflow-x: auto; padding-bottom: 2px; }
+        }
+        @media (max-width: 700px) {
+          .chrome { padding: 10px 14px; }
+          .chrome .brand .sub { display: none; }
         }
         .paper-main {
           padding: 28px clamp(14px, 4vw, 56px) 60px;
