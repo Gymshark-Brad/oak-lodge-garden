@@ -533,10 +533,30 @@
     if (band) WATER_BANDS_BY_ID[record.plant.id] = band;
   });
 
+  // Town-level weather keeps the public guide useful without publishing the
+  // garden's precise location or asking visitors for location permission.
+  // Thresholds only alter the order of moisture checks; they never instruct
+  // the gardener to water without checking soil or compost first.
+  const WATER_GUIDE_CONFIG = {
+    location: {
+      label: "Bromsgrove",
+      latitude: 52.3357,
+      longitude: -2.0598,
+      timezone: "Europe/London",
+    },
+    weather: {
+      recentRainMm: 10,
+      heatC: 25,
+      gustKph: 35,
+      cacheMinutes: 30,
+    },
+  };
+
   window.OAK = window.OAK || {};
   window.OAK.WATER_BANDS = WATER_BANDS;
   window.OAK.WATER_BANDS_BY_ID = WATER_BANDS_BY_ID;
   window.OAK.WATER_BAND_INFO = WATER_BAND_INFO;
   window.OAK.WATER_SIGNS = WATER_SIGNS;
   window.OAK.POT_WATER_SIGNS = POT_WATER_SIGNS;
+  window.OAK.WATER_GUIDE_CONFIG = WATER_GUIDE_CONFIG;
 })();
