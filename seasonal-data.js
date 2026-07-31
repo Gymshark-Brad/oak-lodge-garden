@@ -143,12 +143,14 @@
     },
 
     July: {
-      mood: "Lavender and bees. The hot middle of the year.",
+      mood: "A new stone-bed tapestry. The hot middle of the year.",
       highlights: [
-        { plant: "Lavender", bed: "Patio", note: "Purple flower spikes at peak on the decking — bees from dawn." },
+        { plant: "Hydrangea 'Snowflake'", bed: "Stone Bed", note: "Layered white flower panicles above oak-shaped foliage in the newly planted bed." },
         { plant: "Rose", bed: "Bed 4", note: "Second wave coming through if deadheaded." },
         { plant: "Hosta 'Patriot'", bed: "Bed 1", note: "Lavender-blue flower spikes rising above the cream-edged leaves." },
         { plant: "Echeveria", bed: "Stone Bed", note: "New powdery grey-purple rosette beside the houseleeks." },
+        { plant: "Purple Fountain Grass 'Rubrum'", bed: "Stone Bed", note: "Burgundy leaves and soft bottlebrush plumes give the new planting height and movement." },
+        { plant: "Sedum 'Angelina'", bed: "Stone Bed", note: "Golden trailing foliage lights the front gravel." },
         { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Architectural striped foliage at its strongest; remove only damaged leaves at the base." },
         { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "First lilac-magenta double flowers opening against the dark foliage." },
         { plant: "Calibrachoa", bed: "Big Pot 1", note: "Pink star flowers trailing over the pot rim." },
@@ -164,7 +166,8 @@
         { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Golden daisy flowers at peak — bees love them." },
       ],
       tasks: [
-        { task: "Deadhead lavender — never cut into the old woody growth", plants: ["Lavender"], bed: "Patio" },
+        { task: "Water the Hydrangea root pocket deeply while it establishes, without soaking the drought-tolerant succulents around it", plants: ["Hydrangea 'Snowflake'"], bed: "Stone Bed" },
+        { task: "Keep both Ajugas evenly moist while they establish and shade the gold foliage if it begins to scorch", plants: ["Ajuga 'Fancy Finch'", "Ajuga 'Midnight Mystery'"], bed: "Stone Bed" },
         { task: "Continue deadheading roses; feed with rose food after first flush", plants: ["Rose"], bed: "Bed 4" },
         { task: "Prune Honeysuckle lightly after flowering", plants: ["Honeysuckle"], bed: "Stone Bed" },
         { task: "Deadhead the lilac Dahlia regularly to keep it flowering until frost", plants: ["Dahlia 'Double Dreamy Lilac'"], bed: "Bed 1" },
@@ -182,7 +185,8 @@
     August: {
       mood: "Heavy with fruit. The garden looks lush but ready for its second clip.",
       highlights: [
-        { plant: "Lavender", bed: "Patio", note: "Still flowering on the decking, slightly faded — clip after." },
+        { plant: "Purple Fountain Grass 'Rubrum'", bed: "Stone Bed", note: "The dark fountain and bottlebrush plumes are at their fullest before autumn cold." },
+        { plant: "Stonecrop 'Dragon's Blood'", bed: "Stone Bed", note: "The new red groundcover deepens in colour beside the separate older stonecrop patch." },
         { plant: "Apple Tree", bed: "Bed 3", note: "First apples colouring up on the branches." },
         { plant: "Pear Tree", bed: "Tree", note: "Pears swelling, near ready." },
         { plant: "Rose", bed: "Bed 4", note: "Second flush carrying on through the heat." },
@@ -247,6 +251,9 @@
         { task: "Clear debris around the dark New Zealand Flax and prepare loose crown protection only if severe frost is forecast", plants: ["New Zealand Flax (dark)"], bed: "Stone Bed" },
         { task: "Tidy Houseleek rosettes — remove any spent flowering rosettes", plants: ["Houseleeks"], bed: "Stone Bed" },
         { task: "Lift the Echeveria before frost, pot it into gritty compost and overwinter it bright, frost-free and almost dry", plants: ["Echeveria"], bed: "Stone Bed" },
+        { task: "Lift Echeveria 'Devotion' before frost and overwinter it bright, frost-free and almost dry", plants: ["Echeveria 'Devotion'"], bed: "Stone Bed" },
+        { task: "Lift or pot Purple Fountain Grass 'Rubrum' before hard frost; fleece alone is not reliable protection here", plants: ["Purple Fountain Grass 'Rubrum'"], bed: "Stone Bed" },
+        { task: "Shelter Sedum 'Chocolate Ball' from severe frost and persistent winter rain", plants: ["Sedum 'Chocolate Ball'"], bed: "Stone Bed" },
         { task: "Clear fallen leaves off the gravel beds and stone bed", plants: [], bed: "Stone Bed" },
         { task: "After first frost blackens the Dahlia foliage, cut stems to 15cm and mulch the crowns heavily — or lift the tubers and store dry", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
         { task: "Empty and clean pots once annuals are spent — compost the bedding, store pots frost-free if glazed", plants: ["Petunia", "Lobelia", "Calibrachoa", "Verbena"], bed: "Big Pot 1" },
@@ -331,7 +338,6 @@
     "Apple Tree": "bed4",
     "Box Hedging": "bed1",
     "Hosta 'Patriot'": "bed1",
-    "Lavender": "patio",
   };
 
   function resolvePlantReference(plantName, bedHint) {

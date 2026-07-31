@@ -32,6 +32,7 @@
       "Hydrangea petiolaris": 4,
       "Euonymus 'Emerald Gaiety'": 2,
       "Avens": 3,
+      "Hebe": 3,
     },
     "Bed 3": {
       "Kerria": 3,
@@ -61,14 +62,30 @@
     "Stone Bed": {
       "Houseleeks": 1,
       "Echeveria": 1,
+      "Sedum 'Chocolate Ball'": 1,
+      "Older Caucasian Stonecrop": 1,
+      "Common Houseleek": 1,
+      "Six-rowed Stonecrop": 1,
+      "Ajuga 'Fancy Finch'": 3,
+      "Hydrangea 'Snowflake'": 4,
+      "Chick Charms Houseleek Mix": 1,
+      "Achillea 'King Alfred'": 1,
+      "Golden Stonecrop 'Aureum'": 1,
+      "Cobweb Houseleek": 1,
+      "Thrift 'Armada White'": 2,
+      "Houseleek 'Purple Quartz'": 1,
+      "Sedum 'Angelina'": 1,
+      "Stonecrop 'Dragon's Blood'": 1,
+      "Echeveria 'Devotion'": 1,
+      "Sedum 'Atlantis'": 1,
+      "Purple Fountain Grass 'Rubrum'": 3,
+      "Ajuga 'Midnight Mystery'": 3,
       "New Zealand Flax (dark)": 2,
       "Cabbage Tree": 2,
-      "Hebe": 3,
     },
     "Patio": {
       "Honeysuckle": 3,
       "Clematis": 3,
-      "Lavender": 1,
     },
     "Tree": {
       "Pear Tree": 1,
@@ -124,7 +141,7 @@
       "Coprosma 'Inferno'": 2,
       "Coprosma 'Pina Colada'": 2,
       "Hebe 'Kiwi' (Horopito)": 3,
-      "Wax Begonia": 4,
+      "Polemonium 'Golden Feathers'": 3,
     },
     "Front Bed 3": {
       "Climbing Rose 'Super Fairy'": 3,
@@ -410,10 +427,6 @@
         under: "Check 10cm down. The whole crown looking limp or pale is the sign to water.",
         over: "Older leaves browning from the tips is normal, but a collapsing, mushy centre means it's been kept too wet.",
       },
-      "Hebe": {
-        under: "Check 6–8cm down. Leaves dulling or dropping, especially from variegated growth, is the underwater sign.",
-        over: "Blackened stems at soil level means it's sitting too wet — good drainage matters for this one.",
-      },
     },
     "Patio": {
       "Honeysuckle": {
@@ -454,7 +467,6 @@
   WATER_SIGNS["Bed 5"] = formerBed4Signs;
   WATER_SIGNS["Bed 2"].Avens = WATER_SIGNS["Bed 1"].Avens;
   delete WATER_SIGNS["Bed 1"].Avens;
-  WATER_SIGNS.Patio.Lavender = WATER_SIGNS["Bed 5"].Lavender;
   delete WATER_SIGNS["Bed 5"].Lavender;
 
   // The researched profiles now own individual moisture symptoms. Refresh the

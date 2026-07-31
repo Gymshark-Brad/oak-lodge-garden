@@ -24,6 +24,14 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
   // Archive photos — stored under `{zoneKey}Archive` in the latest month data
   const archivePhotos = (_latestMonthData[zoneKey + "Archive"] || []);
   const archiveLabels = {
+    stone: {
+      period: "Before the late-July 2026 replant",
+      note: "The Stone Bed before the rotten-crowned lavender was removed and the new alpine, succulent, grass and Hydrangea planting went in — kept here for the record.",
+    },
+    frontBed2: {
+      period: "Before the late-July 2026 change",
+      note: "Begonia Cocktail 'Gin' before it was removed and replaced by Polemonium 'Golden Feathers' — kept here for the record.",
+    },
     frontBed3: {
       period: "Before the July 2026 update",
       note: "The wall bed before the fern was removed and the dogwood, Red Hot Poker and Leucothoe were planted — kept here for the record.",

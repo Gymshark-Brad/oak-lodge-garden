@@ -180,9 +180,9 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 **Lower level (south, house end)**
 - Big Pot 1 — large blue glazed pot at foot of steps
-- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush and smaller perennials
+- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush, the Hebe moved from the Stone Bed and smaller perennials
 - Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
-- Stone Bed (~4.8m × 1m) — Gravel, Cordyline, houseleeks and a tender grey Echeveria planted July 2026
+- Stone Bed (~4.8m × 1m) — Gravel bed replanted late July 2026 with 22 plants: Cordyline, dark Phormium, oakleaf Hydrangea, purple fountain grass, hardy houseleeks and stonecrops, two Ajugas, small alpines and two tender Echeverias; the rotten-crowned lavender was removed and the Hebe moved to Bed 2
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Lobelia Pot — blue pot at the foot of the stairs; Lobelia 'Starship Scarlet Bronze Leaf'
 - The two wall pots sit inside the Steps footprint; the Hanging Baskets marker sits inside Patio Kitchen.
@@ -196,12 +196,12 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Zone | Count | Key plants |
 |------|-------|-----------|
 | Bed 1 | 13 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits) and Nemesia 'Aroma Heart of Gold'; Astilbe removed July 2026 |
-| Bed 2 | 9 | Weeping Cherry, Peony, Weigela, Silverbush and Hydrangea petiolaris; Dogwood moved out July 2026 |
+| Bed 2 | 10 | Weeping Cherry, Peony, Weigela, Silverbush, Hydrangea petiolaris and the relocated Hebe; Dogwood moved out July 2026 |
 | Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
 | Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Achillea, Gaillardia, Abelia 'Kaleidoscope', Celosia — replanted June 2026 |
 | Bed 5 | 9 | Wisteria, Rose, Phormium; big-pot Alstroemeria, Petunia, Vinca and Nemesia; two smaller planted pots |
-| Stone Bed | 5 | Houseleeks, Echeveria ‘Perle von Nürnberg’ (best fit; lift before frost), dark Phormium, Cabbage Tree, Hebe |
-| Patio | 3 | Clematis montana, Honeysuckle and Lavender |
+| Stone Bed | 22 | Late-July alpine and succulent replant: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, purple fountain grass, two tender Echeverias, dark Phormium and Cabbage Tree |
+| Patio | 2 | Clematis montana and Honeysuckle; rotten-crowned Lavender removed July 2026 and retained in the Stone Bed photo archive |
 | Tree | 1 | Pear Tree (Pyrus) |
 | Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |
 | Big Pot 2 | 5 | Lobelia, Verbena, Petunia, Nepeta, Fuchsia |
@@ -209,6 +209,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Little Pot 2 | 2 | Geranium, Petunia |
 | Lobelia Pot | 1 | Lobelia 'Starship Scarlet Bronze Leaf' — added July 2026 |
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
+| Front Bed 2 | 4 | Two Coprosmas, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
 | Front Bed 4 | 13 | Two climbing roses, Physocarpus, Spiraea, Sarcococca, Pieris, Festuca, Astrantia, Photinia and Delosperma 'Ice Cream Mix' |
 | Front Bed 5 | 13 | Established Laurel, Choisya and climber plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe and Salvia |

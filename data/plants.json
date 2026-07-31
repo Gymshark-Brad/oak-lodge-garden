@@ -731,6 +731,30 @@
         "foliage": "Evergreen",
         "wildlife": "Foliage provides garden habitat"
       }
+    },
+    {
+      "name": "Hebe",
+      "id": "stone-hebe",
+      "latin": "Hebe (syn. Veronica) cultivar",
+      "photos": [
+        "images/plants/hebe.webp"
+      ],
+      "position": "Lower section — moved from the Stone Bed in July 2026",
+      "light": "Full sun to partial shade in a sheltered position.",
+      "water": "Moderate while re-establishing; avoid winter waterlogging.",
+      "care": "Lightly trim green growth after flowering and protect from prolonged hard frost or cold drying winds.",
+      "seasonal": "Evergreen cream-edged foliage, often strongly flushed pink in cold weather; purple-white summer flower spikes.",
+      "description": "Hebe is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen cream-edged foliage, often strongly flushed pink in cold weather.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen cream-edged foliage, often strongly flushed pink in cold weather",
+        "water": "Moderate while re-establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ],
   "Bed 4": [
@@ -1171,6 +1195,452 @@
       }
     },
     {
+      "name": "Sedum 'Chocolate Ball'",
+      "id": "stone-sedum-chocolate-ball",
+      "latin": "Sedum polytrichoides 'Chocolate Ball'",
+      "photos": [
+        "images/jul-2026/stone-bed-sedum-chocolate-ball-2.webp",
+        "images/jul-2026/stone-bed-sedum-chocolate-ball-3.webp"
+      ],
+      "position": "Front gravel — bronze, needle-leaved mound. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Very low; let the gritty soil dry between waterings.",
+      "care": "Sharp drainage is essential. RHS H3: protect from severe frost and prolonged winter wet.",
+      "seasonal": "Evergreen bronze-brown foliage; small yellow flowers in summer.",
+      "description": "Sedum 'Chocolate Ball' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen bronze-brown foliage.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen bronze-brown foliage",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Older Caucasian Stonecrop",
+      "id": "stone-older-caucasian-stonecrop",
+      "latin": "Phedimus spurius cultivar",
+      "photos": [
+        "images/jul-2026/stone-bed-older-caucasian-stonecrop-assumed-1.webp"
+      ],
+      "position": "Established low patch — separate from the newly planted 'Dragon's Blood'.",
+      "light": "Full sun for compact growth and strongest colour.",
+      "water": "Low; water only during establishment or prolonged drought.",
+      "care": "Trim spent flower stems and pull wandering shoots back from smaller alpines. Keep the crown sharply drained.",
+      "seasonal": "Scalloped green leaves flush red; pink-red flower clusters age to brown seedheads.",
+      "description": "Older Caucasian Stonecrop is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Scalloped green leaves flush red.",
+      "characteristics": {
+        "sunlight": "Full sun for compact growth and strongest colour",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Scalloped green leaves flush red",
+        "water": "Low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Common Houseleek",
+      "id": "stone-common-houseleek",
+      "latin": "Sempervivum tectorum",
+      "photos": [
+        "images/jul-2026/stone-bed-common-houseleek-assumed-1.webp"
+      ],
+      "position": "Established green rosettes with red tips among the gravel.",
+      "light": "Full sun.",
+      "water": "Very low; established rosettes normally need no extra water.",
+      "care": "Keep grit around the crowns, clear trapped leaves and remove a parent rosette only after it flowers and dies naturally.",
+      "seasonal": "Evergreen rosettes colour more strongly in cold or bright conditions; starry flowers may appear in summer.",
+      "description": "Common Houseleek is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen rosettes colour more strongly in cold or bright conditions.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Evergreen rosettes colour more strongly in cold or bright conditions",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Six-rowed Stonecrop",
+      "id": "stone-six-rowed-stonecrop",
+      "latin": "Sedum sexangulare",
+      "photos": [
+        "images/jul-2026/stone-bed-six-rowed-stonecrop-assumed-1.webp"
+      ],
+      "position": "Established fine green mat through the gravel.",
+      "light": "Full sun.",
+      "water": "Very low once rooted.",
+      "care": "Use gritty, lean soil and trim spreading stems where they crowd slower alpines.",
+      "seasonal": "Evergreen cylindrical leaves in six neat ranks; yellow star flowers in summer.",
+      "description": "Six-rowed Stonecrop is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen cylindrical leaves in six neat ranks.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen cylindrical leaves in six neat ranks",
+        "water": "Very low once rooted",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Ajuga 'Fancy Finch'",
+      "id": "stone-ajuga-fancy-finch",
+      "latin": "Ajuga 'Fanfin' (Feathered Friends Fancy Finch)",
+      "photos": [
+        "images/jul-2026/stone-bed-ajuga-fancy-finch-2.webp",
+        "images/jul-2026/stone-bed-ajuga-fancy-finch-3.webp"
+      ],
+      "position": "Cooler edge of the Stone Bed. Added July 2026.",
+      "light": "Partial shade; protect the golden foliage from scorching midday sun.",
+      "water": "Moderate. Keep evenly moist while establishing.",
+      "care": "Trim spent flower spikes and remove runners that stray into the driest succulent pockets.",
+      "seasonal": "Golden to orange narrow foliage year-round; blue flower spikes in spring.",
+      "description": "Ajuga 'Fancy Finch' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Golden to orange narrow foliage year-round.",
+      "characteristics": {
+        "sunlight": "Partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden to orange narrow foliage year-round",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Hydrangea 'Snowflake'",
+      "id": "stone-hydrangea-snowflake",
+      "latin": "Hydrangea quercifolia 'Brido' (Snowflake)",
+      "photos": [
+        "images/jul-2026/stone-bed-hydrangea-quercifolia-snowflake-2.webp",
+        "images/jul-2026/stone-bed-hydrangea-quercifolia-snowflake-5.webp"
+      ],
+      "position": "Back of the bed — moisture-retentive planting pocket. Added July 2026.",
+      "light": "Full sun to partial shade; afternoon shade is useful in hot weather.",
+      "water": "Moderate to high while establishing; soak deeply during dry spells.",
+      "care": "Give it a humus-rich pocket beneath the gravel, mulch clear of the crown and prune only dead or misplaced wood after flowering.",
+      "seasonal": "Double white flower panicles fade pink; oak-shaped leaves turn rich red and purple in autumn.",
+      "description": "Hydrangea 'Snowflake' is a garden shrub grown at Oak Lodge for its distinctive garden character. Double white flower panicles fade pink.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Double white flower panicles fade pink",
+        "water": "Moderate to high while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Chick Charms Houseleek Mix",
+      "id": "stone-chick-charms-mix",
+      "latin": "Sempervivum Chick Charms Series",
+      "photos": [
+        "images/jul-2026/stone-bed-chick-charms-mix-2.webp",
+        "images/jul-2026/stone-bed-chick-charms-mix-4.webp"
+      ],
+      "position": "Mixed rosette group in open gravel. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Very low; only newly planted offsets need occasional water.",
+      "care": "The label confirms the series but not its individual cultivars. Keep crowns dry and remove spent flowering rosettes.",
+      "seasonal": "Evergreen rosettes change colour with season and temperature; mature rosettes may flower in summer.",
+      "description": "Chick Charms Houseleek Mix is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen rosettes change colour with season and temperature.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen rosettes change colour with season and temperature",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Achillea 'King Alfred'",
+      "id": "stone-achillea-king-alfred",
+      "latin": "Achillea 'King Alfred'",
+      "photos": [
+        "images/jul-2026/stone-bed-achillea-king-alfred-1.webp",
+        "images/jul-2026/stone-bed-achillea-king-alfred-2.webp"
+      ],
+      "position": "Sunny front edge. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Low once established.",
+      "care": "Keep in lean, sharply drained soil and trim untidy growth in spring.",
+      "seasonal": "Low grey-green aromatic mat with pale yellow flower heads in late spring and early summer.",
+      "description": "Achillea 'King Alfred' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Low grey-green aromatic mat with pale yellow flower heads in late spring and early summer.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Low grey-green aromatic mat with pale yellow flower heads in late spring and early summer",
+        "water": "Low once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Golden Stonecrop 'Aureum'",
+      "id": "stone-sedum-aureum",
+      "latin": "Sedum acre 'Aureum'",
+      "photos": [
+        "images/jul-2026/stone-bed-sedum-aureum-1.webp",
+        "images/jul-2026/stone-bed-sedum-aureum-2.webp"
+      ],
+      "position": "Front gravel — bright golden mat. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Very low.",
+      "care": "Avoid rich soil and trim after flowering if it spreads over slower plants.",
+      "seasonal": "Evergreen yellow-gold foliage with small yellow flowers in summer.",
+      "description": "Golden Stonecrop 'Aureum' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen yellow-gold foliage with small yellow flowers in summer.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen yellow-gold foliage with small yellow flowers in summer",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Cobweb Houseleek",
+      "id": "stone-sempervivum-arachnoideum",
+      "latin": "Sempervivum arachnoideum",
+      "photos": [
+        "images/jul-2026/stone-bed-sempervivum-arachnoideum-1.webp",
+        "images/jul-2026/stone-bed-sempervivum-arachnoideum-2.webp"
+      ],
+      "position": "Open gravel — white-webbed rosettes. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Very low.",
+      "care": "Keep winter rain and leaf litter out of the rosettes; detach offsets to extend the colony.",
+      "seasonal": "Evergreen cobwebbed rosettes, often red-flushed; pink star flowers in summer.",
+      "description": "Cobweb Houseleek is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Evergreen cobwebbed rosettes, often red-flushed.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen cobwebbed rosettes, often red-flushed",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Thrift 'Armada White'",
+      "id": "stone-armeria-armada-white",
+      "latin": "Armeria maritima 'Armada White'",
+      "photos": [
+        "images/jul-2026/stone-bed-armeria-armada-white-2.webp",
+        "images/jul-2026/stone-bed-armeria-armada-white-3.webp"
+      ],
+      "position": "Sunny edge — compact grass-like mound. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Low to moderate while establishing; drought tolerant later.",
+      "care": "Deadhead the white globes and keep the crown clear in gritty soil.",
+      "seasonal": "Evergreen grassy cushions with white flower heads from spring into summer.",
+      "description": "Thrift 'Armada White' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen grassy cushions with white flower heads from spring into summer.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen grassy cushions with white flower heads from spring into summer",
+        "water": "Low to moderate while establishing",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Houseleek 'Purple Quartz'",
+      "id": "stone-sempervivum-purple-quartz",
+      "latin": "Sempervivum 'Purple Quartz' (Big Sam Series)",
+      "photos": [
+        "images/jul-2026/stone-bed-sempervivum-purple-quartz-1.webp",
+        "images/jul-2026/stone-bed-sempervivum-purple-quartz-2.webp"
+      ],
+      "position": "Open gravel — large purple-flushed rosettes. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Very low.",
+      "care": "Provide sharp drainage, clear debris and protect from persistent winter wet rather than cold.",
+      "seasonal": "Grey-green rosettes flush pink and purple; mature rosettes flower once before offsets replace them.",
+      "description": "Houseleek 'Purple Quartz' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Grey-green rosettes flush pink and purple.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Grey-green rosettes flush pink and purple",
+        "water": "Very low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Sedum 'Angelina'",
+      "id": "stone-sedum-angelina",
+      "latin": "Sedum rupestre 'Angelina'",
+      "photos": [
+        "images/jul-2026/stone-bed-sedum-angelina-2.webp",
+        "images/jul-2026/stone-bed-sedum-angelina-4.webp"
+      ],
+      "position": "Trailing through the sunny front gravel. Added July 2026.",
+      "light": "Full sun for strongest gold and orange colour.",
+      "water": "Very low once established.",
+      "care": "Shear or pull back spreading shoots when they overrun small rosettes.",
+      "seasonal": "Golden needle-like foliage turns orange in cold weather; yellow flowers in summer.",
+      "description": "Sedum 'Angelina' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Golden needle-like foliage turns orange in cold weather.",
+      "characteristics": {
+        "sunlight": "Full sun for strongest gold and orange colour",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden needle-like foliage turns orange in cold weather",
+        "water": "Very low once established",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Stonecrop 'Dragon's Blood'",
+      "id": "stone-sedum-dragons-blood",
+      "latin": "Phedimus spurius 'Schorbuser Blut'",
+      "photos": [
+        "images/jul-2026/stone-bed-sedum-dragons-blood-1.webp",
+        "images/jul-2026/stone-bed-sedum-dragons-blood-2.webp"
+      ],
+      "position": "New red-leaved groundcover, recorded separately from the older stonecrop. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Low once established.",
+      "care": "Trim spent heads and keep spreading stems within their allotted gravel pocket.",
+      "seasonal": "Green-red scalloped leaves deepen burgundy; clusters of deep pink-red summer flowers.",
+      "description": "Stonecrop 'Dragon's Blood' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Green-red scalloped leaves deepen burgundy.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Green-red scalloped leaves deepen burgundy",
+        "water": "Low once established",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Echeveria 'Devotion'",
+      "id": "stone-echeveria-devotion",
+      "latin": "Echeveria pulvinata 'Bcec12001' (Devotion)",
+      "photos": [
+        "images/jul-2026/stone-bed-echeveria-pulvinata-devotion-1.webp",
+        "images/jul-2026/stone-bed-echeveria-pulvinata-devotion-3.webp"
+      ],
+      "position": "Sunny gravel — velvety upright rosettes. Added July 2026.",
+      "light": "Full sun or very bright light.",
+      "water": "Low; soak only after the root zone dries.",
+      "care": "Tender H2: lift before frost and overwinter bright, frost-free and almost dry.",
+      "seasonal": "Velvety green leaves develop burgundy margins and tips in strong light and cool weather.",
+      "description": "Echeveria 'Devotion' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Velvety green leaves develop burgundy margins and tips in strong light and cool weather.",
+      "characteristics": {
+        "sunlight": "Full sun or very bright light",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Velvety green leaves develop burgundy margins and tips in strong light and cool weather",
+        "water": "Low",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Sedum 'Atlantis'",
+      "id": "stone-sedum-atlantis",
+      "latin": "Sedum takesimense 'Nonsitnal' (Atlantis)",
+      "photos": [
+        "images/jul-2026/stone-bed-sedum-takesimense-atlantis-1.webp",
+        "images/jul-2026/stone-bed-sedum-takesimense-atlantis-2.webp"
+      ],
+      "position": "Front-to-middle gravel — cream-edged mound. Added July 2026.",
+      "light": "Full sun.",
+      "water": "Low once established.",
+      "care": "Cut back old flower stems in spring and divide if the mound opens in the centre.",
+      "seasonal": "Green leaves with broad cream-yellow margins blush pink in autumn; yellow summer flowers.",
+      "description": "Sedum 'Atlantis' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Green leaves with broad cream-yellow margins blush pink in autumn.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Green leaves with broad cream-yellow margins blush pink in autumn",
+        "water": "Low once established",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Purple Fountain Grass 'Rubrum'",
+      "id": "stone-pennisetum-rubrum",
+      "latin": "Pennisetum advena 'Rubrum'",
+      "photos": [
+        "images/jul-2026/stone-bed-pennisetum-rubrum-1.webp",
+        "images/jul-2026/stone-bed-pennisetum-rubrum-3.webp"
+      ],
+      "position": "Back of the bed — burgundy fountain. Added July 2026.",
+      "light": "Full sun in a warm, sheltered position.",
+      "water": "Moderate during active growth; never leave waterlogged.",
+      "care": "Tender H3: lift or pot before hard frost and overwinter frost-free; fleece alone is unreliable in Bromsgrove.",
+      "seasonal": "Arching burgundy leaves and purple-brown bottlebrush plumes from summer into autumn.",
+      "description": "Purple Fountain Grass 'Rubrum' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Arching burgundy leaves and purple-brown bottlebrush plumes from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun in a warm, sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Arching burgundy leaves and purple-brown bottlebrush plumes from summer into autumn",
+        "water": "Moderate during active growth",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Ajuga 'Midnight Mystery'",
+      "id": "stone-ajuga-midnight-mystery",
+      "latin": "Ajuga reptans 'Midnight Mystery'",
+      "photos": [
+        "images/jul-2026/stone-bed-ajuga-midnight-mystery-1.webp"
+      ],
+      "position": "Cooler edge — dark spreading foliage. Added July 2026.",
+      "light": "Partial shade or gentle sun.",
+      "water": "Moderate; keep moist while establishing.",
+      "care": "Remove unwanted runners and maintain airflow to reduce mildew.",
+      "seasonal": "Dark bronze evergreen foliage with contrasting rosy-pink spring flowers.",
+      "description": "Ajuga 'Midnight Mystery' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Dark bronze evergreen foliage with contrasting rosy-pink spring flowers.",
+      "characteristics": {
+        "sunlight": "Partial shade or gentle sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Dark bronze evergreen foliage with contrasting rosy-pink spring flowers",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
       "name": "New Zealand Flax (dark)",
       "id": "stone-new-zealand-flax-dark",
       "latin": "Phormium 'Platt's Black'",
@@ -1217,30 +1687,6 @@
         "size": "2.5–4m high · 1–2m spread",
         "foliage": "Evergreen",
         "wildlife": "Foliage provides garden habitat"
-      }
-    },
-    {
-      "name": "Hebe",
-      "id": "stone-hebe",
-      "latin": "Hebe (syn. Veronica) cultivar",
-      "photos": [
-        "images/plants/hebe.webp"
-      ],
-      "position": "Stone Bed — variegated foliage shrub",
-      "light": "Full sun to partial shade.",
-      "water": "Moderate. Good drainage. Dislikes waterlogging.",
-      "care": "Light trim after flowering. Not fully hardy — protect in prolonged hard frosts. Note: botanically reclassified from Hebe to Veronica, though widely sold under both names. Visual traits suggest 'Heartbreaker' or a closely related variegated cultivar.",
-      "seasonal": "Evergreen variegated foliage year-round; small purple-white flower spikes in summer.",
-      "description": "Hebe is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen variegated foliage year-round.",
-      "characteristics": {
-        "sunlight": "Full sun to partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Evergreen variegated foliage year-round",
-        "water": "Moderate",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],
@@ -1293,31 +1739,6 @@
         "size": "8–12m when trained",
         "foliage": "Seasonal foliage",
         "wildlife": "Early flowers and nesting cover"
-      }
-    },
-    {
-      "name": "Lavender",
-      "id": "patio-lavender",
-      "latin": "Lavandula angustifolia",
-      "photos": [
-        "images/plants/lavender.webp",
-        "images/plants/lavender-1.webp"
-      ],
-      "position": "On the decking — moved from Bed 5 in July 2026",
-      "light": "Full sun.",
-      "water": "Drought-tolerant.",
-      "care": "Trim lightly after flowering and again in spring. Don't cut into old wood.",
-      "seasonal": "Purple flower spikes June–August; aromatic year-round.",
-      "description": "Lavender is a compact evergreen aromatic shrub grown at Oak Lodge for its distinctive garden character. Purple flower spikes June–August.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H5 · hardy with sharp drainage",
-        "flowering": "Purple flower spikes June–August",
-        "water": "Drought-tolerant",
-        "habit": "Compact evergreen aromatic shrub",
-        "size": "45–75cm high and wide",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Excellent nectar for bees"
       }
     }
   ],
@@ -2109,26 +2530,26 @@
       }
     },
     {
-      "name": "Wax Begonia",
-      "id": "frontBed2-wax-begonia",
-      "latin": "Begonia Semperflorens-Cultorum Group",
+      "name": "Polemonium 'Golden Feathers'",
+      "id": "frontBed2-polemonium-golden-feathers",
+      "latin": "Polemonium 'Golden Feathers'",
       "photos": [
-        "images/jul-2026/front-bed2-wax-begonia-1.webp",
-        "images/jul-2026/front-bed2-wax-begonia-2.webp"
+        "images/jul-2026/front-bed-2-polemonium-golden-feathers-2.webp",
+        "images/jul-2026/front-bed-2-polemonium-golden-feathers-3.webp"
       ],
-      "position": "Front edge — low pink-and-white flowering plants",
-      "light": "Sun to partial shade; some afternoon shade helps in hot weather.",
-      "water": "Keep evenly moist but not waterlogged, watering at soil level.",
-      "care": "Deadhead if needed and feed every two weeks in summer. Tender annual bedding — replace or lift before frost.",
-      "seasonal": "Continuous pink and white flowers from summer until the first frost.",
-      "description": "Wax Begonia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Continuous pink and white flowers from summer until the first frost.",
+      "position": "Front-right — replacing Begonia Cocktail 'Gin' in July 2026",
+      "light": "Sun to partial shade; give afternoon shade in hot weather.",
+      "water": "Moderate. Keep evenly moist but not waterlogged while establishing.",
+      "care": "Deadhead after flowering and cut tired foliage back for fresh growth. Watch for powdery mildew in dry, crowded conditions.",
+      "seasonal": "Gold-edged ferny foliage from spring; lilac-mauve bell flowers in spring and early summer; herbaceous in winter.",
+      "description": "Polemonium 'Golden Feathers' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Gold-edged ferny foliage from spring.",
       "characteristics": {
         "sunlight": "Sun to partial shade",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Continuous pink and white flowers from summer until the first frost",
-        "water": "Keep evenly moist but not waterlogged, watering at soil level",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Gold-edged ferny foliage from spring",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
@@ -3272,6 +3693,35 @@
         "size": "Cultivar or rootstock dependent",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    }
+  ],
+  "House · Hallway · Kentia Palm": [
+    {
+      "name": "Kentia Palm — assumed",
+      "id": "house-hallway-kentia-palm",
+      "latin": "Howea forsteriana",
+      "photos": [
+        "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp",
+        "images/house-plants/jul-2026/kentia-palm-hallway-context.webp",
+        "images/house-plants/jul-2026/kentia-palm-hallway-detail.webp",
+        "images/house-plants/jul-2026/kentia-palm-hallway-condition.webp"
+      ],
+      "position": "Ground-floor hallway, beside the main staircase",
+      "light": "Bright indirect light; protect the fronds from strong direct sun.",
+      "water": "Check the upper few centimetres of compost before watering, then drain fully and empty the white cachepot.",
+      "care": "Maintain moderate humidity, keep away from cold draughts and radiators, and feed monthly during active spring and summer growth.",
+      "seasonal": "Evergreen indoor foliage throughout the year; growth slows as light levels fall in winter.",
+      "description": "Kentia Palm — assumed is an evergreen indoor palm grown at Oak Lodge for its distinctive garden character. Evergreen indoor foliage throughout the year.",
+      "characteristics": {
+        "sunlight": "Bright indirect light",
+        "hardiness": "H1A · keep above 15°C",
+        "flowering": "Evergreen indoor foliage throughout the year",
+        "water": "Check the upper few centimetres of compost before watering, then drain fully and empty the white cachepot",
+        "habit": "Evergreen indoor palm",
+        "size": "1.5–3m indoors",
+        "foliage": "Evergreen arching fronds",
+        "wildlife": "Indoor foliage specimen"
       }
     }
   ],
