@@ -150,23 +150,9 @@
     }
   });
 
-  // Seasonal entries already hold stable references by this point in the load
-  // sequence. Refresh their visible names without rebuilding the task data.
-  Object.values(window.OAK.SEASONAL || {}).forEach((month) => {
-    month.highlights.forEach((entry) => {
-      const resolution = entry.reference && RESOLUTIONS[entry.reference.plantId];
-      if (!resolution) return;
-      entry.plant = resolution.name;
-      entry.reference.plantName = resolution.name;
-    });
-    month.tasks.forEach((entry) => {
-      (entry.references || []).forEach((reference) => {
-        const resolution = RESOLUTIONS[reference.plantId];
-        if (resolution) reference.plantName = resolution.name;
-      });
-      entry.plants = (entry.references || []).map((reference) => reference.plantName);
-    });
-  });
+  // The maintenance-first seasonal calendar stores only stable plant IDs.
+  // Its visible copy is written at garden- or job-level, so cultivar display
+  // names no longer need to be rewritten here.
 
   window.OAK.CULTIVAR_RESOLUTIONS = RESOLUTIONS;
 })();

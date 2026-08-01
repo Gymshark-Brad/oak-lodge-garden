@@ -1,103 +1,133 @@
 // Oak Lodge Garden — SeasonalCalendar.jsx
-// Notebook-style monthly view: what's looking good + what needs doing.
+// A maintenance-first monthly job sheet for a new gardener.
 
 const { useState: useState_SC, useEffect: useEffect_SC, useMemo: useMemo_SC, useRef: useRef_SC } = React;
+
+const SC_STORAGE_KEY = "oak-seasonal-completed-v1";
+const SC_PRIORITY_GROUPS = [
+  { id: "first", eyebrow: "Time-sensitive", title: "Do first", note: "Jobs with a pruning window, weather trigger or deadline." },
+  { id: "month", eyebrow: "Important & flexible", title: "This month", note: "Work to fit around suitable conditions during the month." },
+  { id: "ongoing", eyebrow: "Repeat as needed", title: "Keep on top of", note: "Short rounds that stop small jobs becoming large ones." },
+];
+const SC_CATEGORY_LABELS = {
+  prune: "Prune",
+  deadhead: "Deadhead",
+  "cut-back": "Cut back",
+  ground: "Ground work",
+  protect: "Protect",
+  prepare: "Prepare",
+  support: "Support",
+  feed: "Feed",
+  check: "Check",
+  harvest: "Harvest",
+};
+
+function scReadCompletion() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(SC_STORAGE_KEY) || "{}");
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function scWriteCompletion(value) {
+  try {
+    localStorage.setItem(SC_STORAGE_KEY, JSON.stringify(value));
+  } catch {
+    // Private browsing and restricted storage should not break the calendar.
+  }
+}
 
 function SeasonalCalendar({ onOpenPlant }) {
   const SEASONAL = window.OAK.SEASONAL;
   const MONTHS = window.OAK.MONTHS;
   const MONTHS_SHORT = window.OAK.MONTHS_SHORT;
+  const ZONES = window.OAK.ZONES;
+  const PLANT_BY_ID = window.OAK.PLANT_BY_ID || {};
 
-  const realMonth = new Date().getMonth();
+  const now = new Date();
+  const realMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+  const yearKey = String(currentYear);
   const [activeIndex, setActiveIndex] = useState_SC(realMonth);
-  const [seasonFilter, setSeasonFilter] = useState_SC("");
+  const [completionByYear, setCompletionByYear] = useState_SC(scReadCompletion);
   const tabsRef = useRef_SC(null);
   const activeTabRef = useRef_SC(null);
 
   useEffect_SC(() => {
-    if (activeTabRef.current && tabsRef.current) {
-      const tab = activeTabRef.current;
-      const container = tabsRef.current;
-      const tabRect = tab.getBoundingClientRect();
-      const containerRect = container.getBoundingClientRect();
-      if (tabRect.left < containerRect.left || tabRect.right > containerRect.right) {
-        container.scrollTo({
-          left: tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2,
-          behavior: window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-        });
-      }
+    if (!activeTabRef.current || !tabsRef.current) return;
+    const tab = activeTabRef.current;
+    const container = tabsRef.current;
+    const tabRect = tab.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    if (tabRect.left < containerRect.left || tabRect.right > containerRect.right) {
+      container.scrollTo({
+        left: tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2,
+        behavior: window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      });
     }
   }, [activeIndex]);
 
   const monthName = MONTHS[activeIndex];
-  const monthData = SEASONAL[monthName] || { highlights: [], tasks: [], mood: "" };
-  const monthShort = MONTHS_SHORT[activeIndex];
-  const seasonName = activeIndex <= 1 || activeIndex === 11
-    ? "Winter"
-    : activeIndex <= 4
-      ? "Spring"
-      : activeIndex <= 7
-        ? "Summer"
-        : "Autumn";
-  const profileRecords = useMemo_SC(
-    () => Object.values(window.OAK.PLANT_BY_ID || {}).filter((record) => record.plant.profile),
-    []
-  );
-  const highlightedIds = new Set(
-    monthData.highlights.map((entry) => entry.reference && entry.reference.plantId).filter(Boolean)
-  );
-  const floweringExtras = profileRecords
-    .filter((record) => record.plant.profile.floweringMonths.includes(monthShort) && !highlightedIds.has(record.plant.id))
-    .sort((a, b) => {
-      const zoneA = window.OAK.ZONES[a.zoneKey];
-      const zoneB = window.OAK.ZONES[b.zoneKey];
-      return zoneA.title.localeCompare(zoneB.title) || a.plant.name.localeCompare(b.plant.name);
-    });
-  const seasonalGroups = useMemo_SC(() => {
-    const query = seasonFilter.trim().toLowerCase();
-    const groups = new Map();
-    profileRecords.forEach((record) => {
-      const profile = record.plant.profile;
-      const season = profile.seasons.find((item) => item.season === seasonName);
-      const zone = window.OAK.ZONES[record.zoneKey];
-      if (!season || !zone) return;
-      const isIndoor = zone.environment === "indoor";
-      const zoneTitle = isIndoor ? `${zone.floor} · ${zone.room}` : zone.title;
-      const groupKey = isIndoor ? `indoor:${zone.floor}:${zone.room}` : record.zoneKey;
-      const searchText = `${record.plant.name} ${zoneTitle} house plants ${season.action}`.toLowerCase();
-      if (query && !searchText.includes(query)) return;
-      if (!groups.has(groupKey)) {
-        groups.set(groupKey, {
-          groupKey,
-          zoneTitle,
-          environment: isIndoor ? "indoor" : "outdoor",
-          plants: [],
-        });
-      }
-      groups.get(groupKey).plants.push({
-        zoneKey: record.zoneKey,
-        plantId: record.plant.id,
-        plantName: record.plant.name,
-        action: season.action,
-        caution: profile.caution || null,
-      });
-    });
-    return Array.from(groups.values())
-      .map((group) => ({
-        ...group,
-        plants: group.plants.sort((a, b) => a.plantName.localeCompare(b.plantName)),
-      }))
-      .sort((a, b) =>
-        (a.environment === "indoor") - (b.environment === "indoor")
-        || a.zoneTitle.localeCompare(b.zoneTitle)
-      );
-  }, [profileRecords, seasonFilter, seasonName]);
-  const seasonalResultCount = seasonalGroups.reduce((total, group) => total + group.plants.length, 0);
+  const monthData = SEASONAL[monthName] || { theme: "", jobs: [], highlights: [], indoorJobs: [] };
+  const completed = completionByYear[yearKey] || {};
+  const allMonthJobs = [...monthData.jobs, ...monthData.indoorJobs];
+  const completedCount = allMonthJobs.filter((item) => completed[item.id]).length;
 
-  const handlePlantClick = (reference) => {
-    if (!reference) return;
-    onOpenPlant(reference);
+  const jobsByPriority = useMemo_SC(() => {
+    const grouped = { first: [], month: [], ongoing: [] };
+    monthData.jobs.forEach((item) => {
+      if (grouped[item.priority]) grouped[item.priority].push(item);
+    });
+    return grouped;
+  }, [monthData]);
+
+  const locationLabel = (entry, compact) => {
+    if (entry.potKey === "bed5-medium-pot") return "Flower Bed 5 · medium pot";
+    if (entry.potKey === "bed5-little-pot") return "Flower Bed 5 · little pot";
+    if (entry.scope === "bed5-big-pot") return "Flower Bed 5 · big pot";
+    const labels = (entry.zoneKeys || [])
+      .map((zoneKey) => ZONES[zoneKey] && ZONES[zoneKey].title)
+      .filter(Boolean);
+    if (labels.length === 0) return "Whole garden";
+    if (!compact || labels.length <= 2) return labels.join(" · ");
+    return labels[0] + " +" + (labels.length - 1) + " areas";
   };
+
+  const toggleJob = (jobId) => {
+    setCompletionByYear((current) => {
+      const nextYear = { ...(current[yearKey] || {}) };
+      if (nextYear[jobId]) delete nextYear[jobId];
+      else nextYear[jobId] = true;
+      const next = { ...current, [yearKey]: nextYear };
+      scWriteCompletion(next);
+      return next;
+    });
+  };
+
+  const resetMonth = () => {
+    const monthIds = new Set(allMonthJobs.map((item) => item.id));
+    setCompletionByYear((current) => {
+      const nextYear = { ...(current[yearKey] || {}) };
+      monthIds.forEach((id) => delete nextYear[id]);
+      const next = { ...current, [yearKey]: nextYear };
+      scWriteCompletion(next);
+      return next;
+    });
+  };
+
+  const openSinglePlant = (item) => {
+    if (!onOpenPlant || item.scope !== "plant" || item.plantIds.length !== 1) return;
+    const record = PLANT_BY_ID[item.plantIds[0]];
+    if (!record) return;
+    onOpenPlant({
+      zoneKey: record.zoneKey,
+      plantId: record.plant.id,
+      plantName: record.plant.name,
+    });
+  };
+
   const selectTab = (index) => {
     const nextIndex = (index + MONTHS.length) % MONTHS.length;
     setActiveIndex(nextIndex);
@@ -106,6 +136,7 @@ function SeasonalCalendar({ onOpenPlant }) {
       if (nextTab) nextTab.focus();
     });
   };
+
   const handleTabKeyDown = (event, index) => {
     if (event.key === "ArrowRight") {
       event.preventDefault();
@@ -122,62 +153,98 @@ function SeasonalCalendar({ onOpenPlant }) {
     }
   };
 
+  const renderJob = (item, indoor) => {
+    const isDone = !!completed[item.id];
+    const canOpenPlant = item.scope === "plant" && item.plantIds.length === 1 && !!PLANT_BY_ID[item.plantIds[0]];
+    return (
+      <li className={"cal-job" + (isDone ? " is-done" : "") + (indoor ? " is-indoor" : "")} key={item.id}>
+        <label className="cal-job-check">
+          <input
+            type="checkbox"
+            checked={isDone}
+            onChange={() => toggleJob(item.id)}
+            aria-label={`Mark “${item.title}” ${isDone ? "not complete" : "complete"}`}
+          />
+          <span aria-hidden="true" />
+        </label>
+        <div className="cal-job-main">
+          <div className="cal-job-meta">
+            <span className={"cal-category is-" + item.category}>{SC_CATEGORY_LABELS[item.category]}</span>
+            <span className="t-mono cal-location">{locationLabel(item, true)}</span>
+          </div>
+          <h4 className="t-hand cal-job-title">{item.title}</h4>
+          <p className="cal-job-timing"><span className="t-stamp">When</span>{item.timing}</p>
+          <p className="cal-job-summary">{item.summary}</p>
+          <details className="cal-job-details">
+            <summary><span>How to do it</span></summary>
+            <div className="cal-job-details-body">
+              <p className="cal-job-why"><span className="t-stamp">Why it matters</span>{item.why}</p>
+              <ol>
+                {item.steps.map((step, index) => <li key={index}>{step}</li>)}
+              </ol>
+              <p className="cal-done-when"><span className="t-stamp">Done when</span>{item.doneWhen}</p>
+              {item.caution && (
+                <p className="cal-job-caution"><span className="t-stamp">Take care</span>{item.caution}</p>
+              )}
+              {(item.zoneKeys || []).length > 2 && (
+                <p className="cal-all-locations"><span className="t-stamp">Areas</span>{locationLabel(item, false)}</p>
+              )}
+              {canOpenPlant && (
+                <button className="cal-profile-link" onClick={() => openSinglePlant(item)}>
+                  Open the full plant care profile <span aria-hidden="true">→</span>
+                </button>
+              )}
+            </div>
+          </details>
+        </div>
+      </li>
+    );
+  };
+
   return (
     <div className="cal-root page-turn">
-      <div className="cal-header">
+      <header className="cal-header">
         <div>
-          <div className="t-stamp" style={{ color: "var(--accent)" }}>The Notebook · Month by Month</div>
-          <h1 className="t-display" style={{ fontSize: "min(6vw, 48px)", margin: "6px 0 2px", lineHeight: 1.04 }}>
-            Seasonal calendar
-          </h1>
-          <div className="t-hand" style={{ fontSize: 22, color: "var(--pencil)" }}>
-            what's looking good &nbsp;·&nbsp; what needs doing
-          </div>
+          <div className="t-stamp" style={{ color: "var(--accent)" }}>The working notebook · month by month</div>
+          <h1 className="t-display">Seasonal maintenance</h1>
+          <p className="t-hand">what to prune · what to protect · what to prepare next</p>
         </div>
         <div className="cal-stamp-panel">
-          <div className="stamp">Vol. ii · cyclical</div>
-          <div className="t-mono" style={{ marginTop: 12 }}>
-            {Object.keys(window.OAK.PLANT_BY_ID || {}).length} plants &nbsp;·&nbsp; 12 months<br />
-            site · oak lodge, bromsgrove<br />
-            recorder · b. h.
+          <div className="stamp">Practical year · {currentYear}</div>
+          <div className="t-mono">
+            outdoor work first<br />
+            indoor notes kept separate<br />
+            watering has its own guide
           </div>
         </div>
-      </div>
+      </header>
 
       <div className="cal-tabs-wrap">
-        <div className="t-stamp" style={{ marginBottom: 8 }}>Choose a month →</div>
-        <div className="cal-tabs" ref={tabsRef} role="tablist" aria-label="Seasonal calendar month">
-          {MONTHS.map((m, i) => {
-            const active = i === activeIndex;
-            const isToday = i === realMonth;
+        <div className="t-stamp">Choose a month →</div>
+        <div className="cal-tabs" ref={tabsRef} role="tablist" aria-label="Seasonal maintenance month">
+          {MONTHS.map((month, index) => {
+            const active = index === activeIndex;
+            const isToday = index === realMonth;
             return (
               <button
-                key={m}
+                key={month}
                 ref={active ? activeTabRef : null}
                 role="tab"
-                id={`calendar-month-tab-${i}`}
+                id={`calendar-month-tab-${index}`}
                 aria-controls="calendar-month-panel"
                 aria-selected={active}
                 tabIndex={active ? 0 : -1}
-                data-tab-index={i}
+                data-tab-index={index}
                 className={"cal-tab" + (active ? " is-active" : "")}
-                onClick={() => setActiveIndex(i)}
-                onKeyDown={(event) => handleTabKeyDown(event, i)}
-                title={m}
+                onClick={() => setActiveIndex(index)}
+                onKeyDown={(event) => handleTabKeyDown(event, index)}
+                title={month}
               >
-                <span className="cal-tab-label">{MONTHS_SHORT[i]}</span>
+                <span className="cal-tab-label">{MONTHS_SHORT[index]}</span>
                 {active && (
                   <svg className="cal-tab-ring" viewBox="0 0 80 36" aria-hidden="true">
-                    <ellipse
-                      cx="40" cy="18" rx="34" ry="14"
-                      fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round"
-                      transform="rotate(-2 40 18)" opacity="0.9"
-                    />
-                    <ellipse
-                      cx="40" cy="18" rx="32" ry="13"
-                      fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeLinecap="round"
-                      transform="rotate(-4 40 18)" opacity="0.55"
-                    />
+                    <ellipse cx="40" cy="18" rx="34" ry="14" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" transform="rotate(-2 40 18)" opacity="0.9" />
+                    <ellipse cx="40" cy="18" rx="32" ry="13" fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-4 40 18)" opacity="0.55" />
                   </svg>
                 )}
                 {isToday && !active && <span className="cal-tab-today" title="this month">·</span>}
@@ -202,499 +269,220 @@ function SeasonalCalendar({ onOpenPlant }) {
           <div>
             <div className="t-stamp" style={{ color: "var(--pencil)" }}>
               Month {String(activeIndex + 1).padStart(2, "0")} of 12
-              {activeIndex === realMonth ? "  ·  this month" : ""}
+              {activeIndex === realMonth ? " · this month" : ""}
             </div>
             <h2 className="t-display cal-month-name">{monthName}</h2>
-            {monthData.mood && (
-              <div className="t-latin" style={{ fontSize: 22, marginTop: 4, maxWidth: 640 }}>
-                {monthData.mood}
-              </div>
-            )}
+            <p className="t-latin cal-theme">{monthData.theme}</p>
           </div>
           <MonthDoodle index={activeIndex} />
         </div>
 
-        <div className="rule" style={{ margin: "26px 0 22px" }} />
-
-        <div className="cal-sections">
-          <section className="cal-section">
-            <header className="cal-section-head">
-              <div className="cal-section-num t-display">i.</div>
-              <div>
-                <div className="t-stamp" style={{ color: "var(--accent)" }}>What's looking good</div>
-                <h3 className="t-display cal-section-title">In flower &amp; in colour</h3>
-              </div>
-              <div className="cal-section-count t-mono">
-                {monthData.highlights.length} {monthData.highlights.length === 1 ? "entry" : "entries"}
-              </div>
-            </header>
-
-            {monthData.highlights.length === 0 ? (
-              <p className="t-hand cal-empty">a quiet month — nothing in particular is shouting.</p>
-            ) : (
-              <ul className="cal-highlight-list">
-                {monthData.highlights.map((h, i) => (
-                  <li key={i} className="cal-highlight">
-                    <button
-                      className="cal-plant-link t-hand"
-                      onClick={() => handlePlantClick(h.reference)}
-                      title={`Open ${h.plant} card`}
-                    >
-                      {h.plant}
-                    </button>
-                    <span className="cal-dash" aria-hidden="true">—</span>
-                    <span className="cal-note">{h.note}</span>
-                    <span className="cal-bed t-mono">{h.bed}</span>
-                  </li>
-                ))}
-              </ul>
+        <div className="cal-progress">
+          <div>
+            <span className="t-stamp">This month’s sheet</span>
+            <strong className="t-hand">{completedCount} of {allMonthJobs.length} jobs ticked off</strong>
+          </div>
+          <div className="cal-progress-actions">
+            <span className="t-mono">saved on this device · {currentYear}</span>
+            {completedCount > 0 && (
+              <button className="cal-reset" onClick={resetMonth}>Reset {monthName}</button>
             )}
-
-            {floweringExtras.length > 0 && (
-              <div className="cal-also-flowering">
-                <div className="t-stamp">Also typically flowering this month</div>
-                <div className="cal-flower-chips">
-                  {floweringExtras.map((record) => (
-                    <button
-                      key={record.plant.id}
-                      className="cal-flower-chip"
-                      onClick={() => handlePlantClick({
-                        zoneKey: record.zoneKey,
-                        plantId: record.plant.id,
-                        plantName: record.plant.name,
-                      })}
-                    >
-                      <span>{record.plant.name}</span>
-                      <small>{window.OAK.ZONES[record.zoneKey].title}</small>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </section>
-
-          <div className="cal-divider" aria-hidden="true"><div className="rule" /></div>
-
-          <section className="cal-section">
-            <header className="cal-section-head">
-              <div className="cal-section-num t-display">ii.</div>
-              <div>
-                <div className="t-stamp" style={{ color: "var(--accent)" }}>What needs doing</div>
-                <h3 className="t-display cal-section-title">To-do &amp; to-prune</h3>
-              </div>
-              <div className="cal-section-count t-mono">
-                {monthData.tasks.length} {monthData.tasks.length === 1 ? "task" : "tasks"}
-              </div>
-            </header>
-
-            {monthData.tasks.length === 0 ? (
-              <p className="t-hand cal-empty">nothing pressing this month — read a seed catalogue.</p>
-            ) : (
-              <ul className="cal-task-list">
-                {monthData.tasks.map((t, i) => (
-                  <li key={i} className="cal-task">
-                    <PencilCheckbox index={i} />
-                    <div className="cal-task-body">
-                      <div className="t-hand cal-task-text">{t.task}</div>
-                      {t.plants && t.plants.length > 0 && (
-                        <div className="cal-task-plants">
-                          {t.plants.map((pn, j) => {
-                            const reference = (t.references || [])[j];
-                            const clickable = !!reference;
-                            return (
-                              <React.Fragment key={pn}>
-                                {j > 0 && <span className="cal-plants-sep">·</span>}
-                                {clickable ? (
-                                  <button className="cal-plant-link-sm" onClick={() => handlePlantClick(reference)}>
-                                    {pn}
-                                  </button>
-                                ) : (
-                                  <span className="cal-plant-static" title="Plant reference needs attention">{pn} ⚠</span>
-                                )}
-                              </React.Fragment>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                    <span className="cal-bed t-mono">{t.bed}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
+          </div>
         </div>
 
-        <div className="rule" style={{ margin: "30px 0 24px" }} />
-
-        <section className="cal-season-reference" aria-labelledby="season-reference-heading">
-          <header className="cal-section-head">
-            <div className="cal-section-num t-display">iii.</div>
+        <section className="cal-work" aria-labelledby="cal-work-heading">
+          <header className="cal-section-heading">
+            <div className="cal-section-num t-display">i.</div>
             <div>
-              <div className="t-stamp" style={{ color: "var(--accent)" }}>The researched profiles</div>
-              <h3 id="season-reference-heading" className="t-display cal-section-title">{seasonName} notes, plant by plant</h3>
+              <div className="t-stamp" style={{ color: "var(--accent)" }}>Outdoor work</div>
+              <h3 id="cal-work-heading" className="t-display">The maintenance round</h3>
             </div>
-            <div className="cal-section-count t-mono">{seasonalResultCount} plants</div>
           </header>
-          <p className="cal-season-intro">
-            The monthly jobs above are deliberately specific. These profile notes are the wider seasonal reference—open any garden or house plant when you need it.
-          </p>
-          <label className="t-stamp cal-season-filter-label" htmlFor="season-profile-filter">Find a plant, area or job</label>
-          <input
-            id="season-profile-filter"
-            type="search"
-            className="cal-season-filter"
-            placeholder={`Search ${seasonName.toLowerCase()} notes…`}
-            value={seasonFilter}
-            onChange={(event) => setSeasonFilter(event.target.value)}
-          />
-          <div className="cal-season-groups">
-            {seasonalGroups.map((group) => (
-              <details
-                className={"cal-season-group" + (group.environment === "indoor" ? " is-indoor" : "")}
-                key={`${group.groupKey}-${seasonFilter ? "search" : "browse"}`}
-                open={!!seasonFilter}
-              >
-                <summary>
-                  <span className="t-hand">{group.zoneTitle}</span>
-                  {group.environment === "indoor" && <span className="cal-indoor-label">house plants</span>}
-                  <span className="t-mono">{group.plants.length} {group.plants.length === 1 ? "plant" : "plants"}</span>
-                </summary>
-                <ul>
-                  {group.plants.map((plant) => (
-                    <li key={plant.plantId}>
-                      <button
-                        className="cal-plant-link-sm cal-season-plant"
-                        onClick={() => handlePlantClick({
-                          zoneKey: plant.zoneKey,
-                          plantId: plant.plantId,
-                          plantName: plant.plantName,
-                        })}
-                      >
-                        {plant.plantName}
-                      </button>
-                      <p>{plant.action}</p>
-                      {plant.caution && (
-                        <p className="cal-season-caution"><span className="t-stamp">Handling note</span>{plant.caution}</p>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </details>
+
+          <div className="cal-priority-groups">
+            {SC_PRIORITY_GROUPS.map((group) => {
+              const items = jobsByPriority[group.id];
+              if (!items.length) return null;
+              return (
+                <section className={"cal-priority is-" + group.id} key={group.id}>
+                  <header>
+                    <div>
+                      <span className="t-stamp">{group.eyebrow}</span>
+                      <h4 className="t-display">{group.title}</h4>
+                      <p>{group.note}</p>
+                    </div>
+                    <span className="t-mono">{items.length} {items.length === 1 ? "job" : "jobs"}</span>
+                  </header>
+                  <ul className="cal-job-list">{items.map((item) => renderJob(item, false))}</ul>
+                </section>
+              );
+            })}
+          </div>
+        </section>
+
+        <div className="rule cal-major-rule" />
+
+        <section className="cal-highlights" aria-labelledby="cal-highlights-heading">
+          <header className="cal-section-heading">
+            <div className="cal-section-num t-display">ii.</div>
+            <div>
+              <div className="t-stamp" style={{ color: "var(--accent)" }}>A quick look around</div>
+              <h3 id="cal-highlights-heading" className="t-display">What you’ll notice</h3>
+            </div>
+          </header>
+          <p className="cal-section-intro">A few garden-level moments to look out for—not a catalogue of every plant in flower.</p>
+          <div className="cal-highlight-grid">
+            {monthData.highlights.map((item, index) => (
+              <article className="cal-highlight-card" key={item.id} style={{ transform: `rotate(${((index % 3) - 1) * 0.35}deg)` }}>
+                <span className="t-mono">{locationLabel(item, true)}</span>
+                <h4 className="t-hand">{item.title}</h4>
+                <p>{item.note}</p>
+              </article>
             ))}
           </div>
-          {seasonalGroups.length === 0 && (
-            <p className="t-hand cal-empty">no seasonal notes match “{seasonFilter}”</p>
+        </section>
+
+        <div className="rule cal-major-rule" />
+
+        <section className="cal-indoor" aria-labelledby="cal-indoor-heading">
+          <header className="cal-section-heading">
+            <div className="cal-section-num t-display">iii.</div>
+            <div>
+              <div className="t-stamp" style={{ color: "var(--green)" }}>Kept separate</div>
+              <h3 id="cal-indoor-heading" className="t-display">Indoors this month</h3>
+            </div>
+          </header>
+          {monthData.indoorJobs.length > 0 ? (
+            <ul className="cal-job-list cal-indoor-list">
+              {monthData.indoorJobs.map((item) => renderJob(item, true))}
+            </ul>
+          ) : (
+            <p className="t-hand cal-empty">nothing extra for the house plants this month — keep following their normal care.</p>
           )}
         </section>
 
-        <div className="rule" style={{ margin: "30px 0 18px" }} />
-        <div className="cal-sheet-foot">
+        <div className="rule cal-major-rule" />
+        <footer className="cal-sheet-foot">
           <button className="inkbtn" onClick={() => setActiveIndex((activeIndex + 11) % 12)} title={MONTHS[(activeIndex + 11) % 12]}>
-            <span className="arr">←</span>
-            <span>{MONTHS[(activeIndex + 11) % 12]}</span>
+            <span className="arr">←</span><span>{MONTHS[(activeIndex + 11) % 12]}</span>
           </button>
           <div className="t-mono" style={{ opacity: 0.6 }}>turn the page</div>
           <button className="inkbtn" onClick={() => setActiveIndex((activeIndex + 1) % 12)} title={MONTHS[(activeIndex + 1) % 12]}>
-            <span>{MONTHS[(activeIndex + 1) % 12]}</span>
-            <span className="arr">→</span>
+            <span>{MONTHS[(activeIndex + 1) % 12]}</span><span className="arr">→</span>
           </button>
-        </div>
+        </footer>
       </article>
 
       <style>{`
         .cal-root { padding: 24px clamp(20px, 4vw, 56px) 64px; }
-
         .cal-header { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; margin-bottom: 22px; }
-        .cal-stamp-panel {
-          padding: 14px 18px; border: 1px dashed var(--hairline);
-          background: color-mix(in oklab, var(--paper) 92%, var(--paper-deep) 8%);
-          min-width: 220px;
-        }
-        @media (max-width: 720px) {
-          .cal-header { grid-template-columns: 1fr; }
-          .cal-stamp-panel { display: none; }
-        }
-
+        .cal-header h1 { font-size: min(6vw, 50px); margin: 6px 0 2px; line-height: 1.04; }
+        .cal-header > div > p { margin: 0; font-size: 23px; color: var(--pencil); }
+        .cal-stamp-panel { min-width: 230px; padding: 14px 18px; border: 1px dashed var(--hairline); background: color-mix(in oklab, var(--paper) 92%, var(--paper-deep) 8%); }
+        .cal-stamp-panel .t-mono { margin-top: 12px; line-height: 1.7; }
         .cal-tabs-wrap { margin-bottom: 22px; }
-        .cal-tabs {
-          display: flex; gap: clamp(2px, 0.6vw, 10px);
-          overflow-x: auto; padding: 8px 4px 14px; margin: 0 -4px;
-          scroll-snap-type: x proximity;
-          scrollbar-width: thin;
-          scrollbar-color: var(--pencil) transparent;
-        }
+        .cal-tabs-wrap > .t-stamp { margin-bottom: 8px; }
+        .cal-tabs { display: flex; gap: clamp(2px, .6vw, 10px); overflow-x: auto; padding: 8px 4px 14px; margin: 0 -4px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--pencil) transparent; }
         .cal-tabs::-webkit-scrollbar { height: 6px; }
-        .cal-tabs::-webkit-scrollbar-thumb {
-          background: color-mix(in oklab, var(--pencil) 50%, transparent);
-          border-radius: 3px;
-        }
-        .cal-tab {
-          position: relative; flex: 1 1 auto; min-width: 64px;
-          padding: 10px 4px 14px; background: transparent; border: 0; cursor: pointer;
-          font-family: var(--hand); font-size: clamp(22px, 2.4vw, 30px);
-          color: var(--ink-soft); line-height: 1; letter-spacing: 0.01em;
-          scroll-snap-align: center;
-          transition: color 160ms ease, transform 160ms ease;
-          min-height: 44px;
-        }
+        .cal-tabs::-webkit-scrollbar-thumb { background: color-mix(in oklab, var(--pencil) 50%, transparent); border-radius: 3px; }
+        .cal-tab { position: relative; flex: 1 1 auto; min-width: 64px; min-height: 44px; padding: 10px 4px 14px; border: 0; background: transparent; color: var(--ink-soft); cursor: pointer; font: clamp(22px, 2.4vw, 30px)/1 var(--hand); scroll-snap-align: center; transition: color 160ms ease, transform 160ms ease; }
         .cal-tab:hover { color: var(--ink); transform: translateY(-1px); }
+        .cal-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
         .cal-tab.is-active { color: var(--ink); font-weight: 600; }
         .cal-tab-label { position: relative; z-index: 1; display: inline-block; padding: 2px 10px; }
-        .cal-tab-ring {
-          position: absolute; left: 50%; top: 50%;
-          transform: translate(-50%, -50%);
-          width: 110%; height: 60px; pointer-events: none; z-index: 0;
-        }
-        .cal-tab-today {
-          position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
-          color: var(--accent); font-size: 22px; line-height: 0;
-        }
-
-        .cal-sheet {
-          position: relative; padding: 36px clamp(20px, 4vw, 56px) 30px;
-          background: color-mix(in oklab, var(--paper) 96%, white 4%);
-          background-image:
-            radial-gradient(circle at 20% 0%, color-mix(in oklab, var(--paper) 75%, var(--accent) 6%) 0%, transparent 40%),
-            radial-gradient(circle at 100% 100%, color-mix(in oklab, var(--paper-deep) 60%, var(--ink) 8%) 0%, transparent 50%);
-          border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
-          box-shadow:
-            0 1px 0 color-mix(in oklab, var(--paper) 100%, white 5%) inset,
-            0 24px 60px -28px rgba(0, 0, 0, 0.45),
-            0 6px 18px -8px rgba(0, 0, 0, 0.18);
-          animation: pageTurn 380ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
-        }
-        .cal-sheet::before {
-          content: ""; position: absolute; inset: 0;
-          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15  0 0 0 0 0.13  0 0 0 0 0.10  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-          opacity: 0.5; mix-blend-mode: multiply; pointer-events: none;
-        }
-        [data-palette="night"] .cal-sheet::before { mix-blend-mode: overlay; opacity: 0.35; }
-
-        .cal-sheet-head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
-        .cal-month-name { font-size: clamp(56px, 9vw, 110px); line-height: 0.92; margin: 6px 0 0; }
-
-        .cal-sections { display: flex; flex-direction: column; gap: 28px; }
-        .cal-divider { padding: 4px 0; opacity: 0.6; }
-
-        .cal-section-head {
-          display: grid; grid-template-columns: auto 1fr auto;
-          align-items: end; gap: 16px; margin-bottom: 18px;
-        }
-        .cal-section-num { font-size: 56px; line-height: 0.9; color: var(--pencil); opacity: 0.85; }
-        .cal-section-title { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.05; margin: 2px 0 0; }
-        .cal-section-count { align-self: end; padding-bottom: 6px; opacity: 0.6; }
-
-        .cal-empty { font-size: 22px; color: var(--pencil); font-style: italic; }
-
-        .cal-highlight-list { list-style: none; margin: 0; padding: 0; }
-        .cal-highlight {
-          display: grid;
-          grid-template-columns: minmax(180px, auto) auto 1fr auto;
-          gap: 12px; align-items: baseline;
-          padding: 14px 4px;
-          border-bottom: 1px dotted var(--hairline);
-          min-height: 44px;
-        }
-        .cal-highlight:last-child { border-bottom: 0; }
-
-        .cal-plant-link {
-          background: transparent; border: 0; padding: 6px 0; margin: 0; cursor: pointer;
-          font-size: clamp(24px, 2.6vw, 30px);
-          color: var(--ink); text-align: left; line-height: 1;
-          letter-spacing: 0.005em; position: relative;
-          min-height: 44px; display: inline-flex; align-items: center;
-        }
-        .cal-plant-link::after {
-          content: ""; position: absolute; left: 0; right: 8%;
-          bottom: 4px; height: 4px;
-          background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='4' viewBox='0 0 80 4'><path d='M 1 2 Q 20 0 40 2 T 79 2' fill='none' stroke='%239c5a2c' stroke-width='1.2' stroke-linecap='round' opacity='0.7'/></svg>") repeat-x left center;
-          opacity: 0; transition: opacity 160ms ease;
-        }
-        .cal-plant-link:hover { color: var(--accent); }
-        .cal-plant-link:hover::after { opacity: 1; }
-
-        .cal-dash { font-family: var(--serif); color: var(--pencil); font-size: 22px; line-height: 1; }
-        .cal-note {
-          font-family: var(--serif); font-size: 18px; line-height: 1.45;
-          color: var(--ink); text-wrap: pretty;
-        }
-        .cal-bed {
-          justify-self: end; padding: 4px 8px;
-          border: 1px dashed var(--hairline);
-          background: color-mix(in oklab, var(--paper) 96%, var(--paper-deep) 4%);
-          font-size: 10px; letter-spacing: 0.18em; opacity: 0.85; white-space: nowrap;
-        }
-
+        .cal-tab-ring { position: absolute; left: 50%; top: 50%; width: 110%; height: 60px; pointer-events: none; z-index: 0; transform: translate(-50%, -50%); }
+        .cal-tab-today { position: absolute; bottom: 2px; left: 50%; color: var(--accent); font-size: 22px; line-height: 0; transform: translateX(-50%); }
+        .cal-sheet { position: relative; padding: 36px clamp(20px, 4vw, 56px) 30px; border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); background-color: color-mix(in oklab, var(--paper) 96%, white 4%); background-image: radial-gradient(circle at 20% 0%, color-mix(in oklab, var(--paper) 75%, var(--accent) 6%) 0%, transparent 40%), radial-gradient(circle at 100% 100%, color-mix(in oklab, var(--paper-deep) 60%, var(--ink) 8%) 0%, transparent 50%); box-shadow: 0 18px 40px -32px rgba(0,0,0,.45); animation: pageTurn 380ms cubic-bezier(.2,.7,.2,1) both; }
+        .cal-sheet::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .45; mix-blend-mode: multiply; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .15  0 0 0 0 .13  0 0 0 0 .10  0 0 0 .06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+        [data-palette="night"] .cal-sheet::before { mix-blend-mode: overlay; opacity: .3; }
+        .cal-sheet-head { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; }
+        .cal-month-name { margin: 6px 0 0; font-size: clamp(56px, 9vw, 108px); line-height: .92; }
+        .cal-theme { max-width: 760px; margin: 12px 0 0; font-size: 23px; line-height: 1.35; }
+        .cal-progress { position: relative; display: flex; justify-content: space-between; gap: 20px; align-items: center; margin: 28px 0 34px; padding: 15px 18px; border: 1px dashed var(--hairline); background: color-mix(in oklab, var(--paper) 91%, var(--green) 9%); }
+        .cal-progress > div:first-child { display: flex; flex-direction: column; gap: 3px; }
+        .cal-progress strong { font-size: 23px; font-weight: 600; }
+        .cal-progress-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+        .cal-reset { min-height: 44px; padding: 8px 12px; border: 1px solid var(--hairline); background: var(--paper); color: var(--ink); cursor: pointer; font: 14px var(--type); }
+        .cal-reset:hover { border-color: var(--accent); color: var(--accent); }
+        .cal-reset:focus-visible, .cal-profile-link:focus-visible, .cal-job-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .cal-section-heading { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: end; margin-bottom: 18px; }
+        .cal-section-heading h3 { margin: 2px 0 0; font-size: clamp(30px, 3.6vw, 43px); line-height: 1.05; }
+        .cal-section-num { color: var(--pencil); opacity: .85; font-size: 56px; line-height: .9; }
+        .cal-priority-groups { display: grid; gap: 26px; }
+        .cal-priority { position: relative; border-left: 4px solid var(--pencil); padding-left: clamp(14px, 2vw, 24px); }
+        .cal-priority.is-first { border-left-color: var(--stamp); }
+        .cal-priority.is-month { border-left-color: var(--accent); }
+        .cal-priority.is-ongoing { border-left-color: var(--green); }
+        .cal-priority > header { display: flex; align-items: start; justify-content: space-between; gap: 16px; margin-bottom: 9px; }
+        .cal-priority > header h4 { margin: 2px 0; font-size: 31px; line-height: 1; }
+        .cal-priority > header p { margin: 4px 0 0; color: var(--ink-soft); font-size: 16px; }
+        .cal-priority > header > .t-mono { padding-top: 6px; white-space: nowrap; }
+        .cal-job-list { list-style: none; margin: 0; padding: 0; }
+        .cal-job { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 17px 4px 18px; border-bottom: 1px dotted var(--hairline); transition: opacity 160ms ease; }
+        .cal-job:last-child { border-bottom: 0; }
+        .cal-job.is-done { opacity: .58; }
+        .cal-job.is-done .cal-job-title { text-decoration: line-through; text-decoration-thickness: 1px; }
+        .cal-job-check { position: relative; width: 28px; height: 28px; margin-top: 4px; cursor: pointer; }
+        .cal-job-check input { position: absolute; z-index: 1; inset: 0; width: 28px; height: 28px; margin: 0; opacity: 0; cursor: pointer; }
+        .cal-job-check span { display: block; width: 24px; height: 24px; margin: 2px; border: 1.5px solid var(--pencil); transform: rotate(-1deg); background: color-mix(in oklab, var(--paper) 96%, transparent); }
+        .cal-job-check input:checked + span::after { content: ""; display: block; width: 15px; height: 8px; margin: 4px 0 0 3px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
+        .cal-job-check input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 3px; }
+        .cal-job-meta { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+        .cal-category { display: inline-flex; align-items: center; min-height: 25px; padding: 3px 8px; border: 1px solid currentColor; color: var(--accent); font: 10px var(--type); letter-spacing: .12em; text-transform: uppercase; }
+        .cal-category.is-protect, .cal-category.is-check { color: var(--stamp); }
+        .cal-category.is-ground, .cal-category.is-prepare, .cal-category.is-support { color: var(--green); }
+        .cal-location { color: var(--ink-soft); letter-spacing: .08em; }
+        .cal-job-title { margin: 7px 0 3px; color: var(--ink); font-size: clamp(24px, 2.5vw, 29px); line-height: 1.15; }
+        .cal-job-timing, .cal-job-summary { margin: 5px 0 0; line-height: 1.48; }
+        .cal-job-timing { color: var(--ink-soft); font-size: 15px; }
+        .cal-job-timing .t-stamp, .cal-job-details-body .t-stamp { display: block; margin-bottom: 2px; font-size: 9px; color: var(--pencil); }
+        .cal-job-summary { max-width: 920px; font-size: 17px; color: var(--ink); }
+        .cal-job-details { margin-top: 10px; }
+        .cal-job-details > summary { width: fit-content; min-height: 44px; padding: 10px 4px; color: var(--accent); cursor: pointer; font: 13px var(--type); letter-spacing: .08em; text-transform: uppercase; }
+        .cal-job-details > summary::marker { color: var(--accent); }
+        .cal-job-details-body { max-width: 880px; margin: 3px 0 4px; padding: 14px 16px 15px; border-left: 3px solid color-mix(in oklab, var(--accent) 55%, var(--paper)); background: color-mix(in oklab, var(--paper) 92%, var(--paper-deep) 8%); }
+        .cal-job-details-body p { margin: 0; line-height: 1.5; }
+        .cal-job-details-body ol { margin: 13px 0; padding-left: 22px; }
+        .cal-job-details-body li { margin: 7px 0; line-height: 1.45; }
+        .cal-done-when { margin-top: 12px !important; padding-top: 10px; border-top: 1px dotted var(--hairline); }
+        .cal-job-caution { margin-top: 12px !important; padding: 10px 11px; border-left: 3px solid var(--stamp); background: color-mix(in oklab, var(--paper) 89%, var(--stamp) 11%); }
+        .cal-job-caution .t-stamp { color: var(--stamp); }
+        .cal-all-locations { margin-top: 12px !important; color: var(--ink-soft); font-size: 14px; }
+        .cal-profile-link { min-height: 44px; margin-top: 12px; padding: 8px 0; border: 0; background: transparent; color: var(--accent); cursor: pointer; font: 16px var(--serif); text-decoration: underline; text-underline-offset: 3px; }
+        .cal-major-rule { margin: 34px 0 28px; }
+        .cal-section-intro { max-width: 760px; margin: -6px 0 18px 72px; color: var(--ink-soft); font-size: 17px; line-height: 1.5; }
+        .cal-highlight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-left: 72px; }
+        .cal-highlight-card { padding: 15px 16px 16px; border: 1px solid var(--hairline); background: color-mix(in oklab, var(--paper) 91%, var(--green) 9%); }
+        .cal-highlight-card .t-mono { color: var(--ink-soft); letter-spacing: .1em; }
+        .cal-highlight-card h4 { margin: 7px 0 3px; font-size: 24px; line-height: 1.1; }
+        .cal-highlight-card p { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.45; }
+        .cal-indoor-list { margin-left: 72px; padding: 0 14px; border: 1px dashed var(--hairline); background: color-mix(in oklab, var(--paper) 92%, var(--green) 8%); }
+        .cal-job.is-indoor { border-left: 4px solid var(--green); padding-left: 12px; }
+        .cal-empty { margin: 0 0 0 72px; color: var(--pencil); font-size: 22px; font-style: italic; }
+        .cal-sheet-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
         @media (max-width: 760px) {
-          .cal-highlight {
-            grid-template-columns: 1fr auto;
-            gap: 6px 12px; padding: 14px 2px;
-          }
-          .cal-highlight .cal-plant-link { grid-column: 1 / 2; }
-          .cal-highlight .cal-bed {
-            grid-column: 2 / 3; grid-row: 1; align-self: start; margin-top: 8px;
-          }
-          .cal-highlight .cal-dash { display: none; }
-          .cal-highlight .cal-note { grid-column: 1 / -1; }
+          .cal-header { grid-template-columns: 1fr; }
+          .cal-header h1 { font-size: clamp(40px, 12vw, 52px); }
+          .cal-stamp-panel { display: none; }
+          .cal-sheet { padding-inline: 18px; }
+          .cal-sheet-head svg { width: 64px !important; height: 74px !important; }
+          .cal-progress { align-items: flex-start; flex-direction: column; }
+          .cal-progress-actions { justify-content: flex-start; }
+          .cal-priority { padding-left: 12px; }
+          .cal-priority > header { align-items: flex-start; }
+          .cal-priority > header p { max-width: 260px; }
+          .cal-job { grid-template-columns: 32px minmax(0, 1fr); gap: 9px; }
+          .cal-section-intro, .cal-highlight-grid, .cal-indoor-list, .cal-empty { margin-left: 0; }
+          .cal-highlight-grid { grid-template-columns: 1fr; }
+          .cal-indoor-list { padding-inline: 8px; }
+          .cal-sheet-foot .t-mono { display: none; }
         }
-
-        .cal-task-list { list-style: none; margin: 0; padding: 0; }
-        .cal-task {
-          display: grid; grid-template-columns: 28px 1fr auto;
-          gap: 14px; align-items: start;
-          padding: 14px 4px;
-          border-bottom: 1px dotted var(--hairline);
-          min-height: 56px;
-        }
-        .cal-task:last-child { border-bottom: 0; }
-
-        .cal-task-text {
-          font-size: clamp(22px, 2.4vw, 26px);
-          line-height: 1.25; color: var(--ink); text-wrap: pretty;
-        }
-        .cal-task-plants {
-          margin-top: 4px;
-          font-family: var(--serif); font-size: 16px; font-style: italic;
-          color: var(--ink-soft);
-          display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline;
-        }
-        .cal-plant-link-sm {
-          background: transparent; border: 0; padding: 8px 2px; min-height: 44px;
-          font: inherit; color: var(--accent); cursor: pointer;
-          display: inline-flex; align-items: center;
-          text-decoration: underline;
-          text-decoration-color: color-mix(in oklab, var(--accent) 40%, transparent);
-          text-underline-offset: 3px;
-        }
-        .cal-plant-link-sm:hover { text-decoration-color: var(--accent); }
-        .cal-plant-static { color: var(--ink-soft); }
-        .cal-plants-sep { color: var(--pencil); opacity: 0.6; }
-
-        .cal-also-flowering {
-          margin-top: 22px; padding-top: 18px;
-          border-top: 1px dashed var(--hairline);
-        }
-        .cal-flower-chips {
-          display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
-        }
-        .cal-flower-chip {
-          display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px;
-          max-width: 260px; min-height: 44px; padding: 8px 11px;
-          border: 1px solid var(--hairline); border-radius: 2px;
-          background: color-mix(in oklab, var(--paper) 91%, var(--green) 9%);
-          color: var(--ink); cursor: pointer; text-align: left;
-          font-family: var(--serif); font-size: 16px;
-        }
-        .cal-flower-chip:hover {
-          border-color: var(--green);
-          background: color-mix(in oklab, var(--paper) 84%, var(--green) 16%);
-        }
-        .cal-flower-chip small {
-          font-family: var(--type); font-size: 9px; letter-spacing: 0.12em;
-          text-transform: uppercase; color: var(--ink-soft);
-        }
-
-        .cal-season-reference { margin-top: 2px; }
-        .cal-season-intro {
-          max-width: 780px; margin: -4px 0 18px 72px;
-          color: var(--ink-soft); font-size: 17px; line-height: 1.5;
-        }
-        .cal-season-filter-label { display: block; margin: 0 0 7px 72px; }
-        .cal-season-filter {
-          width: min(100%, 520px); min-height: 44px; margin: 0 0 18px 72px; padding: 10px 12px;
-          border: 1px solid var(--hairline); border-radius: 0;
-          background: color-mix(in oklab, var(--paper) 96%, white 4%);
-          color: var(--ink); font: 17px var(--serif);
-        }
-        .cal-season-filter:focus {
-          outline: 2px solid var(--accent); outline-offset: 2px;
-        }
-        .cal-season-groups {
-          display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px; margin-left: 72px;
-        }
-        .cal-season-group {
-          align-self: start;
-          border: 1px dashed var(--hairline);
-          background: color-mix(in oklab, var(--paper) 96%, var(--paper-deep) 4%);
-        }
-        .cal-season-group.is-indoor {
-          border-left: 4px solid var(--green);
-          background: color-mix(in oklab, var(--paper) 93%, var(--green) 7%);
-        }
-        .cal-season-group summary {
-          display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
-          min-height: 48px; padding: 10px 13px; cursor: pointer;
-          list-style-position: inside;
-        }
-        .cal-season-group summary::marker { color: var(--accent); }
-        .cal-season-group summary .t-hand { font-size: 23px; }
-        .cal-season-group summary .t-mono { opacity: 0.65; white-space: nowrap; }
-        .cal-indoor-label {
-          margin-left: auto; padding: 3px 7px; border: 1px solid color-mix(in oklab, var(--green) 40%, var(--paper));
-          font-family: var(--type); font-size: 9px; letter-spacing: 0.1em;
-          text-transform: uppercase; color: var(--green); white-space: nowrap;
-        }
-        .cal-season-group[open] summary {
-          border-bottom: 1px dotted var(--hairline);
-          background: color-mix(in oklab, var(--paper) 91%, var(--accent) 9%);
-        }
-        .cal-season-group ul { list-style: none; margin: 0; padding: 0 13px; }
-        .cal-season-group li { padding: 11px 0 13px; }
-        .cal-season-group li + li { border-top: 1px dotted var(--hairline); }
-        .cal-season-plant { padding-left: 0; font-size: 17px; font-style: normal; }
-        .cal-season-group li > p {
-          margin: 2px 0 0; font-size: 15px; line-height: 1.45; color: var(--ink-soft);
-        }
-        .cal-season-group .cal-season-caution {
-          margin-top: 8px; padding: 8px 9px;
-          border-left: 3px solid var(--stamp);
-          background: color-mix(in oklab, var(--paper) 91%, var(--stamp) 9%);
-          color: var(--ink);
-        }
-        .cal-season-caution .t-stamp {
-          display: block; margin-bottom: 3px; color: var(--stamp); font-size: 9px;
-        }
-
-        @media (max-width: 760px) {
-          .cal-task { grid-template-columns: 28px 1fr; grid-template-rows: auto auto; }
-          .cal-task .cal-bed {
-            grid-column: 2 / 3; grid-row: 2; justify-self: start; margin-top: 6px;
-          }
-          .cal-season-intro, .cal-season-filter-label, .cal-season-filter, .cal-season-groups { margin-left: 0; }
-          .cal-season-groups { grid-template-columns: 1fr; }
-          .cal-flower-chip { flex: 1 1 190px; }
-        }
-
-        .cal-checkbox { width: 22px; height: 22px; margin-top: 4px; flex-shrink: 0; }
-
-        .cal-sheet-foot {
-          display: flex; align-items: center; justify-content: space-between;
-          gap: 12px; flex-wrap: wrap;
+        @media (prefers-reduced-motion: reduce) {
+          .cal-sheet { animation: none; }
+          .cal-tab, .cal-job { transition: none; }
         }
       `}</style>
     </div>
-  );
-}
-
-function PencilCheckbox({ index }) {
-  const tilt = ((index % 5) - 2) * 0.7;
-  return (
-    <svg className="cal-checkbox" viewBox="0 0 24 24"
-      style={{ transform: `rotate(${tilt}deg)` }} aria-hidden="true">
-      <defs>
-        <filter id={`cb-rough-${index}`}>
-          <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="2" seed={index + 1} />
-          <feDisplacementMap in="SourceGraphic" scale="0.7" />
-        </filter>
-      </defs>
-      <g filter={`url(#cb-rough-${index})`} fill="none" stroke="var(--pencil)"
-        strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M 3 4 L 21 3 L 22 22 L 4 21 Z" />
-        <path d="M 3 5 L 4 21" opacity="0.5" />
-      </g>
-    </svg>
   );
 }
 

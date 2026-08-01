@@ -1,408 +1,386 @@
 // Oak Lodge Garden — seasonal-data.js
-// Month-by-month highlights and tasks, derived from plants.json seasonal/care notes.
-// Registered onto window.OAK.SEASONAL (alongside ZONES / PLANTS / etc).
+// A hand-authored, maintenance-first calendar for a new gardener.
 
 (function () {
+  const job = (entry) => ({
+    scope: "zone",
+    zoneKeys: [],
+    plantIds: [],
+    steps: [],
+    ...entry,
+  });
+
+  const highlight = (entry) => ({
+    scope: "zone",
+    zoneKeys: [],
+    plantIds: [],
+    ...entry,
+  });
+
   const SEASONAL = {
     January: {
-      mood: "Bare bones and bright stems. The bones of the garden show through.",
-      highlights: [
-        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bright red winter stems on full display." },
-        { plant: "Box Hedging", bed: "Bed 1", note: "Dense evergreen structure holds the bed shape through winter." },
-        { plant: "Japanese Aralia", bed: "Bed 1", note: "Tropical speckled leaves carry on regardless." },
-        { plant: "New Zealand Flax (dark)", bed: "Stone Bed", note: "Burgundy sword leaves arching low over the gravel." },
-        { plant: "Cabbage Tree", bed: "Stone Bed", note: "Evergreen burgundy fountain — the focal point of the lower terrace." },
+      theme: "Use bare branches to make careful cuts, then keep winter protection secure.",
+      jobs: [
+        job({
+          id: "jan-prune-back-apple",
+          priority: "first",
+          category: "prune",
+          scope: "plant",
+          zoneKeys: ["bed4"],
+          plantIds: ["bed4-apple-tree"],
+          title: "Winter-prune the back-garden apple",
+          timing: "Choose a dry, frost-free day while the tree is dormant.",
+          summary: "Open the crown gradually and remove damaged or crossing wood without taking too much at once.",
+          why: "A light winter prune keeps the framework sound and lets light and air reach the fruiting wood.",
+          steps: ["Remove dead, damaged or diseased wood first.", "Take out branches that rub or grow into the centre.", "Shorten only what is needed to balance the crown; keep the natural outline."],
+          doneWhen: "The crown looks open and balanced, with no rubbing branches and well under a quarter of the canopy removed.",
+          caution: "Do not make a drastic one-year reduction or prune during hard frost.",
+        }),
+        job({
+          id: "jan-prune-pear",
+          priority: "first",
+          category: "prune",
+          scope: "plant",
+          zoneKeys: ["pear"],
+          plantIds: ["stone-pear-tree"],
+          title: "Winter-prune the pear tree",
+          timing: "Any dry, frost-free day before spring growth begins.",
+          summary: "Remove unhealthy and congested wood, keeping the established framework recognisable.",
+          why: "A restrained dormant prune supports healthy fruiting growth and reduces congestion.",
+          steps: ["Start with dead, damaged and crossing branches.", "Remove vigorous inward-growing shoots.", "Make clean cuts just outside the branch collar."],
+          doneWhen: "The centre is less congested and every cut has a clear purpose.",
+          caution: "Avoid removing more than about a quarter of the canopy in one winter.",
+        }),
+        job({
+          id: "jan-prune-front-fruit",
+          priority: "first",
+          category: "prune",
+          scope: "plant",
+          zoneKeys: ["frontApple"],
+          plantIds: ["frontApple-apple-tree"],
+          title: "Prune the front apple, but leave the damson alone",
+          timing: "Prune the apple on a dry, frost-free day; only inspect the damson now.",
+          summary: "Tidy the apple’s framework and mark any damson work for summer.",
+          why: "Apples suit dormant pruning; stone fruit is safer pruned in active growth when silver-leaf infection risk is lower.",
+          steps: ["Prune dead, crossing and inward-growing apple branches.", "Inspect the damson for damage without making routine cuts.", "Note any damson branches that need summer attention."],
+          doneWhen: "The apple is lightly opened and the damson has been inspected but not routine-pruned.",
+          caution: "Do not winter-prune the damson.",
+        }),
+        job({
+          id: "jan-prune-bed5-rose",
+          priority: "month",
+          category: "prune",
+          scope: "plant",
+          zoneKeys: ["bed5"],
+          plantIds: ["bed5-rose"],
+          title: "Prune the Bed 5 climbing rose framework",
+          timing: "After leaf fall and before strong spring growth.",
+          summary: "Keep the main framework, remove tired wood and shorten flowering side shoots.",
+          why: "An open, tied-in framework produces more useful flowering shoots and is easier to manage on the wall.",
+          steps: ["Remove dead, damaged and very weak stems.", "Retain and tie in well-placed main canes.", "Shorten side shoots from the main framework to a few buds."],
+          doneWhen: "The wall has a balanced fan of sound main stems with shortened side shoots.",
+          caution: "Wear gloves and eye protection; do not strip out the whole established framework.",
+        }),
+        job({
+          id: "jan-inspect-summer-prune-trees",
+          priority: "month",
+          category: "check",
+          scope: "zone",
+          zoneKeys: ["bed2", "frontApple"],
+          plantIds: ["bed2-weeping-cherry", "frontApple-damson-tree"],
+          title: "Inspect the cherry and damson without pruning",
+          timing: "Use the bare winter framework for a clear look.",
+          summary: "Mark rubbing, dead-looking or awkward branches for a dry summer pruning window.",
+          why: "Planning now makes summer work deliberate while avoiding unsafe dormant cuts on stone fruit.",
+          steps: ["Look for rubbing branches, canker, silvered foliage history and suckers.", "Photograph or tag questionable branches.", "Recheck after flowering before cutting in summer."],
+          doneWhen: "Any likely summer cuts are recorded and no routine winter cuts have been made.",
+          caution: "Remove only immediately hazardous storm damage now; reserve routine shaping for summer.",
+        }),
+        job({
+          id: "jan-check-winter-protection",
+          priority: "ongoing",
+          category: "protect",
+          scope: "zone",
+          zoneKeys: ["stone", "bed1", "bed2", "bed4", "frontBed5"],
+          plantIds: ["stone-pennisetum-rubrum", "stone-echeveria", "stone-echeveria-devotion", "bed1-angel-wings", "bed2-angel-wings", "bed4-callistemon-inferno-yanferno", "frontBed5-bluebell-creeper-sollya", "frontBed5-salvia-salgoon-lake-blueberry"],
+          title: "Check tender-plant protection after bad weather",
+          timing: "After frost, snow, strong wind or prolonged winter rain.",
+          summary: "Make sure lifted plants remain frost-free and outdoor crowns stay protected without being sealed in wet material.",
+          why: "Cold combined with trapped damp is the main winter risk for Oak Lodge’s tender and borderline plants.",
+          steps: ["Refasten loose fleece and remove any material that has become sodden.", "Check stored plants for rot and remove affected material promptly.", "Clear debris from outdoor crowns and keep protective mulch airy."],
+          doneWhen: "Protection is secure, dry enough to breathe and no rot or trapped debris is visible.",
+        }),
       ],
-      tasks: [
-        { task: "Prune apple tree while dormant", plants: ["Apple Tree"], bed: "Bed 3" },
-        { task: "Check Callistemon winter protection after severe weather; do not prune in winter", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
-        { task: "Check Gaillardia — cut back any dead growth. Replace if it hasn't survived the winter", plants: ["Gaillardia"], bed: "Bed 3" },
-        { task: "Prune pear tree while dormant", plants: ["Pear Tree"], bed: "Tree" },
-        { task: "Prune the Bed 5 climbing rose to a balanced framework, removing dead or unproductive canes without stripping out the whole structure", plants: ["Rose"], bed: "Bed 5" },
-        { task: "Remove dead or crossing branches from the Japanese Maple only if necessary", plants: ["Japanese Maple 'Bloodgood'"], bed: "Bed 1" },
-        { task: "Check Cordyline for frost damage; tie up leaves if hard frost forecast", plants: ["Cabbage Tree"], bed: "Stone Bed" },
+      highlights: [
+        highlight({ id: "jan-dogwood-stems", title: "Front Bed 3’s red-stem display", note: "The dogwood carries the strongest winter colour once its leaves are gone.", zoneKeys: ["frontBed3"], plantIds: ["bed2-variegated-dogwood"] }),
+        highlight({ id: "jan-bed1-structure", title: "Bed 1 holds its shape", note: "Box, Japanese Aralia and evergreen foliage reveal the bed’s winter structure.", zoneKeys: ["bed1"] }),
+        highlight({ id: "jan-stone-structure", title: "Rosettes and dark foliage in the Stone Bed", note: "Houseleeks, stonecrops, Phormium and Cordyline keep the gravel bed architectural.", zoneKeys: ["stone"] }),
+        highlight({ id: "jan-front5-heathers", title: "Winter colour along Front Bed 5", note: "Evergreen heathers and colour-changing foliage keep the long boundary lively.", zoneKeys: ["frontBed5"] }),
+      ],
+      indoorJobs: [
+        job({ id: "jan-indoor-kentia-clean", priority: "month", category: "check", scope: "plant", zoneKeys: ["houseHallKentia"], plantIds: ["house-hallway-kentia-palm"], title: "Clean and inspect the Kentia palm", timing: "On a bright winter morning.", summary: "Wipe dust from the fronds and inspect both leaf surfaces for scale or mites.", why: "Clean leaves use limited winter light better and an early pest check prevents a larger problem.", steps: ["Support each frond while wiping it gently.", "Check the undersides and stem bases for pests.", "Remove only fully brown fronds at the base."], doneWhen: "The fronds are clean and no active pest signs remain unchecked." }),
       ],
     },
 
     February: {
-      mood: "Last of the winter colour, first stirrings underground.",
+      theme: "Finish dormant pruning, prepare supports and make space for spring growth.",
+      jobs: [
+        job({ id: "feb-prune-wisteria", priority: "first", category: "prune", scope: "plant", zoneKeys: ["bed5"], plantIds: ["bed5-wisteria"], title: "Make the winter wisteria prune", timing: "During dormancy, before buds begin extending.", summary: "Shorten last summer’s side shoots back to two or three buds from the main framework.", why: "The winter cut refines August’s prune and concentrates the flowering spurs close to the support.", steps: ["Identify the permanent main framework.", "Follow each shortened side shoot back to its base.", "Cut to two or three healthy buds and remove dead or tangled growth."], doneWhen: "Short flowering spurs sit neatly along a clearly visible main framework.", caution: "Do not cut through the established main stems." }),
+        job({ id: "feb-prune-front-clematis", priority: "first", category: "prune", scope: "plant", zoneKeys: ["frontBed5"], plantIds: ["frontBed5-clematis"], title: "Cut back the Front Bed 5 clematis", timing: "Late February, before vigorous new growth tangles into its support.", summary: "Treat the current viticella identification as pruning group 3 and cut every stem to strong low buds.", why: "This clematis flowers on new growth and a firm annual cut prevents a bare, tangled base.", steps: ["Work from the base so old stems are not confused with neighbouring climbers.", "Cut to sound buds about 30–45cm above ground.", "Remove the cut top growth and tie the remaining stems loosely."], doneWhen: "All clematis stems end at healthy low buds and the support is clear for new growth.", caution: "Confirm each stem belongs to this clematis before cutting near the honeysuckle and other climbers." }),
+        job({ id: "feb-coppice-dogwood", priority: "first", category: "prune", scope: "plant", zoneKeys: ["frontBed3"], plantIds: ["bed2-variegated-dogwood"], title: "Renew the variegated dogwood stems", timing: "Late February to early March, before leaves open.", summary: "Remove roughly one third of the oldest stems at ground level rather than cutting every stem short.", why: "Selective renewal encourages bright young winter stems while preserving the shrub’s established shape.", steps: ["Identify the thickest and dullest old stems.", "Remove about one in three cleanly at the base.", "Leave strong younger red stems untouched."], doneWhen: "Old wood has been thinned and a balanced set of bright young stems remains.", caution: "Do not coppice the whole shrub unless a full renovation is deliberately intended." }),
+        job({ id: "feb-finish-pome-pruning", priority: "month", category: "prune", scope: "zone", zoneKeys: ["bed4", "pear", "frontApple", "frontGateTree"], plantIds: ["bed4-apple-tree", "stone-pear-tree", "frontApple-apple-tree", "frontGateTree-weeping-crab-apple"], title: "Finish restrained apple, pear and crab-apple pruning", timing: "Before bud break, on a dry and frost-free day.", summary: "Complete only the sound-wood and congestion work that was not finished in January.", why: "Finishing before active growth avoids rushed late cuts and keeps the frameworks easy to inspect.", steps: ["Recheck earlier cuts and the remaining framework.", "Remove only clearly justified dead, crossing or inward growth.", "Preserve the crab apple’s weeping outline."], doneWhen: "All four trees have sound, recognisable frameworks with no unnecessary reduction.", caution: "Do not include the cherry or damson in this winter round." }),
+        job({ id: "feb-prune-front-roses", priority: "month", category: "prune", scope: "zone", zoneKeys: ["frontBed3", "frontBed4", "frontBed5"], plantIds: ["frontBed3-climbing-rose-white-pink", "frontBed3-rose-pink", "frontBed4-the-pilgrim", "frontBed4-the-generous-gardener", "frontBed5-climber-unidentified"], title: "Prune and tie the front-garden roses", timing: "Late winter, after the harshest weather and before strong leaf growth.", summary: "Remove unhealthy wood, retain useful frameworks and tie climbers into open fans.", why: "Early training keeps paths clear and directs spring growth where it can flower without tangling.", steps: ["Start with dead, damaged, crossing and very weak stems.", "Tie climbing stems as near horizontal as practical.", "Shorten side shoots and balance shrub roses without flattening their shape."], doneWhen: "Each rose has an open framework, secure ties and no branches obstructing access.", caution: "Use gloves and eye protection, and check which stems belong to neighbouring climbers." }),
+        job({ id: "feb-set-peony-support", priority: "month", category: "support", scope: "plant", zoneKeys: ["bed2"], plantIds: ["bed2-peony"], title: "Put the peony support in early", timing: "Before the shoots become tall enough to bend.", summary: "Position a support over the dormant or newly emerging crown so growth can rise through it naturally.", why: "Early support disappears into the foliage and prevents heavy flowers collapsing after rain.", steps: ["Clear loose debris without covering the crown buds.", "Centre the support over the plant.", "Anchor it firmly without spearing the crown."], doneWhen: "The support is stable, centred and ready for shoots to grow through it." }),
+        job({ id: "feb-prepare-ground", priority: "ongoing", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "bed5", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5"], plantIds: [], title: "Clear and prepare border surfaces", timing: "Work only when the ground is not frozen or saturated.", summary: "Remove perennial weeds and compacted leaf litter, then leave clean soil ready for spring mulch.", why: "Early clearing makes spring growth visible and prevents weeds gaining a head start.", steps: ["Hand-remove weeds with their roots.", "Lift wet leaf mats from crowns and low evergreens.", "Leave healthy soil undisturbed rather than repeatedly digging it."], doneWhen: "Plant crowns are visible, weed roots are removed and the soil surface is ready for mulch." }),
+      ],
       highlights: [
-        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Red stems still glowing — the last big show before they're cut down." },
-        { plant: "Box Hedging", bed: "Bed 1", note: "Steady green presence while everything else is bare." },
-        { plant: "Houseleeks", bed: "Stone Bed", note: "Tight winter rosettes, sometimes with a red flush." },
+        highlight({ id: "feb-dogwood-last-show", title: "The dogwood’s last full winter show", note: "Enjoy the brightest red stems before selective renewal pruning.", zoneKeys: ["frontBed3"], plantIds: ["bed2-variegated-dogwood"] }),
+        highlight({ id: "feb-front5-heath", title: "Winter heath along Front Bed 5", note: "Low evergreen mounds and winter flowers carry colour close to the ground.", zoneKeys: ["frontBed5"] }),
+        highlight({ id: "feb-stone-rosettes", title: "Cold-coloured Stone Bed rosettes", note: "Houseleeks often deepen in red and purple tones in bright winter weather.", zoneKeys: ["stone"] }),
       ],
-      tasks: [
-        { task: "Coppice dogwood — cut a third of stems to ground for next year's colour", plants: ["Variegated Dogwood"], bed: "Front Bed 3" },
-        { task: "Continue winter pruning of fruit trees while still dormant", plants: ["Apple Tree", "Pear Tree"], bed: "Bed 3" },
-        { task: "Prepare supports for peony before shoots emerge", plants: ["Peony"], bed: "Bed 2" },
-        { task: "Winter prune wisteria — long shoots back to 2–3 buds", plants: ["Wisteria"], bed: "Bed 4" },
-        { task: "Mulch Abelia 'Kaleidoscope' base lightly to protect roots from hard frost", plants: ["Abelia 'Kaleidoscope'"], bed: "Bed 3" },
-      ],
+      indoorJobs: [],
     },
 
     March: {
-      mood: "Things wake up. The first blossom catches you off guard.",
-      highlights: [
-        { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom buds breaking — the beginning of the show." },
-        { plant: "Pear Tree", bed: "Tree", note: "White blossom appearing at the gate." },
-        { plant: "Little Heath", bed: "Bed 1", note: "Red young shoots and white spring flowers beginning above the cream-edged evergreen foliage." },
-        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Vivid orange-red new growth emerging — one of the loudest spring foliage moments in the garden." },
+      theme: "Clear old growth, mulch clean ground and protect the first tender shoots.",
+      jobs: [
+        job({ id: "mar-prune-spiraea-bed3", priority: "first", category: "prune", scope: "plant", zoneKeys: ["bed3"], plantIds: ["bed2-spiraea-double-play-big-bang"], title: "Prune the Bed 3 spiraea before growth runs away", timing: "Early March, as buds begin moving but before shoots extend strongly.", summary: "Remove weak wood and shorten the framework to encourage vivid new foliage and fresh flowering growth.", why: "Early-spring pruning renews this summer-flowering spiraea without sacrificing the coming display.", steps: ["Remove dead and very weak stems at the base.", "Shorten the remaining stems evenly to healthy outward buds.", "Clear the prunings from the crown."], doneWhen: "A compact, balanced framework remains with healthy buds facing outward." }),
+        job({ id: "mar-cut-back-late-frost-plants", priority: "first", category: "cut-back", scope: "zone", zoneKeys: ["frontBed5", "bed4"], plantIds: ["frontBed5-gaura-gaudi-red", "frontBed5-salvia-salgoon-lake-blueberry", "frontBed5-hardy-fuchsia", "bed4-gaillardia"], title: "Delay tender cut-backs until the worst frost has passed", timing: "Late March or when strong new buds are clearly visible.", summary: "Cut old gaura, salvia, hardy fuchsia and gaillardia growth back to live shoots rather than to an arbitrary height.", why: "Old stems shelter the crowns; visible new growth shows exactly where each plant has survived.", steps: ["Wait until live buds or basal shoots are easy to see.", "Cut dead stems just above healthy growth.", "Remove soft or rotten crown material with clean tools."], doneWhen: "Only live frameworks or healthy emerging crowns remain.", caution: "If hard frost is still forecast, leave sound old stems a little longer." }),
+        job({ id: "mar-clear-herbaceous-crowns", priority: "month", category: "cut-back", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "frontBed2", "frontBed4", "frontBed5", "frontStone"], plantIds: ["bed1-hosta", "bed1-hosta-gold", "bed2-peony", "bed2-avens", "bed2-forget-me-not", "bed2-centaurea-snowy-owl", "frontBed2-polemonium-golden-feathers", "frontBed4-astrantia-trio", "frontBed5-ceratostigma-plumbaginoides", "frontStone-hosta"], title: "Clear old herbaceous growth before new shoots expand", timing: "As each crown begins to show fresh growth.", summary: "Remove collapsed stems and leaves without cutting new buds or burying crowns.", why: "A careful spring clear reduces hiding places for slugs and makes room for clean new growth.", steps: ["Identify each crown before working around it.", "Cut or lift away only dead material.", "Mark dormant plants that are still hard to see."], doneWhen: "New shoots are unobstructed and no healthy crown has been covered or damaged." }),
+        job({ id: "mar-clip-heathers", priority: "month", category: "prune", scope: "zone", zoneKeys: ["frontBed5"], plantIds: ["frontBed5-heather-bells-extra-special", "frontBed5-heather-tib", "frontBed5-heather-leprechaun", "frontBed5-heather-winter-chocolate"], title: "Lightly clip the finished heathers", timing: "Immediately after each plant finishes flowering.", summary: "Remove only faded flower tips, keeping green or gold foliage below every cut.", why: "A light annual clip keeps heathers compact without cutting into old wood that may not regrow.", steps: ["Check that flowering has finished.", "Follow the mound’s natural outline with small shears.", "Stop every cut above live leafy growth."], doneWhen: "Faded spikes are gone and each mound still has leafy tips across its surface.", caution: "Never cut back into bare brown wood." }),
+        job({ id: "mar-mulch-borders", priority: "month", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "bed5", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5"], plantIds: [], title: "Mulch the main beds after clearing", timing: "Once weeds are removed and the soil is workable.", summary: "Lay an even organic mulch over open soil while keeping trunks, stems and crowns clear.", why: "Spring mulch improves the soil, suppresses weeds and protects the surface before growth closes in.", steps: ["Remove weeds first rather than burying them.", "Spread a modest, even layer over bare soil.", "Pull mulch back from woody stems and herbaceous crowns."], doneWhen: "Bare soil is covered evenly and every trunk and crown has a clear breathing ring." }),
+        job({ id: "mar-hostas-slugs", priority: "ongoing", category: "check", scope: "zone", zoneKeys: ["bed1", "frontStone"], plantIds: ["bed1-hosta", "bed1-hosta-gold", "frontStone-hosta"], title: "Start hosta slug checks at shoot stage", timing: "From the first pointed shoots, especially after mild damp nights.", summary: "Inspect around crowns and remove hiding places before leaves unfurl.", why: "Early damage happens quickly and remains visible for the whole season.", steps: ["Check beneath nearby pots, boards and leaf litter.", "Inspect shoots at dusk or early morning.", "Use the garden’s preferred wildlife-safe control consistently."], doneWhen: "Crowns are clear of hiding debris and new shoots show no unchecked fresh damage." }),
+        job({ id: "mar-box-and-nests", priority: "ongoing", category: "check", scope: "zone", zoneKeys: ["bed1", "frontHedge"], plantIds: ["bed1-box-hedging", "frontHedge-hedge-to-identify"], title: "Check box caterpillar and nesting activity", timing: "Weekly as weather warms, before any hedge clipping.", summary: "Inspect box leaves for webbing and the front hedge carefully for active nests.", why: "Early pest detection is easier to manage, while active bird nests must not be disturbed.", steps: ["Open the box foliage and look for webbing, pellets and chewed leaves.", "Watch the front hedge quietly for repeated bird movement.", "Postpone clipping wherever a nest may be active."], doneWhen: "Pest signs are assessed and no planned hedge work risks disturbing a nest." }),
       ],
-      tasks: [
-        { task: "Prune Spiraea 'Double Play Big Bang' hard in early spring before growth gets going — cut back hard to encourage vivid new growth and flowers", plants: ["Spiraea 'Double Play Big Bang'"], bed: "Bed 2" },
-        { task: "Pull away dead Yucca leaves with gloves and clear debris from the crown; do not cut into the live rosette", plants: ["Yucca"], bed: "Bed 5" },
-        { task: "Cut old leaves from the dark New Zealand Flax individually at the base", plants: ["New Zealand Flax (dark)"], bed: "Stone Bed" },
-        { task: "Prune Euonymus to shape", plants: ["Euonymus 'Emerald 'n' Gold'"], bed: "Bed 1" },
-        { task: "Prune Wintercreeper to shape", plants: ["Wintercreeper 'Emerald Gaiety'"], bed: "Bed 1" },
-        { task: "Check Avens for signs of life and clear dead foliage", plants: ["Avens"], bed: "Bed 2" },
-        { task: "Mulch the Clematis base with compost or leaf mould", plants: ["Clematis"], bed: "Patio" },
-        { task: "Watch for box caterpillar — check leaves regularly", plants: ["Box Hedging"], bed: "Bed 1" },
-        { task: "Check Dahlia tubers for signs of life — new shoots should appear at the crowns. Remove mulch gradually.", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
+      highlights: [
+        highlight({ id: "mar-pear-blossom", title: "Pear blossom at the upper terrace", note: "White blossom begins to soften the bare framework near the gate.", zoneKeys: ["pear"], plantIds: ["stone-pear-tree"] }),
+        highlight({ id: "mar-bed2-cherry", title: "The weeping cherry starts its show", note: "Pink buds and blossom arrive before the canopy fills with leaves.", zoneKeys: ["bed2"], plantIds: ["bed2-weeping-cherry"] }),
+        highlight({ id: "mar-bed1-little-heath", title: "Little Heath brightens Bed 1", note: "Red young shoots and white spring flowers lift the evergreen edge.", zoneKeys: ["bed1"], plantIds: ["bed1-little-heath"] }),
+        highlight({ id: "mar-front5-spring", title: "Fresh colour wakes Front Bed 5", note: "Pieris, heathers and young evergreen growth begin the front boundary’s spring change.", zoneKeys: ["frontBed5"] }),
+      ],
+      indoorJobs: [
+        job({ id: "mar-indoor-kentia-spring-check", priority: "month", category: "prepare", scope: "plant", zoneKeys: ["houseHallKentia"], plantIds: ["house-hallway-kentia-palm"], title: "Give the Kentia its spring root check", timing: "As brighter days restart growth.", summary: "Check whether roots are genuinely crowded and refresh only the loose surface compost if repotting is not needed.", why: "Kentias prefer not to be disturbed unnecessarily, so evidence should decide whether a larger pot is required.", steps: ["Look for roots densely circling or emerging from drainage holes.", "Check that the palm remains stable in its pot.", "Repot only one size larger if it is clearly root-bound."], doneWhen: "The palm is stable, drainage is clear and any repotting decision is evidence-based.", caution: "Do not break up the root ball or move into an oversized container." }),
       ],
     },
 
     April: {
-      mood: "Everything emerges at once. New leaves the colour of copper.",
+      theme: "Support fast growth, tidy winter damage and stay ready for late frost.",
+      jobs: [
+        job({ id: "apr-remove-winter-damage", priority: "first", category: "prune", scope: "zone", zoneKeys: ["bed1", "bed2", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["bed1-japanese-aralia", "bed2-silverbush", "stone-hebe", "frontBed2-coprosma-inferno", "frontBed2-coprosma-pina-colada", "frontBed4-flaming-silver", "frontBed5-pittosporum-tom-thumb", "frontBed5-hebe-rhubarb-and-custard"], title: "Remove winter damage only after new growth confirms what is alive", timing: "Wait for clear live buds and a mild forecast.", summary: "Trace damaged tips back to healthy growth and make small, clean cuts.", why: "Waiting prevents healthy but slow stems being mistaken for dead wood.", steps: ["Scratch-test doubtful woody stems lightly if needed.", "Cut just above a healthy outward bud or side shoot.", "Disinfect tools after any suspicious dieback."], doneWhen: "Dead tips are removed and all retained stems show live buds or healthy tissue.", caution: "Do not hard-prune healthy silver, variegated or evergreen growth simply because it looks weather-marked." }),
+        job({ id: "apr-protect-new-growth", priority: "first", category: "protect", scope: "zone", zoneKeys: ["bed1", "bed2", "frontBed5"], plantIds: ["bed1-japanese-maple", "bed1-dahlia", "bed1-dahlia-yellow", "bed2-peony", "frontBed5-pieris-polar-passion", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Protect vulnerable new shoots from late frost", timing: "Whenever a clear, cold night is forecast after growth has started.", summary: "Cover tender shoots overnight and remove protection the next morning.", why: "Soft new growth can be damaged even when established roots remain hardy.", steps: ["Place fleece loosely so it does not crush shoots.", "Secure the edges against wind.", "Remove or open the cover after the frost has lifted."], doneWhen: "Tender growth is protected for the cold night and uncovered again by day." }),
+        job({ id: "apr-tie-climbers", priority: "month", category: "support", scope: "zone", zoneKeys: ["bed2", "bed5", "patio", "frontBed3", "frontBed4", "frontBed5"], plantIds: ["bed2-hydrangea-petiolaris", "bed5-wisteria", "bed5-rose", "stone-honeysuckle", "stone-clematis", "frontBed3-climbing-rose-white-pink", "frontBed4-the-generous-gardener", "frontBed5-clematis", "frontBed5-honeysuckle", "frontBed5-bluebell-creeper-sollya"], title: "Tie in climbers before stems harden", timing: "On a calm day while new shoots are still flexible.", summary: "Guide useful stems across their supports and replace tight or broken ties.", why: "Early training prevents wind damage and spreads flowering growth across the available wall space.", steps: ["Remove failed ties and untangle only what moves easily.", "Fan shoots into open gaps without sharp bends.", "Use soft figure-eight ties with room for thickening."], doneWhen: "New growth is supported, evenly spread and not constricted." }),
+        job({ id: "apr-peony-and-dahlia-support", priority: "month", category: "support", scope: "zone", zoneKeys: ["bed1", "bed2"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow", "bed2-peony"], title: "Check peony support and prepare dahlia supports", timing: "Before stems become tall or top-heavy.", summary: "Raise the peony support with growth and place discreet dahlia stakes without damaging tubers.", why: "Support fitted early is safer for the crown and disappears into the foliage.", steps: ["Guide peony shoots through rather than forcing them.", "Place dahlia stakes outside the tuber crown.", "Add loose ties only when stems need them."], doneWhen: "Supports are stable, unobtrusive and clear of crowns and tubers." }),
+        job({ id: "apr-spring-ground-round", priority: "month", category: "ground", scope: "zone", zoneKeys: ["stone", "frontStone", "bed1", "bed2", "bed3", "bed4", "bed5", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5"], plantIds: [], title: "Make the spring ground round", timing: "Before foliage closes over the soil surface.", summary: "Remove weeds, uncover crowns and top up thin mulch without burying gravel or alpine plants.", why: "A final early weed pass prevents difficult hand-work among mature stems later.", steps: ["Remove weeds from the root, especially along edges.", "Pull organic mulch away from crowns and trunks.", "Hand-clear gravel around Stone Bed and trough rosettes rather than mulching them."], doneWhen: "Beds are weed-free, crowns are open and each surface has the right finish for its planting." }),
+        job({ id: "apr-deadhead-spring-evergreens", priority: "ongoing", category: "deadhead", scope: "zone", zoneKeys: ["bed1", "frontBed5"], plantIds: ["bed1-little-heath", "frontBed5-pieris-polar-passion", "frontBed5-heather-bells-extra-special"], title: "Remove finished spring flowers carefully", timing: "Only as each display finishes.", summary: "Snap or snip spent flowers without removing the new leafy growth beneath them.", why: "Careful tidying keeps compact evergreens neat while preserving next season’s framework.", steps: ["Check that the whole flower cluster is finished.", "Support the stem with one hand.", "Remove only the spent head or soft flower tip."], doneWhen: "Finished flowers are gone and fresh leaves and buds remain intact." }),
+        job({ id: "apr-pest-round", priority: "ongoing", category: "check", scope: "zone", zoneKeys: ["bed1", "frontStone", "frontHedge"], plantIds: ["bed1-hosta", "bed1-hosta-gold", "bed1-box-hedging", "frontStone-hosta", "frontHedge-hedge-to-identify"], title: "Continue slug, box-caterpillar and nest checks", timing: "Weekly through the main spring growth surge.", summary: "Inspect new hosta leaves, open box foliage and confirm hedges are safe before clipping.", why: "Fast spring growth can hide early damage and nesting activity.", steps: ["Check hostas after mild nights.", "Look inside box foliage for webbing and feeding.", "Observe hedges for bird traffic before any work."], doneWhen: "Fresh damage has a response and no hedge work threatens an active nest." }),
+      ],
       highlights: [
-        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Brilliant orange-red new foliage at peak — stunning before the flowers arrive." },
-        { plant: "Weeping Cherry", bed: "Bed 2", note: "Pink blossom in full cascade over the wall." },
-        { plant: "Pear Tree", bed: "Tree", note: "White blossom against bare branches." },
-        { plant: "Apple Tree", bed: "Bed 3", note: "Pink-tinged blossom around the bird feeders." },
-        { plant: "Japanese Maple 'Bloodgood'", bed: "Bed 1", note: "Deep red-purple leaves unfurling for a long season of dark colour." },
-        { plant: "Forget-me-not", bed: "Bed 2", note: "Sky-blue clouds at ground level." },
-        { plant: "Hosta 'Patriot'", bed: "Bed 1", note: "Tightly furled cream-edged shoots pushing up through the leaf litter." },
-        { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "Dark shoots emerging from the crown — the foliage show begins." },
+        highlight({ id: "apr-bed2-blossom", title: "Bed 2’s weeping cherry in full blossom", note: "The pink cascade is the month’s clearest signal that spring has arrived.", zoneKeys: ["bed2"], plantIds: ["bed2-weeping-cherry"] }),
+        highlight({ id: "apr-fruit-blossom", title: "Fruit-tree blossom across both gardens", note: "Apple, pear, damson and crab-apple flowers connect the front and back garden.", zoneKeys: ["bed4", "pear", "frontApple", "frontGateTree"] }),
+        highlight({ id: "apr-bed3-colour", title: "Bed 3’s first strong colour", note: "Forget-me-nots and the spiraea’s orange-red new foliage brighten the wall gap.", zoneKeys: ["bed3"] }),
+        highlight({ id: "apr-bed1-foliage", title: "Bed 1 unfurls", note: "Dark maple leaves, hosta shoots and dahlia growth rebuild the bed’s layered canopy.", zoneKeys: ["bed1"] }),
       ],
-      tasks: [
-        { task: "Remove faded Little Heath flower trusses and any damaged growth; routine pruning is rarely needed", plants: ["Little Heath"], bed: "Bed 1" },
-        { task: "Watch for slugs on Hostas — check after rain, especially at dusk", plants: ["Hosta 'Patriot'", "Hosta (gold)"], bed: "Bed 1" },
-        { task: "Begin regular rose watering and feed; mulch around the base", plants: ["Rose"], bed: "Bed 4" },
-        { task: "Cut back Fuchsia hard to a low framework — new growth will come from the base", plants: ["Fuchsia"], bed: "Big Pot 1" },
-        { task: "New growth on Abelia 'Kaleidoscope' — no action needed, just enjoy the emerging variegation", plants: ["Abelia 'Kaleidoscope'"], bed: "Bed 3" },
-      ],
+      indoorJobs: [],
     },
 
     May: {
-      mood: "The garden's loudest month. Everything is happening at once.",
+      theme: "Guide climbers, support heavy flowers and assemble the summer containers after frost.",
+      jobs: [
+        job({ id: "may-prune-clematis-montana", priority: "first", category: "prune", scope: "plant", zoneKeys: ["patio"], plantIds: ["stone-clematis"], title: "Prune Clematis montana after flowering", timing: "As soon as the main flower display finishes.", summary: "Shorten growth that is outgrowing the wall and tie the new framework into useful space.", why: "Pruning immediately after flowering gives the climber a full season to make next year’s flowering wood.", steps: ["Remove dead or damaged stems first.", "Shorten growth that blocks access, gutters or neighbouring plants.", "Tie retained young stems across open support."], doneWhen: "The climber is contained, evenly spread and still has a strong leafy framework.", caution: "Avoid a severe cut unless renovation is genuinely needed." }),
+        job({ id: "may-deadhead-rhododendron", priority: "month", category: "deadhead", scope: "plant", zoneKeys: ["bed1"], plantIds: ["bed1-rhododendron"], title: "Deadhead the Bed 1 rhododendron", timing: "When the flower trusses fade and before new shoots lengthen around them.", summary: "Snap off spent trusses while protecting the soft growth buds immediately below.", why: "Careful deadheading tidies the shrub without sacrificing next year’s structure.", steps: ["Cup the faded truss in one hand.", "Find the joint directly above the new buds.", "Snap the truss sideways without pulling on the buds."], doneWhen: "All faded trusses are removed and every cluster of new shoots is intact.", caution: "The new buds are brittle; stop if the joint does not release cleanly." }),
+        job({ id: "may-support-peony", priority: "month", category: "support", scope: "plant", zoneKeys: ["bed2"], plantIds: ["bed2-peony"], title: "Raise and secure the peony support", timing: "Before the buds become heavy and open.", summary: "Guide stems through the support and give the outer flower stems room without crowding them.", why: "Large blooms can bend or snap unsupported stems.", steps: ["Lift leaning stems gently rather than pulling them upright.", "Raise adjustable support rings beneath the buds.", "Add a soft outer tie only where necessary."], doneWhen: "Every heavy bud is supported but the plant still looks natural." }),
+        job({ id: "may-pinching-dahlias", priority: "month", category: "prepare", scope: "zone", zoneKeys: ["bed1"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow"], title: "Pinch the Double Dreamy dahlias for bushier growth", timing: "When each plant has several strong sets of leaves and is actively growing.", summary: "Remove the soft central growing tip above a leaf pair.", why: "Early pinching encourages more branching, a sturdier shape and more flowering stems.", steps: ["Choose a healthy shoot above at least three leaf pairs.", "Pinch or snip out only the soft tip.", "Leave weak or recently damaged shoots to build strength."], doneWhen: "The main tips are removed cleanly and healthy leaf pairs remain below each cut." }),
+        job({ id: "may-bigpot1-summer", priority: "month", category: "prepare", scope: "pot", potKey: "bigpot1", zoneKeys: ["bigpot1"], plantIds: ["bigpot1-fuchsia", "bigpot1-verbena", "bigpot1-calibrachoa", "bigpot1-nepeta", "bigpot1-lobelia", "bigpot1-petunia"], title: "Set up Big Pot 1 for summer", timing: "After frost risk has passed and all plants are hardened off.", summary: "Clear failed growth, refresh the surface compost, arrange the whole composition and begin its feeding routine.", why: "Treating the mixed planting as one container keeps its different plants balanced rather than managed as six separate records.", steps: ["Cut the hardy fuchsia back to live growth if not already done.", "Remove failed annual material and refresh the top layer of compost.", "Pinch or trim the composition lightly so no plant smothers its neighbours."], doneWhen: "The pot is clean, evenly planted and every component has space to develop." }),
+        job({ id: "may-bigpot2-summer", priority: "month", category: "prepare", scope: "pot", potKey: "bigpot2", zoneKeys: ["bigpot2"], plantIds: ["bigpot2-lobelia", "bigpot2-verbena", "bigpot2-petunia", "bigpot2-nepeta", "bigpot2-fuchsia"], title: "Set up Big Pot 2 for summer", timing: "After frost risk has passed and all plants are hardened off.", summary: "Refresh and balance the mirror planting as a single container.", why: "A pot-level check keeps the fuchsia, trailers and catmint in proportion from the start.", steps: ["Remove dead material and cut the fuchsia back to live buds.", "Refresh the loose surface compost.", "Position and pinch growth so the centre and trailing edge remain distinct."], doneWhen: "The pot has a clear centre, an even trailing edge and no failed material." }),
+        job({ id: "may-littlepot1-summer", priority: "month", category: "prepare", scope: "pot", potKey: "littlepot1", zoneKeys: ["littlepot1"], plantIds: ["littlepot1-geranium", "littlepot1-petunia"], title: "Plant Little Pot 1 as one summer display", timing: "After the last frost.", summary: "Set the geranium and petunia together with enough room for both to fill out.", why: "One balanced pot-level setup avoids duplicated instructions for two plants sharing the same compost.", steps: ["Remove old roots and loose debris.", "Refresh the compost and check the drainage opening.", "Pinch damaged tips and arrange the upright and trailing growth."], doneWhen: "Both plants sit firmly with open centres and space at the rim." }),
+        job({ id: "may-littlepot2-summer", priority: "month", category: "prepare", scope: "pot", potKey: "littlepot2", zoneKeys: ["littlepot2"], plantIds: ["littlepot2-geranium", "littlepot2-petunia"], title: "Plant Little Pot 2 as one summer display", timing: "After the last frost.", summary: "Refresh the pot and balance the geranium with its trailing petunia.", why: "The pair should be managed as one container rather than two separate calendar entries.", steps: ["Clear the old surface and check drainage.", "Refresh the compost without overfilling the pot.", "Arrange the upright plant behind the trailing edge."], doneWhen: "The two plants form one stable, balanced display." }),
+        job({ id: "may-baskets-summer", priority: "month", category: "prepare", scope: "pot", potKey: "baskets", zoneKeys: ["baskets"], plantIds: ["baskets-trailing-fuchsia", "baskets-bacopa", "baskets-trailing-lobelia", "baskets-trailing-verbena"], title: "Prepare the hanging baskets for summer", timing: "Hang outside only after frost risk has passed.", summary: "Treat all basket plants as one trailing composition and pinch uneven growth before hanging.", why: "A balanced start produces even coverage and avoids one vigorous trailer dominating the baskets.", steps: ["Check chains, brackets and liners for damage.", "Refresh compost and remove failed plants.", "Pinch long shoots to an even outline before hanging."], doneWhen: "The baskets are secure, evenly filled and safely attached." }),
+        job({ id: "may-frontpot-summer", priority: "month", category: "prepare", scope: "pot", potKey: "frontpot", zoneKeys: ["frontpot"], plantIds: ["frontpot-gazania-sunny-side-up", "frontpot-gazania-orange-flame", "frontpot-calibrachoa", "frontpot-bacopa-white"], title: "Build the Front Door Pot as one display", timing: "After frost risk has passed.", summary: "Arrange the two gazanias and trailing plants as a single sunny container.", why: "A single pot-level plan keeps the central daisies visible while the trailers soften the rim.", steps: ["Clear old roots and confirm the drainage opening is free.", "Refresh the compost and set the gazanias as the main accents.", "Space the calibrachoa and bacopa around the edge."], doneWhen: "The pot has clear focal flowers, an even trailing edge and no crowded crowns." }),
+        job({ id: "may-wallpot1-summer", priority: "month", category: "prepare", scope: "pot", potKey: "wallpot1", zoneKeys: ["wallpot1"], plantIds: ["wallpot1-candy-house-mix"], title: "Refresh the Candy House wall pot", timing: "After frost risk has passed.", summary: "Clear the small pot, refresh compost and pinch the planting into a compact trailing shape.", why: "Small wall pots become sparse quickly if the plant begins the season leggy or the compost is exhausted.", steps: ["Check the fixing and drainage opening.", "Replace loose exhausted surface compost.", "Pinch long tips to encourage branching."], doneWhen: "The pot is secure and the planting has an even, compact outline." }),
+        job({ id: "may-box-light-clip", priority: "ongoing", category: "prune", scope: "plant", zoneKeys: ["bed1"], plantIds: ["bed1-box-hedging"], title: "Give the Bed 1 box only a light first clip", timing: "Late May on a dry, overcast day, after a nest and caterpillar check.", summary: "Trim soft projecting growth to restore the outline without cutting deeply into old wood.", why: "A light early tidy holds the shape until the main late-summer clip.", steps: ["Confirm no active nest or caterpillar problem is present.", "Use clean, sharp shears.", "Follow the existing outline and collect every clipping."], doneWhen: "The hedge outline is tidy and no bare old wood has been exposed.", caution: "Postpone the work if birds are nesting or leaves are wet." }),
+      ],
       highlights: [
-        { plant: "Wisteria", bed: "Bed 4", note: "Lilac racemes cascading over the wall — the headline act." },
-        { plant: "Clematis montana", bed: "Patio", note: "Sheets of pale pink covering the house wall." },
-        { plant: "Rhododendron", bed: "Bed 1", note: "Lavender-purple flowers against golden variegated leaves." },
-        { plant: "Peony", bed: "Bed 2", note: "Huge fragrant flowers — the heaviest week of the year." },
-        { plant: "Weigela", bed: "Bed 2", note: "Pink trumpet flowers covering the shrub." },
-        { plant: "Avens", bed: "Bed 2", note: "Bright orange flowers — moved from Bed 1 into Bed 2 in July 2026." },
-        { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "Striking dark bronze-black foliage with lilac-magenta buds forming." },
+        highlight({ id: "may-bed5-wisteria", title: "Wisteria becomes the back garden’s headline", note: "Lilac racemes cascade along Bed 5 before the summer pruning growth begins.", zoneKeys: ["bed5"], plantIds: ["bed5-wisteria"] }),
+        highlight({ id: "may-patio-clematis", title: "The patio wall turns pink", note: "Clematis montana covers the house wall in a sheet of spring flowers.", zoneKeys: ["patio"], plantIds: ["stone-clematis"] }),
+        highlight({ id: "may-bed1", title: "Bed 1 layers foliage and flower", note: "Rhododendron, Little Heath and dark dahlia growth sit beneath the maple canopy.", zoneKeys: ["bed1"] }),
+        highlight({ id: "may-bed2", title: "Peony and weigela fill Bed 2", note: "Large peony blooms and pink weigela flowers make this the busiest back-garden bed.", zoneKeys: ["bed2"] }),
+        highlight({ id: "may-frontpot", title: "The Front Door Pot starts its summer display", note: "Gazanias provide the bold flowers while calibrachoa and bacopa begin to trail.", scope: "pot", potKey: "frontpot", zoneKeys: ["frontpot"], plantIds: ["frontpot-gazania-sunny-side-up", "frontpot-gazania-orange-flame", "frontpot-calibrachoa", "frontpot-bacopa-white"] }),
       ],
-      tasks: [
-        { task: "Deadhead Rhododendron carefully after flowering — snap the spent trusses cleanly", plants: ["Rhododendron"], bed: "Bed 1" },
-        { task: "Prune Clematis montana lightly after flowering, tie in new growth", plants: ["Clematis"], bed: "Patio" },
-        { task: "Deadhead Avens to encourage a second flush", plants: ["Avens"], bed: "Bed 2" },
-        { task: "Plant up front door pot with summer bedding — water in well and feed fortnightly from now", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
-        { task: "First clip of the box hedging (late May)", plants: ["Box Hedging"], bed: "Bed 1" },
-        { task: "Plant up pots with summer bedding — water in well and feed fortnightly from now", plants: ["Fuchsia", "Verbena", "Petunia", "Lobelia", "Calibrachoa"], bed: "Big Pot 1" },
-        { task: "Pinch out Dahlia growing tips to encourage bushiness", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
-      ],
+      indoorJobs: [],
     },
 
     June: {
-      mood: "Settles into summer. Roses start, scent in the evening air.",
-      highlights: [
-        { plant: "Rose", bed: "Bed 4", note: "First flush opening on the trellis." },
-        { plant: "Maiden Pink", bed: "Bed 2", note: "Pink stars spilling from the wall gap." },
-        { plant: "Nemesia 'Aroma Heart of Gold'", bed: "Bed 1", note: "Fragrant burgundy, cream and yellow flowers along the front edge." },
-        { plant: "Honeysuckle", bed: "Stone Bed", note: "Fragrant flowers — strongest in the evening." },
-        { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Striped sword-shaped foliage giving the boundary bed strong structure; mature plants may raise a tall flower stem." },
-        { plant: "Silverbush", bed: "Bed 2", note: "White trumpet flowers on the silver mound." },
-        { plant: "Fuchsia", bed: "Big Pot 1", note: "Red and purple pendant flowers starting — both big pots coming alive." },
-        { plant: "Geranium", bed: "Little Pot 2", note: "Red-and-white bicolour heads bright against the blue pot." },
-        { plant: "Callistemon 'Inferno'", bed: "Bed 3", note: "First vivid red bottlebrush flowers of the season — a real statement against the gravel." },
-        { plant: "Gaillardia", bed: "Bed 3", note: "Bold daisy flowers in red, orange and yellow — continuous if deadheaded." },
-        { plant: "Achillea", bed: "Bed 3", note: "Flat-headed flower clusters beginning above the ferny foliage." },
-        { plant: "Gazania 'Sunny Side Up'", bed: "Front Pot", note: "Large cream-white daisies — only open in sun, but bright when they do." },
-        { plant: "Gazania 'Orange Flame'", bed: "Front Pot", note: "Vivid orange flames — stunning in the morning sun by the front door." },
-        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Bright pink flowers opening against the vivid orange-red foliage — a genuinely striking combination." },
-        { plant: "Celosia", bed: "Bed 3", note: "Purple, yellow and red crested plumes in the gaps — vivid and exotic-looking." },
-        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Mixed red, yellow and pink trailing flowers tumbling from the stair wall — something to look at on the way down." },
-        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Cheerful yellow daisies in the blue pot on the wall — simple and effective." },
+      theme: "Prune spring-flowering wood promptly and settle into the deadheading rhythm.",
+      jobs: [
+        job({ id: "jun-prune-weigela", priority: "first", category: "prune", scope: "plant", zoneKeys: ["bed2"], plantIds: ["bed2-weigela"], title: "Renew the weigela after flowering", timing: "Immediately after the main flower display fades.", summary: "Remove selected old stems at the base and shorten only growth that crowds paths or neighbours.", why: "Weigela flowers on older wood, so prompt post-flowering renewal preserves time for next year’s shoots.", steps: ["Identify one or two of the oldest stems.", "Remove them cleanly at the base.", "Shorten badly placed shoots to a useful side branch."], doneWhen: "The shrub is less congested but still has a full, natural framework.", caution: "Do not shear the entire shrub into a tight shape." }),
+        job({ id: "jun-prune-stone-fruit", priority: "first", category: "prune", scope: "zone", zoneKeys: ["bed2", "frontApple"], plantIds: ["bed2-weeping-cherry", "frontApple-damson-tree"], title: "Make essential cherry and damson cuts in dry summer weather", timing: "After flowering, during a dry spell and while the trees are in active growth.", summary: "Remove suckers, damaged wood and only the branches previously marked as necessary.", why: "Summer pruning reduces silver-leaf risk and avoids unnecessary disturbance to stone fruit.", steps: ["Confirm the forecast is dry.", "Remove suckers and dead or rubbing wood first.", "Make the fewest shaping cuts needed and use clean tools."], doneWhen: "The trees retain their natural forms and every cut solves a specific problem.", caution: "Do not prune in wet weather or make a major renovation cut without specialist advice." }),
+        job({ id: "jun-deadhead-roses", priority: "month", category: "deadhead", scope: "zone", zoneKeys: ["bed5", "frontBed3", "frontBed4", "frontBed5"], plantIds: ["bed5-rose", "frontBed3-climbing-rose-white-pink", "frontBed3-rose-pink", "frontBed4-the-pilgrim", "frontBed4-the-generous-gardener", "frontBed5-climber-unidentified"], title: "Start the rose deadheading round", timing: "As individual flower clusters fade.", summary: "Remove spent blooms back to a healthy leaf or flowering side shoot and retie loose stems.", why: "Regular deadheading keeps repeat-flowering roses tidy and directs energy into the next flush.", steps: ["Remove faded blooms and any petals stuck around the centre.", "Cut back to a healthy outward-facing leaf on strong stems.", "Check ties while handling each climber."], doneWhen: "No collapsing flower clusters remain and new buds and shoots are unobstructed." }),
+        job({ id: "jun-deadhead-perennials", priority: "month", category: "deadhead", scope: "zone", zoneKeys: ["bed2", "bed3", "bed4", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["bed2-peony", "bed2-avens", "bed2-maiden-pink", "bed2-centaurea-snowy-owl", "bed4-achillea", "bed4-gaillardia", "frontBed2-polemonium-golden-feathers", "frontBed4-astrantia-trio", "frontBed5-gaura-gaudi-red", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Deadhead the first perennial flush", timing: "Once flowers lose colour or begin forming unwanted seed.", summary: "Remove spent heads while leaving healthy foliage to feed the plants.", why: "Timely deadheading keeps the beds tidy and encourages repeat flowers where the plant is capable of them.", steps: ["Follow each spent flower stem to a leaf, side bud or basal clump.", "Cut cleanly rather than leaving bare stalks.", "Leave selected sound seedheads only where they add structure or wildlife value."], doneWhen: "Faded flowers are removed and healthy leaves and developing buds remain." }),
+        job({ id: "jun-trim-nemesia-bed1", priority: "month", category: "cut-back", scope: "plant", zoneKeys: ["bed1"], plantIds: ["bed1-nemesia"], title: "Trim Bed 1’s nemesia after its first flush", timing: "When flowering becomes sparse and shoots look stretched.", summary: "Shorten the tired flowering growth evenly without cutting into bare old stems.", why: "A prompt trim encourages compact regrowth and a later flush.", steps: ["Remove the longest tired flowered shoots first.", "Trim the rest to an even leafy outline.", "Clear all cut material from beneath the plant."], doneWhen: "A compact leafy mound remains with no long, fading stems." }),
+        job({ id: "jun-bigpot1-round", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "bigpot1", zoneKeys: ["bigpot1"], plantIds: ["bigpot1-fuchsia", "bigpot1-verbena", "bigpot1-calibrachoa", "bigpot1-nepeta", "bigpot1-lobelia", "bigpot1-petunia"], title: "Deadhead and balance Big Pot 1", timing: "Once a week through active flowering.", summary: "Treat the whole container as one display: remove spent flowers, pinch leggy trailers and keep the centre open.", why: "A single pot-level round prevents stronger plants from hiding the fuchsia or smothering the rim.", steps: ["Remove faded fuchsia, verbena and petunia flowers.", "Trim any trailer that has become long and bare.", "Cut catmint after its first flush if it is overwhelming neighbours."], doneWhen: "The pot has a visible centre, an even rim and no mass of faded flowers." }),
+        job({ id: "jun-bigpot2-round", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "bigpot2", zoneKeys: ["bigpot2"], plantIds: ["bigpot2-lobelia", "bigpot2-verbena", "bigpot2-petunia", "bigpot2-nepeta", "bigpot2-fuchsia"], title: "Deadhead and balance Big Pot 2", timing: "Once a week through active flowering.", summary: "Remove spent flowers and trim the mixed planting back to a balanced pot shape.", why: "Regular whole-pot grooming keeps the mirror planting full rather than top-heavy or bare at the edge.", steps: ["Deadhead the visible spent blooms.", "Shorten leggy trailers above leafy growth.", "Open space around the central fuchsia."], doneWhen: "The composition is even and no component is hiding the rest." }),
+        job({ id: "jun-bed5-alstroemeria", priority: "ongoing", category: "deadhead", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-alstroemeria"], title: "Pull spent alstroemeria stems from the Bed 5 big pot", timing: "Whenever an entire flowering stem has finished.", summary: "Grip the old stem low and pull it cleanly from the crown rather than cutting it halfway.", why: "Removing the whole stem encourages fresh shoots from the base.", steps: ["Wait until all flowers on the stem are finished.", "Hold neighbouring shoots aside.", "Twist and pull the spent stem firmly from its base."], doneWhen: "Finished stems are removed cleanly and young shoots remain undamaged.", caution: "Wear gloves if the sap irritates your skin." }),
+        job({ id: "jun-bed5-petunia", priority: "ongoing", category: "deadhead", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-petunia-bees-knees"], title: "Deadhead the Bed 5 big-pot petunia", timing: "As trumpet flowers collapse.", summary: "Remove each faded flower with the swelling seed case behind it and pinch leggy ends above leaves.", why: "Taking the seed case as well as the petals keeps the plant branching and flowering.", steps: ["Follow the faded trumpet to its base.", "Pinch off the flower and seed case together.", "Shorten bare-ended shoots to a leafy joint."], doneWhen: "No soft spent trumpets or obvious seed cases remain." }),
+        job({ id: "jun-bed5-nemesia", priority: "ongoing", category: "cut-back", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-nemesia"], title: "Trim the Bed 5 big-pot nemesia when its first flush fades", timing: "As flowers thin and stems stretch.", summary: "Shear the leafy flowering growth lightly to restart a compact flush.", why: "This individual big-pot plant benefits from a different cut than its alstroemeria and petunia neighbours.", steps: ["Remove the longest tired shoots.", "Trim the remaining mound evenly above leaves.", "Keep the neighbouring Vinca and Alstroemeria clear."], doneWhen: "A neat leafy mound remains inside the mixed pot." }),
+        job({ id: "jun-ground-weed-edge", priority: "ongoing", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5"], plantIds: [], title: "Weed edges and keep crowns open", timing: "Little and often before weeds set seed.", summary: "Hand-remove weeds, clear material from plant crowns and restore the visible bed edges.", why: "Short regular rounds prevent a large summer clearance among full foliage.", steps: ["Pull weeds with roots before seed forms.", "Lift cuttings and fallen petals from crowns.", "Avoid deep cultivation around shallow-rooted shrubs and trees."], doneWhen: "Edges read clearly and no weed is close to seeding." }),
       ],
-      tasks: [
-        { task: "Prune Weigela after flowering — one in three old stems out", plants: ["Weigela"], bed: "Bed 2" },
-        { task: "Deadhead roses regularly to keep them flowering", plants: ["Rose"], bed: "Bed 4" },
-        { task: "Deadhead Maiden Pink and trim back lightly", plants: ["Maiden Pink"], bed: "Bed 2" },
-        { task: "Trim Nemesia hard after first flush for a second show", plants: ["Nemesia 'Aroma Heart of Gold'"], bed: "Bed 1" },
-        { task: "Make sure peony supports are doing their job — heavy heads after rain", plants: ["Peony"], bed: "Bed 2" },
-        { task: "Feed pots weekly with liquid tomato food — don't let them dry out", plants: ["Calibrachoa", "Petunia", "Lobelia"], bed: "Big Pot 1" },
-        { task: "Add discreet support only if the compact Dahlias begin to lean under their flowers", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
-        { task: "Deadhead Gaillardia — regular removal is essential for continuous flowering", plants: ["Gaillardia"], bed: "Bed 3" },
-        { task: "Feed front door pot weekly with liquid tomato food — Gazania, Calibrachoa and Bacopa all benefit", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
-        { task: "Deadhead Gazania spent flowers to keep them going", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'"], bed: "Front Pot" },
-        { task: "Feed wall pots weekly with liquid tomato food — Calibrachoa and Coreopsis both respond well", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
-        { task: "Deadhead Celosia spent plumes to keep more flowers coming", plants: ["Celosia"], bed: "Bed 3" },
-        { task: "Remove dead flower heads from Spiraea to tidy; do not cut hard until next spring", plants: ["Spiraea 'Double Play Big Bang'"], bed: "Bed 2" },
+      highlights: [
+        highlight({ id: "jun-rose-garden", title: "Roses link the front and back gardens", note: "Bed 5 and the front borders begin their first strong flush together.", zoneKeys: ["bed5", "frontBed3", "frontBed4", "frontBed5"] }),
+        highlight({ id: "jun-bed4-colour", title: "Bed 4 becomes a colour patch", note: "Callistemon, gaillardia, achillea and celosia begin to fill the apple-tree bed.", zoneKeys: ["bed4"] }),
+        highlight({ id: "jun-bed2-summer", title: "Bed 2 shifts from blossom to summer flower", note: "Weigela gives way to silverbush, maiden pink, avens and climbing hydrangea.", zoneKeys: ["bed2"] }),
+        highlight({ id: "jun-bigpot1", title: "Big Pot 1 settles into one mixed display", note: "The central fuchsia rises above a ring of pink, blue and purple trailers.", scope: "pot", potKey: "bigpot1", zoneKeys: ["bigpot1"] }),
+        highlight({ id: "jun-frontpot", title: "The Front Door Pot reaches full colour", note: "Cream and orange gazanias sit above a soft trailing edge.", scope: "pot", potKey: "frontpot", zoneKeys: ["frontpot"] }),
+      ],
+      indoorJobs: [
+        job({ id: "jun-indoor-kentia-feed", priority: "month", category: "feed", scope: "plant", zoneKeys: ["houseHallKentia"], plantIds: ["house-hallway-kentia-palm"], title: "Begin the Kentia’s light summer feeding", timing: "During active growth, following the product’s houseplant rate.", summary: "Use a balanced feed sparingly and pause if the palm is stressed or not growing.", why: "A modest summer feed supports new fronds without forcing weak growth.", steps: ["Confirm the palm is actively producing healthy growth.", "Use no more than the labelled houseplant dilution.", "Record the date to avoid accidental overfeeding."], doneWhen: "One correctly diluted feed is recorded and the next is not due prematurely.", caution: "More feed will not repair brown tips or poor drainage." }),
       ],
     },
 
     July: {
-      mood: "A new stone-bed tapestry. The hot middle of the year.",
+      theme: "Keep flowers productive, make essential summer cuts and stop vigorous growth tangling the garden.",
+      jobs: [
+        job({ id: "jul-prune-honeysuckle", priority: "first", category: "prune", scope: "zone", zoneKeys: ["patio", "frontBed5"], plantIds: ["stone-honeysuckle", "frontBed5-honeysuckle"], title: "Tidy honeysuckle after flowering", timing: "As the main flower flush ends.", summary: "Shorten obstructive growth and remove dead tangles while retaining the established framework.", why: "A light prompt prune contains the climbers without removing all of the growth that carries future flowers and wildlife value.", steps: ["Untangle and remove dead stems first.", "Shorten shoots blocking access or smothering neighbours.", "Retie useful young stems across support."], doneWhen: "Both climbers are contained and supported without looking stripped." }),
+        job({ id: "jul-finish-stone-fruit", priority: "first", category: "prune", scope: "zone", zoneKeys: ["bed2", "frontApple"], plantIds: ["bed2-weeping-cherry", "frontApple-damson-tree"], title: "Finish any essential stone-fruit pruning", timing: "In a reliably dry spell while growth is active.", summary: "Complete only the cherry and damson work identified earlier in the year.", why: "This is the safer seasonal window; delayed winter cutting would increase disease risk.", steps: ["Reassess whether each planned cut is still needed.", "Remove suckers and damaged or rubbing wood.", "Make clean cuts and stop once the problem is solved."], doneWhen: "No necessary cut remains and both natural frameworks are preserved.", caution: "Avoid pruning during wet weather." }),
+        job({ id: "jul-deadhead-dahlias", priority: "month", category: "deadhead", scope: "zone", zoneKeys: ["bed1"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow"], title: "Deadhead both Bed 1 dahlias properly", timing: "Twice weekly once flowering is strong.", summary: "Cut spent pointed flower heads back to a branching leaf joint; leave rounded unopened buds.", why: "Correct deadheading keeps the plants branching and avoids accidentally removing new flowers.", steps: ["Compare the pointed spent head with round firm buds.", "Follow the spent stem down to a leaf pair or side bud.", "Make a clean cut and check the support tie."], doneWhen: "No pointed spent heads remain and all round buds are intact." }),
+        job({ id: "jul-deadhead-summer-beds", priority: "month", category: "deadhead", scope: "zone", zoneKeys: ["bed2", "bed4", "frontBed3", "frontBed4", "frontBed5"], plantIds: ["bed2-avens", "bed2-maiden-pink", "bed4-gaillardia", "bed4-celosia", "bed1-red-hot-poker", "frontBed4-astrantia-trio", "frontBed5-gaura-gaudi-red", "frontBed5-hebe-rhubarb-and-custard", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Make the midsummer deadheading round", timing: "When flowers fade but before seed is set everywhere.", summary: "Remove spent flower stems to useful leafy joints and leave selected attractive seedheads only deliberately.", why: "A regular round prolongs repeat flowering and keeps crowded beds airy.", steps: ["Work area by area with clean snips.", "Cut to a side shoot, leaf joint or basal clump.", "Remove diseased material rather than adding it to ordinary compost."], doneWhen: "Faded stems no longer dominate and fresh buds remain easy to see." }),
+        job({ id: "jul-clip-spiraea-and-nepeta", priority: "month", category: "cut-back", scope: "zone", zoneKeys: ["bed3"], plantIds: ["bed2-spiraea-double-play-big-bang"], title: "Tidy Bed 3 after its first summer flush", timing: "Once spiraea flowers fade and before the bed becomes congested.", summary: "Remove spent spiraea heads and shorten only soft obstructive growth.", why: "A light tidy preserves the shrub’s spring-pruned framework and opens the compact wall-gap bed.", steps: ["Snip faded flower heads back to leafy growth.", "Remove stems lying across smaller neighbours.", "Do not repeat the hard spring prune."], doneWhen: "The bed is open and tidy with the spiraea’s main framework intact." }),
+        job({ id: "jul-front-shrub-tidy", priority: "month", category: "prune", scope: "zone", zoneKeys: ["frontBed1", "frontBed4", "frontBed5"], plantIds: ["frontBed1-lavender", "frontBed4-photinia-existing", "frontBed4-magic-carpet", "frontBed5-hebe-rhubarb-and-custard", "frontBed5-bluebell-creeper-sollya"], title: "Make only light post-flowering shrub trims", timing: "As each shrub finishes its main display.", summary: "Remove faded tips and soft growth that blocks paths, keeping every cut within healthy foliage.", why: "A light seasonal trim maintains shape without forcing soft late growth or exposing bare wood.", steps: ["Confirm flowering is finished for that plant.", "Follow the natural outline rather than shearing everything flat.", "Stop above green leafy growth."], doneWhen: "Paths are clear and shrubs remain full, leafy and natural-looking.", caution: "Do not cut lavender or hebe back into bare old wood." }),
+        job({ id: "jul-lobeliapot", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "lobeliapot", zoneKeys: ["lobeliapot"], plantIds: ["lobeliapot-lobelia-starship-scarlet-bronze-leaf"], title: "Deadhead the Lobelia Pot", timing: "As each scarlet flower spike finishes from the bottom upward.", summary: "Cut the complete spent spike back to a leafy joint while leaving developing side spikes.", why: "Removing finished spikes keeps the bronze-leaved pot neat and can encourage further flowering.", steps: ["Wait until most flowers on a spike are finished.", "Trace it to the first healthy leaves or side shoot.", "Cut cleanly without shortening the whole plant."], doneWhen: "Finished spikes are gone and fresh side growth remains." }),
+        job({ id: "jul-frontpot-round", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "frontpot", zoneKeys: ["frontpot"], plantIds: ["frontpot-gazania-sunny-side-up", "frontpot-gazania-orange-flame", "frontpot-calibrachoa", "frontpot-bacopa-white"], title: "Groom the Front Door Pot as one display", timing: "At least weekly through peak flowering.", summary: "Remove gazania seed stems and trim any trailer that makes the whole composition uneven.", why: "Pot-level grooming keeps the main daisies visible without unnecessary separate entries for self-cleaning trailers.", steps: ["Remove spent gazania stems at their base.", "Snip back long bare trailer ends to leafy growth.", "Clear fallen petals and leaves from the compost surface."], doneWhen: "The pot has an even trailing edge and the gazanias remain the clear focal point." }),
+        job({ id: "jul-bed5-alstroemeria", priority: "ongoing", category: "deadhead", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-alstroemeria"], title: "Keep pulling spent Bed 5 alstroemeria stems", timing: "Whenever a whole flowering stem finishes.", summary: "Remove the complete stem from the crown to make room for replacement shoots.", why: "This plant’s pull-from-the-base method differs from the other plants sharing its big pot.", steps: ["Select a fully spent stem.", "Hold nearby shoots aside.", "Twist and pull firmly from the base."], doneWhen: "Only flowering or developing alstroemeria stems remain." }),
+        job({ id: "jul-bed5-petunia", priority: "ongoing", category: "deadhead", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-petunia-bees-knees"], title: "Keep the Bed 5 petunia flowering", timing: "Twice weekly in peak flower.", summary: "Remove spent trumpets with their seed cases and pinch leggy growth.", why: "The petunia needs more exact grooming than the rest of the mixed big pot.", steps: ["Pinch each spent flower behind the seed case.", "Shorten bare-ended shoots above leaves.", "Keep it from covering the Vinca trail."], doneWhen: "No seed cases dominate and the plant remains compact." }),
+        job({ id: "jul-pests-and-supports", priority: "ongoing", category: "check", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "frontHedge"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow", "bed1-box-hedging", "bed2-peony", "bed4-apple-tree", "frontHedge-hedge-to-identify"], title: "Check supports, pests and nesting hedges", timing: "After strong growth, heavy flowers or windy weather.", summary: "Retie top-heavy stems, inspect box and soft shoots, and delay hedge work around active nests.", why: "Small corrections now prevent snapped stems and avoid unsafe or wildlife-disturbing work.", steps: ["Loosen ties that have become tight.", "Inspect soft tips and box foliage for fresh pest activity.", "Observe hedges before planning a trim."], doneWhen: "Ties allow growth, pest signs have a response and nests remain undisturbed." }),
+      ],
       highlights: [
-        { plant: "Hydrangea 'Snowflake'", bed: "Stone Bed", note: "Layered white flower panicles above oak-shaped foliage in the newly planted bed." },
-        { plant: "Rose", bed: "Bed 4", note: "Second wave coming through if deadheaded." },
-        { plant: "Hosta 'Patriot'", bed: "Bed 1", note: "Lavender-blue flower spikes rising above the cream-edged leaves." },
-        { plant: "Echeveria", bed: "Stone Bed", note: "New powdery grey-purple rosette beside the houseleeks." },
-        { plant: "Purple Fountain Grass 'Rubrum'", bed: "Stone Bed", note: "Burgundy leaves and soft bottlebrush plumes give the new planting height and movement." },
-        { plant: "Sedum 'Angelina'", bed: "Stone Bed", note: "Golden trailing foliage lights the front gravel." },
-        { plant: "New Zealand Flax (cultivar to confirm)", bed: "Bed 5", note: "Architectural striped foliage at its strongest; remove only damaged leaves at the base." },
-        { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "First lilac-magenta double flowers opening against the dark foliage." },
-        { plant: "Calibrachoa", bed: "Big Pot 1", note: "Pink star flowers trailing over the pot rim." },
-        { plant: "Callistemon 'Inferno'", bed: "Bed 3", note: "Bottlebrush flowers in full cry — bright red against the summer foliage." },
-        { plant: "Gaillardia", bed: "Bed 3", note: "Peak flowering — bold oranges and reds if kept deadheaded." },
-        { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Small white fragrant flowers appearing among the variegated foliage." },
-        { plant: "Dahlia 'Double Dreamy Gold'", bed: "Bed 1", note: "First golden double flowers opening against that dark bronze foliage — a strong contrast." },
-        { plant: "Avens", bed: "Bed 2", note: "Second flush of orange flowers if well deadheaded through June." },
-        { plant: "Gazania 'Orange Flame'", bed: "Front Pot", note: "Orange flame daisies at their most vivid in the summer sun." },
-        { plant: "Celosia", bed: "Bed 3", note: "Vivid crested plumes in full — purple, yellow and red all going at once." },
-        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Pink flowers against orange foliage — still going strong." },
-        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Trailing flowers in full flow — earning its spot on the wall." },
-        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Golden daisy flowers at peak — bees love them." },
+        highlight({ id: "jul-bed1-dahlias", title: "Bed 1’s dark dahlias begin their main show", note: "Lilac and gold flowers stand out against bronze-black foliage beneath the maple.", zoneKeys: ["bed1"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow"] }),
+        highlight({ id: "jul-stone-new", title: "The Stone Bed becomes a foliage tapestry", note: "Rosettes, golden stonecrops, dark grasses and oakleaf hydrangea create contrasting shapes.", zoneKeys: ["stone"] }),
+        highlight({ id: "jul-bed4", title: "Bed 4 is at full colour", note: "Bottlebrush red, gaillardia orange, achillea and celosia cluster beneath the apple tree.", zoneKeys: ["bed4"] }),
+        highlight({ id: "jul-bed5-alstro", title: "Bed 5 big-pot alstroemeria", note: "Red-and-gold flowers rise through the mixed container.", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-alstroemeria"] }),
+        highlight({ id: "jul-bed5-petunia-highlight", title: "Bed 5 big-pot petunia", note: "Clear yellow trumpets brighten the edge of the same container.", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-petunia-bees-knees"] }),
+        highlight({ id: "jul-lobeliapot-highlight", title: "The Lobelia Pot sends up scarlet spikes", note: "Tall red flowers rise over dramatic bronze foliage at the steps.", scope: "pot", potKey: "lobeliapot", zoneKeys: ["lobeliapot"] }),
       ],
-      tasks: [
-        { task: "Water the Hydrangea root pocket deeply while it establishes, without soaking the drought-tolerant succulents around it", plants: ["Hydrangea 'Snowflake'"], bed: "Stone Bed" },
-        { task: "Keep both Ajugas evenly moist while they establish and shade the gold foliage if it begins to scorch", plants: ["Ajuga 'Fancy Finch'", "Ajuga 'Midnight Mystery'"], bed: "Stone Bed" },
-        { task: "Continue deadheading roses; feed with rose food after first flush", plants: ["Rose"], bed: "Bed 4" },
-        { task: "Prune Honeysuckle lightly after flowering", plants: ["Honeysuckle"], bed: "Stone Bed" },
-        { task: "Deadhead the lilac Dahlia regularly to keep it flowering until frost", plants: ["Dahlia 'Double Dreamy Lilac'"], bed: "Bed 1" },
-        { task: "Keep on top of pot watering — daily in hot weather, twice daily if baking", plants: ["Fuchsia", "Petunia", "Lobelia"], bed: "Big Pot 1" },
-        { task: "Trim back leggy Lobelia mid-season for a fresh flush", plants: ["Lobelia"], bed: "Big Pot 2" },
-        { task: "Deadhead Gaillardia and Callistemon spent flowers — keeps both performing", plants: ["Gaillardia", "Callistemon 'Inferno'"], bed: "Bed 3" },
-        { task: "Deadhead the gold Dahlia regularly to keep it flowering until frost", plants: ["Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
-        { task: "Keep front pot well watered — Gazania and Calibrachoa suffer quickly if they dry out in heat", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa"], bed: "Front Pot" },
-        { task: "Keep wall pots watered daily in hot weather — small pots dry out fast", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
-        { task: "Cut Coreopsis back by half in midsummer for a strong second flush", plants: ["Coreopsis Gold"], bed: "Wall Pot 2" },
-        { task: "Deadhead Celosia regularly — keeps the plumes coming", plants: ["Celosia"], bed: "Bed 3" },
-      ],
+      indoorJobs: [],
     },
 
     August: {
-      mood: "Heavy with fruit. The garden looks lush but ready for its second clip.",
+      theme: "Make the second structural cuts, harvest regularly and keep the late display productive.",
+      jobs: [
+        job({ id: "aug-prune-wisteria", priority: "first", category: "prune", scope: "plant", zoneKeys: ["bed5"], plantIds: ["bed5-wisteria"], title: "Make the summer wisteria prune", timing: "July or August, once the long whippy growth is obvious.", summary: "Shorten this year’s side shoots to about five or six leaves from the permanent framework.", why: "The summer cut controls the climber and starts forming the short spurs refined again in winter.", steps: ["Identify the permanent tied-in framework.", "Follow each long new side shoot back to its origin.", "Cut after the fifth or sixth leaf and remove unwanted basal shoots."], doneWhen: "The main framework is visible again and no long whip blocks access or gutters.", caution: "Keep useful shoots needed to extend the permanent framework." }),
+        job({ id: "aug-clip-box", priority: "first", category: "prune", scope: "plant", zoneKeys: ["bed1"], plantIds: ["bed1-box-hedging"], title: "Give the box hedge its main shaping clip", timing: "A dry, overcast day after checking for nests and caterpillars.", summary: "Restore the existing outline with clean shears and collect every clipping.", why: "A late-summer clip holds the shape without encouraging a large flush of soft autumn growth.", steps: ["Inspect inside the hedge first.", "Follow the established sides and top with shallow cuts.", "Collect clippings from the plant and soil surface."], doneWhen: "The outline is even, the interior remains leafy and no clipping debris is trapped.", caution: "Do not clip wet foliage, in strong sun or around an active nest." }),
+        job({ id: "aug-final-privet-clip", priority: "first", category: "prune", scope: "plant", zoneKeys: ["frontHedge"], plantIds: ["frontHedge-hedge-to-identify"], title: "Make the front hedge’s final light clip", timing: "By late August, only after a careful nest check.", summary: "Remove projecting growth and restore entrance clearance without a severe reduction.", why: "Finishing by late summer allows the cut surface and remaining growth to settle before cold weather.", steps: ["Observe the hedge for bird activity.", "Clip only soft projecting growth.", "Clear the path and collect all cut material."], doneWhen: "The entrance is clear and the hedge retains a dense, natural framework.", caution: "Postpone all work if an active nest is present." }),
+        job({ id: "aug-harvest-fruit", priority: "month", category: "harvest", scope: "zone", zoneKeys: ["bed4", "pear", "frontApple", "frontGateTree"], plantIds: ["bed4-apple-tree", "stone-pear-tree", "frontApple-apple-tree", "frontApple-damson-tree", "frontGateTree-weeping-crab-apple"], title: "Check and record ripening fruit", timing: "Every few days as colour, softness and flavour develop.", summary: "Harvest ripe apples, pears and damsons in batches and record timing; leave ornamental crab apples for display and wildlife unless needed.", why: "Frequent checks catch fruit at its best and create a useful Oak Lodge harvest record.", steps: ["Lift and gently twist apples and pears rather than pulling.", "Taste-test damsons as colour deepens and flesh softens.", "Remove damaged or rotting fruit promptly."], doneWhen: "Ripe fruit is gathered, damaged fruit is cleared and harvest dates are noted." }),
+        job({ id: "aug-deadhead-repeaters", priority: "month", category: "deadhead", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "bed5", "frontBed3", "frontBed4", "frontBed5"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow", "bed2-avens", "bed4-gaillardia", "bed5-rose", "frontBed3-rose-pink", "frontBed4-the-pilgrim", "frontBed4-the-generous-gardener", "frontBed5-gaura-gaudi-red", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Keep repeat-flowering plants moving", timing: "Once or twice weekly in warm weather.", summary: "Remove faded flowers to the correct joint and shorten only tired, bare-ended growth.", why: "Consistent late-summer deadheading supports a final flush without a hard cut.", steps: ["Work systematically by bed.", "Cut spent stems to leaves, side buds or the basal clump.", "Leave purposeful seedheads rather than simply missing them."], doneWhen: "Fresh buds are visible and no large patch is dominated by spent flowers." }),
+        job({ id: "aug-cut-achillea-nepeta", priority: "month", category: "cut-back", scope: "zone", zoneKeys: ["bed4"], plantIds: ["bed4-achillea"], title: "Cut tired Bed 4 achillea growth back", timing: "After the main flower heads have faded.", summary: "Remove flowered stems to the basal foliage and clear weak collapsed growth.", why: "A tidy cut keeps the compact apple-tree bed open and can encourage fresh foliage.", steps: ["Keep any seedhead deliberately wanted for structure.", "Cut remaining flowered stems close to the basal clump.", "Remove soft or diseased debris from the crown."], doneWhen: "The basal foliage is visible and no collapsed stems smother neighbours." }),
+        job({ id: "aug-littlepot1", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "littlepot1", zoneKeys: ["littlepot1"], plantIds: ["littlepot1-geranium", "littlepot1-petunia"], title: "Groom Little Pot 1 as one display", timing: "Weekly through peak flowering.", summary: "Remove whole geranium flower stems and spent petunia flowers, then trim the combined outline.", why: "One whole-pot round keeps the upright and trailing plants balanced.", steps: ["Snap finished geranium stalks at their base.", "Remove petunia flowers with their seed cases.", "Shorten any long bare trailer above leaves."], doneWhen: "The pot has a clean centre and an even trailing edge." }),
+        job({ id: "aug-littlepot2", priority: "ongoing", category: "deadhead", scope: "pot", potKey: "littlepot2", zoneKeys: ["littlepot2"], plantIds: ["littlepot2-geranium", "littlepot2-petunia"], title: "Groom Little Pot 2 as one display", timing: "Weekly through peak flowering.", summary: "Remove finished geranium stems and petunia flowers while keeping the pair balanced.", why: "The shared pot needs one coordinated tidy rather than duplicated plant reminders.", steps: ["Remove whole faded geranium stalks.", "Pinch off petunia flowers and seed cases.", "Trim only shoots that unbalance the pot."], doneWhen: "Both plants remain visible in one compact composition." }),
+        job({ id: "aug-wallpot2", priority: "month", category: "cut-back", scope: "pot", potKey: "wallpot2", zoneKeys: ["wallpot2"], plantIds: ["wallpot2-coreopsis-gold"], title: "Cut back the Coreopsis wall pot for a fresh flush", timing: "When the first main display becomes sparse.", summary: "Shorten the flowering growth by roughly half while leaving healthy leafy stems.", why: "A midsummer trim can produce a neater second flush and prevents the small pot becoming straggly.", steps: ["Remove all finished flower stems.", "Shorten the remaining mound evenly above leafy growth.", "Clear the pot surface after cutting."], doneWhen: "A compact green mound remains with no long bare stalks." }),
+        job({ id: "aug-support-and-disease", priority: "ongoing", category: "check", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "frontBed4", "frontBed5"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow", "bed2-peony", "bed4-apple-tree", "frontBed4-the-pilgrim", "frontBed4-the-generous-gardener", "frontBed5-cherry-laurel"], title: "Check supports and remove diseased material", timing: "After wind, heavy flowers or humid spells.", summary: "Loosen tight ties, support leaning stems and remove clearly diseased leaves or fruit.", why: "Late-summer growth is heavy and dense; small corrections improve air movement and prevent breakage.", steps: ["Test every tie with a finger’s width of space.", "Add support only where stems are genuinely leaning.", "Bag or otherwise remove diseased material from the garden."], doneWhen: "Stems are secure, ties are loose enough and active disease is not left among plants." }),
+      ],
       highlights: [
-        { plant: "Purple Fountain Grass 'Rubrum'", bed: "Stone Bed", note: "The dark fountain and bottlebrush plumes are at their fullest before autumn cold." },
-        { plant: "Stonecrop 'Dragon's Blood'", bed: "Stone Bed", note: "The new red groundcover deepens in colour beside the separate older stonecrop patch." },
-        { plant: "Apple Tree", bed: "Bed 3", note: "First apples colouring up on the branches." },
-        { plant: "Pear Tree", bed: "Tree", note: "Pears swelling, near ready." },
-        { plant: "Rose", bed: "Bed 4", note: "Second flush carrying on through the heat." },
-        { plant: "Maiden Pink", bed: "Bed 2", note: "Still throwing out pink stars." },
-        { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "Lilac-magenta flowers at their peak against the dark leaves — the best month." },
-        { plant: "Dahlia 'Double Dreamy Gold'", bed: "Bed 1", note: "Golden flowers at their peak — a vivid companion to the lilac plant." },
-        { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Still flowering; foliage beginning its late-season colour change." },
-        { plant: "Gaillardia", bed: "Bed 3", note: "Still going strong if kept deadheaded — one of the longest-flowering plants in the garden." },
-        { plant: "Celosia", bed: "Bed 3", note: "Plumes still vivid — more flowers forming if it's been deadheaded." },
-        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Second flush of yellow daisies after the midsummer cut-back." },
-        { plant: "Candy House Mix", bed: "Wall Pot 1", note: "Still trailing and flowering — keep it fed and watered." },
+        highlight({ id: "aug-bed1-dahlias", title: "The Bed 1 dahlias reach their peak", note: "Lilac and gold flowers carry the strongest back-garden contrast of the month.", zoneKeys: ["bed1"] }),
+        highlight({ id: "aug-stone-grass", title: "The Stone Bed gains movement", note: "Purple fountain grass plumes rise above the low rosettes and stonecrops.", zoneKeys: ["stone"] }),
+        highlight({ id: "aug-fruit", title: "Fruit becomes part of the garden view", note: "Apples, pears, damsons and crab apples begin to colour across Oak Lodge.", zoneKeys: ["bed4", "pear", "frontApple", "frontGateTree"] }),
+        highlight({ id: "aug-front5", title: "Front Bed 5 layers flower and foliage", note: "Salvia, gaura, hebe, bluebell creeper and heathers run through the long boundary.", zoneKeys: ["frontBed5"] }),
+        highlight({ id: "aug-wallpot2-highlight", title: "The Coreopsis wall pot can flower again", note: "A fresh yellow flush follows the midsummer trim.", scope: "pot", potKey: "wallpot2", zoneKeys: ["wallpot2"] }),
       ],
-      tasks: [
-        { task: "Second clip of the box hedging", plants: ["Box Hedging"], bed: "Bed 1" },
-        { task: "Wisteria summer prune — long whippy shoots back to 6 leaves", plants: ["Wisteria"], bed: "Bed 4" },
-        { task: "Continue deadheading roses", plants: ["Rose"], bed: "Bed 4" },
-        { task: "Harvest apples and pears as they ripen — taste-test daily", plants: ["Apple Tree", "Pear Tree"], bed: "Bed 3" },
-        { task: "Keep deadheading both Double Dreamy Dahlias — regular removal keeps them flowering until frost", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
-        { task: "Continue weekly feeding of all pots", plants: ["Calibrachoa", "Petunia", "Verbena"], bed: "Big Pot 1" },
-        { task: "Cut Achillea back after its second flush — tidy up and mulch lightly", plants: ["Achillea"], bed: "Bed 3" },
-        { task: "Trim Abelia 'Kaleidoscope' lightly after flowering to maintain shape — never cut hard", plants: ["Abelia 'Kaleidoscope'"], bed: "Bed 3" },
-        { task: "Continue deadheading Gazania and feeding the front pot weekly", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'"], bed: "Front Pot" },
-        { task: "Continue feeding wall pots weekly and keep watered — Calibrachoa especially dislikes drying out", plants: ["Candy House Mix", "Coreopsis Gold"], bed: "Wall Pot 1" },
-        { task: "Continue deadheading Celosia — keep removing finished plumes to extend the show", plants: ["Celosia"], bed: "Bed 3" },
-      ],
+      indoorJobs: [],
     },
 
     September: {
-      mood: "Harvest month. Things start to slow.",
-      highlights: [
-        { plant: "Apple Tree", bed: "Bed 3", note: "Main harvest week — pick when they twist off in the hand." },
-        { plant: "Pear Tree", bed: "Tree", note: "Pears ready — pick slightly under-ripe and ripen indoors." },
-        { plant: "Honeysuckle", bed: "Stone Bed", note: "Small red berries appearing where the flowers were." },
-        { plant: "Nemesia 'Aroma Heart of Gold'", bed: "Bed 1", note: "Still flowering after the second trim." },
-        { plant: "Silverbush", bed: "Bed 2", note: "Last of the white flowers on silver foliage." },
-        { plant: "Celosia", bed: "Bed 3", note: "Still holding colour but beginning to fade — enjoy the last of it." },
-        { plant: "Coreopsis Gold", bed: "Wall Pot 2", note: "Late flowers if the summer cut-back worked — winding down now." },
+      theme: "Harvest, reduce soft growth and prepare tender plants before cold nights arrive.",
+      jobs: [
+        job({ id: "sep-harvest-main", priority: "first", category: "harvest", scope: "zone", zoneKeys: ["bed4", "pear", "frontApple"], plantIds: ["bed4-apple-tree", "stone-pear-tree", "frontApple-apple-tree", "frontApple-damson-tree"], title: "Complete the main fruit harvest", timing: "Check every few days and act before fruit becomes overripe or damaged.", summary: "Pick ready fruit in batches, separate bruised fruit and record the useful harvest window.", why: "Timely harvesting improves storage and prevents fallen fruit attracting pests or disease.", steps: ["Lift and twist apples and pears to test readiness.", "Pick damsons by colour, softness and taste.", "Store only sound fruit and use damaged fruit promptly."], doneWhen: "Ripe fruit is gathered, windfalls are cleared and dates are recorded." }),
+        job({ id: "sep-prepare-tender-plants", priority: "first", category: "protect", scope: "zone", zoneKeys: ["stone", "bed1", "bed2", "bed4", "frontBed5"], plantIds: ["stone-echeveria", "stone-echeveria-devotion", "stone-pennisetum-rubrum", "bed1-angel-wings", "bed2-angel-wings", "bed4-callistemon-inferno-yanferno", "frontBed5-bluebell-creeper-sollya", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Prepare the frost plan before the first warning", timing: "Early September, while days are mild and plants are easy to handle.", summary: "Choose what will be lifted, what will be covered and where frost-free plants will be stored.", why: "Planning early prevents rushed lifting on the evening of the first frost.", steps: ["Clear and label the frost-free storage space.", "Gather clean pots, gritty compost, fleece and labels.", "Inspect each tender plant and decide its method now."], doneWhen: "Every tender plant has a labelled action and the required materials are ready." }),
+        job({ id: "sep-take-insurance-cuttings", priority: "month", category: "prepare", scope: "zone", zoneKeys: ["bed1", "bed2", "frontBed5"], plantIds: ["bed1-nemesia", "bed1-angel-wings", "bed2-angel-wings", "bed2-silverbush", "frontBed5-salvia-salgoon-lake-blueberry", "frontBed5-bluebell-creeper-sollya"], title: "Take a few insurance cuttings from tender favourites", timing: "Before cold nights, using healthy non-flowering shoots.", summary: "Root a small labelled backup of plants that may not survive outdoors reliably.", why: "A few cuttings are easier to overwinter than whole large plants and protect favourite cultivars.", steps: ["Choose healthy pest-free non-flowering tips.", "Remove lower leaves and insert into clean free-draining compost.", "Label immediately with plant and date."], doneWhen: "A small, clearly labelled set of cuttings is sheltered and monitored." }),
+        job({ id: "sep-cut-peony", priority: "month", category: "cut-back", scope: "plant", zoneKeys: ["bed2"], plantIds: ["bed2-peony"], title: "Cut down peony foliage when it dies back", timing: "Only after the leaves yellow and collapse naturally.", summary: "Cut all foliage close to ground level and remove it from the bed.", why: "The dying foliage has finished feeding the crown; clearing it reduces overwintering disease material.", steps: ["Wait until the foliage has clearly yellowed.", "Cut stems near the base without covering the crown.", "Remove the foliage rather than leaving it as mulch."], doneWhen: "The crown area is clean, visible and free of old peony foliage." }),
+        job({ id: "sep-manage-seedheads", priority: "month", category: "cut-back", scope: "zone", zoneKeys: ["bed2", "bed3", "bed4", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["bed2-forget-me-not", "bed2-centaurea-snowy-owl", "bed4-achillea", "frontBed2-polemonium-golden-feathers", "frontBed4-astrantia-trio", "frontBed5-gaura-gaudi-red"], title: "Choose what may seed and what should be cleared", timing: "Before unwanted seed drops widely.", summary: "Keep attractive or wildlife-useful seedheads deliberately and remove invasive or untidy spreaders.", why: "A conscious choice preserves winter structure without allowing every plant to seed through crowded beds.", steps: ["Identify seedheads worth keeping for structure.", "Remove forget-me-not and other unwanted seed before it drops.", "Cut collapsed stems to healthy basal growth."], doneWhen: "Every remaining seedhead is there by choice and unwanted seed is removed." }),
+        job({ id: "sep-stop-late-feed", priority: "month", category: "feed", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["bed1-japanese-maple", "bed2-silverbush", "bed4-callistemon-inferno-yanferno", "frontBed2-coprosma-inferno", "frontBed4-photinia-existing", "frontBed5-pittosporum-tom-thumb", "frontBed5-hebe-rhubarb-and-custard"], title: "Stop feeding woody and frost-sensitive plants", timing: "From early September as growth begins to slow.", summary: "End routine feeding so new shoots can firm up before winter.", why: "Late nutrient-rich growth stays soft and is more vulnerable to cold and wind.", steps: ["Remove recurring feed reminders for these beds.", "Do not add high-nitrogen fertiliser during autumn clearing.", "Let current shoots mature naturally."], doneWhen: "No late feed is scheduled for woody or frost-sensitive plants." }),
+        job({ id: "sep-bigpot1-decision", priority: "ongoing", category: "prepare", scope: "pot", potKey: "bigpot1", zoneKeys: ["bigpot1"], plantIds: ["bigpot1-fuchsia", "bigpot1-verbena", "bigpot1-calibrachoa", "bigpot1-nepeta", "bigpot1-lobelia", "bigpot1-petunia"], title: "Decide the winter plan for Big Pot 1", timing: "Before the first frost warning.", summary: "Label the hardy plants to keep, the tender annuals to compost and any cuttings worth taking.", why: "The mixed pot contains plants with different winter outcomes, but it needs one coordinated container plan.", steps: ["Identify the hardy fuchsia and catmint framework.", "Mark tender annual material for removal after frost.", "Choose any healthy tips wanted as backups."], doneWhen: "Every component has a clear keep, cut back, lift or compost decision." }),
+        job({ id: "sep-bigpot2-decision", priority: "ongoing", category: "prepare", scope: "pot", potKey: "bigpot2", zoneKeys: ["bigpot2"], plantIds: ["bigpot2-lobelia", "bigpot2-verbena", "bigpot2-petunia", "bigpot2-nepeta", "bigpot2-fuchsia"], title: "Decide the winter plan for Big Pot 2", timing: "Before the first frost warning.", summary: "Plan the whole pot’s hardy framework, annual clear-out and any backup cuttings.", why: "A single container decision prevents tender and hardy material being treated identically by mistake.", steps: ["Mark the fuchsia and catmint to retain.", "Identify annual trailers for later composting.", "Take only the few backup cuttings genuinely wanted."], doneWhen: "The pot has one written winter plan covering every component." }),
+        job({ id: "sep-clear-diseased-fall", priority: "ongoing", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "frontBed1", "frontBed3", "frontBed4", "frontApple", "frontGateTree"], plantIds: [], title: "Begin the autumn hygiene round", timing: "As leaves, fruit and petals begin falling regularly.", summary: "Remove diseased foliage, mummified fruit and dense wet debris while leaving healthy material where it is useful.", why: "Targeted hygiene reduces disease carry-over without stripping the garden of all shelter and structure.", steps: ["Separate clearly diseased leaves and fruit.", "Clear material packed against crowns and trunks.", "Leave clean standing stems and useful habitat deliberately."], doneWhen: "Disease material and smothering debris are gone while healthy structure remains." }),
       ],
-      tasks: [
-        { task: "Cut back peony foliage as it yellows and dies down", plants: ["Peony"], bed: "Bed 2" },
-        { task: "Pull up Forget-me-nots if you don't want them self-seeding everywhere", plants: ["Forget-me-not"], bed: "Bed 2" },
-        { task: "Harvest any remaining fruit before the wasps find it", plants: ["Apple Tree", "Pear Tree"], bed: "Bed 3" },
+      highlights: [
+        highlight({ id: "sep-harvest", title: "Harvest takes over from blossom", note: "Back and front fruit trees now provide the garden’s main seasonal event.", zoneKeys: ["bed4", "pear", "frontApple"] }),
+        highlight({ id: "sep-bed1-late", title: "Bed 1 keeps flowering late", note: "Dahlias and fragrant nemesia continue beneath the first signs of maple colour.", zoneKeys: ["bed1"] }),
+        highlight({ id: "sep-front5-late", title: "Front Bed 5 holds a long late display", note: "Ceratostigma blue, warm foliage, salvia and late heathers carry the boundary into autumn.", zoneKeys: ["frontBed5"] }),
+        highlight({ id: "sep-wallpot2", title: "The Coreopsis wall pot winds down", note: "A final yellow flush may follow its midsummer cut-back.", scope: "pot", potKey: "wallpot2", zoneKeys: ["wallpot2"] }),
+      ],
+      indoorJobs: [
+        job({ id: "sep-indoor-kentia-autumn", priority: "month", category: "prepare", scope: "plant", zoneKeys: ["houseHallKentia"], plantIds: ["house-hallway-kentia-palm"], title: "Move the Kentia into its autumn routine", timing: "As daylight shortens and active growth slows.", summary: "Stop routine feeding, clean the fronds and make sure the palm is clear of cold draughts and direct heat.", why: "Reduced light means slower growth and less need for feeding, while dry heated air can mark fronds.", steps: ["Record the end of the feeding period.", "Wipe dust from the fronds.", "Check the position for radiator heat and cold door draughts."], doneWhen: "Feeding has stopped and the palm has a bright, stable position away from temperature extremes." }),
       ],
     },
 
     October: {
-      mood: "The fire month. Everything turns colour at once.",
+      theme: "Act before frost: lift the tender plants, clear summer containers and protect vulnerable crowns.",
+      jobs: [
+        job({ id: "oct-lift-stone-tender", priority: "first", category: "protect", scope: "zone", zoneKeys: ["stone"], plantIds: ["stone-echeveria", "stone-echeveria-devotion", "stone-pennisetum-rubrum", "stone-sedum-chocolate-ball"], title: "Lift the tender Stone Bed plants before frost", timing: "Before the first frost, while foliage is still identifiable and dry.", summary: "Pot the Echeverias and purple fountain grass for bright frost-free storage, and shelter tender stonecrop from severe cold and persistent wet.", why: "These plants are not reliably hardy in an exposed Bromsgrove winter.", steps: ["Label every plant before lifting.", "Use clean pots and free-draining compost.", "Remove damaged material and place plants in bright, ventilated, frost-free shelter."], doneWhen: "Tender plants are labelled, safely under cover and no lifting hole is left hazardous.", caution: "Handle powdery Echeveria leaves as little as possible and avoid trapping damp around stored crowns." }),
+        job({ id: "oct-dahlia-after-frost", priority: "first", category: "protect", scope: "zone", zoneKeys: ["bed1"], plantIds: ["bed1-dahlia", "bed1-dahlia-yellow"], title: "Deal with the dahlias after the first blackening frost", timing: "After frost blackens the top growth, not merely after a cool night.", summary: "Label by colour, cut stems down and either lift the tubers or protect them deeply in their well-drained positions.", why: "Correct timing lets the foliage finish its job while preventing tubers being lost to prolonged cold and wet.", steps: ["Label each plant before removing the flowers and foliage.", "Cut stems to about 15cm.", "Choose either labelled frost-free storage or a deep, airy protective mulch in situ."], doneWhen: "Both tubers are labelled and their chosen winter protection is complete.", caution: "Do not store damaged or wet tubers sealed in plastic." }),
+        job({ id: "oct-protect-border-tender", priority: "first", category: "protect", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["bed1-angel-wings", "bed2-angel-wings", "bed2-silverbush", "bed4-callistemon-inferno-yanferno", "frontBed2-coprosma-inferno", "frontBed2-coprosma-pina-colada", "frontBed4-flaming-silver", "frontBed5-bluebell-creeper-sollya", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Put border frost protection in place", timing: "Before forecast frost or a spell of cold, wet weather.", summary: "Shelter vulnerable tops and crowns while keeping airflow and drainage open.", why: "Many borderline evergreens are damaged more by cold wet and drying wind than by a single light frost.", steps: ["Mulch vulnerable root zones with dry, airy material.", "Use fleece on forecast cold nights and remove or vent it in milder weather.", "Keep wet leaves and mulch away from crowns."], doneWhen: "Every vulnerable plant is protected without being tightly wrapped or buried." }),
+        job({ id: "oct-bigpot1-clear", priority: "month", category: "cut-back", scope: "pot", potKey: "bigpot1", zoneKeys: ["bigpot1"], plantIds: ["bigpot1-fuchsia", "bigpot1-verbena", "bigpot1-calibrachoa", "bigpot1-nepeta", "bigpot1-lobelia", "bigpot1-petunia"], title: "Clear Big Pot 1 for winter", timing: "After frost ends the tender display.", summary: "Compost failed annuals, retain the hardy fuchsia and catmint framework, and leave the glazed pot safe for winter.", why: "One coordinated clear-out preserves the hardy components without leaving collapsing annual material around them.", steps: ["Remove the dead annual trailers from the root.", "Leave sound fuchsia stems and catmint basal growth.", "Clear debris from the surface and check the pot remains stable."], doneWhen: "Only the chosen hardy framework remains and the pot surface is clean." }),
+        job({ id: "oct-bigpot2-clear", priority: "month", category: "cut-back", scope: "pot", potKey: "bigpot2", zoneKeys: ["bigpot2"], plantIds: ["bigpot2-lobelia", "bigpot2-verbena", "bigpot2-petunia", "bigpot2-nepeta", "bigpot2-fuchsia"], title: "Clear Big Pot 2 for winter", timing: "After frost ends the tender display.", summary: "Remove annual material and retain only the planned hardy framework.", why: "The mirror pot needs its own whole-container clear-out without separate plant reminders.", steps: ["Remove collapsed annual trailers.", "Keep sound fuchsia stems and catmint growth.", "Clear the compost surface and confirm the pot is secure."], doneWhen: "The pot is clean and only intentionally retained hardy plants remain." }),
+        job({ id: "oct-littlepot1-clear", priority: "month", category: "protect", scope: "pot", potKey: "littlepot1", zoneKeys: ["littlepot1"], plantIds: ["littlepot1-geranium", "littlepot1-petunia"], title: "Clear or shelter Little Pot 1", timing: "Before hard frost.", summary: "Choose whether to shelter the geranium frost-free, then compost the finished petunia and clean the pot.", why: "The two plants share a pot but have different winter outcomes that should be handled in one container job.", steps: ["Lift or take cuttings from the geranium only if it is being kept.", "Remove the spent petunia.", "Clean the pot surface and move the glazed container to shelter if needed."], doneWhen: "The chosen geranium material is safe and no failed annual growth remains." }),
+        job({ id: "oct-littlepot2-clear", priority: "month", category: "protect", scope: "pot", potKey: "littlepot2", zoneKeys: ["littlepot2"], plantIds: ["littlepot2-geranium", "littlepot2-petunia"], title: "Clear or shelter Little Pot 2", timing: "Before hard frost.", summary: "Save the geranium only if wanted, compost the petunia and leave the container clean and protected.", why: "One pot-level action deals with both tender plants without duplicated calendar entries.", steps: ["Choose whether the geranium or cuttings will be kept frost-free.", "Remove the finished petunia.", "Clean and shelter the glazed pot as required."], doneWhen: "Kept material is labelled under cover and the outdoor pot is clear." }),
+        job({ id: "oct-baskets-clear", priority: "month", category: "cut-back", scope: "pot", potKey: "baskets", zoneKeys: ["baskets"], plantIds: ["baskets-trailing-fuchsia", "baskets-bacopa", "baskets-trailing-lobelia", "baskets-trailing-verbena"], title: "Take down and clear the hanging baskets", timing: "When frost ends the display or before severe weather makes them unsafe.", summary: "Compost the tender planting, clean the basket hardware and store it securely.", why: "Empty baskets avoid winter wind damage and are ready for a clean start next season.", steps: ["Take baskets down before dismantling them.", "Compost finished plant material and discard diseased material separately.", "Clean and dry chains, brackets and reusable liners."], doneWhen: "The baskets are empty, dry and stored with sound fittings." }),
+        job({ id: "oct-frontpot-clear", priority: "month", category: "cut-back", scope: "pot", potKey: "frontpot", zoneKeys: ["frontpot"], plantIds: ["frontpot-gazania-sunny-side-up", "frontpot-gazania-orange-flame", "frontpot-calibrachoa", "frontpot-bacopa-white"], title: "Clear the Front Door Pot after frost", timing: "Once the tender display collapses.", summary: "Compost the seasonal planting and clean the container as one complete display.", why: "All four plants are being used as a tender summer composition and should leave one clean pot for winter.", steps: ["Remove the whole root mass and separate any diseased material.", "Brush loose compost and debris from the pot.", "Move the glazed pot to a protected position if hard frost could damage it."], doneWhen: "The pot is empty, clean and safely positioned for winter." }),
+        job({ id: "oct-wallpot1-clear", priority: "month", category: "cut-back", scope: "pot", potKey: "wallpot1", zoneKeys: ["wallpot1"], plantIds: ["wallpot1-candy-house-mix"], title: "Clear the Candy House wall pot", timing: "After frost ends flowering.", summary: "Remove the tender planting, clean the small container and inspect its wall fixing.", why: "A clean, empty wall pot is safer through winter wind and frost.", steps: ["Remove all plant and root material.", "Clear the drainage opening.", "Check the bracket and store the pot if the fixing is exposed."], doneWhen: "The pot is empty, clean and either securely fixed or stored." }),
+        job({ id: "oct-bed5-medium-pot", priority: "month", category: "cut-back", scope: "pot", potKey: "bed5-medium-pot", zoneKeys: ["bed5"], plantIds: ["bed5-medium-pot-lythrum-robin"], title: "Cut back and protect the Bed 5 medium pot", timing: "After the Lythrum dies back.", summary: "Remove finished stems and protect the container from prolonged hard frost and winter saturation.", why: "This hardy perennial can return, but its roots are more exposed in a container than in open ground.", steps: ["Wait until the stems are clearly finished.", "Cut them close to the crown.", "Clear debris and place the pot in a sheltered, stable position."], doneWhen: "The crown is tidy and the pot is secure for winter." }),
+        job({ id: "oct-bed5-little-pot", priority: "month", category: "cut-back", scope: "pot", potKey: "bed5-little-pot", zoneKeys: ["bed5"], plantIds: ["bed5-little-pot-begonia-carmen"], title: "Clear the Bed 5 little begonia pot", timing: "Before or immediately after the first frost.", summary: "Compost the tender begonia unless it is deliberately being lifted for frost-free storage.", why: "The begonia will not reliably survive outdoors in its small pot.", steps: ["Choose keep or compost before cold damage makes identification difficult.", "Lift and label any material being stored.", "Clean and shelter the empty little pot."], doneWhen: "No tender begonia remains exposed and the pot is clean." }),
+        job({ id: "oct-bed5-alstroemeria-winter", priority: "month", category: "protect", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-alstroemeria"], title: "Protect the Bed 5 big-pot alstroemeria", timing: "As top growth dies back and before hard frost.", summary: "Remove finished stems and insulate the crown while keeping the pot drained.", why: "Container roots experience colder conditions than the same plant in open ground.", steps: ["Pull or cut away fully finished stems.", "Add an airy protective layer over the root zone.", "Move the pot against shelter if practical without disturbing the whole display."], doneWhen: "The crown is tidy, insulated and not sealed beneath wet material." }),
+        job({ id: "oct-bed5-petunia-finish", priority: "month", category: "cut-back", scope: "bed5-big-pot", zoneKeys: ["bed5"], plantIds: ["bed5-big-pot-petunia-bees-knees"], title: "Remove the finished Bed 5 big-pot petunia", timing: "After frost ends its flowering.", summary: "Remove the tender annual cleanly without disturbing the hardy Vinca and Alstroemeria roots.", why: "Clearing the failed annual opens the mixed pot and reduces winter debris.", steps: ["Cut the top growth back so the base is visible.", "Ease out the petunia root ball without pulling neighbouring crowns.", "Fill and firm the small gap with fresh free-draining compost."], doneWhen: "The annual is gone and the remaining plants sit firmly." }),
+        job({ id: "oct-autumn-leaf-round", priority: "ongoing", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5", "frontStone"], plantIds: [], title: "Keep fallen leaves off vulnerable crowns", timing: "Weekly during heavy leaf fall.", summary: "Clear wet mats from alpines, succulents, low evergreens and herbaceous crowns while leaving useful clean leaves in open areas.", why: "Dense wet leaves can smother low plants and hold damaging damp around crowns.", steps: ["Prioritise the Stone Bed, trough and compact evergreen mounds.", "Remove diseased leaves separately.", "Use healthy loose leaves only where they cannot seal a crown."], doneWhen: "No vulnerable crown is buried under a wet leaf mat." }),
+      ],
       highlights: [
-        { plant: "Japanese Maple 'Bloodgood'", bed: "Bed 1", note: "Deep purple foliage brightening to fiery red — peak fortnight of the year." },
-        { plant: "Weeping Cherry", bed: "Bed 2", note: "Yellow and bronze leaves before they drop." },
-        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Cream-edged leaves dropping to reveal the red stems beneath." },
-        { plant: "Apple Tree", bed: "Bed 3", note: "Last apples; leaves yellowing." },
-        { plant: "Japanese Aralia", bed: "Bed 1", note: "Cream globe flowers opening — odd, alien, lovely." },
-        { plant: "Dahlia 'Double Dreamy Lilac'", bed: "Bed 1", note: "Last lilac-magenta flowers before the first frost finishes the show." },
-        { plant: "Dahlia 'Double Dreamy Gold'", bed: "Bed 1", note: "Last golden flowers — enjoy them while they last." },
-        { plant: "Abelia 'Kaleidoscope'", bed: "Bed 3", note: "Foliage turning orange and flame-red — best autumn colour of the bed." },
-        { plant: "Spiraea 'Double Play Big Bang'", bed: "Bed 2", note: "Foliage turning orange-red again — bookends the season nicely." },
+        highlight({ id: "oct-maple", title: "The Japanese maple turns fiery", note: "Bed 1’s deep purple canopy brightens to its strongest red before leaf fall.", zoneKeys: ["bed1"], plantIds: ["bed1-japanese-maple"] }),
+        highlight({ id: "oct-front-dogwood", title: "Front Bed 3 changes from leaf to stem colour", note: "Cream-edged foliage drops away and the dogwood’s red framework starts to take over.", zoneKeys: ["frontBed3"] }),
+        highlight({ id: "oct-front5", title: "Front Bed 5 carries the autumn palette", note: "Ceratostigma, heathers and variegated evergreens mix blue, red, bronze and gold.", zoneKeys: ["frontBed5"] }),
+        highlight({ id: "oct-bed3", title: "Bed 3 echoes spring in warmer tones", note: "Spiraea foliage returns to orange-red as the compact bed winds down.", zoneKeys: ["bed3"] }),
       ],
-      tasks: [
-        { task: "Protect Angel Wings from the first frosts — fleece or move to shelter", plants: ["Angel Wings"], bed: "Bed 1" },
-        { task: "Clear fallen leaves from the Yucca crown and top-dress with grit; avoid moisture-trapping winter wrapping", plants: ["Yucca"], bed: "Bed 5" },
-        { task: "Clear debris around the dark New Zealand Flax and prepare loose crown protection only if severe frost is forecast", plants: ["New Zealand Flax (dark)"], bed: "Stone Bed" },
-        { task: "Tidy Houseleek rosettes — remove any spent flowering rosettes", plants: ["Houseleeks"], bed: "Stone Bed" },
-        { task: "Lift the Echeveria before frost, pot it into gritty compost and overwinter it bright, frost-free and almost dry", plants: ["Echeveria"], bed: "Stone Bed" },
-        { task: "Lift Echeveria 'Devotion' before frost and overwinter it bright, frost-free and almost dry", plants: ["Echeveria 'Devotion'"], bed: "Stone Bed" },
-        { task: "Lift or pot Purple Fountain Grass 'Rubrum' before hard frost; fleece alone is not reliable protection here", plants: ["Purple Fountain Grass 'Rubrum'"], bed: "Stone Bed" },
-        { task: "Shelter Sedum 'Chocolate Ball' from severe frost and persistent winter rain", plants: ["Sedum 'Chocolate Ball'"], bed: "Stone Bed" },
-        { task: "Clear fallen leaves off the gravel beds and stone bed", plants: [], bed: "Stone Bed" },
-        { task: "After first frost blackens the Dahlia foliage, cut stems to 15cm and mulch the crowns heavily — or lift the tubers and store dry", plants: ["Dahlia 'Double Dreamy Lilac'", "Dahlia 'Double Dreamy Gold'"], bed: "Bed 1" },
-        { task: "Empty and clean pots once annuals are spent — compost the bedding, store pots frost-free if glazed", plants: ["Petunia", "Lobelia", "Calibrachoa", "Verbena"], bed: "Big Pot 1" },
-        { task: "Bring Geraniums (Pelargoniums) indoors to overwinter if you want to keep them — or compost", plants: ["Geranium"], bed: "Little Pot 1" },
-        { task: "Clear the front door pot — Gazania, Calibrachoa and Bacopa are tender annuals. Compost them and store the pot for winter", plants: ["Gazania 'Sunny Side Up'", "Gazania 'Orange Flame'", "Calibrachoa", "Bacopa White"], bed: "Front Pot" },
-        { task: "Remove Celosia after the first frost — compost this tender annual", plants: ["Celosia"], bed: "Bed 3" },
-        { task: "Cut Coreopsis Gold back to the crown for winter — it's a hardy perennial and should return next year", plants: ["Coreopsis Gold"], bed: "Wall Pot 2" },
-        { task: "Cut Gaillardia back hard to the crown — some may not survive winter, have replacements in mind", plants: ["Gaillardia"], bed: "Bed 3" },
-        { task: "Protect Callistemon thoroughly from severe cold and winter winds — RHS H3 means it needs a warm, sheltered position", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
-      ],
+      indoorJobs: [],
     },
 
     November: {
-      mood: "Things settle. The garden's bones reassert themselves.",
+      theme: "Finish the tidy-up selectively, secure climbers and keep winter wet away from crowns.",
+      jobs: [
+        job({ id: "nov-clear-collapsed-foliage", priority: "first", category: "cut-back", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "frontBed2", "frontBed4", "frontBed5", "frontStone"], plantIds: ["bed1-hosta", "bed1-hosta-gold", "bed2-peony", "bed2-forget-me-not", "bed4-celosia", "frontBed2-polemonium-golden-feathers", "frontBed4-astrantia-trio", "frontBed5-ceratostigma-plumbaginoides", "frontStone-hosta"], title: "Clear fully collapsed herbaceous foliage", timing: "Once leaves and stems have yellowed or collapsed naturally.", summary: "Cut finished material to the crown while retaining sound seedheads and semi-evergreen basal growth deliberately.", why: "Selective clearing removes wet debris without stripping away all winter structure and shelter.", steps: ["Confirm each stem is fully finished.", "Cut close to the crown without damaging buds.", "Leave chosen seedheads and healthy basal rosettes."], doneWhen: "No collapsed material smothers a crown and every remaining stem is intentional." }),
+        job({ id: "nov-protect-winter-wet", priority: "first", category: "protect", scope: "zone", zoneKeys: ["stone", "bed2", "frontBed4", "frontBed5", "frontStone"], plantIds: ["stone-houseleeks", "stone-common-houseleek", "stone-sedum-chocolate-ball", "bed2-silverbush", "frontBed4-delosperma-ice-cream-mix", "frontBed5-gaura-gaudi-red", "frontStone-hosta"], title: "Keep vulnerable crowns clear of winter wet", timing: "Before prolonged rain and after every heavy leaf fall.", summary: "Open drainage channels, clear debris and shelter only the plants that genuinely need overhead protection.", why: "Cold wet around the crown can be more damaging than cold air to alpines, succulents and silver-leaved plants.", steps: ["Remove leaf mats and blocked gravel channels.", "Check trough and pot drainage openings.", "Use a ventilated rain shelter only where needed; do not wrap plants tightly."], doneWhen: "Crowns are visible, drainage routes are open and shelters allow airflow." }),
+        job({ id: "nov-secure-climbers", priority: "month", category: "support", scope: "zone", zoneKeys: ["bed2", "bed5", "patio", "frontBed3", "frontBed4", "frontBed5"], plantIds: ["bed2-hydrangea-petiolaris", "bed5-wisteria", "bed5-rose", "stone-honeysuckle", "stone-clematis", "frontBed3-climbing-rose-white-pink", "frontBed4-the-generous-gardener", "frontBed5-clematis", "frontBed5-honeysuckle", "frontBed5-bluebell-creeper-sollya"], title: "Secure climbers before winter wind", timing: "On a calm day after most leaves have fallen.", summary: "Replace failed ties and remove only clearly dead or hazardous loose growth.", why: "Sound winter ties prevent stems rubbing, snapping or pulling supports away from walls.", steps: ["Test supports and anchor points before adding ties.", "Use soft figure-eight ties with room for thickening.", "Remove only dead, broken or access-blocking tangles."], doneWhen: "No long stem can whip freely and no tie cuts into bark." }),
+        job({ id: "nov-clear-diseased-leaves-fruit", priority: "month", category: "ground", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "pear", "frontBed1", "frontBed3", "frontApple", "frontGateTree"], plantIds: [], title: "Remove diseased leaves and forgotten fruit", timing: "After the main leaf fall.", summary: "Collect spotted leaves, mummified fruit and rotting windfalls while leaving clean habitat material elsewhere.", why: "Targeted removal reduces disease carry-over without over-tidying the whole garden.", steps: ["Check beneath fruit trees and roses.", "Remove attached mummified fruit where reachable safely.", "Keep diseased material out of ordinary garden compost."], doneWhen: "No obvious diseased pile or rotting fruit remains around susceptible plants." }),
+        job({ id: "nov-check-protection", priority: "ongoing", category: "protect", scope: "zone", zoneKeys: ["stone", "bed1", "bed2", "bed4", "frontBed2", "frontBed4", "frontBed5"], plantIds: ["stone-pennisetum-rubrum", "stone-echeveria", "stone-echeveria-devotion", "bed1-angel-wings", "bed2-angel-wings", "bed4-callistemon-inferno-yanferno", "frontBed2-coprosma-inferno", "frontBed4-flaming-silver", "frontBed5-bluebell-creeper-sollya"], title: "Check frost protection and stored plants", timing: "After storms, hard frost or a run of mild damp days.", summary: "Refasten dry protection, vent during mild weather and remove any stored material showing rot.", why: "Winter protection needs adjustment; leaving it sealed and unchecked can create its own damage.", steps: ["Inspect under covers rather than assuming they are sound.", "Remove sodden material and improve airflow.", "Quarantine or trim rot with clean tools."], doneWhen: "Protection is secure and breathable and stored plants are healthy or treated." }),
+        job({ id: "nov-clean-tools", priority: "month", category: "prepare", scope: "zone", zoneKeys: [], plantIds: [], title: "Clean and sharpen the winter pruning tools", timing: "Before the apple and pear pruning season begins again.", summary: "Clean blades, remove sap and rust, sharpen cutting edges and check moving parts.", why: "Sharp clean tools make smaller wounds and reduce the chance of carrying disease between plants.", steps: ["Wash and dry blades thoroughly.", "Sharpen to the existing bevel and oil the joint.", "Replace damaged blades or loose fasteners."], doneWhen: "Secateurs and loppers cut clean paper or a test twig without crushing." }),
+      ],
       highlights: [
-        { plant: "Japanese Maple 'Bloodgood'", bed: "Bed 1", note: "Last of the red leaves clinging on." },
-        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bare red stems beginning to dominate." },
-        { plant: "Box Hedging", bed: "Bed 1", note: "Steady evergreen structure as everything else falls back." },
-        { plant: "Japanese Aralia", bed: "Bed 1", note: "Cream flowers fading; leaves still glossy." },
+        highlight({ id: "nov-dogwood", title: "Dogwood stems take over Front Bed 3", note: "The red framework becomes the front garden’s strongest winter feature.", zoneKeys: ["frontBed3"] }),
+        highlight({ id: "nov-bed1-evergreen", title: "Bed 1 returns to evergreen structure", note: "Box, Japanese Aralia and rhododendron remain after the softer layers collapse.", zoneKeys: ["bed1"] }),
+        highlight({ id: "nov-front4-5", title: "The front borders hold colour in foliage", note: "Physocarpus, spiraea, Coprosma, heathers and evergreen shrubs carry the transition.", zoneKeys: ["frontBed4", "frontBed5"] }),
+        highlight({ id: "nov-crab-apples", title: "Crab apples may persist by the gate", note: "Small fruit can continue the display and feed visiting birds.", zoneKeys: ["frontGateTree"], plantIds: ["frontGateTree-weeping-crab-apple"] }),
       ],
-      tasks: [
-        { task: "Protect Silverbush from winter wet — sharp drainage and a sheltered spot", plants: ["Silverbush"], bed: "Bed 2" },
-        { task: "Final tidy of the Peony after its foliage dies back", plants: ["Peony"], bed: "Bed 2" },
-        { task: "Check Clematis montana framework — tie in any loose stems before winter winds", plants: ["Clematis"], bed: "Patio" },
-      ],
+      indoorJobs: [],
     },
 
     December: {
-      mood: "Quiet months. Read seed catalogues. Plan.",
-      highlights: [
-        { plant: "Variegated Dogwood", bed: "Front Bed 3", note: "Bright red stems at peak — the winter focal point." },
-        { plant: "Box Hedging", bed: "Bed 1", note: "Dense green structure carrying the bed through winter." },
-        { plant: "Japanese Aralia", bed: "Bed 1", note: "Glossy evergreen leaves — a tropical note in the cold." },
-        { plant: "New Zealand Flax", bed: "Bed 4", note: "Architectural sword leaves regardless of weather." },
-        { plant: "Cabbage Tree", bed: "Stone Bed", note: "Burgundy fountain holds its shape all winter." },
+      theme: "Protect, inspect and plan; make only the winter cuts that are genuinely due.",
+      jobs: [
+        job({ id: "dec-start-fruit-pruning", priority: "first", category: "prune", scope: "zone", zoneKeys: ["bed4", "pear", "frontApple", "frontGateTree"], plantIds: ["bed4-apple-tree", "stone-pear-tree", "frontApple-apple-tree", "frontGateTree-weeping-crab-apple"], title: "Begin restrained apple, pear and crab-apple pruning", timing: "After leaf fall on a dry, frost-free day.", summary: "Start with dead, damaged and crossing wood; leave optional shaping for January if conditions are poor.", why: "Bare branches reveal the framework, but there is no benefit in rushing cuts during bad weather.", steps: ["Inspect each full framework before cutting.", "Remove only dead, damaged or rubbing wood first.", "Preserve the crab apple’s pendulous outline."], doneWhen: "Safety and sound-wood cuts are complete and any optional work is recorded for later.", caution: "Do not include the cherry or damson in this dormant prune." }),
+        job({ id: "dec-check-tender-storage", priority: "first", category: "protect", scope: "zone", zoneKeys: ["stone", "bed1", "bed2", "bed4", "frontBed5"], plantIds: ["stone-echeveria", "stone-echeveria-devotion", "stone-pennisetum-rubrum", "bed1-dahlia", "bed1-dahlia-yellow", "bed1-angel-wings", "bed2-angel-wings", "bed4-callistemon-inferno-yanferno", "frontBed5-salvia-salgoon-lake-blueberry"], title: "Inspect stored and protected tender plants", timing: "Monthly, and after severe weather.", summary: "Check labels, rot, drying damage and loose covers without restarting active growth.", why: "Small winter problems are easier to correct before they spread through stored plants or exposed crowns.", steps: ["Inspect dahlia tubers and stored crowns for soft patches.", "Remove rot with clean tools and improve spacing.", "Refasten outdoor protection and keep it ventilated."], doneWhen: "All stored plants are sound or treated, labels are readable and covers are secure." }),
+        job({ id: "dec-storm-damage", priority: "month", category: "check", scope: "zone", zoneKeys: ["bed1", "bed2", "bed4", "bed5", "pear", "frontBed3", "frontBed4", "frontBed5", "frontApple", "frontGateTree"], plantIds: [], title: "Walk the garden after winter storms", timing: "After strong wind, snow or ice.", summary: "Look for split branches, pulled ties, leaning pots and overloaded evergreen foliage.", why: "Promptly making hazards safe prevents further tearing and damage to supports.", steps: ["Check paths from ground level before working overhead.", "Remove only broken hanging material that is safe to reach.", "Retie climbers and gently clear heavy snow from flexible evergreens."], doneWhen: "Paths are safe, supports are secure and any specialist tree work is clearly identified.", caution: "Do not climb or work beneath unstable branches." }),
+        job({ id: "dec-clear-winter-access", priority: "month", category: "ground", scope: "zone", zoneKeys: ["steps", "kitchen", "lounge", "patio"], plantIds: [], title: "Keep steps and winter access clear", timing: "After leaf fall, storms or freezing weather.", summary: "Remove slippery leaf mats, loose branches and debris from the main garden route without disturbing planted areas.", why: "Safe access makes every later winter inspection easier and prevents wet debris building up against bed edges.", steps: ["Clear the steps from top to bottom.", "Sweep the patio and access edges where leaves collect.", "Move debris to an appropriate habitat or compost area away from the walking route."], doneWhen: "The route from house to upper garden is clear, stable and easy to inspect." }),
+        job({ id: "dec-plan-spring", priority: "month", category: "prepare", scope: "zone", zoneKeys: ["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5"], plantIds: [], title: "Make the spring preparation list", timing: "During the quietest garden weeks.", summary: "Record missing supports, mulch needs, congested plants, failed annuals and any labels that need confirming.", why: "A short site-specific list prevents impulse work and makes February and March more manageable.", steps: ["Walk each bed with the garden plan.", "Note jobs by location rather than creating a shopping list first.", "Mark which tasks must wait for new growth or post-flowering timing."], doneWhen: "Spring priorities are written by area with the correct timing attached." }),
+        job({ id: "dec-leaf-and-crown-check", priority: "ongoing", category: "ground", scope: "zone", zoneKeys: ["stone", "frontStone", "bed1", "bed2", "frontBed4", "frontBed5"], plantIds: [], title: "Keep vulnerable crowns free of compacted debris", timing: "After leaf fall, wind or heavy rain.", summary: "Lift dense wet material from rosettes, alpines, low evergreens and dormant crowns.", why: "Open crowns and drainage reduce winter rot while the rest of the garden can remain less tidied.", steps: ["Prioritise the Stone Bed and trough.", "Clear around peony, hosta and low evergreen crowns.", "Leave clean loose habitat material in safer open positions."], doneWhen: "No vulnerable plant is sealed under a wet mat." }),
       ],
-      tasks: [
-        { task: "Enjoy the dogwood stems — best in low winter sun", plants: ["Variegated Dogwood"], bed: "Front Bed 3" },
-        { task: "Protect tender plants from hard frost — fleece Angel Wings, Silverbush, Cordyline", plants: ["Angel Wings", "Silverbush", "Cabbage Tree"], bed: "Bed 1" },
-        { task: "Check Callistemon frost protection and keep it sheltered from severe cold and winter winds", plants: ["Callistemon Inferno ('Yanferno')"], bed: "Bed 4" },
-        { task: "Plan changes for spring — sketch in the notebook before catalogues arrive", plants: [], bed: "Bed 1" },
-        { task: "Winter prune wisteria — long shoots back to 2–3 buds (can do late Dec or Feb)", plants: ["Wisteria"], bed: "Bed 4" },
+      highlights: [
+        highlight({ id: "dec-dogwood", title: "The dogwood reaches peak winter colour", note: "Low winter sun makes the red stems of Front Bed 3 especially vivid.", zoneKeys: ["frontBed3"] }),
+        highlight({ id: "dec-stone", title: "The Stone Bed keeps its graphic shapes", note: "Rosettes, sword leaves and gravel remain legible when softer planting has disappeared.", zoneKeys: ["stone"] }),
+        highlight({ id: "dec-front-evergreen", title: "Evergreen front borders carry the garden", note: "Laurel, Choisya, Pieris, heathers, Coprosma and other foliage plants hold the entrance together.", zoneKeys: ["frontBed2", "frontBed4", "frontBed5"] }),
+        highlight({ id: "dec-bed1", title: "Bed 1’s winter framework", note: "The maple branches sit over a steady layer of box, rhododendron and Japanese Aralia.", zoneKeys: ["bed1"] }),
+      ],
+      indoorJobs: [
+        job({ id: "dec-indoor-kentia-winter", priority: "month", category: "check", scope: "plant", zoneKeys: ["houseHallKentia"], plantIds: ["house-hallway-kentia-palm"], title: "Keep the Kentia clear of winter extremes", timing: "During the shortest days and whenever the heating pattern changes.", summary: "Check for cold draughts, direct radiator heat, dust and pests; do not feed through the slow-growth period.", why: "Stable light and temperature matter more than active intervention in winter.", steps: ["Feel for draughts around doors and windows.", "Confirm no radiator blows directly onto the fronds.", "Clean leaves and inspect for pests."], doneWhen: "The position is stable, leaves are clean and no winter feeding is scheduled." }),
       ],
     },
   };
 
-  // Reverse lookup: bed display name → zoneKey
-  const BED_TO_ZONE = {
-    "Bed 1": "bed1",
-    "Bed 2": "bed2",
-    "Bed 3": "bed3",
-    "Bed 4": "bed4",
-    "Bed 5": "bed5",
-    "Stone Bed": "stone",
-    "Patio": "patio",
-    "Tree": "pear",
-    "Big Pot 1": "bigpot1",
-    "Big Pot 2": "bigpot2",
-    "Little Pot 1": "littlepot1",
-    "Little Pot 2": "littlepot2",
-    "Lobelia Pot": "lobeliapot",
-    "Front Pot": "frontpot",
-    "Wall Pot 1": "wallpot1",
-    "Wall Pot 2": "wallpot2",
-    "Front Bed 1": "frontBed1",
-    "Front Bed 2": "frontBed2",
-    "Front Bed 3": "frontBed3",
-    "Front Bed 4": "frontBed4",
-    "Front Bed 5": "frontBed5",
-    "Front Fruit Trees": "frontApple",
-    "Front Gate Tree": "frontGateTree",
-  };
-
-  const SEASONAL_NAME_ALIASES = {
-    "Callistemon 'Inferno'": "Callistemon Inferno ('Yanferno')",
-    "Clematis montana": "Clematis",
-    "Yucca": "New Zealand Flax (cultivar to confirm)",
-    "New Zealand Flax": "New Zealand Flax (cultivar to confirm)",
-  };
-  const DUPLICATE_NAME_DEFAULTS = {
-    "Angel Wings": "bed1",
-    "Apple Tree": "bed4",
-    "Box Hedging": "bed1",
-    "Hosta 'Patriot'": "bed1",
-  };
-
-  function resolvePlantReference(plantName, bedHint) {
-    const resolvedName = SEASONAL_NAME_ALIASES[plantName] || plantName;
-    const hintedZone = BED_TO_ZONE[bedHint];
-    if (hintedZone && (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[hintedZone] || {})[resolvedName]) {
-      return {
-        zoneKey: hintedZone,
-        plantId: window.OAK.PLANT_ID_BY_ZONE_AND_NAME[hintedZone][resolvedName],
-        plantName: resolvedName,
-      };
-    }
-    const defaultZone = DUPLICATE_NAME_DEFAULTS[resolvedName];
-    if (defaultZone && (window.OAK.PLANT_ID_BY_ZONE_AND_NAME[defaultZone] || {})[resolvedName]) {
-      return {
-        zoneKey: defaultZone,
-        plantId: window.OAK.PLANT_ID_BY_ZONE_AND_NAME[defaultZone][resolvedName],
-        plantName: resolvedName,
-      };
-    }
-    const matches = Object.entries(window.OAK.PLANT_ID_BY_ZONE_AND_NAME)
-      .filter(([, names]) => names[resolvedName])
-      .map(([zoneKey, names]) => ({ zoneKey, plantId: names[resolvedName], plantName: resolvedName }));
-    return matches.length === 1 ? matches[0] : null;
-  }
-
-  // Replace legacy bed/name links with validated stable references. Tasks
-  // mentioning plants in more than one zone are split so every rendered task
-  // has one unambiguous location.
-  Object.entries(SEASONAL).forEach(([monthName, month]) => {
-    month.highlights = month.highlights.map((entry, index) => {
-      const reference = resolvePlantReference(entry.plant, entry.bed);
-      if (!reference) throw new Error(`Unresolved seasonal reference: ${monthName} highlight ${index} (${entry.plant})`);
-      return {
-        ...entry,
-        plant: reference.plantName,
-        bed: window.OAK.ZONES[reference.zoneKey].plantKey,
-        reference,
-      };
-    });
-    month.tasks = month.tasks.flatMap((entry, index) => {
-      const names = entry.plants || [];
-      if (names.length === 0) return [{ ...entry, references: [] }];
-      const references = names.map((name) => resolvePlantReference(name, entry.bed));
-      const unresolved = references.findIndex((reference) => !reference);
-      if (unresolved >= 0) {
-        throw new Error(`Unresolved seasonal reference: ${monthName} task ${index} (${names[unresolved]})`);
-      }
-      const byZone = new Map();
-      references.forEach((reference) => {
-        if (!byZone.has(reference.zoneKey)) byZone.set(reference.zoneKey, []);
-        byZone.get(reference.zoneKey).push(reference);
-      });
-      return Array.from(byZone.entries()).map(([zoneKey, zoneReferences]) => ({
-        ...entry,
-        plants: zoneReferences.map((reference) => reference.plantName),
-        bed: window.OAK.ZONES[zoneKey].plantKey,
-        references: zoneReferences,
-      }));
-    });
-  });
-
   window.OAK = window.OAK || {};
   window.OAK.SEASONAL = SEASONAL;
-  window.OAK.BED_TO_ZONE = BED_TO_ZONE;
   window.OAK.MONTHS = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
