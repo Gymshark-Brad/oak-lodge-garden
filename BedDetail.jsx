@@ -32,6 +32,14 @@ function BedDetail({ zoneKey, onBack, onOpenPlant, onOpenLightbox, dark }) {
       period: "Before the late-July 2026 change",
       note: "Begonia Cocktail 'Gin' before it was removed and replaced by Polemonium 'Golden Feathers' — kept here for the record.",
     },
+    littlepot2: {
+      period: "Before the 2 August 2026 change",
+      note: "Little Pot 2 before its Pelargonium and Petunia were removed and the established Coreopsis moved into the pot — kept here for the record.",
+    },
+    wallpot2: {
+      period: "Before the 2 August 2026 change",
+      note: "The pot with its former Coreopsis planting, before the Coreopsis moved into Little Pot 2 and Echinacea Mooodz Glory took its place — kept here for the record.",
+    },
     frontBed3: {
       period: "Before the July 2026 update",
       note: "The wall bed before the fern was removed and the dogwood, Red Hot Poker and Leucothoe were planted — kept here for the record.",

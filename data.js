@@ -149,12 +149,12 @@ window.OAK = (function () {
       title: "Big Pot 1",
       badge: "Glazed pot",
       dims: "Large round blue pot",
-      where: "On the decking, below the stone bed",
+      where: "Tucked into the upper-left corner of the decking",
       desc:
-        "A large blue glazed pot moved farther onto the decking in July 2026, packed with summer colour — fuchsia, verbena, calibrachoa, lobelia, nepeta and a dark-sky petunia.",
-      shape: { kind: "circle", cx: 502, cy: 358, r: 16 },
+        "A large blue glazed pot tucked into the upper-left corner of the decking, packed with summer colour — fuchsia, verbena, calibrachoa, lobelia, nepeta and a dark-sky petunia.",
+      shape: { kind: "circle", cx: 505, cy: 336, r: 16 },
       color: "#2b5c9e",
-      labelXY: [502, 388],
+      labelXY: [525, 365],
       plantKey: "Big Pot 1",
       isPot: true,
     },
@@ -163,13 +163,27 @@ window.OAK = (function () {
       title: "Lobelia Pot",
       badge: "Glazed pot",
       dims: "Medium blue pot",
+      where: "Corner between the steps and Flower Bed 4",
+      desc:
+        "A blue glazed pot moved into the corner between the steps and Flower Bed 4 in August 2026, planted with Lobelia 'Starship Scarlet Bronze Leaf' — vivid scarlet flower spikes above dramatic bronze foliage.",
+      shape: { kind: "circle", cx: 474, cy: 232, r: 13 },
+      color: "#2b5c9e",
+      labelXY: [445, 210],
+      plantKey: "Lobelia Pot",
+      isPot: true,
+    },
+    cercispot: {
+      id: "cercispot",
+      title: "Cercis Pot",
+      badge: "Large specimen pot",
+      dims: "Potted young tree",
       where: "Open upper-left corner of the steps",
       desc:
-        "A blue glazed pot moved to the open upper-left corner of the steps in July 2026, planted with Lobelia 'Starship Scarlet Bronze Leaf' — vivid scarlet flower spikes above dramatic bronze foliage.",
+        "A potted Cercis canadensis 'Carolina Sweetheart' now occupies the Lobelia Pot's former position, with heart-shaped foliage opening maroon-red before developing green, cream and pink variegation.",
       shape: { kind: "circle", cx: 312, cy: 244, r: 13 },
-      color: "#2b5c9e",
-      labelXY: [312, 225],
-      plantKey: "Lobelia Pot",
+      color: "#a86138",
+      labelXY: [312, 220],
+      plantKey: "Cercis Pot",
       isPot: true,
     },
     bigpot2: {
@@ -191,12 +205,12 @@ window.OAK = (function () {
       title: "Little Pot 1",
       badge: "Small pot",
       dims: "Small square blue pot",
-      where: "Right edge of the steps, below Bed 4",
+      where: "Right edge of the steps, south of the Echinacea pot",
       desc:
-        "A small blue pot moved down the right edge of the steps in July 2026. Geranium and petunia — simple and bright.",
-      shape: { kind: "circle", cx: 472, cy: 282, r: 12 },
+        "A small blue pot shifted farther south along the right edge of the steps in August 2026. Geranium and petunia — simple and bright.",
+      shape: { kind: "circle", cx: 472, cy: 308, r: 12 },
       color: "#3a7abf",
-      labelXY: [460, 265],
+      labelXY: [438, 333],
       plantKey: "Little Pot 1",
       isPot: true,
     },
@@ -205,12 +219,12 @@ window.OAK = (function () {
       title: "Little Pot 2",
       badge: "Small pot",
       dims: "Small square blue pot",
-      where: "Upper level, immediately south of the Pear Tree",
+      where: "Upper stair wall, directly west of the Echinacea pot",
       desc:
-        "A small blue pot sitting centrally just south of the Pear Tree. Red-and-white geranium with purple-veined petunia.",
-      shape: { kind: "circle", cx: 480, cy: 116, r: 12 },
+        "The square blue Little Pot 2 moved to the upper stair wall in August 2026. Its former summer bedding was removed and the established golden Coreopsis moved into it.",
+      shape: { kind: "circle", cx: 440, cy: 282, r: 11 },
       color: "#3a7abf",
-      labelXY: [480, 140],
+      labelXY: [414, 303],
       plantKey: "Little Pot 2",
       isPot: true,
     },
@@ -243,14 +257,14 @@ window.OAK = (function () {
     },
     wallpot2: {
       id: "wallpot2",
-      title: "Wall Pot — Coreopsis",
-      badge: "Stair wall pot",
+      title: "Echinacea Pot",
+      badge: "Small glazed pot",
       dims: "Small blue pot",
-      where: "Upper-left wall of the steps",
-      desc: "A small blue glazed pot moved to the upper-left retaining wall of the steps in July 2026. Coreopsis Gold fills the pot with cheerful yellow daisy flowers all summer.",
-      shape: { kind: "circle", cx: 330, cy: 285, r: 10 },
-      color: "#c06a2a",
-      labelXY: [378, 286],
+      where: "Former Little Pot 1 position on the right edge of the steps",
+      desc: "The former Coreopsis pot now holds Echinacea Mooodz Glory ('Hilmooglor'), a compact white coneflower with golden-green central cones. It occupies Little Pot 1's former position.",
+      shape: { kind: "circle", cx: 472, cy: 282, r: 10 },
+      color: "#3a7abf",
+      labelXY: [525, 274],
       plantKey: "Wall Pot 2",
       isPot: true,
     },
@@ -306,7 +320,7 @@ window.OAK = (function () {
       dims: "1.1m × 1.2m",
       where: "Right of the front door, against the hedge",
       desc:
-        "Small bed tucked between the front door and the hedge. Replanted and bark-mulched in July 2026 with two colourful Coprosma cultivars, Hebe 'Kiwi' Horopito and wax begonias around the stone accents.",
+        "Small bed tucked between the front door and the hedge. Replanted and bark-mulched in July 2026, then expanded to three colourful Coprosma cultivars in August with label-confirmed 'City Knights' joining 'Inferno', 'Pina Colada', Hebe 'Kiwi' and Polemonium 'Golden Feathers'.",
       shape: { kind: "rect", x: 439, y: 201, w: 63, h: 69 },
       color: "#7f8f4a",
       labelXY: [470, 240],
@@ -1445,26 +1459,37 @@ window.OAK = (function () {
     ],
     "Little Pot 2": [
       {
-        name: "Geranium",
-        id: "littlepot2-geranium",
-        latin: "Pelargonium 'Summer Twist Red White'",
-        photos: ["images/plants/little-pot-2.webp"],
-        position: "Back — red and white bicolour flowers",
+        name: "Coreopsis Gold",
+        id: "wallpot2-coreopsis-gold",
+        latin: "Coreopsis 'Gold'",
+        photos: [
+          "images/aug-2026/little-pot-2-coreopsis-1.jpeg",
+          "images/aug-2026/little-pot-2-coreopsis-2.jpeg",
+          "images/aug-2026/little-pot-2-coreopsis-3.jpeg",
+        ],
+        position: "Single golden-flowered mound filling Little Pot 2",
         light: "Full sun.",
-        water: "Moderate. Let compost dry slightly between waterings.",
-        care: "Deadhead regularly. Feed fortnightly. Not frost-hardy — overwinter indoors or treat as annual.",
-        seasonal: "Red-white bicolour flower heads May–October; rounded leaves.",
+        water: "Moderate; the small pot dries quickly, but avoid permanently wet compost.",
+        care: "Deadhead regularly for continuous flowering. Cut tired growth back by up to half for a second flush and keep the pot freely drained through winter.",
+        seasonal: "Bright golden-yellow daisy flowers June–September above a compact leafy mound.",
       },
+    ],
+    "Cercis Pot": [
       {
-        name: "Petunia",
-        id: "littlepot2-petunia",
-        latin: "Petunia 'Purple Vein'",
-        photos: ["images/plants/little-pot-2.webp"],
-        position: "Front — purple veined trumpets",
-        light: "Full sun.",
-        water: "Regular; don't let compost dry out completely.",
-        care: "Deadhead spent blooms. Feed weekly. Tender annual.",
-        seasonal: "Purple-veined trumpet flowers May–October.",
+        name: "Cercis 'Carolina Sweetheart'",
+        id: "cercispot-cercis-carolina-sweetheart",
+        latin: "Cercis canadensis 'Nccc1'",
+        photos: [
+          "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg",
+          "images/aug-2026/cercis-carolina-sweetheart-label.jpeg",
+          "images/aug-2026/cercis-carolina-sweetheart-foliage-1.jpeg",
+          "images/aug-2026/cercis-carolina-sweetheart-foliage-2.jpeg",
+        ],
+        position: "Single standard-form specimen in a large pot",
+        light: "Full sun in a warm position; shelter the pot from severe drying wind.",
+        water: "Keep evenly moist while establishing. Water deeply when the upper compost starts to dry, without leaving the pot waterlogged.",
+        care: "Avoid routine pruning; remove only dead, damaged or crossing growth. Refresh the compost surface in spring and plan for a larger root run as the tree matures.",
+        seasonal: "Heart-shaped leaves open maroon-red and mature through green, cream and pink variegation; bare branches may carry pink-purple flowers in spring as the tree matures.",
       },
     ],
     "Front Pot": [
@@ -1528,15 +1553,18 @@ window.OAK = (function () {
     ],
     "Wall Pot 2": [
       {
-        name: "Coreopsis Gold",
-        id: "wallpot2-coreopsis-gold",
-        latin: "Coreopsis 'Gold'",
-        photos: ["images/june-2026-update-2/coreopsis-gold-1.webp", "images/june-2026-update-2/coreopsis-gold-2.webp"],
-        position: "Left wall of steps — cheerful yellow daisy flowers",
-        light: "Full sun.",
-        water: "Moderate; drought-tolerant once established.",
-        care: "Deadhead regularly for continuous flowering. Cut back by half in midsummer for a second flush. Hardy perennial — leave in the pot over winter.",
-        seasonal: "Bright golden-yellow daisy flowers June–September; fine ferny foliage.",
+        name: "Echinacea 'Mooodz Glory'",
+        id: "wallpot2-echinacea-mooodz-glory",
+        latin: "Echinacea 'Hilmooglor'",
+        photos: [
+          "images/aug-2026/echinacea-mooodz-glory-1.jpeg",
+          "images/aug-2026/echinacea-mooodz-glory-2.jpeg",
+        ],
+        position: "Single compact specimen filling the former Coreopsis pot",
+        light: "Full sun for strongest flowering; tolerates partial shade.",
+        water: "Moderate. Water thoroughly, then let the upper compost begin to dry; never leave the crown in cold, wet compost.",
+        care: "Deadhead fading flowers for further blooms, or retain selected cones for winter structure. Protect the pot from prolonged winter saturation.",
+        seasonal: "White, slightly drooping petals around golden-green cones from summer into autumn; dies back to a hardy crown in winter.",
       },
     ],
     "Lobelia Pot": [
@@ -1651,6 +1679,21 @@ window.OAK = (function () {
         water: "Moderate while establishing. Let the soil drain between waterings.",
         care: "Protect from severe frost and cold winds. Lightly trim any untidy growth in spring.",
         seasonal: "Golden foliage develops orange and bronze tones through autumn and winter; evergreen when sheltered.",
+      },
+      {
+        name: "Coprosma 'City Knights'",
+        id: "frontBed2-coprosma-city-knights",
+        latin: "Coprosma 'City Knights'",
+        photos: [
+          "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg",
+          "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg",
+          "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg",
+        ],
+        position: "Back-right edge — glossy burgundy foliage with red flashes",
+        light: "Full sun to partial shade; bright shelter gives the richest leaf colour.",
+        water: "Moderate while establishing. Keep the root zone drained and do not allow prolonged drought in its first season.",
+        care: "Protect from severe frost and cold drying winds. Remove only damaged tips in spring and avoid forcing soft late growth with autumn feed.",
+        seasonal: "Glossy evergreen foliage holds deep burgundy, red and dark green tones, strengthening the bed's winter colour.",
       },
       {
         name: "Hebe 'Kiwi' (Horopito)",
@@ -2901,6 +2944,44 @@ window.OAK = (function () {
       ],
       // frontHedge — still no photos (next photo walk)
     },
+    "aug-2026": {
+      label: "August 2026",
+      cercispot: [
+        { src: "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg", caption: "Cercis canadensis 'Carolina Sweetheart' in its new pot by the steps" },
+        { src: "images/aug-2026/cercis-carolina-sweetheart-label.jpeg", caption: "Retained Carolina Sweetheart plant label" },
+        { src: "images/aug-2026/cercis-carolina-sweetheart-foliage-1.jpeg", caption: "Maroon, cream, green and pink heart-shaped foliage" },
+        { src: "images/aug-2026/cercis-carolina-sweetheart-foliage-2.jpeg", caption: "Variegated Cercis foliage in the August sun" },
+        { src: "images/aug-2026/cercis-carolina-sweetheart-context-1.jpeg", caption: "The potted Cercis in its new upper-steps position" },
+        { src: "images/aug-2026/cercis-carolina-sweetheart-context-2.jpeg", caption: "Cercis Pot in the wider back-garden setting" },
+      ],
+      littlepot2: [
+        { src: "images/aug-2026/little-pot-2-coreopsis-1.jpeg", caption: "Coreopsis moved into Little Pot 2" },
+        { src: "images/aug-2026/little-pot-2-coreopsis-2.jpeg", caption: "Golden Coreopsis filling the square blue pot" },
+        { src: "images/aug-2026/little-pot-2-coreopsis-3.jpeg", caption: "Little Pot 2 in its new upper stair-wall position" },
+      ],
+      littlepot2Archive: [
+        { src: "images/plants/little-pot-2.webp", caption: "Little Pot 2 before the August clear-out, with Pelargonium and Petunia" },
+      ],
+      wallpot2: [
+        { src: "images/aug-2026/echinacea-mooodz-glory-1.jpeg", caption: "Echinacea Mooodz Glory planted in the former Coreopsis pot" },
+        { src: "images/aug-2026/echinacea-mooodz-glory-2.jpeg", caption: "White ray florets around the golden-green cones" },
+      ],
+      wallpot2Archive: [
+        { src: "images/june-2026-update-2/coreopsis-gold-1.webp", caption: "The same pot before the August change, planted with Coreopsis" },
+        { src: "images/june-2026-update-2/coreopsis-gold-2.webp", caption: "Coreopsis before it moved into Little Pot 2" },
+      ],
+      frontBed2: [
+        { src: "images/aug-2026/front-bed2-update-1.jpeg", caption: "Front Bed 2 after Coprosma 'City Knights' joined the planting" },
+        { src: "images/aug-2026/front-bed2-update-2.jpeg", caption: "The refreshed five-plant layout from the front-door side" },
+        { src: "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg", caption: "Coprosma 'City Knights' — glossy burgundy and red foliage" },
+        { src: "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg", caption: "City Knights newly planted against the hedge" },
+        { src: "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg", caption: "Retained Coprosma 'City Knights' plant label" },
+      ],
+      frontBed2Archive: [
+        { src: "images/jul-2026/front-bed2-wax-begonia-1.webp", caption: "Begonia Cocktail 'Gin' before removal" },
+        { src: "images/jul-2026/front-bed2-wax-begonia-2.webp", caption: "Begonia Cocktail 'Gin' flower detail" },
+      ],
+    },
   };
 
   // ─── PLANT PHOTOS ─────────────────────────────────────────────────
@@ -3314,8 +3395,10 @@ window.OAK = (function () {
       { name: "Petunia", x: 50, y: 72, r: 16, hue: 230 },
     ],
     littlepot2: [
-      { name: "Geranium", x: 45, y: 32, r: 18, hue: 0 },
-      { name: "Petunia", x: 50, y: 72, r: 16, hue: 280 },
+      { name: "Coreopsis Gold", x: 50, y: 50, r: 36, hue: 55 },
+    ],
+    cercispot: [
+      { name: "Cercis 'Carolina Sweetheart'", x: 50, y: 50, r: 34, hue: 345 },
     ],
     lobeliapot: [
       { name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 50, y: 50, r: 34, hue: 8 },
@@ -3336,17 +3419,18 @@ window.OAK = (function () {
       { name: "Candy House Mix", x: 50, y: 50, r: 36, hue: 350 },
     ],
     wallpot2: [
-      { name: "Coreopsis Gold", x: 50, y: 50, r: 36, hue: 55 },
+      { name: "Echinacea 'Mooodz Glory'", x: 50, y: 50, r: 36, hue: 70 },
     ],
     frontBed1: [
       { name: "Hydrangea", x: 68, y: 25, r: 14, hue: 300 },
       { name: "Lavender",  x: 35, y: 78, r: 11, hue: 275 },
     ],
     frontBed2: [
-      { name: "Coprosma 'Inferno'", x: 28, y: 30, r: 13, hue: 15 },
-      { name: "Coprosma 'Pina Colada'", x: 72, y: 30, r: 13, hue: 75 },
-      { name: "Hebe 'Kiwi' (Horopito)", x: 28, y: 70, r: 12, hue: 285 },
-      { name: "Polemonium 'Golden Feathers'", x: 72, y: 72, r: 10, hue: 70 },
+      { name: "Coprosma 'Inferno'", x: 22, y: 28, r: 12, hue: 15 },
+      { name: "Coprosma 'Pina Colada'", x: 50, y: 24, r: 12, hue: 75 },
+      { name: "Coprosma 'City Knights'", x: 78, y: 32, r: 12, hue: 350 },
+      { name: "Hebe 'Kiwi' (Horopito)", x: 28, y: 72, r: 12, hue: 285 },
+      { name: "Polemonium 'Golden Feathers'", x: 68, y: 72, r: 10, hue: 70 },
     ],
     frontBed3: [
       { name: "Climbing Rose 'Super Fairy'", x: 20, y: 35, r: 11, hue: 340 },
@@ -3456,6 +3540,33 @@ window.OAK = (function () {
     if (plantId && PLANT_PHOTOS[plantName]) PLANT_PHOTOS_BY_ID[plantId] = PLANT_PHOTOS[plantName];
   });
   const julyJournal = (photos) => [{ month: "jul-2026", label: "July 2026", photos }];
+  const augustJournal = (photos) => [{ month: "aug-2026", label: "August 2026", photos }];
+  PLANT_PHOTOS_BY_ID["cercispot-cercis-carolina-sweetheart"] = augustJournal([
+    { src: "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg", caption: "The complete potted tree in its new position" },
+    { src: "images/aug-2026/cercis-carolina-sweetheart-label.jpeg", caption: "Retained Carolina Sweetheart plant label" },
+    { src: "images/aug-2026/cercis-carolina-sweetheart-foliage-1.jpeg", caption: "Maroon, cream, green and pink heart-shaped leaves" },
+    { src: "images/aug-2026/cercis-carolina-sweetheart-foliage-2.jpeg", caption: "Variegated foliage in strong August light" },
+  ]);
+  PLANT_PHOTOS_BY_ID["wallpot2-echinacea-mooodz-glory"] = augustJournal([
+    { src: "images/aug-2026/echinacea-mooodz-glory-1.jpeg", caption: "Mooodz Glory newly planted in the blue pot" },
+    { src: "images/aug-2026/echinacea-mooodz-glory-2.jpeg", caption: "White ray florets and golden-green cones" },
+  ]);
+  PLANT_PHOTOS_BY_ID["wallpot2-coreopsis-gold"] = [
+    { month: "aug-2026", label: "August 2026 · moved to Little Pot 2", photos: [
+      { src: "images/aug-2026/little-pot-2-coreopsis-1.jpeg", caption: "Coreopsis moved into Little Pot 2" },
+      { src: "images/aug-2026/little-pot-2-coreopsis-2.jpeg", caption: "Golden flowers filling the square blue pot" },
+      { src: "images/aug-2026/little-pot-2-coreopsis-3.jpeg", caption: "Little Pot 2 in its new stair-wall position" },
+    ]},
+    { month: "june-2026", label: "June 2026 · former pot", photos: [
+      { src: "images/june-2026-update-2/coreopsis-gold-1.webp", caption: "Coreopsis in its former pot" },
+      { src: "images/june-2026-update-2/coreopsis-gold-2.webp", caption: "Top-down view before the August move" },
+    ]},
+  ];
+  PLANT_PHOTOS_BY_ID["frontBed2-coprosma-city-knights"] = augustJournal([
+    { src: "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg", caption: "Glossy burgundy-red foliage in Front Bed 2" },
+    { src: "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg", caption: "City Knights newly planted against the hedge" },
+    { src: "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg", caption: "Retained Coprosma 'City Knights' label" },
+  ]);
   PLANT_PHOTOS_BY_ID["house-hallway-kentia-palm"] = julyJournal([
     { src: "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp", caption: "Kentia palm beside the ground-floor staircase" },
     { src: "images/house-plants/jul-2026/kentia-palm-hallway-context.webp", caption: "The full grouped specimen in its hallway position" },

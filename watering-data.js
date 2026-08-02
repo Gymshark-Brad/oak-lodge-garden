@@ -110,8 +110,10 @@
       "Petunia": 4,
     },
     "Little Pot 2": {
-      "Geranium": 3,
-      "Petunia": 4,
+      "Coreopsis Gold": 3,
+    },
+    "Cercis Pot": {
+      "Cercis 'Carolina Sweetheart'": 4,
     },
     "Lobelia Pot": {
       "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
@@ -126,7 +128,7 @@
       "Candy House Mix": 5,
     },
     "Wall Pot 2": {
-      "Coreopsis Gold": 3,
+      "Echinacea 'Mooodz Glory'": 3,
     },
     "Baskets": {
       "Trailing Fuchsia": 5,
@@ -140,6 +142,7 @@
     "Front Bed 2": {
       "Coprosma 'Inferno'": 2,
       "Coprosma 'Pina Colada'": 2,
+      "Coprosma 'City Knights'": 3,
       "Hebe 'Kiwi' (Horopito)": 3,
       "Polemonium 'Golden Feathers'": 3,
     },
@@ -499,8 +502,12 @@
       over: "A sodden saucer, or compost still dark and wet a day after watering, means it's too much. The geranium is the one to watch — soft, yellowing lower leaves or a mushy stem base is a clear sign; it rots fast if kept wet.",
     },
     "Little Pot 2": {
-      under: "Compost pulling away from the pot's edge, or the pot feeling noticeably light, means it's dried right out. The geranium's leaves going crisp and brown at the edges, or the petunia's flowers closing up and leaves going matte and floppy, confirm it.",
-      over: "A sodden saucer, or compost still dark and wet a day after watering, means it's too much. The geranium is the one to watch — soft, yellowing lower leaves or a mushy stem base is a clear sign; it rots fast if kept wet.",
+      under: "The square pot feeling light, compost pulling from the edges, or the Coreopsis foliage turning grey-green and floppy all mean it needs a thorough drink. Buds staying small or failing to open are a later warning.",
+      over: "Compost remaining dark and wet for days, yellow weak foliage or blackening at the crown means the pot is staying too wet. Keep the drainage holes open and avoid routine watering when the root ball is still moist.",
+    },
+    "Cercis Pot": {
+      under: "Check below the surface during warm weather. Drooping heart-shaped leaves, scorch along the pale variegated margins or an unusually light pot mean the young tree's root ball is drying too far.",
+      over: "Yellowing leaves, weak extension growth or branch dieback while the compost remains wet point to poor drainage. Empty trapped water and let air return to the root ball before watering again.",
     },
     "Lobelia Pot": {
       under: "Check the top 2–3cm daily in warm weather. Drooping flower spikes, limp bronze leaves or compost pulling away from the rim mean the pot needs a thorough drink.",
@@ -515,8 +522,8 @@
       over: "A sodden saucer or compost still waterlogged well after watering means it's too much — small pots have nowhere for excess water to go. Yellowing leaves or a soft, mushy stem base is the sign.",
     },
     "Wall Pot 2": {
-      under: "Even though it's a drought-tolerant plant, this small pot dries much faster than the ground — foliage flopping and flower buds failing to open means it's gone too long without water.",
-      over: "Yellowing foliage, blackened stems at the base, or compost staying wet for days after watering means it's been overdone — go easy given how drought-tolerant this one naturally is.",
+      under: "Lower leaves and flower stems losing firmness, followed by a light dry root ball, mean the Echinacea needs a thorough drink. Do not wait for the whole compact clump to collapse.",
+      over: "Yellow leaves, a soft dark crown or compost staying cold and wet for days are warning signs. Raise the glazed pot so it drains freely and pause watering until the root ball has begun to dry.",
     },
     "Baskets": {
       under: "Hanging baskets dry out fastest of anything in the garden — check by feel or by lifting to gauge weight, ideally twice a day in hot spells. Flowers and buds dropping together, or a cascade turning thin, pale and see-through, means it's gone too long without water.",

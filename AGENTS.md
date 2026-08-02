@@ -127,7 +127,7 @@ Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2)
 
 `cultivar-resolution-data.js` is a separate, reversible identity layer loaded after the profiles, seasonal calendar and watering data. Photo-label discoveries use the visible suffix `— label confirmed`; best-fit guesses use `— assumed`. Never remove the assumed qualification without a retained label or stronger diagnostic evidence. The file updates display names, profile identity rows, bed-map labels, seasonal links and watering keys together while preserving stable plant IDs and the original names as lookup aliases.
 
-Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
+Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Cercis Pot"`, `"Lobelia Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 
 ### PHOTOS_BY_MONTH
 ```javascript
@@ -180,7 +180,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Pear Tree — mature fruit tree, upper terrace
 - Big Pot 2 — large blue glazed pot on upper paving
 - Flower Bed 5 — narrow Wisteria boundary bed on the right wall
-- Little Pot 2 — small blue pot immediately south of the Pear Tree
+- Little Pot 2 — square blue pot on the upper stair wall; established Coreopsis moved into it in August 2026
 
 **Transition**
 - Steps (~3m × 3m) — block paving, several levels
@@ -188,19 +188,22 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Flower Bed 4 (≈1.8m × 0.8m) — Apple tree with bird feeders; occupies the first third above the Stone Bed
 
 **Lower level (south, house end)**
-- Big Pot 1 — large blue glazed pot at foot of steps
+- Big Pot 1 — large blue glazed pot tucked into the decking corner at the foot of the steps
 - Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush, the Hebe moved from the Stone Bed and smaller perennials
 - Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
 - Stone Bed (~4.8m × 1m) — Gravel bed replanted late July 2026 with 22 plants: Cordyline, dark Phormium, oakleaf Hydrangea, purple fountain grass, hardy houseleeks and stonecrops, two Ajugas, small alpines and two tender Echeverias; the rotten-crowned lavender was removed and the Hebe moved to Bed 2
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
-- Lobelia Pot — blue pot at the foot of the stairs; Lobelia 'Starship Scarlet Bronze Leaf'
+- Lobelia Pot — blue pot in the corner between the stairs and Bed 4; Lobelia 'Starship Scarlet Bronze Leaf'
+- Cercis Pot — terracotta specimen pot in the Lobelia Pot's former stair-corner location; Cercis canadensis 'Carolina Sweetheart'
+- Little Pot 1 — small blue pot shifted south below the Echinacea pot in August 2026
+- Echinacea Pot — the former Coreopsis pot, now at Little Pot 1's previous position; Echinacea Mooodz Glory
 - The two wall pots sit inside the Steps footprint; the Hanging Baskets marker sits inside Patio Kitchen.
 - Patio Kitchen + Patio Lounge — hardscape, no plants
 - Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
 ---
 
-## Plant inventory summary (updated July 2026)
+## Plant inventory summary (updated August 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
@@ -215,10 +218,12 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |
 | Big Pot 2 | 5 | Lobelia, Verbena, Petunia, Nepeta, Fuchsia |
 | Little Pot 1 | 2 | Geranium, Petunia |
-| Little Pot 2 | 2 | Geranium, Petunia |
+| Little Pot 2 | 1 | Coreopsis Gold moved from its former pot |
 | Lobelia Pot | 1 | Lobelia 'Starship Scarlet Bronze Leaf' — added July 2026 |
+| Cercis Pot | 1 | Cercis canadensis 'Carolina Sweetheart' — added August 2026 |
+| Echinacea Pot | 1 | Echinacea Mooodz Glory — added August 2026 |
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
-| Front Bed 2 | 4 | Two Coprosmas, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
+| Front Bed 2 | 5 | Three Coprosmas including new ‘City Knights’, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
 | Front Bed 4 | 13 | Two climbing roses, Physocarpus, Spiraea, Sarcococca, Pieris, Festuca, Astrantia, Photinia and Delosperma 'Ice Cream Mix' |
 | Front Bed 5 | 13 | Established Laurel, Choisya and climber plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe and Salvia |

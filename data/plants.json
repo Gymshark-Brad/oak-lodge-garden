@@ -2092,49 +2092,56 @@
   ],
   "Little Pot 2": [
     {
-      "name": "Geranium",
-      "id": "littlepot2-geranium",
-      "latin": "Pelargonium 'Summer Twist Red White'",
+      "name": "Coreopsis Gold",
+      "id": "wallpot2-coreopsis-gold",
+      "latin": "Coreopsis 'Gold'",
       "photos": [
-        "images/plants/little-pot-2.webp"
+        "images/aug-2026/little-pot-2-coreopsis-1.jpeg",
+        "images/aug-2026/little-pot-2-coreopsis-2.jpeg",
+        "images/aug-2026/little-pot-2-coreopsis-3.jpeg"
       ],
-      "position": "Back — red and white bicolour flowers",
+      "position": "Single golden-flowered mound filling Little Pot 2",
       "light": "Full sun.",
-      "water": "Moderate. Let compost dry slightly between waterings.",
-      "care": "Deadhead regularly. Feed fortnightly. Not frost-hardy — overwinter indoors or treat as annual.",
-      "seasonal": "Red-white bicolour flower heads May–October; rounded leaves.",
-      "description": "Geranium is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Red-white bicolour flower heads May–October.",
+      "water": "Moderate; the small pot dries quickly, but avoid permanently wet compost.",
+      "care": "Deadhead regularly for continuous flowering. Cut tired growth back by up to half for a second flush and keep the pot freely drained through winter.",
+      "seasonal": "Bright golden-yellow daisy flowers June–September above a compact leafy mound.",
+      "description": "Coreopsis Gold is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bright golden-yellow daisy flowers June–September above a compact leafy mound.",
       "characteristics": {
         "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Red-white bicolour flower heads May–October",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Bright golden-yellow daisy flowers June–September above a compact leafy mound",
         "water": "Moderate",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
-    },
+    }
+  ],
+  "Cercis Pot": [
     {
-      "name": "Petunia",
-      "id": "littlepot2-petunia",
-      "latin": "Petunia 'Purple Vein'",
+      "name": "Cercis 'Carolina Sweetheart'",
+      "id": "cercispot-cercis-carolina-sweetheart",
+      "latin": "Cercis canadensis 'Nccc1'",
       "photos": [
-        "images/plants/little-pot-2.webp"
+        "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg",
+        "images/aug-2026/cercis-carolina-sweetheart-label.jpeg",
+        "images/aug-2026/cercis-carolina-sweetheart-foliage-1.jpeg",
+        "images/aug-2026/cercis-carolina-sweetheart-foliage-2.jpeg"
       ],
-      "position": "Front — purple veined trumpets",
-      "light": "Full sun.",
-      "water": "Regular; don't let compost dry out completely.",
-      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
-      "seasonal": "Purple-veined trumpet flowers May–October.",
-      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Purple-veined trumpet flowers May–October.",
+      "position": "Single standard-form specimen in a large pot",
+      "light": "Full sun in a warm position; shelter the pot from severe drying wind.",
+      "water": "Keep evenly moist while establishing. Water deeply when the upper compost starts to dry, without leaving the pot waterlogged.",
+      "care": "Avoid routine pruning; remove only dead, damaged or crossing growth. Refresh the compost surface in spring and plan for a larger root run as the tree matures.",
+      "seasonal": "Heart-shaped leaves open maroon-red and mature through green, cream and pink variegation; bare branches may carry pink-purple flowers in spring as the tree matures.",
+      "description": "Cercis 'Carolina Sweetheart' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Heart-shaped leaves open maroon-red and mature through green, cream and pink variegation.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Purple-veined trumpet flowers May–October",
-        "water": "Regular",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
+        "sunlight": "Full sun in a warm position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Heart-shaped leaves open maroon-red and mature through green, cream and pink variegation",
+        "water": "Keep evenly moist while establishing",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
@@ -2266,28 +2273,28 @@
   ],
   "Wall Pot 2": [
     {
-      "name": "Coreopsis Gold",
-      "id": "wallpot2-coreopsis-gold",
-      "latin": "Coreopsis 'Gold'",
+      "name": "Echinacea 'Mooodz Glory'",
+      "id": "wallpot2-echinacea-mooodz-glory",
+      "latin": "Echinacea 'Hilmooglor'",
       "photos": [
-        "images/june-2026-update-2/coreopsis-gold-1.webp",
-        "images/june-2026-update-2/coreopsis-gold-2.webp"
+        "images/aug-2026/echinacea-mooodz-glory-1.jpeg",
+        "images/aug-2026/echinacea-mooodz-glory-2.jpeg"
       ],
-      "position": "Left wall of steps — cheerful yellow daisy flowers",
-      "light": "Full sun.",
-      "water": "Moderate; drought-tolerant once established.",
-      "care": "Deadhead regularly for continuous flowering. Cut back by half in midsummer for a second flush. Hardy perennial — leave in the pot over winter.",
-      "seasonal": "Bright golden-yellow daisy flowers June–September; fine ferny foliage.",
-      "description": "Coreopsis Gold is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bright golden-yellow daisy flowers June–September.",
+      "position": "Single compact specimen filling the former Coreopsis pot",
+      "light": "Full sun for strongest flowering; tolerates partial shade.",
+      "water": "Moderate. Water thoroughly, then let the upper compost begin to dry; never leave the crown in cold, wet compost.",
+      "care": "Deadhead fading flowers for further blooms, or retain selected cones for winter structure. Protect the pot from prolonged winter saturation.",
+      "seasonal": "White, slightly drooping petals around golden-green cones from summer into autumn; dies back to a hardy crown in winter.",
+      "description": "Echinacea 'Mooodz Glory' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. White, slightly drooping petals around golden-green cones from summer into autumn.",
       "characteristics": {
-        "sunlight": "Full sun",
+        "sunlight": "Full sun for strongest flowering",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Bright golden-yellow daisy flowers June–September",
+        "flowering": "White, slightly drooping petals around golden-green cones from summer into autumn",
         "water": "Moderate",
         "habit": "Herbaceous perennial",
         "size": "Typically 30–100cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Foliage provides garden habitat"
       }
     }
   ],
@@ -2498,6 +2505,32 @@
         "sunlight": "Full sun to partial shade",
         "hardiness": "H3 · protect below −5°C",
         "flowering": "Golden foliage develops orange and bronze tones through autumn and winter",
+        "water": "Moderate while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Coprosma 'City Knights'",
+      "id": "frontBed2-coprosma-city-knights",
+      "latin": "Coprosma 'City Knights'",
+      "photos": [
+        "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg",
+        "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg",
+        "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg"
+      ],
+      "position": "Back-right edge — glossy burgundy foliage with red flashes",
+      "light": "Full sun to partial shade; bright shelter gives the richest leaf colour.",
+      "water": "Moderate while establishing. Keep the root zone drained and do not allow prolonged drought in its first season.",
+      "care": "Protect from severe frost and cold drying winds. Remove only damaged tips in spring and avoid forcing soft late growth with autumn feed.",
+      "seasonal": "Glossy evergreen foliage holds deep burgundy, red and dark green tones, strengthening the bed's winter colour.",
+      "description": "Coprosma 'City Knights' is a garden shrub grown at Oak Lodge for its distinctive garden character. Glossy evergreen foliage holds deep burgundy, red and dark green tones, strengthening the bed's winter colour.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Glossy evergreen foliage holds deep burgundy, red and dark green tones, strengthening the bed's winter colour",
         "water": "Moderate while establishing",
         "habit": "Garden shrub",
         "size": "Typically 0.5–2m",
