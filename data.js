@@ -12,7 +12,7 @@ window.OAK = (function () {
       dims: "2.6m × 2.6m",
       where: "Corner by the gate, upper level",
       desc:
-        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. Layered shade-tolerant planting underneath — Fatsia and Hostas — with a clipped box edge.",
+        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. The August planting added a second Abelia 'Kaleidoscope' and Pieris 'Forest Flame', while both Nemesias moved into pots and the former Angel Wings was removed.",
       shape: { kind: "rect", x: 75, y: 38, w: 130, h: 130 },
       color: "#8b5e3c",
       labelXY: [140, 105],
@@ -25,7 +25,7 @@ window.OAK = (function () {
       dims: "≈2m × 4.5m",
       where: "Lower level, west boundary",
       desc:
-        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry, variegated dogwood and peony are joined by Weigela, Silverbush, Maiden Pink, climbing Hydrangea, Euonymus 'Emerald Gaiety' and Avens.",
+        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry and peony are joined by Weigela, Silverbush, Maiden Pink, climbing Hydrangea, Euonymus 'Emerald Gaiety', Avens and the new Sedum 'Rose Carpet'.",
       shape: { kind: "rect", x: 30, y: 250, w: 100, h: 225 },
       color: "#6b8e4e",
       labelXY: [80, 290],
@@ -51,7 +51,7 @@ window.OAK = (function () {
       dims: "≈1.8m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders at the centre. Completely replanted in June 2026 — Callistemon, Achillea, Gaillardia and Abelia 'Kaleidoscope' now fill the underplanting.",
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Callistemon, Gaillardia, Abelia 'Kaleidoscope', the remaining yellow Celosia and Lobelia 'Starship Scarlet Bronze Leaf'.",
       shape: { kind: "rect", x: 488, y: 215, w: 92, h: 40 },
       color: "#c7a54a",
       labelXY: [534, 198],
@@ -160,16 +160,44 @@ window.OAK = (function () {
     },
     lobeliapot: {
       id: "lobeliapot",
-      title: "Lobelia Pot",
+      title: "Nemesia Pot",
       badge: "Glazed pot",
       dims: "Medium blue pot",
-      where: "Corner between the steps and Flower Bed 4",
+      where: "Immediately south of the Cercis Pot",
       desc:
-        "A blue glazed pot moved into the corner between the steps and Flower Bed 4 in August 2026, planted with Lobelia 'Starship Scarlet Bronze Leaf' — vivid scarlet flower spikes above dramatic bronze foliage.",
-      shape: { kind: "circle", cx: 474, cy: 232, r: 13 },
+        "The former Lobelia Pot now sits just south of the Cercis and holds the pink-and-white Nemesia that was missed from the original Bed 1 inventory. Its best-fit identity is recorded cautiously until a label is found.",
+      shape: { kind: "circle", cx: 326, cy: 282, r: 13 },
       color: "#2b5c9e",
-      labelXY: [445, 210],
-      plantKey: "Lobelia Pot",
+      labelXY: [326, 305],
+      plantKey: "Nemesia Pot",
+      isPot: true,
+    },
+    bed23wallpot: {
+      id: "bed23wallpot",
+      title: "Bed 2/3 Wall Pot",
+      badge: "Brick wall pot",
+      dims: "Large blue pot",
+      where: "On the dividing wall between Flower Beds 2 and 3",
+      desc:
+        "A new blue pot on the brick wall where Beds 2 and 3 meet, planted with label-confirmed Viburnum 'Lisarose' and a second Vinca minor 'Illumination' trailing over the wall.",
+      shape: { kind: "circle", cx: 132, cy: 337, r: 13 },
+      color: "#2b5c9e",
+      labelXY: [170, 328],
+      plantKey: "Bed 2/3 Wall Pot",
+      isPot: true,
+    },
+    viburnumpot: {
+      id: "viburnumpot",
+      title: "Viburnum Pot",
+      badge: "Specimen pot",
+      dims: "Tall glazed pot",
+      where: "At the foot of the steps beside Flower Bed 4",
+      desc:
+        "A new glazed specimen pot in the Lobelia's former Bed 4-side position, planted with label-confirmed Viburnum tinus Spirit ('Anvi') for evergreen structure and winter flower.",
+      shape: { kind: "circle", cx: 474, cy: 232, r: 13 },
+      color: "#345f83",
+      labelXY: [448, 209],
+      plantKey: "Viburnum Pot",
       isPot: true,
     },
     cercispot: {
@@ -2363,6 +2391,178 @@ window.OAK = (function () {
   PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_NAMES.has(plant.name));
   PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_NAMES.has(plant.name));
 
+  // August 2026 brought a second major reshuffle. Stable plant IDs are kept
+  // through each move so journal links, profiles and earlier photographs still
+  // resolve to the same physical specimen.
+  const takePlant = (plantKey, plantId) => {
+    const index = PLANTS[plantKey].findIndex((plant) => plant.id === plantId);
+    if (index < 0) throw new Error(`Cannot move missing plant ${plantId} from ${plantKey}`);
+    return PLANTS[plantKey].splice(index, 1)[0];
+  };
+
+  PLANTS["Bed 1"] = PLANTS["Bed 1"].filter((plant) => plant.id !== "bed1-angel-wings");
+  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => plant.id !== "bed2-angel-wings");
+
+  const aromaNemesia = takePlant("Bed 1", "bed1-nemesia");
+  Object.assign(aromaNemesia, {
+    group: "Big pot",
+    position: "Bed 5 big pot — moved from Bed 1 in August 2026",
+    photos: [
+      "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-1.webp",
+      "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-2.webp",
+      "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp",
+    ],
+  });
+  aromaNemesia.profile.badges = ["Sweetly scented", "Summer–autumn flowers", "Moved August 2026"];
+  aromaNemesia.profile.oakLodge = {
+    location: "Mixed big pot within Flower Bed 5",
+    added: "Added to Bed 1 in July 2026; moved to the Bed 5 big pot in August 2026",
+    role: "Low fragrant colour among the taller Alstroemeria and trailing plants",
+    observation: "The burgundy, cream and yellow flowers now sit beside the existing white ‘Wisley Vanilla’ Nemesia.",
+    status: "First season in a shared container; keep its crown open and monitor competition for moisture.",
+  };
+  PLANTS["Bed 5"].push(aromaNemesia);
+
+  const achilleaSummerBerries = takePlant("Bed 4", "bed4-achillea");
+  Object.assign(achilleaSummerBerries, {
+    position: "Sunny front section — moved from Back Bed 4 in August 2026",
+    photos: ["images/june-2026-updates/achillea.webp"],
+  });
+  PLANTS["Front Bed 4"].push(achilleaSummerBerries);
+
+  const starshipLobelia = takePlant("Lobelia Pot", "lobeliapot-lobelia-starship-scarlet-bronze-leaf");
+  Object.assign(starshipLobelia, {
+    position: "Former Achillea position — planted out in August 2026",
+    photos: [
+      "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp",
+      "images/aug-2026-big-changes/bed4-lobelia-starship-2.webp",
+      "images/jul-2026/lobelia-starship-scarlet-close.jpeg",
+    ],
+    care: "Keep evenly moist while it establishes. Deadhead spent spikes; mulch the crown for winter and avoid stagnant soil.",
+  });
+  PLANTS["Bed 4"].push(starshipLobelia);
+  delete PLANTS["Lobelia Pot"];
+
+  const yellowCelosia = PLANTS["Bed 4"].find((plant) => plant.id === "bed4-celosia");
+  Object.assign(yellowCelosia, {
+    position: "Front of the bed — yellow plant retained; purple and red plants removed in August 2026",
+    seasonal: "Yellow plumed flowers June–October; the remaining annual dies with the first hard frost.",
+  });
+
+  PLANTS["Bed 1"].push(
+    {
+      name: "Abelia 'Kaleidoscope'",
+      id: "bed1-abelia-kaleidoscope",
+      latin: "Abelia × grandiflora 'Kaleidoscope'",
+      photos: [
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-1.webp",
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-2.webp",
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-3.webp",
+      ],
+      position: "Front edge — second Oak Lodge specimen, added August 2026",
+      light: "Full sun to partial shade; the foliage colours best with good light.",
+      water: "Moderate while establishing; avoid waterlogged soil.",
+      care: "Lightly trim after flowering only if needed. Shelter from cold drying wind and mulch over moist soil.",
+      seasonal: "Yellow-and-green foliage warms to orange-red; fragrant white flowers continue into autumn.",
+    },
+    {
+      name: "Pieris 'Forest Flame'",
+      id: "bed1-pieris-forest-flame",
+      latin: "Pieris 'Forest Flame'",
+      photos: [
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp",
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-2.webp",
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-3.webp",
+      ],
+      position: "Front-right inside the box edge — added August 2026",
+      light: "Partial shade or sheltered sun; protect new growth from early frost and harsh morning sun.",
+      water: "Keep evenly moist but well drained; use rainwater where practical.",
+      care: "Grow in acidic, humus-rich soil. Mulch with leaf mould or composted bark and prune only damaged growth.",
+      seasonal: "Evergreen foliage opens vivid red, softens through pink and cream, then matures green; cream spring flowers.",
+    },
+  );
+
+  PLANTS["Bed 2"].push({
+    name: "Sedum 'Rose Carpet'",
+    id: "bed2-sedum-rose-carpet",
+    latin: "Sedum pluricaule 'Rose Carpet'",
+    photos: [
+      "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
+      "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp",
+    ],
+    position: "Lower front — planted in the former Angel Wings position in August 2026",
+    light: "Full sun to partial shade.",
+    water: "Low once established; allow the soil surface to dry and avoid winter saturation.",
+    care: "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
+    seasonal: "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
+  });
+
+  PLANTS["Nemesia Pot"] = [{
+    name: "Nemesia 'Lady Penelope'",
+    id: "lobeliapot-nemesia-lady-penelope",
+    latin: "Nemesia 'Lady Penelope' (best-fit identification)",
+    photos: [
+      "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp",
+      "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp",
+    ],
+    position: "Single specimen in the former Lobelia Pot — moved from Bed 1 in August 2026",
+    light: "Full sun to light partial shade in a sheltered position.",
+    water: "Keep the container evenly moist but never waterlogged.",
+    care: "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
+    seasonal: "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+  }];
+
+  PLANTS["Bed 2/3 Wall Pot"] = [
+    {
+      name: "Viburnum 'Lisarose'",
+      id: "bed23wallpot-viburnum-lisarose",
+      latin: "Viburnum tinus 'Lisarose'",
+      photos: [
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-1.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-2.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-3.webp",
+      ],
+      position: "Upright evergreen centrepiece — added August 2026",
+      light: "Sun, partial shade or shade, sheltered from cold drying winds.",
+      water: "Keep evenly moist while establishing; never leave the container waterlogged.",
+      care: "Use humus-rich, well-drained compost. Prune only after flowering if its size needs controlling.",
+      seasonal: "Brick-red winter buds open to pink-and-white flowers, followed by dark blue ornamental berries.",
+    },
+    {
+      name: "Vinca minor 'Illumination'",
+      id: "bed23wallpot-vinca-minor-illumination",
+      latin: "Vinca minor 'Illumination'",
+      photos: [
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-1.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-2.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-3.webp",
+      ],
+      position: "Trailing over the dividing wall — additional plant added August 2026",
+      light: "Sun to shade; foliage colours best in bright indirect light or partial shade.",
+      water: "Moderate. Let the surface dry slightly without allowing the pot to dry completely.",
+      care: "Trim trailing stems to shape and keep drainage holes clear. Do not plant into open ground without a spread plan.",
+      seasonal: "Golden evergreen foliage with narrow green margins and violet-blue flowers from spring into autumn.",
+    },
+  ];
+
+  PLANTS["Viburnum Pot"] = [{
+    name: "Viburnum tinus Spirit",
+    id: "viburnumpot-viburnum-tinus-spirit",
+    latin: "Viburnum tinus 'Anvi' (Spirit)",
+    photos: [
+      "images/aug-2026-big-changes/viburnum-pot-spirit-1.webp",
+      "images/aug-2026-big-changes/viburnum-pot-spirit-2.webp",
+      "images/aug-2026-big-changes/viburnum-pot-spirit-3.webp",
+      "images/aug-2026-big-changes/viburnum-pot-spirit-4.webp",
+      "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp",
+    ],
+    position: "Single evergreen specimen — added August 2026",
+    light: "Sun or partial shade, with shelter from cold drying winds.",
+    water: "Keep evenly moist but well drained while establishing; check the pot through dry and windy weather.",
+    care: "Prune only after flowering if needed. Refresh the top compost in spring and protect the container during prolonged severe cold.",
+    seasonal: "Pink buds open to lightly fragrant creamy-white flowers from late winter into spring, followed by blue-black ornamental berries.",
+  }];
+
   // ─── PLANT PROFILES ───────────────────────────────────────────────
   // Every specimen gets an RHS-style introduction and a consistent set of
   // at-a-glance characteristics. Existing care prose remains the detailed
@@ -2946,6 +3146,42 @@ window.OAK = (function () {
     },
     "aug-2026": {
       label: "August 2026",
+      bed1: [
+        { src: "images/aug-2026-big-changes/bed1-overview-1.webp", caption: "Bed 1 after the August reshuffle" },
+        { src: "images/aug-2026-big-changes/bed1-overview-2.webp", caption: "The refreshed planting beneath the Japanese maple" },
+        { src: "images/aug-2026-big-changes/bed1-overview-3.webp", caption: "Bed 1 overview from the path" },
+        { src: "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-1.webp", caption: "The second Abelia 'Kaleidoscope'" },
+        { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp", caption: "Pieris 'Forest Flame' newly planted" },
+      ],
+      bed2: [
+        { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' in the former Angel Wings position" },
+        { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Sedum 'Rose Carpet' label" },
+      ],
+      bed4: [
+        { src: "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp", caption: "Lobelia 'Starship Scarlet Bronze Leaf' planted in Bed 4" },
+        { src: "images/aug-2026-big-changes/bed4-lobelia-starship-2.webp", caption: "Scarlet Lobelia in the former Achillea position" },
+      ],
+      bed5: [
+        { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-1.webp", caption: "Nemesia 'Aroma Heart of Gold' moved into the Bed 5 big pot" },
+        { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-2.webp", caption: "Both Nemesia plants sharing the mixed pot" },
+      ],
+      lobeliapot: [
+        { src: "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp", caption: "The former Lobelia Pot now planted with the pink-and-white Nemesia" },
+        { src: "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp", caption: "Nemesia 'Lady Penelope' — best-fit identification" },
+      ],
+      bed23wallpot: [
+        { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-2.webp", caption: "Viburnum 'Lisarose' in the new dividing-wall pot" },
+        { src: "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-1.webp", caption: "The additional Vinca minor 'Illumination' trailing over the wall" },
+        { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-1.webp", caption: "Retained Viburnum 'Lisarose' label" },
+      ],
+      viburnumpot: [
+        { src: "images/aug-2026-big-changes/viburnum-pot-spirit-1.webp", caption: "Viburnum tinus Spirit in its new glazed pot" },
+        { src: "images/aug-2026-big-changes/viburnum-pot-spirit-2.webp", caption: "The new Viburnum pot at the foot of the steps" },
+        { src: "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp", caption: "Retained Viburnum tinus Spirit label" },
+      ],
+      frontBed4: [
+        { src: "images/june-2026-updates/achillea.webp", caption: "Achillea Summer Berries before its August move from Back Bed 4" },
+      ],
       cercispot: [
         { src: "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg", caption: "Cercis canadensis 'Carolina Sweetheart' in its new pot by the steps" },
         { src: "images/aug-2026/cercis-carolina-sweetheart-label.jpeg", caption: "Retained Carolina Sweetheart plant label" },
@@ -3298,14 +3534,14 @@ window.OAK = (function () {
       { name: "Rhododendron", x: 22, y: 48, r: 10, hue: 60 },
       { name: "Dahlia 'Double Dreamy Lilac'", x: 50, y: 62, r: 9, hue: 0 },
       { name: "Hosta 'Patriot'", x: 22, y: 75, r: 9, hue: 105 },
-      { name: "Angel Wings", x: 50, y: 80, r: 8, hue: 70 },
       { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
       { name: "Euonymus 'Emerald 'n' Gold'", x: 12, y: 88, r: 6, hue: 55 },
-      { name: "Nemesia 'Aroma Heart of Gold'", x: 65, y: 88, r: 5, hue: 25 },
       { name: "Wintercreeper 'Emerald Gaiety'", x: 78, y: 75, r: 7, hue: 55 },
       { name: "Dahlia 'Double Dreamy Gold'", x: 63, y: 68, r: 8, hue: 55 },
       { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
       { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
+      { name: "Abelia 'Kaleidoscope'", x: 65, y: 88, r: 7, hue: 35 },
+      { name: "Pieris 'Forest Flame'", x: 82, y: 88, r: 7, hue: 5 },
     ],
     bed2: [
       { name: "Weeping Cherry", x: 24, y: 16, r: 14, hue: 340 },
@@ -3316,7 +3552,7 @@ window.OAK = (function () {
       { name: "Maiden Pink", x: 50, y: 65, r: 6, hue: 330 },
       { name: "Euonymus 'Emerald Gaiety'", x: 78, y: 66, r: 7, hue: 110 },
       { name: "Avens", x: 48, y: 87, r: 7, hue: 30 },
-      { name: "Angel Wings", x: 78, y: 88, r: 7, hue: 70 },
+      { name: "Sedum 'Rose Carpet'", x: 78, y: 88, r: 7, hue: 340 },
       { name: "Hebe", x: 92, y: 70, r: 7, hue: 330 },
     ],
     bed3: [
@@ -3328,10 +3564,10 @@ window.OAK = (function () {
     bed4: [
       { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
       { name: "Callistemon Inferno ('Yanferno')", x: 18, y: 72, r: 10, hue: 0   },
-      { name: "Achillea",             x: 50, y: 80, r: 9,  hue: 55  },
+      { name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 50, y: 80, r: 9, hue: 8 },
       { name: "Gaillardia",           x: 78, y: 64, r: 8,  hue: 25  },
       { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
-      { name: "Celosia", x: 28, y: 88, r: 7, hue: 350 },
+      { name: "Celosia", x: 28, y: 88, r: 7, hue: 55 },
     ],
     bed5: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
@@ -3341,6 +3577,7 @@ window.OAK = (function () {
       { name: "Petunia 'Bee's Knees'", x: 34, y: 91, r: 6, hue: 75 },
       { name: "Vinca minor 'Illumination'", x: 48, y: 91, r: 6, hue: 110 },
       { name: "Nemesia", x: 58, y: 82, r: 6, hue: 25 },
+      { name: "Nemesia 'Aroma Heart of Gold'", x: 72, y: 82, r: 6, hue: 15 },
       { name: "Lythrum 'Robin'", x: 66, y: 91, r: 7, hue: 325 },
       { name: "Begonia 'Carmen'", x: 84, y: 91, r: 7, hue: 10 },
     ],
@@ -3401,7 +3638,14 @@ window.OAK = (function () {
       { name: "Cercis 'Carolina Sweetheart'", x: 50, y: 50, r: 34, hue: 345 },
     ],
     lobeliapot: [
-      { name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 50, y: 50, r: 34, hue: 8 },
+      { name: "Nemesia 'Lady Penelope'", x: 50, y: 50, r: 34, hue: 335 },
+    ],
+    bed23wallpot: [
+      { name: "Viburnum 'Lisarose'", x: 50, y: 30, r: 24, hue: 340 },
+      { name: "Vinca minor 'Illumination'", x: 50, y: 72, r: 22, hue: 85 },
+    ],
+    viburnumpot: [
+      { name: "Viburnum tinus Spirit", x: 50, y: 50, r: 34, hue: 345 },
     ],
     baskets: [
       { name: "Trailing Fuchsia", x: 22, y: 50, r: 16, hue: 340 },
@@ -3453,6 +3697,7 @@ window.OAK = (function () {
       { name: "Delosperma 'Ice Cream Mix'", x: 42, y: 94, r: 7, hue: 20 },
       { name: "Flaming Silver", x: 88, y: 86, r: 8, hue: 85 },
       { name: "The Generous Gardener", x: 93, y: 96, r: 11, hue: 345 },
+      { name: "Achillea", x: 58, y: 93, r: 8, hue: 15 },
     ],
     frontBed5: [
       { name: "Cherry Laurel",                         x: 24, y: 15, r: 10, hue: 135 },
@@ -3566,6 +3811,53 @@ window.OAK = (function () {
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg", caption: "Glossy burgundy-red foliage in Front Bed 2" },
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg", caption: "City Knights newly planted against the hedge" },
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg", caption: "Retained Coprosma 'City Knights' label" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed1-abelia-kaleidoscope"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-1.webp", caption: "The new Abelia 'Kaleidoscope' in Back Bed 1" },
+    { src: "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-2.webp", caption: "Variegated Abelia foliage" },
+    { src: "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-3.webp", caption: "The planted shrub in its Bed 1 setting" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed1-pieris-forest-flame"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp", caption: "Pieris 'Forest Flame' newly planted in Back Bed 1" },
+    { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-2.webp", caption: "Fresh Pieris foliage" },
+    { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-3.webp", caption: "Forest Flame in the Bed 1 planting" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed2-sedum-rose-carpet"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' planted in Bed 2" },
+    { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Rose Carpet label" },
+  ]);
+  PLANT_PHOTOS_BY_ID["lobeliapot-nemesia-lady-penelope"] = augustJournal([
+    { src: "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp", caption: "The unidentified Nemesia moved into the former Lobelia pot" },
+    { src: "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp", caption: "Pink-and-white flowers supporting the assumed Lady Penelope identification" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed1-nemesia"] = [
+    ...augustJournal([
+      { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-1.webp", caption: "Aroma Heart of Gold moved into the Bed 5 big pot" },
+      { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-2.webp", caption: "The Nemesia among its new pot companions" },
+    ]),
+    ...julyJournal([
+      { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp", caption: "Aroma Heart of Gold in its former Bed 1 position" },
+      { src: "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp", caption: "Burgundy, cream and yellow flowers before the move" },
+    ]),
+  ];
+  PLANT_PHOTOS_BY_ID["bed23wallpot-viburnum-lisarose"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-1.webp", caption: "Viburnum 'Lisarose' in the new shared-wall pot" },
+    { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-2.webp", caption: "Evergreen Lisarose foliage" },
+    { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-3.webp", caption: "The Viburnum and trailing Vinca together" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed23wallpot-vinca-minor-illumination"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-1.webp", caption: "The additional Vinca minor 'Illumination' in the wall pot" },
+    { src: "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-2.webp", caption: "Cream-and-green Vinca foliage" },
+    { src: "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-3.webp", caption: "Trailing Vinca at the pot edge" },
+  ]);
+  PLANT_PHOTOS_BY_ID["viburnumpot-viburnum-tinus-spirit"] = augustJournal([
+    { src: "images/aug-2026-big-changes/viburnum-pot-spirit-1.webp", caption: "Viburnum tinus Spirit in its new garden pot" },
+    { src: "images/aug-2026-big-changes/viburnum-pot-spirit-2.webp", caption: "The new potted Viburnum beside Bed 4" },
+    { src: "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp", caption: "Retained Spirit plant label" },
+  ]);
+  PLANT_PHOTOS_BY_ID["lobeliapot-lobelia-starship-scarlet-bronze-leaf"] = augustJournal([
+    { src: "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp", caption: "Starship Scarlet Bronze Leaf replanted in Bed 4" },
+    { src: "images/aug-2026-big-changes/bed4-lobelia-starship-2.webp", caption: "Scarlet spikes and bronze foliage in the bed" },
   ]);
   PLANT_PHOTOS_BY_ID["house-hallway-kentia-palm"] = julyJournal([
     { src: "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp", caption: "Kentia palm beside the ground-floor staircase" },

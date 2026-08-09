@@ -103,32 +103,6 @@
       }
     },
     {
-      "name": "Angel Wings",
-      "id": "bed1-angel-wings",
-      "latin": "Senecio candicans",
-      "photos": [
-        "images/plants/angel-wings-1.webp",
-        "images/plants/angel-wings-2.webp",
-        "images/plants/angel-wings-3.webp"
-      ],
-      "position": "Front-centre — silvery-white leaves",
-      "light": "Full sun to partial sun.",
-      "water": "Drought-tolerant once established. Avoid overwatering.",
-      "care": "Free-draining soil. Tender — protect or lift in hard winters.",
-      "seasonal": "Silver-white furry leaves all season; small yellow flowers if happy.",
-      "description": "Angel Wings is an evergreen foliage perennial grown at Oak Lodge for its distinctive garden character. Silver-white furry leaves all season.",
-      "characteristics": {
-        "sunlight": "Full sun to partial sun",
-        "hardiness": "H3 · protect below −5°C",
-        "flowering": "Silver-white furry leaves all season",
-        "water": "Drought-tolerant once established",
-        "habit": "Evergreen foliage perennial",
-        "size": "40–50cm high and wide",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
       "name": "Box Hedging",
       "id": "bed1-box-hedging",
       "latin": "Buxus sempervirens",
@@ -176,206 +150,6 @@
         "size": "Typically 0.5–2m",
         "foliage": "Evergreen",
         "wildlife": "Foliage provides garden habitat"
-      }
-    },
-    {
-      "name": "Nemesia 'Aroma Heart of Gold'",
-      "id": "bed1-nemesia",
-      "latin": "Nemesia Aroma Heart of Gold (Aroma Series)",
-      "photos": [
-        "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp",
-        "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-2.webp"
-      ],
-      "position": "Front edge — burgundy, cream and yellow; added July 2026",
-      "light": "Full sun to partial shade in a sheltered position.",
-      "water": "Keep moist but well drained, watering in dry spells to maintain flowering.",
-      "care": "Pinch the growing tips for a bushy plant. Trim flowering shoots after the first flush to encourage more blooms; protect cuttings from frost if overwintering.",
-      "seasonal": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
-      "profile": {
-        "version": 2,
-        "type": "Half-hardy perennial · bedding plant",
-        "badges": [
-          "Sweetly scented",
-          "Summer–autumn flowers",
-          "Added July 2026"
-        ],
-        "description": "A compact, bushy Nemesia that forms a low cushion of dark green foliage, usually around 25–35cm high and wide. Above it sit loose clouds of two-lipped flowers: burgundy-red and creamy yellow petals gathered around warm burnt-orange centres. The flowers are sweetly scented and can continue from summer into autumn when the plant is kept evenly watered and its first spent flowering shoots are trimmed away. At Oak Lodge it is being used as a low, fragrant edge plant, bringing close-up colour without hiding the planting behind it.",
-        "floweringMonths": [
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
-        ],
-        "facts": [
-          {
-            "label": "Size",
-            "value": "25–35cm",
-            "detail": "Compact and bushy; similar height and spread"
-          },
-          {
-            "label": "Position",
-            "value": "Sun or light shade",
-            "detail": "Best in a warm, sheltered position"
-          },
-          {
-            "label": "Soil",
-            "value": "Moist, well-drained",
-            "detail": "Fertile loam or sandy soil; acid to neutral"
-          },
-          {
-            "label": "Hardiness",
-            "value": "H3",
-            "detail": "Protect from hard frost; roughly −5 to 1°C"
-          },
-          {
-            "label": "Fragrance",
-            "value": "Sweetly scented",
-            "detail": "Most noticeable close to the flowers"
-          },
-          {
-            "label": "Habit",
-            "value": "Low and bushy",
-            "detail": "A deciduous, short-lived perennial often used as bedding"
-          }
-        ],
-        "careGuide": [
-          {
-            "title": "Water by touch, not by routine",
-            "summary": "Check the top 2–3cm of soil and water when it feels dry.",
-            "detail": "Its roots are fairly shallow, so a hot or windy spell can slow flowering quickly. Water thoroughly at soil level, then allow the surface to dry slightly rather than keeping the bed constantly wet."
-          },
-          {
-            "title": "Keep the flowers coming",
-            "summary": "Pinch young tips and trim spent flowering shoots after the first flush.",
-            "detail": "Pinching encourages a fuller plant. Once the first main display fades, remove the tired flowering growth rather than only picking individual blooms; fresh shoots should produce the next flush."
-          },
-          {
-            "title": "Feed only while it is working",
-            "summary": "Use a balanced liquid feed during active flowering if growth or colour begins to fade.",
-            "detail": "A plant growing in fertile bed soil needs less feeding than one in a container. Avoid heavy feeding that produces soft leafy growth at the expense of flowers."
-          },
-          {
-            "title": "Decide how to overwinter it",
-            "summary": "Treat the Bed 1 plant as vulnerable to a Bromsgrove winter.",
-            "detail": "H3 means it may survive only a mild, sheltered winter. The reliable option is to take softwood cuttings from non-flowering shoots in late summer and keep them frost-free; otherwise regard the outdoor plant as seasonal."
-          }
-        ],
-        "waterSigns": {
-          "under": "Leaves and soft stems lose their springiness, the plant looks limp, and flowering slows. Check the soil first: if the top 2–3cm is dry, water deeply.",
-          "over": "Lower leaves yellow, stems soften or darken at the base, and flowering declines even though the soil stays wet. Pause watering and improve drainage around the crown."
-        },
-        "seasons": [
-          {
-            "season": "Spring",
-            "action": "If cuttings were overwintered, pinch them once they are growing strongly. Harden plants off gradually and put them outside only after frost risk has passed."
-          },
-          {
-            "season": "Summer",
-            "action": "Keep the root run evenly moist in dry weather. Pinch for shape, feed if flowering weakens, then trim the first tired flowering shoots to prompt another flush."
-          },
-          {
-            "season": "Autumn",
-            "action": "Enjoy the late flowers while weather stays mild. Take non-flowering softwood cuttings before cold nights if this cultivar is to be kept for next year."
-          },
-          {
-            "season": "Winter",
-            "action": "Do not rely on the Bed 1 plant surviving a hard frost. Keep any rooted cuttings bright, frost-free and only lightly moist."
-          }
-        ],
-        "problems": [
-          {
-            "name": "Drying out",
-            "sign": "Sudden limpness and fewer flowers",
-            "response": "Check 2–3cm down, then water thoroughly if dry. Do not assume every midday wilt needs water if the soil is still moist."
-          },
-          {
-            "name": "Root or foot rot",
-            "sign": "Yellow leaves, a soft dark stem base or collapse in wet soil",
-            "response": "Stop watering, clear soil away from the crown and improve drainage. Badly rotted growth is unlikely to recover."
-          },
-          {
-            "name": "Aphids",
-            "sign": "Clusters on soft tips, sticky leaves or distorted new growth",
-            "response": "Squash small colonies by hand or wash them off early, checking the youngest shoots repeatedly."
-          },
-          {
-            "name": "Frost damage",
-            "sign": "Blackened, translucent or collapsed soft growth after a cold night",
-            "response": "Remove damaged growth once the risk has passed. Use frost-free cuttings as insurance rather than depending on the outdoor crown."
-          }
-        ],
-        "botanical": [
-          {
-            "label": "Family",
-            "value": "Scrophulariaceae"
-          },
-          {
-            "label": "Genus",
-            "value": "Nemesia"
-          },
-          {
-            "label": "Botanical name",
-            "value": "Nemesia ‘Aroma Heart of Gold’ (Aroma Series)"
-          },
-          {
-            "label": "Plant type",
-            "value": "Bushy, deciduous half-hardy perennial; commonly grown as bedding"
-          },
-          {
-            "label": "Native to Britain or Ireland",
-            "value": "No"
-          },
-          {
-            "label": "Time to mature",
-            "value": "About one year"
-          },
-          {
-            "label": "Breeding",
-            "value": "Reported as bred in the UK by Jimmy Jones at Penhow, Wales"
-          },
-          {
-            "label": "Name status",
-            "value": "Trade designation"
-          }
-        ],
-        "about": "Nemesia is a southern African genus whose species may be annuals, perennials or small sub-shrubs. Their characteristic flowers have two lips and are carried singly or in short clusters. ‘Aroma Heart of Gold’ is a compact garden hybrid selected for fragrance, contrasting flower colour and a long display.",
-        "provenanceNote": "The cultivar is reported by its nursery supplier as a UK-bred selection by Jimmy Jones of Penhow, Wales. This is useful provenance, but it is recorded as a nursery attribution rather than an independent botanical claim.",
-        "oakLodge": {
-          "location": "Front edge of Flower Bed 1",
-          "added": "July 2026",
-          "role": "Low, fragrant colour along the raised-bed edge",
-          "observation": "Planted in flower, showing the cultivar’s burgundy-red, cream-yellow and burnt-orange colouring.",
-          "status": "First season under observation; outdoor winter survival at Oak Lodge is not yet known."
-        },
-        "sources": [
-          {
-            "title": "Royal Horticultural Society plant profile",
-            "url": "https://www.rhs.org.uk/plants/383168/nemesia-aroma-heart-of-gold-aroma-series/details",
-            "note": "Cultivation, size, habit, flowering, hardiness, pests and diseases"
-          },
-          {
-            "title": "Brookside Nursery cultivar listing",
-            "url": "https://www.brooksidenursery.co.uk/nemesia-aroma-heart-of-gold-5-large-plug-plants.html",
-            "note": "Cultivar colour, UK breeding attribution and 25–35cm size"
-          },
-          {
-            "title": "Oak Lodge garden record",
-            "url": null,
-            "note": "Position, planting date, photographs and on-site observations"
-          }
-        ]
-      },
-      "description": "Nemesia 'Aroma Heart of Gold' is a compact bushy half-hardy perennial grown at Oak Lodge for its distinctive garden character. Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
-      "characteristics": {
-        "sunlight": "Full sun to partial shade in a sheltered position",
-        "hardiness": "H3 · protect below −5°C",
-        "flowering": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn",
-        "water": "Keep moist but well drained, watering in dry spells to maintain flowering",
-        "habit": "Compact bushy half-hardy perennial",
-        "size": "20–35cm high and wide",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Fragrant flowers visited by pollinators"
       }
     },
     {
@@ -507,6 +281,58 @@
         "foliage": "Evergreen",
         "wildlife": "Spring flowers support pollinators"
       }
+    },
+    {
+      "name": "Abelia 'Kaleidoscope'",
+      "id": "bed1-abelia-kaleidoscope",
+      "latin": "Abelia × grandiflora 'Kaleidoscope'",
+      "photos": [
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-1.webp",
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-2.webp",
+        "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-3.webp"
+      ],
+      "position": "Front edge — second Oak Lodge specimen, added August 2026",
+      "light": "Full sun to partial shade; the foliage colours best with good light.",
+      "water": "Moderate while establishing; avoid waterlogged soil.",
+      "care": "Lightly trim after flowering only if needed. Shelter from cold drying wind and mulch over moist soil.",
+      "seasonal": "Yellow-and-green foliage warms to orange-red; fragrant white flowers continue into autumn.",
+      "description": "Abelia 'Kaleidoscope' is a garden shrub grown at Oak Lodge for its distinctive garden character. Yellow-and-green foliage warms to orange-red.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Yellow-and-green foliage warms to orange-red",
+        "water": "Moderate while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Pieris 'Forest Flame'",
+      "id": "bed1-pieris-forest-flame",
+      "latin": "Pieris 'Forest Flame'",
+      "photos": [
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp",
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-2.webp",
+        "images/aug-2026-big-changes/bed1-pieris-forest-flame-3.webp"
+      ],
+      "position": "Front-right inside the box edge — added August 2026",
+      "light": "Partial shade or sheltered sun; protect new growth from early frost and harsh morning sun.",
+      "water": "Keep evenly moist but well drained; use rainwater where practical.",
+      "care": "Grow in acidic, humus-rich soil. Mulch with leaf mould or composted bark and prune only damaged growth.",
+      "seasonal": "Evergreen foliage opens vivid red, softens through pink and cream, then matures green; cream spring flowers.",
+      "description": "Pieris 'Forest Flame' is a garden shrub grown at Oak Lodge for its distinctive garden character. Evergreen foliage opens vivid red, softens through pink and cream, then matures green.",
+      "characteristics": {
+        "sunlight": "Partial shade or sheltered sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen foliage opens vivid red, softens through pink and cream, then matures green",
+        "water": "Keep evenly moist but well drained",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ],
   "Bed 2": [
@@ -608,32 +434,6 @@
         "size": "Typically 0.5–2m",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Angel Wings",
-      "id": "bed2-angel-wings",
-      "latin": "Senecio candicans",
-      "photos": [
-        "images/plants/angel-wings-1.webp",
-        "images/plants/angel-wings-2.webp",
-        "images/plants/angel-wings-3.webp"
-      ],
-      "position": "Lower, front",
-      "light": "Full sun.",
-      "water": "Drought-tolerant.",
-      "care": "Free-draining soil; tender in hard winters.",
-      "seasonal": "Silver foliage all season.",
-      "description": "Angel Wings is an evergreen foliage perennial grown at Oak Lodge for its distinctive garden character. Silver foliage all season.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H3 · protect below −5°C",
-        "flowering": "Silver foliage all season",
-        "water": "Drought-tolerant",
-        "habit": "Evergreen foliage perennial",
-        "size": "40–50cm high and wide",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Foliage provides garden habitat"
       }
     },
     {
@@ -755,6 +555,31 @@
         "foliage": "Evergreen",
         "wildlife": "Flowers visited by pollinators"
       }
+    },
+    {
+      "name": "Sedum 'Rose Carpet'",
+      "id": "bed2-sedum-rose-carpet",
+      "latin": "Sedum pluricaule 'Rose Carpet'",
+      "photos": [
+        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
+        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp"
+      ],
+      "position": "Lower front — planted in the former Angel Wings position in August 2026",
+      "light": "Full sun to partial shade.",
+      "water": "Low once established; allow the soil surface to dry and avoid winter saturation.",
+      "care": "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
+      "seasonal": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
+      "description": "Sedum 'Rose Carpet' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Grey-green succulent leaves and dense rose-pink flower clusters in late summer.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer",
+        "water": "Low once established",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
     }
   ],
   "Bed 4": [
@@ -806,30 +631,6 @@
         "size": "1–1.5m high and wide",
         "foliage": "Evergreen",
         "wildlife": "Nectar-rich flowers for pollinators"
-      }
-    },
-    {
-      "name": "Achillea",
-      "id": "bed4-achillea",
-      "latin": "Achillea millefolium",
-      "photos": [
-        "images/june-2026-updates/achillea.webp"
-      ],
-      "position": "Left — flat-headed flower clusters",
-      "light": "Full sun.",
-      "water": "Low to moderate. Drought-tolerant once established.",
-      "care": "Cut back after first flush for a second showing. Divide clumps every 2–3 years to keep vigorous. Good for cutting.",
-      "seasonal": "Flat-headed flower clusters in red, pink or yellow June–September; feathery aromatic foliage through the season.",
-      "description": "Achillea is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Flat-headed flower clusters in red, pink or yellow June–September.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Flat-headed flower clusters in red, pink or yellow June–September",
-        "water": "Low to moderate",
-        "habit": "Herbaceous perennial",
-        "size": "Typically 30–100cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
       }
     },
     {
@@ -887,21 +688,47 @@
       "photos": [
         "images/june-2026-update-2/celosia.webp"
       ],
-      "position": "Front of the bed — purple, yellow and red varieties. Moved from Bed 1 in July 2026.",
+      "position": "Front of the bed — yellow plant retained; purple and red plants removed in August 2026",
       "light": "Full sun.",
       "water": "Moderate; water at the base, avoid wetting the plumes.",
       "care": "Annual. Deadhead spent plumes to encourage more flowers. Tender — plant out after last frost. Feed fortnightly with a balanced liquid feed.",
-      "seasonal": "Vivid crested or plumed flowers June–October; dies with the first hard frost.",
-      "description": "Celosia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Vivid crested or plumed flowers June–October.",
+      "seasonal": "Yellow plumed flowers June–October; the remaining annual dies with the first hard frost.",
+      "description": "Celosia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Yellow plumed flowers June–October.",
       "characteristics": {
         "sunlight": "Full sun",
         "hardiness": "Tender · protect from frost",
-        "flowering": "Vivid crested or plumed flowers June–October",
+        "flowering": "Yellow plumed flowers June–October",
         "water": "Moderate",
         "habit": "Seasonal flowering plant",
         "size": "Typically 15–60cm",
         "foliage": "Deciduous or dormant in winter",
         "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Lobelia 'Starship Scarlet Bronze Leaf'",
+      "id": "lobeliapot-lobelia-starship-scarlet-bronze-leaf",
+      "latin": "Lobelia × speciosa 'Starship Scarlet Bronze Leaf'",
+      "photos": [
+        "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp",
+        "images/aug-2026-big-changes/bed4-lobelia-starship-2.webp",
+        "images/jul-2026/lobelia-starship-scarlet-close.jpeg"
+      ],
+      "position": "Former Achillea position — planted out in August 2026",
+      "light": "Full sun to partial shade. Best flowering with at least half a day of sun.",
+      "water": "Keep evenly moist; do not allow the compost to dry out in summer.",
+      "care": "Keep evenly moist while it establishes. Deadhead spent spikes; mulch the crown for winter and avoid stagnant soil.",
+      "seasonal": "Bronze foliage from spring; tall scarlet flower spikes July–September; dies back in winter and returns from the crown.",
+      "description": "Lobelia 'Starship Scarlet Bronze Leaf' is an upright herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bronze foliage from spring.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "H4 · protect a container in hard frost",
+        "flowering": "Bronze foliage from spring",
+        "water": "Keep evenly moist",
+        "habit": "Upright herbaceous perennial",
+        "size": "60–90cm high · 30–45cm spread",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Nectar-rich spikes for pollinators"
       }
     }
   ],
@@ -1140,6 +967,208 @@
         "size": "Typically 15–60cm",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Nemesia 'Aroma Heart of Gold'",
+      "id": "bed1-nemesia",
+      "latin": "Nemesia Aroma Heart of Gold (Aroma Series)",
+      "photos": [
+        "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-1.webp",
+        "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-2.webp",
+        "images/jul-2026/july-update-bed1-nemesia-aroma-heart-of-gold-1.webp"
+      ],
+      "position": "Bed 5 big pot — moved from Bed 1 in August 2026",
+      "light": "Full sun to partial shade in a sheltered position.",
+      "water": "Keep moist but well drained, watering in dry spells to maintain flowering.",
+      "care": "Pinch the growing tips for a bushy plant. Trim flowering shoots after the first flush to encourage more blooms; protect cuttings from frost if overwintering.",
+      "seasonal": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
+      "profile": {
+        "version": 2,
+        "type": "Half-hardy perennial · bedding plant",
+        "badges": [
+          "Sweetly scented",
+          "Summer–autumn flowers",
+          "Moved August 2026"
+        ],
+        "description": "A compact, bushy Nemesia that forms a low cushion of dark green foliage, usually around 25–35cm high and wide. Above it sit loose clouds of two-lipped flowers: burgundy-red and creamy yellow petals gathered around warm burnt-orange centres. The flowers are sweetly scented and can continue from summer into autumn when the plant is kept evenly watered and its first spent flowering shoots are trimmed away. At Oak Lodge it is being used as a low, fragrant edge plant, bringing close-up colour without hiding the planting behind it.",
+        "floweringMonths": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ],
+        "facts": [
+          {
+            "label": "Size",
+            "value": "25–35cm",
+            "detail": "Compact and bushy; similar height and spread"
+          },
+          {
+            "label": "Position",
+            "value": "Sun or light shade",
+            "detail": "Best in a warm, sheltered position"
+          },
+          {
+            "label": "Soil",
+            "value": "Moist, well-drained",
+            "detail": "Fertile loam or sandy soil; acid to neutral"
+          },
+          {
+            "label": "Hardiness",
+            "value": "H3",
+            "detail": "Protect from hard frost; roughly −5 to 1°C"
+          },
+          {
+            "label": "Fragrance",
+            "value": "Sweetly scented",
+            "detail": "Most noticeable close to the flowers"
+          },
+          {
+            "label": "Habit",
+            "value": "Low and bushy",
+            "detail": "A deciduous, short-lived perennial often used as bedding"
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Water by touch, not by routine",
+            "summary": "Check the top 2–3cm of soil and water when it feels dry.",
+            "detail": "Its roots are fairly shallow, so a hot or windy spell can slow flowering quickly. Water thoroughly at soil level, then allow the surface to dry slightly rather than keeping the bed constantly wet."
+          },
+          {
+            "title": "Keep the flowers coming",
+            "summary": "Pinch young tips and trim spent flowering shoots after the first flush.",
+            "detail": "Pinching encourages a fuller plant. Once the first main display fades, remove the tired flowering growth rather than only picking individual blooms; fresh shoots should produce the next flush."
+          },
+          {
+            "title": "Feed only while it is working",
+            "summary": "Use a balanced liquid feed during active flowering if growth or colour begins to fade.",
+            "detail": "A plant growing in fertile bed soil needs less feeding than one in a container. Avoid heavy feeding that produces soft leafy growth at the expense of flowers."
+          },
+          {
+            "title": "Decide how to overwinter it",
+            "summary": "Treat the Bed 1 plant as vulnerable to a Bromsgrove winter.",
+            "detail": "H3 means it may survive only a mild, sheltered winter. The reliable option is to take softwood cuttings from non-flowering shoots in late summer and keep them frost-free; otherwise regard the outdoor plant as seasonal."
+          }
+        ],
+        "waterSigns": {
+          "under": "Leaves and soft stems lose their springiness, the plant looks limp, and flowering slows. Check the soil first: if the top 2–3cm is dry, water deeply.",
+          "over": "Lower leaves yellow, stems soften or darken at the base, and flowering declines even though the soil stays wet. Pause watering and improve drainage around the crown."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "If cuttings were overwintered, pinch them once they are growing strongly. Harden plants off gradually and put them outside only after frost risk has passed."
+          },
+          {
+            "season": "Summer",
+            "action": "Keep the root run evenly moist in dry weather. Pinch for shape, feed if flowering weakens, then trim the first tired flowering shoots to prompt another flush."
+          },
+          {
+            "season": "Autumn",
+            "action": "Enjoy the late flowers while weather stays mild. Take non-flowering softwood cuttings before cold nights if this cultivar is to be kept for next year."
+          },
+          {
+            "season": "Winter",
+            "action": "Do not rely on the Bed 1 plant surviving a hard frost. Keep any rooted cuttings bright, frost-free and only lightly moist."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Drying out",
+            "sign": "Sudden limpness and fewer flowers",
+            "response": "Check 2–3cm down, then water thoroughly if dry. Do not assume every midday wilt needs water if the soil is still moist."
+          },
+          {
+            "name": "Root or foot rot",
+            "sign": "Yellow leaves, a soft dark stem base or collapse in wet soil",
+            "response": "Stop watering, clear soil away from the crown and improve drainage. Badly rotted growth is unlikely to recover."
+          },
+          {
+            "name": "Aphids",
+            "sign": "Clusters on soft tips, sticky leaves or distorted new growth",
+            "response": "Squash small colonies by hand or wash them off early, checking the youngest shoots repeatedly."
+          },
+          {
+            "name": "Frost damage",
+            "sign": "Blackened, translucent or collapsed soft growth after a cold night",
+            "response": "Remove damaged growth once the risk has passed. Use frost-free cuttings as insurance rather than depending on the outdoor crown."
+          }
+        ],
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Scrophulariaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Nemesia"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Nemesia ‘Aroma Heart of Gold’ (Aroma Series)"
+          },
+          {
+            "label": "Plant type",
+            "value": "Bushy, deciduous half-hardy perennial; commonly grown as bedding"
+          },
+          {
+            "label": "Native to Britain or Ireland",
+            "value": "No"
+          },
+          {
+            "label": "Time to mature",
+            "value": "About one year"
+          },
+          {
+            "label": "Breeding",
+            "value": "Reported as bred in the UK by Jimmy Jones at Penhow, Wales"
+          },
+          {
+            "label": "Name status",
+            "value": "Trade designation"
+          }
+        ],
+        "about": "Nemesia is a southern African genus whose species may be annuals, perennials or small sub-shrubs. Their characteristic flowers have two lips and are carried singly or in short clusters. ‘Aroma Heart of Gold’ is a compact garden hybrid selected for fragrance, contrasting flower colour and a long display.",
+        "provenanceNote": "The cultivar is reported by its nursery supplier as a UK-bred selection by Jimmy Jones of Penhow, Wales. This is useful provenance, but it is recorded as a nursery attribution rather than an independent botanical claim.",
+        "oakLodge": {
+          "location": "Mixed big pot within Flower Bed 5",
+          "added": "Added to Bed 1 in July 2026; moved to the Bed 5 big pot in August 2026",
+          "role": "Low fragrant colour among the taller Alstroemeria and trailing plants",
+          "observation": "The burgundy, cream and yellow flowers now sit beside the existing white ‘Wisley Vanilla’ Nemesia.",
+          "status": "First season in a shared container; keep its crown open and monitor competition for moisture."
+        },
+        "sources": [
+          {
+            "title": "Royal Horticultural Society plant profile",
+            "url": "https://www.rhs.org.uk/plants/383168/nemesia-aroma-heart-of-gold-aroma-series/details",
+            "note": "Cultivation, size, habit, flowering, hardiness, pests and diseases"
+          },
+          {
+            "title": "Brookside Nursery cultivar listing",
+            "url": "https://www.brooksidenursery.co.uk/nemesia-aroma-heart-of-gold-5-large-plug-plants.html",
+            "note": "Cultivar colour, UK breeding attribution and 25–35cm size"
+          },
+          {
+            "title": "Oak Lodge garden record",
+            "url": null,
+            "note": "Position, planting date, photographs and on-site observations"
+          }
+        ]
+      },
+      "group": "Big pot",
+      "description": "Nemesia 'Aroma Heart of Gold' is a compact bushy half-hardy perennial grown at Oak Lodge for its distinctive garden character. Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade in a sheltered position",
+        "hardiness": "H3 · protect below −5°C",
+        "flowering": "Sweetly fragrant burgundy-red and creamy-yellow flowers with burnt-orange centres from summer into autumn",
+        "water": "Keep moist but well drained, watering in dry spells to maintain flowering",
+        "habit": "Compact bushy half-hardy perennial",
+        "size": "20–35cm high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Fragrant flowers visited by pollinators"
       }
     }
   ],
@@ -2298,33 +2327,6 @@
       }
     }
   ],
-  "Lobelia Pot": [
-    {
-      "name": "Lobelia 'Starship Scarlet Bronze Leaf'",
-      "id": "lobeliapot-lobelia-starship-scarlet-bronze-leaf",
-      "latin": "Lobelia × speciosa 'Starship Scarlet Bronze Leaf'",
-      "photos": [
-        "images/jul-2026/lobelia-starship-scarlet-pot.jpeg",
-        "images/jul-2026/lobelia-starship-scarlet-close.jpeg"
-      ],
-      "position": "Single specimen filling the pot",
-      "light": "Full sun to partial shade. Best flowering with at least half a day of sun.",
-      "water": "Keep evenly moist; do not allow the compost to dry out in summer.",
-      "care": "Deadhead spent spikes to encourage more flowers. Feed fortnightly while flowering. Hardy in the ground, but protect the pot from prolonged hard frost and winter waterlogging.",
-      "seasonal": "Bronze foliage from spring; tall scarlet flower spikes July–September; dies back in winter and returns from the crown.",
-      "description": "Lobelia 'Starship Scarlet Bronze Leaf' is an upright herbaceous perennial grown at Oak Lodge for its distinctive garden character. Bronze foliage from spring.",
-      "characteristics": {
-        "sunlight": "Full sun to partial shade",
-        "hardiness": "H4 · protect a container in hard frost",
-        "flowering": "Bronze foliage from spring",
-        "water": "Keep evenly moist",
-        "habit": "Upright herbaceous perennial",
-        "size": "60–90cm high · 30–45cm spread",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Nectar-rich spikes for pollinators"
-      }
-    }
-  ],
   "Baskets": [
     {
       "name": "Trailing Fuchsia",
@@ -3028,6 +3030,30 @@
         "size": "About 10cm high · 30–50cm spread",
         "foliage": "Evergreen",
         "wildlife": "Daisy flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Achillea",
+      "id": "bed4-achillea",
+      "latin": "Achillea millefolium",
+      "photos": [
+        "images/june-2026-updates/achillea.webp"
+      ],
+      "position": "Sunny front section — moved from Back Bed 4 in August 2026",
+      "light": "Full sun.",
+      "water": "Low to moderate. Drought-tolerant once established.",
+      "care": "Cut back after first flush for a second showing. Divide clumps every 2–3 years to keep vigorous. Good for cutting.",
+      "seasonal": "Flat-headed flower clusters in red, pink or yellow June–September; feathery aromatic foliage through the season.",
+      "description": "Achillea is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Flat-headed flower clusters in red, pink or yellow June–September.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Flat-headed flower clusters in red, pink or yellow June–September",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],
@@ -3855,6 +3881,117 @@
         "size": "Typically 0.5–2m",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Nemesia Pot": [
+    {
+      "name": "Nemesia 'Lady Penelope'",
+      "id": "lobeliapot-nemesia-lady-penelope",
+      "latin": "Nemesia 'Lady Penelope' (best-fit identification)",
+      "photos": [
+        "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp",
+        "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp"
+      ],
+      "position": "Single specimen in the former Lobelia Pot — moved from Bed 1 in August 2026",
+      "light": "Full sun to light partial shade in a sheltered position.",
+      "water": "Keep the container evenly moist but never waterlogged.",
+      "care": "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
+      "seasonal": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+      "description": "Nemesia 'Lady Penelope' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn",
+        "water": "Keep the container evenly moist but never waterlogged",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Bed 2/3 Wall Pot": [
+    {
+      "name": "Viburnum 'Lisarose'",
+      "id": "bed23wallpot-viburnum-lisarose",
+      "latin": "Viburnum tinus 'Lisarose'",
+      "photos": [
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-1.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-2.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-3.webp"
+      ],
+      "position": "Upright evergreen centrepiece — added August 2026",
+      "light": "Sun, partial shade or shade, sheltered from cold drying winds.",
+      "water": "Keep evenly moist while establishing; never leave the container waterlogged.",
+      "care": "Use humus-rich, well-drained compost. Prune only after flowering if its size needs controlling.",
+      "seasonal": "Brick-red winter buds open to pink-and-white flowers, followed by dark blue ornamental berries.",
+      "description": "Viburnum 'Lisarose' is a garden shrub grown at Oak Lodge for its distinctive garden character. Brick-red winter buds open to pink-and-white flowers, followed by dark blue ornamental berries.",
+      "characteristics": {
+        "sunlight": "Sun, partial shade or shade, sheltered from cold drying winds",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Brick-red winter buds open to pink-and-white flowers, followed by dark blue ornamental berries",
+        "water": "Keep evenly moist while establishing",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Vinca minor 'Illumination'",
+      "id": "bed23wallpot-vinca-minor-illumination",
+      "latin": "Vinca minor 'Illumination'",
+      "photos": [
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-1.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-2.webp",
+        "images/aug-2026-big-changes/bed23-wallpot-vinca-illumination-3.webp"
+      ],
+      "position": "Trailing over the dividing wall — additional plant added August 2026",
+      "light": "Sun to shade; foliage colours best in bright indirect light or partial shade.",
+      "water": "Moderate. Let the surface dry slightly without allowing the pot to dry completely.",
+      "care": "Trim trailing stems to shape and keep drainage holes clear. Do not plant into open ground without a spread plan.",
+      "seasonal": "Golden evergreen foliage with narrow green margins and violet-blue flowers from spring into autumn.",
+      "description": "Vinca minor 'Illumination' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Golden evergreen foliage with narrow green margins and violet-blue flowers from spring into autumn.",
+      "characteristics": {
+        "sunlight": "Sun to shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Golden evergreen foliage with narrow green margins and violet-blue flowers from spring into autumn",
+        "water": "Moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Viburnum Pot": [
+    {
+      "name": "Viburnum tinus Spirit",
+      "id": "viburnumpot-viburnum-tinus-spirit",
+      "latin": "Viburnum tinus 'Anvi' (Spirit)",
+      "photos": [
+        "images/aug-2026-big-changes/viburnum-pot-spirit-1.webp",
+        "images/aug-2026-big-changes/viburnum-pot-spirit-2.webp",
+        "images/aug-2026-big-changes/viburnum-pot-spirit-3.webp",
+        "images/aug-2026-big-changes/viburnum-pot-spirit-4.webp",
+        "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp"
+      ],
+      "position": "Single evergreen specimen — added August 2026",
+      "light": "Sun or partial shade, with shelter from cold drying winds.",
+      "water": "Keep evenly moist but well drained while establishing; check the pot through dry and windy weather.",
+      "care": "Prune only after flowering if needed. Refresh the top compost in spring and protect the container during prolonged severe cold.",
+      "seasonal": "Pink buds open to lightly fragrant creamy-white flowers from late winter into spring, followed by blue-black ornamental berries.",
+      "description": "Viburnum tinus Spirit is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Pink buds open to lightly fragrant creamy-white flowers from late winter into spring, followed by blue-black ornamental berries.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade, with shelter from cold drying winds",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pink buds open to lightly fragrant creamy-white flowers from late winter into spring, followed by blue-black ornamental berries",
+        "water": "Keep evenly moist but well drained while establishing",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
       }
     }
   ]

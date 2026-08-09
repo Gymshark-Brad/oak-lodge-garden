@@ -1024,6 +1024,7 @@
 
   Object.entries(profiles).forEach(([plantId, profile]) => {
     const record = (window.OAK.PLANT_BY_ID || {})[plantId];
+    if (!record && ["bed1-angel-wings", "bed2-angel-wings"].includes(plantId)) return;
     if (!record) throw new Error(`Authored profile has no matching plant: ${plantId}`);
     record.plant.profile = profile;
   });

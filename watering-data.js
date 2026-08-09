@@ -12,20 +12,20 @@
       "Japanese Aralia": 3,
       "Rhododendron": 3,
       "Hosta 'Patriot'": 3,
-      "Angel Wings": 1,
       "Box Hedging": 2,
       "Euonymus 'Emerald 'n' Gold'": 2,
-      "Nemesia 'Aroma Heart of Gold'": 4,
       "Wintercreeper 'Emerald Gaiety'": 2,
       "Dahlia 'Double Dreamy Lilac'": 4,
       "Dahlia 'Double Dreamy Gold'": 4,
       "Hosta (gold)": 3,
       "Little Heath": 2,
+      "Abelia 'Kaleidoscope'": 3,
+      "Pieris 'Forest Flame'": 3,
     },
     "Bed 2": {
       "Weeping Cherry": 3,
       "Peony": 3,
-      "Angel Wings": 1,
+      "Sedum 'Rose Carpet'": 1,
       "Weigela": 3,
       "Silverbush": 1,
       "Maiden Pink": 1,
@@ -43,7 +43,7 @@
     "Bed 4": {
       "Apple Tree": 2,
       "Callistemon Inferno ('Yanferno')": 3,
-      "Achillea": 2,
+      "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
       "Celosia": 4,
@@ -58,6 +58,7 @@
       "Nemesia": 4,
       "Lythrum 'Robin'": 4,
       "Begonia 'Carmen'": 4,
+      "Nemesia 'Aroma Heart of Gold'": 4,
     },
     "Stone Bed": {
       "Houseleeks": 1,
@@ -115,8 +116,15 @@
     "Cercis Pot": {
       "Cercis 'Carolina Sweetheart'": 4,
     },
-    "Lobelia Pot": {
-      "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
+    "Nemesia Pot": {
+      "Nemesia 'Lady Penelope'": 4,
+    },
+    "Bed 2/3 Wall Pot": {
+      "Viburnum 'Lisarose'": 3,
+      "Vinca minor 'Illumination'": 3,
+    },
+    "Viburnum Pot": {
+      "Viburnum tinus Spirit": 3,
     },
     "Front Pot": {
       "Gazania 'Sunny Side Up'": 2,
@@ -162,6 +170,7 @@
       "Festuca 'Elijah Blue' (3 plants)": 1,
       "Astrantia trio": 3,
       "Delosperma 'Ice Cream Mix'": 1,
+      "Achillea": 2,
     },
     "Front Bed 5": {
       "Cherry Laurel": 2,
@@ -509,9 +518,17 @@
       under: "Check below the surface during warm weather. Drooping heart-shaped leaves, scorch along the pale variegated margins or an unusually light pot mean the young tree's root ball is drying too far.",
       over: "Yellowing leaves, weak extension growth or branch dieback while the compost remains wet point to poor drainage. Empty trapped water and let air return to the root ball before watering again.",
     },
-    "Lobelia Pot": {
-      under: "Check the top 2–3cm daily in warm weather. Drooping flower spikes, limp bronze leaves or compost pulling away from the rim mean the pot needs a thorough drink.",
-      over: "Compost staying dark and sodden for days, yellowing lower leaves or a soft crown mean drainage is poor or watering is too frequent.",
+    "Nemesia Pot": {
+      under: "Check the top 2–3cm daily in warm weather. Limp shoots, dropped flowers or compost pulling away from the rim mean the Nemesia needs a thorough drink.",
+      over: "Compost staying dark and sodden for days, yellowing lower leaves or a soft stem base mean drainage is poor or watering is too frequent.",
+    },
+    "Bed 2/3 Wall Pot": {
+      under: "Check beneath the surface in warm or windy weather. Drooping Viburnum leaves, limp Vinca trails or a noticeably light pot mean the shared root ball is drying too far.",
+      over: "Persistently sodden compost, yellow lower leaves or blackening at either crown mean the wall pot is holding too much water. Keep its drainage holes clear.",
+    },
+    "Viburnum Pot": {
+      under: "Curling or drooping evergreen leaves and a light pot mean the Viburnum's root ball needs a thorough drink, especially while it establishes.",
+      over: "Yellowing leaves, weak growth or a sour smell while the compost remains wet point to poor drainage. Let the upper compost begin to dry before watering again.",
     },
     "Front Pot": {
       under: "Pot feeling light, compost pulling away from the edge, or water running straight through without darkening the compost all mean it's dried out. The Calibrachoa and Bacopa will show it first — flowers dropping and leaves going limp — since they're the thirstiest plants in this pot.",
