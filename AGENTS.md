@@ -229,7 +229,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
 | Front Bed 2 | 5 | Three Coprosmas including new ‘City Knights’, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
-| Front Bed 4 | 18 | Two climbing roses, four Little Devils and three newly replaced Lady in Reds arranged in three Physocarpus clusters, moved Purple Gem, Rhododendron 'Libretto', Spiraea, Pieris, Festuca, Astrantia, Photinia, Delosperma and relocated Achillea |
+| Front Bed 4 | 14 | Two climbing roses; three grouped Physocarpus entries containing four Little Devils and three newly replaced Lady in Reds; moved Purple Gem, Rhododendron 'Libretto', Spiraea, Pieris, Festuca, Astrantia, Photinia, Delosperma and relocated Achillea |
 | Front Bed 5 | 22 | Established Laurel, Choisya and climbers plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe, Salvia and a spare Little Devil added August 2026 |
 
 Full descriptions, characteristics and care data for every plant are in the `data.js` PLANTS object.

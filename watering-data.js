@@ -164,9 +164,9 @@
     "Front Bed 4": {
       "Photinia (existing canopy)": 2,
       "The Pilgrim": 3, "The Generous Gardener": 3,
-      "Little Devil 1": 3, "Little Devil 2": 3,
-      "Little Devil 3": 3, "Little Devil 4": 3,
-      "Lady in Red 1": 3, "Lady in Red 2": 3, "Lady in Red 3": 3,
+      "Physocarpus Cluster 1 (2 × Little Devil)": 3,
+      "Physocarpus Cluster 2 (2 × Lady in Red)": 3,
+      "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)": 3,
       "Magic Carpet": 2, "Purple Gem": 2, "Flaming Silver": 3,
       "Rhododendron 'Libretto'": 3,
       "Festuca 'Elijah Blue' (3 plants)": 1,

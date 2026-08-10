@@ -1855,104 +1855,48 @@ window.OAK = (function () {
         seasonal: "Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance; repeat flowers June–autumn.",
       },
       {
-        name: "Little Devil 1",
-        id: "frontBed4-little-devil-1",
+        name: "Physocarpus Cluster 1 (2 × Little Devil)",
+        id: "frontBed4-physocarpus-cluster-1",
         latin: "Physocarpus opulifolius 'Little Devil'",
         photos: [
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
           "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
           "images/jul-2026/front-bed-4-little-devil-1.jpeg",
-        ],
-        position: "Physocarpus Cluster 1 — first of two Little Devils",
-        light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
-        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
-      },
-      {
-        name: "Little Devil 2",
-        id: "frontBed4-little-devil-2",
-        latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: [
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
-          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
           "images/jul-2026/front-bed-4-little-devil-2.jpeg",
         ],
-        position: "Physocarpus Cluster 1 — second of two Little Devils",
+        position: "Cluster 1 — two retained Little Devils grouped together in August 2026",
         light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+        water: "Water both root balls deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+        care: "Treat as two compact deciduous ninebarks. Keep each crown distinct and remove a few oldest stems at ground level only once established; avoid clipping the cluster into one solid ball.",
         seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
       },
       {
-        name: "Little Devil 3",
-        id: "frontBed4-little-devil-3",
-        latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: [
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
-        ],
-        position: "Physocarpus Cluster 3 — first of two Little Devils, added August 2026",
-        light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
-        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
-      },
-      {
-        name: "Little Devil 4",
-        id: "frontBed4-little-devil-4",
-        latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: [
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
-        ],
-        position: "Physocarpus Cluster 3 — second of two Little Devils, added August 2026",
-        light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
-        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
-      },
-      {
-        name: "Lady in Red 1",
-        id: "frontBed4-lady-in-red-3",
+        name: "Physocarpus Cluster 2 (2 × Lady in Red)",
+        id: "frontBed4-physocarpus-cluster-2",
         latin: "Physocarpus opulifolius 'Lady in Red'",
         photos: [
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
           "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
         ],
-        position: "Physocarpus Cluster 2 — first of two new Lady in Reds, added August 2026",
+        position: "Cluster 2 — two new Lady in Reds added August 2026",
         light: "Sun to partial shade; best foliage colour in brighter light.",
-        water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
-        care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
+        water: "Water both root balls deeply in dry spells while establishing; afterwards they are fairly drought tolerant.",
+        care: "Treat as two deciduous ninebarks. Keep their layered outlines distinct and remove a few oldest stems at the base in late winter only when congestion develops.",
         seasonal: "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
       },
       {
-        name: "Lady in Red 2",
-        id: "frontBed4-lady-in-red-4",
-        latin: "Physocarpus opulifolius 'Lady in Red'",
-        photos: [
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
-          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
-        ],
-        position: "Physocarpus Cluster 2 — second of two new Lady in Reds, added August 2026",
-        light: "Sun to partial shade; best foliage colour in brighter light.",
-        water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
-        care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
-        seasonal: "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
-      },
-      {
-        name: "Lady in Red 3",
-        id: "frontBed4-lady-in-red-5",
-        latin: "Physocarpus opulifolius 'Lady in Red'",
+        name: "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)",
+        id: "frontBed4-physocarpus-cluster-3",
+        latin: "Physocarpus opulifolius 'Little Devil' & 'Lady in Red'",
         photos: [
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
         ],
-        position: "Physocarpus Cluster 3 — with two Little Devils, added August 2026",
-        light: "Sun to partial shade; best foliage colour in brighter light.",
-        water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
-        care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
-        seasonal: "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
+        position: "Cluster 3 — two new Little Devils with one new Lady in Red, added August 2026",
+        light: "Sun to partial shade; brighter light strengthens the burgundy and red-bronze foliage.",
+        water: "Water all three root balls deeply in dry spells while establishing; afterwards the cluster is fairly drought tolerant.",
+        care: "Keep the two lower Little Devils and taller Lady in Red readable as a layered trio. Renew individual shrubs from the base only when mature and congested; do not shear the cluster into one mass.",
+        seasonal: "Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer; bare in winter.",
       },
       {
         name: "Magic Carpet",
@@ -3786,15 +3730,11 @@ window.OAK = (function () {
     ],
     frontBed4: [
       { name: "The Pilgrim", x: 15, y: 20, r: 11, hue: 55 },
-      { name: "Little Devil 1", x: 31, y: 24, r: 6, hue: 345 },
-      { name: "Little Devil 2", x: 39, y: 28, r: 6, hue: 345 },
-      { name: "Lady in Red 1", x: 51, y: 23, r: 6, hue: 350 },
-      { name: "Lady in Red 2", x: 59, y: 27, r: 6, hue: 350 },
+      { name: "Physocarpus Cluster 1 (2 × Little Devil)", x: 35, y: 25, r: 9, hue: 345 },
+      { name: "Physocarpus Cluster 2 (2 × Lady in Red)", x: 55, y: 25, r: 9, hue: 350 },
       { name: "Rhododendron 'Libretto'", x: 83, y: 23, r: 11, hue: 280 },
       { name: "Magic Carpet", x: 49, y: 37, r: 8, hue: 70 },
-      { name: "Little Devil 3", x: 69, y: 43, r: 6, hue: 345 },
-      { name: "Little Devil 4", x: 77, y: 48, r: 6, hue: 345 },
-      { name: "Lady in Red 3", x: 72, y: 55, r: 6, hue: 350 },
+      { name: "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)", x: 73, y: 49, r: 10, hue: 348 },
       { name: "Purple Gem", x: 61, y: 58, r: 7, hue: 115 },
       { name: "Photinia (existing canopy)", x: 84, y: 62, r: 16, hue: 112 },
       { name: "Festuca 'Elijah Blue' (3 plants)", x: 23, y: 77, r: 12, hue: 215 },
@@ -3926,22 +3866,24 @@ window.OAK = (function () {
       { src: "images/june-2026-updates/achillea.webp", caption: "Achillea before its August move to the front garden" },
     ]},
   ];
-  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-1"] = augustJournal([
+  PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-1"] = [
+    ...augustJournal([
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg", caption: "Cluster 1 — two established Little Devils grouped together" },
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
-  ]);
-  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-2"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-1"];
-  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"] = augustJournal([
-    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Cluster 3 — two Little Devils with one Lady in Red" },
-    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg", caption: "The new mixed Physocarpus cluster from the stepping route" },
-  ]);
-  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-4"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"];
-  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-3"] = augustJournal([
+    ]),
+    { month: "jul-2026", label: "July 2026 · before the cluster layout", photos: [
+      { src: "images/jul-2026/front-bed-4-little-devil-1.jpeg", caption: "The first retained Little Devil before regrouping" },
+      { src: "images/jul-2026/front-bed-4-little-devil-2.jpeg", caption: "The second retained Little Devil before regrouping" },
+    ]},
+  ];
+  PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-2"] = augustJournal([
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg", caption: "Cluster 2 — two newly planted Lady in Reds" },
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
   ]);
-  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-4"] = PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-3"];
-  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-5"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"];
+  PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-3"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Cluster 3 — two Little Devils with one Lady in Red" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg", caption: "The new mixed Physocarpus cluster from the stepping route" },
+  ]);
   PLANT_PHOTOS_BY_ID["frontBed4-purple-gem"] = augustJournal([
     { src: "images/aug-2026-front-garden/front-bed4-purple-gem-moved.jpeg", caption: "Purple Gem in one of the former Lady in Red positions" },
   ]);
