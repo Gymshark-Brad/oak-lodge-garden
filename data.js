@@ -374,7 +374,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses climb the walls above burgundy Physocarpus, gold Spiraea, evergreen Sarcococca and Pieris, blue Festuca, Astrantia and a new mat of Delosperma 'Ice Cream Mix'; the established Photinia canopy remains at the return-wall side.",
+        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above three clustered groups of burgundy Physocarpus, the moved Purple Gem, Rhododendron 'Libretto', gold Spiraea, Pieris, blue Festuca, Astrantia, Achillea and Delosperma; the established Photinia canopy remains at the return-wall side.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -387,7 +387,7 @@ window.OAK = (function () {
       dims: "Irregular · patio point to boundary wall",
       where: "From the steps out to the brick boundary wall",
       desc:
-        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. The July 2026 survey records the established cherry laurel, golden Choisya, shrub rose, bay, skimmia, hardy fuchsia, clematis and honeysuckle alongside the newer heathers, Pieris, Pittosporum, Gaura, Sollya, Ceratostigma, Hypericum, Hebe and Salvia.",
+        "The whole area right of the steps — bounded by the patio's arrow-point diagonals, the timber steps' east edge, and the brick boundary wall. The established cherry laurel, golden Choisya, shrub rose, bay, skimmia, hardy fuchsia, clematis and honeysuckle share the bed with heathers, Pieris, Pittosporum, Gaura, Sollya, Ceratostigma, Hypericum, Hebe, Salvia and a spare Little Devil added in August 2026.",
       shape: { kind: "polygon", points: "880,170 958,170 958,475 827,475 827,386 760,372 760,292 815,292" },
       color: "#587a3a",
       labelXY: [860, 330],
@@ -1858,8 +1858,12 @@ window.OAK = (function () {
         name: "Little Devil 1",
         id: "frontBed4-little-devil-1",
         latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: ["images/jul-2026/front-bed-4-little-devil-1.jpeg"],
-        position: "Under the window, between Rose 1 and the centre of the bed",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
+          "images/jul-2026/front-bed-4-little-devil-1.jpeg",
+        ],
+        position: "Physocarpus Cluster 1 — first of two Little Devils",
         light: "Sun to partial shade; foliage is darkest with good light.",
         water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
         care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
@@ -1869,8 +1873,40 @@ window.OAK = (function () {
         name: "Little Devil 2",
         id: "frontBed4-little-devil-2",
         latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: ["images/jul-2026/front-bed-4-little-devil-2.jpeg"],
-        position: "Return-wall side, above the Photinia canopy",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
+          "images/jul-2026/front-bed-4-little-devil-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 1 — second of two Little Devils",
+        light: "Sun to partial shade; foliage is darkest with good light.",
+        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+      },
+      {
+        name: "Little Devil 3",
+        id: "frontBed4-little-devil-3",
+        latin: "Physocarpus opulifolius 'Little Devil'",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 3 — first of two Little Devils, added August 2026",
+        light: "Sun to partial shade; foliage is darkest with good light.",
+        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+      },
+      {
+        name: "Little Devil 4",
+        id: "frontBed4-little-devil-4",
+        latin: "Physocarpus opulifolius 'Little Devil'",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 3 — second of two Little Devils, added August 2026",
         light: "Sun to partial shade; foliage is darkest with good light.",
         water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
         care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
@@ -1878,10 +1914,13 @@ window.OAK = (function () {
       },
       {
         name: "Lady in Red 1",
-        id: "frontBed4-lady-in-red-1",
+        id: "frontBed4-lady-in-red-3",
         latin: "Physocarpus opulifolius 'Lady in Red'",
-        photos: ["images/jul-2026/front-bed-4-lady-in-red-1.jpeg"],
-        position: "Back of the bed, between the window and ivy corner",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 2 — first of two new Lady in Reds, added August 2026",
         light: "Sun to partial shade; best foliage colour in brighter light.",
         water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
         care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
@@ -1889,10 +1928,27 @@ window.OAK = (function () {
       },
       {
         name: "Lady in Red 2",
-        id: "frontBed4-lady-in-red-2",
+        id: "frontBed4-lady-in-red-4",
         latin: "Physocarpus opulifolius 'Lady in Red'",
-        photos: ["images/jul-2026/front-bed-4-lady-in-red-2.jpeg"],
-        position: "In front of the Photinia canopy, beside the central stepping route",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 2 — second of two new Lady in Reds, added August 2026",
+        light: "Sun to partial shade; best foliage colour in brighter light.",
+        water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
+        care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
+        seasonal: "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
+      },
+      {
+        name: "Lady in Red 3",
+        id: "frontBed4-lady-in-red-5",
+        latin: "Physocarpus opulifolius 'Lady in Red'",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
+        ],
+        position: "Physocarpus Cluster 3 — with two Little Devils, added August 2026",
         light: "Sun to partial shade; best foliage colour in brighter light.",
         water: "Water deeply in dry spells while establishing; afterwards it is fairly drought tolerant.",
         care: "Deciduous ninebark. In late winter, remove a few oldest stems to the base to keep it open and colourful.",
@@ -1913,12 +1969,29 @@ window.OAK = (function () {
         name: "Purple Gem",
         id: "frontBed4-purple-gem",
         latin: "Sarcococca hookeriana var. humilis 'Purple Gem'",
-        photos: ["images/jul-2026/front-bed-4-purple-gem.jpeg"],
-        position: "Ivy corner, in the deepest shade",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-purple-gem-moved.jpeg",
+          "images/jul-2026/front-bed-4-purple-gem.jpeg",
+        ],
+        position: "One of the former Lady in Red positions — moved within Front Bed 4 in August 2026",
         light: "Shade to partial shade.",
         water: "Water in dry spells while establishing; tolerates dry shade once settled.",
         care: "Evergreen winter-scented shrub. Keep ivy from engulfing it and prune only lightly after flowering if needed.",
         seasonal: "Glossy evergreen foliage and purple young stems; small fragrant winter flowers followed by dark berries.",
+      },
+      {
+        name: "Rhododendron 'Libretto'",
+        id: "frontBed4-rhododendron-libretto",
+        latin: "Rhododendron 'Libretto'",
+        photos: [
+          "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-1.jpeg",
+          "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-2.jpeg",
+        ],
+        position: "Shaded brick corner — added August 2026",
+        light: "Light dappled shade, sheltered from cold drying wind and harsh early-morning sun.",
+        water: "Keep the shallow root zone evenly moist but never waterlogged. Prefer rainwater, especially in hard-water areas.",
+        care: "Plant shallowly in acidic, humus-rich soil. Mulch with composted bark while keeping the stem clear; deadhead carefully and prune only dead or wayward growth after flowering.",
+        seasonal: "Evergreen foliage all year; large dark-purple flowers with an olive-yellow flare in late May and early June.",
       },
       {
         name: "Flaming Silver",
@@ -2265,6 +2338,17 @@ window.OAK = (function () {
         care: "Deadhead to prolong flowering. Leave top growth over winter, mulch the crown and cut back after the worst frosts in spring; take cuttings as insurance in colder winters.",
         seasonal: "Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn.",
       },
+      {
+        name: "Little Devil",
+        id: "frontBed5-little-devil",
+        latin: "Physocarpus opulifolius 'Little Devil'",
+        photos: ["images/aug-2026-front-garden/front-bed5-little-devil.jpeg"],
+        position: "Spare compact ninebark added August 2026",
+        light: "Sun to partial shade; foliage is darkest with good light.",
+        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
+        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
+        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+      },
     ],
     "Front Stone Trough": [
       {
@@ -2426,7 +2510,10 @@ window.OAK = (function () {
   const achilleaSummerBerries = takePlant("Bed 4", "bed4-achillea");
   Object.assign(achilleaSummerBerries, {
     position: "Sunny front section — moved from Back Bed 4 in August 2026",
-    photos: ["images/june-2026-updates/achillea.webp"],
+    photos: [
+      "images/aug-2026-front-garden/front-bed4-achillea-planted.jpeg",
+      "images/june-2026-updates/achillea.webp",
+    ],
   });
   PLANTS["Front Bed 4"].push(achilleaSummerBerries);
 
@@ -3180,7 +3267,21 @@ window.OAK = (function () {
         { src: "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp", caption: "Retained Viburnum tinus Spirit label" },
       ],
       frontBed4: [
+        { src: "images/aug-2026-front-garden/front-bed4-updated-1.jpeg", caption: "Front Bed 4 after the August Physocarpus clusters and Rhododendron were planted" },
+        { src: "images/aug-2026-front-garden/front-bed4-updated-2.jpeg", caption: "The refreshed corner bed from the return-wall side" },
+        { src: "images/aug-2026-front-garden/front-bed4-achillea-planted.jpeg", caption: "Achillea Summer Berries planted in Front Bed 4" },
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Physocarpus Clusters 1 and 2 along the wall" },
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg", caption: "Cluster 1 — two Little Devils" },
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg", caption: "Cluster 2 — two Lady in Reds" },
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Cluster 3 — two Little Devils and one Lady in Red" },
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg", caption: "Cluster 3 from the stepping route" },
+        { src: "images/aug-2026-front-garden/front-bed4-purple-gem-moved.jpeg", caption: "Purple Gem in one of the former Lady in Red positions" },
+        { src: "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-1.jpeg", caption: "Rhododendron 'Libretto' newly planted in the shaded corner" },
+        { src: "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-2.jpeg", caption: "Evergreen foliage and developing buds on 'Libretto'" },
         { src: "images/june-2026-updates/achillea.webp", caption: "Achillea Summer Berries before its August move from Back Bed 4" },
+      ],
+      frontBed5: [
+        { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The spare Little Devil newly planted in Front Bed 5" },
       ],
       cercispot: [
         { src: "images/aug-2026/cercis-carolina-sweetheart-pot.jpeg", caption: "Cercis canadensis 'Carolina Sweetheart' in its new pot by the steps" },
@@ -3685,12 +3786,16 @@ window.OAK = (function () {
     ],
     frontBed4: [
       { name: "The Pilgrim", x: 15, y: 20, r: 11, hue: 55 },
-      { name: "Little Devil 1", x: 33, y: 20, r: 8, hue: 345 },
-      { name: "Lady in Red 1", x: 63, y: 20, r: 8, hue: 350 },
-      { name: "Purple Gem", x: 86, y: 22, r: 7, hue: 115 },
+      { name: "Little Devil 1", x: 31, y: 24, r: 6, hue: 345 },
+      { name: "Little Devil 2", x: 39, y: 28, r: 6, hue: 345 },
+      { name: "Lady in Red 1", x: 51, y: 23, r: 6, hue: 350 },
+      { name: "Lady in Red 2", x: 59, y: 27, r: 6, hue: 350 },
+      { name: "Rhododendron 'Libretto'", x: 83, y: 23, r: 11, hue: 280 },
       { name: "Magic Carpet", x: 49, y: 37, r: 8, hue: 70 },
-      { name: "Little Devil 2", x: 72, y: 48, r: 8, hue: 345 },
-      { name: "Lady in Red 2", x: 73, y: 68, r: 8, hue: 350 },
+      { name: "Little Devil 3", x: 69, y: 43, r: 6, hue: 345 },
+      { name: "Little Devil 4", x: 77, y: 48, r: 6, hue: 345 },
+      { name: "Lady in Red 3", x: 72, y: 55, r: 6, hue: 350 },
+      { name: "Purple Gem", x: 61, y: 58, r: 7, hue: 115 },
       { name: "Photinia (existing canopy)", x: 84, y: 62, r: 16, hue: 112 },
       { name: "Festuca 'Elijah Blue' (3 plants)", x: 23, y: 77, r: 12, hue: 215 },
       { name: "Astrantia trio", x: 52, y: 80, r: 11, hue: 335 },
@@ -3721,6 +3826,7 @@ window.OAK = (function () {
       { name: "Heather 'Tib'",                         x: 30, y: 92, r: 5, hue: 325 },
       { name: "Heather 'Leprechaun'",                  x: 48, y: 92, r: 5, hue: 95 },
       { name: "Heather 'Winter Chocolate'",            x: 66, y: 92, r: 5, hue: 45 },
+      { name: "Little Devil",                          x: 84, y: 88, r: 6, hue: 345 },
     ],
     frontStone: [
       { name: "Hosta", x: 50, y: 50, r: 22, hue: 105 },
@@ -3811,6 +3917,40 @@ window.OAK = (function () {
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-1.jpeg", caption: "Glossy burgundy-red foliage in Front Bed 2" },
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-2.jpeg", caption: "City Knights newly planted against the hedge" },
     { src: "images/aug-2026/front-bed2-coprosma-city-knights-label.jpeg", caption: "Retained Coprosma 'City Knights' label" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed4-achillea"] = [
+    ...augustJournal([
+      { src: "images/aug-2026-front-garden/front-bed4-achillea-planted.jpeg", caption: "Achillea Summer Berries planted in Front Bed 4" },
+    ]),
+    { month: "june-2026", label: "June 2026 · former Back Bed 4 position", photos: [
+      { src: "images/june-2026-updates/achillea.webp", caption: "Achillea before its August move to the front garden" },
+    ]},
+  ];
+  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-1"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg", caption: "Cluster 1 — two established Little Devils grouped together" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-2"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-1"];
+  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Cluster 3 — two Little Devils with one Lady in Red" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg", caption: "The new mixed Physocarpus cluster from the stepping route" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-little-devil-4"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"];
+  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-3"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg", caption: "Cluster 2 — two newly planted Lady in Reds" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-4"] = PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-3"];
+  PLANT_PHOTOS_BY_ID["frontBed4-lady-in-red-5"] = PLANT_PHOTOS_BY_ID["frontBed4-little-devil-3"];
+  PLANT_PHOTOS_BY_ID["frontBed4-purple-gem"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-purple-gem-moved.jpeg", caption: "Purple Gem in one of the former Lady in Red positions" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-rhododendron-libretto"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-1.jpeg", caption: "Rhododendron 'Libretto' newly planted in the shaded corner" },
+    { src: "images/aug-2026-front-garden/front-bed4-rhododendron-libretto-2.jpeg", caption: "Evergreen foliage and developing buds" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed5-little-devil"] = augustJournal([
+    { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The spare Little Devil newly planted in Front Bed 5" },
   ]);
   PLANT_PHOTOS_BY_ID["bed1-abelia-kaleidoscope"] = augustJournal([
     { src: "images/aug-2026-big-changes/bed1-abelia-kaleidoscope-1.webp", caption: "The new Abelia 'Kaleidoscope' in Back Bed 1" },
