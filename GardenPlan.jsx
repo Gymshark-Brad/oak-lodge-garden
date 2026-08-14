@@ -37,6 +37,10 @@ function GardenPlan({ onOpenZone, dark }) {
         <rect width="14" height="14" fill="var(--paper)" />
         <path d="M 0 7 L 14 7 M 7 0 L 7 14" stroke="var(--ink)" strokeOpacity="0.18" strokeWidth="0.6" />
       </pattern>
+      <pattern id="hatch-deck" width="24" height="12" patternUnits="userSpaceOnUse">
+        <rect width="24" height="12" fill="var(--paper)" />
+        <path d="M 0 0 L 24 0 M 0 12 L 24 12 M 12 0 L 12 12" stroke="var(--ink)" strokeOpacity="0.15" strokeWidth="0.55" />
+      </pattern>
       <pattern id="hatch-gravel" width="5" height="5" patternUnits="userSpaceOnUse">
         <rect width="5" height="5" fill="var(--paper)" />
         <circle cx="1" cy="1" r="0.5" fill="var(--ink)" fillOpacity="0.25" />
@@ -58,7 +62,7 @@ function GardenPlan({ onOpenZone, dark }) {
     const fillPattern =
       isPot ? null :
       key === "steps" ? "url(#hatch-paving)" :
-      key === "patio" ? "url(#hatch-paving)" :
+      key === "patio" ? "url(#hatch-deck)" :
       key === "stone" ? "url(#hatch-gravel)" :
       isOutdoorRoom ? null :
       "url(#hatch-soil)";
@@ -124,6 +128,25 @@ function GardenPlan({ onOpenZone, dark }) {
     );
   };
 
+  const DimH = ({ x1, x2, y, label, above = true }) => (
+    <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+      <line x1={x1} y1={y} x2={x2} y2={y} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <line x1={x1} y1={y - 4} x2={x1} y2={y + 4} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <line x1={x2} y1={y - 4} x2={x2} y2={y + 4} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <rect x={(x1 + x2) / 2 - 18} y={y + (above ? -11 : 2)} width="36" height="10" fill="var(--paper)" fillOpacity="0.9" />
+      <text x={(x1 + x2) / 2} y={y + (above ? -3 : 10)} textAnchor="middle" fontFamily="var(--type)" fontSize="7.5" fill="var(--ink)" opacity="0.72">{label}</text>
+    </g>
+  );
+
+  const DimV = ({ x, y1, y2, label, left = false }) => (
+    <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+      <line x1={x} y1={y1} x2={x} y2={y2} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <line x1={x - 4} y1={y1} x2={x + 4} y2={y1} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <line x1={x - 4} y1={y2} x2={x + 4} y2={y2} stroke="var(--ink)" strokeOpacity="0.48" strokeWidth="0.8" />
+      <text x={x + (left ? -7 : 7)} y={(y1 + y2) / 2} textAnchor={left ? "end" : "start"} dominantBaseline="middle" fontFamily="var(--type)" fontSize="7.5" fill="var(--ink)" opacity="0.72">{label}</text>
+    </g>
+  );
+
   return (
     <div className="plan-wrap fade-in" style={{ position: "relative" }}>
       {/* Title block sits above the SVG so it never overlaps the plan */}
@@ -132,13 +155,13 @@ function GardenPlan({ onOpenZone, dark }) {
           <div className="t-stamp">Plot · Oak Lodge · Bromsgrove</div>
           <h1 className="t-display plan-title">The garden, drawn from above</h1>
           <div className="t-hand" style={{ fontSize: 22, color: "var(--pencil)", marginTop: 6 }}>
-            tap any bed to open it ·
+            measured survey · current planting, august 2026 · tap any bed to open it ·
           </div>
         </div>
         <div className="plan-compass">
           <div className="t-stamp">N ↑</div>
           <div className="t-mono" style={{ marginTop: 4 }}>scale ≈ 1:30</div>
-          <div className="t-mono" style={{ marginTop: 2 }}>≈ 15m × 10m</div>
+          <div className="t-mono" style={{ marginTop: 2 }}>15m house edge · 50 units = 1m</div>
         </div>
       </header>
 
@@ -153,53 +176,79 @@ function GardenPlan({ onOpenZone, dark }) {
       >
         {RoughDefs}
 
-        {/* House base + doors */}
-        <g filter="url(#rough)">
-          <rect x="25" y="478" width="750" height="95" fill="var(--ink)" fillOpacity={dark ? "0.3" : "0.18"} />
-          <rect x="205" y="478" width="50" height="6" fill="var(--accent)" fillOpacity="0.9" />
-          <rect x="400" y="478" width="70" height="6" fill="var(--accent)" fillOpacity="0.9" />
-        </g>
-        <g filter="url(#rough-soft)">
-          <text x="50" y="540" className="t-stamp" fontFamily="var(--type)" fontSize="11" fill="var(--ink)" opacity="0.6">
+        {/* House wash and measured back wall — the 15m survey baseline. */}
+        <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+          <rect x="25" y="478" width="750" height="96" fill="var(--ink)" fillOpacity={dark ? 0.3 : 0.16} />
+          <text x="62" y="548" fontFamily="var(--type)" fontSize="11" fill="var(--ink)" opacity="0.58" letterSpacing="7">
             T H E &nbsp; H O U S E
           </text>
-          <text x="218" y="498" fontFamily="var(--type)" fontSize="8" fill="var(--ink)" opacity="0.7">kitchen door</text>
-          <text x="412" y="498" fontFamily="var(--type)" fontSize="8" fill="var(--ink)" opacity="0.7">patio doors</text>
         </g>
-
-        {/* Boundary wall (light dashed line) */}
-        <g filter="url(#rough-soft)">
-          <path
-            d="M 25 30 L 775 30 L 775 478"
-            fill="none"
-            stroke="var(--ink)"
-            strokeOpacity="0.45"
-            strokeWidth="1.4"
-            strokeDasharray="6 4"
-          />
-          <path
-            d="M 25 30 L 25 478"
-            fill="none"
-            stroke="var(--ink)"
-            strokeOpacity="0.45"
-            strokeWidth="1.4"
-            strokeDasharray="6 4"
-          />
-          <text x="380" y="22" textAnchor="middle" fontFamily="var(--type)" fontSize="9" fill="var(--ink)" opacity="0.55">
-            — — — &nbsp; B O U N D A R Y &nbsp; W A L L &nbsp; — — —
-          </text>
-        </g>
-
-        {/* Gate hint */}
         <g filter="url(#rough)">
-          <rect x="190" y="26" width="80" height="8" fill="var(--paper)" stroke="var(--ink)" strokeOpacity="0.7" strokeWidth="1" />
-          <text x="230" y="20" textAnchor="middle" fontFamily="var(--hand)" fontSize="16" fill="var(--ink)" opacity="0.75">
-            gate
+          <line x1="25" y1="478" x2="775" y2="478" stroke="var(--ink)" strokeOpacity="0.82" strokeWidth="2.2" />
+          <line x1="226" y1="478" x2="266" y2="478" stroke="var(--accent)" strokeWidth="6" strokeOpacity="0.9" />
+          <line x1="381" y1="478" x2="451" y2="478" stroke="var(--accent)" strokeWidth="6" strokeOpacity="0.9" />
+        </g>
+        <g style={{ pointerEvents: "none" }}>
+          <text x="246" y="497" textAnchor="middle" fontFamily="var(--type)" fontSize="8" fill="var(--ink)" opacity="0.72">kitchen door</text>
+          <text x="416" y="497" textAnchor="middle" fontFamily="var(--type)" fontSize="8" fill="var(--ink)" opacity="0.72">patio doors</text>
+        </g>
+
+        {/* Survey boundary. The gate is on the west fence, as measured in the source drawing. */}
+        <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+          <path d="M 94 98 L 164 58 L 464 58 L 464 43 L 514 43 L 514 93 L 714 93 L 714 55 L 765 55 L 765 478"
+            fill="none" stroke="var(--ink)" strokeOpacity="0.52" strokeWidth="1.6" strokeDasharray="7 4" />
+          <path d="M 94 98 L 94 202 M 94 245 L 94 478"
+            fill="none" stroke="var(--ink)" strokeOpacity="0.52" strokeWidth="1.6" strokeDasharray="7 4" />
+          <text x="367" y="48" textAnchor="middle" fontFamily="var(--type)" fontSize="8.5" fill="var(--ink)" opacity="0.55" letterSpacing="3">
+            B O U N D A R Y &nbsp; W A L L
           </text>
+          <text x="78" y="156" textAnchor="middle" fontFamily="var(--hand)" fontSize="16" fill="var(--ink)" opacity="0.7" transform="rotate(-90,78,156)">west fence</text>
+        </g>
+        <g filter="url(#rough)" style={{ pointerEvents: "none" }}>
+          <line x1="94" y1="245" x2="114" y2="212" stroke="var(--ink)" strokeOpacity="0.8" strokeWidth="1.4" />
+          <text x="80" y="226" textAnchor="end" fontFamily="var(--hand)" fontSize="17" fill="var(--ink)" opacity="0.82">gate</text>
+        </g>
+
+        {/* Fixed walls from the measured survey, drawn beneath the clickable beds. */}
+        <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+          <path d="M 94 313 L 194 313 L 194 333 L 334 333" fill="none" stroke="var(--ink)" strokeOpacity="0.5" strokeWidth="2" />
+          <path d="M 194 373 L 334 373 L 334 393" fill="none" stroke="var(--ink)" strokeOpacity="0.5" strokeWidth="2" />
+          <path d="M 334 243 L 334 393 M 474 243 L 474 478" fill="none" stroke="var(--ink)" strokeOpacity="0.52" strokeWidth="2" />
+          <text x="255" y="328" textAnchor="middle" fontFamily="var(--type)" fontSize="7.5" fill="var(--pencil)">upper brick wall</text>
+          <text x="255" y="388" textAnchor="middle" fontFamily="var(--type)" fontSize="7.5" fill="var(--pencil)">lower brick wall</text>
         </g>
 
         {/* Zones */}
         {order.map(renderZone)}
+
+        {/* Step courses and decking joints add the same architectural fidelity as the front plan. */}
+        <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
+          {[273, 303, 333, 363].map((y) => (
+            <line key={`step-${y}`} x1="348" y1={y} x2="460" y2={y} stroke="var(--ink)" strokeOpacity="0.18" strokeWidth="1" />
+          ))}
+          <line x1="474" y1="333" x2="774" y2="333" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" />
+        </g>
+
+        {/* Retained survey measurements; 50 SVG units represent one metre. */}
+        <g className="survey-dimensions">
+          <DimH x1={214} x2={464} y={58} label="5m" above={false} />
+          <DimV x={222} y1={58} y2={188} label="2.6m" />
+          <DimH x1={104} x2={214} y={194} label="2.6m" above={false} />
+          <DimH x1={464} x2={514} y={100} label="1m" above={false} />
+          <DimV x={520} y1={43} y2={93} label="1m" />
+
+          <DimV x={88} y1={323} y2={478} label="3.1m" left />
+
+          <DimH x1={334} x2={474} y={237} label="≈3m" />
+          <DimV x={328} y1={243} y2={393} label="3m" left />
+
+          <DimH x1={474} x2={774} y={278} label="6m" />
+          <DimV x={780} y1={283} y2={333} label="1m" />
+          <DimH x1={474} x2={774} y={484} label="6m" above={false} />
+          <DimV x={468} y1={333} y2={478} label="≈3m" left />
+
+          <DimH x1={25} x2={775} y={591} label="15m house edge" />
+        </g>
 
         {/* Labels — handwritten, slightly tilted, with arrow ticks */}
         {order.map((key) => {
@@ -215,7 +264,7 @@ function GardenPlan({ onOpenZone, dark }) {
                 y={ly}
                 textAnchor="middle"
                 fontFamily="var(--hand)"
-                fontSize={isPot ? "14" : "20"}
+                fontSize={isPot ? "13" : ["bed3", "bed4"].includes(key) ? "16" : "20"}
                 fill={isPot ? "var(--accent)" : "var(--ink)"}
                 opacity={hover === key ? "1" : "0.85"}
               >
@@ -240,15 +289,10 @@ function GardenPlan({ onOpenZone, dark }) {
 
         {/* Margin notes — handwritten asides */}
         <g style={{ pointerEvents: "none" }}>
-          <text x="595" y="50" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7" transform="rotate(-3, 595, 50)">
+          <text x="600" y="74" fontFamily="var(--hand)" fontSize="17" fill="var(--ink)" opacity="0.7" transform="rotate(-3, 600, 74)">
             wisteria over the wall ↘
           </text>
-          <text x="392" y="600" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7" textAnchor="middle">
-            ↑ &nbsp; back wall of the house
-          </text>
-          <text x="55" y="200" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7" transform="rotate(-90, 55, 200)">
-            ← west fence
-          </text>
+          <text x="278" y="470" fontFamily="var(--type)" fontSize="7.5" fill="var(--pencil)" opacity="0.65">back wall of the house</text>
         </g>
 
         {/* Tooltip on hover */}

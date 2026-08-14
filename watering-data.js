@@ -583,6 +583,123 @@
     },
   };
 
+  // Physical front-garden irrigation layout. The paths use the same 0–100
+  // coordinate space as BED_PLANT_MAPS, so BedDetail can draw the 13mm supply
+  // pipe and curved 4mm application lines beneath the plant canopies.
+  const FRONT_IRRIGATION_MAPS = {
+    frontBed1: {
+      circleScale: 1.55,
+      pipe: null,
+      applicationsById: {
+        "frontBed1-hydrangea": "none",
+        "frontBed1-lavender": "none",
+      },
+      applications: {
+        Hydrangea: "none",
+        Lavender: "none",
+      },
+      extras: [],
+    },
+    frontBed2: {
+      circleScale: 1.35,
+      pipe: {
+        path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
+        side: "right",
+        coordinate: 104,
+        labelXY: [99, -2],
+      },
+      applicationsById: {
+        "frontBed2-coprosma-inferno": "dropper",
+        "frontBed2-coprosma-pina-colada": "dropper",
+        "frontBed2-coprosma-city-knights": "dropper",
+        "frontBed2-hebe-kiwi-horopito": "dropper",
+        "frontBed2-polemonium-golden-feathers": "dropper",
+      },
+      applications: {
+        "Coprosma 'Inferno'": "dropper",
+        "Coprosma 'Pina Colada'": "dropper",
+        "Coprosma 'City Knights'": "dropper",
+        "Hebe 'Kiwi' (Horopito)": "dropper",
+        "Polemonium 'Golden Feathers'": "dropper",
+      },
+      extras: [
+        { name: "Front-door pot 1", marker: "P1", x: 91, y: 15, r: 8, hue: 335, application: "sprinkler" },
+        { name: "Front-door pot 2 (inventory pending)", marker: "P2", x: 91, y: 47, r: 8, hue: 65, application: "sprinkler" },
+      ],
+    },
+    frontBed3: {
+      circleScale: 1.35,
+      pipe: {
+        path: "M-3 -2 C24 -4 52 0 76 -3 C87 -4 96 -1 103 -2",
+        side: "top",
+        coordinate: -2,
+        labelXY: [91, -3],
+      },
+      applicationsById: {
+        "frontBed3-climbing-rose-white-pink": "dropper",
+        "bed2-variegated-dogwood": "sprinkler",
+        "bed1-red-hot-poker": "dropper",
+        "frontBed3-leucothoe-little-flames": "dropper",
+        "frontBed3-rose-pink": "dropper",
+      },
+      applications: {
+        "Climbing Rose 'Super Fairy'": "dropper",
+        "Variegated Dogwood": "sprinkler",
+        "Red Hot Poker": "dropper",
+        "Leucothoe 'Little Flames'": "dropper",
+        "Rose (pink)": "dropper",
+      },
+      extras: [
+        { name: "Grass (inventory pending)", marker: "G", x: 74, y: 53, r: 9, hue: 105, application: "sprinkler" },
+      ],
+    },
+    frontBed4: {
+      circleScale: 1.2,
+      pipe: {
+        path: "M-3 -2 C27 -4 58 0 98 -2 Q104 -2 104 4 C102 31 106 65 104 103",
+        side: "top-right",
+        topCoordinate: -2,
+        rightCoordinate: 104,
+        labelXY: [91, -3],
+      },
+      applicationsById: {
+        "frontBed4-photinia-existing": "none",
+        "frontBed4-the-pilgrim": "dropper",
+        "frontBed4-the-generous-gardener": "dropper",
+        "frontBed4-physocarpus-cluster-1": "sprinkler",
+        "frontBed4-physocarpus-cluster-2": "sprinkler",
+        "frontBed4-physocarpus-cluster-3": "sprinkler",
+        "frontBed4-magic-carpet": "dropper",
+        "frontBed4-purple-gem": "dropper",
+        "frontBed4-rhododendron-libretto": "sprinkler",
+        "frontBed4-festuca-elijah-blue": "sprinkler",
+        "frontBed5-pieris-polar-passion": "dropper",
+        "frontBed4-dahlia-tampico": "sprinkler",
+        "frontBed4-verbena-margarets-memory": "dropper",
+        "frontBed4-delosperma-ice-cream-mix": "dropper",
+        "bed4-achillea": "dropper",
+      },
+      applications: {
+        "Photinia (existing canopy)": "none",
+        "The Pilgrim": "dropper",
+        "The Generous Gardener": "dropper",
+        "Physocarpus Cluster 1 (2 × Little Devil)": "sprinkler",
+        "Physocarpus Cluster 2 (2 × Lady in Red)": "sprinkler",
+        "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)": "sprinkler",
+        "Magic Carpet": "dropper",
+        "Purple Gem": "dropper",
+        "Rhododendron 'Libretto'": "sprinkler",
+        "Festuca 'Elijah Blue' (3 plants)": "sprinkler",
+        "Pieris 'Polar Passion'": "dropper",
+        "Dahlia 'Tampico'": "sprinkler",
+        "Verbena 'Margaret's Memory'": "dropper",
+        "Delosperma 'Ice Cream Mix'": "dropper",
+        Achillea: "dropper",
+      },
+      extras: [],
+    },
+  };
+
   window.OAK = window.OAK || {};
   window.OAK.WATER_BANDS = WATER_BANDS;
   window.OAK.WATER_BANDS_BY_ID = WATER_BANDS_BY_ID;
@@ -590,4 +707,5 @@
   window.OAK.WATER_SIGNS = WATER_SIGNS;
   window.OAK.POT_WATER_SIGNS = POT_WATER_SIGNS;
   window.OAK.WATER_GUIDE_CONFIG = WATER_GUIDE_CONFIG;
+  window.OAK.FRONT_IRRIGATION_MAPS = FRONT_IRRIGATION_MAPS;
 })();

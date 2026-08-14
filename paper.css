@@ -16,6 +16,9 @@
   --green: #4f6d35;
   --accent: #9c5a2c;
   --tape: #e7d9b8;
+  --irrigation-main: #2f7fc4;
+  --irrigation-dropper: #d26d2d;
+  --irrigation-sprinkler: #8254b6;
 
   --ink-soft: color-mix(in oklab, var(--ink) 70%, var(--paper) 30%);
   --ink-faint: color-mix(in oklab, var(--ink) 68%, var(--paper) 32%);
@@ -41,6 +44,8 @@
   --paper: #1c2018; --paper-deep: #141911; --ink: #e7e0cb;
   --pencil: #a59a7e; --stamp: #cf7a4a; --green: #a3c06a;
   --accent: #d6a168; --tape: #3a4030;
+  --irrigation-main: #70b8ef; --irrigation-dropper: #e69a61;
+  --irrigation-sprinkler: #b991e0;
 }
 
 * { box-sizing: border-box; }
