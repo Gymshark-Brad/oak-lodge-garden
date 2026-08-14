@@ -707,6 +707,8 @@
     },
     frontBed5: {
       circleScale: 0.9,
+      applicationBadgeRadius: 1.95,
+      applicationBadgeFontSize: 1.65,
       pipe: {
         path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
         side: "right",
@@ -715,14 +717,14 @@
       },
       applicationsByMapNo: {
         1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper",
-        6: "dropper", 7: "dropper", 8: "dropper", 9: "dropper", 10: "dropper",
-        11: "sprinkler", 12: "sprinkler", 13: "sprinkler", 14: "sprinkler", 15: "sprinkler",
-        16: "dropper", 17: "dropper", 18: "sprinkler", 19: "sprinkler", 20: "none",
-        21: "sprinkler", 22: "sprinkler", 23: "sprinkler", 24: "sprinkler",
+        6: "dropper", 7: "dropper", 8: "dropper", 9: "dropper", 10: "sprinkler",
+        11: "sprinkler", 12: "sprinkler", 13: "sprinkler", 14: "sprinkler", 15: "dropper",
+        16: "dropper", 17: "sprinkler", 18: "sprinkler", 19: "none", 20: "sprinkler",
+        21: "sprinkler", 22: "sprinkler", 23: "sprinkler",
       },
       sharedApplications: [
-        { application: "sprinkler", mapNos: [11, 14], x: 92, y: 43 },
-        { application: "sprinkler", mapNos: [12, 15], x: 66, y: 47 },
+        { application: "sprinkler", mapNos: [10, 13], x: 82, y: 46 },
+        { application: "sprinkler", mapNos: [11, 14], x: 61, y: 49 },
       ],
       extras: [],
     },

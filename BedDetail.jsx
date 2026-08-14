@@ -158,7 +158,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
 
         <div className="bed-plants-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>
-            {explicitMapNumbering && map.length !== plants.length
+            {explicitMapNumbering
               ? `Plants · ${plants.length} records · ${map.length} mapped positions`
               : `Plants · ${plants.length} recorded`}
           </div>
@@ -445,6 +445,8 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
   const sharedApplications = irrigation?.sharedApplications || [];
   const sharedMapNos = new Set(sharedApplications.flatMap((shared) => shared.mapNos || []));
   const radiusFor = (marker) => Math.min(marker.r * circleScale, 22);
+  const applicationBadgeRadius = irrigation?.applicationBadgeRadius || 3.1;
+  const applicationBadgeFontSize = irrigation?.applicationBadgeFontSize || 2.6;
   const applicationFor = (marker) => irrigation?.applicationsByMapNo?.[marker.mapNo] || irrigation?.applicationsById?.[marker.plantId] || irrigation?.applications?.[marker.name] || null;
   const applicationStroke = (application) => application === "dropper" ? "var(--irrigation-dropper)" : "var(--irrigation-sprinkler)";
 
@@ -536,7 +538,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
             {sharedApplications.map((shared, index) => (
               <path
                 key={`shared-lead-${shared.mapNos.join("-")}`}
-                d={irrigationLeadPath(irrigation.pipe, shared, 3.1, map.length + (irrigation.extras || []).length + index)}
+                d={irrigationLeadPath(irrigation.pipe, shared, applicationBadgeRadius, map.length + (irrigation.extras || []).length + index)}
                 fill="none"
                 stroke={applicationStroke(shared.application)}
                 strokeWidth="0.58"
@@ -575,8 +577,8 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
               <circle cx={marker.x} cy={marker.y} r={radius} fill={`oklch(0.68 0.12 ${marker.hue})`} fillOpacity="0.58" stroke="var(--ink)" strokeOpacity="0.5" strokeWidth="0.55" strokeDasharray="2 1.4" />
             </g>
             <text x={marker.x} y={marker.y + 1.1} textAnchor="middle" fontFamily="var(--type)" fontSize="3.1" fill="var(--ink)">{marker.marker}</text>
-            <circle cx={marker.x + radius * 0.68} cy={marker.y + radius * 0.68} r="3.1" fill="var(--paper)" stroke={applicationStroke(marker.application)} strokeWidth="0.7" />
-            <text x={marker.x + radius * 0.68} y={marker.y + radius * 0.68 + 1.05} textAnchor="middle" fontFamily="var(--type)" fontSize="2.6" fill="var(--ink)">{marker.application === "dropper" ? "D" : "S"}</text>
+            <circle cx={marker.x + radius * 0.68} cy={marker.y + radius * 0.68} r={applicationBadgeRadius} fill="var(--paper)" stroke={applicationStroke(marker.application)} strokeWidth="0.7" />
+            <text x={marker.x + radius * 0.68} y={marker.y + radius * 0.68 + applicationBadgeFontSize * 0.4} textAnchor="middle" fontFamily="var(--type)" fontSize={applicationBadgeFontSize} fill="var(--ink)">{marker.application === "dropper" ? "D" : "S"}</text>
           </g>
         );
       })}
@@ -638,17 +640,17 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
                 <circle
                   cx={m.x + radius * 0.68}
                   cy={m.y + radius * 0.68}
-                  r="3.1"
+                  r={applicationBadgeRadius}
                   fill="var(--paper)"
                   stroke={application === "none" ? "var(--pencil)" : applicationStroke(application)}
                   strokeWidth="0.7"
                 />
                 <text
                   x={m.x + radius * 0.68}
-                  y={m.y + radius * 0.68 + 1.05}
+                  y={m.y + radius * 0.68 + applicationBadgeFontSize * 0.4}
                   textAnchor="middle"
                   fontFamily="var(--type)"
-                  fontSize="2.6"
+                  fontSize={applicationBadgeFontSize}
                   fill="var(--ink)"
                 >{application === "dropper" ? "D" : application === "sprinkler" ? "S" : "–"}</text>
               </g>
@@ -674,22 +676,22 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
           <circle
             cx={shared.x}
             cy={shared.y}
-            r="3.1"
+            r={applicationBadgeRadius}
             fill="var(--paper)"
             stroke={applicationStroke(shared.application)}
             strokeWidth="0.7"
           />
           <text
             x={shared.x}
-            y={shared.y + 1.05}
+            y={shared.y + applicationBadgeFontSize * 0.4}
             textAnchor="middle"
             fontFamily="var(--type)"
-            fontSize="2.6"
+            fontSize={applicationBadgeFontSize}
             fill="var(--ink)"
           >{shared.application === "dropper" ? "D" : "S"}</text>
           <text
             x={shared.x}
-            y={shared.y + 5.8}
+            y={shared.y + applicationBadgeRadius + 2.2}
             textAnchor="middle"
             fontFamily="var(--type)"
             fontSize="2.2"

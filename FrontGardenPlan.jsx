@@ -284,9 +284,6 @@ function FrontGardenPlan({ onOpenZone, dark }) {
           <text x="90" y="420" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7" transform="rotate(-3,90,420)">
             box hedge screens the patio ↗
           </text>
-          <text x="770" y="700" textAnchor="middle" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7">
-            apple &amp; damson at the bottom of the drive ↑
-          </text>
         </g>
 
         {/* Zone labels */}
