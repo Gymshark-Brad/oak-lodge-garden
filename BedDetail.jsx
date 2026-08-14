@@ -386,33 +386,29 @@ function IrrigationLegend() {
 
 function irrigationLeadPath(pipe, marker, radius, sequence) {
   const edge = radius + 0.8;
-  const wiggle = sequence % 2 === 0 ? 3.4 : -3.4;
+  const bend = sequence % 2 === 0 ? 2.4 : -2.4;
 
-  if (pipe.side === "right") {
-    const startX = pipe.coordinate;
+  const fromRight = (startX) => {
     const endX = marker.x + edge;
     const span = startX - endX;
-    return `M${startX} ${marker.y} C${startX - span * 0.28} ${marker.y + wiggle} ${endX + span * 0.24} ${marker.y - wiggle} ${endX} ${marker.y}`;
+    return `M${startX} ${marker.y} C${startX - span * 0.34} ${marker.y + bend} ${endX + span * 0.34} ${marker.y + bend} ${endX} ${marker.y}`;
+  };
+
+  const fromTop = (startY) => {
+    const endY = marker.y - edge;
+    const span = endY - startY;
+    return `M${marker.x} ${startY} C${marker.x + bend} ${startY + span * 0.34} ${marker.x + bend} ${endY - span * 0.34} ${marker.x} ${endY}`;
+  };
+
+  if (pipe.side === "right") {
+    return fromRight(pipe.coordinate);
   }
 
   if (pipe.side === "top") {
-    const startY = pipe.coordinate;
-    const endY = marker.y - edge;
-    const span = endY - startY;
-    return `M${marker.x} ${startY} C${marker.x + wiggle} ${startY + span * 0.3} ${marker.x - wiggle} ${endY - span * 0.24} ${marker.x} ${endY}`;
+    return fromTop(pipe.coordinate);
   }
 
-  const topDistance = Math.abs(marker.y - pipe.topCoordinate);
-  const rightDistance = Math.abs(pipe.rightCoordinate - marker.x);
-  if (topDistance <= rightDistance) {
-    const endY = marker.y - edge;
-    const span = endY - pipe.topCoordinate;
-    return `M${marker.x} ${pipe.topCoordinate} C${marker.x + wiggle} ${pipe.topCoordinate + span * 0.3} ${marker.x - wiggle} ${endY - span * 0.24} ${marker.x} ${endY}`;
-  }
-
-  const endX = marker.x + edge;
-  const span = pipe.rightCoordinate - endX;
-  return `M${pipe.rightCoordinate} ${marker.y} C${pipe.rightCoordinate - span * 0.28} ${marker.y + wiggle} ${endX + span * 0.24} ${marker.y - wiggle} ${endX} ${marker.y}`;
+  return marker.x >= 56 ? fromRight(pipe.rightCoordinate) : fromTop(pipe.topCoordinate);
 }
 
 // ── Plant map (hand-drawn canopy circles + optional irrigation) ──────
@@ -437,6 +433,15 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
           <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="2" seed="2" />
           <feDisplacementMap in="SourceGraphic" in2="SourceGraphic" scale="1" />
         </filter>
+        <mask id="pm-clear-canopies" maskUnits="userSpaceOnUse" x="-6" y="-6" width="112" height="112">
+          <rect x="-6" y="-6" width="112" height="112" fill="white" />
+          {map.map((marker, index) => (
+            <circle key={`mask-plant-${index}`} cx={marker.x} cy={marker.y} r={radiusFor(marker) + 0.8} fill="black" />
+          ))}
+          {(irrigation?.extras || []).map((marker, index) => (
+            <circle key={`mask-extra-${index}`} cx={marker.x} cy={marker.y} r={radiusFor(marker) + 0.8} fill="black" />
+          ))}
+        </mask>
       </defs>
 
       <g filter="url(#pm-rough)">
@@ -473,36 +478,36 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
             fontSize="3"
             fill="var(--irrigation-main)"
           >13mm</text>
-          {map.map((marker, index) => {
-            const application = applicationFor(marker);
-            if (!application || application === "none") return null;
-            return (
+          <g mask="url(#pm-clear-canopies)">
+            {map.map((marker, index) => {
+              const application = applicationFor(marker);
+              if (!application || application === "none") return null;
+              return (
+                <path
+                  key={`lead-${marker.name}`}
+                  d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), index)}
+                  fill="none"
+                  stroke={applicationStroke(application)}
+                  strokeWidth="0.58"
+                  strokeDasharray={application === "sprinkler" ? "1.6 1.15" : undefined}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              );
+            })}
+            {(irrigation.extras || []).map((marker, index) => (
               <path
-                key={`lead-${marker.name}`}
-                d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), index)}
+                key={`extra-lead-${marker.name}`}
+                d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), map.length + index)}
                 fill="none"
-                stroke={applicationStroke(application)}
-                strokeWidth="0.72"
-                strokeDasharray={application === "sprinkler" ? "2.2 1.3" : undefined}
+                stroke={applicationStroke(marker.application)}
+                strokeWidth="0.58"
+                strokeDasharray={marker.application === "sprinkler" ? "1.6 1.15" : undefined}
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                filter="url(#pm-rough-soft)"
               />
-            );
-          })}
-          {(irrigation.extras || []).map((marker, index) => (
-            <path
-              key={`extra-lead-${marker.name}`}
-              d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), map.length + index)}
-              fill="none"
-              stroke={applicationStroke(marker.application)}
-              strokeWidth="0.72"
-              strokeDasharray={marker.application === "sprinkler" ? "2.2 1.3" : undefined}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              filter="url(#pm-rough-soft)"
-            />
-          ))}
+            ))}
+          </g>
         </g>
       )}
 
@@ -548,9 +553,9 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenPlant }) {
               className="plant-pin-glow"
               cx={m.x}
               cy={m.y}
-              r={radius + 3}
+              r={radius + 1.8}
               fill={`oklch(0.7 0.15 ${m.hue})`}
-              fillOpacity="0.25"
+              fillOpacity="0.18"
             />
             <g filter="url(#pm-rough)">
               <circle

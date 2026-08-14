@@ -588,7 +588,7 @@
   // pipe and curved 4mm application lines beneath the plant canopies.
   const FRONT_IRRIGATION_MAPS = {
     frontBed1: {
-      circleScale: 1.55,
+      circleScale: 1.2,
       pipe: null,
       applicationsById: {
         "frontBed1-hydrangea": "none",
@@ -601,7 +601,7 @@
       extras: [],
     },
     frontBed2: {
-      circleScale: 1.35,
+      circleScale: 1.05,
       pipe: {
         path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
         side: "right",
@@ -628,7 +628,7 @@
       ],
     },
     frontBed3: {
-      circleScale: 1.35,
+      circleScale: 1.05,
       pipe: {
         path: "M-3 -2 C24 -4 52 0 76 -3 C87 -4 96 -1 103 -2",
         side: "top",
@@ -654,7 +654,7 @@
       ],
     },
     frontBed4: {
-      circleScale: 1.2,
+      circleScale: 0.8,
       pipe: {
         path: "M-3 -2 C27 -4 58 0 98 -2 Q104 -2 104 4 C102 31 106 65 104 103",
         side: "top-right",
