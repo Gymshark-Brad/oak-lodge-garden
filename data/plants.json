@@ -3059,30 +3059,6 @@
   ],
   "Front Bed 5": [
     {
-      "name": "Cherry Laurel",
-      "id": "frontBed5-cherry-laurel",
-      "latin": "Prunus laurocerasus",
-      "photos": [
-        "images/jul-2026/laurel.webp"
-      ],
-      "position": "Along the boundary wall",
-      "light": "Sun to shade.",
-      "water": "Low once established.",
-      "care": "Prune with secateurs (not shears) late spring/summer. Vigorous.",
-      "seasonal": "Evergreen; white flower spikes spring.",
-      "description": "Cherry Laurel is an ornamental tree grown at Oak Lodge for its distinctive garden character. Evergreen.",
-      "characteristics": {
-        "sunlight": "Sun to shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Evergreen",
-        "water": "Low once established",
-        "habit": "Ornamental tree",
-        "size": "Cultivar or rootstock dependent",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers, fruit or shelter for wildlife"
-      }
-    },
-    {
       "name": "Mexican Orange Blossom",
       "id": "frontBed5-mexican-orange-blossom",
       "latin": "Choisya ternata 'Sundance'",
@@ -3665,6 +3641,56 @@
         "size": "To be confirmed",
         "foliage": "Seasonal foliage",
         "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "Front Pots": [
+    {
+      "name": "Mixed Pot",
+      "id": "frontPots-mixed-pot",
+      "latin": "Mixed seasonal planting — contents to confirm",
+      "photos": [
+        "images/aug-2026-front-garden/front-pots.jpeg"
+      ],
+      "position": "P1 · left-hand pot against the boundary wall",
+      "light": "Bright outdoor position; confirm the needs of each constituent plant when identified.",
+      "water": "Check the compost frequently in warm or windy weather; supplied by an adjustable sprinkler.",
+      "care": "Deadhead finished flowers, keep the drainage holes clear and record the individual plants and cultivars as labels or clearer photographs become available.",
+      "seasonal": "A mixed seasonal container providing varied flower colour; exact contents remain unresolved.",
+      "description": "Mixed Pot is a photographed seasonal container whose constituent plants and cultivars remain to be confirmed.",
+      "characteristics": {
+        "sunlight": "Bright outdoor position; individual needs to be confirmed",
+        "hardiness": "Mixed planting; winter hardiness to be confirmed",
+        "flowering": "Mixed seasonal flower colour",
+        "water": "Check frequently in warm or windy weather",
+        "habit": "Mixed seasonal container",
+        "size": "Container dependent",
+        "foliage": "Mixed seasonal foliage",
+        "wildlife": "Flowers may be visited by pollinators"
+      }
+    },
+    {
+      "name": "Fuchsia Pot",
+      "id": "frontPots-fuchsia-pot",
+      "latin": "Fuchsia cultivars — identities to confirm",
+      "photos": [
+        "images/aug-2026-front-garden/front-pots.jpeg"
+      ],
+      "position": "P2 · right-hand pot against the boundary wall",
+      "light": "Bright light or partial shade, protected from the harshest reflected afternoon heat.",
+      "water": "Keep the compost evenly moist but freely drained; supplied by an adjustable sprinkler.",
+      "care": "Deadhead for continued flowering, check the sprinkler reaches the compost rather than only the foliage, and confirm whether the plants are hardy before winter.",
+      "seasonal": "Pendant Fuchsia flowers through summer and autumn; exact cultivars and winter hardiness remain unresolved.",
+      "description": "Fuchsia Pot is a flowering container holding Fuchsia cultivars whose identities and winter hardiness remain to be confirmed.",
+      "characteristics": {
+        "sunlight": "Bright light or partial shade",
+        "hardiness": "Cultivars and winter hardiness to be confirmed",
+        "flowering": "Pendant flowers through summer and autumn",
+        "water": "Keep evenly moist but freely drained",
+        "habit": "Flowering container",
+        "size": "Container dependent",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],

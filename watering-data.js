@@ -177,7 +177,6 @@
       "Achillea": 2,
     },
     "Front Bed 5": {
-      "Cherry Laurel": 2,
       "Mexican Orange Blossom": 2,
       "Shrub Rose (cultivar to confirm)": 3,
       "Bay Tree": 2,
@@ -201,6 +200,10 @@
       "Hebe 'Rhubarb and Custard'": 2,
       "Salvia 'Salgoon Lake Blueberry'": 2,
       "Little Devil": 3,
+    },
+    "Front Pots": {
+      "Mixed Pot": 4,
+      "Fuchsia Pot": 4,
     },
     "Front Stone Trough": {
       "Hosta": 4,
@@ -541,6 +544,10 @@
       under: "Pot feeling light, compost pulling away from the edge, or water running straight through without darkening the compost all mean it's dried out. The Calibrachoa and Bacopa will show it first — flowers dropping and leaves going limp — since they're the thirstiest plants in this pot.",
       over: "A sodden saucer or compost still dark and wet a day later means it's too much. Watch the Gazanias specifically — they're the drought-tolerant ones sharing this pot with thirstier neighbours, and flowers staying closed with dull, soft leaves is their sign of sitting too wet.",
     },
+    "Front Pots": {
+      under: "Check both pots by touch even when the sprinklers have run. A light container, compost pulling from the rim, limp Fuchsia shoots or fading mixed flowers mean water has missed the root ball or the pots are drying too quickly.",
+      over: "Compost staying saturated, yellow lower leaves or soft stems mean the sprinklers are running too long. Confirm water drains freely and adjust each spray so it reaches compost rather than repeatedly soaking foliage.",
+    },
     "Wall Pot 1": {
       under: "A small pot on an exposed stair wall — check by feel daily in hot weather. Flowers dropping, trailing stems going limp, and compost pulling away from the pot's edge all mean it's dried out.",
       over: "A sodden saucer or compost still waterlogged well after watering means it's too much — small pots have nowhere for excess water to go. Yellowing leaves or a soft, mushy stem base is the sign.",
@@ -603,10 +610,10 @@
     frontBed2: {
       circleScale: 1.05,
       pipe: {
-        path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
-        side: "right",
-        coordinate: 104,
-        labelXY: [99, -2],
+        path: "M-3 -2 C24 -4 52 0 76 -3 C87 -4 96 -1 103 -2",
+        side: "top",
+        coordinate: -2,
+        labelXY: [91, -3],
       },
       applicationsById: {
         "frontBed2-coprosma-inferno": "dropper",
@@ -623,8 +630,8 @@
         "Polemonium 'Golden Feathers'": "dropper",
       },
       extras: [
-        { name: "Front-door pot 1", marker: "P1", x: 91, y: 15, r: 8, hue: 335, application: "sprinkler" },
-        { name: "Front-door pot 2 (inventory pending)", marker: "P2", x: 91, y: 47, r: 8, hue: 65, application: "sprinkler" },
+        { name: "Front-door pot 1 (inventory pending)", marker: "P1", x: 90, y: 16, r: 7, hue: 335, application: "sprinkler" },
+        { name: "Front Door Pot", marker: "P2", x: 90, y: 38, r: 8, hue: 65, application: "sprinkler", zoneKey: "frontpot" },
       ],
     },
     frontBed3: {
@@ -695,6 +702,48 @@
         "Verbena 'Margaret's Memory'": "dropper",
         "Delosperma 'Ice Cream Mix'": "dropper",
         Achillea: "dropper",
+      },
+      extras: [],
+    },
+    frontBed5: {
+      circleScale: 0.9,
+      pipe: {
+        path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
+        side: "right",
+        coordinate: 104,
+        labelXY: [99, -2],
+      },
+      applicationsByMapNo: {
+        1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper",
+        6: "dropper", 7: "dropper", 8: "dropper", 9: "dropper", 10: "dropper",
+        11: "sprinkler", 12: "sprinkler", 13: "sprinkler", 14: "sprinkler", 15: "sprinkler",
+        16: "dropper", 17: "dropper", 18: "sprinkler", 19: "sprinkler", 20: "none",
+        21: "sprinkler", 22: "sprinkler", 23: "sprinkler", 24: "sprinkler",
+      },
+      sharedApplications: [
+        { application: "sprinkler", mapNos: [11, 14], x: 92, y: 43 },
+        { application: "sprinkler", mapNos: [12, 15], x: 66, y: 47 },
+      ],
+      extras: [],
+    },
+    frontPots: {
+      circleScale: 1,
+      pipe: {
+        path: "M104 -3 C102 22 105 45 103 64 C102 79 105 91 104 103",
+        side: "right",
+        coordinate: 104,
+        labelXY: [99, -2],
+      },
+      applicationsByMapNo: {
+        P1: "sprinkler",
+        P2: "sprinkler",
+      },
+      leadPathsByMapNo: {
+        P1: "M104 82 C88 86 69 88 55 82 C48 78 45 70 43 63",
+      },
+      applicationsById: {
+        "frontPots-mixed-pot": "sprinkler",
+        "frontPots-fuchsia-pot": "sprinkler",
       },
       extras: [],
     },

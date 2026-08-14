@@ -120,7 +120,7 @@ function App() {
   // of these must return to the front plan, not the back-garden plan.
   const isFrontZone = (k) =>
     ["frontBed1", "frontBed2", "frontBed3", "frontBed4", "frontBed5", "frontpot",
-     "frontStone", "frontBoxHedge", "frontHedge", "frontApple", "frontGateTree"].includes(k);
+     "frontStone", "frontBoxHedge", "frontHedge", "frontPots", "frontApple", "frontGateTree"].includes(k);
   const goPlanFromBed = () => {
     setView((prev) => ({ name: isFrontZone(prev.zoneKey) ? "frontplan" : "plan" }));
     scrollToTop();
@@ -238,6 +238,7 @@ function App() {
               zoneKey={view.zoneKey}
               dark={dark}
               onBack={goPlanFromBed}
+              onOpenZone={openZone}
               onOpenPlant={openPlant}
               onOpenLightbox={(ph) => setLightbox(ph)}
             />

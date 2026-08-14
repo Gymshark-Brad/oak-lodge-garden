@@ -19,7 +19,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
   // z-order: big beds first, small features on top
   const order = [
     "frontBed3", "frontBed4", "frontBed5", "frontBed1", "frontBed2",
-    "frontStone", "frontHedge", "frontBoxHedge", "frontApple", "frontGateTree", "frontpot",
+    "frontStone", "frontHedge", "frontBoxHedge", "frontPots", "frontApple", "frontGateTree", "frontpot",
   ];
   const verticalLabels = ["frontBoxHedge", "frontHedge"];
 
@@ -60,6 +60,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
     const c = z.color;
     const isHedge = ["frontBoxHedge", "frontHedge"].includes(key);
     const isStone = key === "frontStone";
+    const isPaved = z.surface === "paving";
     const isPot = !!z.isPot;
 
     let shapeEl = null;
@@ -91,7 +92,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
         {!isHedge && !isPot && (
           <g filter="url(#rough-soft)" style={{ pointerEvents: "none" }}>
             {React.cloneElement(shapeEl, {
-              fill: isStone ? "url(#hatch-gravel)" : "url(#hatch-soil)",
+              fill: isStone ? "url(#hatch-gravel)" : isPaved ? "url(#hatch-slab)" : "url(#hatch-soil)",
               fillOpacity: 0.6,
             })}
           </g>
@@ -136,7 +137,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
       </header>
 
       <svg
-        viewBox="0 0 1000 640"
+        viewBox="0 0 1000 730"
         preserveAspectRatio="xMidYMid meet"
         style={{ width: "100%", maxHeight: "calc(100vh - 200px)", display: "block" }}
       >
@@ -247,7 +248,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
 
         {/* Boundary wall — dashed, down the right */}
         <g filter="url(#rough-soft)">
-          <path d="M 962 42 L 962 590" fill="none" stroke="var(--ink)" strokeOpacity="0.45" strokeWidth="1.6" strokeDasharray="7 4" />
+          <path d="M 962 42 L 962 700" fill="none" stroke="var(--ink)" strokeOpacity="0.45" strokeWidth="1.6" strokeDasharray="7 4" />
           <text x="978" y="300" fontFamily="var(--type)" fontSize="9" fill="var(--ink)" opacity="0.5" transform="rotate(90,978,300)">
             — — B R I C K &nbsp; B O U N D A R Y &nbsp; W A L L — —
           </text>
@@ -266,8 +267,16 @@ function FrontGardenPlan({ onOpenZone, dark }) {
 
         {/* Fruit-tree canopy hints */}
         <g style={{ pointerEvents: "none" }}>
-          <circle cx="925" cy="505" r="18" fill="var(--green)" fillOpacity="0.36" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
-          <circle cx="942" cy="545" r="17" fill="var(--green)" fillOpacity="0.32" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
+          <circle cx="925" cy="607" r="18" fill="var(--green)" fillOpacity="0.36" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
+          <circle cx="942" cy="647" r="17" fill="var(--green)" fillOpacity="0.32" stroke="var(--ink)" strokeOpacity="0.35" strokeWidth="1" filter="url(#rough)" />
+        </g>
+
+        {/* Front Pots hints — P1 mixed pot left, P2 Fuchsia pot right */}
+        <g style={{ pointerEvents: "none" }}>
+          <circle cx="925" cy="525" r="10" fill="var(--accent)" fillOpacity="0.42" stroke="var(--ink)" strokeOpacity="0.4" strokeWidth="1" filter="url(#rough)" />
+          <circle cx="945" cy="525" r="11" fill="var(--stamp)" fillOpacity="0.42" stroke="var(--ink)" strokeOpacity="0.4" strokeWidth="1" filter="url(#rough)" />
+          <text x="925" y="528" textAnchor="middle" fontFamily="var(--type)" fontSize="7" fill="var(--ink)">P1</text>
+          <text x="945" y="528" textAnchor="middle" fontFamily="var(--type)" fontSize="7" fill="var(--ink)">P2</text>
         </g>
 
         {/* Margin notes */}
@@ -275,7 +284,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
           <text x="90" y="420" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7" transform="rotate(-3,90,420)">
             box hedge screens the patio ↗
           </text>
-          <text x="770" y="610" textAnchor="middle" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7">
+          <text x="770" y="700" textAnchor="middle" fontFamily="var(--hand)" fontSize="18" fill="var(--ink)" opacity="0.7">
             apple &amp; damson at the bottom of the drive ↑
           </text>
         </g>
