@@ -1,7 +1,7 @@
 // Oak Lodge Garden — app.jsx
 // Main shell: routing between plan / bed / plant, palette, lightbox.
 
-const { useState: useState_App, useEffect: useEffect_App, useMemo: useMemo_App, useRef: useRef_App } = React;
+const { useState: useState_App, useEffect: useEffect_App, useLayoutEffect: useLayoutEffect_App, useMemo: useMemo_App, useRef: useRef_App } = React;
 
 function App() {
   const [palette, setPalette] = useState_App(window.loadPalette());
@@ -12,6 +12,8 @@ function App() {
   const [journalPlantReturn, setJournalPlantReturn] = useState_App(false);
   const [lightbox, setLightbox] = useState_App(null);
   const lightboxCloseRef = useRef_App(null);
+  const bedScrollPositionRef = useRef_App(null);
+  const restoreBedScrollRef = useRef_App(false);
 
   const Z = window.OAK.ZONES;
   const PLANTS = window.OAK.PLANTS;
@@ -53,11 +55,24 @@ function App() {
     if (fullPageProfile) scrollToTop();
   }, [fullPageProfile]);
 
+  // Full-page plant profiles replace the bed folio and start at the top. Put
+  // the reader back at the same place in the folio when they close a profile.
+  useLayoutEffect_App(() => {
+    if (view.name !== "bed" || !restoreBedScrollRef.current || !bedScrollPositionRef.current) return;
+    const savedPosition = bedScrollPositionRef.current;
+    restoreBedScrollRef.current = false;
+    window.scrollTo({ top: savedPosition.top, left: savedPosition.left, behavior: "auto" });
+  }, [view]);
+
   const openZone = (zoneKey) => {
     setView({ name: "bed", zoneKey });
     scrollToTop();
   };
   const openPlant = ({ zoneKey, plantIndex, plantId, plantName, fromCalendar, fromWatering, fromHousePlan, fromJournal }) => {
+    const openingFromBed = view.name === "bed" && !fromCalendar && !fromWatering && !fromHousePlan && !fromJournal;
+    if (openingFromBed) {
+      bedScrollPositionRef.current = { top: window.scrollY, left: window.scrollX, zoneKey: zoneKey || view.zoneKey };
+    }
     if (fromCalendar) setCalendarPlantReturn(true);
     if (fromWatering) setWateringPlantReturn(true);
     if (fromHousePlan) setHousePlantReturn(true);
@@ -88,9 +103,10 @@ function App() {
       setJournalPlantReturn(false);
       setView({ name: "journal" });
     } else {
-      setView((prev) => ({ name: "bed", zoneKey: prev.zoneKey }));
+      restoreBedScrollRef.current = !!bedScrollPositionRef.current && bedScrollPositionRef.current.zoneKey === view.zoneKey;
+      setView({ name: "bed", zoneKey: view.zoneKey });
     }
-    if (returningFromFullPage) scrollToTop();
+    if (returningFromFullPage && (calendarPlantReturn || wateringPlantReturn || housePlantReturn || journalPlantReturn)) scrollToTop();
   };
   const goCalendar = () => {
     setCalendarPlantReturn(false);
