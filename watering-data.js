@@ -58,6 +58,7 @@
       "Lythrum 'Robin'": 4,
       "Begonia 'Carmen'": 4,
       "Nemesia 'Aroma Heart of Gold'": 4,
+      "Cabbage Tree": 2,
     },
     "Stone Bed": {
       "Houseleeks": 1,
@@ -81,7 +82,7 @@
       "Purple Fountain Grass 'Rubrum'": 3,
       "Ajuga 'Midnight Mystery'": 3,
       "New Zealand Flax (dark)": 2,
-      "Cabbage Tree": 2,
+      "Agapanthus": 2,
     },
     "Patio": {
       "Honeysuckle": 3,
@@ -619,6 +620,40 @@
       mapHeight: 70,
       pipe: { path: "M-2 2 C25 0 53 2 76 1", side: "top", coordinate: 1, labelXY: [66, 0] },
       applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "sprinkler", 5: "none" },
+      extras: [],
+    },
+    stone: {
+      mapHeight: 35,
+      circleScale: 1,
+      applicationBadgeRadius: 1.8,
+      applicationBadgeFontSize: 1.5,
+      pipe: { path: "M2 33 C28 34 58 32 97 33 M2 33 L2 1 M84 33 L84 2", side: "bottom", coordinate: 33, labelXY: [50, 37] },
+      applicationsByMapNo: {
+        1: "dropper", 2: "sprinkler", 3: "sprinkler", 4: "sprinkler", 5: "dropper", 6: "dropper",
+        7: "sprinkler", 8: "sprinkler", 9: "dropper", 10: "dropper", 11: "dropper", 12: "dropper",
+        13: "sprinkler", 14: "sprinkler", 15: "sprinkler", 16: "sprinkler", 17: "dropper", 18: "dropper",
+        19: "dropper", 20: "dropper", 21: "dropper", 22: "sprinkler",
+      },
+      sharedApplications: [
+        { id: "stone-shared-2-4", application: "sprinkler", mapNos: [2, 3, 4], x: 10, y: 31, label: "2 + 3 + 4", labelPosition: "above" },
+        { id: "stone-shared-7-8", application: "sprinkler", mapNos: [7, 8], x: 32, y: 29, label: "7 + 8", labelPosition: "above" },
+        { id: "stone-shared-13-16", application: "sprinkler", mapNos: [13, 14, 15, 16], x: 59, y: 31, label: "13–16", labelPosition: "above" },
+      ],
+      extras: [],
+    },
+    bed5: {
+      pipe: { path: "M79 3 C77 29 80 58 79 98", side: "right", coordinate: 79, labelXY: [73, 55] },
+      applicationsByMapNo: { W: "none", R: "sprinkler" },
+      extras: [
+        { name: "Big Pot", marker: "BIG", x: 74, y: 27, r: 16, hue: 210, application: "sprinkler" },
+        { name: "Little Pot", marker: "L", x: 70, y: 45, r: 8, hue: 210, application: "sprinkler" },
+        { name: "Medium Pot", marker: "M", x: 74, y: 64, r: 10, hue: 210, application: "sprinkler" },
+      ],
+    },
+    patio: {
+      mapHeight: 65,
+      pipe: null,
+      applicationsByMapNo: { 1: "none", 2: "none" },
       extras: [],
     },
     frontBed1: {

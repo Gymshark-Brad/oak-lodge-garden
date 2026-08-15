@@ -56,7 +56,9 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
   const archivePeriod = archiveLabel.period;
   const archiveNote = archiveLabel.note;
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
+  const nestedZones = window.OAK.NESTED_ZONE_MAPS?.[zoneKey] || [];
   const hasIrrigationMap = !!(window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS)?.[zoneKey];
+  const hasMapContent = plants.length > 0 || map.length > 0 || nestedZones.length > 0;
   const [hoverPlant, setHoverPlant] = useState_BD(null);
   const explicitMapNumbering = map.some((marker) => marker.mapNo !== undefined);
 
@@ -134,11 +136,15 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
 
       <div className="rule" style={{ margin: "20px 0 24px" }} />
 
-      {/* Map + plant list, two columns. Hardscape folios go straight to photos. */}
-      {plants.length > 0 && <div className={"bed-grid" + (hasIrrigationMap ? " bed-grid--irrigation-map" : "")}>
+      {/* Map + plant list. Parent folios can also contain linked child pots. */}
+      {hasMapContent && <div className={"bed-grid" + (hasIrrigationMap ? " bed-grid--irrigation-map" : "") + (plants.length === 0 ? " bed-grid--map-only" : "")}>
         <div className="bed-map-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>
-            {hasIrrigationMap ? "Plant & watering map · top-down" : "Plant map · top-down"}
+            {hasIrrigationMap
+              ? "Plant & watering map · top-down"
+              : plants.length > 0
+                ? "Plant map · top-down"
+                : "Area map · top-down"}
           </div>
           <div className="bed-map-frame">
             <PlantMap
@@ -148,15 +154,16 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
               setHoverPlant={setHoverPlant}
               onOpenZone={onOpenZone}
               onOpenPlant={onOpenPlant}
+              nestedZones={nestedZones}
             />
             {hasIrrigationMap && <IrrigationLegend />}
             <div className="t-hand" style={{ marginTop: 10, color: "var(--pencil)", fontSize: 18 }}>
-              tap a circle to open its card →
+              {plants.length > 0 ? "tap a circle to open its card →" : "tap a pot to open its folio →"}
             </div>
           </div>
         </div>
 
-        <div className="bed-plants-col">
+        {plants.length > 0 && <div className="bed-plants-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>
             {explicitMapNumbering
               ? `Plants · ${plants.length} records · ${map.length} mapped positions`
@@ -206,7 +213,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
               </React.Fragment>
             ))}
           </ul>
-        </div>
+        </div>}
       </div>}
 
       {/* Photo gallery */}
@@ -301,6 +308,9 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
         .bed-grid--irrigation-map .bed-map-col,
         .bed-grid--irrigation-map .bed-plants-col {
           width: 100%;
+        }
+        .bed-grid--map-only {
+          grid-template-columns: minmax(0, 1fr);
         }
         @media (max-width: 880px) {
           .bed-head { grid-template-columns: 1fr; }
@@ -424,6 +434,12 @@ function irrigationLeadPath(pipe, marker, radius, sequence) {
     return `M${marker.x} ${startY} C${marker.x + bend} ${startY + span * 0.34} ${marker.x + bend} ${endY - span * 0.34} ${marker.x} ${endY}`;
   };
 
+  const fromBottom = (startY) => {
+    const endY = marker.y + edge;
+    const span = startY - endY;
+    return `M${marker.x} ${startY} C${marker.x + bend} ${startY - span * 0.34} ${marker.x + bend} ${endY + span * 0.34} ${marker.x} ${endY}`;
+  };
+
   if (pipe.side === "right") {
     return fromRight(pipe.coordinate);
   }
@@ -432,11 +448,15 @@ function irrigationLeadPath(pipe, marker, radius, sequence) {
     return fromTop(pipe.coordinate);
   }
 
+  if (pipe.side === "bottom") {
+    return fromBottom(pipe.coordinate);
+  }
+
   return marker.x >= 56 ? fromRight(pipe.rightCoordinate) : fromTop(pipe.topCoordinate);
 }
 
 // ── Plant map (hand-drawn canopy circles + optional irrigation) ──────
-function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlant }) {
+function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlant, nestedZones = [] }) {
   const W = 100;
   const irrigation = (window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS || {})[zone.id] || null;
   const H = irrigation?.mapHeight || 100;
@@ -444,6 +464,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
   const plantRecords = zone.plantKey ? (window.OAK.PLANTS[zone.plantKey] || []) : [];
   const plantNumbers = new Map(plantRecords.map((plant, index) => [plant.name, index + 1]));
   const sharedApplications = irrigation?.sharedApplications || [];
+  const extraMarkers = [...(irrigation?.extras || []), ...nestedZones];
   const sharedMapNos = new Set(sharedApplications.flatMap((shared) => shared.mapNos || []));
   const radiusFor = (marker) => Math.min(marker.r * circleScale, 22);
   const applicationBadgeRadius = irrigation?.applicationBadgeRadius || 3.1;
@@ -467,7 +488,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
           {map.map((marker, index) => (
             <circle key={`mask-plant-${index}`} cx={marker.x} cy={marker.y} r={radiusFor(marker) + 0.8} fill="black" />
           ))}
-          {(irrigation?.extras || []).map((marker, index) => (
+          {extraMarkers.map((marker, index) => (
             <circle key={`mask-extra-${index}`} cx={marker.x} cy={marker.y} r={radiusFor(marker) + 0.8} fill="black" />
           ))}
         </mask>
@@ -521,7 +542,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
                 />
               );
             })}
-            {(irrigation.extras || []).map((marker, index) => marker.application && marker.application !== "none" ? (
+            {extraMarkers.map((marker, index) => marker.application && marker.application !== "none" ? (
               <path
                 key={`extra-lead-${marker.name}`}
                 d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), map.length + index)}
@@ -536,7 +557,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
             {sharedApplications.map((shared, index) => (
               <path
                 key={`shared-lead-${shared.id || (shared.mapNos || []).join("-") || index}`}
-                d={irrigationLeadPath(irrigation.pipe, shared, applicationBadgeRadius, map.length + (irrigation.extras || []).length + index)}
+                d={irrigationLeadPath(irrigation.pipe, shared, applicationBadgeRadius, map.length + extraMarkers.length + index)}
                 fill="none"
                 stroke={applicationStroke(shared.application)}
                 strokeWidth="0.58"
@@ -549,7 +570,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
         </g>
       )}
 
-      {(irrigation?.extras || []).map((marker) => {
+      {extraMarkers.map((marker) => {
         const radius = radiusFor(marker);
         const isLinkedZone = !!marker.zoneKey && !!onOpenZone;
         const openLinkedZone = () => {
@@ -557,7 +578,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
         };
         return (
           <g
-            key={marker.name}
+            key={`${marker.zoneKey || "extra"}-${marker.name}`}
             role={isLinkedZone ? "button" : undefined}
             tabIndex={isLinkedZone ? "0" : undefined}
             aria-label={isLinkedZone ? `Open ${marker.name}` : undefined}
@@ -697,7 +718,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
             fill="var(--ink)"
           >{shared.application === "dropper" ? "D" : "S"}</text>
           {shared.label !== "" && (
-            <text x={shared.x} y={shared.y + applicationBadgeRadius + 2.2} textAnchor="middle" fontFamily="var(--type)" fontSize="2.2" fill="var(--pencil)">{shared.label || (shared.mapNos || []).join(" + ")}</text>
+            <text x={shared.x} y={shared.labelPosition === "above" ? shared.y - applicationBadgeRadius - 1.3 : shared.y + applicationBadgeRadius + 2.2} textAnchor="middle" fontFamily="var(--type)" fontSize="2.2" fill="var(--pencil)">{shared.label || (shared.mapNos || []).join(" + ")}</text>
           )}
         </g>
       ))}

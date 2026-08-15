@@ -478,6 +478,18 @@
             zoneKey: "frontPots",
           },
           {
+            id: "aug-2026-stone-bed-map-reconciled",
+            type: "work",
+            date: "2026-08",
+            datePrecision: "month",
+            dateLabel: "August 2026",
+            area: "back",
+            title: "Stone Bed positions reconciled",
+            note: "The final 1–22 Stone Bed layout was recorded. Agapanthus was added at position 9 with photographs still required, and the Cabbage Tree was correctly located in Bed 5.",
+            plantId: "stone-agapanthus",
+            zoneKey: "stone",
+          },
+          {
             id: "aug-2026-photo-update",
             type: "photographed",
             date: "2026-08-02",

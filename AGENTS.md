@@ -178,7 +178,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 **Upper level (north, gate end)**
 - Flower Bed 1 (2.6m × 2.6m) — Japanese Maple dominant, raised timber bed, Dahlia (dark-leaved) in centre
 - Pear Tree — mature fruit tree, upper terrace
-- Big Pot 2 — large blue glazed pot on upper paving
+- Big Pot 2 — large blue glazed pot on upper paving, nested inside the Flower Bed 1 folio
 - Flower Bed 5 — narrow Wisteria boundary bed on the right wall
 - Little Pot 2 — square blue pot on the upper stair wall; established Coreopsis moved into it in August 2026
 
@@ -188,10 +188,10 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Flower Bed 4 (≈1.8m × 0.8m) — Apple tree with bird feeders; occupies the first third above the Stone Bed
 
 **Lower level (south, house end)**
-- Big Pot 1 — large blue glazed pot tucked into the decking corner at the foot of the steps
+- Big Pot 1 — large blue glazed pot tucked into the decking corner at the foot of the steps, nested inside the Decking folio
 - Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush, the Hebe moved from the Stone Bed and smaller perennials
 - Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
-- Stone Bed (~4.8m × 1m) — Gravel bed replanted late July 2026 with 22 plants: Cordyline, dark Phormium, oakleaf Hydrangea, purple fountain grass, hardy houseleeks and stonecrops, two Ajugas, small alpines and two tender Echeverias; the rotten-crowned lavender was removed and the Hebe moved to Bed 2
+- Stone Bed (~6m × 1m) — Gravel bed with 22 mapped plants: dark Phormium, oakleaf Hydrangea, purple fountain grass, Agapanthus, hardy houseleeks and stonecrops, two Ajugas, small alpines and two tender Echeverias; the Cabbage Tree is correctly recorded in Bed 5
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Nemesia Pot — former Lobelia pot south of the Cercis; Nemesia 'Lady Penelope' (assumed)
 - Viburnum Pot — new pot in the Lobelia's former Bed 4-side position; Viburnum tinus Spirit
@@ -199,8 +199,8 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Cercis Pot — terracotta specimen pot in the former stair-corner location; Cercis canadensis 'Carolina Sweetheart'
 - Little Pot 1 — small blue pot shifted south below the Echinacea pot in August 2026
 - Echinacea Pot — the former Coreopsis pot, now at Little Pot 1's previous position; Echinacea Mooodz Glory
-- The two wall pots sit inside the Steps footprint; the Hanging Baskets marker sits inside Patio Kitchen.
-- Patio Kitchen + Patio Lounge — hardscape, no plants
+- The Cercis, Viburnum, Nemesia, Echinacea, Little Pots 1 and 2, and Candy House wall pot are nested inside the Steps folio.
+- Patio Kitchen & Lounge — one merged hardscape section; the Hanging Baskets are nested inside its folio
 - Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
 ---
@@ -213,8 +213,8 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Bed 2 | 10 | Weeping Cherry, Peony, Weigela, Silverbush, Hydrangea petiolaris and the relocated Hebe; Dogwood moved out July 2026 |
 | Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
 | Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelia 'Kaleidoscope', yellow Celosia and relocated Lobelia 'Starship Scarlet Bronze Leaf' |
-| Bed 5 | 10 | Wisteria, Rose, Phormium; big-pot Alstroemeria, Petunia, original Vinca, Nemesia and relocated 'Aroma Heart of Gold'; two smaller planted pots |
-| Stone Bed | 22 | Late-July alpine and succulent replant: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, purple fountain grass, two tender Echeverias, dark Phormium and Cabbage Tree |
+| Bed 5 | 11 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, Nemesia and relocated 'Aroma Heart of Gold'; two smaller planted pots |
+| Stone Bed | 22 | Alpine and succulent planting: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, Agapanthus, purple fountain grass, two tender Echeverias and dark Phormium |
 | Patio | 2 | Clematis montana and Honeysuckle; rotten-crowned Lavender removed July 2026 and retained in the Stone Bed photo archive |
 | Tree | 1 | Pear Tree (Pyrus) |
 | Big Pot 1 | 6 | Fuchsia, Verbena, Calibrachoa, Nepeta, Lobelia, Petunia |

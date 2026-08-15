@@ -10,11 +10,11 @@ function GardenPlan({ onOpenZone, dark }) {
   const hasPhotos = (key) => Object.values(window.OAK.PHOTOS_BY_MONTH)
     .some((month) => month[key] && month[key].length > 0);
 
-  // Zones rendered in z-order: hardscape first, beds on top, pots on top
+  // The main plan stays architectural. Pots are nested inside their parent
+  // folios and remain clickable there.
   const order = [
-    "patio", "kitchen", "lounge", "steps",
+    "patio", "lounge", "steps",
     "stone", "bed1", "bed2", "bed3", "bed4", "bed5", "pear",
-    "bigpot1", "bigpot2", "cercispot", "lobeliapot", "viburnumpot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2",
   ];
 
   const RoughDefs = (
@@ -53,12 +53,13 @@ function GardenPlan({ onOpenZone, dark }) {
     const z = Z[key];
     const isHover = hover === key;
     const isPot = z.isPot;
-    const isInteractive = !!z.plantKey || hasPhotos(key);
+    const hasNestedZones = (window.OAK.NESTED_ZONE_MAPS?.[key] || []).length > 0;
+    const isInteractive = !!z.plantKey || hasPhotos(key) || hasNestedZones;
     const c = z.color;
 
     // hardscape vs bed vs pot visual treatment
-    const isHard = ["steps", "patio", "kitchen", "lounge"].includes(key);
-    const isOutdoorRoom = ["kitchen", "lounge"].includes(key);
+    const isHard = ["steps", "patio", "lounge"].includes(key);
+    const isOutdoorRoom = key === "lounge";
     const fillPattern =
       isPot ? null :
       key === "steps" ? "url(#hatch-paving)" :
@@ -317,7 +318,7 @@ function GardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "patio", "steps", "lounge", "pear", "bigpot1", "bigpot2", "cercispot", "lobeliapot", "viburnumpot", "littlepot1", "littlepot2", "baskets", "wallpot1", "wallpot2"].map((k) => {
+          {["bed1", "bed2", "bed3", "bed4", "bed5", "stone", "patio", "steps", "lounge", "pear"].map((k) => {
             const z = Z[k];
             return (
               <button

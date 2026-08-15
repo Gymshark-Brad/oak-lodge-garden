@@ -1087,6 +1087,30 @@
         "foliage": "Seasonal foliage",
         "wildlife": "Fragrant flowers visited by pollinators"
       }
+    },
+    {
+      "name": "Cabbage Tree",
+      "id": "stone-cabbage-tree",
+      "latin": "Cordyline australis 'Red Star'",
+      "photos": [
+        "images/plants/cordyline.webp"
+      ],
+      "position": "Lower centre of Bed 5 — architectural burgundy fountain",
+      "light": "Full sun.",
+      "water": "Moderate; established plants tolerate drought.",
+      "care": "Tie up leaves in winter to protect crown if hard frost forecast.",
+      "seasonal": "Evergreen burgundy fountain of leaves.",
+      "description": "Cabbage Tree is an evergreen architectural tree grown at Oak Lodge for its distinctive garden character. Evergreen burgundy fountain of leaves.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H3/H4 · protect in severe cold",
+        "flowering": "Evergreen burgundy fountain of leaves",
+        "water": "Moderate",
+        "habit": "Evergreen architectural tree",
+        "size": "2.5–4m high · 1–2m spread",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
     }
   ],
   "Stone Bed": [
@@ -1612,27 +1636,25 @@
       }
     },
     {
-      "name": "Cabbage Tree",
-      "id": "stone-cabbage-tree",
-      "latin": "Cordyline australis 'Red Star'",
-      "photos": [
-        "images/plants/cordyline.webp"
-      ],
-      "position": "Right — large palm-like tree",
-      "light": "Full sun.",
-      "water": "Moderate; established plants tolerate drought.",
-      "care": "Tie up leaves in winter to protect crown if hard frost forecast.",
-      "seasonal": "Evergreen burgundy fountain of leaves.",
-      "description": "Cabbage Tree is an evergreen architectural tree grown at Oak Lodge for its distinctive garden character. Evergreen burgundy fountain of leaves.",
+      "name": "Agapanthus",
+      "id": "stone-agapanthus",
+      "latin": "Agapanthus (species and cultivar unknown)",
+      "photos": [],
+      "position": "Position 9 — Stone Bed; photographs still needed",
+      "light": "Full sun for reliable flowering.",
+      "water": "Low once established; water during establishment and prolonged late-summer drought.",
+      "care": "Grow in moisture-retentive but well-drained soil. Deadhead or retain seedheads deliberately and protect the crown in severe winter weather until hardiness is known.",
+      "seasonal": "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer; exact form still to be photographed.",
+      "description": "Agapanthus is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H3/H4 · protect in severe cold",
-        "flowering": "Evergreen burgundy fountain of leaves",
-        "water": "Moderate",
-        "habit": "Evergreen architectural tree",
-        "size": "2.5–4m high · 1–2m spread",
-        "foliage": "Evergreen",
-        "wildlife": "Foliage provides garden habitat"
+        "sunlight": "Full sun for reliable flowering",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer",
+        "water": "Low once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],

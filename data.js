@@ -67,7 +67,7 @@ window.OAK = (function () {
       dims: "≈1m × 4m",
       where: "Right boundary wall, upper",
       desc:
-        "Long boundary bed against the right wall. The Wisteria was pruned and the base cleared in July 2026, opening the trellis and rose back up. Three pots now sit within the Bed 5 folio: a mixed big pot, Lythrum 'Robin' in the medium pot and Begonia 'Carmen' in the little pot.",
+        "Long boundary bed against the right wall. Wisteria and rose rise above the Yucca and Cabbage Tree, while three planted pots sit along the wall: a mixed big pot, Lythrum 'Robin' in the medium pot and Begonia 'Carmen' in the little pot.",
       shape: {
         kind: "polygon",
         points: "715,55 765,55 765,283 673,283 673,233 715,233",
@@ -82,7 +82,7 @@ window.OAK = (function () {
       badge: "Gravel bed",
       where: "Decking edge, lower level",
       desc:
-        "Narrow gravel bed running the full length of the decking edge. Rosette succulents — hardy houseleeks and a tender grey Echeveria — are anchored by a Cordyline and a dark Phormium.",
+        "Narrow gravel bed running the full length of the decking edge. Twenty-two mapped plants combine stonecrops, houseleeks, two tender Echeverias, Ajugas, Agapanthus, dark Phormium, fountain grass, Achillea, Thrift and oakleaf Hydrangea.",
       dims: "6m × 1m",
       shape: { kind: "rect", x: 474, y: 283, w: 300, h: 50 },
       color: "#7a8f9a",
@@ -95,7 +95,8 @@ window.OAK = (function () {
       badge: "Hardscape",
       dims: "3m × 3m",
       where: "Connecting upper and lower",
-      desc: "Block paving with brick edging, several levels stepping down.",
+      desc:
+        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Nemesia, Echinacea, two little pots and Candy House wall pot are catalogued together in this folio.",
       shape: { kind: "rect", x: 334, y: 243, w: 140, h: 150 },
       color: "#6e6e5e",
       labelXY: [404, 344],
@@ -107,7 +108,7 @@ window.OAK = (function () {
       dims: "6m × 3m",
       where: "Lower level, by the house",
       desc:
-        "Composite decking running along the back of the house. A mature Clematis montana and Honeysuckle climb the house wall, with the Lavender moved here from Bed 5 in July 2026.",
+        "Composite decking running along the back of the house. A mature Clematis montana and Honeysuckle climb the house wall, while Big Pot 1 is catalogued within this folio.",
       shape: {
         kind: "polygon",
         points: "474,333 764,333 764,393 774,393 774,478 474,478",
@@ -116,27 +117,17 @@ window.OAK = (function () {
       labelXY: [624, 405],
       plantKey: "Patio",
     },
-    kitchen: {
-      id: "kitchen",
-      title: "Patio Kitchen",
-      badge: "Outdoor room",
-      dims: "1.6m × 1.4m clear",
-      where: "Sheltered between brick walls",
-      desc: "Sheltered outdoor kitchen tucked between the walls.",
-      shape: { kind: "rect", x: 194, y: 393, w: 90, h: 85 },
-      color: "#5c6b54",
-      labelXY: [239, 429],
-    },
     lounge: {
       id: "lounge",
-      title: "Patio Lounge",
-      badge: "Seating",
-      dims: "≈3.8m × 1.4m",
-      where: "Lower terrace, between kitchen and patio",
-      desc: "Lower seating area linking kitchen to patio.",
-      shape: { kind: "rect", x: 284, y: 393, w: 190, h: 85 },
+      title: "Patio Kitchen & Lounge",
+      badge: "Outdoor living",
+      dims: "≈5.4m × 1.4m",
+      where: "Lower terrace, beside the house",
+      desc:
+        "One outdoor-living section combining the sheltered kitchen and lower lounge. The three hanging baskets are catalogued within this folio.",
+      shape: { kind: "rect", x: 194, y: 393, w: 280, h: 85 },
       color: "#5c6b54",
-      labelXY: [379, 429],
+      labelXY: [334, 429],
     },
     pear: {
       id: "pear",
@@ -225,7 +216,7 @@ window.OAK = (function () {
       title: "Big Pot 2",
       badge: "Glazed pot",
       dims: "Large round blue pot",
-      where: "Upper paving, between Bed 1 and pear tree",
+      where: "Upper paving beside Flower Bed 1",
       desc:
         "A large blue glazed pot on the upper paving. Lobelia, verbena, petunia, nepeta and fuchsia — the mirror planting to Big Pot 1.",
       shape: { kind: "circle", cx: 259, cy: 78, r: 16 },
@@ -267,9 +258,9 @@ window.OAK = (function () {
       title: "Hanging Baskets",
       badge: "Front of house",
       dims: "3 baskets",
-      where: "Inside the Patio Kitchen area",
+      where: "Inside the Patio Kitchen & Lounge area",
       desc:
-        "Three hanging baskets grouped within the Patio Kitchen area. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
+        "Three hanging baskets grouped within the Patio Kitchen & Lounge area. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
       shape: { kind: "circle", cx: 269, cy: 445, r: 11 },
       color: "#c06a2a",
       labelXY: [238, 468],
@@ -2559,6 +2550,22 @@ window.OAK = (function () {
   delete PLANTS["Lobelia Pot"];
   PLANTS["Bed 4"] = PLANTS["Bed 4"].filter((plant) => plant.id !== "bed4-celosia");
 
+  const cabbageTree = takePlant("Stone Bed", "stone-cabbage-tree");
+  cabbageTree.position = "Lower centre of Bed 5 — architectural burgundy fountain";
+  PLANTS["Bed 5"].push(cabbageTree);
+
+  PLANTS["Stone Bed"].push({
+    name: "Agapanthus",
+    id: "stone-agapanthus",
+    latin: "Agapanthus (species and cultivar unknown)",
+    photos: [],
+    position: "Position 9 — Stone Bed; photographs still needed",
+    light: "Full sun for reliable flowering.",
+    water: "Low once established; water during establishment and prolonged late-summer drought.",
+    care: "Grow in moisture-retentive but well-drained soil. Deadhead or retain seedheads deliberately and protect the crown in severe winter weather until hardiness is known.",
+    seasonal: "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer; exact form still to be photographed.",
+  });
+
   PLANTS["Bed 1"].push(
     {
       name: "Abelia 'Kaleidoscope'",
@@ -3758,44 +3765,45 @@ window.OAK = (function () {
       { mapNo: 5, plantId: "bed4-apple-tree", name: "Apple Tree", x: 72, y: 48, r: 10, hue: 105 },
     ],
     bed5: [
-      { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
-      { name: "Rose", x: 56, y: 50, r: 10, hue: 350 },
-      { name: "New Zealand Flax (cultivar to confirm)", x: 24, y: 72, r: 9, hue: 90 },
-      { name: "Alstroemeria", x: 18, y: 91, r: 7, hue: 20 },
-      { name: "Petunia 'Bee's Knees'", x: 34, y: 91, r: 6, hue: 75 },
-      { name: "Vinca minor 'Illumination'", x: 48, y: 91, r: 6, hue: 110 },
-      { name: "Nemesia", x: 58, y: 82, r: 6, hue: 25 },
-      { name: "Nemesia 'Aroma Heart of Gold'", x: 72, y: 82, r: 6, hue: 15 },
-      { name: "Lythrum 'Robin'", x: 66, y: 91, r: 7, hue: 325 },
-      { name: "Begonia 'Carmen'", x: 84, y: 91, r: 7, hue: 10 },
+      { mapNo: "W", plantId: "bed5-wisteria", name: "Wisteria", x: 88, y: 12, r: 10, hue: 270 },
+      { mapNo: "R", plantId: "bed5-rose", name: "Rose", x: 75, y: 84, r: 8, hue: 350 },
+      { mapNo: "Y", plantId: "bed5-new-zealand-flax-cultivar-to-confirm", name: "New Zealand Flax (cultivar to confirm)", x: 18, y: 84, r: 10, hue: 90 },
+      { mapNo: "B1", plantId: "bed5-big-pot-alstroemeria", name: "Alstroemeria", x: 70, y: 20, r: 5, hue: 20 },
+      { mapNo: "B2", plantId: "bed5-big-pot-petunia-bees-knees", name: "Petunia 'Bee's Knees'", x: 78, y: 20, r: 4, hue: 75 },
+      { mapNo: "B3", plantId: "bed5-big-pot-vinca-minor-illumination", name: "Vinca minor 'Illumination'", x: 70, y: 28, r: 4, hue: 110 },
+      { mapNo: "B4", plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 78, y: 28, r: 4, hue: 25 },
+      { mapNo: "B5", plantId: "bed1-nemesia", name: "Nemesia 'Aroma Heart of Gold'", x: 74, y: 35, r: 4, hue: 15 },
+      { mapNo: "M", plantId: "bed5-medium-pot-lythrum-robin", name: "Lythrum 'Robin'", x: 74, y: 64, r: 6, hue: 325 },
+      { mapNo: "L", plantId: "bed5-little-pot-begonia-carmen", name: "Begonia 'Carmen'", x: 70, y: 45, r: 5, hue: 10 },
+      { mapNo: "C", plantId: "stone-cabbage-tree", name: "Cabbage Tree", x: 45, y: 88, r: 13, hue: 350 },
     ],
     stone: [
-      { name: "Hydrangea 'Snowflake'", x: 10, y: 18, r: 9, hue: 15 },
-      { name: "Purple Fountain Grass 'Rubrum'", x: 28, y: 18, r: 8, hue: 345 },
-      { name: "New Zealand Flax (dark)", x: 53, y: 20, r: 9, hue: 0 },
-      { name: "Cabbage Tree", x: 83, y: 20, r: 11, hue: 350 },
-      { name: "Ajuga 'Fancy Finch'", x: 10, y: 47, r: 5, hue: 70 },
-      { name: "Ajuga 'Midnight Mystery'", x: 20, y: 55, r: 5, hue: 325 },
-      { name: "Achillea 'King Alfred'", x: 30, y: 43, r: 5, hue: 55 },
-      { name: "Thrift 'Armada White'", x: 39, y: 57, r: 5, hue: 95 },
-      { name: "Houseleeks", x: 49, y: 43, r: 5, hue: 350 },
-      { name: "Common Houseleek", x: 58, y: 56, r: 5, hue: 120 },
-      { name: "Cobweb Houseleek", x: 67, y: 43, r: 5, hue: 150 },
-      { name: "Houseleek 'Purple Quartz'", x: 76, y: 57, r: 5, hue: 310 },
-      { name: "Chick Charms Houseleek Mix", x: 88, y: 48, r: 6, hue: 15 },
-      { name: "Echeveria", x: 96, y: 58, r: 6, hue: 315 },
-      { name: "Sedum 'Chocolate Ball'", x: 7, y: 82, r: 4, hue: 35 },
-      { name: "Older Caucasian Stonecrop", x: 17, y: 75, r: 4, hue: 5 },
-      { name: "Six-rowed Stonecrop", x: 27, y: 87, r: 4, hue: 105 },
-      { name: "Golden Stonecrop 'Aureum'", x: 39, y: 78, r: 5, hue: 75 },
-      { name: "Sedum 'Angelina'", x: 51, y: 88, r: 5, hue: 70 },
-      { name: "Stonecrop 'Dragon's Blood'", x: 63, y: 78, r: 5, hue: 355 },
-      { name: "Sedum 'Atlantis'", x: 75, y: 88, r: 5, hue: 85 },
-      { name: "Echeveria 'Devotion'", x: 89, y: 80, r: 6, hue: 340 },
+      { mapNo: 1, plantId: "stone-sedum-chocolate-ball", name: "Sedum 'Chocolate Ball'", x: 5, y: 8, r: 3.5, hue: 35 },
+      { mapNo: 2, plantId: "stone-older-caucasian-stonecrop", name: "Older Caucasian Stonecrop", x: 12, y: 8, r: 3.5, hue: 5 },
+      { mapNo: 3, plantId: "stone-common-houseleek", name: "Common Houseleek", x: 9, y: 18, r: 3.5, hue: 120 },
+      { mapNo: 4, plantId: "stone-six-rowed-stonecrop", name: "Six-rowed Stonecrop", x: 14, y: 27, r: 3.5, hue: 105 },
+      { mapNo: 5, plantId: "stone-echeveria-devotion", name: "Echeveria 'Devotion'", x: 21, y: 8, r: 4, hue: 340 },
+      { mapNo: 6, plantId: "stone-achillea-king-alfred", name: "Achillea 'King Alfred'", x: 26, y: 27, r: 3.5, hue: 55 },
+      { mapNo: 7, plantId: "stone-ajuga-fancy-finch", name: "Ajuga 'Fancy Finch'", x: 30, y: 18, r: 4, hue: 70 },
+      { mapNo: 8, plantId: "stone-ajuga-midnight-mystery", name: "Ajuga 'Midnight Mystery'", x: 34, y: 18, r: 4, hue: 325 },
+      { mapNo: 9, plantId: "stone-agapanthus", name: "Agapanthus", x: 39, y: 21, r: 4, hue: 255 },
+      { mapNo: 10, plantId: "stone-sedum-aureum", name: "Golden Stonecrop 'Aureum'", x: 43, y: 18, r: 4, hue: 75 },
+      { mapNo: 11, plantId: "stone-new-zealand-flax-dark", name: "New Zealand Flax (dark)", x: 47, y: 27, r: 4, hue: 0 },
+      { mapNo: 12, plantId: "stone-sedum-angelina", name: "Sedum 'Angelina'", x: 50, y: 17, r: 4, hue: 70 },
+      { mapNo: 13, plantId: "stone-echeveria", name: "Echeveria", x: 55, y: 18, r: 4, hue: 315 },
+      { mapNo: 14, plantId: "stone-sempervivum-arachnoideum", name: "Cobweb Houseleek", x: 58, y: 8, r: 3.5, hue: 150 },
+      { mapNo: 15, plantId: "stone-chick-charms-mix", name: "Chick Charms Houseleek Mix", x: 58, y: 27, r: 4, hue: 15 },
+      { mapNo: 16, plantId: "stone-houseleeks", name: "Houseleeks", x: 61, y: 18, r: 4, hue: 350 },
+      { mapNo: 17, plantId: "stone-sempervivum-purple-quartz", name: "Houseleek 'Purple Quartz'", x: 66, y: 27, r: 4, hue: 310 },
+      { mapNo: 18, plantId: "stone-sedum-dragons-blood", name: "Stonecrop 'Dragon's Blood'", x: 70, y: 12, r: 4, hue: 355 },
+      { mapNo: 19, plantId: "stone-sedum-atlantis", name: "Sedum 'Atlantis'", x: 77, y: 7, r: 4, hue: 85 },
+      { mapNo: 20, plantId: "stone-armeria-armada-white", name: "Thrift 'Armada White'", x: 77, y: 27, r: 4, hue: 95 },
+      { mapNo: 21, plantId: "stone-pennisetum-rubrum", name: "Purple Fountain Grass 'Rubrum'", x: 83, y: 8, r: 4, hue: 345 },
+      { mapNo: 22, plantId: "stone-hydrangea-snowflake", name: "Hydrangea 'Snowflake'", x: 88, y: 22, r: 5, hue: 15 },
     ],
     patio: [
-      { name: "Clematis", x: 18, y: 50, r: 14, hue: 320 },
-      { name: "Honeysuckle", x: 82, y: 50, r: 10, hue: 50 },
+      { mapNo: 1, plantId: "stone-clematis", name: "Clematis", x: 90, y: 38, r: 10, hue: 320 },
+      { mapNo: 2, plantId: "stone-honeysuckle", name: "Honeysuckle", x: 18, y: 58, r: 14, hue: 50 },
     ],
     pear: [
       { name: "Pear Tree", x: 50, y: 50, r: 30, hue: 100 },
@@ -3932,6 +3940,30 @@ window.OAK = (function () {
     ],
     frontGateTree: [
       { name: "Weeping Crab Apple (cultivar to confirm)", x: 50, y: 50, r: 30, hue: 105 },
+    ],
+  };
+
+  // Child areas shown inside a parent folio rather than as separate markers
+  // on the main garden plan. Each remains a normal zone with its own plants,
+  // photographs and care pages.
+  const NESTED_ZONE_MAPS = {
+    bed1: [
+      { name: "Big Pot 2", marker: "P2", zoneKey: "bigpot2", x: 88, y: 15, r: 7, hue: 240 },
+    ],
+    patio: [
+      { name: "Big Pot 1", marker: "P1", zoneKey: "bigpot1", x: 22, y: 18, r: 8, hue: 240 },
+    ],
+    steps: [
+      { name: "Cercis Pot", marker: "C", zoneKey: "cercispot", x: 10, y: 10, r: 8, hue: 30 },
+      { name: "Viburnum Pot", marker: "V", zoneKey: "viburnumpot", x: 90, y: 10, r: 8, hue: 235 },
+      { name: "Nemesia Pot", marker: "N", zoneKey: "lobeliapot", x: 20, y: 32, r: 7, hue: 335 },
+      { name: "Little Pot 2", marker: "L2", zoneKey: "littlepot2", x: 65, y: 30, r: 6, hue: 240 },
+      { name: "Echinacea Pot", marker: "E", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 70 },
+      { name: "Little Pot 1", marker: "L1", zoneKey: "littlepot1", x: 83, y: 46, r: 6, hue: 240 },
+      { name: "Wall Pot — Candy House", marker: "W", zoneKey: "wallpot1", x: 83, y: 86, r: 6, hue: 350 },
+    ],
+    lounge: [
+      { name: "Hanging Baskets", marker: "HB", zoneKey: "baskets", x: 20, y: 80, r: 9, hue: 25 },
     ],
   };
 
@@ -4176,6 +4208,7 @@ window.OAK = (function () {
     PLANT_BY_ID,
     PLANT_ID_BY_ZONE_AND_NAME,
     BED_PLANT_MAPS,
+    NESTED_ZONE_MAPS,
     thumbnailFor,
   };
 })();

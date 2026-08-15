@@ -98,6 +98,15 @@ function run(argv) {
     });
   });
 
+  Object.entries(OAK.NESTED_ZONE_MAPS || {}).forEach(([parentZoneKey, markers]) => {
+    if (!OAK.ZONES[parentZoneKey]) errors.push(`unresolved nested-map parent: ${parentZoneKey}`);
+    markers.forEach((marker) => {
+      if (!marker.zoneKey || !OAK.ZONES[marker.zoneKey]) {
+        errors.push(`unresolved nested zone: ${parentZoneKey} / ${marker.name}`);
+      }
+    });
+  });
+
   Object.entries(OAK.ZONES).forEach(([zoneKey, zone]) => {
     if (zone.environment !== "indoor") return;
     const plants = OAK.PLANTS[zone.plantKey] || [];
