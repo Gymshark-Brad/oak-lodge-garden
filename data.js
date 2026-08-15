@@ -28,7 +28,7 @@ window.OAK = (function () {
       dims: "2m wide · ≈3.1m run",
       where: "Lower level, west boundary",
       desc:
-        "The upright section of the former sideways T-shaped border along the west boundary. Weeping cherry and peony are joined by Weigela, Silverbush, Maiden Pink, climbing Hydrangea, Euonymus 'Emerald Gaiety', Avens and the new Sedum 'Rose Carpet'.",
+        "The upright section of the former sideways T-shaped border along the west boundary. Weigela, peony, two established Geums, Euonymus, climbing Hydrangea, Dianthus, an inherited rose, Silverbush and Butterfly Bush fill the narrow border.",
       shape: { kind: "rect", x: 94, y: 323, w: 100, h: 155 },
       color: "#6b8e4e",
       labelXY: [144, 390],
@@ -41,7 +41,7 @@ window.OAK = (function () {
       dims: "≈2.8m × 0.8m",
       where: "Lower level, running east from Bed 2",
       desc:
-        "The horizontal arm split from the former T-shaped Bed 2. A sunny run between the brick walls, planted with Kerria, Forget-me-not, Centaurea 'Snowy Owl' and bright Spiraea.",
+        "The horizontal arm split from the former T-shaped Bed 2. Sedum 'Rose Carpet', four Spiraea, Centaurea, an inherited rose, the Weeping Cherry and yellow Corydalis share the wall run; two positions still await identification.",
       shape: { kind: "rect", x: 194, y: 333, w: 140, h: 40 },
       color: "#7f9b58",
       labelXY: [264, 351],
@@ -54,7 +54,7 @@ window.OAK = (function () {
       dims: "≈1.2m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Callistemon, Gaillardia, Abelia 'Kaleidoscope', the remaining yellow Celosia and Lobelia 'Starship Scarlet Bronze Leaf'.",
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Gaillardia, Abelia 'Kaleidoscope', Callistemon and Lobelia 'Starship Scarlet Bronze Leaf'.",
       shape: { kind: "rect", x: 474, y: 243, w: 60, h: 40 },
       color: "#c7a54a",
       labelXY: [520, 212],
@@ -855,7 +855,7 @@ window.OAK = (function () {
         id: "bed2-spiraea-double-play-big-bang",
         latin: "Spiraea japonica 'Double Play Big Bang'",
         photos: ["images/june-2026-update-2/spiraea-big-bang-1.webp", "images/june-2026-update-2/spiraea-big-bang-2.webp", "images/june-2026-update-2/spiraea-big-bang-3.webp", "images/june-2026-update-2/spiraea-big-bang-4.webp", "images/june-2026-update-2/spiraea-big-bang-5.webp"],
-        position: "Against the wall — 3 plants. Added June 2026.",
+        position: "Positions 2–5 against the wall — 4 plants.",
         light: "Full sun to partial shade.",
         water: "Moderate. Water well until established; tolerates dry spells after.",
         care: "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
@@ -2495,14 +2495,13 @@ window.OAK = (function () {
   // Bed 2's former sideways-T footprint is now two separate beds. The plant
   // records remain authored together above, then are divided here by their
   // physical side of the split so care cards and maps stay in sync.
-  const BED3_PLANT_NAMES = new Set([
-    "Kerria",
-    "Forget-me-not",
-    "Centaurea 'Snowy Owl'",
-    "Spiraea 'Double Play Big Bang'",
+  const BED3_PLANT_IDS = new Set([
+    "bed2-kerria",
+    "bed2-centaurea-snowy-owl",
+    "bed2-spiraea-double-play-big-bang",
   ]);
-  PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_NAMES.has(plant.name));
-  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_NAMES.has(plant.name));
+  PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_IDS.has(plant.id));
+  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_IDS.has(plant.id) && plant.id !== "bed2-forget-me-not");
 
   // August 2026 brought a second major reshuffle. Stable plant IDs are kept
   // through each move so journal links, profiles and earlier photographs still
@@ -2513,8 +2512,8 @@ window.OAK = (function () {
     return PLANTS[plantKey].splice(index, 1)[0];
   };
 
-  PLANTS["Bed 1"] = PLANTS["Bed 1"].filter((plant) => plant.id !== "bed1-angel-wings");
-  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => plant.id !== "bed2-angel-wings");
+  PLANTS["Bed 1"] = PLANTS["Bed 1"].filter((plant) => !["bed1-angel-wings", "bed1-wintercreeper"].includes(plant.id));
+  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !["bed2-angel-wings", "stone-hebe"].includes(plant.id));
 
   const aromaNemesia = takePlant("Bed 1", "bed1-nemesia");
   Object.assign(aromaNemesia, {
@@ -2558,12 +2557,7 @@ window.OAK = (function () {
   });
   PLANTS["Bed 4"].push(starshipLobelia);
   delete PLANTS["Lobelia Pot"];
-
-  const yellowCelosia = PLANTS["Bed 4"].find((plant) => plant.id === "bed4-celosia");
-  Object.assign(yellowCelosia, {
-    position: "Front of the bed — yellow plant retained; purple and red plants removed in August 2026",
-    seasonal: "Yellow plumed flowers June–October; the remaining annual dies with the first hard frost.",
-  });
+  PLANTS["Bed 4"] = PLANTS["Bed 4"].filter((plant) => plant.id !== "bed4-celosia");
 
   PLANTS["Bed 1"].push(
     {
@@ -2598,7 +2592,7 @@ window.OAK = (function () {
     },
   );
 
-  PLANTS["Bed 2"].push({
+  PLANTS["Bed 3"].push({
     name: "Sedum 'Rose Carpet'",
     id: "bed2-sedum-rose-carpet",
     latin: "Sedum pluricaule 'Rose Carpet'",
@@ -2606,11 +2600,49 @@ window.OAK = (function () {
       "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
       "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp",
     ],
-    position: "Lower front — planted in the former Angel Wings position in August 2026",
+    position: "Position 1 — lower edge of Bed 3",
     light: "Full sun to partial shade.",
     water: "Low once established; allow the soil surface to dry and avoid winter saturation.",
     care: "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
     seasonal: "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
+  });
+
+  const weepingCherry = takePlant("Bed 2", "bed2-weeping-cherry");
+  weepingCherry.position = "Position 10 — established weeping canopy in Bed 3";
+  PLANTS["Bed 3"].push(weepingCherry);
+
+  PLANTS["Bed 2"].push(
+    {
+      name: "Rose (inherited)",
+      id: "bed2-rose-inherited",
+      latin: "Rosa (cultivar unknown)",
+      position: "Position 8 — established by the previous owners",
+      light: "Best in full sun; tolerates light partial shade.",
+      water: "Water deeply during sustained dry spells, checking the soil first.",
+      care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
+      seasonal: "Summer flowers; repeat pattern and hip production still to be recorded.",
+    },
+    {
+      name: "Butterfly Bush",
+      id: "bed2-butterfly-bush",
+      latin: "Buddleja (species unknown)",
+      position: "Position 10 — established shrub",
+      light: "Full sun for the strongest flowering.",
+      water: "Low to moderate once established; water deeply during prolonged drought.",
+      care: "Deadhead after flowering. Confirm the species before choosing a hard- or light-pruning regime.",
+      seasonal: "Fragrant summer flower panicles attract butterflies and other pollinators.",
+    },
+  );
+
+  PLANTS["Bed 3"].push({
+    name: "Rose (inherited)",
+    id: "bed3-rose-inherited",
+    latin: "Rosa (cultivar unknown)",
+    position: "Position 8 — established by the previous owners",
+    light: "Best in full sun; tolerates light partial shade.",
+    water: "Water deeply during sustained dry spells, checking the soil first.",
+    care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
+    seasonal: "Summer flowers; repeat pattern and hip production still to be recorded.",
   });
 
   PLANTS["Nemesia Pot"] = [{
@@ -3274,7 +3306,7 @@ window.OAK = (function () {
         { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp", caption: "Pieris 'Forest Flame' newly planted" },
       ],
       bed2: [
-        { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' in the former Angel Wings position" },
+        { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' at Bed 3 position 1" },
         { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Sedum 'Rose Carpet' label" },
       ],
       bed4: [
@@ -3679,45 +3711,51 @@ window.OAK = (function () {
   // Coordinates are in a 100×100 viewBox; the bed view scales it up.
   const BED_PLANT_MAPS = {
     bed1: [
-      { name: "Japanese Maple 'Bloodgood'", x: 50, y: 28, r: 22, hue: 18 },
-      { name: "Japanese Aralia", x: 45, y: 50, r: 11, hue: 90 },
-      { name: "Rhododendron", x: 22, y: 48, r: 10, hue: 60 },
-      { name: "Dahlia 'Double Dreamy Lilac'", x: 50, y: 62, r: 9, hue: 0 },
-      { name: "Hosta 'Patriot'", x: 22, y: 75, r: 9, hue: 105 },
-      { name: "Box Hedging", x: 92, y: 50, r: 7, hue: 130 },
-      { name: "Euonymus 'Emerald 'n' Gold'", x: 12, y: 88, r: 6, hue: 55 },
-      { name: "Wintercreeper 'Emerald Gaiety'", x: 78, y: 75, r: 7, hue: 55 },
-      { name: "Dahlia 'Double Dreamy Gold'", x: 63, y: 68, r: 8, hue: 55 },
-      { name: "Hosta (gold)", x: 38, y: 75, r: 8, hue: 105 },
-      { name: "Little Heath", x: 50, y: 96, r: 6, hue: 320 },
-      { name: "Abelia 'Kaleidoscope'", x: 65, y: 88, r: 7, hue: 35 },
-      { name: "Pieris 'Forest Flame'", x: 82, y: 88, r: 7, hue: 5 },
+      { mapNo: 1, plantId: "bed1-hosta", name: "Hosta 'Patriot'", x: 79, y: 69, r: 7, hue: 105 },
+      { mapNo: 2, plantId: "bed1-pieris-forest-flame", name: "Pieris 'Forest Flame'", x: 64, y: 71, r: 6, hue: 5 },
+      { mapNo: 3, plantId: "bed1-dahlia", name: "Dahlia 'Double Dreamy Lilac'", x: 79, y: 54, r: 7, hue: 0 },
+      { mapNo: 4, plantId: "bed1-dahlia-yellow", name: "Dahlia 'Double Dreamy Gold'", x: 55, y: 58, r: 8, hue: 55 },
+      { mapNo: 5, plantId: "bed1-abelia-kaleidoscope", name: "Abelia 'Kaleidoscope'", x: 47, y: 83, r: 7, hue: 35 },
+      { mapNo: 6, plantId: "bed1-rhododendron", name: "Rhododendron", x: 32, y: 84, r: 7, hue: 60 },
+      { mapNo: 7, plantId: "bed1-euonymus", name: "Euonymus 'Emerald 'n' Gold'", x: 18, y: 84, r: 6, hue: 55 },
+      { mapNo: 8, plantId: "bed1-hosta", name: "Hosta 'Patriot'", x: 31, y: 67, r: 8, hue: 105 },
+      { mapNo: 9, plantId: "bed1-japanese-aralia", name: "Japanese Aralia", x: 36, y: 49, r: 11, hue: 90 },
+      { mapNo: 10, plantId: "bed1-hosta-gold", name: "Hosta (gold)", x: 64, y: 45, r: 8, hue: 105 },
+      { mapNo: 11, plantId: "bed1-japanese-maple", name: "Japanese Maple 'Bloodgood'", x: 58, y: 25, r: 17, hue: 18 },
+      { mapNo: "BOX", plantId: "bed1-box-hedging", name: "Box Hedging", x: 92, y: 58, r: 7, hue: 130 },
+      { mapNo: "LH", plantId: "bed1-little-heath", name: "Little Heath", x: 18, y: 53, r: 7, hue: 320 },
     ],
     bed2: [
-      { name: "Weeping Cherry", x: 24, y: 16, r: 14, hue: 340 },
-      { name: "Hydrangea petiolaris", x: 86, y: 34, r: 9, hue: 210 },
-      { name: "Weigela", x: 24, y: 42, r: 10, hue: 320 },
-      { name: "Silverbush", x: 58, y: 43, r: 8, hue: 70 },
-      { name: "Peony", x: 22, y: 68, r: 11, hue: 350 },
-      { name: "Maiden Pink", x: 50, y: 65, r: 6, hue: 330 },
-      { name: "Euonymus 'Emerald Gaiety'", x: 78, y: 66, r: 7, hue: 110 },
-      { name: "Avens", x: 48, y: 87, r: 7, hue: 30 },
-      { name: "Sedum 'Rose Carpet'", x: 78, y: 88, r: 7, hue: 340 },
-      { name: "Hebe", x: 92, y: 70, r: 7, hue: 330 },
+      { mapNo: 1, plantId: "bed2-weigela", name: "Weigela", x: 82, y: 84, r: 8, hue: 320 },
+      { mapNo: 2, plantId: "bed2-peony", name: "Peony", x: 82, y: 66, r: 8, hue: 350 },
+      { mapNo: 3, plantId: "bed2-avens", name: "Avens", x: 49, y: 72, r: 7, hue: 30 },
+      { mapNo: 4, plantId: "bed2-euonymus-emerald-gaiety", name: "Euonymus 'Emerald Gaiety'", x: 62, y: 59, r: 7, hue: 110 },
+      { mapNo: 5, plantId: "bed2-hydrangea-petiolaris", name: "Hydrangea petiolaris", x: 36, y: 50, r: 9, hue: 210 },
+      { mapNo: 6, plantId: "bed2-avens", name: "Avens", x: 61, y: 41, r: 7, hue: 30 },
+      { mapNo: 7, plantId: "bed2-maiden-pink", name: "Maiden Pink", x: 78, y: 47, r: 6, hue: 330 },
+      { mapNo: 8, plantId: "bed2-rose-inherited", name: "Rose (inherited)", x: 60, y: 25, r: 8, hue: 350 },
+      { mapNo: 9, plantId: "bed2-silverbush", name: "Silverbush", x: 82, y: 14, r: 8, hue: 70 },
+      { mapNo: 10, plantId: "bed2-butterfly-bush", name: "Butterfly Bush", x: 24, y: 14, r: 14, hue: 285 },
     ],
     bed3: [
-      { name: "Centaurea 'Snowy Owl'", x: 22, y: 34, r: 8, hue: 200 },
-      { name: "Forget-me-not", x: 42, y: 72, r: 6, hue: 220 },
-      { name: "Kerria", x: 52, y: 32, r: 10, hue: 55 },
-      { name: "Spiraea 'Double Play Big Bang'", x: 78, y: 58, r: 12, hue: 330 },
+      { mapNo: 1, plantId: "bed2-sedum-rose-carpet", name: "Sedum 'Rose Carpet'", x: 15, y: 20, r: 7, hue: 340 },
+      { mapNo: 2, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 20, y: 42, r: 6, hue: 330 },
+      { mapNo: 3, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 34, y: 42, r: 6, hue: 330 },
+      { mapNo: 4, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 48, y: 42, r: 6, hue: 330 },
+      { mapNo: 5, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 62, y: 42, r: 6, hue: 330 },
+      { mapNo: 6, name: "Identification pending · position 6", pending: true, x: 28, y: 20, r: 5, hue: 80 },
+      { mapNo: 7, plantId: "bed2-centaurea-snowy-owl", name: "Centaurea 'Snowy Owl'", x: 45, y: 20, r: 7, hue: 200 },
+      { mapNo: 8, plantId: "bed3-rose-inherited", name: "Rose (inherited)", x: 60, y: 20, r: 6, hue: 350 },
+      { mapNo: 9, name: "Identification pending · position 9", pending: true, x: 82, y: 20, r: 10, hue: 80 },
+      { mapNo: 10, plantId: "bed2-weeping-cherry", name: "Weeping Cherry", x: 82, y: 42, r: 9, hue: 340 },
+      { mapNo: 11, plantId: "bed2-kerria", name: "Kerria", x: 95, y: 42, r: 5, hue: 55 },
     ],
     bed4: [
-      { name: "Apple Tree",           x: 50, y: 34, r: 20, hue: 105 },
-      { name: "Callistemon Inferno ('Yanferno')", x: 18, y: 72, r: 10, hue: 0   },
-      { name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 50, y: 80, r: 9, hue: 8 },
-      { name: "Gaillardia",           x: 78, y: 64, r: 8,  hue: 25  },
-      { name: "Abelia 'Kaleidoscope'", x: 76, y: 85, r: 8,  hue: 310 },
-      { name: "Celosia", x: 28, y: 88, r: 7, hue: 55 },
+      { mapNo: 1, plantId: "bed4-gaillardia", name: "Gaillardia", x: 35, y: 24, r: 8, hue: 25 },
+      { mapNo: 2, plantId: "bed4-abelia-kaleidoscope", name: "Abelia 'Kaleidoscope'", x: 60, y: 24, r: 8, hue: 310 },
+      { mapNo: 3, plantId: "bed4-callistemon-inferno-yanferno", name: "Callistemon Inferno ('Yanferno')", x: 35, y: 48, r: 9, hue: 0 },
+      { mapNo: 4, plantId: "lobeliapot-lobelia-starship-scarlet-bronze-leaf", name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 53, y: 48, r: 8, hue: 8 },
+      { mapNo: 5, plantId: "bed4-apple-tree", name: "Apple Tree", x: 72, y: 48, r: 10, hue: 105 },
     ],
     bed5: [
       { name: "Wisteria", x: 50, y: 16, r: 14, hue: 270 },
@@ -3919,7 +3957,7 @@ window.OAK = (function () {
       PLANT_ID_BY_ZONE_AND_NAME[zoneKey][plant.name] = plant.id;
     });
     (BED_PLANT_MAPS[zoneKey] || []).forEach((pin) => {
-      pin.plantId = PLANT_ID_BY_ZONE_AND_NAME[zoneKey][pin.name] || null;
+      pin.plantId = pin.plantId || PLANT_ID_BY_ZONE_AND_NAME[zoneKey][pin.name] || null;
     });
   });
 
@@ -4016,7 +4054,7 @@ window.OAK = (function () {
     { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-3.webp", caption: "Forest Flame in the Bed 1 planting" },
   ]);
   PLANT_PHOTOS_BY_ID["bed2-sedum-rose-carpet"] = augustJournal([
-    { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' planted in Bed 2" },
+    { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' planted at Bed 3 position 1" },
     { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Rose Carpet label" },
   ]);
   PLANT_PHOTOS_BY_ID["lobeliapot-nemesia-lady-penelope"] = augustJournal([

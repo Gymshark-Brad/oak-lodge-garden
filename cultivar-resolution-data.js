@@ -25,7 +25,6 @@
     "stone-older-caucasian-stonecrop": { name: "Older Caucasian Stonecrop — assumed", latin: "Phedimus spurius cultivar", status: "assumed", basis: "The established scalloped, red-flushed mat fits the Caucasian stonecrop group, but it is deliberately separate from the newly bought ‘Dragon’s Blood’ and no older cultivar label survives." },
     "stone-common-houseleek": { name: "Common Houseleek — assumed", latin: "Sempervivum tectorum", status: "assumed", basis: "Best fit for the established green rosettes with red points; similar garden hybrids cannot yet be excluded." },
     "stone-six-rowed-stonecrop": { name: "Six-rowed Stonecrop — assumed", latin: "Sedum sexangulare", status: "assumed", basis: "Best fit for the fine creeping mat with narrow cylindrical leaves arranged densely around the stems; flowering evidence is still needed." },
-    "stone-hebe": { name: "Hebe ‘Heartbreaker’ — assumed", latin: "Veronica ‘Heartbreaker’", status: "assumed", basis: "The cream-edged narrow leaves and strong cold-pink colouring closely match this cultivar." },
     "stone-honeysuckle": { name: "Honeysuckle ‘Serotina’ — assumed", latin: "Lonicera periclymenum ‘Serotina’", status: "assumed", basis: "A likely fragrant, late-flowering garden honeysuckle; a flower close-up is still needed." },
     "stone-clematis": { name: "Clematis montana ‘Rubens’ — assumed", latin: "Clematis montana var. rubens", status: "assumed", basis: "Best fit for the vigorous wall-covering montana with pale pink spring flowers." },
     "stone-pear-tree": { name: "Pear ‘Conference’ — assumed", latin: "Pyrus communis ‘Conference’ · rootstock Quince A assumed", status: "assumed", basis: "The overwhelmingly common UK garden pear is used as a working identity until fruit and graft evidence is recorded." },
@@ -39,7 +38,6 @@
     "lobeliapot-nemesia-lady-penelope": { name: "Nemesia ‘Lady Penelope’ — assumed", latin: "Nemesia ‘Lady Penelope’", status: "assumed", basis: "Best fit from the rose-pink upper petals, white lower lip, pink side markings and yellow eye; no label survives and similar hybrids remain possible." },
 
     // Back garden — names recovered from photographed labels
-    "bed4-celosia": { name: "Celosia First Flame Yellow — label confirmed", latin: "Celosia argentea First Flame Series (yellow)", status: "confirmed", basis: "The retained yellow plant has its photographed First Flame Yellow label; the former red and purple plants were removed in August 2026." },
     "bed5-big-pot-alstroemeria": { name: "Alstroemeria ‘Indian Summer’ — label confirmed", latin: "Alstroemeria ‘Tesronto’ (Indian Summer)", status: "confirmed", basis: "The photographed plant label reads Summer Paradise Indian Summer." },
     "bed5-big-pot-nemesia": { name: "Nemesia ‘Wisley Vanilla’ — label confirmed", latin: "Nemesia ‘Wisley Vanilla’", status: "confirmed", basis: "The photographed plant label reads Wisley Vanilla." },
     "bed5-little-pot-begonia-carmen": { name: "Begonia ‘Carmen’ — label confirmed", latin: "Begonia ‘Carmen’", status: "confirmed", basis: "The photographed plant label reads Carmen and matches the red double flowers." },

@@ -664,7 +664,7 @@
       version: 2,
       type: "Weeping ornamental tree",
       badges: ["Cascading canopy", "Spring blossom", "Cultivar unconfirmed"],
-      description: "A mature weeping cherry forming a low, umbrella-like canopy over the upper wall of Flower Bed 2. Long pendent branches make it an architectural feature even after the pink spring blossom has passed, then carry a dense green canopy through summer before the leaves fall. The garden record confirms an ornamental Prunus but not its species, cultivar or rootstock, so this profile avoids borrowing the size, blossom form or autumn colour of a named weeping cherry.",
+      description: "A mature weeping cherry forming a low, umbrella-like canopy in Flower Bed 3. Long pendent branches make it an architectural feature even after the pink spring blossom has passed, then carry a dense green canopy through summer before the leaves fall. The garden record confirms an ornamental Prunus but not its species, cultivar or rootstock, so this profile avoids borrowing the size, blossom form or autumn colour of a named weeping cherry.",
       floweringMonths: ["Mar", "Apr"],
       facts: [
         { label: "Size", value: "Measure this tree", detail: "Height and spread depend on cultivar, graft and pruning history" },
@@ -702,7 +702,7 @@
         { label: "Native to Britain or Ireland", value: "Cannot determine without species" }, { label: "Habit", value: "Pendulous and umbrella-forming" },
         { label: "Time to mature", value: "Usually 10–20 years; cultivar-dependent" }, { label: "Name status", value: "Garden identity unresolved" },
       ],
-      oakLodge: { location: "Upper section of Flower Bed 2, overhanging the wall", added: "Established before the 2026 journal", role: "Small canopy tree and spring focal point", observation: "A mature grafted tree with long pendent green branches and pink blossom recorded in April.", status: "Photograph blossom close-up, autumn leaves, bark, graft union and any fruit together; those details may narrow the identity." },
+      oakLodge: { location: "Position 10 in Flower Bed 3", added: "Established before the 2026 journal", role: "Small canopy tree and spring focal point", observation: "A mature grafted tree with long pendent green branches and pink blossom recorded in April.", status: "Photograph blossom close-up, autumn leaves, bark, graft union and any fruit together; those details may narrow the identity." },
       sources: [RHS.cherry, OAK_SOURCE],
     },
 
@@ -1024,7 +1024,7 @@
 
   Object.entries(profiles).forEach(([plantId, profile]) => {
     const record = (window.OAK.PLANT_BY_ID || {})[plantId];
-    if (!record && ["bed1-angel-wings", "bed2-angel-wings"].includes(plantId)) return;
+    if (!record && ["bed1-angel-wings", "bed2-angel-wings", "bed1-wintercreeper"].includes(plantId)) return;
     if (!record) throw new Error(`Authored profile has no matching plant: ${plantId}`);
     record.plant.profile = profile;
   });

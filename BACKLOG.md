@@ -6,6 +6,10 @@
 
 This file turns the audit into deployable batches. The batches are ordered to remove fragile data and deployment behaviour before adding more features.
 
+## Garden follow-up reminders
+
+- [ ] Identify and document Flower Bed 3 positions 6 and 9. They remain non-interactive map markers with irrigation shown as N/A; this is an inventory status, not a moisture-care recommendation.
+
 ## Next batch — data and deployment foundations
 
 This is the recommended next release. It is self-contained, does not need a garden decision from Brad, and makes every later batch safer.

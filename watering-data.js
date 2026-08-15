@@ -14,7 +14,6 @@
       "Hosta 'Patriot'": 3,
       "Box Hedging": 2,
       "Euonymus 'Emerald 'n' Gold'": 2,
-      "Wintercreeper 'Emerald Gaiety'": 2,
       "Dahlia 'Double Dreamy Lilac'": 4,
       "Dahlia 'Double Dreamy Gold'": 4,
       "Hosta (gold)": 3,
@@ -23,22 +22,23 @@
       "Pieris 'Forest Flame'": 3,
     },
     "Bed 2": {
-      "Weeping Cherry": 3,
       "Peony": 3,
-      "Sedum 'Rose Carpet'": 1,
       "Weigela": 3,
       "Silverbush": 1,
       "Maiden Pink": 1,
       "Hydrangea petiolaris": 4,
       "Euonymus 'Emerald Gaiety'": 2,
       "Avens": 3,
-      "Hebe": 3,
+      "Rose (inherited)": 3,
+      "Butterfly Bush": 2,
     },
     "Bed 3": {
       "Kerria": 3,
-      "Forget-me-not": 3,
       "Centaurea 'Snowy Owl'": 2,
       "Spiraea 'Double Play Big Bang'": 3,
+      "Sedum 'Rose Carpet'": 1,
+      "Rose (inherited)": 3,
+      "Weeping Cherry": 3,
     },
     "Bed 4": {
       "Apple Tree": 2,
@@ -46,7 +46,6 @@
       "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
-      "Celosia": 4,
     },
     "Bed 5": {
       "Wisteria": 1,
@@ -594,6 +593,34 @@
   // coordinate space as BED_PLANT_MAPS, so BedDetail can draw the 13mm supply
   // pipe and curved 4mm application lines beneath the plant canopies.
   const FRONT_IRRIGATION_MAPS = {
+    bed1: {
+      bedOutlinePath: "M0 100 L0 38 L48 0 L100 0 L100 100 Z",
+      pipe: { path: "M100 3 C98 28 101 58 98 96 Q98 100 94 100 L68 100", side: "right", coordinate: 98, labelXY: [91, 5] },
+      applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper", 6: "dropper", 7: "dropper", 8: "dropper", 9: "dropper", 10: "dropper", 11: "dropper", BOX: "none", LH: "sprinkler" },
+      sharedApplications: [
+        { id: "little-heath-1", application: "sprinkler", mapNos: ["LH"], x: 13, y: 43, label: "" },
+        { id: "little-heath-2", application: "sprinkler", mapNos: ["LH"], x: 13, y: 54, label: "" },
+        { id: "little-heath-3", application: "sprinkler", mapNos: ["LH"], x: 13, y: 65, label: "3 × S" },
+      ],
+      extras: [],
+    },
+    bed2: {
+      pipe: { path: "M98 100 C99 74 97 46 99 7", side: "right", coordinate: 99, labelXY: [92, 97] },
+      applicationsByMapNo: { 1: "sprinkler", 2: "sprinkler", 3: "dropper", 4: "dropper", 5: "dropper", 6: "dropper", 7: "dropper", 8: "dropper", 9: "dropper", 10: "none" },
+      extras: [{ name: "Bed 2/3 Wall Pot", marker: "P", x: 96, y: 54, r: 6, hue: 35, application: "none", zoneKey: "bed23wallpot" }],
+    },
+    bed3: {
+      mapHeight: 60,
+      pipe: { path: "M-3 2 C26 0 59 3 98 1 Q101 1 101 5 L101 56", side: "top", coordinate: 1, labelXY: [88, 0] },
+      applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper", 6: "none", 7: "dropper", 8: "dropper", 9: "none", 10: "none", 11: "none" },
+      extras: [{ name: "Bed 2/3 Wall Pot", marker: "P", x: 97, y: 30, r: 5, hue: 35, application: "none", zoneKey: "bed23wallpot" }],
+    },
+    bed4: {
+      mapHeight: 70,
+      pipe: { path: "M-2 2 C25 0 53 2 76 1", side: "top", coordinate: 1, labelXY: [66, 0] },
+      applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "sprinkler", 5: "none" },
+      extras: [],
+    },
     frontBed1: {
       circleScale: 1.2,
       pipe: null,
@@ -759,4 +786,5 @@
   window.OAK.POT_WATER_SIGNS = POT_WATER_SIGNS;
   window.OAK.WATER_GUIDE_CONFIG = WATER_GUIDE_CONFIG;
   window.OAK.FRONT_IRRIGATION_MAPS = FRONT_IRRIGATION_MAPS;
+  window.OAK.IRRIGATION_MAPS = FRONT_IRRIGATION_MAPS;
 })();

@@ -91,6 +91,7 @@ function run(argv) {
 
   Object.entries(OAK.BED_PLANT_MAPS).forEach(([zoneKey, pins]) => {
     pins.forEach((pin) => {
+      if (pin.pending === true) return;
       if (!pin.plantId || !OAK.PLANT_BY_ID[pin.plantId]) {
         errors.push(`unresolved map pin: ${zoneKey} / ${pin.name}`);
       }

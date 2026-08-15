@@ -56,7 +56,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
   const archivePeriod = archiveLabel.period;
   const archiveNote = archiveLabel.note;
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
-  const hasIrrigationMap = !!window.OAK.FRONT_IRRIGATION_MAPS?.[zoneKey];
+  const hasIrrigationMap = !!(window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS)?.[zoneKey];
   const [hoverPlant, setHoverPlant] = useState_BD(null);
   const explicitMapNumbering = map.some((marker) => marker.mapNo !== undefined);
 
@@ -437,8 +437,9 @@ function irrigationLeadPath(pipe, marker, radius, sequence) {
 
 // ── Plant map (hand-drawn canopy circles + optional irrigation) ──────
 function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlant }) {
-  const W = 100, H = 100;
-  const irrigation = (window.OAK.FRONT_IRRIGATION_MAPS || {})[zone.id] || null;
+  const W = 100;
+  const irrigation = (window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS || {})[zone.id] || null;
+  const H = irrigation?.mapHeight || 100;
   const circleScale = irrigation?.circleScale || 1;
   const plantRecords = zone.plantKey ? (window.OAK.PLANTS[zone.plantKey] || []) : [];
   const plantNumbers = new Map(plantRecords.map((plant, index) => [plant.name, index + 1]));
@@ -451,7 +452,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
   const applicationStroke = (application) => application === "dropper" ? "var(--irrigation-dropper)" : "var(--irrigation-sprinkler)";
 
   return (
-    <svg viewBox={`-6 -6 ${W + 12} ${H + 12}`} style={{ width: "100%", aspectRatio: "1", display: "block" }}>
+    <svg viewBox={`-6 -6 ${W + 12} ${H + 12}`} style={{ width: "100%", aspectRatio: `${W + 12} / ${H + 12}`, display: "block" }}>
       <defs>
         <filter id="pm-rough">
           <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="11" result="t" />
@@ -461,8 +462,8 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
           <feTurbulence type="fractalNoise" baseFrequency="0.12" numOctaves="2" seed="2" />
           <feDisplacementMap in="SourceGraphic" in2="SourceGraphic" scale="1" />
         </filter>
-        <mask id="pm-clear-canopies" maskUnits="userSpaceOnUse" x="-6" y="-6" width="112" height="112">
-          <rect x="-6" y="-6" width="112" height="112" fill="white" />
+        <mask id="pm-clear-canopies" maskUnits="userSpaceOnUse" x="-6" y="-6" width={W + 12} height={H + 12}>
+          <rect x="-6" y="-6" width={W + 12} height={H + 12} fill="white" />
           {map.map((marker, index) => (
             <circle key={`mask-plant-${index}`} cx={marker.x} cy={marker.y} r={radiusFor(marker) + 0.8} fill="black" />
           ))}
@@ -473,14 +474,11 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
       </defs>
 
       <g filter="url(#pm-rough)">
-        <rect
-          x="-2" y="-2" width={W + 4} height={H + 4}
-          fill="none"
-          stroke="var(--ink)"
-          strokeOpacity="0.45"
-          strokeWidth="0.6"
-          strokeDasharray="3 2"
-        />
+        {irrigation?.bedOutlinePath ? (
+          <path d={irrigation.bedOutlinePath} fill="none" stroke="var(--ink)" strokeOpacity="0.45" strokeWidth="0.6" strokeDasharray="3 2" />
+        ) : (
+          <rect x="-2" y="-2" width={W + 4} height={H + 4} fill="none" stroke="var(--ink)" strokeOpacity="0.45" strokeWidth="0.6" strokeDasharray="3 2" />
+        )}
       </g>
 
       <g style={{ pointerEvents: "none" }}>
@@ -523,7 +521,7 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
                 />
               );
             })}
-            {(irrigation.extras || []).map((marker, index) => (
+            {(irrigation.extras || []).map((marker, index) => marker.application && marker.application !== "none" ? (
               <path
                 key={`extra-lead-${marker.name}`}
                 d={irrigationLeadPath(irrigation.pipe, marker, radiusFor(marker), map.length + index)}
@@ -534,10 +532,10 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 />
-            ))}
+            ) : null)}
             {sharedApplications.map((shared, index) => (
               <path
-                key={`shared-lead-${shared.mapNos.join("-")}`}
+                key={`shared-lead-${shared.id || (shared.mapNos || []).join("-") || index}`}
                 d={irrigationLeadPath(irrigation.pipe, shared, applicationBadgeRadius, map.length + (irrigation.extras || []).length + index)}
                 fill="none"
                 stroke={applicationStroke(shared.application)}
@@ -577,8 +575,12 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
               <circle cx={marker.x} cy={marker.y} r={radius} fill={`oklch(0.68 0.12 ${marker.hue})`} fillOpacity="0.58" stroke="var(--ink)" strokeOpacity="0.5" strokeWidth="0.55" strokeDasharray="2 1.4" />
             </g>
             <text x={marker.x} y={marker.y + 1.1} textAnchor="middle" fontFamily="var(--type)" fontSize="3.1" fill="var(--ink)">{marker.marker}</text>
-            <circle cx={marker.x + radius * 0.68} cy={marker.y + radius * 0.68} r={applicationBadgeRadius} fill="var(--paper)" stroke={applicationStroke(marker.application)} strokeWidth="0.7" />
-            <text x={marker.x + radius * 0.68} y={marker.y + radius * 0.68 + applicationBadgeFontSize * 0.4} textAnchor="middle" fontFamily="var(--type)" fontSize={applicationBadgeFontSize} fill="var(--ink)">{marker.application === "dropper" ? "D" : "S"}</text>
+            {marker.application && marker.application !== "none" && (
+              <>
+                <circle cx={marker.x + radius * 0.68} cy={marker.y + radius * 0.68} r={applicationBadgeRadius} fill="var(--paper)" stroke={applicationStroke(marker.application)} strokeWidth="0.7" />
+                <text x={marker.x + radius * 0.68} y={marker.y + radius * 0.68 + applicationBadgeFontSize * 0.4} textAnchor="middle" fontFamily="var(--type)" fontSize={applicationBadgeFontSize} fill="var(--ink)">{marker.application === "dropper" ? "D" : "S"}</text>
+              </>
+            )}
           </g>
         );
       })}
@@ -588,18 +590,22 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
         const application = applicationFor(m);
         const plantNumber = m.mapNo ?? plantNumbers.get(m.name) ?? i + 1;
         const usesSharedApplication = sharedMapNos.has(m.mapNo);
+        const isPending = m.pending === true;
+        const openPlant = () => {
+          if (!isPending) onOpenPlant({ zoneKey: zone.id, plantId: m.plantId, plantName: m.name });
+        };
         return (
           <g
             key={m.name + i}
             className="plant-pin"
-            role="button"
-            tabIndex="0"
-            aria-label={`Open plant ${plantNumber}, ${m.name}`}
-            onClick={() => onOpenPlant({ zoneKey: zone.id, plantId: m.plantId, plantName: m.name })}
+            role={isPending ? undefined : "button"}
+            tabIndex={isPending ? undefined : "0"}
+            aria-label={isPending ? `${m.name}; not yet interactive` : `Open plant ${plantNumber}, ${m.name}`}
+            onClick={openPlant}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
+              if (!isPending && (event.key === "Enter" || event.key === " ")) {
                 event.preventDefault();
-                onOpenPlant({ zoneKey: zone.id, plantId: m.plantId, plantName: m.name });
+                openPlant();
               }
             }}
             onMouseEnter={() => setHoverPlant(m.name)}
@@ -621,10 +627,11 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
                 cy={m.y}
                 r={radius}
                 fill={`oklch(${m.lightness || 0.66} ${m.chroma || 0.12} ${m.hue})`}
-                fillOpacity={hoverPlant === m.name ? "0.88" : "0.72"}
+                fillOpacity={isPending ? "0.18" : hoverPlant === m.name ? "0.88" : "0.72"}
                 stroke="var(--ink)"
                 strokeOpacity="0.5"
                 strokeWidth="0.5"
+                strokeDasharray={isPending ? "2 1.5" : undefined}
               />
               <circle
                 cx={m.x - radius * 0.3}
@@ -671,8 +678,8 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
         );
       })}
 
-      {sharedApplications.map((shared) => (
-        <g key={`shared-application-${shared.mapNos.join("-")}`} style={{ pointerEvents: "none" }}>
+      {sharedApplications.map((shared, index) => (
+        <g key={`shared-application-${shared.id || (shared.mapNos || []).join("-") || index}`} style={{ pointerEvents: "none" }}>
           <circle
             cx={shared.x}
             cy={shared.y}
@@ -689,14 +696,9 @@ function PlantMap({ map, zone, hoverPlant, setHoverPlant, onOpenZone, onOpenPlan
             fontSize={applicationBadgeFontSize}
             fill="var(--ink)"
           >{shared.application === "dropper" ? "D" : "S"}</text>
-          <text
-            x={shared.x}
-            y={shared.y + applicationBadgeRadius + 2.2}
-            textAnchor="middle"
-            fontFamily="var(--type)"
-            fontSize="2.2"
-            fill="var(--pencil)"
-          >{shared.mapNos.join(" + ")}</text>
+          {shared.label !== "" && (
+            <text x={shared.x} y={shared.y + applicationBadgeRadius + 2.2} textAnchor="middle" fontFamily="var(--type)" fontSize="2.2" fill="var(--pencil)">{shared.label || (shared.mapNos || []).join(" + ")}</text>
+          )}
         </g>
       ))}
     </svg>
