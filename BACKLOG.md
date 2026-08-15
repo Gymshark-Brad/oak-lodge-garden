@@ -1,26 +1,26 @@
 # Oak Lodge Garden — Prioritised Backlog
 
-**Updated:** 17 July 2026  
+**Updated:** 15 August 2026
 **Source:** [AUDIT.md](AUDIT.md)  
-**Audit position:** all 7 High findings are complete. The remaining remediation is 8 Medium and 5 Low findings.
+**Audit position:** all 7 High findings and the data/deployment foundation batch are complete. Remaining work focuses on resilient loading, repository cleanup and plant-identity evidence.
 
 This file turns the audit into deployable batches. The batches are ordered to remove fragile data and deployment behaviour before adding more features.
 
 ## Garden follow-up reminders
 
-- [ ] Identify and document Flower Bed 3 positions 6 and 9. They remain non-interactive map markers with irrigation shown as N/A; this is an inventory status, not a moisture-care recommendation.
+- [ ] Photograph Flower Bed 3 positions 6 and 9 in flower to confirm or refute the provisional Evergreen Candytuft and Variegated Lesser Periwinkle identifications.
 
 ## Next batch — data and deployment foundations
 
 This is the recommended next release. It is self-contained, does not need a garden decision from Brad, and makes every later batch safer.
 
-- [ ] **M-03 — Store the final Bed 2 and Bed 3 plant lists directly in `data.js`.** Remove the runtime `BED3_PLANT_NAMES` split so the source data is the data the site actually uses.
-- [ ] **M-04 — Make `data.js` the documented source of truth.** Generate `data/plants.json` and `Oak_Lodge_Garden_Plant_Guide.xlsx` from it, then refresh the README and context documentation so plant counts and locations agree.
-- [ ] **M-10 — Make deployment safer without losing the one-command workflow.** Stop automatically deleting prototype files, run the data audit before staging, reject unexpected raw/oversized files, and show the staged summary before committing.
+- [x] **M-03 — Store the final Bed 2 and Bed 3 plant lists directly in `data.js`.** The former runtime split has been removed.
+- [x] **M-04 — Make `data.js` the documented source of truth.** `data/plants.json` and `Oak_Lodge_Garden_Plant_Guide.xlsx` are generated from it by `generate-plant-exports.py`.
+- [x] **M-10 — Make deployment safer without losing the one-command workflow.** Deployment audits before staging, never deletes prototype files automatically, rejects unexpected raw/oversized additions and prints the staged summary.
 
 Acceptance checks:
 
-- The site still resolves 90 plant records, all watering entries, seasonal links, plant-map pins and image references.
+- The site still resolves 158 plant records, all watering entries, seasonal links, plant-map pins and image references.
 - No Bed 2/3 migration or post-load mutation remains.
 - Generated JSON and spreadsheet records match `data.js` for count, zone and plant name.
 - `./deploy.sh "message"` remains the only deployment command.

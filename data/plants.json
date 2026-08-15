@@ -533,6 +533,212 @@
       }
     }
   ],
+  "Bed 3": [
+    {
+      "name": "Kerria",
+      "id": "bed2-kerria",
+      "latin": "Kerria japonica",
+      "photos": [
+        "images/plants/kerria.webp",
+        "images/plants/kerria-1.webp"
+      ],
+      "position": "Position 11 — against the wall, with yellow flowers",
+      "light": "Partial shade to full sun.",
+      "water": "Low to moderate. Tolerates dry shade.",
+      "care": "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
+      "seasonal": "Bright single yellow flowers April–May; arching green stems attractive all year.",
+      "description": "Kerria is a garden shrub grown at Oak Lodge for its distinctive garden character. Bright single yellow flowers April–May.",
+      "characteristics": {
+        "sunlight": "Partial shade to full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Bright single yellow flowers April–May",
+        "water": "Low to moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Centaurea 'Snowy Owl'",
+      "id": "bed2-centaurea-snowy-owl",
+      "latin": "Centaurea montana 'Snowy Owl'",
+      "position": "Position 7 — white cornflower flowers",
+      "light": "Full sun.",
+      "water": "Low to moderate.",
+      "care": "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
+      "seasonal": "White cornflower blooms May–July; ferny silver-green foliage.",
+      "description": "Centaurea 'Snowy Owl' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. White cornflower blooms May–July.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "White cornflower blooms May–July",
+        "water": "Low to moderate",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Spiraea 'Double Play Big Bang'",
+      "id": "bed2-spiraea-double-play-big-bang",
+      "latin": "Spiraea japonica 'Double Play Big Bang'",
+      "photos": [
+        "images/june-2026-update-2/spiraea-big-bang-1.webp",
+        "images/june-2026-update-2/spiraea-big-bang-2.webp",
+        "images/june-2026-update-2/spiraea-big-bang-3.webp",
+        "images/june-2026-update-2/spiraea-big-bang-4.webp",
+        "images/june-2026-update-2/spiraea-big-bang-5.webp"
+      ],
+      "position": "Positions 2–5 against the wall — 4 plants.",
+      "light": "Full sun to partial shade.",
+      "water": "Moderate. Water well until established; tolerates dry spells after.",
+      "care": "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
+      "seasonal": "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
+      "description": "Spiraea 'Double Play Big Bang' is a garden shrub grown at Oak Lodge for its distinctive garden character. Vivid orange-red new growth in spring.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Vivid orange-red new growth in spring",
+        "water": "Moderate",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Sedum 'Rose Carpet'",
+      "id": "bed2-sedum-rose-carpet",
+      "latin": "Sedum pluricaule 'Rose Carpet'",
+      "photos": [
+        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
+        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp"
+      ],
+      "position": "Position 1 — lower edge of Bed 3",
+      "light": "Full sun to partial shade.",
+      "water": "Low once established; allow the soil surface to dry and avoid winter saturation.",
+      "care": "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
+      "seasonal": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
+      "description": "Sedum 'Rose Carpet' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Grey-green succulent leaves and dense rose-pink flower clusters in late summer.",
+      "characteristics": {
+        "sunlight": "Full sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer",
+        "water": "Low once established",
+        "habit": "Succulent groundcover",
+        "size": "Typically 5–30cm · spreading",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Weeping Cherry",
+      "id": "bed2-weeping-cherry",
+      "latin": "Prunus species",
+      "photos": [
+        "images/plants/weeping-cherry.webp",
+        "images/plants/weeping-cherry-1.webp",
+        "images/plants/weeping-cherry-2.webp"
+      ],
+      "position": "Position 10 — established weeping canopy in Bed 3",
+      "light": "Full sun.",
+      "water": "Moderate; deep watering when young.",
+      "care": "Light pruning after flowering; avoid heavy cuts.",
+      "seasonal": "Pink blossom April; green canopy summer; bare winter.",
+      "description": "Weeping Cherry is a small weeping deciduous tree grown at Oak Lodge for its distinctive garden character. Pink blossom April.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pink blossom April",
+        "water": "Moderate",
+        "habit": "Small weeping deciduous tree",
+        "size": "2.5–4m high and wide",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Spring blossom for pollinators"
+      }
+    },
+    {
+      "name": "Rose (inherited)",
+      "id": "bed3-rose-inherited",
+      "latin": "Rosa (cultivar unknown)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg"
+      ],
+      "position": "Position 8 — established by the previous owners",
+      "light": "Best in full sun; tolerates light partial shade.",
+      "water": "Water deeply during sustained dry spells, checking the soil first.",
+      "care": "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
+      "seasonal": "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
+      "description": "Rose (inherited) is a garden shrub grown at Oak Lodge for its distinctive garden character. Yellow summer flowers and developing buds photographed in August.",
+      "characteristics": {
+        "sunlight": "Best in full sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Yellow summer flowers and developing buds photographed in August",
+        "water": "Water deeply during sustained dry spells, checking the soil first",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Evergreen Candytuft — assumed",
+      "id": "bed3-evergreen-candytuft",
+      "latin": "Iberis sempervirens (assumed)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg"
+      ],
+      "position": "Position 6 — provisional identification from August photographs",
+      "light": "Full sun for compact growth and reliable flowering.",
+      "water": "Low once established; avoid stagnant winter moisture.",
+      "care": "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
+      "seasonal": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+      "description": "Evergreen Candytuft — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+      "characteristics": {
+        "sunlight": "Full sun for compact growth and reliable flowering",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct",
+        "water": "Low once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Variegated Lesser Periwinkle — assumed",
+      "id": "bed3-variegated-periwinkle",
+      "latin": "Vinca minor (variegated cultivar; assumed)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg"
+      ],
+      "position": "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
+      "light": "Partial shade to shade; tolerates sun where soil stays moist.",
+      "water": "Low to moderate once established; water in prolonged drought.",
+      "care": "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
+      "seasonal": "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
+      "description": "Variegated Lesser Periwinkle — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen cream-edged foliage.",
+      "characteristics": {
+        "sunlight": "Partial shade to shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen cream-edged foliage",
+        "water": "Low to moderate once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
   "Bed 4": [
     {
       "name": "Apple Tree",
@@ -3875,212 +4081,6 @@
         "size": "1.5–3m indoors",
         "foliage": "Evergreen arching fronds",
         "wildlife": "Indoor foliage specimen"
-      }
-    }
-  ],
-  "Bed 3": [
-    {
-      "name": "Kerria",
-      "id": "bed2-kerria",
-      "latin": "Kerria japonica",
-      "photos": [
-        "images/plants/kerria.webp",
-        "images/plants/kerria-1.webp"
-      ],
-      "position": "Against the wall — arching stems with yellow flowers",
-      "light": "Partial shade to full sun.",
-      "water": "Low to moderate. Tolerates dry shade.",
-      "care": "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
-      "seasonal": "Bright single yellow flowers April–May; arching green stems attractive all year.",
-      "description": "Kerria is a garden shrub grown at Oak Lodge for its distinctive garden character. Bright single yellow flowers April–May.",
-      "characteristics": {
-        "sunlight": "Partial shade to full sun",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Bright single yellow flowers April–May",
-        "water": "Low to moderate",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Centaurea 'Snowy Owl'",
-      "id": "bed2-centaurea-snowy-owl",
-      "latin": "Centaurea montana 'Snowy Owl'",
-      "position": "Against the wall — white cornflower flowers",
-      "light": "Full sun.",
-      "water": "Low to moderate.",
-      "care": "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
-      "seasonal": "White cornflower blooms May–July; ferny silver-green foliage.",
-      "description": "Centaurea 'Snowy Owl' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. White cornflower blooms May–July.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "White cornflower blooms May–July",
-        "water": "Low to moderate",
-        "habit": "Herbaceous perennial",
-        "size": "Typically 30–100cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Spiraea 'Double Play Big Bang'",
-      "id": "bed2-spiraea-double-play-big-bang",
-      "latin": "Spiraea japonica 'Double Play Big Bang'",
-      "photos": [
-        "images/june-2026-update-2/spiraea-big-bang-1.webp",
-        "images/june-2026-update-2/spiraea-big-bang-2.webp",
-        "images/june-2026-update-2/spiraea-big-bang-3.webp",
-        "images/june-2026-update-2/spiraea-big-bang-4.webp",
-        "images/june-2026-update-2/spiraea-big-bang-5.webp"
-      ],
-      "position": "Positions 2–5 against the wall — 4 plants.",
-      "light": "Full sun to partial shade.",
-      "water": "Moderate. Water well until established; tolerates dry spells after.",
-      "care": "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
-      "seasonal": "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
-      "description": "Spiraea 'Double Play Big Bang' is a garden shrub grown at Oak Lodge for its distinctive garden character. Vivid orange-red new growth in spring.",
-      "characteristics": {
-        "sunlight": "Full sun to partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Vivid orange-red new growth in spring",
-        "water": "Moderate",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Sedum 'Rose Carpet'",
-      "id": "bed2-sedum-rose-carpet",
-      "latin": "Sedum pluricaule 'Rose Carpet'",
-      "photos": [
-        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
-        "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp"
-      ],
-      "position": "Position 1 — lower edge of Bed 3",
-      "light": "Full sun to partial shade.",
-      "water": "Low once established; allow the soil surface to dry and avoid winter saturation.",
-      "care": "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
-      "seasonal": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
-      "description": "Sedum 'Rose Carpet' is a succulent groundcover grown at Oak Lodge for its distinctive garden character. Grey-green succulent leaves and dense rose-pink flower clusters in late summer.",
-      "characteristics": {
-        "sunlight": "Full sun to partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Grey-green succulent leaves and dense rose-pink flower clusters in late summer",
-        "water": "Low once established",
-        "habit": "Succulent groundcover",
-        "size": "Typically 5–30cm · spreading",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Weeping Cherry",
-      "id": "bed2-weeping-cherry",
-      "latin": "Prunus species",
-      "photos": [
-        "images/plants/weeping-cherry.webp",
-        "images/plants/weeping-cherry-1.webp",
-        "images/plants/weeping-cherry-2.webp"
-      ],
-      "position": "Position 10 — established weeping canopy in Bed 3",
-      "light": "Full sun.",
-      "water": "Moderate; deep watering when young.",
-      "care": "Light pruning after flowering; avoid heavy cuts.",
-      "seasonal": "Pink blossom April; green canopy summer; bare winter.",
-      "description": "Weeping Cherry is a small weeping deciduous tree grown at Oak Lodge for its distinctive garden character. Pink blossom April.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Pink blossom April",
-        "water": "Moderate",
-        "habit": "Small weeping deciduous tree",
-        "size": "2.5–4m high and wide",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Spring blossom for pollinators"
-      }
-    },
-    {
-      "name": "Rose (inherited)",
-      "id": "bed3-rose-inherited",
-      "latin": "Rosa (cultivar unknown)",
-      "photos": [
-        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
-        "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
-        "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg"
-      ],
-      "position": "Position 8 — established by the previous owners",
-      "light": "Best in full sun; tolerates light partial shade.",
-      "water": "Water deeply during sustained dry spells, checking the soil first.",
-      "care": "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
-      "seasonal": "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
-      "description": "Rose (inherited) is a garden shrub grown at Oak Lodge for its distinctive garden character. Yellow summer flowers and developing buds photographed in August.",
-      "characteristics": {
-        "sunlight": "Best in full sun",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Yellow summer flowers and developing buds photographed in August",
-        "water": "Water deeply during sustained dry spells, checking the soil first",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Evergreen Candytuft — assumed",
-      "id": "bed3-evergreen-candytuft",
-      "latin": "Iberis sempervirens (assumed)",
-      "photos": [
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg"
-      ],
-      "position": "Position 6 — provisional identification from August photographs",
-      "light": "Full sun for compact growth and reliable flowering.",
-      "water": "Low once established; avoid stagnant winter moisture.",
-      "care": "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
-      "seasonal": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
-      "description": "Evergreen Candytuft — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
-      "characteristics": {
-        "sunlight": "Full sun for compact growth and reliable flowering",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct",
-        "water": "Low once established",
-        "habit": "Herbaceous perennial",
-        "size": "Typically 30–100cm",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Variegated Lesser Periwinkle — assumed",
-      "id": "bed3-variegated-periwinkle",
-      "latin": "Vinca minor (variegated cultivar; assumed)",
-      "photos": [
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
-        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg"
-      ],
-      "position": "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
-      "light": "Partial shade to shade; tolerates sun where soil stays moist.",
-      "water": "Low to moderate once established; water in prolonged drought.",
-      "care": "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
-      "seasonal": "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
-      "description": "Variegated Lesser Periwinkle — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen cream-edged foliage.",
-      "characteristics": {
-        "sunlight": "Partial shade to shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Evergreen cream-edged foliage",
-        "water": "Low to moderate once established",
-        "habit": "Herbaceous perennial",
-        "size": "Typically 30–100cm",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],

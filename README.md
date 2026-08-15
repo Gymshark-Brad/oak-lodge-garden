@@ -1,48 +1,44 @@
 # Oak Lodge Garden
 
-Interactive garden plan for Oak Lodge, Bromsgrove.
+Personal interactive garden journal for Oak Lodge, Bromsgrove. The static React site documents the garden layout, its plant inventory, care guidance, seasonal work and monthly photographs.
 
-## Structure
+**Live site:** https://gymshark-brad.github.io/oak-lodge-garden/
 
-```
-oak-lodge-garden/
-  index.html          # Main application
-  data/
-    plants.json       # Plant care database (36 plants)
-  images/
-    garden-plan.jpg   # Original hand-drawn plan
-    may-2026/         # Monthly photo folder
-      bed1.jpg
-      bed1-close1.jpg
-      bed1-close2.jpg
-      bed2-1.jpg
-      bed2-2.jpg
-      bed2-kitchen.jpg
-      bed2-steps.jpg
-      bed2-south1.jpg
-      bed2-south2.jpg
-      bed3.jpg
-      bed3-detail.jpg
-      bed4.jpg
-      bed4-wide.jpg
-      stone-bed.jpg
-      stone-bed-wide.jpg
-      stone-bed-detail1.jpg
-      stone-bed-detail2.jpg
-      steps.jpg
-      patio.jpg
-      patio-door.jpg
-      patio-clematis.jpg
+## Data and exports
+
+`data.js` is the single source of truth for zones, plants, maps and photo galleries. The current inventory contains 158 active plant records across 31 plant groups.
+
+Regenerate the standalone inventory copies after changing plant data:
+
+```bash
+./generate-plant-exports.py
 ```
 
-## Adding monthly photos
+This rewrites:
 
-1. Create a new folder: `images/jun-2026/`
-2. Add photos using the same naming convention
-3. Update the `PHOTOS` object in `index.html` to include the new paths
+- `data/plants.json`
+- `Oak_Lodge_Garden_Plant_Guide.xlsx`
 
-## Hosting
+Generate display thumbnails after adding or changing referenced photographs:
 
-Hosted via GitHub Pages. Enable in repo Settings > Pages > Source: main branch.
+```bash
+python3 generate-thumbnails.py
+```
 
-Site will be available at: `https://<username>.github.io/oak-lodge-garden/`
+## Validation and deployment
+
+Run the read-only relationship audit at any time:
+
+```bash
+./audit-data.js "$PWD"
+```
+
+Deployment remains one command:
+
+```bash
+./deploy.sh "short description of the change"
+```
+
+The deployment script runs the audit, stages the change, blocks unexpected raw or oversized new files, shows the staged summary, checks whether the garden journal needs updating, then commits and pushes to GitHub Pages.
+
+The application deliberately has no npm or build step. React and Babel are loaded as browser scripts, and all project data is stored in static JavaScript files.

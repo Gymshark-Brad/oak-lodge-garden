@@ -6,14 +6,15 @@
 
 ## Remediation status
 
-Updated 17 July 2026 after the audit remediation work:
+Updated 15 August 2026 after the latest remediation work:
 
 - **Completed and deployed:** H-01–H-07.
 - **Completed in the current accessibility/polish batch:** M-01, M-02, M-07, M-09, L-01, L-02 and L-03.
 - **Completed in the current image-performance batch:** M-11. The Steps and Patio Lounge photo folios are now reachable from the plan.
 - **Completed in the current planning batch:** L-08. `BACKLOG.md` now turns every remaining finding into ordered batches, acceptance checks and explicit decision gates.
-- **Partially addressed:** M-03 (seasonal/watering migrations removed; the Bed 2/3 runtime split remains), M-10 (data validation added; broad staging/removal behaviour remains), M-12 (cards and galleries now use a 7.3 MiB derivative set that is 88% smaller than the referenced originals; repository originals still need cleanup) and L-09 (data integrity guard added; browser smoke testing is not yet part of deployment).
-- **Still open after this batch:** M-03–M-06, M-08, M-10, M-12–M-13, L-04–L-07 and L-09 — **8 Medium and 5 Low findings**.
+- **Completed in the data/deployment foundation batch:** M-03, M-04 and M-10. Bed 2/3 are authored directly, the JSON/XLSX exports are generated from `data.js`, and deployment now audits and reviews additions without automatic project-folder deletion.
+- **Partially addressed:** M-12 (cards and galleries use lightweight derivatives; repository originals still need cleanup) and L-09 (data integrity guard added; browser smoke testing is not yet part of deployment).
+- **Still open after this batch:** M-05, M-06, M-08, M-12, M-13, L-04–L-07 and L-09.
 
 The original audit evidence below is retained as the baseline record.
 

@@ -56,6 +56,7 @@ oak-lodge-garden/
   GardenJournal.jsx   # Visual newest-first diary of planting, moves, removals and photos
   journal-data.js     # Explicit May 2026 onward journal history and selected collage photos
   generate-thumbnails.py  # Builds fast display copies; originals remain for lightboxes
+  generate-plant-exports.py # Regenerates JSON and XLSX inventories from data.js
   BACKLOG.md          # Prioritised improvements list
   AGENTS.md           # This file
   README.md           # Basic repo info
@@ -189,8 +190,8 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 **Lower level (south, house end)**
 - Big Pot 1 — large blue glazed pot tucked into the decking corner at the foot of the steps, nested inside the Decking folio
-- Flower Bed 2 — vertical west-boundary section of the former sideways T; Weeping cherry, peony, Weigela, Silverbush, the Hebe moved from the Stone Bed and smaller perennials
-- Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Kerria, Forget-me-not, Centaurea 'Snowy Owl' and Spiraea
+- Flower Bed 2 — vertical west-boundary section of the former sideways T; Peony, Weigela, Silverbush, Hydrangea, Euonymus, inherited Rose, Butterfly Bush and smaller perennials
+- Flower Bed 3 — horizontal wall-gap arm split from Bed 2 in July 2026; Sedum 'Rose Carpet', four Spiraea, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis
 - Stone Bed (~6m × 1m) — Gravel bed with 22 mapped plants: dark Phormium, oakleaf Hydrangea, purple fountain grass, Agapanthus, hardy houseleeks and stonecrops, two Ajugas, small alpines and two tender Echeverias; the Cabbage Tree is correctly recorded in Bed 5
 - Patio (~6m × 3m) — Composite decking, Clematis montana on left house wall
 - Nemesia Pot — former Lobelia pot south of the Cercis; Nemesia 'Lady Penelope' (assumed)
@@ -209,10 +210,10 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 13 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope' and Pieris 'Forest Flame'; both Nemesias moved and Angel Wings removed August 2026 |
-| Bed 2 | 10 | Weeping Cherry, Peony, Weigela, Silverbush, Hydrangea petiolaris and the relocated Hebe; Dogwood moved out July 2026 |
-| Bed 3 | 4 | Kerria, Forget-me-not, Centaurea 'Snowy Owl', Spiraea 'Double Play Big Bang' |
-| Bed 4 | 6 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelia 'Kaleidoscope', yellow Celosia and relocated Lobelia 'Starship Scarlet Bronze Leaf' |
+| Bed 1 | 12 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope' and Pieris 'Forest Flame'; both Nemesias moved and Angel Wings removed August 2026 |
+| Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, two Geums, Dianthus, inherited Rose and Butterfly Bush |
+| Bed 3 | 8 | Sedum 'Rose Carpet', four grouped Spiraea, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis |
+| Bed 4 | 5 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelia 'Kaleidoscope' and relocated Lobelia 'Starship Scarlet Bronze Leaf' |
 | Bed 5 | 11 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, Nemesia and relocated 'Aroma Heart of Gold'; two smaller planted pots |
 | Stone Bed | 22 | Alpine and succulent planting: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, Agapanthus, purple fountain grass, two tender Echeverias and dark Phormium |
 | Patio | 2 | Clematis montana and Honeysuckle; rotten-crowned Lavender removed July 2026 and retained in the Stone Bed photo archive |
@@ -230,7 +231,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Front Bed 2 | 5 | Three Coprosmas including new ‘City Knights’, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
 | Front Bed 4 | 15 | Two climbing roses; three grouped Physocarpus entries containing four Little Devils and three newly replaced Lady in Reds; Purple Gem, Rhododendron 'Libretto', Spiraea, Polar Passion, Festuca, Photinia, Delosperma, Achillea, Dahlia 'Tampico' and Verbena 'Margaret's Memory' |
-| Front Bed 5 | 24 | Established Laurel, Choisya and climbers plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe, Salvia, moved Astrantia and Flaming Silver, Hydrangea 'Bloody Marie', Euphorbia 'Ascot Petite' and Little Devil; Honeysuckle removed August 2026 |
+| Front Bed 5 | 23 | Established Laurel, Choisya and climbers plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe, Salvia, moved Astrantia and Flaming Silver, Hydrangea 'Bloody Marie', Euphorbia 'Ascot Petite' and Little Devil; Honeysuckle removed August 2026 |
 
 Full descriptions, characteristics and care data for every plant are in the `data.js` PLANTS object.
 

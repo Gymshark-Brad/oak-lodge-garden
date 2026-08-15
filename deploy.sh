@@ -24,21 +24,53 @@ rm -f .git/index.lock
 git config --local user.name  "Bradley Gregg"
 git config --local user.email "bradg4@hotmail.com"
 
-# 4. Remove the old duplicate prototype folder if it's still around
-if git ls-files oak-lodge-garden/ | grep -q . ; then
-  echo "Removing stale duplicate oak-lodge-garden/ folder..."
-  git rm -r --quiet oak-lodge-garden
-fi
-rm -rf oak-lodge-garden 2>/dev/null || true
-
-# 5. Stage everything
+# 4. Stage everything. Deployment never deletes project files automatically;
+#    cleanup must be an explicit, separately reviewed change.
 git add -A
 
-# 6. Bail out politely if there's nothing to publish
+# 5. Bail out politely if there's nothing to publish
 if git diff --cached --quiet; then
   echo "Nothing to deploy — the site already matches your last commit."
   exit 0
 fi
+
+# 6. Reject source-camera formats and unexpectedly large new files before a
+#    commit can be created. Existing tracked originals are unaffected.
+MAX_NEW_FILE_BYTES=$((12 * 1024 * 1024))
+while IFS= read -r -d '' path; do
+  case "$path" in
+    *.heic|*.HEIC|*.heif|*.HEIF|*.dng|*.DNG|*.cr2|*.CR2|*.nef|*.NEF|*.arw|*.ARW|*.psd|*.PSD|*.tif|*.TIF|*.tiff|*.TIFF)
+      echo ""
+      echo "Deployment stopped: unexpected raw/source image: $path"
+      echo "Convert it to JPEG or WebP and keep the camera original in the external photo archive."
+      exit 1
+      ;;
+  esac
+
+  if [ -f "$path" ]; then
+    file_bytes=$(wc -c < "$path" | tr -d ' ')
+    if [ "$file_bytes" -gt "$MAX_NEW_FILE_BYTES" ]; then
+      echo ""
+      echo "Deployment stopped: new file exceeds the 12 MiB safety limit: $path"
+      echo "Size: $((file_bytes / 1024 / 1024)) MiB. Compress it or review the asset deliberately."
+      exit 1
+    fi
+  fi
+done < <(git diff --cached --name-only --diff-filter=AM -z)
+
+echo ""
+echo "Staged deployment summary"
+git status --short
+echo ""
+git diff --cached --stat
+echo ""
+echo "Staged file sizes"
+while IFS= read -r -d '' path; do
+  if [ -f "$path" ]; then
+    file_bytes=$(wc -c < "$path" | tr -d ' ')
+    printf "%8d KiB  %s\n" "$(((file_bytes + 1023) / 1024))" "$path"
+  fi
+done < <(git diff --cached --name-only --diff-filter=AM -z)
 
 # 7. Every release must consider the public garden journal. Technical-only
 #    releases can continue, but real garden, identification or photo changes

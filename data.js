@@ -713,17 +713,6 @@ window.OAK = (function () {
     ],
     "Bed 2": [
       {
-        name: "Weeping Cherry",
-        id: "bed2-weeping-cherry",
-        latin: "Prunus species",
-        photos: ["images/plants/weeping-cherry.webp", "images/plants/weeping-cherry-1.webp", "images/plants/weeping-cherry-2.webp"],
-        position: "Upper section — overhanging the wall",
-        light: "Full sun.",
-        water: "Moderate; deep watering when young.",
-        care: "Light pruning after flowering; avoid heavy cuts.",
-        seasonal: "Pink blossom April; green canopy summer; bare winter.",
-      },
-      {
         name: "Peony",
         id: "bed2-peony",
         latin: "Paeonia lactiflora",
@@ -757,17 +746,6 @@ window.OAK = (function () {
         seasonal: "White trumpet flowers May–September on silver mound.",
       },
       {
-        name: "Angel Wings",
-        id: "bed2-angel-wings",
-        latin: "Senecio candicans",
-        photos: ["images/plants/angel-wings-1.webp", "images/plants/angel-wings-2.webp", "images/plants/angel-wings-3.webp"],
-        position: "Lower, front",
-        light: "Full sun.",
-        water: "Drought-tolerant.",
-        care: "Free-draining soil; tender in hard winters.",
-        seasonal: "Silver foliage all season.",
-      },
-      {
         name: "Avens",
         id: "bed2-avens",
         latin: "Geum",
@@ -779,28 +757,6 @@ window.OAK = (function () {
         seasonal: "Orange flowers May–July, often a second flush in late summer.",
       },
       {
-        name: "Kerria",
-        id: "bed2-kerria",
-        latin: "Kerria japonica",
-        photos: ["images/plants/kerria.webp", "images/plants/kerria-1.webp"],
-        position: "Against the wall — arching stems with yellow flowers",
-        light: "Partial shade to full sun.",
-        water: "Low to moderate. Tolerates dry shade.",
-        care: "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
-        seasonal: "Bright single yellow flowers April–May; arching green stems attractive all year.",
-      },
-      {
-        name: "Forget-me-not",
-        id: "bed2-forget-me-not",
-        latin: "Myosotis",
-        photos: ["images/plants/forget-me-not.webp"],
-        position: "Lower — small blue flowers",
-        light: "Sun to partial shade.",
-        water: "Moderate.",
-        care: "Biennial; lets itself seed about. Pull spent plants in summer.",
-        seasonal: "Sky-blue clouds April–June.",
-      },
-      {
         name: "Maiden Pink",
         id: "bed2-maiden-pink",
         latin: "Dianthus deltoides 'Leuchtfunk'",
@@ -810,16 +766,6 @@ window.OAK = (function () {
         water: "Low; sharp drainage.",
         care: "Trim after flowering. Mat-forming.",
         seasonal: "Pink stars June–August.",
-      },
-      {
-        name: "Centaurea 'Snowy Owl'",
-        id: "bed2-centaurea-snowy-owl",
-        latin: "Centaurea montana 'Snowy Owl'",
-        position: "Against the wall — white cornflower flowers",
-        light: "Full sun.",
-        water: "Low to moderate.",
-        care: "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
-        seasonal: "White cornflower blooms May–July; ferny silver-green foliage.",
       },
       {
         name: "Hydrangea petiolaris",
@@ -842,6 +788,59 @@ window.OAK = (function () {
         seasonal: "Evergreen white-margined leaves year-round; pink blush to the margins in cold spells.",
       },
       {
+        name: "Rose (inherited)",
+        id: "bed2-rose-inherited",
+        latin: "Rosa (cultivar unknown)",
+        photos: [
+          "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg",
+          "images/aug-2026-photo-audit/bed2-rose-inherited-2.jpeg",
+          "images/aug-2026-photo-audit/bed2-rose-inherited-3.jpeg",
+        ],
+        position: "Position 8 — established by the previous owners",
+        light: "Best in full sun; tolerates light partial shade.",
+        water: "Water deeply during sustained dry spells, checking the soil first.",
+        care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
+        seasonal: "Summer flowers; repeat pattern and hip production still to be recorded.",
+      },
+      {
+        name: "Butterfly Bush",
+        id: "bed2-butterfly-bush",
+        latin: "Buddleja (species unknown)",
+        photos: [
+          "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg",
+          "images/aug-2026-photo-audit/bed2-butterfly-bush-2.jpeg",
+          "images/aug-2026-photo-audit/bed2-butterfly-bush-3.jpeg",
+        ],
+        position: "Position 10 — established shrub",
+        light: "Full sun for the strongest flowering.",
+        water: "Low to moderate once established; water deeply during prolonged drought.",
+        care: "Deadhead after flowering. Confirm the species before choosing a hard- or light-pruning regime.",
+        seasonal: "Fragrant summer flower panicles attract butterflies and other pollinators.",
+      },
+    ],
+    "Bed 3": [
+      {
+        name: "Kerria",
+        id: "bed2-kerria",
+        latin: "Kerria japonica",
+        photos: ["images/plants/kerria.webp", "images/plants/kerria-1.webp"],
+        position: "Position 11 — against the wall, with yellow flowers",
+        light: "Partial shade to full sun.",
+        water: "Low to moderate. Tolerates dry shade.",
+        care: "Cut flowered stems back to the base after flowering. Remove all-green suckers promptly.",
+        seasonal: "Bright single yellow flowers April–May; arching green stems attractive all year.",
+      },
+      {
+        name: "Centaurea 'Snowy Owl'",
+        id: "bed2-centaurea-snowy-owl",
+        latin: "Centaurea montana 'Snowy Owl'",
+        position: "Position 7 — white cornflower flowers",
+        light: "Full sun.",
+        water: "Low to moderate.",
+        care: "Cut back after flowering for a second flush. Short-lived perennial; divide every 2–3 years.",
+        seasonal: "White cornflower blooms May–July; ferny silver-green foliage.",
+      },
+      {
         name: "Spiraea 'Double Play Big Bang'",
         id: "bed2-spiraea-double-play-big-bang",
         latin: "Spiraea japonica 'Double Play Big Bang'",
@@ -853,15 +852,75 @@ window.OAK = (function () {
         seasonal: "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
       },
       {
-        name: "Hebe",
-        id: "stone-hebe",
-        latin: "Hebe (syn. Veronica) cultivar",
-        photos: ["images/plants/hebe.webp"],
-        position: "Lower section — moved from the Stone Bed in July 2026",
-        light: "Full sun to partial shade in a sheltered position.",
-        water: "Moderate while re-establishing; avoid winter waterlogging.",
-        care: "Lightly trim green growth after flowering and protect from prolonged hard frost or cold drying winds.",
-        seasonal: "Evergreen cream-edged foliage, often strongly flushed pink in cold weather; purple-white summer flower spikes.",
+        name: "Sedum 'Rose Carpet'",
+        id: "bed2-sedum-rose-carpet",
+        latin: "Sedum pluricaule 'Rose Carpet'",
+        photos: [
+          "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
+          "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp",
+        ],
+        position: "Position 1 — lower edge of Bed 3",
+        light: "Full sun to partial shade.",
+        water: "Low once established; allow the soil surface to dry and avoid winter saturation.",
+        care: "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
+        seasonal: "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
+      },
+      {
+        name: "Weeping Cherry",
+        id: "bed2-weeping-cherry",
+        latin: "Prunus species",
+        photos: ["images/plants/weeping-cherry.webp", "images/plants/weeping-cherry-1.webp", "images/plants/weeping-cherry-2.webp"],
+        position: "Position 10 — established weeping canopy in Bed 3",
+        light: "Full sun.",
+        water: "Moderate; deep watering when young.",
+        care: "Light pruning after flowering; avoid heavy cuts.",
+        seasonal: "Pink blossom April; green canopy summer; bare winter.",
+      },
+      {
+        name: "Rose (inherited)",
+        id: "bed3-rose-inherited",
+        latin: "Rosa (cultivar unknown)",
+        photos: [
+          "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+          "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
+          "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg",
+        ],
+        position: "Position 8 — established by the previous owners",
+        light: "Best in full sun; tolerates light partial shade.",
+        water: "Water deeply during sustained dry spells, checking the soil first.",
+        care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
+        seasonal: "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
+      },
+      {
+        name: "Evergreen Candytuft — assumed",
+        id: "bed3-evergreen-candytuft",
+        latin: "Iberis sempervirens (assumed)",
+        photos: [
+          "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
+          "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
+          "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg",
+        ],
+        position: "Position 6 — provisional identification from August photographs",
+        light: "Full sun for compact growth and reliable flowering.",
+        water: "Low once established; avoid stagnant winter moisture.",
+        care: "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
+        seasonal: "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+      },
+      {
+        name: "Variegated Lesser Periwinkle — assumed",
+        id: "bed3-variegated-periwinkle",
+        latin: "Vinca minor (variegated cultivar; assumed)",
+        photos: [
+          "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
+          "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
+          "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
+          "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+        ],
+        position: "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
+        light: "Partial shade to shade; tolerates sun where soil stays moist.",
+        water: "Low to moderate once established; water in prolonged drought.",
+        care: "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
+        seasonal: "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
       },
     ],
     "Bed 4": [
@@ -2486,17 +2545,6 @@ window.OAK = (function () {
     ],
   };
 
-  // Bed 2's former sideways-T footprint is now two separate beds. The plant
-  // records remain authored together above, then are divided here by their
-  // physical side of the split so care cards and maps stay in sync.
-  const BED3_PLANT_IDS = new Set([
-    "bed2-kerria",
-    "bed2-centaurea-snowy-owl",
-    "bed2-spiraea-double-play-big-bang",
-  ]);
-  PLANTS["Bed 3"] = PLANTS["Bed 2"].filter((plant) => BED3_PLANT_IDS.has(plant.id));
-  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !BED3_PLANT_IDS.has(plant.id) && plant.id !== "bed2-forget-me-not");
-
   // August 2026 brought a second major reshuffle. Stable plant IDs are kept
   // through each move so journal links, profiles and earlier photographs still
   // resolve to the same physical specimen.
@@ -2507,7 +2555,6 @@ window.OAK = (function () {
   };
 
   PLANTS["Bed 1"] = PLANTS["Bed 1"].filter((plant) => !["bed1-angel-wings", "bed1-wintercreeper"].includes(plant.id));
-  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => !["bed2-angel-wings", "stone-hebe"].includes(plant.id));
 
   const aromaNemesia = takePlant("Bed 1", "bed1-nemesia");
   Object.assign(aromaNemesia, {
@@ -2602,108 +2649,6 @@ window.OAK = (function () {
       water: "Keep evenly moist but well drained; use rainwater where practical.",
       care: "Grow in acidic, humus-rich soil. Mulch with leaf mould or composted bark and prune only damaged growth.",
       seasonal: "Evergreen foliage opens vivid red, softens through pink and cream, then matures green; cream spring flowers.",
-    },
-  );
-
-  PLANTS["Bed 3"].push({
-    name: "Sedum 'Rose Carpet'",
-    id: "bed2-sedum-rose-carpet",
-    latin: "Sedum pluricaule 'Rose Carpet'",
-    photos: [
-      "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp",
-      "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp",
-    ],
-    position: "Position 1 — lower edge of Bed 3",
-    light: "Full sun to partial shade.",
-    water: "Low once established; allow the soil surface to dry and avoid winter saturation.",
-    care: "Keep in sharply drained neutral to alkaline soil. Cut back after flowering and divide in spring if needed.",
-    seasonal: "Grey-green succulent leaves and dense rose-pink flower clusters in late summer; dormant in winter.",
-  });
-
-  const weepingCherry = takePlant("Bed 2", "bed2-weeping-cherry");
-  weepingCherry.position = "Position 10 — established weeping canopy in Bed 3";
-  PLANTS["Bed 3"].push(weepingCherry);
-
-  PLANTS["Bed 2"].push(
-    {
-      name: "Rose (inherited)",
-      id: "bed2-rose-inherited",
-      latin: "Rosa (cultivar unknown)",
-      photos: [
-        "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg",
-        "images/aug-2026-photo-audit/bed2-rose-inherited-2.jpeg",
-        "images/aug-2026-photo-audit/bed2-rose-inherited-3.jpeg",
-      ],
-      position: "Position 8 — established by the previous owners",
-      light: "Best in full sun; tolerates light partial shade.",
-      water: "Water deeply during sustained dry spells, checking the soil first.",
-      care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
-      seasonal: "Summer flowers; repeat pattern and hip production still to be recorded.",
-    },
-    {
-      name: "Butterfly Bush",
-      id: "bed2-butterfly-bush",
-      latin: "Buddleja (species unknown)",
-      photos: [
-        "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg",
-        "images/aug-2026-photo-audit/bed2-butterfly-bush-2.jpeg",
-        "images/aug-2026-photo-audit/bed2-butterfly-bush-3.jpeg",
-      ],
-      position: "Position 10 — established shrub",
-      light: "Full sun for the strongest flowering.",
-      water: "Low to moderate once established; water deeply during prolonged drought.",
-      care: "Deadhead after flowering. Confirm the species before choosing a hard- or light-pruning regime.",
-      seasonal: "Fragrant summer flower panicles attract butterflies and other pollinators.",
-    },
-  );
-
-  PLANTS["Bed 3"].push({
-    name: "Rose (inherited)",
-    id: "bed3-rose-inherited",
-    latin: "Rosa (cultivar unknown)",
-    photos: [
-      "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
-      "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
-      "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg",
-    ],
-    position: "Position 8 — established by the previous owners",
-    light: "Best in full sun; tolerates light partial shade.",
-    water: "Water deeply during sustained dry spells, checking the soil first.",
-    care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
-    seasonal: "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
-  });
-
-  PLANTS["Bed 3"].push(
-    {
-      name: "Evergreen Candytuft — assumed",
-      id: "bed3-evergreen-candytuft",
-      latin: "Iberis sempervirens (assumed)",
-      photos: [
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
-        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg",
-      ],
-      position: "Position 6 — provisional identification from August photographs",
-      light: "Full sun for compact growth and reliable flowering.",
-      water: "Low once established; avoid stagnant winter moisture.",
-      care: "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
-      seasonal: "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
-    },
-    {
-      name: "Variegated Lesser Periwinkle — assumed",
-      id: "bed3-variegated-periwinkle",
-      latin: "Vinca minor (variegated cultivar; assumed)",
-      photos: [
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
-        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
-        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
-      ],
-      position: "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
-      light: "Partial shade to shade; tolerates sun where soil stays moist.",
-      water: "Low to moderate once established; water in prolonged drought.",
-      care: "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
-      seasonal: "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
     },
   );
 
