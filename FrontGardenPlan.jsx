@@ -333,7 +333,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
       <div className="plan-legend">
         <div className="t-stamp">Legend</div>
         <div className="legend-grid">
-          {order.map((k) => {
+          {order.filter((k) => k !== "frontHedge").map((k) => {
             const z = Z[k];
             return (
               <button

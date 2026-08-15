@@ -39,6 +39,8 @@
       "Sedum 'Rose Carpet'": 1,
       "Rose (inherited)": 3,
       "Weeping Cherry": 3,
+      "Evergreen Candytuft — assumed": 1,
+      "Variegated Lesser Periwinkle — assumed": 2,
     },
     "Bed 4": {
       "Apple Tree": 2,
@@ -143,6 +145,7 @@
       "Bacopa": 4,
       "Trailing Lobelia": 5,
       "Trailing Verbena": 4,
+      "Petunia": 5,
     },
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
@@ -210,9 +213,6 @@
     },
     "Front Box Hedge": {
       "Wall Cotoneaster (species to confirm)": 2,
-    },
-    "Front Hedge": {
-      "Hedge (to identify)": 2,
     },
     "Front Fruit Trees": {
       "Apple Tree": 2,

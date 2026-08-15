@@ -87,7 +87,6 @@
     "frontBed5-heather-leprechaun": { name: "Heather ‘Leprechaun’ — label confirmed", latin: "Calluna vulgaris ‘Leprechaun’", status: "confirmed", basis: "Leprechaun and Calluna vulgaris are clearly printed on the photographed plant label." },
     "frontStone-hosta": { name: "Hosta ‘June’ — assumed", latin: "Hosta (Tardiana Group) ‘June’", status: "assumed", basis: "The blue-green margins, chartreuse centres and compact trough habit closely match ‘June’." },
     "frontBoxHedge-wall-cotoneaster-species-to-confirm": { name: "Cotoneaster ‘Coral Beauty’ — assumed", latin: "Cotoneaster × suecicus ‘Coral Beauty’", status: "assumed", basis: "The dense evergreen arching growth, small glossy leaves and heavy berry set fit ‘Coral Beauty’ better than deciduous C. horizontalis." },
-    "frontHedge-hedge-to-identify": { name: "Privet Hedge — assumed", latin: "Ligustrum ovalifolium", status: "assumed", basis: "A deliberately low-confidence assumption based only on the established front-garden hedge context; the next photo walk should challenge it." },
     "frontApple-apple-tree": { name: "Apple ‘Bramley’s Seedling’ — assumed", latin: "Malus domestica ‘Bramley’s Seedling’ · rootstock MM106 assumed", status: "assumed", basis: "A provisional common UK garden cooking apple and medium-vigour rootstock; fruit and graft evidence remain essential." },
 
     // Front garden — name recovered from a photographed label

@@ -41,7 +41,7 @@ window.OAK = (function () {
       dims: "≈2.8m × 0.8m",
       where: "Lower level, running east from Bed 2",
       desc:
-        "The horizontal arm split from the former T-shaped Bed 2. Sedum 'Rose Carpet', four Spiraea, Centaurea, an inherited rose, the Weeping Cherry and yellow Corydalis share the wall run; two positions still await identification.",
+        "The horizontal arm split from the former T-shaped Bed 2. Sedum 'Rose Carpet', four Spiraea, assumed Evergreen Candytuft, Centaurea, an inherited rose, assumed Variegated Lesser Periwinkle, the Weeping Cherry and yellow Corydalis share the wall run.",
       shape: { kind: "rect", x: 194, y: 333, w: 140, h: 40 },
       color: "#7f9b58",
       labelXY: [264, 351],
@@ -260,7 +260,7 @@ window.OAK = (function () {
       dims: "3 baskets",
       where: "Inside the Patio Kitchen & Lounge area",
       desc:
-        "Three hanging baskets grouped within the Patio Kitchen & Lounge area. Trailing fuchsia, bacopa, lobelia and verbena — reliable summer colour from June through to the first frosts.",
+        "Three hanging baskets grouped within the Patio Kitchen & Lounge area. Trailing fuchsia, bacopa, lobelia, verbena and petunia provide summer colour from June through to the first frosts.",
       shape: { kind: "circle", cx: 269, cy: 445, r: 11 },
       color: "#c06a2a",
       labelXY: [238, 468],
@@ -423,11 +423,11 @@ window.OAK = (function () {
       dims: "0.6m × 1.2m",
       where: "Right of the front door, in front of the skinny brick wall",
       desc:
-        "A small hedge right of the front door, sitting in front of the 1.6m skinny brick wall. Species to be identified.",
+        "A small clipped hedge right of the front door, retained as non-interactive map context rather than a plant inventory record.",
       shape: { kind: "rect", x: 502, y: 201, w: 37, h: 69 },
       color: "#4f7d45",
       labelXY: [520, 236],
-      plantKey: "Front Hedge",
+      plantKey: null,
     },
     frontApple: {
       id: "frontApple",
@@ -1663,6 +1663,22 @@ window.OAK = (function () {
         care: "Deadhead to extend flowering. Tender annual.",
         seasonal: "Clusters of flowers June–October.",
       },
+      {
+        name: "Petunia",
+        id: "baskets-petunia",
+        latin: "Petunia (cultivar unknown)",
+        photos: [
+          "images/aug-2026-photo-audit/baskets-kitchen-door-1.jpeg",
+          "images/aug-2026-photo-audit/baskets-kitchen-door-2.jpeg",
+          "images/aug-2026-photo-audit/baskets-lounge-door-1.jpeg",
+          "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg",
+        ],
+        position: "Mixed through the kitchen- and lounge-door hanging baskets",
+        light: "Full sun to light partial shade.",
+        water: "Check daily in warm weather; water thoroughly before the basket dries out.",
+        care: "Feed weekly during flowering and remove faded blooms and seed capsules. Trim bare stems back to leafy growth.",
+        seasonal: "Funnel-shaped summer flowers from June until the first frost; cultivar unresolved.",
+      },
     ],
 
     // ── Front garden ──────────────────────────────────────────────
@@ -2372,19 +2388,6 @@ window.OAK = (function () {
         seasonal: "Small leaves on herringbone stems; flowers in late spring or summer followed by red berries. Evergreen or semi-evergreen depending on species and winter.",
       },
     ],
-    "Front Hedge": [
-      {
-        name: "Hedge (to identify)",
-        id: "frontHedge-hedge-to-identify",
-        latin: "IDENTIFY",
-        photos: [], // TODO — no photo yet, next photo walk
-        position: "Right of the front door, in front of the skinny brick wall",
-        light: "TBC.",
-        water: "TBC.",
-        care: "TBC once identified.",
-        seasonal: "TBC.",
-      },
-    ],
     "Front Pots": [
       {
         name: "Mixed Pot",
@@ -2558,12 +2561,15 @@ window.OAK = (function () {
     name: "Agapanthus",
     id: "stone-agapanthus",
     latin: "Agapanthus (species and cultivar unknown)",
-    photos: [],
-    position: "Position 9 — Stone Bed; photographs still needed",
+    photos: [
+      "images/aug-2026-photo-audit/stone-agapanthus-1.jpeg",
+      "images/aug-2026-photo-audit/stone-agapanthus-2.jpeg",
+    ],
+    position: "Position 9 — Stone Bed",
     light: "Full sun for reliable flowering.",
     water: "Low once established; water during establishment and prolonged late-summer drought.",
     care: "Grow in moisture-retentive but well-drained soil. Deadhead or retain seedheads deliberately and protect the crown in severe winter weather until hardiness is known.",
-    seasonal: "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer; exact form still to be photographed.",
+    seasonal: "Strap-shaped foliage photographed in August; flower colour and exact form remain unresolved.",
   });
 
   PLANTS["Bed 1"].push(
@@ -2623,6 +2629,11 @@ window.OAK = (function () {
       name: "Rose (inherited)",
       id: "bed2-rose-inherited",
       latin: "Rosa (cultivar unknown)",
+      photos: [
+        "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg",
+        "images/aug-2026-photo-audit/bed2-rose-inherited-2.jpeg",
+        "images/aug-2026-photo-audit/bed2-rose-inherited-3.jpeg",
+      ],
       position: "Position 8 — established by the previous owners",
       light: "Best in full sun; tolerates light partial shade.",
       water: "Water deeply during sustained dry spells, checking the soil first.",
@@ -2633,6 +2644,11 @@ window.OAK = (function () {
       name: "Butterfly Bush",
       id: "bed2-butterfly-bush",
       latin: "Buddleja (species unknown)",
+      photos: [
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg",
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-2.jpeg",
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-3.jpeg",
+      ],
       position: "Position 10 — established shrub",
       light: "Full sun for the strongest flowering.",
       water: "Low to moderate once established; water deeply during prolonged drought.",
@@ -2645,12 +2661,51 @@ window.OAK = (function () {
     name: "Rose (inherited)",
     id: "bed3-rose-inherited",
     latin: "Rosa (cultivar unknown)",
+    photos: [
+      "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+      "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
+      "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg",
+    ],
     position: "Position 8 — established by the previous owners",
     light: "Best in full sun; tolerates light partial shade.",
     water: "Water deeply during sustained dry spells, checking the soil first.",
     care: "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
-    seasonal: "Summer flowers; repeat pattern and hip production still to be recorded.",
+    seasonal: "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
   });
+
+  PLANTS["Bed 3"].push(
+    {
+      name: "Evergreen Candytuft — assumed",
+      id: "bed3-evergreen-candytuft",
+      latin: "Iberis sempervirens (assumed)",
+      photos: [
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg",
+      ],
+      position: "Position 6 — provisional identification from August photographs",
+      light: "Full sun for compact growth and reliable flowering.",
+      water: "Low once established; avoid stagnant winter moisture.",
+      care: "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
+      seasonal: "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+    },
+    {
+      name: "Variegated Lesser Periwinkle — assumed",
+      id: "bed3-variegated-periwinkle",
+      latin: "Vinca minor (variegated cultivar; assumed)",
+      photos: [
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+      ],
+      position: "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
+      light: "Partial shade to shade; tolerates sun where soil stays moist.",
+      water: "Low to moderate once established; water in prolonged drought.",
+      care: "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
+      seasonal: "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
+    },
+  );
 
   PLANTS["Nemesia Pot"] = [{
     name: "Nemesia 'Lady Penelope'",
@@ -3301,7 +3356,6 @@ window.OAK = (function () {
         { src: "images/jul-2026/hosta-trough.webp",     caption: "Hosta in the stone trough" },
         { src: "images/jul-2026/entrance-troughs.webp", caption: "The stone trough by the entrance" },
       ],
-      // frontHedge — still no photos (next photo walk)
     },
     "aug-2026": {
       label: "August 2026",
@@ -3313,8 +3367,33 @@ window.OAK = (function () {
         { src: "images/aug-2026-big-changes/bed1-pieris-forest-flame-1.webp", caption: "Pieris 'Forest Flame' newly planted" },
       ],
       bed2: [
+        { src: "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg", caption: "The inherited Bed 2 Rose in August" },
+        { src: "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg", caption: "The established Butterfly Bush in Bed 2" },
+      ],
+      bed3: [
         { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' at Bed 3 position 1" },
         { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Sedum 'Rose Carpet' label" },
+        { src: "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg", caption: "Yellow flowers and buds on the inherited Bed 3 Rose" },
+        { src: "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg", caption: "Position 6 — Evergreen Candytuft, assumed" },
+        { src: "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg", caption: "Position 9 — Variegated Lesser Periwinkle, assumed" },
+      ],
+      stone: [
+        { src: "images/aug-2026-photo-audit/stone-agapanthus-1.jpeg", caption: "Agapanthus foliage at Stone Bed position 9" },
+        { src: "images/aug-2026-photo-audit/stone-agapanthus-2.jpeg", caption: "The Agapanthus in its Stone Bed setting" },
+      ],
+      bigpot1: [
+        { src: "images/aug-2026-photo-audit/big-pot-1-update-1.jpeg", caption: "Big Pot 1 in its decking-corner position" },
+        { src: "images/aug-2026-photo-audit/big-pot-1-update-2.jpeg", caption: "The mixed summer planting in Big Pot 1" },
+      ],
+      patio: [
+        { src: "images/aug-2026-photo-audit/patio-hallway-window-1.jpeg", caption: "Patio planting beneath the hallway window" },
+        { src: "images/aug-2026-photo-audit/patio-hallway-window-2.jpeg", caption: "The hallway-window edge of the patio" },
+      ],
+      baskets: [
+        { src: "images/aug-2026-photo-audit/baskets-kitchen-door-1.jpeg", caption: "Kitchen-door hanging basket in August" },
+        { src: "images/aug-2026-photo-audit/baskets-kitchen-door-2.jpeg", caption: "Petunia visible in the kitchen-door basket" },
+        { src: "images/aug-2026-photo-audit/baskets-lounge-door-1.jpeg", caption: "Lounge-door hanging basket in August" },
+        { src: "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg", caption: "Fuchsia, Verbena and Petunia in the lounge-door basket" },
       ],
       bed4: [
         { src: "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp", caption: "Lobelia 'Starship Scarlet Bronze Leaf' planted in Bed 4" },
@@ -3356,6 +3435,9 @@ window.OAK = (function () {
         { src: "images/aug-2026-small-changes/front-bed4-dahlia-tampico-1.jpeg", caption: "Dahlia Dalina Maxi 'Tampico' newly planted" },
         { src: "images/aug-2026-small-changes/front-bed4-verbena-margarets-memory-1.jpeg", caption: "Verbena 'Margaret's Memory' at the front edge" },
         { src: "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-1.jpeg", caption: "Pieris 'Polar Passion' after its move from Front Bed 5" },
+        { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-1.jpeg", caption: "Unresolved tree in Front Bed 4 — identification evidence" },
+        { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-2.jpeg", caption: "Front Bed 4 tree foliage and framework — identity unresolved" },
+        { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-3.jpeg", caption: "Wider identification view of the unresolved Front Bed 4 tree" },
       ],
       frontBed5: [
         { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The spare Little Devil newly planted in Front Bed 5" },
@@ -3750,10 +3832,10 @@ window.OAK = (function () {
       { mapNo: 3, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 34, y: 42, r: 6, hue: 330 },
       { mapNo: 4, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 48, y: 42, r: 6, hue: 330 },
       { mapNo: 5, plantId: "bed2-spiraea-double-play-big-bang", name: "Spiraea 'Double Play Big Bang'", x: 62, y: 42, r: 6, hue: 330 },
-      { mapNo: 6, name: "Identification pending · position 6", pending: true, x: 28, y: 20, r: 5, hue: 80 },
+      { mapNo: 6, plantId: "bed3-evergreen-candytuft", name: "Evergreen Candytuft — assumed", x: 28, y: 20, r: 5, hue: 80 },
       { mapNo: 7, plantId: "bed2-centaurea-snowy-owl", name: "Centaurea 'Snowy Owl'", x: 45, y: 20, r: 7, hue: 200 },
       { mapNo: 8, plantId: "bed3-rose-inherited", name: "Rose (inherited)", x: 60, y: 20, r: 6, hue: 350 },
-      { mapNo: 9, name: "Identification pending · position 9", pending: true, x: 82, y: 20, r: 10, hue: 80 },
+      { mapNo: 9, plantId: "bed3-variegated-periwinkle", name: "Variegated Lesser Periwinkle — assumed", x: 82, y: 20, r: 10, hue: 80 },
       { mapNo: 10, plantId: "bed2-weeping-cherry", name: "Weeping Cherry", x: 82, y: 42, r: 9, hue: 340 },
       { mapNo: 11, plantId: "bed2-kerria", name: "Kerria", x: 95, y: 42, r: 5, hue: 55 },
     ],
@@ -3848,6 +3930,7 @@ window.OAK = (function () {
       { name: "Bacopa", x: 52, y: 25, r: 12, hue: 200 },
       { name: "Trailing Lobelia", x: 78, y: 50, r: 12, hue: 230 },
       { name: "Trailing Verbena", x: 50, y: 75, r: 12, hue: 330 },
+      { name: "Petunia", x: 50, y: 50, r: 13, hue: 285 },
     ],
     frontpot: [
       { name: "Gazania 'Sunny Side Up'", x: 28, y: 28, r: 16, hue: 60  },
@@ -3930,9 +4013,6 @@ window.OAK = (function () {
     ],
     frontBoxHedge: [
       { name: "Wall Cotoneaster (species to confirm)", x: 50, y: 50, r: 24, hue: 130 },
-    ],
-    frontHedge: [
-      { name: "Hedge (to identify)", x: 50, y: 50, r: 22, hue: 120 },
     ],
     frontApple: [
       { name: "Apple Tree",  x: 35, y: 42, r: 24, hue: 110 },
@@ -4121,6 +4201,39 @@ window.OAK = (function () {
   PLANT_PHOTOS_BY_ID["lobeliapot-lobelia-starship-scarlet-bronze-leaf"] = augustJournal([
     { src: "images/aug-2026-big-changes/bed4-lobelia-starship-1.webp", caption: "Starship Scarlet Bronze Leaf replanted in Bed 4" },
     { src: "images/aug-2026-big-changes/bed4-lobelia-starship-2.webp", caption: "Scarlet spikes and bronze foliage in the bed" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed2-rose-inherited"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg", caption: "Established Bed 2 Rose in flower" },
+    { src: "images/aug-2026-photo-audit/bed2-rose-inherited-2.jpeg", caption: "Bed 2 Rose foliage and flowering stems" },
+    { src: "images/aug-2026-photo-audit/bed2-rose-inherited-3.jpeg", caption: "The inherited Rose in its Bed 2 setting" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed2-butterfly-bush"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg", caption: "Established Butterfly Bush in Bed 2" },
+    { src: "images/aug-2026-photo-audit/bed2-butterfly-bush-2.jpeg", caption: "Butterfly Bush foliage and flower growth" },
+    { src: "images/aug-2026-photo-audit/bed2-butterfly-bush-3.jpeg", caption: "The full shrub in its Bed 2 position" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed3-rose-inherited"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg", caption: "Yellow flowers, buds and established framework" },
+    { src: "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg", caption: "The Bed 3 Rose against the brick wall" },
+    { src: "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg", caption: "Whole-plant view of the inherited Rose" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed3-evergreen-candytuft"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg", caption: "Position 6 foliage supporting the assumed Candytuft identity" },
+    { src: "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg", caption: "Evergreen mound at Bed 3 position 6" },
+    { src: "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg", caption: "Position 6 in its wall-border context" },
+  ]);
+  PLANT_PHOTOS_BY_ID["bed3-variegated-periwinkle"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg", caption: "Variegated foliage at Bed 3 position 9" },
+    { src: "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg", caption: "Trailing stems supporting the assumed lesser periwinkle identity" },
+    { src: "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg", caption: "The position 9 groundcover beneath the Rose" },
+  ]);
+  PLANT_PHOTOS_BY_ID["stone-agapanthus"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/stone-agapanthus-1.jpeg", caption: "Agapanthus foliage at Stone Bed position 9" },
+    { src: "images/aug-2026-photo-audit/stone-agapanthus-2.jpeg", caption: "Agapanthus in the gravel-bed planting" },
+  ]);
+  PLANT_PHOTOS_BY_ID["baskets-petunia"] = augustJournal([
+    { src: "images/aug-2026-photo-audit/baskets-kitchen-door-1.jpeg", caption: "Petunia in the kitchen-door hanging basket" },
+    { src: "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg", caption: "Petunia among Fuchsia and Verbena in the lounge basket" },
   ]);
   PLANT_PHOTOS_BY_ID["house-hallway-kentia-palm"] = julyJournal([
     { src: "images/house-plants/jul-2026/kentia-palm-hallway-hero.webp", caption: "Kentia palm beside the ground-floor staircase" },

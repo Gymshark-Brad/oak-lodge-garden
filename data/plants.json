@@ -484,6 +484,11 @@
       "name": "Rose (inherited)",
       "id": "bed2-rose-inherited",
       "latin": "Rosa (cultivar unknown)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed2-rose-inherited-1.jpeg",
+        "images/aug-2026-photo-audit/bed2-rose-inherited-2.jpeg",
+        "images/aug-2026-photo-audit/bed2-rose-inherited-3.jpeg"
+      ],
       "position": "Position 8 — established by the previous owners",
       "light": "Best in full sun; tolerates light partial shade.",
       "water": "Water deeply during sustained dry spells, checking the soil first.",
@@ -505,6 +510,11 @@
       "name": "Butterfly Bush",
       "id": "bed2-butterfly-bush",
       "latin": "Buddleja (species unknown)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-1.jpeg",
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-2.jpeg",
+        "images/aug-2026-photo-audit/bed2-butterfly-bush-3.jpeg"
+      ],
       "position": "Position 10 — established shrub",
       "light": "Full sun for the strongest flowering.",
       "water": "Low to moderate once established; water deeply during prolonged drought.",
@@ -1639,17 +1649,20 @@
       "name": "Agapanthus",
       "id": "stone-agapanthus",
       "latin": "Agapanthus (species and cultivar unknown)",
-      "photos": [],
-      "position": "Position 9 — Stone Bed; photographs still needed",
+      "photos": [
+        "images/aug-2026-photo-audit/stone-agapanthus-1.jpeg",
+        "images/aug-2026-photo-audit/stone-agapanthus-2.jpeg"
+      ],
+      "position": "Position 9 — Stone Bed",
       "light": "Full sun for reliable flowering.",
       "water": "Low once established; water during establishment and prolonged late-summer drought.",
       "care": "Grow in moisture-retentive but well-drained soil. Deadhead or retain seedheads deliberately and protect the crown in severe winter weather until hardiness is known.",
-      "seasonal": "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer; exact form still to be photographed.",
-      "description": "Agapanthus is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer.",
+      "seasonal": "Strap-shaped foliage photographed in August; flower colour and exact form remain unresolved.",
+      "description": "Agapanthus is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Strap-shaped foliage photographed in August.",
       "characteristics": {
         "sunlight": "Full sun for reliable flowering",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Strap-shaped foliage with rounded blue, purple or white flowerheads expected from midsummer",
+        "flowering": "Strap-shaped foliage photographed in August",
         "water": "Low once established",
         "habit": "Herbaceous perennial",
         "size": "Typically 30–100cm",
@@ -2345,6 +2358,33 @@
         "hardiness": "Tender · protect from frost",
         "flowering": "Clusters of flowers June–October",
         "water": "Regular",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Petunia",
+      "id": "baskets-petunia",
+      "latin": "Petunia (cultivar unknown)",
+      "photos": [
+        "images/aug-2026-photo-audit/baskets-kitchen-door-1.jpeg",
+        "images/aug-2026-photo-audit/baskets-kitchen-door-2.jpeg",
+        "images/aug-2026-photo-audit/baskets-lounge-door-1.jpeg",
+        "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg"
+      ],
+      "position": "Mixed through the kitchen- and lounge-door hanging baskets",
+      "light": "Full sun to light partial shade.",
+      "water": "Check daily in warm weather; water thoroughly before the basket dries out.",
+      "care": "Feed weekly during flowering and remove faded blooms and seed capsules. Trim bare stems back to leafy growth.",
+      "seasonal": "Funnel-shaped summer flowers from June until the first frost; cultivar unresolved.",
+      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Funnel-shaped summer flowers from June until the first frost.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Funnel-shaped summer flowers from June until the first frost",
+        "water": "Check daily in warm weather",
         "habit": "Seasonal flowering plant",
         "size": "Typically 15–60cm",
         "foliage": "Seasonal foliage",
@@ -3672,30 +3712,6 @@
       }
     }
   ],
-  "Front Hedge": [
-    {
-      "name": "Hedge (to identify)",
-      "id": "frontHedge-hedge-to-identify",
-      "latin": "IDENTIFY",
-      "photos": [],
-      "position": "Right of the front door, in front of the skinny brick wall",
-      "light": "TBC.",
-      "water": "TBC.",
-      "care": "TBC once identified.",
-      "seasonal": "TBC.",
-      "description": "Hedge (to identify) is a garden shrub grown at Oak Lodge for its distinctive garden character. Seasonal interest is still being recorded.",
-      "characteristics": {
-        "sunlight": "Position to be confirmed",
-        "hardiness": "To be confirmed",
-        "flowering": "Seasonal interest is still being recorded",
-        "water": "Water needs to be confirmed",
-        "habit": "Garden shrub",
-        "size": "To be confirmed",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Foliage provides garden habitat"
-      }
-    }
-  ],
   "Front Pots": [
     {
       "name": "Mixed Pot",
@@ -3992,20 +4008,78 @@
       "name": "Rose (inherited)",
       "id": "bed3-rose-inherited",
       "latin": "Rosa (cultivar unknown)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-3.jpeg"
+      ],
       "position": "Position 8 — established by the previous owners",
       "light": "Best in full sun; tolerates light partial shade.",
       "water": "Water deeply during sustained dry spells, checking the soil first.",
       "care": "Mulch and feed in spring. Deadhead if it repeats and delay class-specific pruning until its growth habit is documented.",
-      "seasonal": "Summer flowers; repeat pattern and hip production still to be recorded.",
-      "description": "Rose (inherited) is a garden shrub grown at Oak Lodge for its distinctive garden character. Summer flowers.",
+      "seasonal": "Yellow summer flowers and developing buds photographed in August; repeat pattern and hip production still to be recorded.",
+      "description": "Rose (inherited) is a garden shrub grown at Oak Lodge for its distinctive garden character. Yellow summer flowers and developing buds photographed in August.",
       "characteristics": {
         "sunlight": "Best in full sun",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Summer flowers",
+        "flowering": "Yellow summer flowers and developing buds photographed in August",
         "water": "Water deeply during sustained dry spells, checking the soil first",
         "habit": "Garden shrub",
         "size": "Typically 0.5–2m",
         "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Evergreen Candytuft — assumed",
+      "id": "bed3-evergreen-candytuft",
+      "latin": "Iberis sempervirens (assumed)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-evergreen-candytuft-3.jpeg"
+      ],
+      "position": "Position 6 — provisional identification from August photographs",
+      "light": "Full sun for compact growth and reliable flowering.",
+      "water": "Low once established; avoid stagnant winter moisture.",
+      "care": "Grow in sharply drained soil. Trim lightly after flowering to keep the evergreen mound compact; retain the assumed qualification until flowers or a label confirm it.",
+      "seasonal": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+      "description": "Evergreen Candytuft — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct.",
+      "characteristics": {
+        "sunlight": "Full sun for compact growth and reliable flowering",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen narrow foliage with white spring flowers expected if the provisional identification is correct",
+        "water": "Low once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Variegated Lesser Periwinkle — assumed",
+      "id": "bed3-variegated-periwinkle",
+      "latin": "Vinca minor (variegated cultivar; assumed)",
+      "photos": [
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-1.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-2.jpeg",
+        "images/aug-2026-photo-audit/bed3-variegated-periwinkle-3.jpeg",
+        "images/aug-2026-photo-audit/bed3-rose-inherited-1.jpeg"
+      ],
+      "position": "Position 9 — trailing beneath the inherited Rose; provisional identification from August photographs",
+      "light": "Partial shade to shade; tolerates sun where soil stays moist.",
+      "water": "Low to moderate once established; water in prolonged drought.",
+      "care": "Trim spreading stems where they cross paths or smother neighbours. Keep the cultivar unresolved until flowers, leaf detail or a label provide stronger evidence.",
+      "seasonal": "Evergreen cream-edged foliage; violet-blue spring flowers expected if the provisional identification is correct.",
+      "description": "Variegated Lesser Periwinkle — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen cream-edged foliage.",
+      "characteristics": {
+        "sunlight": "Partial shade to shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen cream-edged foliage",
+        "water": "Low to moderate once established",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
         "wildlife": "Flowers visited by pollinators"
       }
     }
