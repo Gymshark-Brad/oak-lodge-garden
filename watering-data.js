@@ -176,7 +176,7 @@
       "Pieris 'Polar Passion'": 3,
       "Dahlia 'Tampico'": 4,
       "Verbena 'Margaret's Memory'": 3,
-      "Delosperma 'Ice Cream Mix'": 1,
+      "Calluna Trio Mix (3 plants)": 3,
       "Achillea": 2,
     },
     "Front Bed 5": {
@@ -745,7 +745,7 @@
         "frontBed5-pieris-polar-passion": "dropper",
         "frontBed4-dahlia-tampico": "sprinkler",
         "frontBed4-verbena-margarets-memory": "dropper",
-        "frontBed4-delosperma-ice-cream-mix": "dropper",
+        "frontBed4-calluna-trio-mix": "sprinkler",
         "bed4-achillea": "dropper",
       },
       applications: {
@@ -762,7 +762,7 @@
         "Pieris 'Polar Passion'": "dropper",
         "Dahlia 'Tampico'": "sprinkler",
         "Verbena 'Margaret's Memory'": "dropper",
-        "Delosperma 'Ice Cream Mix'": "dropper",
+        "Calluna Trio Mix (3 plants)": "sprinkler",
         Achillea: "dropper",
       },
       extras: [],

@@ -339,7 +339,8 @@
       "id": "bed2-weigela",
       "latin": "Weigela florida",
       "photos": [
-        "images/plants/weigela.webp"
+        "images/plants/weigela.webp",
+        "images/aug-2026-small-changes/bed2-weigela-prism-magic-carpet-label.jpeg"
       ],
       "position": "Mid section",
       "light": "Full sun.",
@@ -3228,28 +3229,29 @@
       }
     },
     {
-      "name": "Delosperma 'Ice Cream Mix'",
-      "id": "frontBed4-delosperma-ice-cream-mix",
-      "latin": "Delosperma cooperi Ice Cream Series",
+      "name": "Calluna Trio Mix (3 plants)",
+      "id": "frontBed4-calluna-trio-mix",
+      "latin": "Calluna vulgaris mixed cultivars",
       "photos": [
-        "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp",
-        "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp"
+        "images/aug-2026-small-changes/front-bed4-calluna-trio-1.jpeg",
+        "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg",
+        "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg"
       ],
-      "position": "Sunny open ground near the established canopy — added July 2026",
-      "light": "Full sun; flowers open best in bright, warm conditions.",
-      "water": "Drought-tolerant once established. Water sparingly and never leave the crown in wet winter soil.",
-      "care": "Sharp drainage is essential. Avoid rich feeding, trim away damaged growth in spring and protect from prolonged severe frost if the soil is wet.",
-      "seasonal": "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
-      "description": "Delosperma 'Ice Cream Mix' is a mat-forming evergreen succulent grown at Oak Lodge for its distinctive garden character. A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
+      "position": "Former Delosperma pocket near the established canopy — planted August 2026",
+      "light": "Full sun in an open position.",
+      "water": "Sprinkler supplied; keep the root zone moist while establishing but never waterlogged.",
+      "care": "Keep the soil acidic and free draining. Trim lightly after flowering, never back into bare old wood, and keep fallen leaves clear of the crowns.",
+      "seasonal": "A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
+      "description": "Calluna Trio Mix (3 plants) is a low evergreen heather group grown at Oak Lodge for its distinctive garden character. A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H4 · hardy with sharp drainage",
-        "flowering": "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn",
-        "water": "Drought-tolerant once established",
-        "habit": "Mat-forming evergreen succulent",
-        "size": "About 10cm high · 30–50cm spread",
-        "foliage": "Evergreen",
-        "wildlife": "Daisy flowers visited by pollinators"
+        "sunlight": "Full sun in an open position",
+        "hardiness": "H5–H6 · hardy in most UK gardens",
+        "flowering": "A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn",
+        "water": "Sprinkler supplied",
+        "habit": "Low evergreen heather group",
+        "size": "About 25–45cm high and wide per plant",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Late-season flowers visited by pollinators"
       }
     },
     {

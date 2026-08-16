@@ -371,7 +371,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above three clustered groups of burgundy Physocarpus, the moved Purple Gem, Rhododendron 'Libretto', Pieris 'Polar Passion', gold Spiraea and blue Festuca. Dahlia 'Tampico' and Verbena 'Margaret's Memory' add late colour beside Achillea and Delosperma; the established Photinia canopy remains at the return-wall side.",
+        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above three clustered groups of burgundy Physocarpus, the moved Purple Gem, Rhododendron 'Libretto', Pieris 'Polar Passion', gold Spiraea and blue Festuca. Dahlia 'Tampico', Verbena 'Margaret's Memory' and a three-plant Calluna mix add late colour beside Achillea; the established Photinia canopy remains at the return-wall side.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -727,7 +727,10 @@ window.OAK = (function () {
         name: "Weigela",
         id: "bed2-weigela",
         latin: "Weigela florida",
-        photos: ["images/plants/weigela.webp"],
+        photos: [
+          "images/plants/weigela.webp",
+          "images/aug-2026-small-changes/bed2-weigela-prism-magic-carpet-label.jpeg",
+        ],
         position: "Mid section",
         light: "Full sun.",
         water: "Moderate.",
@@ -2080,18 +2083,19 @@ window.OAK = (function () {
         seasonal: "Lilac-pink flowers with dark eyes from spring into late autumn; semi-evergreen in a sheltered winter.",
       },
       {
-        name: "Delosperma 'Ice Cream Mix'",
-        id: "frontBed4-delosperma-ice-cream-mix",
-        latin: "Delosperma cooperi Ice Cream Series",
+        name: "Calluna Trio Mix (3 plants)",
+        id: "frontBed4-calluna-trio-mix",
+        latin: "Calluna vulgaris mixed cultivars",
         photos: [
-          "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp",
-          "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp",
+          "images/aug-2026-small-changes/front-bed4-calluna-trio-1.jpeg",
+          "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg",
+          "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg",
         ],
-        position: "Sunny open ground near the established canopy — added July 2026",
-        light: "Full sun; flowers open best in bright, warm conditions.",
-        water: "Drought-tolerant once established. Water sparingly and never leave the crown in wet winter soil.",
-        care: "Sharp drainage is essential. Avoid rich feeding, trim away damaged growth in spring and protect from prolonged severe frost if the soil is wet.",
-        seasonal: "A low evergreen succulent mat with mixed pink, orange and yellow daisy flowers from summer into autumn.",
+        position: "Former Delosperma pocket near the established canopy — planted August 2026",
+        light: "Full sun in an open position.",
+        water: "Sprinkler supplied; keep the root zone moist while establishing but never waterlogged.",
+        care: "Keep the soil acidic and free draining. Trim lightly after flowering, never back into bare old wood, and keep fallen leaves clear of the crowns.",
+        seasonal: "A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
       },
     ],
     "Front Bed 5": [
@@ -2764,7 +2768,7 @@ window.OAK = (function () {
     "Verbena 'Margaret's Memory'": { habit: "Bushy spreading semi-evergreen perennial", size: "10–50cm high and wide", hardiness: "H4 · hardy through most UK winters", wildlife: "Long-season nectar for pollinators" },
     "Hydrangea 'Bloody Marie'": { habit: "Compact deciduous flowering shrub", size: "About 1.2–1.5m high · around 0.8–1m spread", hardiness: "H5 · hardy in most UK gardens", wildlife: "Flower panicles visited by pollinators" },
     "Euphorbia 'Ascot Petite'": { habit: "Compact evergreen perennial", size: "About 30–40cm high and wide", hardiness: "Hardy in most UK gardens with sharp drainage", wildlife: "Spring flowers visited by pollinators" },
-    "Delosperma 'Ice Cream Mix'": { habit: "Mat-forming evergreen succulent", size: "About 10cm high · 30–50cm spread", hardiness: "H4 · hardy with sharp drainage", wildlife: "Daisy flowers visited by pollinators" },
+    "Calluna Trio Mix (3 plants)": { habit: "Low evergreen heather group", size: "About 25–45cm high and wide per plant", hardiness: "H5–H6 · hardy in most UK gardens", wildlife: "Late-season flowers visited by pollinators" },
     "Heather 'Bell's Extra Special'": { habit: "Low evergreen winter heath", size: "15–25cm high · 30–45cm spread", hardiness: "H6 · fully hardy", wildlife: "Winter nectar for pollinators" },
     "Heather 'Tib'": { habit: "Compact evergreen heather", size: "30–45cm high and wide", hardiness: "H7 · exceptionally hardy", wildlife: "Late nectar for pollinators" },
     "Bell Heather 'Providence' (2 plants)": { habit: "Low evergreen bell heather", size: "30–45cm high and wide", hardiness: "H5 · hardy in most UK gardens", wildlife: "Long-lasting nectar for pollinators" },
@@ -3197,8 +3201,9 @@ window.OAK = (function () {
       frontBed4: [
         { src: "images/jul-2026/front-260725-bed-3-4-5-pano.webp", caption: "Panorama across Front Beds 3, 4 and 5" },
         { src: "images/jul-2026/front-260725-bed-4-5-pano.webp", caption: "Panorama across Front Beds 4 and 5" },
-        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp", caption: "Delosperma 'Ice Cream Mix' newly planted" },
-        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp", caption: "Delosperma mixed daisy flowers" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-1.jpeg", caption: "Calluna Trio Mix planted in the former Delosperma pocket" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg", caption: "Mixed pink, white and lime-green Calluna flowers" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg", caption: "The three Calluna plants together" },
         { src: "images/jul-2026/front-bed-4-roses.jpeg", caption: "Front Bed 4 cleared, composted and planted with the two climbing roses" },
         { src: "images/jul-2026/rose-the-pilgrim.jpeg", caption: "The Pilgrim — soft yellow David Austin climbing rose" },
         { src: "images/jul-2026/rose-the-generous-gardener.jpeg", caption: "The Generous Gardener — pale pink David Austin climbing rose" },
@@ -3380,9 +3385,16 @@ window.OAK = (function () {
         { src: "images/aug-2026-small-changes/front-bed4-dahlia-tampico-1.jpeg", caption: "Dahlia Dalina Maxi 'Tampico' newly planted" },
         { src: "images/aug-2026-small-changes/front-bed4-verbena-margarets-memory-1.jpeg", caption: "Verbena 'Margaret's Memory' at the front edge" },
         { src: "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-1.jpeg", caption: "Pieris 'Polar Passion' after its move from Front Bed 5" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-1.jpeg", caption: "Calluna Trio Mix planted in the former Delosperma pocket" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg", caption: "Pink, white and lime-green Calluna flowers" },
+        { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg", caption: "The three Calluna plants together" },
         { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-1.jpeg", caption: "Unresolved tree in Front Bed 4 — identification evidence" },
         { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-2.jpeg", caption: "Front Bed 4 tree foliage and framework — identity unresolved" },
         { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-3.jpeg", caption: "Wider identification view of the unresolved Front Bed 4 tree" },
+      ],
+      frontBed4Archive: [
+        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp", caption: "Delosperma 'Ice Cream Mix' before its August 2026 removal" },
+        { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp", caption: "Delosperma mixed daisy flowers before removal" },
       ],
       frontBed5: [
         { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The spare Little Devil newly planted in Front Bed 5" },
@@ -3919,7 +3931,7 @@ window.OAK = (function () {
       { name: "Festuca 'Elijah Blue' (3 plants)", x: 32, y: 61, r: 12, hue: 215 },
       { name: "Dahlia 'Tampico'", x: 66, y: 69, r: 12, hue: 5 },
       { name: "Verbena 'Margaret's Memory'", x: 50, y: 82, r: 7, hue: 330 },
-      { name: "Delosperma 'Ice Cream Mix'", x: 82, y: 72, r: 7, hue: 20 },
+      { plantId: "frontBed4-calluna-trio-mix", name: "Calluna Trio Mix (3 plants)", x: 82, y: 72, r: 8, hue: 320 },
       { name: "Pieris 'Polar Passion'", x: 82, y: 56, r: 10, hue: 345 },
       { name: "The Generous Gardener", x: 91, y: 88, r: 11, hue: 345 },
       { name: "Achillea", x: 29, y: 78, r: 9, hue: 15 },
@@ -4218,6 +4230,14 @@ window.OAK = (function () {
   PLANT_PHOTOS_BY_ID["frontBed5-pieris-polar-passion"].unshift({ month: "aug-2026", label: "August 2026", photos: [{ src: "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-1.jpeg", caption: "Moved into Front Bed 4" }] });
   PLANT_PHOTOS_BY_ID["frontBed4-dahlia-tampico"] = [{ month: "aug-2026", label: "August 2026", photos: [{ src: "images/aug-2026-small-changes/front-bed4-dahlia-tampico-1.jpeg", caption: "Dahlia 'Tampico' newly planted" }] }];
   PLANT_PHOTOS_BY_ID["frontBed4-verbena-margarets-memory"] = [{ month: "aug-2026", label: "August 2026", photos: [{ src: "images/aug-2026-small-changes/front-bed4-verbena-margarets-memory-1.jpeg", caption: "Verbena 'Margaret's Memory' newly planted" }] }];
+  PLANT_PHOTOS_BY_ID["frontBed4-calluna-trio-mix"] = [{ month: "aug-2026", label: "August 2026", photos: [
+    { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-1.jpeg", caption: "Calluna Trio Mix planted in the former Delosperma pocket" },
+    { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg", caption: "Pink, white and lime-green Calluna flowers" },
+    { src: "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg", caption: "Three Calluna plants established together" },
+  ] }];
+  PLANT_PHOTOS_BY_ID["bed2-weigela"] = [{ month: "aug-2026", label: "August 2026 · label confirmed", photos: [
+    { src: "images/aug-2026-small-changes/bed2-weigela-prism-magic-carpet-label.jpeg", caption: "Willowbrook label confirming Weigela ‘Prism Magic Carpet’" },
+  ] }];
   PLANT_PHOTOS_BY_ID["frontBed5-hydrangea-bloody-marie"] = [{ month: "aug-2026", label: "August 2026", photos: [{ src: "images/aug-2026-small-changes/front-bed5-hydrangea-bloody-marie-1.jpeg", caption: "Hydrangea 'Bloody Marie' newly planted" }] }];
   PLANT_PHOTOS_BY_ID["frontBed5-euphorbia-ascot-petite"] = [{ month: "aug-2026", label: "August 2026", photos: [{ src: "images/aug-2026-small-changes/front-bed5-euphorbia-ascot-petite-1.jpeg", caption: "Euphorbia 'Ascot Petite' newly planted" }] }];
   PLANT_PHOTOS_BY_ID["frontBed5-pittosporum-tom-thumb"] = julyJournal([
