@@ -157,16 +157,16 @@ window.OAK = (function () {
     },
     lobeliapot: {
       id: "lobeliapot",
-      title: "Nemesia Pot",
+      title: "Skimmia Pot",
       badge: "Glazed pot",
       dims: "Medium blue pot",
       where: "Immediately south of the Cercis Pot",
       desc:
-        "The former Lobelia Pot now sits just south of the Cercis and holds the pink-and-white Nemesia that was missed from the original Bed 1 inventory. Its best-fit identity is recorded cautiously until a label is found.",
+        "The former Nemesia Pot now sits just south of the Cercis and holds Skimmia japonica 'Cleopatra' with trailing Hedera helix 'Yellow Ripple'.",
       shape: { kind: "circle", cx: 354, cy: 265, r: 13 },
       color: "#2b5c9e",
       labelXY: [355, 291],
-      plantKey: "Nemesia Pot",
+      plantKey: "Skimmia Pot",
       isPot: true,
     },
     bed23wallpot: {
@@ -371,7 +371,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above three clustered groups of burgundy Physocarpus, the moved Purple Gem, Rhododendron 'Libretto', Pieris 'Polar Passion', gold Spiraea and blue Festuca. Dahlia 'Tampico', Verbena 'Margaret's Memory' and a three-plant Calluna mix add late colour beside Achillea; the established Photinia canopy remains at the return-wall side.",
+        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above two mixed three-plant Physocarpus clusters, the moved Purple Gem, Rhododendron 'Libretto', Azaleas 'Silvester' and 'Lotte', Pieris 'Polar Passion' and blue Festuca. Nemesia 'Lady Penelope', Dahlia 'Tampico', Verbena 'Margaret's Memory' and a three-plant Calluna mix add late colour beside Achillea; the established Photinia canopy remains at the return-wall side.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -853,6 +853,20 @@ window.OAK = (function () {
         water: "Moderate. Water well until established; tolerates dry spells after.",
         care: "Prune hard in early spring to encourage bright new foliage and flowers. Remove spent flower heads. Hardy shrub.",
         seasonal: "Vivid orange-red new growth in spring; bright pink flowers June–August; foliage turns orange-red in autumn.",
+      },
+      {
+        name: "Magic Carpet",
+        id: "frontBed4-magic-carpet",
+        latin: "Spiraea japonica 'Walbuma' (Magic Carpet)",
+        photos: [
+          "images/aug-2026-pot-update/bed3-spiraea-magic-carpet-1.jpeg",
+          "images/jul-2026/front-bed-4-magic-carpet.jpeg",
+        ],
+        position: "Added to the Spiraea line in August 2026 after moving from Front Bed 4",
+        light: "Full sun to light partial shade; brighter light gives the strongest gold foliage.",
+        water: "Sprinkler supplied. Keep evenly moist while re-establishing, then water during prolonged dry spells.",
+        care: "Lightly trim after flowering or renovate immediately after flowering if it becomes overgrown. Keep its lower golden outline distinct from the four Double Play Big Bang shrubs.",
+        seasonal: "Red new leaves mature gold, with deep-pink summer flowers and warm autumn colour; deciduous in winter.",
       },
       {
         name: "Sedum 'Rose Carpet'",
@@ -1944,59 +1958,63 @@ window.OAK = (function () {
         seasonal: "Pale pink, cup-shaped flowers fading almost white, with a strong old-rose and musk fragrance; repeat flowers June–autumn.",
       },
       {
-        name: "Physocarpus Cluster 1 (2 × Little Devil)",
+        name: "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red)",
         id: "frontBed4-physocarpus-cluster-1",
-        latin: "Physocarpus opulifolius 'Little Devil'",
+        latin: "Physocarpus opulifolius 'Little Devil' & 'Lady in Red'",
         photos: [
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
           "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
           "images/jul-2026/front-bed-4-little-devil-1.jpeg",
           "images/jul-2026/front-bed-4-little-devil-2.jpeg",
         ],
-        position: "Cluster 1 — two retained Little Devils grouped together in August 2026",
+        position: "Cluster 1 — two Little Devils with one Lady in Red moved from Cluster 3 in August 2026",
         light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water both root balls deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Treat as two compact deciduous ninebarks. Keep each crown distinct and remove a few oldest stems at ground level only once established; avoid clipping the cluster into one solid ball.",
-        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+        water: "Sprinkler supplied. Check all three root balls through establishment and water deeply in dry spells.",
+        care: "Keep all three crowns distinct, with the taller Lady in Red rising through the two compact Little Devils. Renew individual shrubs from the base only when mature and congested.",
+        seasonal: "Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer; bare in winter.",
       },
       {
-        name: "Physocarpus Cluster 2 (2 × Lady in Red)",
+        name: "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil)",
         id: "frontBed4-physocarpus-cluster-2",
-        latin: "Physocarpus opulifolius 'Lady in Red'",
+        latin: "Physocarpus opulifolius 'Lady in Red' & 'Little Devil'",
         photos: [
           "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
           "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
         ],
-        position: "Cluster 2 — two new Lady in Reds added August 2026",
+        position: "Cluster 2 — two Lady in Reds with one surviving Little Devil moved from Cluster 3 in August 2026",
         light: "Sun to partial shade; best foliage colour in brighter light.",
-        water: "Water both root balls deeply in dry spells while establishing; afterwards they are fairly drought tolerant.",
-        care: "Treat as two deciduous ninebarks. Keep their layered outlines distinct and remove a few oldest stems at the base in late winter only when congestion develops.",
-        seasonal: "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
+        water: "Sprinkler supplied. Check all three root balls through establishment and water deeply in dry spells.",
+        care: "Keep the compact Little Devil readable against the two taller Lady in Reds. Remove a few oldest stems at the base only when congestion develops.",
+        seasonal: "Red, bronze and burgundy foliage spring to autumn with pink flower clusters in summer; bare in winter.",
       },
       {
-        name: "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)",
-        id: "frontBed4-physocarpus-cluster-3",
-        latin: "Physocarpus opulifolius 'Little Devil' & 'Lady in Red'",
+        name: "Azalea japonica 'Silvester'",
+        id: "frontBed4-azalea-silvester",
+        latin: "Rhododendron 'Sylvester'",
         photos: [
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
-          "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg",
+          "images/aug-2026-pot-update/front-bed4-azalea-silvester-1.jpeg",
+          "images/aug-2026-pot-update/front-bed4-azalea-silvester-2.jpeg",
         ],
-        position: "Cluster 3 — two new Little Devils with one new Lady in Red, added August 2026",
-        light: "Sun to partial shade; brighter light strengthens the burgundy and red-bronze foliage.",
-        water: "Water all three root balls deeply in dry spells while establishing; afterwards the cluster is fairly drought tolerant.",
-        care: "Keep the two lower Little Devils and taller Lady in Red readable as a layered trio. Renew individual shrubs from the base only when mature and congested; do not shear the cluster into one mass.",
-        seasonal: "Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer; bare in winter.",
+        position: "Location 6 — former Physocarpus Cluster 3 position, added August 2026",
+        light: "Partial or dappled shade in a sheltered position.",
+        water: "Dropper supplied. Keep its shallow acidic root zone evenly moist, preferably with rainwater.",
+        care: "Grow shallowly in acidic, humus-rich soil and mulch with leaf mould. Deadhead carefully after flowering and prune only damaged or wayward growth.",
+        seasonal: "Compact evergreen foliage with purple-pink flowers in late spring.",
       },
       {
-        name: "Magic Carpet",
-        id: "frontBed4-magic-carpet",
-        latin: "Spiraea japonica 'Magic Carpet'",
-        photos: ["images/jul-2026/front-bed-4-magic-carpet.jpeg"],
-        position: "Bright open centre, above the stepping stones",
-        light: "Sun to light partial shade; brighter light gives the strongest gold foliage.",
-        water: "Water regularly during its first summer, then only in prolonged dry spells.",
-        care: "Lightly trim after flowering or cut back by about a third in early spring to encourage colourful new growth.",
-        seasonal: "Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour; deciduous in winter.",
+        name: "Nemesia 'Lady Penelope'",
+        id: "lobeliapot-nemesia-lady-penelope",
+        latin: "Nemesia 'Lady Penelope' (best-fit identification)",
+        photos: [
+          "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-1.jpeg",
+          "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-2.jpeg",
+          "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp",
+        ],
+        position: "Location 7 — moved from the former Nemesia Pot in August 2026",
+        light: "Full sun to light partial shade in a sheltered position.",
+        water: "Dropper supplied. Keep evenly moist while flowering but never waterlogged.",
+        care: "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
+        seasonal: "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
       },
       {
         name: "Purple Gem",
@@ -2414,15 +2432,20 @@ window.OAK = (function () {
         seasonal: "Compact upright growth to around 60cm with rich blueberry-purple flowers and near-black calyces from summer into autumn.",
       },
       {
-        name: "Little Devil",
-        id: "frontBed5-little-devil",
-        latin: "Physocarpus opulifolius 'Little Devil'",
-        photos: ["images/aug-2026-front-garden/front-bed5-little-devil.jpeg"],
-        position: "Spare compact ninebark added August 2026",
-        light: "Sun to partial shade; foliage is darkest with good light.",
-        water: "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-        care: "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
-        seasonal: "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
+        name: "Fern 'Jurassic Gold'",
+        id: "frontBed5-fern-jurassic-gold",
+        latin: "Dryopteris wallichiana 'Hollasic' (Jurassic Gold)",
+        photos: [
+          "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-1.jpeg",
+          "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-2.jpeg",
+          "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-3.jpeg",
+          "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-4.jpeg",
+        ],
+        position: "Location 13 — replaced the failed Little Devil in August 2026",
+        light: "Full shade in a sheltered position.",
+        water: "Shares the existing sprinkler with location 10. Keep moist but well drained while establishing.",
+        care: "Mulch well over moist soil, keeping the crown clear. Remove dead or damaged fronds as needed and protect new croziers from late frost and slugs.",
+        seasonal: "Rose-tinted young fronds mature through bright gold to green; deciduous to semi-evergreen depending on winter.",
       },
     ],
     "Front Stone Trough": [
@@ -2589,6 +2612,21 @@ window.OAK = (function () {
     ],
   });
   PLANTS["Front Bed 4"].push(achilleaSummerBerries);
+  PLANTS["Front Bed 4"].push({
+    name: "Azalea japonica 'Lotte'",
+    id: "frontBed4-azalea-lotte",
+    latin: "Rhododendron 'Lotte'",
+    photos: [
+      "images/aug-2026-pot-update/front-bed4-azalea-lotte-1.jpeg",
+      "images/aug-2026-pot-update/front-bed4-azalea-lotte-2.jpeg",
+      "images/aug-2026-pot-update/front-bed4-azalea-lotte-3.jpeg",
+    ],
+    position: "Location 16 — new position beside the existing Front Bed 4 planting, added August 2026",
+    light: "Partial or dappled shade in a sheltered position.",
+    water: "Dropper supplied. Keep its shallow acidic root zone evenly moist, preferably with rainwater.",
+    care: "Grow shallowly in acidic, humus-rich soil and mulch with leaf mould. Deadhead carefully after flowering and prune only damaged growth.",
+    seasonal: "Compact glossy evergreen foliage with deep-pink flowers in late spring.",
+  });
 
   const starshipLobelia = takePlant("Lobelia Pot", "lobeliapot-lobelia-starship-scarlet-bronze-leaf");
   Object.assign(starshipLobelia, {
@@ -2656,20 +2694,36 @@ window.OAK = (function () {
     },
   );
 
-  PLANTS["Nemesia Pot"] = [{
-    name: "Nemesia 'Lady Penelope'",
-    id: "lobeliapot-nemesia-lady-penelope",
-    latin: "Nemesia 'Lady Penelope' (best-fit identification)",
-    photos: [
-      "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp",
-      "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp",
-    ],
-    position: "Single specimen in the former Lobelia Pot — moved from Bed 1 in August 2026",
-    light: "Full sun to light partial shade in a sheltered position.",
-    water: "Keep the container evenly moist but never waterlogged.",
-    care: "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
-    seasonal: "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
-  }];
+  PLANTS["Skimmia Pot"] = [
+    {
+      name: "Skimmia 'Cleopatra'",
+      id: "lobeliapot-skimmia-cleopatra",
+      latin: "Skimmia japonica 'Snep24' (Cleopatra)",
+      photos: [
+        "images/aug-2026-pot-update/skimmia-pot-1.jpeg",
+        "images/aug-2026-pot-update/skimmia-pot-2.jpeg",
+      ],
+      position: "Evergreen centrepiece in the renamed Skimmia Pot — added August 2026",
+      light: "Light to full shade, sheltered from harsh sun and drying wind.",
+      water: "Keep the shared compost consistently moist but well drained, preferably using rainwater.",
+      care: "Mulch or top-dress with leaf mould or ericaceous compost. Prune only lightly after flowering and keep ivy stems away from its crown.",
+      seasonal: "Glossy evergreen foliage, fragrant ivory spring flowers and long-lasting red berries from autumn into winter.",
+    },
+    {
+      name: "Hedera helix 'Yellow Ripple'",
+      id: "lobeliapot-hedera-yellow-ripple",
+      latin: "Hedera helix 'Golden Starlight' (Yellow Ripple)",
+      photos: [
+        "images/aug-2026-pot-update/skimmia-pot-1.jpeg",
+        "images/aug-2026-pot-update/skimmia-pot-2.jpeg",
+      ],
+      position: "Trailing over the rim of the Skimmia Pot — added August 2026",
+      light: "Full shade to partial shade; shelter pale margins from scorching sun.",
+      water: "Share the Skimmia's evenly moist, well-drained compost; check beneath the foliage before watering.",
+      care: "Trim to keep the ivy within the pot and away from the Skimmia crown. Remove any all-green reverted shoots at their origin.",
+      seasonal: "Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour.",
+    },
+  ];
 
   PLANTS["Bed 2/3 Wall Pot"] = [
     {
@@ -2884,6 +2938,7 @@ window.OAK = (function () {
         { src: "images/may-2026/bed2-6.webp",      caption: "From patio" },
       ],
       bed3: [
+        { src: "images/aug-2026-pot-update/bed3-spiraea-magic-carpet-1.jpeg", caption: "Magic Carpet newly added to the Bed 3 Spiraea line" },
         { src: "images/may-2026/bed2-kitchen.jpg", caption: "Horizontal border from the patio kitchen" },
         { src: "images/may-2026/bed2-steps.jpg",   caption: "Horizontal border from the steps" },
         { src: "images/may-2026/bed2-south1.jpg",  caption: "Wall-gap border, south angle" },
@@ -3354,8 +3409,8 @@ window.OAK = (function () {
         { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-2.webp", caption: "Both Nemesia plants sharing the mixed pot" },
       ],
       lobeliapot: [
-        { src: "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp", caption: "The former Lobelia Pot now planted with the pink-and-white Nemesia" },
-        { src: "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp", caption: "Nemesia 'Lady Penelope' — best-fit identification" },
+        { src: "images/aug-2026-pot-update/skimmia-pot-1.jpeg", caption: "The renamed Skimmia Pot with Skimmia 'Cleopatra' and Yellow Ripple ivy" },
+        { src: "images/aug-2026-pot-update/skimmia-pot-2.jpeg", caption: "Red Skimmia berries above the trailing variegated ivy" },
       ],
       bed23wallpot: [
         { src: "images/aug-2026-big-changes/bed23-wallpot-viburnum-lisarose-2.webp", caption: "Viburnum 'Lisarose' in the new dividing-wall pot" },
@@ -3368,6 +3423,12 @@ window.OAK = (function () {
         { src: "images/aug-2026-big-changes/viburnum-pot-spirit-label.webp", caption: "Retained Viburnum tinus Spirit label" },
       ],
       frontBed4: [
+        { src: "images/aug-2026-pot-update/front-bed4-overview-1.jpeg", caption: "Front Bed 4 after the late-August replacements and moves" },
+        { src: "images/aug-2026-pot-update/front-bed4-overview-2.jpeg", caption: "The two new Azaleas, relocated Nemesia and revised Physocarpus groups" },
+        { src: "images/aug-2026-pot-update/front-bed4-azaleas-overview-1.jpeg", caption: "Silvester and Lotte in their new Front Bed 4 positions" },
+        { src: "images/aug-2026-pot-update/front-bed4-azalea-silvester-1.jpeg", caption: "Azalea japonica 'Silvester' at location 6" },
+        { src: "images/aug-2026-pot-update/front-bed4-azalea-lotte-1.jpeg", caption: "Azalea japonica 'Lotte' at new location 16" },
+        { src: "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-1.jpeg", caption: "Nemesia 'Lady Penelope' after its move to location 7" },
         { src: "images/aug-2026-front-garden/front-bed4-updated-1.jpeg", caption: "Front Bed 4 after the August Physocarpus clusters and Rhododendron were planted" },
         { src: "images/aug-2026-front-garden/front-bed4-updated-2.jpeg", caption: "The refreshed corner bed from the return-wall side" },
         { src: "images/aug-2026-front-garden/front-bed4-achillea-planted.jpeg", caption: "Achillea Summer Berries planted in Front Bed 4" },
@@ -3393,11 +3454,14 @@ window.OAK = (function () {
         { src: "images/aug-2026-photo-audit/front-bed4-tree-evidence-3.jpeg", caption: "Wider identification view of the unresolved Front Bed 4 tree" },
       ],
       frontBed4Archive: [
+        { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Former Physocarpus Cluster 3 before its late-August removal" },
+        { src: "images/jul-2026/front-bed-4-magic-carpet.jpeg", caption: "Magic Carpet before its move from Front Bed 4 to Back Bed 3" },
         { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix.webp", caption: "Delosperma 'Ice Cream Mix' before its August 2026 removal" },
         { src: "images/jul-2026/july-update-front-bed-4-delosperma-ice-cream-mix-2.webp", caption: "Delosperma mixed daisy flowers before removal" },
       ],
       frontBed5: [
-        { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The spare Little Devil newly planted in Front Bed 5" },
+        { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-1.jpeg", caption: "Fern 'Jurassic Gold' replacing the failed Little Devil at location 13" },
+        { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-2.jpeg", caption: "Golden fronds of the newly planted fern" },
         { src: "images/aug-2026-small-changes/front-bed5-update-1.jpeg", caption: "Front Bed 5 after the smaller August changes" },
         { src: "images/aug-2026-small-changes/front-bed5-hydrangea-bloody-marie-1.jpeg", caption: "Hydrangea 'Bloody Marie' in the former Honeysuckle position" },
         { src: "images/aug-2026-small-changes/front-bed5-euphorbia-ascot-petite-1.jpeg", caption: "Euphorbia 'Ascot Petite' in Polar Passion's former position" },
@@ -3408,6 +3472,7 @@ window.OAK = (function () {
         { src: "images/aug-2026-front-garden/front-pots.jpeg", caption: "P1 mixed seasonal pot and P2 Fuchsia pot beside the boundary wall" },
       ],
       frontBed5Archive: [
+        { src: "images/aug-2026-front-garden/front-bed5-little-devil.jpeg", caption: "The Little Devil before it failed and was removed in late August" },
         { src: "images/jul-2026/front-260725-bed-5-honey-suckle.webp", caption: "The Honeysuckle before its August removal" },
       ],
       cercispot: [
@@ -3795,6 +3860,7 @@ window.OAK = (function () {
       { mapNo: 9, plantId: "bed3-variegated-periwinkle", name: "Variegated Lesser Periwinkle — assumed", x: 82, y: 20, r: 10, hue: 80 },
       { mapNo: 10, plantId: "bed2-weeping-cherry", name: "Weeping Cherry", x: 82, y: 42, r: 9, hue: 340 },
       { mapNo: 11, plantId: "bed2-kerria", name: "Kerria", x: 95, y: 42, r: 5, hue: 55 },
+      { mapNo: 12, plantId: "frontBed4-magic-carpet", name: "Magic Carpet", x: 76, y: 42, r: 6, hue: 70 },
     ],
     bed4: [
       { mapNo: 1, plantId: "bed4-gaillardia", name: "Gaillardia", x: 35, y: 24, r: 8, hue: 25 },
@@ -3873,7 +3939,8 @@ window.OAK = (function () {
       { name: "Cercis 'Carolina Sweetheart'", x: 50, y: 50, r: 34, hue: 345 },
     ],
     lobeliapot: [
-      { name: "Nemesia 'Lady Penelope'", x: 50, y: 50, r: 34, hue: 335 },
+      { plantId: "lobeliapot-skimmia-cleopatra", name: "Skimmia 'Cleopatra'", x: 40, y: 45, r: 26, hue: 120 },
+      { plantId: "lobeliapot-hedera-yellow-ripple", name: "Hedera helix 'Yellow Ripple'", x: 68, y: 62, r: 20, hue: 85 },
     ],
     bed23wallpot: [
       { name: "Viburnum 'Lisarose'", x: 50, y: 30, r: 24, hue: 340 },
@@ -3921,11 +3988,11 @@ window.OAK = (function () {
     ],
     frontBed4: [
       { name: "The Pilgrim", x: 10, y: 12, r: 11, hue: 55 },
-      { name: "Physocarpus Cluster 1 (2 × Little Devil)", x: 22, y: 25, r: 8, hue: 345 },
-      { name: "Physocarpus Cluster 2 (2 × Lady in Red)", x: 34, y: 17, r: 8, hue: 350 },
+      { plantId: "frontBed4-physocarpus-cluster-1", name: "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red)", x: 22, y: 25, r: 8, hue: 345 },
+      { plantId: "frontBed4-physocarpus-cluster-2", name: "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil)", x: 34, y: 17, r: 8, hue: 350 },
       { name: "Rhododendron 'Libretto'", x: 50, y: 28, r: 14, hue: 280 },
-      { name: "Magic Carpet", x: 35, y: 43, r: 8, hue: 70 },
-      { name: "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)", x: 66, y: 14, r: 9, hue: 348 },
+      { plantId: "lobeliapot-nemesia-lady-penelope", name: "Nemesia 'Lady Penelope'", x: 35, y: 43, r: 8, hue: 335 },
+      { plantId: "frontBed4-azalea-silvester", name: "Azalea japonica 'Silvester'", x: 66, y: 14, r: 9, hue: 325 },
       { name: "Purple Gem", x: 56, y: 47, r: 7, hue: 115 },
       { name: "Photinia (existing canopy)", x: 77, y: 34, r: 18, hue: 112 },
       { name: "Festuca 'Elijah Blue' (3 plants)", x: 32, y: 61, r: 12, hue: 215 },
@@ -3935,6 +4002,7 @@ window.OAK = (function () {
       { name: "Pieris 'Polar Passion'", x: 82, y: 56, r: 10, hue: 345 },
       { name: "The Generous Gardener", x: 91, y: 88, r: 11, hue: 345 },
       { name: "Achillea", x: 29, y: 78, r: 9, hue: 15 },
+      { plantId: "frontBed4-azalea-lotte", name: "Azalea japonica 'Lotte'", x: 55, y: 59, r: 6, hue: 330 },
     ],
     frontBed5: [
       { mapNo: 1,  plantId: "frontBed5-bluebell-creeper-sollya",           name: "Bluebell Creeper",                     x: 90, y: 4,  r: 4,   hue: 240 },
@@ -3949,7 +4017,7 @@ window.OAK = (function () {
       { mapNo: 10, plantId: "frontBed4-astrantia-trio",                    name: "Astrantia trio",                       x: 76, y: 37, r: 4,   hue: 335 },
       { mapNo: 11, plantId: "frontBed5-bell-heather-providence",           name: "Bell Heather 'Providence' (2 plants)", x: 66, y: 40, r: 4.5, hue: 335 },
       { mapNo: 12, plantId: "frontBed5-salvia-salgoon-lake-blueberry",      name: "Salvia 'Salgoon Lake Blueberry'",      x: 73, y: 50, r: 7.5, hue: 270 },
-      { mapNo: 13, plantId: "frontBed5-little-devil",                      name: "Little Devil",                         x: 88, y: 40, r: 4,   hue: 345 },
+      { mapNo: 13, plantId: "frontBed5-fern-jurassic-gold",                name: "Fern 'Jurassic Gold'",                 x: 88, y: 40, r: 4,   hue: 105 },
       { mapNo: 14, plantId: "frontBed5-heather-winter-chocolate",          name: "Heather 'Winter Chocolate'",           x: 54, y: 38, r: 4,   hue: 45  },
       { mapNo: 15, plantId: "frontBed5-gaura-gaudi-red",                   name: "Gaura 'Gaudi Red'",                    x: 54, y: 50, r: 6,   hue: 350 },
       { mapNo: 16, plantId: "frontBed5-euphorbia-ascot-petite",            name: "Euphorbia 'Ascot Petite'",             x: 32, y: 49, r: 5.5, hue: 80  },
@@ -3993,7 +4061,7 @@ window.OAK = (function () {
     steps: [
       { name: "Cercis Pot", marker: "C", zoneKey: "cercispot", x: 10, y: 10, r: 8, hue: 30 },
       { name: "Viburnum Pot", marker: "V", zoneKey: "viburnumpot", x: 90, y: 10, r: 8, hue: 235 },
-      { name: "Nemesia Pot", marker: "N", zoneKey: "lobeliapot", x: 20, y: 32, r: 7, hue: 335 },
+      { name: "Skimmia Pot", marker: "S", zoneKey: "lobeliapot", x: 20, y: 32, r: 7, hue: 120 },
       { name: "Little Pot 2", marker: "L2", zoneKey: "littlepot2", x: 65, y: 30, r: 6, hue: 240 },
       { name: "Echinacea Pot", marker: "E", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 70 },
       { name: "Little Pot 1", marker: "L1", zoneKey: "littlepot1", x: 83, y: 46, r: 6, hue: 240 },
@@ -4086,7 +4154,8 @@ window.OAK = (function () {
   ];
   PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-1"] = [
     ...augustJournal([
-    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg", caption: "Cluster 1 — two established Little Devils grouped together" },
+    { src: "images/aug-2026-pot-update/front-bed4-overview-2.jpeg", caption: "Cluster 1 after a Lady in Red moved in from the former Cluster 3" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg", caption: "Cluster 1 before the late-August addition" },
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
     ]),
     { month: "jul-2026", label: "July 2026 · before the cluster layout", photos: [
@@ -4095,12 +4164,44 @@ window.OAK = (function () {
     ]},
   ];
   PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-2"] = augustJournal([
-    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg", caption: "Cluster 2 — two newly planted Lady in Reds" },
+    { src: "images/aug-2026-pot-update/front-bed4-overview-2.jpeg", caption: "Cluster 2 after the surviving Little Devil moved in from Cluster 3" },
+    { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg", caption: "Cluster 2 before the late-August addition" },
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg", caption: "Clusters 1 and 2 along the wall" },
   ]);
   PLANT_PHOTOS_BY_ID["frontBed4-physocarpus-cluster-3"] = augustJournal([
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg", caption: "Cluster 3 — two Little Devils with one Lady in Red" },
     { src: "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg", caption: "The new mixed Physocarpus cluster from the stepping route" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-azalea-silvester"] = augustJournal([
+    { src: "images/aug-2026-pot-update/front-bed4-azalea-silvester-1.jpeg", caption: "Azalea japonica 'Silvester' newly planted at location 6" },
+    { src: "images/aug-2026-pot-update/front-bed4-azalea-silvester-2.jpeg", caption: "Compact evergreen Silvester beside the wall irrigation" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-azalea-lotte"] = augustJournal([
+    { src: "images/aug-2026-pot-update/front-bed4-azalea-lotte-1.jpeg", caption: "Azalea japonica 'Lotte' newly planted at location 16" },
+    { src: "images/aug-2026-pot-update/front-bed4-azalea-lotte-2.jpeg", caption: "Lotte beneath the established Front Bed 4 canopy" },
+    { src: "images/aug-2026-pot-update/front-bed4-azalea-lotte-3.jpeg", caption: "Glossy evergreen foliage on the new Lotte Azalea" },
+  ]);
+  PLANT_PHOTOS_BY_ID["frontBed4-magic-carpet"] = [
+    { month: "aug-2026", label: "August 2026 · moved to Back Bed 3", photos: [
+      { src: "images/aug-2026-pot-update/bed3-spiraea-magic-carpet-1.jpeg", caption: "Magic Carpet added to the line of Double Play Big Bang Spiraeas" },
+    ]},
+    { month: "jul-2026", label: "July 2026 · former Front Bed 4 position", photos: [
+      { src: "images/jul-2026/front-bed-4-magic-carpet.jpeg", caption: "Magic Carpet before its move to the back garden" },
+    ]},
+  ];
+  PLANT_PHOTOS_BY_ID["frontBed5-fern-jurassic-gold"] = augustJournal([
+    { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-1.jpeg", caption: "Jurassic Gold planted at Front Bed 5 location 13" },
+    { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-2.jpeg", caption: "Bright golden fronds in the shaded bed" },
+    { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-3.jpeg", caption: "The fern beside the existing shared sprinkler" },
+    { src: "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-4.jpeg", caption: "Jurassic Gold in its wider Front Bed 5 setting" },
+  ]);
+  PLANT_PHOTOS_BY_ID["lobeliapot-skimmia-cleopatra"] = augustJournal([
+    { src: "images/aug-2026-pot-update/skimmia-pot-1.jpeg", caption: "Skimmia 'Cleopatra' with bright berries in the renamed pot" },
+    { src: "images/aug-2026-pot-update/skimmia-pot-2.jpeg", caption: "The Skimmia sharing its blue pot with Yellow Ripple ivy" },
+  ]);
+  PLANT_PHOTOS_BY_ID["lobeliapot-hedera-yellow-ripple"] = augustJournal([
+    { src: "images/aug-2026-pot-update/skimmia-pot-1.jpeg", caption: "Yellow Ripple ivy trailing beneath the Skimmia" },
+    { src: "images/aug-2026-pot-update/skimmia-pot-2.jpeg", caption: "Variegated ivy beginning to spill over the pot rim" },
   ]);
   PLANT_PHOTOS_BY_ID["frontBed4-purple-gem"] = augustJournal([
     { src: "images/aug-2026-front-garden/front-bed4-purple-gem-moved.jpeg", caption: "Purple Gem in one of the former Lady in Red positions" },
@@ -4126,10 +4227,16 @@ window.OAK = (function () {
     { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-planted.webp", caption: "Sedum 'Rose Carpet' planted at Bed 3 position 1" },
     { src: "images/aug-2026-big-changes/bed2-sedum-rose-carpet-label.webp", caption: "Retained Rose Carpet label" },
   ]);
-  PLANT_PHOTOS_BY_ID["lobeliapot-nemesia-lady-penelope"] = augustJournal([
-    { src: "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp", caption: "The unidentified Nemesia moved into the former Lobelia pot" },
-    { src: "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp", caption: "Pink-and-white flowers supporting the assumed Lady Penelope identification" },
-  ]);
+  PLANT_PHOTOS_BY_ID["lobeliapot-nemesia-lady-penelope"] = [
+    { month: "aug-2026", label: "August 2026 · moved to Front Bed 4", photos: [
+      { src: "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-1.jpeg", caption: "Lady Penelope newly planted at Front Bed 4 location 7" },
+      { src: "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-2.jpeg", caption: "The pink-and-white Nemesia in its new bed position" },
+    ]},
+    { month: "aug-2026", label: "Earlier August 2026 · former pot", photos: [
+      { src: "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp", caption: "The Nemesia in the former Lobelia Pot" },
+      { src: "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp", caption: "Flowers supporting the assumed Lady Penelope identification" },
+    ]},
+  ];
   PLANT_PHOTOS_BY_ID["bed1-nemesia"] = [
     ...augustJournal([
       { src: "images/aug-2026-big-changes/bed5-big-pot-nemesia-aroma-1.webp", caption: "Aroma Heart of Gold moved into the Bed 5 big pot" },

@@ -36,6 +36,7 @@
       "Kerria": 3,
       "Centaurea 'Snowy Owl'": 2,
       "Spiraea 'Double Play Big Bang'": 3,
+      "Magic Carpet": 3,
       "Sedum 'Rose Carpet'": 1,
       "Rose (inherited)": 3,
       "Weeping Cherry": 3,
@@ -118,8 +119,9 @@
     "Cercis Pot": {
       "Cercis 'Carolina Sweetheart'": 4,
     },
-    "Nemesia Pot": {
-      "Nemesia 'Lady Penelope'": 4,
+    "Skimmia Pot": {
+      "Skimmia 'Cleopatra'": 4,
+      "Hedera helix 'Yellow Ripple'": 3,
     },
     "Bed 2/3 Wall Pot": {
       "Viburnum 'Lisarose'": 3,
@@ -167,10 +169,11 @@
     "Front Bed 4": {
       "Photinia (existing canopy)": 2,
       "The Pilgrim": 3, "The Generous Gardener": 3,
-      "Physocarpus Cluster 1 (2 × Little Devil)": 3,
-      "Physocarpus Cluster 2 (2 × Lady in Red)": 3,
-      "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)": 3,
-      "Magic Carpet": 2, "Purple Gem": 2,
+      "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red)": 3,
+      "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil)": 3,
+      "Azalea japonica 'Silvester'": 4,
+      "Nemesia 'Lady Penelope'": 4,
+      "Purple Gem": 2,
       "Rhododendron 'Libretto'": 3,
       "Festuca 'Elijah Blue' (3 plants)": 1,
       "Pieris 'Polar Passion'": 3,
@@ -178,6 +181,7 @@
       "Verbena 'Margaret's Memory'": 3,
       "Calluna Trio Mix (3 plants)": 3,
       "Achillea": 2,
+      "Azalea japonica 'Lotte'": 4,
     },
     "Front Bed 5": {
       "Mexican Orange Blossom": 2,
@@ -202,7 +206,7 @@
       "Bluebell Creeper": 3,
       "Hebe 'Rhubarb and Custard'": 2,
       "Salvia 'Salgoon Lake Blueberry'": 2,
-      "Little Devil": 3,
+      "Fern 'Jurassic Gold'": 3,
     },
     "Front Pots": {
       "Mixed Pot": 4,
@@ -528,9 +532,9 @@
       under: "Check below the surface during warm weather. Drooping heart-shaped leaves, scorch along the pale variegated margins or an unusually light pot mean the young tree's root ball is drying too far.",
       over: "Yellowing leaves, weak extension growth or branch dieback while the compost remains wet point to poor drainage. Empty trapped water and let air return to the root ball before watering again.",
     },
-    "Nemesia Pot": {
-      under: "Check the top 2–3cm daily in warm weather. Limp shoots, dropped flowers or compost pulling away from the rim mean the Nemesia needs a thorough drink.",
-      over: "Compost staying dark and sodden for days, yellowing lower leaves or a soft stem base mean drainage is poor or watering is too frequent.",
+    "Skimmia Pot": {
+      under: "Check beneath the surface and lift the pot in warm weather. Dull curling Skimmia leaves, wrinkling berries, limp ivy or compost pulling from the rim mean the shared root ball is drying too far.",
+      over: "Compost staying dark and sodden for days, yellow Skimmia leaves, blackened stems or soft ivy growth mean the pot needs better drainage and a pause in watering.",
     },
     "Bed 2/3 Wall Pot": {
       under: "Check beneath the surface in warm or windy weather. Drooping Viburnum leaves, limp Vinca trails or a noticeably light pot mean the shared root ball is drying too far.",
@@ -613,7 +617,7 @@
     bed3: {
       mapHeight: 60,
       pipe: { path: "M-3 2 C26 0 59 3 98 1 Q101 1 101 5 L101 56", side: "top", coordinate: 1, labelXY: [88, 0] },
-      applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper", 6: "none", 7: "dropper", 8: "dropper", 9: "none", 10: "none", 11: "none" },
+      applicationsByMapNo: { 1: "dropper", 2: "dropper", 3: "dropper", 4: "dropper", 5: "dropper", 6: "none", 7: "dropper", 8: "dropper", 9: "none", 10: "none", 11: "none", 12: "sprinkler" },
       extras: [{ name: "Bed 2/3 Wall Pot", marker: "P", x: 97, y: 30, r: 5, hue: 35, application: "none", zoneKey: "bed23wallpot" }],
     },
     bed4: {
@@ -737,8 +741,8 @@
         "frontBed4-the-generous-gardener": "dropper",
         "frontBed4-physocarpus-cluster-1": "sprinkler",
         "frontBed4-physocarpus-cluster-2": "sprinkler",
-        "frontBed4-physocarpus-cluster-3": "sprinkler",
-        "frontBed4-magic-carpet": "dropper",
+        "frontBed4-azalea-silvester": "dropper",
+        "lobeliapot-nemesia-lady-penelope": "dropper",
         "frontBed4-purple-gem": "dropper",
         "frontBed4-rhododendron-libretto": "sprinkler",
         "frontBed4-festuca-elijah-blue": "sprinkler",
@@ -747,15 +751,16 @@
         "frontBed4-verbena-margarets-memory": "dropper",
         "frontBed4-calluna-trio-mix": "sprinkler",
         "bed4-achillea": "dropper",
+        "frontBed4-azalea-lotte": "dropper",
       },
       applications: {
         "Photinia (existing canopy)": "none",
         "The Pilgrim": "dropper",
         "The Generous Gardener": "dropper",
-        "Physocarpus Cluster 1 (2 × Little Devil)": "sprinkler",
-        "Physocarpus Cluster 2 (2 × Lady in Red)": "sprinkler",
-        "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)": "sprinkler",
-        "Magic Carpet": "dropper",
+        "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red)": "sprinkler",
+        "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil)": "sprinkler",
+        "Azalea japonica 'Silvester'": "dropper",
+        "Nemesia 'Lady Penelope'": "dropper",
         "Purple Gem": "dropper",
         "Rhododendron 'Libretto'": "sprinkler",
         "Festuca 'Elijah Blue' (3 plants)": "sprinkler",
@@ -764,6 +769,7 @@
         "Verbena 'Margaret's Memory'": "dropper",
         "Calluna Trio Mix (3 plants)": "sprinkler",
         Achillea: "dropper",
+        "Azalea japonica 'Lotte'": "dropper",
       },
       extras: [],
     },

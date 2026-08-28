@@ -610,6 +610,31 @@
       }
     },
     {
+      "name": "Magic Carpet",
+      "id": "frontBed4-magic-carpet",
+      "latin": "Spiraea japonica 'Walbuma' (Magic Carpet)",
+      "photos": [
+        "images/aug-2026-pot-update/bed3-spiraea-magic-carpet-1.jpeg",
+        "images/jul-2026/front-bed-4-magic-carpet.jpeg"
+      ],
+      "position": "Added to the Spiraea line in August 2026 after moving from Front Bed 4",
+      "light": "Full sun to light partial shade; brighter light gives the strongest gold foliage.",
+      "water": "Sprinkler supplied. Keep evenly moist while re-establishing, then water during prolonged dry spells.",
+      "care": "Lightly trim after flowering or renovate immediately after flowering if it becomes overgrown. Keep its lower golden outline distinct from the four Double Play Big Bang shrubs.",
+      "seasonal": "Red new leaves mature gold, with deep-pink summer flowers and warm autumn colour; deciduous in winter.",
+      "description": "Magic Carpet is a garden shrub grown at Oak Lodge for its distinctive garden character. Red new leaves mature gold, with deep-pink summer flowers and warm autumn colour.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Red new leaves mature gold, with deep-pink summer flowers and warm autumn colour",
+        "water": "Sprinkler supplied",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
       "name": "Sedum 'Rose Carpet'",
       "id": "bed2-sedum-rose-carpet",
       "latin": "Sedum pluricaule 'Rose Carpet'",
@@ -2976,76 +3001,26 @@
       }
     },
     {
-      "name": "Physocarpus Cluster 1 (2 × Little Devil)",
+      "name": "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red)",
       "id": "frontBed4-physocarpus-cluster-1",
-      "latin": "Physocarpus opulifolius 'Little Devil'",
+      "latin": "Physocarpus opulifolius 'Little Devil' & 'Lady in Red'",
       "photos": [
         "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-1.jpeg",
         "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg",
         "images/jul-2026/front-bed-4-little-devil-1.jpeg",
         "images/jul-2026/front-bed-4-little-devil-2.jpeg"
       ],
-      "position": "Cluster 1 — two retained Little Devils grouped together in August 2026",
+      "position": "Cluster 1 — two Little Devils with one Lady in Red moved from Cluster 3 in August 2026",
       "light": "Sun to partial shade; foliage is darkest with good light.",
-      "water": "Water both root balls deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-      "care": "Treat as two compact deciduous ninebarks. Keep each crown distinct and remove a few oldest stems at ground level only once established; avoid clipping the cluster into one solid ball.",
-      "seasonal": "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
-      "description": "Physocarpus Cluster 1 (2 × Little Devil) is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy-purple foliage spring to autumn.",
-      "characteristics": {
-        "sunlight": "Sun to partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Burgundy-purple foliage spring to autumn",
-        "water": "Water both root balls deeply in dry spells for the first two growing seasons",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Physocarpus Cluster 2 (2 × Lady in Red)",
-      "id": "frontBed4-physocarpus-cluster-2",
-      "latin": "Physocarpus opulifolius 'Lady in Red'",
-      "photos": [
-        "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
-        "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg"
-      ],
-      "position": "Cluster 2 — two new Lady in Reds added August 2026",
-      "light": "Sun to partial shade; best foliage colour in brighter light.",
-      "water": "Water both root balls deeply in dry spells while establishing; afterwards they are fairly drought tolerant.",
-      "care": "Treat as two deciduous ninebarks. Keep their layered outlines distinct and remove a few oldest stems at the base in late winter only when congestion develops.",
-      "seasonal": "Fresh red foliage matures bronze-purple; pink flower clusters in summer; bare in winter.",
-      "description": "Physocarpus Cluster 2 (2 × Lady in Red) is a garden shrub grown at Oak Lodge for its distinctive garden character. Fresh red foliage matures bronze-purple.",
-      "characteristics": {
-        "sunlight": "Sun to partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Fresh red foliage matures bronze-purple",
-        "water": "Water both root balls deeply in dry spells while establishing",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red)",
-      "id": "frontBed4-physocarpus-cluster-3",
-      "latin": "Physocarpus opulifolius 'Little Devil' & 'Lady in Red'",
-      "photos": [
-        "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-1.jpeg",
-        "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-3-2.jpeg"
-      ],
-      "position": "Cluster 3 — two new Little Devils with one new Lady in Red, added August 2026",
-      "light": "Sun to partial shade; brighter light strengthens the burgundy and red-bronze foliage.",
-      "water": "Water all three root balls deeply in dry spells while establishing; afterwards the cluster is fairly drought tolerant.",
-      "care": "Keep the two lower Little Devils and taller Lady in Red readable as a layered trio. Renew individual shrubs from the base only when mature and congested; do not shear the cluster into one mass.",
+      "water": "Sprinkler supplied. Check all three root balls through establishment and water deeply in dry spells.",
+      "care": "Keep all three crowns distinct, with the taller Lady in Red rising through the two compact Little Devils. Renew individual shrubs from the base only when mature and congested.",
       "seasonal": "Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer; bare in winter.",
-      "description": "Physocarpus Cluster 3 (2 × Little Devil + 1 × Lady in Red) is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer.",
+      "description": "Physocarpus Cluster 1 (2 × Little Devil + 1 × Lady in Red) is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer.",
       "characteristics": {
         "sunlight": "Sun to partial shade",
         "hardiness": "Hardy in most UK gardens",
         "flowering": "Burgundy and red-bronze foliage spring to autumn with pale pink flower clusters in early summer",
-        "water": "Water all three root balls deeply in dry spells while establishing",
+        "water": "Sprinkler supplied",
         "habit": "Garden shrub",
         "size": "Typically 0.5–2m",
         "foliage": "Deciduous or dormant in winter",
@@ -3053,25 +3028,77 @@
       }
     },
     {
-      "name": "Magic Carpet",
-      "id": "frontBed4-magic-carpet",
-      "latin": "Spiraea japonica 'Magic Carpet'",
+      "name": "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil)",
+      "id": "frontBed4-physocarpus-cluster-2",
+      "latin": "Physocarpus opulifolius 'Lady in Red' & 'Little Devil'",
       "photos": [
-        "images/jul-2026/front-bed-4-magic-carpet.jpeg"
+        "images/aug-2026-front-garden/front-bed4-physocarpus-cluster-2.jpeg",
+        "images/aug-2026-front-garden/front-bed4-physocarpus-clusters-1-2.jpeg"
       ],
-      "position": "Bright open centre, above the stepping stones",
-      "light": "Sun to light partial shade; brighter light gives the strongest gold foliage.",
-      "water": "Water regularly during its first summer, then only in prolonged dry spells.",
-      "care": "Lightly trim after flowering or cut back by about a third in early spring to encourage colourful new growth.",
-      "seasonal": "Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour; deciduous in winter.",
-      "description": "Magic Carpet is a garden shrub grown at Oak Lodge for its distinctive garden character. Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour.",
+      "position": "Cluster 2 — two Lady in Reds with one surviving Little Devil moved from Cluster 3 in August 2026",
+      "light": "Sun to partial shade; best foliage colour in brighter light.",
+      "water": "Sprinkler supplied. Check all three root balls through establishment and water deeply in dry spells.",
+      "care": "Keep the compact Little Devil readable against the two taller Lady in Reds. Remove a few oldest stems at the base only when congestion develops.",
+      "seasonal": "Red, bronze and burgundy foliage spring to autumn with pink flower clusters in summer; bare in winter.",
+      "description": "Physocarpus Cluster 2 (2 × Lady in Red + 1 × Little Devil) is a garden shrub grown at Oak Lodge for its distinctive garden character. Red, bronze and burgundy foliage spring to autumn with pink flower clusters in summer.",
       "characteristics": {
-        "sunlight": "Sun to light partial shade",
+        "sunlight": "Sun to partial shade",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Gold foliage with red young growth, deep-pink summer flowers and warm autumn colour",
-        "water": "Water regularly during its first summer, then only in prolonged dry spells",
+        "flowering": "Red, bronze and burgundy foliage spring to autumn with pink flower clusters in summer",
+        "water": "Sprinkler supplied",
         "habit": "Garden shrub",
         "size": "Typically 0.5–2m",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Azalea japonica 'Silvester'",
+      "id": "frontBed4-azalea-silvester",
+      "latin": "Rhododendron 'Sylvester'",
+      "photos": [
+        "images/aug-2026-pot-update/front-bed4-azalea-silvester-1.jpeg",
+        "images/aug-2026-pot-update/front-bed4-azalea-silvester-2.jpeg"
+      ],
+      "position": "Location 6 — former Physocarpus Cluster 3 position, added August 2026",
+      "light": "Partial or dappled shade in a sheltered position.",
+      "water": "Dropper supplied. Keep its shallow acidic root zone evenly moist, preferably with rainwater.",
+      "care": "Grow shallowly in acidic, humus-rich soil and mulch with leaf mould. Deadhead carefully after flowering and prune only damaged or wayward growth.",
+      "seasonal": "Compact evergreen foliage with purple-pink flowers in late spring.",
+      "description": "Azalea japonica 'Silvester' is a garden shrub grown at Oak Lodge for its distinctive garden character. Compact evergreen foliage with purple-pink flowers in late spring.",
+      "characteristics": {
+        "sunlight": "Partial or dappled shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Compact evergreen foliage with purple-pink flowers in late spring",
+        "water": "Dropper supplied",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Nemesia 'Lady Penelope'",
+      "id": "lobeliapot-nemesia-lady-penelope",
+      "latin": "Nemesia 'Lady Penelope' (best-fit identification)",
+      "photos": [
+        "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-1.jpeg",
+        "images/aug-2026-pot-update/front-bed4-nemesia-lady-penelope-2.jpeg",
+        "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp"
+      ],
+      "position": "Location 7 — moved from the former Nemesia Pot in August 2026",
+      "light": "Full sun to light partial shade in a sheltered position.",
+      "water": "Dropper supplied. Keep evenly moist while flowering but never waterlogged.",
+      "care": "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
+      "seasonal": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+      "description": "Nemesia 'Lady Penelope' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn",
+        "water": "Dropper supplied",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
@@ -3276,6 +3303,32 @@
         "habit": "Herbaceous perennial",
         "size": "Typically 30–100cm",
         "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Azalea japonica 'Lotte'",
+      "id": "frontBed4-azalea-lotte",
+      "latin": "Rhododendron 'Lotte'",
+      "photos": [
+        "images/aug-2026-pot-update/front-bed4-azalea-lotte-1.jpeg",
+        "images/aug-2026-pot-update/front-bed4-azalea-lotte-2.jpeg",
+        "images/aug-2026-pot-update/front-bed4-azalea-lotte-3.jpeg"
+      ],
+      "position": "Location 16 — new position beside the existing Front Bed 4 planting, added August 2026",
+      "light": "Partial or dappled shade in a sheltered position.",
+      "water": "Dropper supplied. Keep its shallow acidic root zone evenly moist, preferably with rainwater.",
+      "care": "Grow shallowly in acidic, humus-rich soil and mulch with leaf mould. Deadhead carefully after flowering and prune only damaged growth.",
+      "seasonal": "Compact glossy evergreen foliage with deep-pink flowers in late spring.",
+      "description": "Azalea japonica 'Lotte' is a garden shrub grown at Oak Lodge for its distinctive garden character. Compact glossy evergreen foliage with deep-pink flowers in late spring.",
+      "characteristics": {
+        "sunlight": "Partial or dappled shade in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Compact glossy evergreen foliage with deep-pink flowers in late spring",
+        "water": "Dropper supplied",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
         "wildlife": "Flowers visited by pollinators"
       }
     }
@@ -3843,27 +3896,30 @@
       }
     },
     {
-      "name": "Little Devil",
-      "id": "frontBed5-little-devil",
-      "latin": "Physocarpus opulifolius 'Little Devil'",
+      "name": "Fern 'Jurassic Gold'",
+      "id": "frontBed5-fern-jurassic-gold",
+      "latin": "Dryopteris wallichiana 'Hollasic' (Jurassic Gold)",
       "photos": [
-        "images/aug-2026-front-garden/front-bed5-little-devil.jpeg"
+        "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-1.jpeg",
+        "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-2.jpeg",
+        "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-3.jpeg",
+        "images/aug-2026-pot-update/front-bed5-fern-jurassic-gold-4.jpeg"
       ],
-      "position": "Spare compact ninebark added August 2026",
-      "light": "Sun to partial shade; foliage is darkest with good light.",
-      "water": "Water deeply in dry spells for the first two growing seasons; then only during prolonged drought.",
-      "care": "Compact deciduous ninebark. Remove a few of the oldest stems at ground level in late winter once established; avoid clipping into a tight ball.",
-      "seasonal": "Burgundy-purple foliage spring to autumn; pale pinkish-white flowers in early summer; bare in winter.",
-      "description": "Little Devil is a garden shrub grown at Oak Lodge for its distinctive garden character. Burgundy-purple foliage spring to autumn.",
+      "position": "Location 13 — replaced the failed Little Devil in August 2026",
+      "light": "Full shade in a sheltered position.",
+      "water": "Shares the existing sprinkler with location 10. Keep moist but well drained while establishing.",
+      "care": "Mulch well over moist soil, keeping the crown clear. Remove dead or damaged fronds as needed and protect new croziers from late frost and slugs.",
+      "seasonal": "Rose-tinted young fronds mature through bright gold to green; deciduous to semi-evergreen depending on winter.",
+      "description": "Fern 'Jurassic Gold' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Rose-tinted young fronds mature through bright gold to green.",
       "characteristics": {
-        "sunlight": "Sun to partial shade",
+        "sunlight": "Full shade in a sheltered position",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Burgundy-purple foliage spring to autumn",
-        "water": "Water deeply in dry spells for the first two growing seasons",
-        "habit": "Garden shrub",
-        "size": "Typically 0.5–2m",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Flowers visited by pollinators"
+        "flowering": "Rose-tinted young fronds mature through bright gold to green",
+        "water": "Shares the existing sprinkler with location 10",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Semi-evergreen",
+        "wildlife": "Foliage provides garden habitat"
       }
     }
   ],
@@ -4086,30 +4142,55 @@
       }
     }
   ],
-  "Nemesia Pot": [
+  "Skimmia Pot": [
     {
-      "name": "Nemesia 'Lady Penelope'",
-      "id": "lobeliapot-nemesia-lady-penelope",
-      "latin": "Nemesia 'Lady Penelope' (best-fit identification)",
+      "name": "Skimmia 'Cleopatra'",
+      "id": "lobeliapot-skimmia-cleopatra",
+      "latin": "Skimmia japonica 'Snep24' (Cleopatra)",
       "photos": [
-        "images/aug-2026-big-changes/nemesia-lady-penelope-1.webp",
-        "images/aug-2026-big-changes/nemesia-lady-penelope-2.webp"
+        "images/aug-2026-pot-update/skimmia-pot-1.jpeg",
+        "images/aug-2026-pot-update/skimmia-pot-2.jpeg"
       ],
-      "position": "Single specimen in the former Lobelia Pot — moved from Bed 1 in August 2026",
-      "light": "Full sun to light partial shade in a sheltered position.",
-      "water": "Keep the container evenly moist but never waterlogged.",
-      "care": "Trim tired flowering stems by about a third for another flush. Feed lightly while flowering and protect from frost.",
-      "seasonal": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
-      "description": "Nemesia 'Lady Penelope' is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn.",
+      "position": "Evergreen centrepiece in the renamed Skimmia Pot — added August 2026",
+      "light": "Light to full shade, sheltered from harsh sun and drying wind.",
+      "water": "Keep the shared compost consistently moist but well drained, preferably using rainwater.",
+      "care": "Mulch or top-dress with leaf mould or ericaceous compost. Prune only lightly after flowering and keep ivy stems away from its crown.",
+      "seasonal": "Glossy evergreen foliage, fragrant ivory spring flowers and long-lasting red berries from autumn into winter.",
+      "description": "Skimmia 'Cleopatra' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Glossy evergreen foliage, fragrant ivory spring flowers and long-lasting red berries from autumn into winter.",
       "characteristics": {
-        "sunlight": "Full sun to light partial shade in a sheltered position",
+        "sunlight": "Light to full shade, sheltered from harsh sun and drying wind",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Fragrant rose-pink and white flowers with pink markings and a yellow eye from late spring into autumn",
-        "water": "Keep the container evenly moist but never waterlogged",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
+        "flowering": "Glossy evergreen foliage, fragrant ivory spring flowers and long-lasting red berries from autumn into winter",
+        "water": "Keep the shared compost consistently moist but well drained, preferably using rainwater",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
+      }
+    },
+    {
+      "name": "Hedera helix 'Yellow Ripple'",
+      "id": "lobeliapot-hedera-yellow-ripple",
+      "latin": "Hedera helix 'Golden Starlight' (Yellow Ripple)",
+      "photos": [
+        "images/aug-2026-pot-update/skimmia-pot-1.jpeg",
+        "images/aug-2026-pot-update/skimmia-pot-2.jpeg"
+      ],
+      "position": "Trailing over the rim of the Skimmia Pot — added August 2026",
+      "light": "Full shade to partial shade; shelter pale margins from scorching sun.",
+      "water": "Share the Skimmia's evenly moist, well-drained compost; check beneath the foliage before watering.",
+      "care": "Trim to keep the ivy within the pot and away from the Skimmia crown. Remove any all-green reverted shoots at their origin.",
+      "seasonal": "Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour.",
+      "description": "Hedera helix 'Yellow Ripple' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour.",
+      "characteristics": {
+        "sunlight": "Full shade to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour",
+        "water": "Share the Skimmia's evenly moist, well-drained compost",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
       }
     }
   ],
