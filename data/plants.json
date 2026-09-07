@@ -4142,6 +4142,65 @@
       }
     }
   ],
+  "House · Sitting Room · ‘Gioia’ Fern": [
+    {
+      "name": "Bird’s Nest Fern ‘Gioia’",
+      "id": "house-sitting-asplenium-gioia",
+      "latin": "Asplenium antiquum ‘Gioia’",
+      "photos": [
+        "images/house-plants/sep-2026/asplenium-gioia-1.jpeg",
+        "images/house-plants/sep-2026/asplenium-gioia-2.jpeg",
+        "images/house-plants/sep-2026/asplenium-gioia-3.jpeg",
+        "images/house-plants/sep-2026/asplenium-gioia-4.jpeg",
+        "images/house-plants/sep-2026/asplenium-gioia-5.jpeg",
+        "images/house-plants/sep-2026/asplenium-gioia-label.jpeg"
+      ],
+      "position": "Ground-floor sitting room, beside the garden-facing window",
+      "light": "Bright, indirect light; protect the fronds from direct sun through the glass.",
+      "water": "Keep compost lightly moist but never saturated; water around the pot edge rather than into the centre rosette.",
+      "care": "Give it steady warmth and higher humidity, removing only damaged fronds at the base.",
+      "seasonal": "Evergreen indoor foliage throughout the year; growth slows in lower winter light.",
+      "description": "Bird’s Nest Fern ‘Gioia’ is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen indoor foliage throughout the year.",
+      "characteristics": {
+        "sunlight": "Bright, indirect light",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen indoor foliage throughout the year",
+        "water": "Keep compost lightly moist but never saturated",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "House · Hallway · Staghorn Fern": [
+    {
+      "name": "Staghorn Fern",
+      "id": "house-hallway-staghorn-fern",
+      "latin": "Platycerium bifurcatum",
+      "photos": [
+        "images/house-plants/sep-2026/staghorn-fern-1.jpeg",
+        "images/house-plants/sep-2026/staghorn-fern-2.jpeg",
+        "images/house-plants/sep-2026/staghorn-fern-3.jpeg"
+      ],
+      "position": "Ground-floor hallway, by the porch and radiator",
+      "light": "Bright, indirect light; avoid harsh midday sun and cold draughts.",
+      "water": "Check the growing medium before watering and let excess water drain completely; never keep the base wet.",
+      "care": "Maintain moderate humidity and keep the fern clear of direct radiator heat. Leave the brown papery shield fronds in place.",
+      "seasonal": "Evergreen antler-like fronds are the display throughout the year; growth is slower in winter.",
+      "description": "Staghorn Fern is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen antler-like fronds are the display throughout the year.",
+      "characteristics": {
+        "sunlight": "Bright, indirect light",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen antler-like fronds are the display throughout the year",
+        "water": "Check the growing medium before watering and let excess water drain completely",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
   "Skimmia Pot": [
     {
       "name": "Skimmia 'Cleopatra'",

@@ -323,6 +323,36 @@ window.OAK = (function () {
       room: "Hallway",
       marker: { floor: "ground", x: 835, y: 342 },
     },
+    houseSittingGioia: {
+      id: "houseSittingGioia",
+      title: "Sitting Room · ‘Gioia’ Fern",
+      badge: "Indoor specimen",
+      dims: "Small nursery pot in grey cachepot",
+      where: "Ground-floor sitting room, beside the garden-facing window",
+      desc: "A compact crested bird’s nest fern, identified from its retained plant passport as Asplenium antiquum ‘Gioia’.",
+      color: "#3178c6",
+      plantKey: "House · Sitting Room · ‘Gioia’ Fern",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Sitting Room",
+      marker: { floor: "ground", x: 670, y: 78 },
+    },
+    houseHallStaghorn: {
+      id: "houseHallStaghorn",
+      title: "Hallway · Staghorn Fern",
+      badge: "Indoor specimen",
+      dims: "Large bowl on wooden stand",
+      where: "Ground-floor hallway, by the porch and radiator",
+      desc: "A large Staghorn fern, Platycerium bifurcatum, gifted by Nicola when it no longer had room at her house.",
+      color: "#78bd43",
+      plantKey: "House · Hallway · Staghorn Fern",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Hallway",
+      marker: { floor: "ground", x: 705, y: 485 },
+    },
 
     // ── Front garden v2 (measured survey · own plan, viewBox 0 0 1000 640 — see FrontGardenPlan.jsx)
     frontBed1: {
@@ -2570,6 +2600,43 @@ window.OAK = (function () {
         seasonal: "Evergreen indoor foliage throughout the year; growth slows as light levels fall in winter.",
       },
     ],
+    "House · Sitting Room · ‘Gioia’ Fern": [
+      {
+        name: "Bird’s Nest Fern ‘Gioia’",
+        id: "house-sitting-asplenium-gioia",
+        latin: "Asplenium antiquum ‘Gioia’",
+        photos: [
+          "images/house-plants/sep-2026/asplenium-gioia-1.jpeg",
+          "images/house-plants/sep-2026/asplenium-gioia-2.jpeg",
+          "images/house-plants/sep-2026/asplenium-gioia-3.jpeg",
+          "images/house-plants/sep-2026/asplenium-gioia-4.jpeg",
+          "images/house-plants/sep-2026/asplenium-gioia-5.jpeg",
+          "images/house-plants/sep-2026/asplenium-gioia-label.jpeg",
+        ],
+        position: "Ground-floor sitting room, beside the garden-facing window",
+        light: "Bright, indirect light; protect the fronds from direct sun through the glass.",
+        water: "Keep compost lightly moist but never saturated; water around the pot edge rather than into the centre rosette.",
+        care: "Give it steady warmth and higher humidity, removing only damaged fronds at the base.",
+        seasonal: "Evergreen indoor foliage throughout the year; growth slows in lower winter light.",
+      },
+    ],
+    "House · Hallway · Staghorn Fern": [
+      {
+        name: "Staghorn Fern",
+        id: "house-hallway-staghorn-fern",
+        latin: "Platycerium bifurcatum",
+        photos: [
+          "images/house-plants/sep-2026/staghorn-fern-1.jpeg",
+          "images/house-plants/sep-2026/staghorn-fern-2.jpeg",
+          "images/house-plants/sep-2026/staghorn-fern-3.jpeg",
+        ],
+        position: "Ground-floor hallway, by the porch and radiator",
+        light: "Bright, indirect light; avoid harsh midday sun and cold draughts.",
+        water: "Check the growing medium before watering and let excess water drain completely; never keep the base wet.",
+        care: "Maintain moderate humidity and keep the fern clear of direct radiator heat. Leave the brown papery shield fronds in place.",
+        seasonal: "Evergreen antler-like fronds are the display throughout the year; growth is slower in winter.",
+      },
+    ],
   };
 
   // August 2026 brought a second major reshuffle. Stable plant IDs are kept
@@ -4373,6 +4440,17 @@ window.OAK = (function () {
     { src: "images/jul-2026/front-260725-gateway-tree-fruit-2.webp", caption: "Fruit detail supporting Malus with very high confidence" },
     { src: "images/jul-2026/front-260725-gateway-tree-habit-3.webp", caption: "Pendulous canopy supporting a weeping crab apple with high confidence" },
   ]);
+
+  PLANT_PHOTOS_BY_ID["house-sitting-asplenium-gioia"] = [{ month: "sep-2026", label: "September 2026", photos: [
+    { src: "images/house-plants/sep-2026/asplenium-gioia-1.jpeg", caption: "‘Gioia’ beside the sitting-room window" },
+    { src: "images/house-plants/sep-2026/asplenium-gioia-2.jpeg", caption: "Crested bird’s nest fern fronds" },
+    { src: "images/house-plants/sep-2026/asplenium-gioia-label.jpeg", caption: "Plant passport confirming Asplenium antiquum ‘Gioia’" },
+  ] }];
+  PLANT_PHOTOS_BY_ID["house-hallway-staghorn-fern"] = [{ month: "sep-2026", label: "September 2026", photos: [
+    { src: "images/house-plants/sep-2026/staghorn-fern-3.jpeg", caption: "Staghorn fern displayed on its wooden stand" },
+    { src: "images/house-plants/sep-2026/staghorn-fern-2.jpeg", caption: "Antler fronds and the brown shield fronds at the base" },
+    { src: "images/house-plants/sep-2026/staghorn-fern-1.jpeg", caption: "Hallway setting beside the porch" },
+  ] }];
 
   // Cards and galleries use lightweight display derivatives. Originals stay
   // available for the full-screen lightboxes, and components fall back to

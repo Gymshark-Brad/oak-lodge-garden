@@ -17,7 +17,7 @@ function readText(path) {
 
 function run(argv) {
   const root = argv[0] || ".";
-  const window = {};
+  this.window = {};
   eval(readText(`${root}/data.js`));
   eval(readText(`${root}/plant-profile-data.js`));
   eval(readText(`${root}/back-garden-profile-data.js`));

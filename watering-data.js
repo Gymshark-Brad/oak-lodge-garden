@@ -228,6 +228,12 @@
     "House · Hallway · Kentia Palm": {
       "Kentia Palm — assumed": 3,
     },
+    "House · Sitting Room · ‘Gioia’ Fern": {
+      "Bird’s Nest Fern ‘Gioia’": 4,
+    },
+    "House · Hallway · Staghorn Fern": {
+      "Staghorn Fern": 3,
+    },
   };
 
   const WATER_BAND_INFO = {

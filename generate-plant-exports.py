@@ -42,7 +42,7 @@ function readText(path) {
   return ObjC.unwrap(value);
 }
 function run(argv) {
-  const window = {};
+  this.window = {};
   eval(readText(`${argv[0]}/data.js`));
   return JSON.stringify(window.OAK.PLANTS);
 }

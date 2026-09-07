@@ -8,6 +8,23 @@
     version: 1,
     entries: [
       {
+        id: "sep-2026",
+        year: 2026,
+        month: 9,
+        label: "September 2026",
+        title: "Two more houseplants recorded",
+        note: "The indoor folio gained a label-confirmed Bird’s Nest Fern ‘Gioia’ in the sitting room and Nicola’s gifted Staghorn fern in the hallway. Their September photographs now provide the first condition record.",
+        photos: [
+          { id: "sep-2026-gioia", area: "house", src: "images/house-plants/sep-2026/asplenium-gioia-1.jpeg", caption: "Bird’s Nest Fern ‘Gioia’ by the sitting-room window" },
+          { id: "sep-2026-staghorn", area: "house", src: "images/house-plants/sep-2026/staghorn-fern-3.jpeg", caption: "Nicola’s Staghorn fern on its hallway stand" },
+          { id: "sep-2026-gioia-label", area: "house", src: "images/house-plants/sep-2026/asplenium-gioia-label.jpeg", caption: "The passport confirming ‘Gioia’" },
+        ],
+        events: [
+          { id: "sep-2026-gioia-recorded", type: "photographed", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "house", title: "Bird’s Nest Fern ‘Gioia’ recorded", note: "The retained plant passport confirms Asplenium antiquum ‘Gioia’; its sitting-room position and first photo baseline were recorded.", plantId: "house-sitting-asplenium-gioia", zoneKey: "houseSittingGioia" },
+          { id: "sep-2026-staghorn-recorded", type: "photographed", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "house", title: "Nicola’s Staghorn fern recorded", note: "The large Platycerium bifurcatum, gifted by Nicola when she had no room for it, received its first Oak Lodge photo baseline.", plantId: "house-hallway-staghorn-fern", zoneKey: "houseHallStaghorn" },
+        ],
+      },
+      {
         id: "aug-2026",
         year: 2026,
         month: 8,

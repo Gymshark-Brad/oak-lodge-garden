@@ -85,7 +85,7 @@ function HousePlan({ onOpenPlant, dark }) {
           <div className="house-floor-canvas">
             <svg viewBox="0 0 1300 620" role="img" aria-labelledby="ground-plan-title ground-plan-desc">
               <title id="ground-plan-title">Ground-floor plan of Oak Lodge</title>
-              <desc id="ground-plan-desc">A close redrawing of the supplied floor plan, with the split-level rooms, two staircases and the Kentia palm marked in the hallway beside the central staircase.</desc>
+              <desc id="ground-plan-desc">A close redrawing of the supplied floor plan, with the split-level rooms, two staircases and the recorded houseplants marked in the sitting room and hallway.</desc>
               {RoughDefs("house-ground")}
 
               <g filter="url(#house-ground-rough-soft)">
