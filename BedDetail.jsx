@@ -59,6 +59,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
   const nestedZones = window.OAK.NESTED_ZONE_MAPS?.[zoneKey] || [];
   const hasIrrigationMap = !!(window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS)?.[zoneKey];
   const hasMapContent = plants.length > 0 || map.length > 0 || nestedZones.length > 0;
+  const isBasketCollection = zoneKey === "baskets";
   const [hoverPlant, setHoverPlant] = useState_BD(null);
   const explicitMapNumbering = map.some((marker) => marker.mapNo !== undefined);
 
@@ -142,6 +143,8 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
           <div className="t-stamp" style={{ marginBottom: 10 }}>
             {hasIrrigationMap
               ? "Plant & watering map · top-down"
+              : isBasketCollection
+                ? "Basket collection · two containers"
               : plants.length > 0
                 ? "Plant map · top-down"
                 : "Area map · top-down"}
@@ -158,14 +161,18 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
             />
             {hasIrrigationMap && <IrrigationLegend />}
             <div className="t-hand" style={{ marginTop: 10, color: "var(--pencil)", fontSize: 18 }}>
-              {plants.length > 0 ? "tap a circle to open its card →" : "tap a pot to open its folio →"}
+              {isBasketCollection
+                ? "two matching planted baskets shown as one collection"
+                : plants.length > 0 ? "tap a circle to open its card →" : "tap a pot to open its folio →"}
             </div>
           </div>
         </div>
 
         {plants.length > 0 && <div className="bed-plants-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>
-            {explicitMapNumbering
+            {isBasketCollection
+              ? `Basket collection · 2 baskets · ${plants.length} shared plant records`
+              : explicitMapNumbering
               ? `Plants · ${plants.length} records · ${map.length} mapped positions`
               : `Plants · ${plants.length} recorded`}
           </div>
@@ -181,7 +188,9 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
                   const isHover = hoverPlant === p.name;
                   const mapLabels = markers.map((marker) => marker.mapNo).filter((value) => value !== undefined);
                   const formattedMapLabels = mapLabels.map((value) => typeof value === "number" ? String(value).padStart(2, "0") : String(value));
-                  const plantNumberLabel = explicitMapNumbering
+                  const plantNumberLabel = isBasketCollection
+                    ? null
+                    : explicitMapNumbering
                     ? (formattedMapLabels.length
                       ? (formattedMapLabels.every((value) => /^\d+$/.test(value)) ? `№ ${formattedMapLabels.join(" & ")}` : formattedMapLabels.join(" & "))
                       : "location pending")
@@ -198,7 +207,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
                       >
                         <div className="plant-name-block">
                           <div className="t-display plant-name" style={{ fontSize: 26, lineHeight: 1.1 }}>
-                            <span className="plant-title-no">{plantNumberLabel} · </span>{p.name}
+                            {plantNumberLabel && <span className="plant-title-no">{plantNumberLabel} · </span>}{p.name}
                           </div>
                           <div className="t-latin" style={{ fontSize: 17 }}>
                             {p.latin}

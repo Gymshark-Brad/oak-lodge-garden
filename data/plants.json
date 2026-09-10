@@ -2492,123 +2492,13 @@
   ],
   "Baskets": [
     {
-      "name": "Trailing Fuchsia",
-      "id": "baskets-trailing-fuchsia",
-      "latin": "Fuchsia (trailing cultivar)",
-      "position": "Main trailing plant",
-      "light": "Partial shade to full sun.",
-      "water": "Daily in hot weather; never let dry out completely.",
-      "care": "Feed weekly. Deadhead spent flowers. Not frost-hardy — replace each year.",
-      "seasonal": "Pendant bicolour flowers June–October.",
-      "description": "Trailing Fuchsia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Pendant bicolour flowers June–October.",
-      "characteristics": {
-        "sunlight": "Partial shade to full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Pendant bicolour flowers June–October",
-        "water": "Daily in hot weather",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Bacopa",
-      "id": "baskets-bacopa",
-      "latin": "Sutera cordata",
-      "position": "Trailing filler",
-      "light": "Sun to partial shade.",
-      "water": "Keep evenly moist.",
-      "care": "Self-cleaning; no deadheading needed. Trim back if leggy. Tender annual.",
-      "seasonal": "Tiny white flowers May–October; neat trailing habit.",
-      "description": "Bacopa is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Tiny white flowers May–October.",
-      "characteristics": {
-        "sunlight": "Sun to partial shade",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Tiny white flowers May–October",
-        "water": "Keep evenly moist",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Trailing Lobelia",
-      "id": "baskets-trailing-lobelia",
-      "latin": "Lobelia erinus (trailing)",
-      "position": "Trailing — blue cascade",
-      "light": "Sun to partial shade.",
-      "water": "Keep moist; hates drying out.",
-      "care": "Trim back mid-season if it gets straggly. Tender annual.",
-      "seasonal": "Blue trailing flowers May–October.",
-      "description": "Trailing Lobelia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Blue trailing flowers May–October.",
-      "characteristics": {
-        "sunlight": "Sun to partial shade",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Blue trailing flowers May–October",
-        "water": "Keep moist",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Trailing Verbena",
-      "id": "baskets-trailing-verbena",
-      "latin": "Verbena (trailing cultivar)",
-      "position": "Trailing — mixed colours",
-      "light": "Full sun.",
-      "water": "Regular; don't let dry out.",
-      "care": "Deadhead to extend flowering. Tender annual.",
-      "seasonal": "Clusters of flowers June–October.",
-      "description": "Trailing Verbena is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Clusters of flowers June–October.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Clusters of flowers June–October",
-        "water": "Regular",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Petunia",
-      "id": "baskets-petunia",
-      "latin": "Petunia (cultivar unknown)",
-      "photos": [
-        "images/aug-2026-photo-audit/baskets-kitchen-door-1.jpeg",
-        "images/aug-2026-photo-audit/baskets-kitchen-door-2.jpeg",
-        "images/aug-2026-photo-audit/baskets-lounge-door-1.jpeg",
-        "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg"
-      ],
-      "position": "Purple Basket 3 — moved from the Lounge Door to the Decking section in September 2026",
-      "light": "Full sun to light partial shade.",
-      "water": "Check daily in warm weather; water thoroughly before the basket dries out.",
-      "care": "Feed weekly during flowering and remove faded blooms and seed capsules. Trim bare stems back to leafy growth.",
-      "seasonal": "Funnel-shaped summer flowers from June until the first frost; cultivar unresolved.",
-      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Funnel-shaped summer flowers from June until the first frost.",
-      "characteristics": {
-        "sunlight": "Full sun to light partial shade",
-        "hardiness": "Hardy in most UK gardens",
-        "flowering": "Funnel-shaped summer flowers from June until the first frost",
-        "water": "Check daily in warm weather",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
       "name": "Calluna Trio Mix (2 plants)",
       "id": "baskets-calluna-trio-mix",
       "latin": "Calluna vulgaris mixed cultivars",
       "photos": [
         "images/September Hanging Baskets & Pots/Hanging Basket 1 & 2 - Heather.jpeg"
       ],
+      "group": "Shared planting · red Basket 1 & green Basket 2",
       "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
       "light": "Full sun to light partial shade.",
       "water": "Keep compost lightly moist while establishing; never waterlog.",
@@ -2630,6 +2520,7 @@
       "name": "Viola 'Rocky Purple Picotee' (2 plants)",
       "id": "baskets-viola-rocky-purple-picotee",
       "latin": "Viola cornuta 'Rocky Purple Picotee'",
+      "group": "Shared planting · red Basket 1 & green Basket 2",
       "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
       "light": "Sun to partial shade.",
       "water": "Keep compost evenly moist, particularly in windy weather.",
@@ -2654,6 +2545,7 @@
       "photos": [
         "images/September Hanging Baskets & Pots/Hanging Basket 1 & 2 - Ivy.jpeg"
       ],
+      "group": "Shared planting · red Basket 1 & green Basket 2",
       "position": "One trailing plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
       "light": "Shade to sun; avoid prolonged scorching sun on pale foliage.",
       "water": "Keep the shared basket compost evenly moist and well drained.",
@@ -2675,6 +2567,7 @@
       "name": "Pansy 'Fire' (2 plants)",
       "id": "baskets-pansy-fire",
       "latin": "Viola × wittrockiana 'Fire'",
+      "group": "Shared planting · red Basket 1 & green Basket 2",
       "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
       "light": "Sun to partial shade.",
       "water": "Keep evenly moist but never saturated.",
@@ -2696,6 +2589,7 @@
       "name": "Pansy 'Rose Surprise' (2 plants)",
       "id": "baskets-pansy-rose-surprise",
       "latin": "Viola × wittrockiana 'Rose Surprise'",
+      "group": "Shared planting · red Basket 1 & green Basket 2",
       "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
       "light": "Sun to partial shade.",
       "water": "Keep evenly moist but never saturated.",

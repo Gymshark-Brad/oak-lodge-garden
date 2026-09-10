@@ -128,7 +128,7 @@
   };
 
   const profiles = {};
-  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia", "littlepot1-geranium", "littlepot1-petunia", "wallpot1-candy-house-mix", "lobeliapot-hedera-yellow-ripple"]);
+  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia", "littlepot1-geranium", "littlepot1-petunia", "wallpot1-candy-house-mix", "lobeliapot-hedera-yellow-ripple", "baskets-trailing-fuchsia", "baskets-bacopa", "baskets-trailing-lobelia", "baskets-trailing-verbena", "baskets-petunia"]);
 
   function add(id, seed) {
     const record = (window.OAK.PLANT_BY_ID || {})[id];

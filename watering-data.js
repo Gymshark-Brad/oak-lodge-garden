@@ -143,11 +143,6 @@
       "Echinacea 'Mooodz Glory'": 3,
     },
     "Baskets": {
-      "Trailing Fuchsia": 5,
-      "Bacopa": 4,
-      "Trailing Lobelia": 5,
-      "Trailing Verbena": 4,
-      "Petunia": 5,
       "Calluna Trio Mix (2 plants)": 3,
       "Viola 'Rocky Purple Picotee' (2 plants)": 3,
       "Hedera helix 'Yellow Ripple' (2 plants)": 3,

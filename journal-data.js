@@ -270,7 +270,6 @@
             area: "back",
             title: "Petunia added to the hanging-basket record",
             note: "Kitchen- and lounge-door basket photographs confirmed a generic Petunia alongside the retained Fuchsia, Bacopa, Lobelia and Verbena records.",
-            plantId: "baskets-petunia",
             zoneKey: "baskets",
           },
           {
