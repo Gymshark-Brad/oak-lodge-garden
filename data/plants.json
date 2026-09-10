@@ -2255,50 +2255,27 @@
   ],
   "Little Pot 1": [
     {
-      "name": "Geranium",
-      "id": "littlepot1-geranium",
-      "latin": "Pelargonium 'Trend Sophie Dark Red'",
+      "name": "Helleborus Ice N' Roses Bennotta",
+      "id": "littlepot1-hellebore-ice-n-roses-bennotta",
+      "latin": "Helleborus × glandorfensis 'COSEH 6600'",
       "photos": [
-        "images/plants/little-pot-1.webp"
+        "images/September Hanging Baskets & Pots/Little Pot 1 - Helleborus - 1.jpeg",
+        "images/September Hanging Baskets & Pots/Little Pot 1 - Helleborus - 2.jpeg"
       ],
-      "position": "Back — upright dark red flowers",
-      "light": "Full sun.",
-      "water": "Moderate. Let compost dry slightly between waterings.",
-      "care": "Deadhead regularly. Feed fortnightly. Not frost-hardy — overwinter indoors or treat as annual.",
-      "seasonal": "Dark red flower heads May–October; scented rounded leaves.",
-      "description": "Geranium is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Dark red flower heads May–October.",
+      "position": "Single winter-flowering centrepiece — planted September 2026",
+      "light": "Partial shade to sun in a sheltered position.",
+      "water": "Keep compost evenly moist but freely drained; do not leave the crown waterlogged.",
+      "care": "Remove tired leaves and faded flower stems in spring. Wear gloves when handling, and raise the pot so winter rain drains freely.",
+      "seasonal": "Deep pink to red outward-facing flowers from winter into spring above evergreen foliage.",
+      "description": "Helleborus Ice N' Roses Bennotta is a garden shrub grown at Oak Lodge for its distinctive garden character. Deep pink to red outward-facing flowers from winter into spring above evergreen foliage.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Dark red flower heads May–October",
-        "water": "Moderate",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      }
-    },
-    {
-      "name": "Petunia",
-      "id": "littlepot1-petunia",
-      "latin": "Petunia 'Vivini Blue Star'",
-      "photos": [
-        "images/plants/little-pot-1.webp"
-      ],
-      "position": "Front — blue and white star pattern",
-      "light": "Full sun.",
-      "water": "Regular; don't let compost dry out completely.",
-      "care": "Deadhead spent blooms. Feed weekly. Tender annual.",
-      "seasonal": "Blue-white star-patterned flowers May–October.",
-      "description": "Petunia is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Blue-white star-patterned flowers May–October.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Blue-white star-patterned flowers May–October",
-        "water": "Regular",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Seasonal foliage",
+        "sunlight": "Partial shade to sun in a sheltered position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Deep pink to red outward-facing flowers from winter into spring above evergreen foliage",
+        "water": "Keep compost evenly moist but freely drained",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
+        "foliage": "Evergreen",
         "wildlife": "Flowers visited by pollinators"
       }
     }
@@ -2460,27 +2437,29 @@
   ],
   "Wall Pot 1": [
     {
-      "name": "Candy House Mix",
-      "id": "wallpot1-candy-house-mix",
-      "latin": "Calibrachoa 'Candy House Mix'",
+      "name": "Phormium 'Flamingo'",
+      "id": "wallpot1-phormium-flamingo",
+      "latin": "Phormium 'Flamingo'",
       "photos": [
-        "images/june-2026-update-2/candy-house-mix.webp"
+        "images/September Hanging Baskets & Pots/Phorium - 1.jpeg",
+        "images/September Hanging Baskets & Pots/Phorium - 2.jpeg",
+        "images/September Hanging Baskets & Pots/Phorium - 3.jpeg"
       ],
-      "position": "Left wall of steps — trailing mix of red, yellow and pink flowers",
-      "light": "Full sun.",
-      "water": "Regular; do not let dry out. Water at the base.",
-      "care": "Feed weekly with liquid tomato food. Deadhead spent flowers. Tender annual — replace each season. Trim back if leggy to encourage bushy growth.",
-      "seasonal": "Prolific trailing flowers in mixed red, yellow and pink June–October; dies with first frost.",
-      "description": "Candy House Mix is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Prolific trailing flowers in mixed red, yellow and pink June–October.",
+      "position": "Former Candy House Calibrachoa pot on the steps — planted September 2026",
+      "light": "Full sun for strongest foliage colour; shelter from severe cold wind.",
+      "water": "Water while establishing, then let the upper compost dry slightly; never leave the pot waterlogged.",
+      "care": "Remove only damaged leaves at the base. Raise the pot for winter drainage and protect the crown during severe frost.",
+      "seasonal": "Evergreen, pink-striped sword-like leaves give year-round structure.",
+      "description": "Phormium 'Flamingo' is an architectural foliage plant grown at Oak Lodge for its distinctive garden character. Evergreen, pink-striped sword-like leaves give year-round structure.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "Tender · protect from frost",
-        "flowering": "Prolific trailing flowers in mixed red, yellow and pink June–October",
-        "water": "Regular",
-        "habit": "Seasonal flowering plant",
-        "size": "Typically 15–60cm",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Flowers visited by pollinators"
+        "sunlight": "Full sun for strongest foliage colour",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen, pink-striped sword-like leaves give year-round structure",
+        "water": "Water while establishing, then let the upper compost dry slightly",
+        "habit": "Architectural foliage plant",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
       }
     }
   ],
@@ -2606,7 +2585,7 @@
         "images/aug-2026-photo-audit/baskets-lounge-door-1.jpeg",
         "images/aug-2026-photo-audit/baskets-lounge-door-2.jpeg"
       ],
-      "position": "Mixed through the kitchen- and lounge-door hanging baskets",
+      "position": "Purple Basket 3 — moved from the Lounge Door to the Decking section in September 2026",
       "light": "Full sun to light partial shade.",
       "water": "Check daily in warm weather; water thoroughly before the basket dries out.",
       "care": "Feed weekly during flowering and remove faded blooms and seed capsules. Trim bare stems back to leafy growth.",
@@ -2619,6 +2598,117 @@
         "water": "Check daily in warm weather",
         "habit": "Seasonal flowering plant",
         "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Calluna Trio Mix (2 plants)",
+      "id": "baskets-calluna-trio-mix",
+      "latin": "Calluna vulgaris mixed cultivars",
+      "photos": [
+        "images/September Hanging Baskets & Pots/Hanging Basket 1 & 2 - Heather.jpeg"
+      ],
+      "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
+      "light": "Full sun to light partial shade.",
+      "water": "Keep compost lightly moist while establishing; never waterlog.",
+      "care": "Use free-draining, preferably ericaceous compost. Trim lightly after flowering, never into bare wood.",
+      "seasonal": "Evergreen foliage and late-summer to autumn colour.",
+      "description": "Calluna Trio Mix (2 plants) is a low evergreen heather group grown at Oak Lodge for its distinctive garden character. Evergreen foliage and late-summer to autumn colour.",
+      "characteristics": {
+        "sunlight": "Full sun to light partial shade",
+        "hardiness": "H5–H6 · hardy in most UK gardens",
+        "flowering": "Evergreen foliage and late-summer to autumn colour",
+        "water": "Keep compost lightly moist while establishing",
+        "habit": "Low evergreen heather group",
+        "size": "About 25–45cm high and wide per plant",
+        "foliage": "Evergreen",
+        "wildlife": "Late-season flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Viola 'Rocky Purple Picotee' (2 plants)",
+      "id": "baskets-viola-rocky-purple-picotee",
+      "latin": "Viola cornuta 'Rocky Purple Picotee'",
+      "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
+      "light": "Sun to partial shade.",
+      "water": "Keep compost evenly moist, particularly in windy weather.",
+      "care": "Deadhead faded flowers and seed pods to extend the display.",
+      "seasonal": "Purple flowers with a pale picotee edge through the cool season.",
+      "description": "Viola 'Rocky Purple Picotee' (2 plants) is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Purple flowers with a pale picotee edge through the cool season.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Purple flowers with a pale picotee edge through the cool season",
+        "water": "Keep compost evenly moist, particularly in windy weather",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Hedera helix 'Yellow Ripple' (2 plants)",
+      "id": "baskets-hedera-yellow-ripple",
+      "latin": "Hedera helix 'Golden Starlight' (Yellow Ripple)",
+      "photos": [
+        "images/September Hanging Baskets & Pots/Hanging Basket 1 & 2 - Ivy.jpeg"
+      ],
+      "position": "One trailing plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
+      "light": "Shade to sun; avoid prolonged scorching sun on pale foliage.",
+      "water": "Keep the shared basket compost evenly moist and well drained.",
+      "care": "Trim trails to shape and keep stems clear of neighbouring crowns.",
+      "seasonal": "Evergreen variegated trails give structure through winter.",
+      "description": "Hedera helix 'Yellow Ripple' (2 plants) is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen variegated trails give structure through winter.",
+      "characteristics": {
+        "sunlight": "Shade to sun",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen variegated trails give structure through winter",
+        "water": "Keep the shared basket compost evenly moist and well drained",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    },
+    {
+      "name": "Pansy 'Fire' (2 plants)",
+      "id": "baskets-pansy-fire",
+      "latin": "Viola × wittrockiana 'Fire'",
+      "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
+      "light": "Sun to partial shade.",
+      "water": "Keep evenly moist but never saturated.",
+      "care": "Remove faded flowers and seed pods regularly.",
+      "seasonal": "Cool-season flowers provide autumn-to-spring colour.",
+      "description": "Pansy 'Fire' (2 plants) is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Cool-season flowers provide autumn-to-spring colour.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Cool-season flowers provide autumn-to-spring colour",
+        "water": "Keep evenly moist but never saturated",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Pansy 'Rose Surprise' (2 plants)",
+      "id": "baskets-pansy-rose-surprise",
+      "latin": "Viola × wittrockiana 'Rose Surprise'",
+      "position": "One plant in each of red Basket 1 and green Basket 2 — Patio Kitchen & Lounge",
+      "light": "Sun to partial shade.",
+      "water": "Keep evenly moist but never saturated.",
+      "care": "Remove faded flowers and seed pods regularly.",
+      "seasonal": "Cool-season flowers provide autumn-to-spring colour.",
+      "description": "Pansy 'Rose Surprise' (2 plants) is a garden shrub grown at Oak Lodge for its distinctive garden character. Cool-season flowers provide autumn-to-spring colour.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Cool-season flowers provide autumn-to-spring colour",
+        "water": "Keep evenly moist but never saturated",
+        "habit": "Garden shrub",
+        "size": "Typically 0.5–2m",
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
@@ -3256,7 +3346,7 @@
       }
     },
     {
-      "name": "Calluna Trio Mix (3 plants)",
+      "name": "Calluna Trio Mix (2 plants)",
       "id": "frontBed4-calluna-trio-mix",
       "latin": "Calluna vulgaris mixed cultivars",
       "photos": [
@@ -3264,16 +3354,16 @@
         "images/aug-2026-small-changes/front-bed4-calluna-trio-2.jpeg",
         "images/aug-2026-small-changes/front-bed4-calluna-trio-3.jpeg"
       ],
-      "position": "Former Delosperma pocket near the established canopy — planted August 2026",
+      "position": "Former Delosperma pocket near the established canopy — two plants remain after one moved to a hanging basket in September 2026",
       "light": "Full sun in an open position.",
       "water": "Sprinkler supplied; keep the root zone moist while establishing but never waterlogged.",
       "care": "Keep the soil acidic and free draining. Trim lightly after flowering, never back into bare old wood, and keep fallen leaves clear of the crowns.",
-      "seasonal": "A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
-      "description": "Calluna Trio Mix (3 plants) is a low evergreen heather group grown at Oak Lodge for its distinctive garden character. A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
+      "seasonal": "A two-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
+      "description": "Calluna Trio Mix (2 plants) is a low evergreen heather group grown at Oak Lodge for its distinctive garden character. A two-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn.",
       "characteristics": {
         "sunlight": "Full sun in an open position",
         "hardiness": "H5–H6 · hardy in most UK gardens",
-        "flowering": "A three-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn",
+        "flowering": "A two-plant mixed Calluna group with pink, white and lime-green flower-and-foliage interest from late summer into autumn",
         "water": "Sprinkler supplied",
         "habit": "Low evergreen heather group",
         "size": "About 25–45cm high and wide per plant",
@@ -3769,6 +3859,31 @@
       }
     },
     {
+      "name": "Viola 'Rocky Purple Picotee'",
+      "id": "frontBed5-viola-rocky-purple-picotee",
+      "latin": "Viola cornuta 'Rocky Purple Picotee'",
+      "photos": [
+        "images/September Hanging Baskets & Pots/Front Bed 5 - Update 1.jpeg",
+        "images/September Hanging Baskets & Pots/Front Bed 5 - Update 2.jpeg"
+      ],
+      "position": "Beside the Astrantia trio and Heather 'Winter Chocolate' — added September 2026",
+      "light": "Sun to partial shade.",
+      "water": "Keep evenly moist while establishing; do not allow the planting pocket to become waterlogged.",
+      "care": "Deadhead faded flowers and seed pods regularly to prolong the cool-season display.",
+      "seasonal": "Purple flowers with pale picotee margins through autumn, winter and spring.",
+      "description": "Viola 'Rocky Purple Picotee' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Purple flowers with pale picotee margins through autumn, winter and spring.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Purple flowers with pale picotee margins through autumn, winter and spring",
+        "water": "Keep evenly moist while establishing",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
       "name": "Ceratostigma",
       "id": "frontBed5-ceratostigma-plumbaginoides",
       "latin": "Ceratostigma plumbaginoides",
@@ -4228,28 +4343,49 @@
       }
     },
     {
-      "name": "Hedera helix 'Yellow Ripple'",
-      "id": "lobeliapot-hedera-yellow-ripple",
-      "latin": "Hedera helix 'Golden Starlight' (Yellow Ripple)",
+      "name": "Skimmia 'Antarctica'",
+      "id": "lobeliapot-skimmia-antarctica",
+      "latin": "Skimmia 'Antarctica'",
       "photos": [
-        "images/aug-2026-pot-update/skimmia-pot-1.jpeg",
-        "images/aug-2026-pot-update/skimmia-pot-2.jpeg"
+        "images/September Hanging Baskets & Pots/Skimmia Pot - Update 1.jpeg",
+        "images/September Hanging Baskets & Pots/Skimmia Update - 2.jpeg"
       ],
-      "position": "Trailing over the rim of the Skimmia Pot — added August 2026",
-      "light": "Full shade to partial shade; shelter pale margins from scorching sun.",
-      "water": "Share the Skimmia's evenly moist, well-drained compost; check beneath the foliage before watering.",
-      "care": "Trim to keep the ivy within the pot and away from the Skimmia crown. Remove any all-green reverted shoots at their origin.",
-      "seasonal": "Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour.",
-      "description": "Hedera helix 'Yellow Ripple' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour.",
+      "position": "Second evergreen Skimmia in the pot — added September 2026",
+      "light": "Partial to full shade, sheltered from harsh sun and drying wind.",
+      "water": "Keep compost evenly moist and freely drained; rainwater is preferred where practical.",
+      "care": "Use ericaceous compost and prune only lightly after flowering. Do not let the root ball dry out while establishing.",
+      "seasonal": "Glossy evergreen foliage and spring flower buds give year-round structure.",
+      "description": "Skimmia 'Antarctica' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Glossy evergreen foliage and spring flower buds give year-round structure.",
       "characteristics": {
-        "sunlight": "Full shade to partial shade",
+        "sunlight": "Partial to full shade, sheltered from harsh sun and drying wind",
         "hardiness": "Hardy in most UK gardens",
-        "flowering": "Evergreen lobed leaves with yellow-to-cream margins provide year-round trailing colour",
-        "water": "Share the Skimmia's evenly moist, well-drained compost",
+        "flowering": "Glossy evergreen foliage and spring flower buds give year-round structure",
+        "water": "Keep compost evenly moist and freely drained",
         "habit": "Herbaceous perennial",
         "size": "Typically 30–100cm",
         "foliage": "Evergreen",
-        "wildlife": "Foliage provides garden habitat"
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Viola 'Rocky Purple Picotee' (3 plants)",
+      "id": "lobeliapot-viola-rocky-purple-picotee",
+      "latin": "Viola cornuta 'Rocky Purple Picotee'",
+      "position": "Three plants around the Skimmias — added September 2026",
+      "light": "Sun to partial shade.",
+      "water": "Keep the shared compost evenly moist but well drained.",
+      "care": "Deadhead faded flowers and seed pods regularly to prolong flowering.",
+      "seasonal": "Purple flowers with pale picotee margins through the cool season.",
+      "description": "Viola 'Rocky Purple Picotee' (3 plants) is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Purple flowers with pale picotee margins through the cool season.",
+      "characteristics": {
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Purple flowers with pale picotee margins through the cool season",
+        "water": "Keep the shared compost evenly moist but well drained",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],

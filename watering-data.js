@@ -110,8 +110,7 @@
       "Fuchsia": 5,
     },
     "Little Pot 1": {
-      "Geranium": 3,
-      "Petunia": 4,
+      "Helleborus Ice N' Roses Bennotta": 3,
     },
     "Little Pot 2": {
       "Coreopsis Gold": 3,
@@ -121,7 +120,8 @@
     },
     "Skimmia Pot": {
       "Skimmia 'Cleopatra'": 4,
-      "Hedera helix 'Yellow Ripple'": 3,
+      "Skimmia 'Antarctica'": 4,
+      "Viola 'Rocky Purple Picotee' (3 plants)": 3,
     },
     "Bed 2/3 Wall Pot": {
       "Viburnum 'Lisarose'": 3,
@@ -137,7 +137,7 @@
       "Bacopa White": 4,
     },
     "Wall Pot 1": {
-      "Candy House Mix": 5,
+      "Phormium 'Flamingo'": 2,
     },
     "Wall Pot 2": {
       "Echinacea 'Mooodz Glory'": 3,
@@ -148,6 +148,11 @@
       "Trailing Lobelia": 5,
       "Trailing Verbena": 4,
       "Petunia": 5,
+      "Calluna Trio Mix (2 plants)": 3,
+      "Viola 'Rocky Purple Picotee' (2 plants)": 3,
+      "Hedera helix 'Yellow Ripple' (2 plants)": 3,
+      "Pansy 'Fire' (2 plants)": 3,
+      "Pansy 'Rose Surprise' (2 plants)": 3,
     },
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
@@ -179,7 +184,7 @@
       "Pieris 'Polar Passion'": 3,
       "Dahlia 'Tampico'": 4,
       "Verbena 'Margaret's Memory'": 3,
-      "Calluna Trio Mix (3 plants)": 3,
+      "Calluna Trio Mix (2 plants)": 3,
       "Achillea": 2,
       "Azalea japonica 'Lotte'": 4,
     },
@@ -207,6 +212,7 @@
       "Hebe 'Rhubarb and Custard'": 2,
       "Salvia 'Salgoon Lake Blueberry'": 2,
       "Fern 'Jurassic Gold'": 3,
+      "Viola 'Rocky Purple Picotee'": 3,
     },
     "Front Pots": {
       "Mixed Pot": 4,
@@ -527,8 +533,8 @@
       over: "Compost staying dark and sodden a day after watering, algae or moss on the surface, or a musty smell are signs it's being overdone. Nepeta in this mix is naturally drought-tolerant, so watch it specifically for yellowing lower leaves or a soft stem base — it's usually the first to suffer if the pot's kept too wet for the thirstier plants around it.",
     },
     "Little Pot 1": {
-      under: "Compost pulling away from the pot's edge, or the pot feeling noticeably light, means it's dried right out. The geranium's leaves going crisp and brown at the edges, or the petunia's flowers closing up and leaves going matte and floppy, confirm it.",
-      over: "A sodden saucer, or compost still dark and wet a day after watering, means it's too much. The geranium is the one to watch — soft, yellowing lower leaves or a mushy stem base is a clear sign; it rots fast if kept wet.",
+      under: "A light pot, compost pulling from the rim or leaves losing their normal firmness means the Hellebore needs a thorough drink. Keep it moist in active growth, but do not confuse dry surface compost with a dry root ball.",
+      over: "Compost remaining cold, dark and wet for days, yellowing leaves or a soft crown mean the pot is too wet. Raise it on feet and keep the crown clear of fallen leaves.",
     },
     "Little Pot 2": {
       under: "The square pot feeling light, compost pulling from the edges, or the Coreopsis foliage turning grey-green and floppy all mean it needs a thorough drink. Buds staying small or failing to open are a later warning.",
@@ -539,8 +545,8 @@
       over: "Yellowing leaves, weak extension growth or branch dieback while the compost remains wet point to poor drainage. Empty trapped water and let air return to the root ball before watering again.",
     },
     "Skimmia Pot": {
-      under: "Check beneath the surface and lift the pot in warm weather. Dull curling Skimmia leaves, wrinkling berries, limp ivy or compost pulling from the rim mean the shared root ball is drying too far.",
-      over: "Compost staying dark and sodden for days, yellow Skimmia leaves, blackened stems or soft ivy growth mean the pot needs better drainage and a pause in watering.",
+      under: "Check beneath the surface and lift the pot in warm weather. Dull curling Skimmia leaves, limp Viola growth or compost pulling from the rim mean the shared root ball is drying too far.",
+      over: "Compost staying dark and sodden for days, yellow Skimmia leaves, blackened stems or collapsing Viola growth mean the pot needs better drainage and a pause in watering.",
     },
     "Bed 2/3 Wall Pot": {
       under: "Check beneath the surface in warm or windy weather. Drooping Viburnum leaves, limp Vinca trails or a noticeably light pot mean the shared root ball is drying too far.",
@@ -773,7 +779,7 @@
         "Pieris 'Polar Passion'": "dropper",
         "Dahlia 'Tampico'": "sprinkler",
         "Verbena 'Margaret's Memory'": "dropper",
-        "Calluna Trio Mix (3 plants)": "sprinkler",
+        "Calluna Trio Mix (2 plants)": "sprinkler",
         Achillea: "dropper",
         "Azalea japonica 'Lotte'": "dropper",
       },

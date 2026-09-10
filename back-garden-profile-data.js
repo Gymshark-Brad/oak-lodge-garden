@@ -128,7 +128,7 @@
   };
 
   const profiles = {};
-  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia"]);
+  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia", "littlepot1-geranium", "littlepot1-petunia", "wallpot1-candy-house-mix", "lobeliapot-hedera-yellow-ripple"]);
 
   function add(id, seed) {
     const record = (window.OAK.PLANT_BY_ID || {})[id];
@@ -930,6 +930,33 @@
     problem: { name: "Powdery mildew", sign: "White coating followed by distorted and tired leaves", response: "Stabilise watering, improve airflow and cut out badly affected trailing sections." },
     about: "Most trailing basket Verbenas are tender hybrids, often placed botanically within Glandularia. Flower colour alone rarely identifies their series or cultivar, especially when several colours may have been planted as a retail mix. Their open florets remain useful to bees and butterflies through a long flowering season.", provenance: "Trailing Verbena identity and mixed colours come from the garden record; no cultivar or series is inferred.", family: "Verbenaceae", genus: "Glandularia/Verbena", foliage: "Tender and seasonal", habit: "Low, branching and trailing", role: "Mixed pollinator-friendly colour through the baskets", observation: "Rounded clusters weave among the Fuchsia, white Bacopa and blue Lobelia.", status: "Photograph each flower colour separately with any basket label if exact cultivars are wanted.", source: RHS.verbena,
   });
+
+  // September 2026 pot and basket refresh. These records deliberately retain
+  // only label-supported identities and observed placement.
+  const SEPTEMBER_SOURCE = { title: "Oak Lodge September 2026 plant labels and photographs", url: null, note: "Identity and placement recorded from the September pot and hanging-basket update" };
+  function addSeptember(id, seed) {
+    add(id, {
+      kind: seed.kind || "perennial", type: seed.type, badges: ["September 2026", "Garden record"], description: seed.description,
+      months: seed.months, size: seed.size, sizeDetail: seed.sizeDetail, position: seed.position, positionDetail: seed.positionDetail,
+      soil: seed.soil, soilDetail: seed.soilDetail, hardiness: seed.hardiness, hardinessDetail: seed.hardinessDetail,
+      feature: seed.feature, featureDetail: seed.featureDetail, identity: seed.identity, identityDetail: "Name retained from the supplied garden record",
+      under: seed.under, over: seed.over, spring: seed.spring, summer: seed.summer, autumn: seed.autumn, winter: seed.winter,
+      about: seed.about, provenance: "The supplied September update and photographs record this plant's identity and position.", family: seed.family, genus: seed.genus,
+      foliage: seed.foliage, habit: seed.habit, role: seed.role, observation: seed.observation, added: "Added September 2026", status: seed.status, source: SEPTEMBER_SOURCE,
+    });
+  }
+  const autumnCare = { spring: "Clear damaged growth and refresh the compost surface without burying the crown.", summer: "Check moisture during dry spells and keep drainage clear.", autumn: "Keep the planting tidy while it establishes and remove fallen leaves from crowns.", winter: "Protect container drainage and avoid leaving roots in cold, saturated compost." };
+  addSeptember("littlepot1-hellebore-ice-n-roses-bennotta", { ...autumnCare, type: "Winter-flowering Hellebore", description: "Ice N' Roses Bennotta is the new winter-flowering centrepiece in Little Pot 1, replacing the summer Geranium and Petunia display. Its dark evergreen foliage and deep pink-red flowers bring colour through the quiet months, provided the small pot drains freely.", months: ["Jan", "Feb", "Mar", "Dec"], size: "30–60cm", sizeDetail: "Compact evergreen clump", position: "Partial shade to sun", positionDetail: "Sheltered pot position", soil: "Humus-rich and drained", soilDetail: "Evenly moist compost, never saturated", hardiness: "Hardy", hardinessDetail: "Container roots need winter drainage", feature: "Winter flowers", featureDetail: "Deep pink-red blooms", identity: "Helleborus Ice N' Roses Bennotta", under: "limp leaves and a light root ball", over: "yellowing leaves or a soft crown in cold wet compost", about: "Ice N' Roses hellebores are hardy, clump-forming hybrids suited to containers when the crown is kept clear and drainage is reliable.", family: "Ranunculaceae", genus: "Helleborus", foliage: "Evergreen", habit: "Clump-forming", role: "Winter focus for Little Pot 1", observation: "September photographs record the new planting.", status: "Monitor crown drainage through the first winter." });
+  addSeptember("wallpot1-phormium-flamingo", { ...autumnCare, type: "Evergreen New Zealand flax", description: "Phormium 'Flamingo' replaced the Candy House Calibrachoa display in the Steps wall pot. Its pink-striped leaves give the small container a permanent vertical accent rather than a seasonal trailing display.", months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], size: "To be observed", sizeDetail: "Container size will limit mature spread", position: "Full sun", positionDetail: "Shelter from severe cold wind", soil: "Free-draining compost", soilDetail: "Do not allow winter saturation", hardiness: "Hardy with protection", hardinessDetail: "Container roots are exposed", feature: "Pink-striped evergreen leaves", featureDetail: "Architectural foliage", identity: "Phormium 'Flamingo'", under: "curling leaves and a light pot", over: "yellowing leaves in persistently wet compost", about: "Phormiums are evergreen New Zealand perennials valued for their coloured sword-like foliage and strong container presence.", family: "Asphodelaceae", genus: "Phormium", foliage: "Evergreen and variegated", habit: "Upright, arching clump", role: "Year-round Steps wall-pot structure", observation: "The September photographs show fresh pink-striped foliage.", status: "Review pot size as the clump expands." });
+  [
+    ["lobeliapot-skimmia-antarctica", "Evergreen Skimmia", "Skimmia 'Antarctica'", "Rutaceae", "Skimmia", "Second evergreen anchor in the Skimmia Pot"],
+    ["lobeliapot-viola-rocky-purple-picotee", "Cool-season Viola", "Viola 'Rocky Purple Picotee' (3 plants)", "Violaceae", "Viola", "Autumn colour around the Skimmias"],
+    ["baskets-calluna-trio-mix", "Evergreen Calluna group", "Calluna Trio Mix (2 plants)", "Ericaceae", "Calluna", "One heather in each matching basket"],
+    ["baskets-viola-rocky-purple-picotee", "Cool-season Viola", "Viola 'Rocky Purple Picotee' (2 plants)", "Violaceae", "Viola", "One Viola in each matching basket"],
+    ["baskets-hedera-yellow-ripple", "Evergreen trailing ivy", "Hedera helix 'Yellow Ripple' (2 plants)", "Araliaceae", "Hedera", "One ivy trail in each matching basket"],
+    ["baskets-pansy-fire", "Cool-season Pansy", "Pansy 'Fire' (2 plants)", "Violaceae", "Viola", "One Pansy in each matching basket"],
+    ["baskets-pansy-rose-surprise", "Cool-season Pansy", "Pansy 'Rose Surprise' (2 plants)", "Violaceae", "Viola", "One Pansy in each matching basket"],
+  ].forEach(([id, type, identity, family, genus, role]) => addSeptember(id, { ...autumnCare, type, description: `${identity} is recorded as part of the September autumn refresh. ${role}.`, months: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"], size: "Compact container planting", sizeDetail: "Observed in the September photo record", position: "Sun to partial shade", positionDetail: "Container-specific placement recorded", soil: "Moist and free-draining", soilDetail: "Container compost must not remain saturated", hardiness: "Cool-season planting", hardinessDetail: "Protect containers from prolonged freezing and waterlogging", feature: "Autumn and winter interest", featureDetail: "Colour or evergreen structure", identity, under: "wilting growth and a light container", over: "yellowing or soft growth in compost that remains wet", about: "This named autumn container plant is retained at the level supported by the supplied garden record.", family, genus, foliage: "Seasonal or evergreen according to the named plant", habit: "Container planting", role, observation: "Recorded in the September 2026 update photographs.", status: "Monitor moisture and remove faded flowers or damaged growth as appropriate." }));
 
   Object.entries(profiles).forEach(([plantId, profile]) => {
     const record = (window.OAK.PLANT_BY_ID || {})[plantId];
