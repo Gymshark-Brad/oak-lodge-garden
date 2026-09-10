@@ -57,8 +57,14 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
   const archiveNote = archiveLabel.note;
   const map = window.OAK.BED_PLANT_MAPS[zoneKey] || [];
   const nestedZones = window.OAK.NESTED_ZONE_MAPS?.[zoneKey] || [];
-  const hasIrrigationMap = !!(window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS)?.[zoneKey];
-  const hasMapContent = plants.length > 0 || map.length > 0 || nestedZones.length > 0;
+  const irrigationMap = (window.OAK.IRRIGATION_MAPS || window.OAK.FRONT_IRRIGATION_MAPS)?.[zoneKey] || null;
+  const hasIrrigationMap = !!irrigationMap;
+  // Pots can be shown either as a normal child marker or as an irrigation-map
+  // extra. Present both consistently in a named, clickable companion list.
+  const linkedContainers = [...nestedZones, ...(irrigationMap?.extras || [])]
+    .filter((marker) => marker.zoneKey)
+    .filter((marker, index, markers) => markers.findIndex((candidate) => candidate.zoneKey === marker.zoneKey) === index);
+  const hasMapContent = plants.length > 0 || map.length > 0 || linkedContainers.length > 0;
   const isBasketCollection = zoneKey === "baskets";
   const [hoverPlant, setHoverPlant] = useState_BD(null);
   const explicitMapNumbering = map.some((marker) => marker.mapNo !== undefined);
@@ -138,7 +144,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
       <div className="rule" style={{ margin: "20px 0 24px" }} />
 
       {/* Map + plant list. Parent folios can also contain linked child pots. */}
-      {hasMapContent && <div className={"bed-grid" + (hasIrrigationMap ? " bed-grid--irrigation-map" : "") + (plants.length === 0 ? " bed-grid--map-only" : "")}>
+      {hasMapContent && <div className={"bed-grid" + (hasIrrigationMap ? " bed-grid--irrigation-map" : "") + (plants.length === 0 && linkedContainers.length === 0 ? " bed-grid--map-only" : "")}>
         <div className="bed-map-col">
           <div className="t-stamp" style={{ marginBottom: 10 }}>
             {hasIrrigationMap
@@ -168,7 +174,31 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
           </div>
         </div>
 
-        {plants.length > 0 && <div className="bed-plants-col">
+        {(plants.length > 0 || linkedContainers.length > 0) && <div className="bed-plants-col">
+          {linkedContainers.length > 0 && <div className="container-list-section">
+            <div className="t-stamp" style={{ marginBottom: 10 }}>
+              Pots & containers · {linkedContainers.length} {linkedContainers.length === 1 ? "record" : "records"}
+            </div>
+            <ul className="container-list">
+              {linkedContainers.map((container) => {
+                const childZone = window.OAK.ZONES[container.zoneKey];
+                return (
+                  <li key={container.zoneKey}>
+                    <button className="container-row" onClick={() => onOpenZone(container.zoneKey)}>
+                      <span className="container-marker t-stamp">{container.marker}</span>
+                      <span className="container-name-block">
+                        <span className="t-display container-name">{container.name}</span>
+                        <span className="t-mono container-meta">{childZone?.dims || "open container folio"}</span>
+                      </span>
+                      <span className="plant-arrow">→</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>}
+
+          {plants.length > 0 && <>
           <div className="t-stamp" style={{ marginBottom: 10 }}>
             {isBasketCollection
               ? `Basket collection · 2 baskets · ${plants.length} shared plant records`
@@ -222,6 +252,7 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
               </React.Fragment>
             ))}
           </ul>
+          </>}
         </div>}
       </div>}
 
@@ -334,6 +365,25 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
         }
 
         .plant-list { list-style: none; margin: 0; padding: 0; }
+        .container-list-section { margin-bottom: 28px; }
+        .container-list { list-style: none; margin: 0; padding: 0; }
+        .container-row {
+          width: 100%; display: grid; grid-template-columns: 42px 1fr 24px;
+          align-items: center; gap: 12px; padding: 12px 6px;
+          border: 0; border-bottom: 1px dotted var(--hairline); cursor: pointer;
+          background: transparent; color: inherit; text-align: left; font: inherit;
+          transition: background 140ms ease;
+        }
+        .container-row:hover, .container-row:focus-visible { background: color-mix(in oklab, var(--ink) 5%, transparent); }
+        .container-row:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+        .container-marker {
+          display: inline-grid; place-items: center; width: 32px; height: 32px;
+          border: 1px dashed var(--pencil); border-radius: 50%; color: var(--accent);
+        }
+        .container-name-block { min-width: 0; display: grid; gap: 2px; }
+        .container-name { font-size: 23px; line-height: 1.05; }
+        .container-meta { color: var(--pencil); opacity: 0.8; }
+        .container-row:hover .plant-arrow { color: var(--accent); transform: translateX(4px); }
         .plant-group-label {
           margin: 22px 0 4px;
           padding: 0 10px 6px;
