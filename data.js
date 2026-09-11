@@ -3580,6 +3580,12 @@ window.OAK = (function () {
     },
     "sep-2026": {
       label: "September 2026",
+      patio: [
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-before-overview.jpg", caption: "Honeysuckle before September thinning — congested growth around the windows" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-before-canopy.jpg", caption: "Dense tangled growth beneath the Patio eaves before pruning" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-after-overview.jpg", caption: "Honeysuckle after thinning, with the trained framework retained" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-after-framework.jpg", caption: "Mature Honeysuckle framework ready for new growth next season" },
+      ],
       littlepot1: [
         { src: "images/September Hanging Baskets & Pots/Little Pot 1 - Helleborus - 1.jpeg", caption: "Helleborus Ice N' Roses Bennotta in Little Pot 1" },
         { src: "images/September Hanging Baskets & Pots/Little Pot 1 - Helleborus - 2.jpeg", caption: "Little Pot 1’s new winter-flowering planting" },
@@ -3789,6 +3795,12 @@ window.OAK = (function () {
       ]},
     ],
     "Honeysuckle": [
+      { month: "sep-2026", label: "September 2026 · thinned and retrained", photos: [
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-before-overview.jpg", caption: "Before: congested canopy at the Patio windows" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-before-canopy.jpg", caption: "Before: dense, tangled growth beneath the eaves" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-after-overview.jpg", caption: "After: the wall opened up and the main trained stems retained" },
+        { src: "images/sep-2026-honeysuckle-prune/honeysuckle-after-framework.jpg", caption: "After: mature framework ready to carry next season’s growth" },
+      ]},
       { month: "june-2026", label: "June 2026", photos: [
         { src: "images/june-2026/honeysuckle-1.webp", caption: "Honeysuckle" },
         { src: "images/june-2026/honeysuckle-2.webp", caption: "Flowers" },
