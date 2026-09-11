@@ -80,7 +80,7 @@ function HousePlan({ onOpenPlant, dark }) {
               <div className="t-stamp">Plan i.</div>
               <h2 id="ground-floor-heading" className="t-display">Ground floor</h2>
             </div>
-            <span className="t-mono">{groundEntries.length} {groundEntries.length === 1 ? "pot" : "pots"}</span>
+            <span className="t-mono">{groundEntries.length} {groundEntries.length === 1 ? "specimen" : "specimens"}</span>
           </header>
           <div className="house-floor-canvas">
             <svg viewBox="0 0 1300 620" role="img" aria-labelledby="ground-plan-title ground-plan-desc">
@@ -193,7 +193,7 @@ function HousePlan({ onOpenPlant, dark }) {
               <div className="t-stamp">Plan ii.</div>
               <h2 id="first-floor-heading" className="t-display">First floor</h2>
             </div>
-            <span className="t-mono">{firstEntries.length} {firstEntries.length === 1 ? "pot" : "pots"}</span>
+            <span className="t-mono">{firstEntries.length} {firstEntries.length === 1 ? "specimen" : "specimens"}</span>
           </header>
           <div className="house-floor-canvas">
             <svg viewBox="0 0 480 260" role="img" aria-labelledby="first-plan-title first-plan-desc">

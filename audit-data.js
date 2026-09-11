@@ -131,6 +131,20 @@ function run(argv) {
     errors.push("Kentia identity qualification or pet-safety record is incomplete");
   }
 
+  const mixedHouseplantChecks = {
+    "house-sitting-mixed-spider-plant": "Non-toxic to cats & dogs",
+    "house-sitting-mixed-parlour-palm": "Non-toxic to cats & dogs",
+    "house-sitting-mixed-arrowhead-vine": "Harmful if eaten",
+  };
+  Object.entries(mixedHouseplantChecks).forEach(([plantId, safetyLabel]) => {
+    const mixedRecord = OAK.PLANT_BY_ID[plantId];
+    if (!mixedRecord || !mixedRecord.plant.name.endsWith("— assumed")
+      || !mixedRecord.plant.profile.petSafety
+      || mixedRecord.plant.profile.petSafety.label !== safetyLabel) {
+      errors.push("shared gift-pot identity qualification or safety record is incomplete: " + plantId);
+    }
+  });
+
   const allowedSeasonalPriorities = new Set(["first", "month", "ongoing"]);
   const allowedSeasonalCategories = new Set([
     "prune", "deadhead", "cut-back", "ground", "protect",

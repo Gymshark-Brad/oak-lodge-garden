@@ -229,11 +229,20 @@
     "House · Hallway · Kentia Palm": {
       "Kentia Palm — assumed": 3,
     },
-    "House · Sitting Room · ‘Gioia’ Fern": {
+    "House · Kitchen / Dining · ‘Gioia’ Fern": {
       "Bird’s Nest Fern ‘Gioia’": 4,
     },
     "House · Hallway · Staghorn Fern": {
       "Staghorn Fern": 3,
+    },
+    "House · Sitting Room · Shared Pot · Spider Plant": {
+      "Spider Plant ‘Vittatum’ — assumed": 3,
+    },
+    "House · Sitting Room · Shared Pot · Parlour Palm": {
+      "Parlour Palm — assumed": 3,
+    },
+    "House · Sitting Room · Shared Pot · Arrowhead Vine": {
+      "Arrowhead Vine — assumed": 3,
     },
   };
 

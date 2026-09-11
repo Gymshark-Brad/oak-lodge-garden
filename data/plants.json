@@ -4151,7 +4151,7 @@
       }
     }
   ],
-  "House · Sitting Room · ‘Gioia’ Fern": [
+  "House · Kitchen / Dining · ‘Gioia’ Fern": [
     {
       "name": "Bird’s Nest Fern ‘Gioia’",
       "id": "house-sitting-asplenium-gioia",
@@ -4164,7 +4164,7 @@
         "images/house-plants/sep-2026/asplenium-gioia-5.jpeg",
         "images/house-plants/sep-2026/asplenium-gioia-label.jpeg"
       ],
-      "position": "Ground-floor sitting room, beside the garden-facing window",
+      "position": "Ground-floor kitchen / dining room, at the window marked in September 2026",
       "light": "Bright, indirect light; protect the fronds from direct sun through the glass.",
       "water": "Keep compost lightly moist but never saturated; water around the pot edge rather than into the centre rosette.",
       "care": "Give it steady warmth and higher humidity, removing only damaged fronds at the base.",
@@ -4207,6 +4207,90 @@
         "size": "Typically 30–100cm",
         "foliage": "Evergreen",
         "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "House · Sitting Room · Shared Pot · Spider Plant": [
+    {
+      "name": "Spider Plant ‘Vittatum’ — assumed",
+      "id": "house-sitting-mixed-spider-plant",
+      "latin": "Chlorophytum comosum ‘Vittatum’",
+      "photos": [
+        "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+        "images/house-plants/sep-2026/spider-plant-runners-1.jpeg",
+        "images/house-plants/sep-2026/spider-plant-runners-2.jpeg"
+      ],
+      "position": "Dominant arching plant in Nicola’s shared three-plant pot, beside the sitting-room window",
+      "light": "Bright indirect light is ideal; it tolerates lower light but direct hot sun can scorch the striped leaves.",
+      "water": "Allow the compost surface to begin drying, then water thoroughly and let the shared container drain fully.",
+      "care": "Trim only spent stems or badly damaged leaves, feed lightly during active growth and root the hanging plantlets if wanted.",
+      "seasonal": "Evergreen striped foliage and hanging plantlets are the year-round display; growth slows in winter.",
+      "description": "Spider Plant ‘Vittatum’ — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen striped foliage and hanging plantlets are the year-round display.",
+      "characteristics": {
+        "sunlight": "Bright indirect light is ideal",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen striped foliage and hanging plantlets are the year-round display",
+        "water": "Allow the compost surface to begin drying, then water thoroughly and let the shared container drain fully",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "House · Sitting Room · Shared Pot · Parlour Palm": [
+    {
+      "name": "Parlour Palm — assumed",
+      "id": "house-sitting-mixed-parlour-palm",
+      "latin": "Chamaedorea elegans",
+      "photos": [
+        "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+        "images/house-plants/sep-2026/parlour-palm-detail.jpeg",
+        "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg"
+      ],
+      "position": "Upright palm rising through Nicola’s shared three-plant pot, beside the sitting-room window",
+      "light": "Bright indirect light or light shade; protect the fine leaflets from strong direct sun.",
+      "water": "Check below the surface before watering; keep lightly moist in growth but never leave the shared planter waterlogged.",
+      "care": "Keep warm, remove only fully brown fronds at the base and feed monthly at low strength in spring and summer.",
+      "seasonal": "Evergreen fine-textured fronds provide the display throughout the year; growth is slowest in winter.",
+      "description": "Parlour Palm — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen fine-textured fronds provide the display throughout the year.",
+      "characteristics": {
+        "sunlight": "Bright indirect light or light shade",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen fine-textured fronds provide the display throughout the year",
+        "water": "Check below the surface before watering",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Foliage provides garden habitat"
+      }
+    }
+  ],
+  "House · Sitting Room · Shared Pot · Arrowhead Vine": [
+    {
+      "name": "Arrowhead Vine — assumed",
+      "id": "house-sitting-mixed-arrowhead-vine",
+      "latin": "Syngonium podophyllum",
+      "photos": [
+        "images/house-plants/sep-2026/arrowhead-vine-detail.jpeg",
+        "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+        "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg"
+      ],
+      "position": "Smaller arrow-leaved vine woven through Nicola’s shared three-plant pot, beside the sitting-room window",
+      "light": "Bright indirect light; keep the leaves out of strong direct sun through the glass.",
+      "water": "Keep lightly moist during active growth, allowing the surface to begin drying; water more sparingly in winter.",
+      "care": "Guide or trim lengthening stems in spring, feed during active growth and wear gloves if pruning because the sap is irritating.",
+      "seasonal": "Evergreen juvenile arrow-shaped leaves become more divided as stems mature; indoor flowering is uncommon.",
+      "description": "Arrowhead Vine — assumed is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen juvenile arrow-shaped leaves become more divided as stems mature.",
+      "characteristics": {
+        "sunlight": "Bright indirect light",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Evergreen juvenile arrow-shaped leaves become more divided as stems mature",
+        "water": "Keep lightly moist during active growth, allowing the surface to begin drying",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers visited by pollinators"
       }
     }
   ],

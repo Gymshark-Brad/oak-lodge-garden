@@ -323,20 +323,20 @@ window.OAK = (function () {
       room: "Hallway",
       marker: { floor: "ground", x: 835, y: 342 },
     },
-    houseSittingGioia: {
-      id: "houseSittingGioia",
-      title: "Sitting Room · ‘Gioia’ Fern",
+    houseKitchenGioia: {
+      id: "houseKitchenGioia",
+      title: "Kitchen / Dining · ‘Gioia’ Fern",
       badge: "Indoor specimen",
       dims: "Small nursery pot in grey cachepot",
-      where: "Ground-floor sitting room, beside the garden-facing window",
-      desc: "A compact crested bird’s nest fern, identified from its retained plant passport as Asplenium antiquum ‘Gioia’.",
+      where: "Ground-floor kitchen / dining room, at the window marked in September 2026",
+      desc: "A compact crested bird’s nest fern, identified from its retained plant passport as Asplenium antiquum ‘Gioia’, moved from the sitting-room window to the kitchen in September 2026.",
       color: "#3178c6",
-      plantKey: "House · Sitting Room · ‘Gioia’ Fern",
+      plantKey: "House · Kitchen / Dining · ‘Gioia’ Fern",
       isPot: true,
       environment: "indoor",
       floor: "Ground Floor",
-      room: "Sitting Room",
-      marker: { floor: "ground", x: 670, y: 78 },
+      room: "Kitchen / Dining",
+      marker: { floor: "ground", x: 205, y: 72 },
     },
     houseHallStaghorn: {
       id: "houseHallStaghorn",
@@ -352,6 +352,51 @@ window.OAK = (function () {
       floor: "Ground Floor",
       room: "Hallway",
       marker: { floor: "ground", x: 705, y: 485 },
+    },
+    houseSittingMixedSpider: {
+      id: "houseSittingMixedSpider",
+      title: "Sitting Room · Shared Pot · Spider Plant",
+      badge: "Indoor specimen · shared planter",
+      dims: "Large mixed planter shared by three plants",
+      where: "Ground-floor sitting room, beside the garden-facing window",
+      desc: "The dominant arching plant in Nicola’s three-plant gift pot, with centrally striped leaves and long stems carrying young plantlets. The ‘Vittatum’ cultivar is a strong photo-based fit but remains assumed without a label.",
+      color: "#6f8d55",
+      plantKey: "House · Sitting Room · Shared Pot · Spider Plant",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Sitting Room",
+      marker: { floor: "ground", x: 620, y: 78 },
+    },
+    houseSittingMixedPalm: {
+      id: "houseSittingMixedPalm",
+      title: "Sitting Room · Shared Pot · Parlour Palm",
+      badge: "Indoor specimen · shared planter",
+      dims: "Large mixed planter shared by three plants",
+      where: "Ground-floor sitting room, beside the garden-facing window",
+      desc: "The upright fine-leafleted palm in Nicola’s three-plant gift pot. Its slender stems and compact pinnate fronds strongly support Parlour palm, retained as assumed until a label is found.",
+      color: "#3f7450",
+      plantKey: "House · Sitting Room · Shared Pot · Parlour Palm",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Sitting Room",
+      marker: { floor: "ground", x: 670, y: 78 },
+    },
+    houseSittingMixedSyngonium: {
+      id: "houseSittingMixedSyngonium",
+      title: "Sitting Room · Shared Pot · Arrowhead Vine",
+      badge: "Indoor specimen · shared planter",
+      dims: "Large mixed planter shared by three plants",
+      where: "Ground-floor sitting room, beside the garden-facing window",
+      desc: "The smaller arrow-leaved vine tucked through Nicola’s three-plant gift pot. The juvenile leaf shape and pale venation strongly support Syngonium podophyllum, retained as assumed without a label.",
+      color: "#668c68",
+      plantKey: "House · Sitting Room · Shared Pot · Arrowhead Vine",
+      isPot: true,
+      environment: "indoor",
+      floor: "Ground Floor",
+      room: "Sitting Room",
+      marker: { floor: "ground", x: 720, y: 78 },
     },
 
     // ── Front garden v2 (measured survey · own plan, viewBox 0 0 1000 640 — see FrontGardenPlan.jsx)
@@ -2595,7 +2640,7 @@ window.OAK = (function () {
         seasonal: "Evergreen indoor foliage throughout the year; growth slows as light levels fall in winter.",
       },
     ],
-    "House · Sitting Room · ‘Gioia’ Fern": [
+    "House · Kitchen / Dining · ‘Gioia’ Fern": [
       {
         name: "Bird’s Nest Fern ‘Gioia’",
         id: "house-sitting-asplenium-gioia",
@@ -2608,7 +2653,7 @@ window.OAK = (function () {
           "images/house-plants/sep-2026/asplenium-gioia-5.jpeg",
           "images/house-plants/sep-2026/asplenium-gioia-label.jpeg",
         ],
-        position: "Ground-floor sitting room, beside the garden-facing window",
+        position: "Ground-floor kitchen / dining room, at the window marked in September 2026",
         light: "Bright, indirect light; protect the fronds from direct sun through the glass.",
         water: "Keep compost lightly moist but never saturated; water around the pot edge rather than into the centre rosette.",
         care: "Give it steady warmth and higher humidity, removing only damaged fronds at the base.",
@@ -2630,6 +2675,57 @@ window.OAK = (function () {
         water: "Check the growing medium before watering and let excess water drain completely; never keep the base wet.",
         care: "Maintain moderate humidity and keep the fern clear of direct radiator heat. Leave the brown papery shield fronds in place.",
         seasonal: "Evergreen antler-like fronds are the display throughout the year; growth is slower in winter.",
+      },
+    ],
+    "House · Sitting Room · Shared Pot · Spider Plant": [
+      {
+        name: "Spider Plant ‘Vittatum’ — assumed",
+        id: "house-sitting-mixed-spider-plant",
+        latin: "Chlorophytum comosum ‘Vittatum’",
+        photos: [
+          "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+          "images/house-plants/sep-2026/spider-plant-runners-1.jpeg",
+          "images/house-plants/sep-2026/spider-plant-runners-2.jpeg",
+        ],
+        position: "Dominant arching plant in Nicola’s shared three-plant pot, beside the sitting-room window",
+        light: "Bright indirect light is ideal; it tolerates lower light but direct hot sun can scorch the striped leaves.",
+        water: "Allow the compost surface to begin drying, then water thoroughly and let the shared container drain fully.",
+        care: "Trim only spent stems or badly damaged leaves, feed lightly during active growth and root the hanging plantlets if wanted.",
+        seasonal: "Evergreen striped foliage and hanging plantlets are the year-round display; growth slows in winter.",
+      },
+    ],
+    "House · Sitting Room · Shared Pot · Parlour Palm": [
+      {
+        name: "Parlour Palm — assumed",
+        id: "house-sitting-mixed-parlour-palm",
+        latin: "Chamaedorea elegans",
+        photos: [
+          "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+          "images/house-plants/sep-2026/parlour-palm-detail.jpeg",
+          "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg",
+        ],
+        position: "Upright palm rising through Nicola’s shared three-plant pot, beside the sitting-room window",
+        light: "Bright indirect light or light shade; protect the fine leaflets from strong direct sun.",
+        water: "Check below the surface before watering; keep lightly moist in growth but never leave the shared planter waterlogged.",
+        care: "Keep warm, remove only fully brown fronds at the base and feed monthly at low strength in spring and summer.",
+        seasonal: "Evergreen fine-textured fronds provide the display throughout the year; growth is slowest in winter.",
+      },
+    ],
+    "House · Sitting Room · Shared Pot · Arrowhead Vine": [
+      {
+        name: "Arrowhead Vine — assumed",
+        id: "house-sitting-mixed-arrowhead-vine",
+        latin: "Syngonium podophyllum",
+        photos: [
+          "images/house-plants/sep-2026/arrowhead-vine-detail.jpeg",
+          "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg",
+          "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg",
+        ],
+        position: "Smaller arrow-leaved vine woven through Nicola’s shared three-plant pot, beside the sitting-room window",
+        light: "Bright indirect light; keep the leaves out of strong direct sun through the glass.",
+        water: "Keep lightly moist during active growth, allowing the surface to begin drying; water more sparingly in winter.",
+        care: "Guide or trim lengthening stems in spring, feed during active growth and wear gloves if pruning because the sap is irritating.",
+        seasonal: "Evergreen juvenile arrow-shaped leaves become more divided as stems mature; indoor flowering is uncommon.",
       },
     ],
   };
@@ -4489,6 +4585,21 @@ window.OAK = (function () {
     { src: "images/house-plants/sep-2026/staghorn-fern-3.jpeg", caption: "Staghorn fern displayed on its wooden stand" },
     { src: "images/house-plants/sep-2026/staghorn-fern-2.jpeg", caption: "Antler fronds and the brown shield fronds at the base" },
     { src: "images/house-plants/sep-2026/staghorn-fern-1.jpeg", caption: "Hallway setting beside the porch" },
+  ] }];
+  PLANT_PHOTOS_BY_ID["house-sitting-mixed-spider-plant"] = [{ month: "sep-2026", label: "September 2026 · gift from Nicola", photos: [
+    { src: "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg", caption: "The full three-plant gift pot beside the sitting-room window" },
+    { src: "images/house-plants/sep-2026/spider-plant-runners-1.jpeg", caption: "Long Spider Plant runners carrying young plantlets" },
+    { src: "images/house-plants/sep-2026/spider-plant-runners-2.jpeg", caption: "Central creamy stripes and dangling plantlets supporting the assumed ‘Vittatum’ identification" },
+  ] }];
+  PLANT_PHOTOS_BY_ID["house-sitting-mixed-parlour-palm"] = [{ month: "sep-2026", label: "September 2026 · gift from Nicola", photos: [
+    { src: "images/house-plants/sep-2026/parlour-palm-detail.jpeg", caption: "Fine pinnate fronds supporting the assumed Parlour palm identification" },
+    { src: "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg", caption: "The upright palm rising through the shared gift pot" },
+    { src: "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg", caption: "The three plants together beside the sitting-room window" },
+  ] }];
+  PLANT_PHOTOS_BY_ID["house-sitting-mixed-arrowhead-vine"] = [{ month: "sep-2026", label: "September 2026 · gift from Nicola", photos: [
+    { src: "images/house-plants/sep-2026/arrowhead-vine-detail.jpeg", caption: "Juvenile arrow-shaped leaves tucked beneath the Spider Plant" },
+    { src: "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg", caption: "The Arrowhead Vine sharing Nicola’s three-plant pot" },
+    { src: "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg", caption: "The complete mixed planter in its sitting-room position" },
   ] }];
 
   // Cards and galleries use lightweight display derivatives. Originals stay

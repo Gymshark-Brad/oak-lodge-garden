@@ -183,7 +183,7 @@
     type: "Crested bird’s nest fern",
     badges: ["Label confirmed", "Bright indirect light", "Humidity-loving"],
     petSafety: { tone: "note", label: "Pet safety not verified here", detail: "The retained passport confirms the identity, but this notebook has not located a cultivar-specific pet-safety listing. Discourage chewing any houseplant." },
-    description: "The compact, ruffled green rosette by the sitting-room window is a crested bird’s nest fern. Its retained plant passport identifies it precisely as Asplenium antiquum ‘Gioia’, so the name is a confirmed record rather than a photo-based best fit.",
+    description: "This compact, ruffled green rosette is a crested bird’s nest fern. Its retained plant passport identifies it precisely as Asplenium antiquum ‘Gioia’, so the name is confirmed rather than a photo-based best fit. It moved from the sitting-room window to the kitchen / dining window in September 2026.",
     facts: [
       { label: "Indoor size", value: "Up to 60–90cm", detail: "A compact rosette in a pot; the named cultivar has characteristically crested frond tips" },
       { label: "Light", value: "Bright indirect", detail: "Direct sun can scorch the fronds; lower light slows growth" },
@@ -207,7 +207,7 @@
     about: "Asplenium antiquum is an evergreen fern from Taiwan that forms a rosette of glossy fronds. RHS describes it as a tender houseplant for bright indirect light, moist but well-drained compost and moderate humidity. ‘Gioia’ is confirmed by the photographed plant passport.",
     provenanceNote: "The identity is supported by a photographed UK plant passport dated 1 September 2026, naming Asplenium antiquum ‘Gioia’.",
     botanical: [{ label: "Family", value: "Aspleniaceae" }, { label: "Genus", value: "Asplenium" }, { label: "Species", value: "Asplenium antiquum" }, { label: "Cultivar", value: "‘Gioia’ · label confirmed" }, { label: "Native range", value: "Taiwan (species)" }, { label: "Foliage", value: "Evergreen rosette of glossy, crested fronds" }],
-    oakLodge: { location: "Ground-floor sitting room, beside the garden-facing window", added: "Recorded September 2026", role: "Small ruffled foliage specimen at the window", observation: "Compact grey-potted fern with clean, crested green fronds; passport retained and photographed.", status: "Keep the crown dry and use the window’s bright light without allowing direct sun to scorch the fronds." },
+    oakLodge: { location: "Ground-floor kitchen / dining room, at the window marked in September 2026", added: "Recorded and moved September 2026", role: "Small ruffled foliage specimen at the kitchen window", observation: "Compact grey-potted fern with clean, crested green fronds; passport retained and photographed in its former sitting-room position.", status: "Keep the crown dry and confirm that the new kitchen-window light remains bright but filtered." },
     sources: [{ title: "RHS · Asplenium antiquum", url: "https://www.rhs.org.uk/plants/1721/asplenium-antiquum/details", note: "Identity, growing conditions, size, humidity and feeding guidance" }, { title: "RHS · Thirsty houseplants: bird’s nest fern", url: "https://www.rhs.org.uk/shows-events/rhs-urban-show/houseplant-profiles/houseplants-for-humidity", note: "Bright indirect light, consistently moist compost and keeping water out of the centre" }, { title: "Oak Lodge houseplant record", url: null, note: "Plant passport, September 2026 photographs and placement" }],
     waterBandNote: "Check the compost two or three times a week in a warm, bright room, watering only once the surface begins to dry.",
   });
@@ -249,10 +249,149 @@
     waterBandNote: "Check the medium about weekly and water only once it begins to dry; direct radiator heat may call for an extra check.",
   });
 
+  const mixedSpiderId = "house-sitting-mixed-spider-plant";
+  const mixedPalmId = "house-sitting-mixed-parlour-palm";
+  const mixedArrowId = "house-sitting-mixed-arrowhead-vine";
+  const mixedSpiderRecord = (window.OAK.PLANT_BY_ID || {})[mixedSpiderId];
+  const mixedPalmRecord = (window.OAK.PLANT_BY_ID || {})[mixedPalmId];
+  const mixedArrowRecord = (window.OAK.PLANT_BY_ID || {})[mixedArrowId];
+  if (!mixedSpiderRecord || !mixedPalmRecord || !mixedArrowRecord) throw new Error("Missing shared gift-pot houseplant record");
+
+  const mixedDisplay = (waterBandNote) => ({
+    cycleTitle: "Indoor display",
+    cycleNote: "Evergreen foliage is the display; growth naturally slows in lower winter light.",
+    cycleAria: "Evergreen indoor foliage throughout the year",
+    cycleEmpty: "foliage all year",
+    roleLabel: "Role in the shared planter",
+    fieldNoteLabel: "Condition note · September ’26",
+    sourceIntro: "Identification and care are source-backed; the gift history, shared container, placement and photographs are Oak Lodge observations.",
+    waterBandNote,
+  });
+  const mixedSeasons = [
+    { season: "Spring", action: "Increase moisture checks as active growth returns, begin light feeding and inspect whether the three root systems are becoming too congested." },
+    { season: "Summer", action: "Keep the shared pot in bright filtered light, check below the surface before watering and drain every excess drop." },
+    { season: "Autumn", action: "Stop routine feeding as growth slows, remove only spent or fully damaged foliage and keep the planter away from cold draughts." },
+    { season: "Winter", action: "Maximise gentle daylight, water less often after checking the compost and keep the foliage clear of radiator heat." },
+  ];
+
+  const mixedSpiderProfile = {
+    version: 2,
+    environment: "indoor",
+    type: "Variegated spider plant",
+    badges: ["High-confidence species", "‘Vittatum’ assumed", "Gift from Nicola"],
+    petSafety: { tone: "safe", label: "Non-toxic to cats & dogs", detail: "ASPCA lists Chlorophytum as non-toxic to cats and dogs. Chewing any houseplant is still best discouraged." },
+    display: mixedDisplay("Check the shared compost about weekly and water only after the surface begins to dry; all three plants receive the same drink."),
+    description: "The dominant cascading plant in Nicola’s mixed gift pot is a Spider Plant. Its creamy central leaf stripe, green margins and long runners carrying young plantlets closely fit Chlorophytum comosum ‘Vittatum’; the cultivar remains visibly assumed because no label has been retained.",
+    floweringMonths: [],
+    facts: [
+      { label: "Habit", value: "Arching clump", detail: "Long striped leaves form a dense fountain over the shared planter" },
+      { label: "Light", value: "Bright indirect", detail: "Tolerates lower light; hot direct sun can mark the foliage" },
+      { label: "Water", value: "Moderate", detail: "Let the surface begin drying, then soak and drain the shared pot" },
+      { label: "Plantlets", value: "Many runners", detail: "Young plants can be rooted while attached or removed once rooted" },
+      { label: "Identity", value: "‘Vittatum’ assumed", detail: "Central creamy stripes and especially long arching leaves support the best fit" },
+      { label: "Pet safety", value: "Non-toxic listed", detail: "ASPCA listing for Chlorophytum" },
+    ],
+    careGuide: [
+      { title: "Keep the window light filtered", summary: "Bright indirect light maintains clean variegation.", detail: "The sitting-room window is useful light, but move the planter back or filter the glass if strong direct sun begins bleaching or scorching the leaves." },
+      { title: "Water the shared root ball, then drain", summary: "Use the compost, not a calendar, to decide.", detail: "Test below the surface in several places because the large clump can hide dry pockets. Water thoroughly only when the surface is beginning to dry and never leave runoff in the outer container." },
+      { title: "Choose which plantlets to keep", summary: "The long runners are healthy propagation growth.", detail: "Root wanted plantlets in small pots while still attached, then cut the connecting stem. Remove spent flowering stems only when no more plantlets are wanted." },
+      { title: "Review crowding in spring", summary: "Three vigorous species are sharing one root space.", detail: "If water runs straight through, the centre stays dry or growth weakens, slide out the root ball in spring and decide whether to divide the Spider Plant or separate the three species." },
+    ],
+    waterSigns: { under: "Leaves fold, lose tension or develop dry brown tips while the compost is dry below the surface. Soak the whole shared root ball and let it drain.", over: "Lower leaves yellow, the crown softens or the pot stays heavy for many days. Empty runoff, pause watering and check that the shared container drains freely." },
+    seasons: mixedSeasons,
+    problems: [
+      { name: "Brown tips", sign: "Crisp points on otherwise healthy striped leaves", response: "Check uneven watering, dry heated air, salt build-up and strong sun before trimming only the dead tissue." },
+      { name: "Congested root ball", sign: "Water races through or different parts of the pot dry at different speeds", response: "Inspect in spring and divide or separate only if congestion is confirmed." },
+      { name: "Scale insects", sign: "Fixed bumps or sticky residue among the dense leaf bases", response: "Inspect closely, isolate if needed and identify the pest before treatment." },
+    ],
+    about: "Chlorophytum comosum is an evergreen South African perennial widely grown as a resilient houseplant. ‘Vittatum’ forms long arching leaves with a broad creamy-white central stripe and produces small white flowers and plantlets on trailing stems.",
+    provenanceNote: "Species confidence is high from the diagnostic runners and striped leaves. The central stripe and long arching habit make ‘Vittatum’ the leading cultivar, but it remains assumed without a retained label. Nicola, Katie’s mum, gave the complete three-plant pot to Oak Lodge.",
+    botanical: [{ label: "Family", value: "Asparagaceae" }, { label: "Genus", value: "Chlorophytum" }, { label: "Species", value: "Chlorophytum comosum" }, { label: "Cultivar", value: "‘Vittatum’ · assumed" }, { label: "Native range", value: "South Africa (species)" }, { label: "Foliage", value: "Evergreen, centrally striped linear leaves" }],
+    oakLodge: { location: "Ground-floor sitting room, beside the garden-facing window", added: "Gift from Nicola · recorded September 2026", role: "Dominant cascading canopy of the shared three-plant pot", observation: "A very large clump with numerous long plantlet-bearing runners and some minor brown tips.", status: "Monitor shared-pot drainage and crowding; retain the cultivar qualification until a label or stronger evidence is found." },
+    sources: [{ title: "RHS · Chlorophytum comosum ‘Vittatum’", url: "https://www.rhs.org.uk/plants/67933/chlorophytum-comosum-vittatum-v/details", note: "Cultivar foliage, habit, plantlets and growing conditions" }, { title: "RHS · How to grow spider plants", url: "https://www.rhs.org.uk/plants/spider-plants/growing-guide", note: "Indoor light, watering, repotting and propagation guidance" }, { title: "ASPCA · Chlorophytum", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chlorophytum", note: "Listed as non-toxic to cats and dogs" }, { title: "Oak Lodge houseplant record", url: null, note: "Gift history, shared planter, September 2026 photographs and placement" }],
+  };
+
+  const mixedPalmProfile = {
+    version: 2,
+    environment: "indoor",
+    type: "Compact evergreen indoor palm",
+    badges: ["High-confidence identification", "Photo identification", "Gift from Nicola"],
+    petSafety: { tone: "safe", label: "Non-toxic to cats & dogs", detail: "ASPCA lists Chamaedorea elegans as non-toxic to cats and dogs. Chewing any houseplant is still best discouraged." },
+    display: mixedDisplay("Check the shared compost about weekly, watering when it has begun to dry below the surface; avoid keeping the palm’s roots constantly wet."),
+    description: "The upright plant rising through Nicola’s mixed gift pot is a Parlour Palm. Its slender clustered stems and compact pinnate fronds with many narrow leaflets strongly fit Chamaedorea elegans; the photo-based identification remains visibly assumed until a label is found.",
+    floweringMonths: [],
+    facts: [
+      { label: "Indoor size", value: "Usually 30–60cm", detail: "Slow growing indoors, though old plants can eventually become larger" },
+      { label: "Light", value: "Indirect or light shade", detail: "Forest-understorey foliage scorches in strong direct sun" },
+      { label: "Water", value: "Moderate", detail: "Moist but free-draining in growth; less water in winter" },
+      { label: "Temperature", value: "Warm room", detail: "RHS recommends roughly 10–27°C, with stronger growth around 20–27°C" },
+      { label: "Identity", value: "Chamaedorea elegans", detail: "Fine pinnate fronds and slender stems support a high-confidence photo identification" },
+      { label: "Pet safety", value: "Non-toxic listed", detail: "ASPCA listing for Chamaedorea elegans" },
+    ],
+    careGuide: [
+      { title: "Shelter the fine fronds from sun", summary: "Bright indirect light or light shade suits this understorey palm.", detail: "Direct summer sun through the sitting-room glass can scorch or bleach the leaflets. Rotate the shared planter periodically for balanced light." },
+      { title: "Avoid permanent wetness", summary: "The palm likes regular moisture with air around its roots.", detail: "Check the shared root ball before watering, soak evenly when it has begun to dry and empty all runoff. Reduce the frequency as winter growth slows." },
+      { title: "Keep old fronds until fully brown", summary: "Remove only finished growth at the base.", detail: "Do not cut green leaflet tips into a tidy shape. Remove a frond cleanly at its base only after it has become fully brown." },
+      { title: "Feed and repot gently", summary: "Slow growth needs modest feeding and infrequent disturbance.", detail: "Apply a balanced liquid feed monthly during spring and summer. Review the whole mixed root ball in spring if crowding or uneven drying becomes a problem." },
+    ],
+    waterSigns: { under: "Fine leaflets lose their fresh green colour and tips crisp while the compost feels dry. Water the shared root ball thoroughly and assess dry air.", over: "Lower fronds yellow while the pot remains heavy or stem bases darken. Pause watering, empty runoff and restore drainage." },
+    seasons: mixedSeasons,
+    problems: [
+      { name: "Brown leaflet tips", sign: "Dry points on the fine fronds", response: "Check dry compost, hot sun, radiator air and mineral build-up before changing the watering routine." },
+      { name: "Spider mites or thrips", sign: "Fine speckling, webbing or silvery scars", response: "Inspect leaflet undersides, isolate if needed and identify the pest before treatment." },
+      { name: "Root stress", sign: "Yellow lower fronds with persistently wet or unevenly drying compost", response: "Check the shared planter’s drainage and consider separation during a spring repot." },
+    ],
+    about: "Chamaedorea elegans is a small evergreen palm native from southern Mexico to Guatemala. It naturally grows beneath taller rainforest vegetation, explaining its tolerance of indirect light. Nursery pots commonly group several single-stemmed seedlings for a fuller display.",
+    provenanceNote: "The fine pinnate fronds, numerous narrow leaflets and slender clustered stems make Parlour palm a high-confidence best fit, retained as assumed without a label. Nicola, Katie’s mum, gave the complete three-plant pot to Oak Lodge.",
+    botanical: [{ label: "Family", value: "Arecaceae" }, { label: "Genus", value: "Chamaedorea" }, { label: "Species", value: "Chamaedorea elegans · assumed" }, { label: "Habit", value: "Slow-growing evergreen palm" }, { label: "Native range", value: "Southern Mexico to Guatemala" }, { label: "Foliage", value: "Pinnate fronds with narrow linear leaflets" }],
+    oakLodge: { location: "Ground-floor sitting room, beside the garden-facing window", added: "Gift from Nicola · recorded September 2026", role: "Upright fine-textured centre of the shared three-plant pot", observation: "Fresh green central growth rises through the much larger Spider Plant canopy; several older tips are browned.", status: "Protect from strong glass sun and monitor whether the dominant Spider Plant is crowding its roots and light." },
+    sources: [{ title: "RHS · How to grow Chamaedorea", url: "https://www.rhs.org.uk/plants/chamaedorea/growing-guide", note: "Identity, habitat, indoor light, temperature, watering and repotting guidance" }, { title: "RHS · Chamaedorea elegans", url: "https://www.rhs.org.uk/plants/29185/chamaedorea-elegans/details", note: "Botanical description, range, size and cultivation" }, { title: "ASPCA · Chamaedorea", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/chamaedorea", note: "Listed as non-toxic to cats and dogs" }, { title: "Oak Lodge houseplant record", url: null, note: "Gift history, shared planter, September 2026 photographs and placement" }],
+  };
+
+  const mixedArrowProfile = {
+    version: 2,
+    environment: "indoor",
+    type: "Evergreen tropical vine",
+    badges: ["High-confidence species", "Photo identification", "Handle with care"],
+    petSafety: { tone: "warn", label: "Harmful if eaten", detail: "Syngonium podophyllum contains insoluble calcium oxalates and is toxic to cats and dogs. Keep it out of reach; sap can also irritate skin and eyes." },
+    display: mixedDisplay("Keep the shared compost lightly moist in active growth, but check before watering and reduce the frequency during winter."),
+    description: "The smaller arrow-leaved plant tucked beneath the Spider Plant is an Arrowhead Vine. Its juvenile sagittate leaves, pale midrib and climbing stem strongly support Syngonium podophyllum. No cultivar can be resolved from these photographs, and the species remains visibly assumed until labelled.",
+    floweringMonths: [],
+    facts: [
+      { label: "Habit", value: "Climbing vine", detail: "Compact while young, then lengthens and can be guided or allowed to trail" },
+      { label: "Light", value: "Bright indirect", detail: "Green forms tolerate partial shade; strong direct sun can scorch" },
+      { label: "Water", value: "Lightly moist", detail: "Water freely in active growth, more sparingly in winter, always with drainage" },
+      { label: "Temperature", value: "Above 15°C", detail: "RHS rates it H1A for warm indoor conditions" },
+      { label: "Identity", value: "Species assumed", detail: "Juvenile arrow-shaped leaves and climbing stem support Syngonium podophyllum" },
+      { label: "Safety", value: "Oxalate irritant", detail: "Harmful if eaten and irritating to skin and eyes" },
+    ],
+    careGuide: [
+      { title: "Keep it bright without harsh sun", summary: "Filtered window light maintains compact leafy growth.", detail: "The larger Spider Plant may shade it heavily, so watch new growth for stretching while also preventing direct sun through the glass." },
+      { title: "Balance moisture across the shared pot", summary: "This vine prefers slightly steadier moisture than its companions.", detail: "Test the compost around the vine as well as at the pot edge. Water the whole container when needed, drain fully and reduce watering in winter." },
+      { title: "Guide or shorten long stems", summary: "Arrowhead Vine naturally becomes a climber.", detail: "Add a small support or trim leggy stems in spring. Wear gloves, keep sap away from eyes and wash tools and hands after pruning." },
+      { title: "Keep away from pets and children", summary: "Every part should be treated as harmful if chewed.", detail: "Place the shared planter and any cuttings out of reach. Seek veterinary or medical advice promptly after suspected ingestion or significant sap exposure." },
+    ],
+    waterSigns: { under: "Leaves droop or curl and the compost feels dry around the vine. Re-wet the shared root ball evenly, then let all excess drain.", over: "Leaves yellow, stems soften or dark patches appear while compost remains wet. Pause watering and restore warmth, airflow and drainage." },
+    seasons: mixedSeasons,
+    problems: [
+      { name: "Leggy growth", sign: "Long gaps between leaves and weak stems leaning through the planter", response: "Increase filtered light and trim in spring if a bushier plant is wanted." },
+      { name: "Soft rot or leaf spots", sign: "Water-soaked dark tissue or rapidly spreading spots", response: "Reduce wetness on foliage, improve airflow and remove badly affected tissue with gloves." },
+      { name: "Mealybugs or spider mites", sign: "Cottony clusters, stippling or fine webbing", response: "Inspect stems and leaf undersides, isolate if needed and identify the pest before treatment." },
+    ],
+    about: "Syngonium podophyllum is an evergreen aroid vine native from tropical America. Young plants bear simple arrow-shaped leaves; as stems mature and climb, leaves become divided into several lobes. Indoor flowers are uncommon.",
+    provenanceNote: "Juvenile arrow-shaped leaves, pale venation and a climbing stem make Syngonium podophyllum a high-confidence best fit, but the species remains assumed and no cultivar is claimed. Nicola, Katie’s mum, gave the complete three-plant pot to Oak Lodge.",
+    botanical: [{ label: "Family", value: "Araceae" }, { label: "Genus", value: "Syngonium" }, { label: "Species", value: "Syngonium podophyllum · assumed" }, { label: "Habit", value: "Evergreen climbing vine" }, { label: "Native range", value: "Tropical America" }, { label: "Foliage", value: "Arrow-shaped when juvenile, divided when mature" }],
+    oakLodge: { location: "Ground-floor sitting room, beside the garden-facing window", added: "Gift from Nicola · recorded September 2026", role: "Smaller broad-leaved accent beneath the Spider Plant canopy", observation: "Several juvenile arrow-shaped leaves are visible through the striped foliage; some stems appear shaded by the larger companions.", status: "Keep out of reach, wear gloves for pruning and monitor whether shade and root competition justify separating the planter in spring." },
+    sources: [{ title: "RHS · Syngonium podophyllum", url: "https://www.rhs.org.uk/plants/17899/syngonium-podophyllum/details", note: "Identity, mature leaf change, light, temperature, watering, feeding and handling caution" }, { title: "ASPCA · Arrow-Head Vine", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/arrow-head-vine", note: "Toxicity to cats and dogs, calcium oxalates and ingestion signs" }, { title: "Oak Lodge houseplant record", url: null, note: "Gift history, shared planter, September 2026 photographs and placement" }],
+  };
+
   record.plant.profile = profile;
   gioiaRecord.plant.profile = gioiaProfile;
   staghornRecord.plant.profile = staghornProfile;
+  mixedSpiderRecord.plant.profile = mixedSpiderProfile;
+  mixedPalmRecord.plant.profile = mixedPalmProfile;
+  mixedArrowRecord.plant.profile = mixedArrowProfile;
   window.OAK.AUTHORED_PLANT_PROFILES = window.OAK.AUTHORED_PLANT_PROFILES || {};
-  Object.assign(window.OAK.AUTHORED_PLANT_PROFILES, { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile });
-  window.OAK.HOUSE_PLANT_PROFILES = { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile };
+  Object.assign(window.OAK.AUTHORED_PLANT_PROFILES, { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile, [mixedSpiderId]: mixedSpiderProfile, [mixedPalmId]: mixedPalmProfile, [mixedArrowId]: mixedArrowProfile });
+  window.OAK.HOUSE_PLANT_PROFILES = { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile, [mixedSpiderId]: mixedSpiderProfile, [mixedPalmId]: mixedPalmProfile, [mixedArrowId]: mixedArrowProfile };
 })();
