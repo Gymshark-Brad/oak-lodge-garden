@@ -255,7 +255,7 @@ window.OAK = (function () {
     },
     baskets: {
       id: "baskets",
-      title: "Hanging Baskets",
+      title: "Hanging Baskets 1 & 2",
       badge: "Paired planted containers",
       dims: "2 matching baskets",
       where: "Inside the Patio Kitchen & Lounge area",
@@ -265,6 +265,19 @@ window.OAK = (function () {
       color: "#c06a2a",
       labelXY: [238, 468],
       plantKey: "Baskets",
+      isPot: true,
+    },
+    basket3: {
+      id: "basket3",
+      title: "Hanging Basket 3",
+      badge: "Single planted container",
+      dims: "1 refreshed basket",
+      where: "Decking section, beside the Patio Kitchen & Lounge area",
+      desc: "The purple Hanging Basket 3 moved to the Decking in September 2026. Its Fuchsia and fern were retained, then Lysimachia, Chrysanthemum and Cyclamen were added for autumn.",
+      shape: { kind: "circle", cx: 299, cy: 445, r: 11 },
+      color: "#76509a",
+      labelXY: [299, 468],
+      plantKey: "Hanging Basket 3",
       isPot: true,
     },
     wallpot1: {
@@ -1785,7 +1798,7 @@ window.OAK = (function () {
         seasonal: "Bronze foliage from spring; tall scarlet flower spikes July–September; dies back in winter and returns from the crown.",
       },
     ],
-    "Baskets": [
+    "Hanging Basket 3": [
       {
         name: "Fuchsia (cultivar to confirm)",
         id: "baskets-trailing-fuchsia",
@@ -1843,6 +1856,8 @@ window.OAK = (function () {
         care: "Remove fading flowers and yellow leaves with a clean twist. Protect from hard frost unless a hardy cultivar is confirmed.",
         seasonal: "Cool-season flowers and foliage; cultivar and hardiness remain to be confirmed.",
       },
+    ],
+    "Baskets": [
       {
         name: "Calluna Trio Mix (2 plants)",
         id: "baskets-calluna-trio-mix",
@@ -3781,6 +3796,8 @@ window.OAK = (function () {
       baskets: [
         { src: "images/September Hanging Baskets & Pots/Hanging Basket 1 - 1.jpeg", caption: "Red Hanging Basket 1 in Patio Kitchen & Lounge" },
         { src: "images/September Hanging Baskets & Pots/Hanging Basket 2 - 1.jpeg", caption: "Green Hanging Basket 2 in Patio Kitchen & Lounge" },
+      ],
+      basket3: [
         { src: "images/September Hanging Baskets & Pots/Hanging Basket 3 - 1.jpeg", caption: "Purple Hanging Basket 3 after moving to Decking" },
       ],
       bed4: [
@@ -4253,6 +4270,9 @@ window.OAK = (function () {
       { name: "Red Basket 1", mapNo: "B1", x: 30, y: 50, r: 25, hue: 25, pending: true },
       { name: "Green Basket 2", mapNo: "B2", x: 70, y: 50, r: 25, hue: 145, pending: true },
     ],
+    basket3: [
+      { name: "Purple Basket 3", mapNo: "B3", x: 50, y: 50, r: 28, hue: 290, pending: true },
+    ],
     frontpot: [
       { name: "Gazania 'Sunny Side Up'", x: 28, y: 28, r: 16, hue: 60  },
       { name: "Gazania 'Orange Flame'",  x: 72, y: 28, r: 16, hue: 25  },
@@ -4373,7 +4393,8 @@ window.OAK = (function () {
       { name: "Wall Pot — Candy House", marker: "W", zoneKey: "wallpot1", x: 83, y: 86, r: 6, hue: 350 },
     ],
     lounge: [
-      { name: "Hanging Baskets", marker: "HB", zoneKey: "baskets", x: 20, y: 80, r: 9, hue: 25 },
+      { name: "Hanging Baskets 1 & 2", marker: "B12", zoneKey: "baskets", x: 20, y: 80, r: 9, hue: 25 },
+      { name: "Hanging Basket 3", marker: "B3", zoneKey: "basket3", x: 42, y: 80, r: 9, hue: 290 },
     ],
   };
 

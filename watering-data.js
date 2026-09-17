@@ -149,6 +149,8 @@
       "Hedera helix 'Yellow Ripple' (2 plants)": 3,
       "Pansy 'Fire' (2 plants)": 3,
       "Pansy 'Rose Surprise' (2 plants)": 3,
+    },
+    "Hanging Basket 3": {
       "Fuchsia (cultivar to confirm)": 4,
       "Fern (cultivar to confirm)": 3,
       "Lysimachia (cultivar to confirm)": 3,
@@ -593,6 +595,10 @@
     "Baskets": {
       under: "Hanging baskets dry out fastest of anything in the garden — check by feel or by lifting to gauge weight, ideally twice a day in hot spells. Flowers and buds dropping together, or a cascade turning thin, pale and see-through, means it's gone too long without water.",
       over: "Excess water should drain straight through and not sit — a basket that's still dripping long after watering or feels heavy and sodden the next day is a sign of overwatering. Leaves yellowing from the inside of the basket outward is the visible symptom.",
+    },
+    "Hanging Basket 3": {
+      under: "The refreshed Decking basket needs regular weight and compost checks. Limp Fuchsia flowers, dull fern fronds or a light basket mean the root ball needs a thorough drink before the new autumn plants dry back.",
+      over: "A basket that remains heavy and cold after several days, with yellowing lower leaves or soft crowns, is holding too much water. Check the liner and drainage holes, then let the compost begin to dry before watering again.",
     },
   };
 

@@ -2515,7 +2515,7 @@
       }
     }
   ],
-  "Baskets": [
+  "Hanging Basket 3": [
     {
       "name": "Fuchsia (cultivar to confirm)",
       "id": "baskets-trailing-fuchsia",
@@ -2640,7 +2640,9 @@
         "foliage": "Seasonal foliage",
         "wildlife": "Flowers visited by pollinators"
       }
-    },
+    }
+  ],
+  "Baskets": [
     {
       "name": "Calluna Trio Mix (2 plants)",
       "id": "baskets-calluna-trio-mix",
