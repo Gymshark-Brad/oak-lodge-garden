@@ -96,7 +96,7 @@ window.OAK = (function () {
       dims: "3m × 3m",
       where: "Connecting upper and lower",
       desc:
-        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Nemesia, Echinacea, two little pots and Candy House wall pot are catalogued together in this folio.",
+        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Skimmia, Echinacea, two little pots, Candy House wall pot and the new white and blue stair pots are catalogued together in this folio.",
       shape: { kind: "rect", x: 334, y: 243, w: 140, h: 150 },
       color: "#6e6e5e",
       labelXY: [404, 344],
@@ -555,6 +555,19 @@ window.OAK = (function () {
       labelXY: [895, 560],
       plantKey: "Front Pots",
       surface: "paving",
+    },
+    stairpots: {
+      id: "stairpots",
+      title: "Steps · Pots 1 & 2",
+      badge: "White & blue pots",
+      dims: "Two mixed containers",
+      where: "On the back-garden steps",
+      desc:
+        "The two September stair containers. White Pot 1 combines Yellow Ripple ivy, Skimmia 'Double Diamond' and Fire Red Pansies; Blue Pot 2 combines Yellow Ripple ivy, Gaultheria and Fire Red Pansies.",
+      color: "#7f6f9c",
+      plantKey: "Stairs Pots",
+      surface: "paving",
+      isPot: true,
     },
     frontGateTree: {
       id: "frontGateTree",
@@ -2651,12 +2664,16 @@ window.OAK = (function () {
       },
     ],
     "Front Pots": [
-      { name: "Hedera helix 'Yellow Ripple' · Pot 1", id: "frontPots-p1-hedera-yellow-ripple", latin: "Hedera helix 'Yellow Ripple'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"], position: "P1 · white pot", light: "Sun to partial shade.", water: "Keep compost evenly moist and well drained while establishing.", care: "Trim trails to shape and keep stems clear of the neighbouring Skimmia and Pansies.", seasonal: "Evergreen variegated foliage provides year-round structure." },
-      { name: "Skimmia 'Double Diamond'", id: "frontPots-p1-skimmia-double-diamond", latin: "Skimmia 'Double Diamond'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"], position: "P1 · white pot", light: "Partial shade to shade in a sheltered position.", water: "Keep compost evenly moist and freely drained; rainwater is preferred where practical.", care: "Use ericaceous compost, keep the crown clear and protect the pot from winter waterlogging.", seasonal: "Evergreen foliage gives structure; flower and berry details will be observed as the plant establishes." },
-      { name: "Pansy 'Fire Red' · Pot 1", id: "frontPots-p1-pansy-fire-red", latin: "Viola × wittrockiana 'Fire Red'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg"], position: "P1 · white pot", light: "Sun to partial shade.", water: "Keep compost evenly moist without saturation.", care: "Remove faded flowers and seed pods to prolong the cool-season display.", seasonal: "Red flowers provide autumn-to-spring container colour." },
-      { name: "Hedera helix 'Yellow Ripple' · Pot 2", id: "frontPots-p2-hedera-yellow-ripple", latin: "Hedera helix 'Yellow Ripple'", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"], position: "P2 · blue pot", light: "Sun to partial shade.", water: "Keep compost evenly moist and well drained while establishing.", care: "Trim trails to shape and keep stems clear of the Gaultheria and Pansies.", seasonal: "Evergreen variegated foliage provides year-round structure." },
-      { name: "Gaultheria (cultivar to confirm)", id: "frontPots-p2-gaultheria-unidentified", latin: "Gaultheria — cultivar to confirm", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"], position: "P2 · blue pot", light: "Partial shade to shade.", water: "Keep compost evenly moist and acidic, never waterlogged.", care: "Use ericaceous compost and rainwater where possible. Retain a label or berry and foliage close-up before assigning a cultivar.", seasonal: "Evergreen foliage and possible autumn berries; cultivar is not yet confirmed." },
-      { name: "Pansy 'Fire Red' · Pot 2", id: "frontPots-p2-pansy-fire-red", latin: "Viola × wittrockiana 'Fire Red'", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg"], position: "P2 · blue pot", light: "Sun to partial shade.", water: "Keep compost evenly moist without saturation.", care: "Remove faded flowers and seed pods to prolong the cool-season display.", seasonal: "Red flowers provide autumn-to-spring container colour." },
+      { name: "Mixed Pot", id: "frontPots-mixed-pot", latin: "Mixed seasonal planting — contents to confirm", photos: ["images/aug-2026-front-garden/front-pots.jpeg"], position: "P1 · left-hand pot against the boundary wall", light: "Bright outdoor position; confirm the needs of each constituent plant when identified.", water: "Check the compost frequently in warm or windy weather; supplied by an adjustable sprinkler.", care: "Deadhead finished flowers, keep the drainage holes clear and record the individual plants and cultivars as labels or clearer photographs become available.", seasonal: "A mixed seasonal container providing varied flower colour; exact contents remain unresolved." },
+      { name: "Fuchsia Pot", id: "frontPots-fuchsia-pot", latin: "Fuchsia cultivars — identities to confirm", photos: ["images/aug-2026-front-garden/front-pots.jpeg"], position: "P2 · right-hand pot against the boundary wall", light: "Bright light or partial shade, protected from the harshest reflected afternoon heat.", water: "Keep the compost evenly moist but freely drained; supplied by an adjustable sprinkler.", care: "Deadhead for continued flowering, check the sprinkler reaches the compost rather than only the foliage, and confirm whether the plants are hardy before winter.", seasonal: "Pendant Fuchsia flowers through summer and autumn; exact cultivars and winter hardiness remain unresolved." },
+    ],
+    "Stairs Pots": [
+      { name: "Hedera helix 'Yellow Ripple' · Pot 1", id: "stairpots-p1-hedera-yellow-ripple", latin: "Hedera helix 'Yellow Ripple'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"], position: "P1 · white pot on the Steps", light: "Sun to partial shade.", water: "Keep compost evenly moist and well drained while establishing.", care: "Trim trails to shape and keep stems clear of the neighbouring Skimmia and Pansies.", seasonal: "Evergreen variegated foliage provides year-round structure." },
+      { name: "Skimmia 'Double Diamond'", id: "stairpots-p1-skimmia-double-diamond", latin: "Skimmia 'Double Diamond'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"], position: "P1 · white pot on the Steps", light: "Partial shade to shade in a sheltered position.", water: "Keep compost evenly moist and freely drained.", care: "Use ordinary peat-free container compost, keep the crown clear and protect the pot from winter waterlogging.", seasonal: "Evergreen foliage gives structure; flower and berry details will be observed as the plant establishes." },
+      { name: "Pansy 'Fire Red' · Pot 1", id: "stairpots-p1-pansy-fire-red", latin: "Viola × wittrockiana 'Fire Red'", photos: ["images/September Trees & Pots /Stairs Pot 1 - 1.jpeg"], position: "P1 · white pot on the Steps", light: "Sun to partial shade.", water: "Keep compost evenly moist without saturation.", care: "Remove faded flowers and seed pods to prolong the cool-season display.", seasonal: "Red flowers provide autumn-to-spring container colour." },
+      { name: "Hedera helix 'Yellow Ripple' · Pot 2", id: "stairpots-p2-hedera-yellow-ripple", latin: "Hedera helix 'Yellow Ripple'", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"], position: "P2 · blue pot on the Steps", light: "Sun to partial shade.", water: "Keep compost evenly moist and well drained while establishing.", care: "Trim trails to shape and keep stems clear of the Gaultheria and Pansies.", seasonal: "Evergreen variegated foliage provides year-round structure." },
+      { name: "Gaultheria (cultivar to confirm)", id: "stairpots-p2-gaultheria-unidentified", latin: "Gaultheria — cultivar to confirm", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"], position: "P2 · blue pot on the Steps", light: "Partial shade to shade.", water: "Keep compost evenly moist and acidic, never waterlogged.", care: "Use ericaceous compost and rainwater where possible. Retain a label or berry and foliage close-up before assigning a cultivar.", seasonal: "Evergreen foliage and possible autumn berries; cultivar is not yet confirmed." },
+      { name: "Pansy 'Fire Red' · Pot 2", id: "stairpots-p2-pansy-fire-red", latin: "Viola × wittrockiana 'Fire Red'", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg"], position: "P2 · blue pot on the Steps", light: "Sun to partial shade.", water: "Keep compost evenly moist without saturation.", care: "Remove faded flowers and seed pods to prolong the cool-season display.", seasonal: "Red flowers provide autumn-to-spring container colour." },
     ],
     "Front Strawberry Tree": [
       { name: "Arbutus unedo", id: "frontArbutus-arbutus-unedo", latin: "Arbutus unedo", photos: ["images/September Trees & Pots /Arbutus Unedo - 1.jpeg", "images/September Trees & Pots /Arbutus Unedo - 2.jpeg", "images/September Trees & Pots /Arbutus Unedo - 3.jpeg"], position: "By the skinny brick wall, at the purple-circle position in the September plan", light: "Full sun in a sheltered, well-drained position.", water: "Water regularly through the first two years, increasing in hot or dry weather; avoid waterlogging.", care: "Keep a clear, mulched root area while it establishes. Prune only to remove damaged or crossing growth, and stake a young standard tree until secure.", seasonal: "Evergreen foliage; white urn-shaped autumn flowers and ornamental red fruits can appear together on established plants." },
@@ -3812,7 +3829,7 @@ window.OAK = (function () {
         { src: "images/September Trees & Pots /Arbutus Unedo - 1.jpeg", caption: "Arbutus unedo at the purple-circle position" },
         { src: "images/September Trees & Pots /Arbutus Unedo - 2.jpeg", caption: "New Strawberry Tree foliage" },
       ],
-      frontPots: [
+      stairpots: [
         { src: "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", caption: "White Pot 1 with Yellow Ripple ivy, Skimmia 'Double Diamond' and Fire Red Pansies" },
         { src: "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", caption: "Blue Pot 2 with Yellow Ripple ivy, Gaultheria and Fire Red Pansies" },
       ],
@@ -4348,12 +4365,16 @@ window.OAK = (function () {
       { mapNo: 23, plantId: "frontBed5-clematis",                          name: "Clematis (cultivar to confirm)",       x: 90, y: 90, r: 6,   hue: 285 },
     ],
     frontPots: [
-      { mapNo: "P1", plantId: "frontPots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 30, y: 42, r: 17, hue: 105 },
-      { mapNo: "P1", plantId: "frontPots-p1-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 20, y: 65, r: 8, hue: 80 },
-      { mapNo: "P1", plantId: "frontPots-p1-pansy-fire-red", name: "Fire Red Pansies", x: 40, y: 65, r: 8, hue: 5 },
-      { mapNo: "P2", plantId: "frontPots-p2-gaultheria-unidentified", name: "Gaultheria", x: 70, y: 42, r: 17, hue: 350 },
-      { mapNo: "P2", plantId: "frontPots-p2-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 60, y: 65, r: 8, hue: 80 },
-      { mapNo: "P2", plantId: "frontPots-p2-pansy-fire-red", name: "Fire Red Pansies", x: 80, y: 65, r: 8, hue: 5 },
+      { mapNo: "P1", plantId: "frontPots-mixed-pot", name: "Mixed Pot", x: 30, y: 50, r: 19, hue: 65 },
+      { mapNo: "P2", plantId: "frontPots-fuchsia-pot", name: "Fuchsia Pot", x: 70, y: 50, r: 22, hue: 335 },
+    ],
+    stairpots: [
+      { mapNo: "P1", plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 30, y: 42, r: 17, hue: 105 },
+      { mapNo: "P1", plantId: "stairpots-p1-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 20, y: 65, r: 8, hue: 80 },
+      { mapNo: "P1", plantId: "stairpots-p1-pansy-fire-red", name: "Fire Red Pansies", x: 40, y: 65, r: 8, hue: 5 },
+      { mapNo: "P2", plantId: "stairpots-p2-gaultheria-unidentified", name: "Gaultheria", x: 70, y: 42, r: 17, hue: 350 },
+      { mapNo: "P2", plantId: "stairpots-p2-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 60, y: 65, r: 8, hue: 80 },
+      { mapNo: "P2", plantId: "stairpots-p2-pansy-fire-red", name: "Fire Red Pansies", x: 80, y: 65, r: 8, hue: 5 },
     ],
     frontArbutus: [
       { plantId: "frontArbutus-arbutus-unedo", name: "Arbutus unedo", x: 50, y: 50, r: 26, hue: 100 },
@@ -4390,6 +4411,7 @@ window.OAK = (function () {
       { name: "Little Pot 2", marker: "L2", zoneKey: "littlepot2", x: 65, y: 30, r: 6, hue: 240 },
       { name: "Echinacea Pot", marker: "E", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 70 },
       { name: "Little Pot 1", marker: "L1", zoneKey: "littlepot1", x: 83, y: 46, r: 6, hue: 240 },
+      { name: "Stairs Pots 1 & 2", marker: "P12", zoneKey: "stairpots", x: 48, y: 52, r: 8, hue: 275 },
       { name: "Wall Pot — Candy House", marker: "W", zoneKey: "wallpot1", x: 83, y: 86, r: 6, hue: 350 },
     ],
     lounge: [

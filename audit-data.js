@@ -23,6 +23,7 @@ function run(argv) {
   eval(readText(`${root}/back-garden-profile-data.js`));
   eval(readText(`${root}/front-garden-profile-data.js`));
   eval(readText(`${root}/house-plant-profile-data.js`));
+  eval(readText(`${root}/profile-quality-data.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
   eval(readText(`${root}/cultivar-resolution-data.js`));
@@ -36,6 +37,20 @@ function run(argv) {
   const profileFields = [
     "description", "facts", "careGuide", "waterSigns", "seasons",
     "problems", "botanical", "oakLodge", "sources",
+  ];
+  const warningUnder = new Map();
+  const warningOver = new Map();
+  const seasonalActions = new Map();
+  const recordCopy = (collection, copy, id) => {
+    if (!copy) return;
+    if (!collection.has(copy)) collection.set(copy, []);
+    collection.get(copy).push(id);
+  };
+  const knownBoilerplate = [
+    "The first useful warning is wilting growth and a light root ball.",
+    "The most useful early warning is wilting growth and a dry root ball.",
+    "Clear winter debris, check the crown and re-seat any lifted edges into fresh grit.",
+    "Check new growth and renew the compost surface or mulch without burying crowns or stems.",
   ];
   Object.values(OAK.PLANT_BY_ID || {}).forEach((record) => {
     const profile = record.plant.profile;
@@ -55,10 +70,30 @@ function run(argv) {
     if (!profile.waterSigns.under || !profile.waterSigns.over) {
       errors.push(`incomplete profile water signs: ${record.plant.id}`);
     }
+    const externalSources = (profile.sources || []).filter((item) => item && /^https?:\/\//.test(item.url || ""));
+    if (externalSources.length === 0) {
+      errors.push(`profile has no linked external source: ${record.plant.id}`);
+    }
+    recordCopy(warningUnder, profile.waterSigns.under, record.plant.id);
+    recordCopy(warningOver, profile.waterSigns.over, record.plant.id);
+    (profile.seasons || []).forEach((season) => recordCopy(seasonalActions, season.action, record.plant.id));
+    const qualityCopy = `${profile.waterSigns.under} ${profile.waterSigns.over} ${(profile.seasons || []).map((item) => item.action).join(" ")}`;
+    knownBoilerplate.forEach((phrase) => {
+      if (qualityCopy.includes(phrase)) errors.push(`profile still contains known boilerplate: ${record.plant.id}`);
+    });
     const waterBand = (OAK.WATER_BANDS_BY_ID || {})[record.plant.id];
     if (![1, 2, 3, 4, 5].includes(waterBand)) {
       errors.push(`missing stable-id watering band: ${record.plant.id}`);
     }
+  });
+  [
+    ["under-watering warning", warningUnder],
+    ["over-watering warning", warningOver],
+    ["seasonal action", seasonalActions],
+  ].forEach(([label, collection]) => {
+    collection.forEach((plantIds) => {
+      if (plantIds.length > 1) errors.push(`repeated ${label}: ${plantIds.join(", ")}`);
+    });
   });
 
   const identityContentChecks = {

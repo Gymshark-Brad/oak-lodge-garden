@@ -4167,14 +4167,64 @@
   ],
   "Front Pots": [
     {
+      "name": "Mixed Pot",
+      "id": "frontPots-mixed-pot",
+      "latin": "Mixed seasonal planting — contents to confirm",
+      "photos": [
+        "images/aug-2026-front-garden/front-pots.jpeg"
+      ],
+      "position": "P1 · left-hand pot against the boundary wall",
+      "light": "Bright outdoor position; confirm the needs of each constituent plant when identified.",
+      "water": "Check the compost frequently in warm or windy weather; supplied by an adjustable sprinkler.",
+      "care": "Deadhead finished flowers, keep the drainage holes clear and record the individual plants and cultivars as labels or clearer photographs become available.",
+      "seasonal": "A mixed seasonal container providing varied flower colour; exact contents remain unresolved.",
+      "description": "Mixed Pot is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. A mixed seasonal container providing varied flower colour.",
+      "characteristics": {
+        "sunlight": "Bright outdoor position",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "A mixed seasonal container providing varied flower colour",
+        "water": "Check the compost frequently in warm or windy weather",
+        "habit": "Herbaceous perennial",
+        "size": "Typically 30–100cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    },
+    {
+      "name": "Fuchsia Pot",
+      "id": "frontPots-fuchsia-pot",
+      "latin": "Fuchsia cultivars — identities to confirm",
+      "photos": [
+        "images/aug-2026-front-garden/front-pots.jpeg"
+      ],
+      "position": "P2 · right-hand pot against the boundary wall",
+      "light": "Bright light or partial shade, protected from the harshest reflected afternoon heat.",
+      "water": "Keep the compost evenly moist but freely drained; supplied by an adjustable sprinkler.",
+      "care": "Deadhead for continued flowering, check the sprinkler reaches the compost rather than only the foliage, and confirm whether the plants are hardy before winter.",
+      "seasonal": "Pendant Fuchsia flowers through summer and autumn; exact cultivars and winter hardiness remain unresolved.",
+      "description": "Fuchsia Pot is a seasonal flowering plant grown at Oak Lodge for its distinctive garden character. Pendant Fuchsia flowers through summer and autumn.",
+      "characteristics": {
+        "sunlight": "Bright light or partial shade, protected from the harshest reflected afternoon heat",
+        "hardiness": "Hardy in most UK gardens",
+        "flowering": "Pendant Fuchsia flowers through summer and autumn",
+        "water": "Keep the compost evenly moist but freely drained",
+        "habit": "Seasonal flowering plant",
+        "size": "Typically 15–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      }
+    }
+  ],
+  "Stairs Pots": [
+    {
       "name": "Hedera helix 'Yellow Ripple' · Pot 1",
-      "id": "frontPots-p1-hedera-yellow-ripple",
+      "id": "stairpots-p1-hedera-yellow-ripple",
       "latin": "Hedera helix 'Yellow Ripple'",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg",
         "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"
       ],
-      "position": "P1 · white pot",
+      "position": "P1 · white pot on the Steps",
       "light": "Sun to partial shade.",
       "water": "Keep compost evenly moist and well drained while establishing.",
       "care": "Trim trails to shape and keep stems clear of the neighbouring Skimmia and Pansies.",
@@ -4193,16 +4243,16 @@
     },
     {
       "name": "Skimmia 'Double Diamond'",
-      "id": "frontPots-p1-skimmia-double-diamond",
+      "id": "stairpots-p1-skimmia-double-diamond",
       "latin": "Skimmia 'Double Diamond'",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg",
         "images/September Trees & Pots /Stairs Pot 1 - 2.jpeg"
       ],
-      "position": "P1 · white pot",
+      "position": "P1 · white pot on the Steps",
       "light": "Partial shade to shade in a sheltered position.",
-      "water": "Keep compost evenly moist and freely drained; rainwater is preferred where practical.",
-      "care": "Use ericaceous compost, keep the crown clear and protect the pot from winter waterlogging.",
+      "water": "Keep compost evenly moist and freely drained.",
+      "care": "Use ordinary peat-free container compost, keep the crown clear and protect the pot from winter waterlogging.",
       "seasonal": "Evergreen foliage gives structure; flower and berry details will be observed as the plant establishes.",
       "description": "Skimmia 'Double Diamond' is a herbaceous perennial grown at Oak Lodge for its distinctive garden character. Evergreen foliage gives structure.",
       "characteristics": {
@@ -4218,12 +4268,12 @@
     },
     {
       "name": "Pansy 'Fire Red' · Pot 1",
-      "id": "frontPots-p1-pansy-fire-red",
+      "id": "stairpots-p1-pansy-fire-red",
       "latin": "Viola × wittrockiana 'Fire Red'",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg"
       ],
-      "position": "P1 · white pot",
+      "position": "P1 · white pot on the Steps",
       "light": "Sun to partial shade.",
       "water": "Keep compost evenly moist without saturation.",
       "care": "Remove faded flowers and seed pods to prolong the cool-season display.",
@@ -4242,14 +4292,14 @@
     },
     {
       "name": "Hedera helix 'Yellow Ripple' · Pot 2",
-      "id": "frontPots-p2-hedera-yellow-ripple",
+      "id": "stairpots-p2-hedera-yellow-ripple",
       "latin": "Hedera helix 'Yellow Ripple'",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg",
         "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg",
         "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"
       ],
-      "position": "P2 · blue pot",
+      "position": "P2 · blue pot on the Steps",
       "light": "Sun to partial shade.",
       "water": "Keep compost evenly moist and well drained while establishing.",
       "care": "Trim trails to shape and keep stems clear of the Gaultheria and Pansies.",
@@ -4268,14 +4318,14 @@
     },
     {
       "name": "Gaultheria (cultivar to confirm)",
-      "id": "frontPots-p2-gaultheria-unidentified",
+      "id": "stairpots-p2-gaultheria-unidentified",
       "latin": "Gaultheria — cultivar to confirm",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg",
         "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg",
         "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"
       ],
-      "position": "P2 · blue pot",
+      "position": "P2 · blue pot on the Steps",
       "light": "Partial shade to shade.",
       "water": "Keep compost evenly moist and acidic, never waterlogged.",
       "care": "Use ericaceous compost and rainwater where possible. Retain a label or berry and foliage close-up before assigning a cultivar.",
@@ -4294,12 +4344,12 @@
     },
     {
       "name": "Pansy 'Fire Red' · Pot 2",
-      "id": "frontPots-p2-pansy-fire-red",
+      "id": "stairpots-p2-pansy-fire-red",
       "latin": "Viola × wittrockiana 'Fire Red'",
       "photos": [
         "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg"
       ],
-      "position": "P2 · blue pot",
+      "position": "P2 · blue pot on the Steps",
       "light": "Sun to partial shade.",
       "water": "Keep compost evenly moist without saturation.",
       "care": "Remove faded flowers and seed pods to prolong the cool-season display.",

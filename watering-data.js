@@ -219,6 +219,10 @@
       "Viola 'Rocky Purple Picotee'": 3,
     },
     "Front Pots": {
+      "Mixed Pot": 4,
+      "Fuchsia Pot": 4,
+    },
+    "Stairs Pots": {
       "Hedera helix 'Yellow Ripple' · Pot 1": 3,
       "Skimmia 'Double Diamond'": 3,
       "Pansy 'Fire Red' · Pot 1": 3,
@@ -583,6 +587,10 @@
     "Front Pots": {
       under: "Check both pots by touch even when the sprinklers have run. A light container, compost pulling from the rim, limp Fuchsia shoots or fading mixed flowers mean water has missed the root ball or the pots are drying too quickly.",
       over: "Compost staying saturated, yellow lower leaves or soft stems mean the sprinklers are running too long. Confirm water drains freely and adjust each spray so it reaches compost rather than repeatedly soaking foliage.",
+    },
+    "Stairs Pots": {
+      under: "Check the white and blue pots separately on the Steps. Drooping Pansy flowers, folded ivy leaves or a noticeably light container mean one root ball has dried even if the other remains moist.",
+      over: "Yellow Skimmia or Gaultheria leaves, soft Pansy crowns or blackened ivy joints while a pot remains heavy show that drainage is lagging behind rainfall or watering.",
     },
     "Wall Pot 1": {
       under: "A small pot on an exposed stair wall — check by feel daily in hot weather. Flowers dropping, trailing stems going limp, and compost pulling away from the pot's edge all mean it's dried out.",

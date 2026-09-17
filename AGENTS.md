@@ -48,6 +48,7 @@ oak-lodge-garden/
   plant-profile-data.js # Authored, source-backed v2 profiles for Beds 1–2
   back-garden-profile-data.js # Authored v2 profiles for every remaining back-garden zone
   front-garden-profile-data.js # Authored v2 profiles for every front-garden zone
+  profile-quality-data.js # Site-wide reviewed source, warning and seasonal-copy overrides
   cultivar-resolution-data.js # Label confirmations and visibly qualified best-fit cultivar assumptions
   SeasonalCalendar.jsx  # Monthly care calendar — click a month to see all tasks
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
@@ -124,7 +125,7 @@ Keyed by zone label (matches `plantKey` in ZONES). Each plant has:
 
 Profile fields are enriched centrally in `data.js` after the authored plant records are assembled. This guarantees every record has a description and the same eight at-a-glance characteristics, while named cultivars can override inferred values in `PROFILE_OVERRIDES`.
 
-Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2), `back-garden-profile-data.js` (all other back-garden zones) and `front-garden-profile-data.js` (all front-garden zones), keyed by stable plant ID. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include source entries. Every active back- and front-garden plant is fully migrated (July 2026).
+Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2), `back-garden-profile-data.js` (all other back-garden zones) and `front-garden-profile-data.js` (all front-garden zones), keyed by stable plant ID. `profile-quality-data.js` is loaded after those files and holds explicit, reviewed corrections where the original records reused boilerplate or lacked an authoritative external source. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include linked source entries. `audit-data.js` rejects profiles without an external link and rejects verbatim duplicate warning or seasonal text across plant IDs. Every active back- and front-garden plant is fully migrated (July 2026).
 
 `cultivar-resolution-data.js` is a separate, reversible identity layer loaded after the profiles, seasonal calendar and watering data. Photo-label discoveries use the visible suffix `— label confirmed`; best-fit guesses use `— assumed`. Never remove the assumed qualification without a retained label or stronger diagnostic evidence. The file updates display names, profile identity rows, bed-map labels, seasonal links and watering keys together while preserving stable plant IDs and the original names as lookup aliases.
 
@@ -200,7 +201,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Cercis Pot — terracotta specimen pot in the former stair-corner location; Cercis canadensis 'Carolina Sweetheart'
 - Little Pot 1 — small blue pot shifted south below the Echinacea pot in August 2026
 - Echinacea Pot — the former Coreopsis pot, now at Little Pot 1's previous position; Echinacea Mooodz Glory
-- The Cercis, Viburnum, Nemesia, Echinacea, Little Pots 1 and 2, and Candy House wall pot are nested inside the Steps folio.
+- The Cercis, Viburnum, Skimmia, Echinacea, Little Pots 1 and 2, Candy House wall pot, and September white-and-blue Stairs Pots 1 & 2 are nested inside the Steps folio. The older boundary-wall Front Pots remain a separate front-garden folio.
 - Patio Kitchen & Lounge — one merged hardscape section; the Hanging Baskets are nested inside its folio
 - Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
