@@ -19,7 +19,7 @@ function FrontGardenPlan({ onOpenZone, dark }) {
   // z-order: big beds first, small features on top
   const order = [
     "frontBed3", "frontBed4", "frontBed5", "frontBed1", "frontBed2",
-    "frontStone", "frontHedge", "frontBoxHedge", "frontPots", "frontApple", "frontGateTree", "frontpot",
+    "frontStone", "frontArbutus", "frontHedge", "frontBoxHedge", "frontPots", "frontApple", "frontGateTree", "frontpot",
   ];
   const verticalLabels = ["frontBoxHedge", "frontHedge"];
 

@@ -12,12 +12,12 @@
         year: 2026,
         month: 9,
         label: "September 2026",
-        title: "Houseplants recorded, autumn pots refreshed and Honeysuckle renovated",
-        note: "September recorded the three plants sharing Nicola’s gift pot, moved the Bird’s Nest Fern ‘Gioia’ into the kitchen and added an autumn refresh outdoors: Little Pot 1 and the former Candy House Calibrachoa pot were replanted, the Skimmia Pot gained another Skimmia and Violas, and the hanging baskets were recorded by colour and new position. The long-established Patio Honeysuckle was also carefully thinned back to its trained woody framework.",
+        title: "Autumn containers refreshed, new front-garden trees planted and Honeysuckle renovated",
+        note: "September recorded the three plants sharing Nicola’s gift pot, moved the Bird’s Nest Fern ‘Gioia’ into the kitchen and refreshed outdoor containers. Alongside the existing autumn pot work, Hanging Basket 3 was replanted around its retained Fuchsia and fern, Back Bed 4 received Abelia 'Radiance', and two new front-garden trees — Cercis 'Eternal Flame' and Arbutus unedo — were planted at the marked positions. The long-established Patio Honeysuckle was also carefully thinned back to its trained woody framework.",
         photos: [
           { id: "sep-2026-nicola-planter", area: "house", src: "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg", caption: "Nicola’s gift pot: Spider Plant, Parlour Palm and Arrowhead Vine together" },
-          { id: "sep-2026-baskets", area: "back", src: "images/September Hanging Baskets & Pots/Hanging Basket 1 - 1.jpeg", caption: "The new red and green hanging baskets" },
-          { id: "sep-2026-honeysuckle-before", area: "back", src: "images/sep-2026-honeysuckle-prune/honeysuckle-before-overview.jpg", caption: "Before: dense, congested growth around the Patio windows and eaves" },
+          { id: "sep-2026-basket-3-refresh", area: "back", src: "images/September Trees & Pots /Hanging Basket 3 - 1.jpeg", caption: "Hanging Basket 3 refreshed around its retained Fuchsia and fern" },
+          { id: "sep-2026-cercis", area: "front", src: "images/September Trees & Pots /Cercis - Eternal Flame - 1.jpeg", caption: "Cercis 'Eternal Flame' planted in Front Bed 3" },
           { id: "sep-2026-honeysuckle-after", area: "back", src: "images/sep-2026-honeysuckle-prune/honeysuckle-after-overview.jpg", caption: "After: the Honeysuckle’s trained woody framework revealed" },
         ],
         events: [
@@ -34,6 +34,11 @@
           { id: "sep-2026-honeysuckle-renovated", type: "work", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "back", title: "Patio Honeysuckle thinned and retrained", note: "Congested, dead and crossing twiggy growth was removed from the long-established Honeysuckle. Its mature twisted stems were retained as a clean trained framework beneath the eaves, ready for new shoots next season.", plantId: "stone-honeysuckle", zoneKey: "patio" },
           { id: "sep-2026-purple-basket-moved", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "back", title: "Purple Basket 3 moved to Decking", note: "The purple basket previously known as the Lounge Door Hanging Basket was moved to the Decking section; green Basket 2 now hangs at the Lounge Door location.", zoneKey: "baskets", from: "Lounge Door", to: "Decking" },
           { id: "sep-2026-frontbed5-viola-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "front", title: "Rocky Purple Picotee Viola added to Front Bed 5", note: "The remaining Viola 'Rocky Purple Picotee' was planted beside the Astrantia trio and Heather 'Winter Chocolate'.", plantId: "frontBed5-viola-rocky-purple-picotee", zoneKey: "frontBed5" },
+          { id: "sep-2026-basket-3-refreshed", type: "work", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "back", title: "Hanging Basket 3 refreshed", note: "The Fuchsia and fern were retained in the Decking basket. The remaining planting was removed, then Lysimachia, Chrysanthemum and Cyclamen were added.", zoneKey: "baskets" },
+          { id: "sep-2026-front-pots-refreshed", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "front", title: "White and blue front pots replanted", note: "White Pot 1 received Yellow Ripple ivy, Skimmia 'Double Diamond' and Fire Red Pansies. Blue Pot 2 received Yellow Ripple ivy, Gaultheria and Fire Red Pansies.", zoneKey: "frontPots" },
+          { id: "sep-2026-cercis-eternal-flame-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "front", title: "Cercis 'Eternal Flame' planted", note: "The new Cercis was planted at the red-circle position in Front Bed 3, below the Bedroom 3 window.", plantId: "frontBed3-cercis-eternal-flame", zoneKey: "frontBed3" },
+          { id: "sep-2026-arbutus-unedo-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "front", title: "Arbutus unedo planted", note: "The evergreen Strawberry Tree was planted at the purple-circle position beside the skinny brick wall, between the Patio and Stone Trough.", plantId: "frontArbutus-arbutus-unedo", zoneKey: "frontArbutus" },
+          { id: "sep-2026-bed4-abelia-radiance-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "September 2026", area: "back", title: "Abelia 'Radiance' added to Back Bed 4", note: "Abelia × grandiflora 'Radiance' was planted in Back Bed 4 and photographed as part of the September update.", plantId: "bed4-abelia-radiance", zoneKey: "bed4" },
         ],
       },
       {

@@ -23,7 +23,7 @@ WEBP_QUALITY = 45
 
 def referenced_images() -> list[Path]:
     paths = re.findall(
-        r"images/[^\"']+?\.(?:webp|jpe?g)",
+        r'images/[^\"]+?\.(?:webp|jpe?g)',
         DATA_FILE.read_text(encoding="utf-8"),
         flags=re.IGNORECASE,
     )

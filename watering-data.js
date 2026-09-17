@@ -49,6 +49,7 @@
       "Lobelia 'Starship Scarlet Bronze Leaf'": 4,
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
+      "Abelia 'Radiance'": 3,
     },
     "Bed 5": {
       "Wisteria": 1,
@@ -148,6 +149,11 @@
       "Hedera helix 'Yellow Ripple' (2 plants)": 3,
       "Pansy 'Fire' (2 plants)": 3,
       "Pansy 'Rose Surprise' (2 plants)": 3,
+      "Fuchsia (cultivar to confirm)": 4,
+      "Fern (cultivar to confirm)": 3,
+      "Lysimachia (cultivar to confirm)": 3,
+      "Chrysanthemum (cultivar to confirm)": 3,
+      "Cyclamen (cultivar to confirm)": 3,
     },
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
@@ -165,6 +171,7 @@
       "Red Hot Poker": 2,
       "Leucothoe 'Little Flames'": 3,
       "Rose (pink)": 3,
+      "Cercis 'Eternal Flame'": 3,
     },
     "Front Bed 4": {
       "Photinia (existing canopy)": 2,
@@ -210,8 +217,15 @@
       "Viola 'Rocky Purple Picotee'": 3,
     },
     "Front Pots": {
-      "Mixed Pot": 4,
-      "Fuchsia Pot": 4,
+      "Hedera helix 'Yellow Ripple' · Pot 1": 3,
+      "Skimmia 'Double Diamond'": 3,
+      "Pansy 'Fire Red' · Pot 1": 3,
+      "Hedera helix 'Yellow Ripple' · Pot 2": 3,
+      "Gaultheria (cultivar to confirm)": 3,
+      "Pansy 'Fire Red' · Pot 2": 3,
+    },
+    "Front Strawberry Tree": {
+      "Arbutus unedo": 3,
     },
     "Front Stone Trough": {
       "Hosta": 4,

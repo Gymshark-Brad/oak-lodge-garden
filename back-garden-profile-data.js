@@ -128,7 +128,7 @@
   };
 
   const profiles = {};
-  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia", "littlepot1-geranium", "littlepot1-petunia", "wallpot1-candy-house-mix", "lobeliapot-hedera-yellow-ripple", "baskets-trailing-fuchsia", "baskets-bacopa", "baskets-trailing-lobelia", "baskets-trailing-verbena", "baskets-petunia"]);
+  const RETIRED_PLANT_IDS = new Set(["bed2-forget-me-not", "stone-hebe", "bed4-celosia", "littlepot1-geranium", "littlepot1-petunia", "wallpot1-candy-house-mix", "lobeliapot-hedera-yellow-ripple", "baskets-bacopa", "baskets-trailing-lobelia", "baskets-trailing-verbena", "baskets-petunia"]);
 
   function add(id, seed) {
     const record = (window.OAK.PLANT_BY_ID || {})[id];
@@ -957,6 +957,16 @@
     ["baskets-pansy-fire", "Cool-season Pansy", "Pansy 'Fire' (2 plants)", "Violaceae", "Viola", "One Pansy in each matching basket"],
     ["baskets-pansy-rose-surprise", "Cool-season Pansy", "Pansy 'Rose Surprise' (2 plants)", "Violaceae", "Viola", "One Pansy in each matching basket"],
   ].forEach(([id, type, identity, family, genus, role]) => addSeptember(id, { ...autumnCare, type, description: `${identity} is recorded as part of the September autumn refresh. ${role}.`, months: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"], size: "Compact container planting", sizeDetail: "Observed in the September photo record", position: "Sun to partial shade", positionDetail: "Container-specific placement recorded", soil: "Moist and free-draining", soilDetail: "Container compost must not remain saturated", hardiness: "Cool-season planting", hardinessDetail: "Protect containers from prolonged freezing and waterlogging", feature: "Autumn and winter interest", featureDetail: "Colour or evergreen structure", identity, under: "wilting growth and a light container", over: "yellowing or soft growth in compost that remains wet", about: "This named autumn container plant is retained at the level supported by the supplied garden record.", family, genus, foliage: "Seasonal or evergreen according to the named plant", habit: "Container planting", role, observation: "Recorded in the September 2026 update photographs.", status: "Monitor moisture and remove faded flowers or damaged growth as appropriate." }));
+  function addSeptemberBack(id, identity, family, genus) {
+    addSeptember(id, { ...autumnCare, type: "September 2026 garden planting", description: `${identity} is recorded from the September Hanging Basket 3 or Back Bed 4 update. The supplied name is retained without inferring an unlabelled cultivar.`, months: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"], size: "To be observed", sizeDetail: "Young or refreshed planting", position: "Recorded September position", positionDetail: "See supplied photographs", soil: "Moist but well-drained", soilDetail: "Keep container or bed drainage open", hardiness: "To be observed", hardinessDetail: "Protect from cold saturation until the exact cultivar is confirmed", feature: "September planting", featureDetail: "Identity and placement retained from the garden record", identity, under: "wilting growth and a dry root ball", over: "yellowing or soft growth in persistently wet compost or soil", about: "This profile stays at the identification level supported by the supplied September garden record.", family, genus, foliage: "To be observed", habit: "Container or border planting", role: "September 2026 update", observation: "Photographed in September 2026.", status: "Retain labels and monitor first-winter establishment." });
+  }
+  [
+    ["bed4-abelia-radiance", "Abelia 'Radiance'", "Caprifoliaceae", "Abelia"],
+    ["baskets-fern-unidentified", "Fern (cultivar to confirm)", "Unconfirmed", "Fern"],
+    ["baskets-lysimachia-unidentified", "Lysimachia (cultivar to confirm)", "Primulaceae", "Lysimachia"],
+    ["baskets-chrysanthemum-unidentified", "Chrysanthemum (cultivar to confirm)", "Asteraceae", "Chrysanthemum"],
+    ["baskets-cyclamen-unidentified", "Cyclamen (cultivar to confirm)", "Primulaceae", "Cyclamen"],
+  ].forEach(([id, identity, family, genus]) => addSeptemberBack(id, identity, family, genus));
 
   Object.entries(profiles).forEach(([plantId, profile]) => {
     const record = (window.OAK.PLANT_BY_ID || {})[plantId];
