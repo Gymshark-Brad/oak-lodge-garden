@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the standalone JSON and Excel plant inventories from data.js."""
+"""Regenerate inventories using the same ordered data scripts as the website."""
 
 from __future__ import annotations
 
@@ -43,7 +43,14 @@ function readText(path) {
 }
 function run(argv) {
   this.window = {};
-  eval(readText(`${argv[0]}/data.js`));
+  const html = readText(`${argv[0]}/index.html`);
+  const script = /<script src="([^"?]+)\?v=[^"]+"><\/script>/g;
+  let match;
+  while ((match = script.exec(html))) {
+    if (/^https?:/.test(match[1])) continue;
+    eval(readText(`${argv[0]}/${match[1]}`));
+  }
+  if (!window.OAK.PLANT_CARE_REVIEW) throw new Error("Reviewed plant data did not load");
   return JSON.stringify(window.OAK.PLANTS);
 }
 '''
@@ -79,6 +86,11 @@ def write_workbook(plants: dict[str, list[dict]]) -> None:
         "Watering & Soil",
         "General Care",
         "Seasonal Changes (What happens over the year)",
+        "Description",
+        "At a Glance",
+        "Identity / Evidence",
+        "Sources",
+        "Stable Plant ID",
     ]
     sheet.append(headers)
 
@@ -92,6 +104,11 @@ def write_workbook(plants: dict[str, list[dict]]) -> None:
                 plant.get("water", ""),
                 plant.get("care", ""),
                 plant.get("seasonal", ""),
+                plant.get("description", ""),
+                "\n".join(f"{fact['label']}: {fact['value']}. {fact['detail']}" for fact in plant.get("profile", {}).get("facts", [])),
+                plant.get("profile", {}).get("provenanceNote", ""),
+                "\n".join(source["url"] for source in plant.get("profile", {}).get("sources", []) if source.get("url")),
+                plant.get("id", ""),
             ])
 
     header_fill = PatternFill("solid", fgColor="355E3B")
@@ -105,7 +122,7 @@ def write_workbook(plants: dict[str, list[dict]]) -> None:
             cell.font = Font(name="Arial", size=10)
             cell.alignment = Alignment(vertical="top", wrap_text=True)
 
-    widths = [24, 34, 38, 36, 42, 64, 64]
+    widths = [24, 34, 38, 36, 42, 64, 64, 64, 64, 54, 54, 36]
     for index, width in enumerate(widths, start=1):
         sheet.column_dimensions[get_column_letter(index)].width = width
     sheet.row_dimensions[1].height = 32
@@ -131,7 +148,7 @@ def verify(plants: dict[str, list[dict]]) -> int:
         for location, records in exported.items()
         for plant in records
     ]
-    if actual_json != expected:
+    if exported != plants or actual_json != expected:
         raise SystemExit("JSON verification failed: exported plant rows differ from data.js")
 
     workbook = load_workbook(XLSX_PATH, read_only=True, data_only=False)
@@ -139,6 +156,11 @@ def verify(plants: dict[str, list[dict]]) -> int:
     actual_xlsx = [tuple(row) for row in sheet.iter_rows(min_row=2, max_col=3, values_only=True)]
     if actual_xlsx != expected:
         raise SystemExit("Excel verification failed: location/name/Latin rows differ from data.js")
+    records = [plant for group in plants.values() for plant in group]
+    for row, plant in zip(sheet.iter_rows(min_row=2, values_only=True), records):
+        if row[5] != plant["care"] or row[6] != plant["seasonal"] or row[7] != plant["description"] or row[11] != plant["id"]:
+            raise SystemExit(f"Excel verification failed: stale authored content for {plant['id']}")
+    workbook.close()
     return len(expected)
 
 

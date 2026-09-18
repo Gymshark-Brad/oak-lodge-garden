@@ -133,7 +133,7 @@ function PlantProfile({ plant, zoneTitle, backLabel, plantKey, onBack, onOpenLig
       <section className="pp-section" aria-labelledby="care-heading">
         <SectionHeading eyebrow="Practical guide" title="Keeping it happy" id="care-heading" />
         <div className="pp-care-intro">
-          <p>The aim is resilient, balanced growth in the conditions this plant actually prefers.</p>
+          <p>{profile.careSummary || profile.careGuide[0].summary}</p>
           {waterInfo && (
             <div className="pp-water-stamp">
               <span className="t-stamp">{profile.environment === "indoor" ? "Houseplant moisture-check band" : "Oak Lodge watering band"} {waterBand}</span>

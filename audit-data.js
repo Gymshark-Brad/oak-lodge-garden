@@ -27,12 +27,23 @@ function run(argv) {
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
   eval(readText(`${root}/cultivar-resolution-data.js`));
+  eval(readText(`${root}/plant-care-data.js`));
   eval(readText(`${root}/journal-data.js`));
 
   const OAK = window.OAK;
   const errors = [];
-  const ids = Object.keys(OAK.PLANT_BY_ID || {});
-  if (ids.length !== new Set(ids).size) errors.push("duplicate plant IDs");
+  const rawPlants = Object.values(OAK.PLANTS).reduce((all, plants) => all.concat(plants), []);
+  const ids = rawPlants.map((plant) => plant.id);
+  if (ids.some((id) => !id) || ids.length !== new Set(ids).size) errors.push("missing or duplicate plant IDs in inventory");
+  if (ids.length !== Object.keys(OAK.PLANT_BY_ID || {}).length) errors.push("plant index does not cover the inventory");
+  Object.entries(OAK.PLANTS).forEach(([plantKey, plants]) => {
+    const names = plants.map((plant) => plant.name.trim().toLowerCase());
+    if (names.length !== new Set(names).size) errors.push(`duplicate plant name within group: ${plantKey}`);
+    plants.forEach((plant) => {
+      const indexed = OAK.PLANT_BY_ID[plant.id];
+      if (!indexed || indexed.plant !== plant || indexed.plantKey !== plantKey) errors.push(`plant index mismatch: ${plant.id}`);
+    });
+  });
 
   const profileFields = [
     "description", "facts", "careGuide", "waterSigns", "seasons",
@@ -41,6 +52,8 @@ function run(argv) {
   const warningUnder = new Map();
   const warningOver = new Map();
   const seasonalActions = new Map();
+  const completeCareGuides = new Map();
+  const completeFactSets = new Map();
   const recordCopy = (collection, copy, id) => {
     if (!copy) return;
     if (!collection.has(copy)) collection.set(copy, []);
@@ -64,6 +77,31 @@ function run(argv) {
     if (!Array.isArray(profile.facts) || profile.facts.length < 4) {
       errors.push(`insufficient profile facts: ${record.plant.id}`);
     }
+    if (!Array.isArray(profile.careGuide) || profile.careGuide.length < 3) {
+      errors.push(`insufficient practical care: ${record.plant.id}`);
+    } else {
+      profile.careGuide.forEach((item) => {
+        if (!item.title || !item.summary || !item.detail) errors.push(`incomplete care card: ${record.plant.id}`);
+        if (/^(Prepare the root run|Establish the full root area|Establish a deep root system|Keep the display productive|Prune for the plant’s natural framework|Feed the flowering engine|Renew a crowded clump)$/.test(item.title)) {
+          errors.push(`generic care template returned: ${record.plant.id} / ${item.title}`);
+        }
+      });
+      recordCopy(completeCareGuides, JSON.stringify(profile.careGuide), record.plant.id);
+    }
+    const factLabels = (profile.facts || []).map((item) => item.label);
+    if (factLabels.length !== new Set(factLabels).size) errors.push(`duplicate fact label: ${record.plant.id}`);
+    (profile.facts || []).forEach((item) => {
+      if (!item.label || !item.value || !item.detail) errors.push(`incomplete fact: ${record.plant.id}`);
+      if (/Recorded September position|Container scale|Hardy with free drainage|Recorded September planting; allow for its stated habit|Current Oak Lodge position recorded in September|Observed or recorded September character|Keep drainage open and moisture even|Match watering to the root ball rather than a timetable/.test(`${item.value} ${item.detail}`)) {
+        errors.push(`placeholder fact returned: ${record.plant.id} / ${item.label}`);
+      }
+    });
+    recordCopy(completeFactSets, JSON.stringify(profile.facts), record.plant.id);
+    if (record.plant.description !== profile.description) errors.push(`stale summary description: ${record.plant.id}`);
+    const validMonths = new Set(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]);
+    if (!Array.isArray(profile.floweringMonths) || profile.floweringMonths.some((month) => !validMonths.has(month))
+      || profile.floweringMonths.length !== new Set(profile.floweringMonths).size) errors.push(`invalid flowering months: ${record.plant.id}`);
+    if (profile.floweringMonths.length === 12) errors.push(`review required for year-round flowering: ${record.plant.id}`);
     if (!Array.isArray(profile.seasons) || profile.seasons.length !== 4) {
       errors.push(`incomplete seasonal profile: ${record.plant.id}`);
     }
@@ -90,6 +128,8 @@ function run(argv) {
     ["under-watering warning", warningUnder],
     ["over-watering warning", warningOver],
     ["seasonal action", seasonalActions],
+    ["complete care guide", completeCareGuides],
+    ["complete at-a-glance facts", completeFactSets],
   ].forEach(([label, collection]) => {
     collection.forEach((plantIds) => {
       if (plantIds.length > 1) errors.push(`repeated ${label}: ${plantIds.join(", ")}`);
@@ -128,6 +168,8 @@ function run(argv) {
       if (pin.pending === true) return;
       if (!pin.plantId || !OAK.PLANT_BY_ID[pin.plantId]) {
         errors.push(`unresolved map pin: ${zoneKey} / ${pin.name}`);
+      } else if (OAK.PLANT_BY_ID[pin.plantId].zoneKey !== zoneKey || OAK.PLANT_BY_ID[pin.plantId].plant.name !== pin.name) {
+        errors.push(`map pin name or location mismatch: ${zoneKey} / ${pin.name}`);
       }
     });
   });
@@ -318,7 +360,21 @@ function run(argv) {
         errors.push(`unresolved watering entry: ${plantKey} / ${name}`);
       }
     });
+    plants.forEach((plant) => {
+      if (bands[plant.name] !== OAK.WATER_BANDS_BY_ID[plant.id]) errors.push(`watering name/id mismatch: ${plant.id}`);
+    });
   });
+
+  const review = OAK.PLANT_CARE_REVIEW;
+  if (!review || review.priorityIds.length !== ids.length || ids.some((id) => !review.priorityIds.includes(id))) {
+    errors.push("care review does not cover every active plant");
+  }
+  ["baskets-fern-unidentified", "frontBed5-fern-jurassic-gold"].forEach((id) => {
+    if (OAK.PLANT_BY_ID[id].plant.profile.floweringMonths.length) errors.push(`fern assigned a flowering window: ${id}`);
+  });
+  if (/Kleph15313/.test(OAK.PLANT_BY_ID["bigpot1-petunia"].plant.profile.facts.find((row) => row.label === "Identity").value)) {
+    errors.push("Midnight Sky incorrectly equated with NightSky");
+  }
 
   const journal = OAK.JOURNAL;
   const journalEntries = journal && Array.isArray(journal.entries) ? journal.entries : [];

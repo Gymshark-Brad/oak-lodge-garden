@@ -4370,11 +4370,11 @@ window.OAK = (function () {
     ],
     stairpots: [
       { mapNo: "P1", plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 30, y: 42, r: 17, hue: 105 },
-      { mapNo: "P1", plantId: "stairpots-p1-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 20, y: 65, r: 8, hue: 80 },
-      { mapNo: "P1", plantId: "stairpots-p1-pansy-fire-red", name: "Fire Red Pansies", x: 40, y: 65, r: 8, hue: 5 },
-      { mapNo: "P2", plantId: "stairpots-p2-gaultheria-unidentified", name: "Gaultheria", x: 70, y: 42, r: 17, hue: 350 },
-      { mapNo: "P2", plantId: "stairpots-p2-hedera-yellow-ripple", name: "Yellow Ripple ivy", x: 60, y: 65, r: 8, hue: 80 },
-      { mapNo: "P2", plantId: "stairpots-p2-pansy-fire-red", name: "Fire Red Pansies", x: 80, y: 65, r: 8, hue: 5 },
+      { mapNo: "P1", plantId: "stairpots-p1-hedera-yellow-ripple", name: "Hedera helix 'Yellow Ripple' · Pot 1", x: 20, y: 65, r: 8, hue: 80 },
+      { mapNo: "P1", plantId: "stairpots-p1-pansy-fire-red", name: "Pansy 'Fire Red' · Pot 1", x: 40, y: 65, r: 8, hue: 5 },
+      { mapNo: "P2", plantId: "stairpots-p2-gaultheria-unidentified", name: "Gaultheria (cultivar to confirm)", x: 70, y: 42, r: 17, hue: 350 },
+      { mapNo: "P2", plantId: "stairpots-p2-hedera-yellow-ripple", name: "Hedera helix 'Yellow Ripple' · Pot 2", x: 60, y: 65, r: 8, hue: 80 },
+      { mapNo: "P2", plantId: "stairpots-p2-pansy-fire-red", name: "Pansy 'Fire Red' · Pot 2", x: 80, y: 65, r: 8, hue: 5 },
     ],
     frontArbutus: [
       { plantId: "frontArbutus-arbutus-unedo", name: "Arbutus unedo", x: 50, y: 50, r: 26, hue: 100 },

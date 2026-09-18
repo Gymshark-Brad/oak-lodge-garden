@@ -50,6 +50,7 @@ oak-lodge-garden/
   front-garden-profile-data.js # Authored v2 profiles for every front-garden zone
   profile-quality-data.js # Site-wide reviewed source, warning and seasonal-copy overrides
   cultivar-resolution-data.js # Label confirmations and visibly qualified best-fit cultivar assumptions
+  plant-care-data.js   # September care/fact corrections, applied after cultivar resolution
   SeasonalCalendar.jsx  # Monthly care calendar — click a month to see all tasks
   seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
   WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
@@ -57,7 +58,7 @@ oak-lodge-garden/
   GardenJournal.jsx   # Visual newest-first diary of planting, moves, removals and photos
   journal-data.js     # Explicit May 2026 onward journal history and selected collage photos
   generate-thumbnails.py  # Builds fast display copies; originals remain for lightboxes
-  generate-plant-exports.py # Regenerates JSON and XLSX inventories from data.js
+  generate-plant-exports.py # Regenerates JSON and XLSX from the website's ordered data layers
   BACKLOG.md          # Prioritised improvements list
   AGENTS.md           # This file
   README.md           # Basic repo info
@@ -128,6 +129,8 @@ Profile fields are enriched centrally in `data.js` after the authored plant reco
 Rich v2 profiles are authored separately in `plant-profile-data.js` (Beds 1–2), `back-garden-profile-data.js` (all other back-garden zones) and `front-garden-profile-data.js` (all front-garden zones), keyed by stable plant ID. `profile-quality-data.js` is loaded after those files and holds explicit, reviewed corrections where the original records reused boilerplate or lacked an authoritative external source. A plant with a `profile` object opens in the full-page `PlantProfile.jsx`; plants not yet researched continue to use the legacy `PlantCard.jsx`. Never manufacture v2 prose from the old inferred fields: uncertain species or cultivar identities must be labelled explicitly, and researched facts must include linked source entries. `audit-data.js` rejects profiles without an external link and rejects verbatim duplicate warning or seasonal text across plant IDs. Every active back- and front-garden plant is fully migrated (July 2026).
 
 `cultivar-resolution-data.js` is a separate, reversible identity layer loaded after the profiles, seasonal calendar and watering data. Photo-label discoveries use the visible suffix `— label confirmed`; best-fit guesses use `— assumed`. Never remove the assumed qualification without a retained label or stronger diagnostic evidence. The file updates display names, profile identity rows, bed-map labels, seasonal links and watering keys together while preserving stable plant IDs and the original names as lookup aliases.
+
+`plant-care-data.js` loads immediately after cultivar resolution. It contains explicit botanical care, individual specimen priorities, reviewed fact/description corrections and supporting sources. It detaches old shared profile arrays before editing and synchronises reviewed profile content out to legacy summary fields. Edit the relevant stable-ID entry here when correcting this content; an earlier-layer edit may otherwise be overridden. Related specimens may share correct botanical advice, but broad shrub/perennial care templates must not replace it. The audit checks complete care/fact duplication, known placeholders, flowering data and inventory/index consistency. Both downloadable inventories now use the fully assembled data, including profiles and identity qualifications. See `docs/audits/2026-09-18-plant-data-audit.md` for scope, remaining identity questions and validation.
 
 Back-garden zone labels include `"Bed 1"`–`"Bed 5"`, `"Stone Bed"`, `"Patio"`, `"Tree"`, `"Big Pot 1"`, `"Big Pot 2"`, `"Cercis Pot"`, `"Skimmia Pot"`, `"Viburnum Pot"`, `"Bed 2/3 Wall Pot"`, `"Little Pot 1"`, `"Little Pot 2"` and `"Front Pot"`.
 
