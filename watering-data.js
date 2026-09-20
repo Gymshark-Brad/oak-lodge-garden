@@ -20,12 +20,15 @@
       "Little Heath": 2,
       "Abelia 'Kaleidoscope'": 3,
       "Pieris 'Forest Flame'": 3,
+      "Skimmia 'Double Diamond'": 3,
+      "Fuchsia (cultivar to confirm)": 4,
+      "Fern (cultivar to confirm)": 3,
     },
     "Bed 2": {
       "Peony": 3,
       "Weigela": 3,
       "Silverbush": 1,
-      "Maiden Pink": 1,
+      "Abelia 'Raspberry Profusion'": 3,
       "Hydrangea petiolaris": 4,
       "Euonymus 'Emerald Gaiety'": 2,
       "Avens": 3,
@@ -50,6 +53,7 @@
       "Gaillardia": 2,
       "Abelia 'Kaleidoscope'": 3,
       "Abelia 'Radiance'": 3,
+      "Nemesia": 4,
     },
     "Bed 5": {
       "Wisteria": 1,
@@ -58,11 +62,12 @@
       "Alstroemeria": 4,
       "Petunia 'Bee's Knees'": 4,
       "Vinca minor 'Illumination'": 3,
-      "Nemesia": 4,
       "Lythrum 'Robin'": 4,
       "Begonia 'Carmen'": 4,
       "Nemesia 'Aroma Heart of Gold'": 4,
       "Cabbage Tree": 2,
+      "Gaultheria (cultivar to confirm)": 3,
+      "Violas & Pansies · Big Pot": 3,
     },
     "Stone Bed": {
       "Houseleeks": 1,
@@ -151,11 +156,10 @@
       "Pansy 'Rose Surprise' (2 plants)": 3,
     },
     "Hanging Basket 3": {
-      "Fuchsia (cultivar to confirm)": 4,
-      "Fern (cultivar to confirm)": 3,
       "Lysimachia (cultivar to confirm)": 3,
       "Chrysanthemum (cultivar to confirm)": 3,
       "Cyclamen (cultivar to confirm)": 3,
+      "Hedera (2 plants; cultivars to confirm)": 3,
     },
     "Front Bed 1": {
       "Hydrangea": 4, "Lavender": 1,
@@ -223,12 +227,10 @@
       "Fuchsia Pot": 4,
     },
     "Stairs Pots": {
-      "Hedera helix 'Yellow Ripple' · Pot 1": 3,
-      "Skimmia 'Double Diamond'": 3,
-      "Pansy 'Fire Red' · Pot 1": 3,
-      "Hedera helix 'Yellow Ripple' · Pot 2": 3,
-      "Gaultheria (cultivar to confirm)": 3,
-      "Pansy 'Fire Red' · Pot 2": 3,
+      "Violas & Pansies · White Pot, Blue Pot & Can": 3,
+    },
+    "Stairs Cans": {
+      "Violas & Pansies · Three-Can Cluster": 3,
     },
     "Front Strawberry Tree": {
       "Arbutus unedo": 3,
@@ -589,8 +591,12 @@
       over: "Compost staying saturated, yellow lower leaves or soft stems mean the sprinklers are running too long. Confirm water drains freely and adjust each spray so it reaches compost rather than repeatedly soaking foliage.",
     },
     "Stairs Pots": {
-      under: "Check the white and blue pots separately on the Steps. Drooping Pansy flowers, folded ivy leaves or a noticeably light container mean one root ball has dried even if the other remains moist.",
-      over: "Yellow Skimmia or Gaultheria leaves, soft Pansy crowns or blackened ivy joints while a pot remains heavy show that drainage is lagging behind rainfall or watering.",
+      under: "Check the white pot, blue pot and can separately. Drooping Viola or Pansy flowers, compost pulling from a rim or a noticeably light container mean one root ball has dried even if the others remain moist.",
+      over: "Soft crowns, yellow lower leaves or collapsed flowers while a container stays heavy show that drainage is lagging behind rainfall or watering. Raise every base and clear blocked holes.",
+    },
+    "Stairs Cans": {
+      under: "Lift each of the three metal cans. Their small compost volumes dry quickly; limp flowers, curled leaves or very light cans mean the mixed Violas and Pansies need a thorough drink.",
+      over: "Cold, heavy cans with soft crowns or yellow leaves are retaining too much water. Keep all drainage holes open and tip away trapped surplus after heavy rain.",
     },
     "Wall Pot 1": {
       under: "A small pot on an exposed stair wall — check by feel daily in hot weather. Flowers dropping, trailing stems going limp, and compost pulling away from the pot's edge all mean it's dried out.",
@@ -605,8 +611,8 @@
       over: "Excess water should drain straight through and not sit — a basket that's still dripping long after watering or feels heavy and sodden the next day is a sign of overwatering. Leaves yellowing from the inside of the basket outward is the visible symptom.",
     },
     "Hanging Basket 3": {
-      under: "The refreshed Decking basket needs regular weight and compost checks. Limp Fuchsia flowers, dull fern fronds or a light basket mean the root ball needs a thorough drink before the new autumn plants dry back.",
-      over: "A basket that remains heavy and cold after several days, with yellowing lower leaves or soft crowns, is holding too much water. Check the liner and drainage holes, then let the compost begin to dry before watering again.",
+      under: "The refreshed Decking basket needs regular weight and compost checks. Limp Cyclamen or Chrysanthemum flowers, folded ivy leaves or a light basket mean the root ball needs a thorough drink.",
+      over: "A basket that remains heavy and cold after several days, with yellowing ivy leaves or soft seasonal crowns, is holding too much water. Check the liner and drainage holes, then let the compost begin to dry before watering again.",
     },
   };
 

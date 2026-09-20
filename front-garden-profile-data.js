@@ -751,12 +751,8 @@
   [
     ["frontBed3-cercis-eternal-flame", "Cercis canadensis 'Eternal Flame'", "Fabaceae", "Cercis", CERCIS_SOURCE],
     ["frontArbutus-arbutus-unedo", "Arbutus unedo", "Ericaceae", "Arbutus", ARBUTUS_SOURCE],
-    ["stairpots-p1-hedera-yellow-ripple", "Hedera helix 'Yellow Ripple' · Pot 1", "Araliaceae", "Hedera", SEPTEMBER_FRONT_SOURCE],
     ["stairpots-p1-skimmia-double-diamond", "Skimmia 'Double Diamond'", "Rutaceae", "Skimmia", SEPTEMBER_FRONT_SOURCE],
-    ["stairpots-p1-pansy-fire-red", "Pansy 'Fire Red' · Pot 1", "Violaceae", "Viola", SEPTEMBER_FRONT_SOURCE],
-    ["stairpots-p2-hedera-yellow-ripple", "Hedera helix 'Yellow Ripple' · Pot 2", "Araliaceae", "Hedera", SEPTEMBER_FRONT_SOURCE],
     ["stairpots-p2-gaultheria-unidentified", "Gaultheria (cultivar to confirm)", "Ericaceae", "Gaultheria", SEPTEMBER_FRONT_SOURCE],
-    ["stairpots-p2-pansy-fire-red", "Pansy 'Fire Red' · Pot 2", "Violaceae", "Viola", SEPTEMBER_FRONT_SOURCE],
   ].forEach(([id, identity, family, genus, source]) => addSeptemberFront(id, identity, family, genus, source));
 
   // Other front-garden zones

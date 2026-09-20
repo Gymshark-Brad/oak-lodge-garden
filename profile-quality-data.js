@@ -12,12 +12,14 @@
 
   const RHS = {
     abelia: source("RHS · Abelia", "https://www.rhs.org.uk/plants/abelia"),
+    abeliaRaspberry: source("RHS · Abelia 'Raspberry Profusion'", "https://www.rhs.org.uk/plants/305064/abelia-raspberry-profusion/details"),
     skimmiaAntarctica: source("RHS · Skimmia japonica 'Antarctica'", "https://www.rhs.org.uk/plants/364299/skimmia-japonica-antarctica/details"),
     skimmia: source("RHS · Skimmia growing guide", "https://www.rhs.org.uk/plants/skimmia/growing-guide"),
     pansy: source("RHS · Grow pansies", "https://www.rhs.org.uk/education-learning/children-young-people/family-activities/grow-it/pansy"),
     hellebore: source("RHS · Hellebore growing guide", "https://www.rhs.org.uk/plants/hellebore/growing-guide"),
     calluna: source("RHS · Calluna growing guide", "https://www.rhs.org.uk/plants/calluna/growing-guide"),
     hedera: source("RHS · Hedera helix 'Golden Starlight' ('Yellow Ripple')", "https://www.rhs.org.uk/plants/357534/hedera-helix-golden-starlight-v/details"),
+    hederaGuide: source("RHS · Ivy growing guide", "https://www.rhs.org.uk/plants/ivy/growing-guide"),
     fern: source("RHS · Fern growing guide", "https://www.rhs.org.uk/plants/types/ferns/growing-guide"),
     lysimachia: source("RHS · Lysimachia nummularia", "https://www.rhs.org.uk/plants/10632/lysimachia-nummularia/details"),
     chrysanthemum: source("RHS · Chrysanthemum growing guide", "https://www.rhs.org.uk/plants/chrysanthemum/growing-guide"),
@@ -433,6 +435,136 @@
   addContext("house-sitting-mixed-spider-plant", { seasons: seasons("Look for fresh striped leaves and plantlets, feed lightly and check whether the Spider Plant's fleshy roots are displacing its two pot companions.", "Keep the striped rosette in filtered light, water the shared pot only after checking depth and trim brown tips without cutting healthy green tissue.", "Remove spent plantlet stems and stop feeding as growth slows, noting whether its vigorous roots are making separation necessary.", "Maximise gentle light for the white stripe, water sparingly and keep leaf tips away from the sitting-room radiator.") });
   addContext("house-sitting-mixed-parlour-palm", { seasons: seasons("Watch for a new palm spear before beginning weak feed, and inspect the shared planter for crowding around the Palm's fine roots.", "Keep the fronds in bright filtered light, rotate the shared pot for even growth and check for spider mite in dry weather.", "Stop feeding, remove only fully brown fronds at the base and protect the delicate leaflets from cold window draughts.", "Maintain steady room temperature and modest humidity, watering only after the shared compost has partly dried below the surface.") });
   addContext("house-sitting-mixed-arrowhead-vine", { seasons: seasons("Pinch the Arrowhead Vine above a node to encourage a compact shoot and begin light feeding only when new arrow-shaped leaves open.", "Guide or trim the fastest vine so it does not climb through the Palm, and check undersides of tender leaves for pests.", "Stop feeding, remove yellow leaves at their petioles and decide whether the increasingly vining habit still suits the shared planter.", "Give the Arrowhead Vine bright indirect light, protect it from cold glass and allow the upper shared compost to dry slightly between checks.") });
+
+  addContext("bed2-abelia-raspberry-profusion", {
+    source: RHS.abeliaRaspberry,
+    waterSigns: {
+      under: "The pale pink flowers close early and the newest leaves curl while the replacement planting pocket is dry; soak the original root ball and surrounding soil slowly.",
+      over: "Yellowing lower leaves and dark soft stem tissue while Bed 2 stays wet indicate poor aeration; pause watering and pull compacted mulch away from the crown.",
+    },
+    seasons: seasons(
+      "Check for winter-damaged tips after growth resumes, prune only to sound buds and mulch the newly planted root area without touching the stems.",
+      "Water deeply through its first dry spells and leave the long raspberry-pink flower flush for visiting insects, shortening only badly placed shoots.",
+      "Stop feeding so red stems and evergreen leaves harden, and clear fallen leaves that would keep the young crown wet.",
+      "Let the foliage take its bronze-purple tint, protect the first-season root area from drying wind and postpone reshaping until spring."
+    ),
+  });
+  addContext("bed5-big-pot-violas-pansies", {
+    source: RHS.pansy,
+    waterSigns: {
+      under: "The mixed flowers fold and their stems lean while individual plugs feel dry beneath taller Bed 5 growth; wet the affected pockets without flooding the whole big pot.",
+      over: "Soft leaf stalks, grey petals and yellow centres among wet compost show the mixed bedding is staying saturated; remove damaged growth and restore airflow.",
+    },
+    seasons: seasons(
+      "Cut stretched stems back to low leafy growth and resume deadheading as fresh buds open around the Gaultheria.",
+      "Expect flowering to pause in heat; retain sound crowns in light shade or replace exhausted seasonal plugs rather than overfeeding them.",
+      "Deadhead each colour back to a leaf joint, remove rain-damaged petals and check small root plugs separately from the deeper perennial planting.",
+      "Keep crowns clear of fallen leaves, water only after checking the compost and accept pauses during frost while retaining healthy foliage."
+    ),
+  });
+  addContext("basket3-hedera-pair-unidentified", {
+    source: RHS.hederaGuide,
+    waterSigns: {
+      under: "The two ivy trails lose flexibility and leaf edges turn crisp while Basket 3 feels light; re-wet each root plug slowly until the liner drains.",
+      over: "Yellow shedding leaves and blackened joints where the two plants enter cold wet compost show stagnant conditions; clear the liner and shorten damaged stems.",
+    },
+    seasons: seasons(
+      "Shorten winter-damaged trails to healthy leaves, remove any all-green reversion and photograph both ivies separately before attempting cultivar identification.",
+      "Guide the two plants around opposite basket edges, checking for scale and keeping their stems away from the Cyclamen crown.",
+      "Retain the evergreen cascade but trim strands that hide the Chrysanthemum, clearing trapped petals and leaves from the liner.",
+      "Protect exposed basket roots from hard frost and drying wind, keeping the compost only lightly moist while growth is slow."
+    ),
+  });
+  addContext("stairpots-violas-pansies-group", {
+    source: RHS.pansy,
+    waterSigns: {
+      under: "Flowers droop first in whichever of the white pot, blue pot or can has dried fastest; check all three by touch and water only the light containers thoroughly.",
+      over: "Soft crowns and grey petals in one heavy container show its drainage is lagging behind the others; clear its outlet and delay that pot's next watering.",
+    },
+    seasons: seasons(
+      "Trim each container to compact leafy growth, replacing only failed plugs and keeping the three-part display balanced.",
+      "Move the group out of fierce afternoon heat if flowering pauses, retain healthy foliage and avoid forcing flowers with heavy feed.",
+      "Deadhead across the white pot, blue pot and can in one round, but check their moisture separately because their volumes differ.",
+      "Raise the containers so drainage holes stay open, clear frozen or rain-spoiled flowers and water only on frost-free mornings when needed."
+    ),
+  });
+  addContext("staircans-violas-pansies-group", {
+    source: RHS.pansy,
+    waterSigns: {
+      under: "The smallest can's flowers flag and the compost pulls from the metal edge before the other two cans react; lift and check every can individually.",
+      over: "Cold water pooling behind blocked holes causes yellow rosettes and soft stems; tip away surplus, reopen each can base and remove collapsed plants.",
+    },
+    seasons: seasons(
+      "Cut leggy stems back to healthy leaves, refresh only the failed plugs and check that winter movement has not blocked the drainage holes.",
+      "Give the metal cans afternoon shade in hot weather, as their small compost volume can heat and dry more rapidly than glazed pots.",
+      "Deadhead the three cans together for a coordinated display, turning them occasionally so every side receives open light.",
+      "Group the cans in shelter during severe weather, keep their bases raised and remove wet petals before grey mould spreads through the tight planting."
+    ),
+  });
+  addContext("stairpots-p1-skimmia-double-diamond", {
+    description: "Skimmia 'Double Diamond' moved from White Stairs Pot 1 into the sheltered planting beneath the Japanese Maple in Back Bed 1, where its evergreen leaves and developing flower buds sit beside the moved Fuchsia and fern.",
+    waterSigns: {
+      under: "The glossy leaves dull and curl while the new Bed 1 root pocket is dry below the mulch; soak around the original root ball until moisture reaches its base.",
+      over: "Pale leaves and soft dark tissue at the stem bases while the sheltered soil stays wet signal poor aeration; pull mulch back and pause watering.",
+    },
+    seasons: seasons(
+      "Remove damaged leaves one by one, top-dress around—not over—the stems and record flower buds as Double Diamond establishes in Bed 1.",
+      "Shelter from harsh sun beneath the Maple, water deeply only when the root area dries and keep neighbouring fern fronds clear of its centre.",
+      "Let new flower buds form undisturbed, stop feeding and clear Japanese Maple leaves from the evergreen framework.",
+      "Protect the first-season root area during prolonged frost and water sparingly only when the sheltered soil is genuinely dry."
+    ),
+  });
+  addContext("stairpots-p2-gaultheria-unidentified", {
+    description: "The unidentified Gaultheria moved from Blue Stairs Pot 2 into Bed 5's big pot, where its evergreen foliage sits among the new Viola-and-Pansy mixture and established taller planting.",
+    waterSigns: {
+      under: "The evergreen leaves lose gloss and curl while the Gaultheria's own root plug is dry inside the larger Bed 5 pot; use rainwater to re-wet that pocket.",
+      over: "Yellow leaves and soft brown roots while the surrounding big-pot compost remains heavy show that water is collecting around the moved shrub; improve local drainage.",
+    },
+    seasons: seasons(
+      "Photograph flowers, leaf shape and growth habit to resolve the species, then top-dress its Bed 5 pocket without burying woody stems.",
+      "Keep the root plug evenly moist with rainwater in dry weather while preventing taller Alstroemeria growth from shading it completely.",
+      "Record any berry colour, stop feeding and clear fallen flowers and leaves from the small evergreen crown.",
+      "Keep Bed 5's big pot freely drained and protect the shared root ball during prolonged hard frost or drying wind."
+    ),
+  });
+  addContext("baskets-fern-unidentified", {
+    description: "The unidentified fern moved from Hanging Basket 3 into the sheltered soil beneath the Japanese Maple in Back Bed 1, retaining its stable specimen record while its species and hardiness remain unresolved.",
+    waterSigns: {
+      under: "Young frond tips crisp and older fronds curl while the new Bed 1 root pocket is dry beneath the surface; water around the crown without wetting it repeatedly.",
+      over: "Fronds yellow from the base and the crown smells sour in continuously wet sheltered soil; reduce watering and clear fallen Maple leaves from the centre.",
+    },
+    seasons: seasons(
+      "Remove only brown fronds at their base and photograph new croziers, scales and mature frond undersides to narrow the identification.",
+      "Use the Maple canopy as shelter from hot midday sun, maintaining even moisture while keeping the crown open to air.",
+      "Clear fallen leaves before they smother the crown and record whether the fronds remain evergreen as temperatures fall.",
+      "Because the species is unconfirmed, add light protection during hard frost and keep the sheltered crown just moist rather than saturated."
+    ),
+  });
+  addContext("baskets-trailing-fuchsia", {
+    waterSigns: {
+      under: "Soft shoot tips and buds hang while the moved Fuchsia's Bed 1 root pocket is dry; soak the root area slowly before the whole plant collapses.",
+      over: "Yellow leaves and dark soft tissue at the stem base while soil beneath the Maple remains wet show the crown needs more air and less water.",
+    },
+    seasons: seasons(
+      "Wait for live buds before cutting winter-damaged stems, then pinch young shoots only if a bushier Bed 1 framework is needed.",
+      "Water the new root area during dry spells, feed lightly while flowering and support arching stems away from the fern crown.",
+      "Stop feeding, record a fully open flower for identification and mulch lightly without covering the stem base.",
+      "Protect the newly planted crown until its hardiness is known and wait for spring buds before declaring bare upper stems dead."
+    ),
+  });
+  addContext("bed5-big-pot-nemesia", {
+    description: "The label-confirmed Nemesia 'Wisley Vanilla' moved from Bed 5's big pot to the front-right edge of Back Bed 4, retaining its pale scented flowers and stable specimen history.",
+    waterSigns: {
+      under: "Fine stems sag and pale flowers stop opening while the new Bed 4 root pocket is dry; water gently around the moved root ball before it shrinks.",
+      over: "Yellow foliage and dark soft crown tissue in wet Bed 4 soil show the moved Nemesia needs more drainage and air; pause watering and remove affected stems.",
+    },
+    seasons: seasons(
+      "Check for surviving basal shoots before trimming old stems and keep the new Bed 4 position open to light.",
+      "Maintain even moisture, trim tired flowering shoots by about a third and avoid feeding heavily around neighbouring woody plants.",
+      "Take labelled cuttings before frost if Wisley Vanilla is to be retained, and clear damp fallen petals from the crown.",
+      "Do not rely on the outdoor plant surviving hard frost; keep any rooted cuttings bright, frost-free and lightly moist."
+    ),
+  });
 
   const byId = new Map();
   Object.values(OAK.PLANTS).forEach((plants) => plants.forEach((plant) => {

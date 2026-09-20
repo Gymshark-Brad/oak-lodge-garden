@@ -12,7 +12,7 @@ window.OAK = (function () {
       dims: "2.6m × 2.6m",
       where: "Corner by the gate, upper level",
       desc:
-        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. The August planting added a second Abelia 'Kaleidoscope' and Pieris 'Forest Flame', while both Nemesias moved into pots and the former Angel Wings was removed.",
+        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. In September, Skimmia 'Double Diamond' and the Fuchsia and fern from Hanging Basket 3 moved into the sheltered planting beneath it.",
       shape: {
         kind: "polygon",
         points: "94,98 164,58 214,58 214,188 104,188 94,168",
@@ -28,7 +28,7 @@ window.OAK = (function () {
       dims: "2m wide · ≈3.1m run",
       where: "Lower level, west boundary",
       desc:
-        "The upright section of the former sideways T-shaped border along the west boundary. Weigela, peony, two established Geums, Euonymus, climbing Hydrangea, Dianthus, an inherited rose, Silverbush and Butterfly Bush fill the narrow border.",
+        "The upright section of the former sideways T-shaped border along the west boundary. Abelia 'Raspberry Profusion' directly replaced the Dianthus that died in September 2026, beside Weigela, peony, Geums, Euonymus, climbing Hydrangea, an inherited rose, Silverbush and Butterfly Bush.",
       shape: { kind: "rect", x: 94, y: 323, w: 100, h: 155 },
       color: "#6b8e4e",
       labelXY: [144, 390],
@@ -54,7 +54,7 @@ window.OAK = (function () {
       dims: "≈1.2m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Gaillardia, Abelia 'Kaleidoscope', Callistemon and Lobelia 'Starship Scarlet Bronze Leaf'.",
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Gaillardia, two Abelias, Callistemon, Lobelia 'Starship Scarlet Bronze Leaf' and the Nemesia moved from Bed 5's big pot in September.",
       shape: { kind: "rect", x: 474, y: 243, w: 60, h: 40 },
       color: "#c7a54a",
       labelXY: [520, 212],
@@ -67,7 +67,7 @@ window.OAK = (function () {
       dims: "≈1m × 4m",
       where: "Right boundary wall, upper",
       desc:
-        "Long boundary bed against the right wall. Wisteria and rose rise above the Yucca and Cabbage Tree, while three planted pots sit along the wall: a mixed big pot, Lythrum 'Robin' in the medium pot and Begonia 'Carmen' in the little pot.",
+        "Long boundary bed against the right wall. Wisteria and rose rise above the New Zealand Flax and Cabbage Tree. The big pot was refreshed in September with the Gaultheria moved from the stairs and a mixed Viola-and-Pansy display.",
       shape: {
         kind: "polygon",
         points: "715,55 765,55 765,283 673,283 673,233 715,233",
@@ -96,7 +96,7 @@ window.OAK = (function () {
       dims: "3m × 3m",
       where: "Connecting upper and lower",
       desc:
-        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Skimmia, Echinacea, two little pots, Candy House wall pot and the new white and blue stair pots are catalogued together in this folio.",
+        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Skimmia, Echinacea, two little pots, Candy House wall pot, refreshed white-and-blue pot group and new tomato-can cluster are catalogued together in this folio.",
       shape: { kind: "rect", x: 334, y: 243, w: 140, h: 150 },
       color: "#6e6e5e",
       labelXY: [404, 344],
@@ -273,7 +273,7 @@ window.OAK = (function () {
       badge: "Single planted container",
       dims: "1 refreshed basket",
       where: "Decking section, beside the Patio Kitchen & Lounge area",
-      desc: "The purple Hanging Basket 3 moved to the Decking in September 2026. Its Fuchsia and fern were retained, then Lysimachia, Chrysanthemum and Cyclamen were added for autumn.",
+      desc: "The purple Hanging Basket 3 hangs on the Decking. In the later September refresh its Fuchsia and fern moved into Back Bed 1 and a second Hedera joined the Chrysanthemum, Cyclamen and trailing Lysimachia.",
       shape: { kind: "circle", cx: 299, cy: 445, r: 11 },
       color: "#76509a",
       labelXY: [299, 468],
@@ -558,14 +558,27 @@ window.OAK = (function () {
     },
     stairpots: {
       id: "stairpots",
-      title: "Steps · Pots 1 & 2",
-      badge: "White & blue pots",
-      dims: "Two mixed containers",
+      title: "Steps · Pots & Can",
+      badge: "White, blue & tomato-can pots",
+      dims: "Three mixed containers",
       where: "On the back-garden steps",
       desc:
-        "The two September stair containers. White Pot 1 combines Yellow Ripple ivy, Skimmia 'Double Diamond' and Fire Red Pansies; Blue Pot 2 combines Yellow Ripple ivy, Gaultheria and Fire Red Pansies.",
+        "The refreshed white pot, blue pot and one tomato can are treated as one stair display, planted only with a mixed selection of Violas and Pansies.",
       color: "#7f6f9c",
       plantKey: "Stairs Pots",
+      surface: "paving",
+      isPot: true,
+    },
+    staircans: {
+      id: "staircans",
+      title: "Steps · Can Cluster",
+      badge: "Three tomato-can planters",
+      dims: "Cluster of 3 cans",
+      where: "Grouped together on the back-garden steps",
+      desc:
+        "Three repurposed tomato cans grouped as one stair display, each planted with a mixed selection of Violas and Pansies.",
+      color: "#a56b3f",
+      plantKey: "Stairs Cans",
       surface: "paving",
       isPot: true,
     },
@@ -2675,6 +2688,8 @@ window.OAK = (function () {
       { name: "Gaultheria (cultivar to confirm)", id: "stairpots-p2-gaultheria-unidentified", latin: "Gaultheria — cultivar to confirm", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 2.jpeg", "images/September Trees & Pots /Stairs Pot 2 - 3.jpeg"], position: "P2 · blue pot on the Steps", light: "Partial shade to shade.", water: "Keep compost evenly moist and acidic, never waterlogged.", care: "Use ericaceous compost and rainwater where possible. Retain a label or berry and foliage close-up before assigning a cultivar.", seasonal: "Evergreen foliage and possible autumn berries; cultivar is not yet confirmed." },
       { name: "Pansy 'Fire Red' · Pot 2", id: "stairpots-p2-pansy-fire-red", latin: "Viola × wittrockiana 'Fire Red'", photos: ["images/September Trees & Pots /Stairs Pot 2 - 1.jpeg"], position: "P2 · blue pot on the Steps", light: "Sun to partial shade.", water: "Keep compost evenly moist without saturation.", care: "Remove faded flowers and seed pods to prolong the cool-season display.", seasonal: "Red flowers provide autumn-to-spring container colour." },
     ],
+
+    "Stairs Cans": [],
     "Front Strawberry Tree": [
       { name: "Arbutus unedo", id: "frontArbutus-arbutus-unedo", latin: "Arbutus unedo", photos: ["images/September Trees & Pots /Arbutus Unedo - 1.jpeg", "images/September Trees & Pots /Arbutus Unedo - 2.jpeg", "images/September Trees & Pots /Arbutus Unedo - 3.jpeg"], position: "By the skinny brick wall, at the purple-circle position in the September plan", light: "Full sun in a sheltered, well-drained position.", water: "Water regularly through the first two years, increasing in hot or dry weather; avoid waterlogging.", care: "Keep a clear, mulched root area while it establishes. Prune only to remove damaged or crossing growth, and stake a young standard tree until secure.", seasonal: "Evergreen foliage; white urn-shaped autumn flowers and ornamental red fruits can appear together on established plants." },
     ],
@@ -3047,6 +3062,147 @@ window.OAK = (function () {
     water: "Keep evenly moist but well drained while establishing; check the pot through dry and windy weather.",
     care: "Prune only after flowering if needed. Refresh the top compost in spring and protect the container during prolonged severe cold.",
     seasonal: "Pink buds open to lightly fragrant creamy-white flowers from late winter into spring, followed by blue-black ornamental berries.",
+  }];
+
+  // Later September 2026 pot and border update. Existing specimens keep their
+  // stable IDs as they move; removed seasonal records remain in the journal.
+  PLANTS["Bed 2"] = PLANTS["Bed 2"].filter((plant) => plant.id !== "bed2-maiden-pink");
+  PLANTS["Bed 2"].push({
+    name: "Abelia 'Raspberry Profusion'",
+    id: "bed2-abelia-raspberry-profusion",
+    latin: "Abelia × grandiflora 'Raspberry Profusion'",
+    photos: [
+      "images/September Pots V2/Bed 2 - Abelia - 1.jpeg",
+      "images/September Pots V2/Bed 2 - Abelia - 2.jpeg",
+    ],
+    position: "Position 7 — directly replacing the Dianthus that died in September 2026",
+    light: "Full sun in a sheltered position.",
+    water: "Keep moist but well drained while establishing; water deeply in prolonged dry spells.",
+    care: "Mulch over moist soil, keep mulch clear of the stems and prune only lightly after flowering or to remove winter damage.",
+    seasonal: "Pale raspberry-pink flowers on red stems from late spring into autumn; dark green evergreen foliage develops purple-bronze winter tints.",
+  });
+
+  const doubleDiamond = takePlant("Stairs Pots", "stairpots-p1-skimmia-double-diamond");
+  Object.assign(doubleDiamond, {
+    photos: [
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 1.jpeg",
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 2.jpeg",
+      "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg",
+    ],
+    position: "Front-left beneath the Japanese Maple — moved from White Stairs Pot 1 in September 2026",
+  });
+  PLANTS["Bed 1"].push(doubleDiamond);
+
+  const basketFuchsia = takePlant("Hanging Basket 3", "baskets-trailing-fuchsia");
+  Object.assign(basketFuchsia, {
+    photos: [
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 2.jpeg",
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 3.jpeg",
+      "images/September Trees & Pots /Hanging Basket 3 - 1.jpeg",
+    ],
+    group: "Back Bed 1 · moved September 2026",
+    position: "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3",
+  });
+  PLANTS["Bed 1"].push(basketFuchsia);
+
+  const basketFern = takePlant("Hanging Basket 3", "baskets-fern-unidentified");
+  Object.assign(basketFern, {
+    photos: [
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 1.jpeg",
+      "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 3.jpeg",
+      "images/September Trees & Pots /Hanging Basket 3 - 1.jpeg",
+    ],
+    group: "Back Bed 1 · moved September 2026",
+    position: "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3",
+  });
+  PLANTS["Bed 1"].push(basketFern);
+
+  const bed5Nemesia = takePlant("Bed 5", "bed5-big-pot-nemesia");
+  Object.assign(bed5Nemesia, {
+    photos: [
+      "images/September Pots V2/Bed 4 - Nemesia - 1.jpeg",
+      "images/September Pots V2/Bed 4 - Nemesia - 2.jpeg",
+      "images/September Pots V2/Bed 4 - Nemesia - 3.jpeg",
+      "images/jul-2026/july-update-bed-5-nemesia.webp",
+    ],
+    group: "Back Bed 4 · moved September 2026",
+    position: "Front-right edge of Bed 4 — moved from Bed 5's big pot",
+  });
+  PLANTS["Bed 4"].push(bed5Nemesia);
+
+  const stairsGaultheria = takePlant("Stairs Pots", "stairpots-p2-gaultheria-unidentified");
+  Object.assign(stairsGaultheria, {
+    photos: [
+      "images/September Pots V2/Bed 5 - Big Pot - 1.jpeg",
+      "images/September Pots V2/Bed 5 - Big Pot - 2.jpeg",
+      "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg",
+    ],
+    group: "Bed 5 big pot · moved September 2026",
+    position: "Bed 5 big pot — moved from Blue Stairs Pot 2",
+  });
+  PLANTS["Bed 5"].push(stairsGaultheria, {
+    name: "Violas & Pansies · Big Pot",
+    id: "bed5-big-pot-violas-pansies",
+    latin: "Viola hybrids",
+    photos: [
+      "images/September Pots V2/Bed 5 - Big Pot - 1.jpeg",
+      "images/September Pots V2/Bed 5 - Big Pot - 2.jpeg",
+      "images/September Pots V2/Bed 5 - Big Pot - 3.jpeg",
+    ],
+    group: "Bed 5 big pot · mixed planting",
+    position: "Mixed around the established big-pot planting — added September 2026",
+    light: "Sun to partial shade.",
+    water: "Keep evenly moist but freely drained; check the individual plugs beneath taller companions.",
+    care: "Deadhead faded flowers and seed pods, clear rain-damaged petals and trim stretched stems back to leafy growth.",
+    seasonal: "Mixed purple, blue, yellow, orange, white and patterned flowers provide cool-season colour from autumn into spring.",
+  });
+
+  PLANTS["Hanging Basket 3"].push({
+    name: "Hedera (2 plants; cultivars to confirm)",
+    id: "basket3-hedera-pair-unidentified",
+    latin: "Hedera hybrids — cultivars to confirm",
+    photos: [
+      "images/September Pots V2/Hanging Basket 3 - 1.jpeg",
+      "images/September Pots V2/Hanging Basket 3 - 2.jpeg",
+      "images/September Pots V2/Hanging Basket 3 - 4.jpeg",
+    ],
+    group: "Hanging Basket 3 · two plants after September refresh",
+    position: "Trailing from both sides of the basket",
+    light: "Sun to shade; give variegated leaves enough light to retain their markings.",
+    water: "Keep the small root plugs moderately moist while allowing excess water to drain.",
+    care: "Trim trails to leafy joints before they smother the Cyclamen or Chrysanthemum; remove any all-green reversions.",
+    seasonal: "Evergreen trailing foliage provides the basket's lasting structure after seasonal flowers fade.",
+  });
+
+  PLANTS["Stairs Pots"] = [{
+    name: "Violas & Pansies · White Pot, Blue Pot & Can",
+    id: "stairpots-violas-pansies-group",
+    latin: "Viola hybrids",
+    photos: [
+      "images/September Pots V2/Stairs Pots + Can - 1.jpeg",
+      "images/September Pots V2/Stairs Pots + Can - 2.jpeg",
+      "images/September Pots V2/Stairs Pots + Can - 3.jpeg",
+    ],
+    position: "White pot, blue pot and one tomato can grouped on the Steps",
+    light: "Sun to partial shade.",
+    water: "Check all three containers separately and keep their compost moist but freely drained.",
+    care: "Deadhead faded flowers and seed pods, clear damaged petals after rain and rotate the pots if one side stretches toward the light.",
+    seasonal: "A mixed cool-season display of purple, blue, yellow, orange, white and patterned Viola and Pansy flowers.",
+  }];
+
+  PLANTS["Stairs Cans"] = [{
+    name: "Violas & Pansies · Three-Can Cluster",
+    id: "staircans-violas-pansies-group",
+    latin: "Viola hybrids",
+    photos: [
+      "images/September Pots V2/Stair Cans - 1.jpeg",
+      "images/September Pots V2/Stair Cans - 2.jpeg",
+    ],
+    position: "Cluster of three repurposed tomato cans on the Steps",
+    light: "Sun to partial shade.",
+    water: "Check each small can frequently; water when the surface begins to dry and let surplus escape freely.",
+    care: "Deadhead to keep buds forming, remove rain-damaged petals and ensure the can bases remain open for drainage.",
+    seasonal: "Mixed Viola and Pansy flowers give the three-can cluster autumn-to-spring colour during mild weather.",
   }];
 
   // ─── PLANT PROFILES ───────────────────────────────────────────────
@@ -3815,11 +3971,31 @@ window.OAK = (function () {
         { src: "images/September Hanging Baskets & Pots/Hanging Basket 2 - 1.jpeg", caption: "Green Hanging Basket 2 in Patio Kitchen & Lounge" },
       ],
       basket3: [
-        { src: "images/September Hanging Baskets & Pots/Hanging Basket 3 - 1.jpeg", caption: "Purple Hanging Basket 3 after moving to Decking" },
+        { src: "images/September Pots V2/Hanging Basket 3 - 1.jpeg", caption: "Hanging Basket 3 after the later September refresh" },
+        { src: "images/September Pots V2/Hanging Basket 3 - 2.jpeg", caption: "Chrysanthemum, Cyclamen and trailing Hedera in Basket 3" },
+        { src: "images/September Pots V2/Hanging Basket 3 - 3.jpeg", caption: "The refreshed planting viewed beneath the ivy trails" },
+        { src: "images/September Pots V2/Hanging Basket 3 - 4.jpeg", caption: "Two Hedera plants forming Basket 3's evergreen cascade" },
+      ],
+      bed1: [
+        { src: "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 1.jpeg", caption: "Skimmia 'Double Diamond', Fuchsia and fern after moving into Back Bed 1" },
+        { src: "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 2.jpeg", caption: "The moved Fuchsia beneath the Japanese Maple" },
+        { src: "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 3.jpeg", caption: "Fern and Fuchsia settling into the sheltered bed" },
+      ],
+      bed2: [
+        { src: "images/September Pots V2/Bed 2 - Abelia - 1.jpeg", caption: "Abelia 'Raspberry Profusion' directly replacing the failed Dianthus" },
+        { src: "images/September Pots V2/Bed 2 - Abelia - 2.jpeg", caption: "Raspberry-pink flowers and fresh foliage in Back Bed 2" },
       ],
       bed4: [
         { src: "images/September Trees & Pots /Bed 4 - Abelia grandiflora 'Radiance' - 1.jpeg", caption: "Abelia 'Radiance' added to Back Bed 4" },
         { src: "images/September Trees & Pots /Bed 4 - Abelia grandiflora 'Radiance' - 2.jpeg", caption: "Back Bed 4 Abelia 'Radiance' detail" },
+        { src: "images/September Pots V2/Bed 4 - Nemesia - 1.jpeg", caption: "Bed 4 after receiving the Nemesia from Bed 5's big pot" },
+        { src: "images/September Pots V2/Bed 4 - Nemesia - 2.jpeg", caption: "Nemesia at the front-right edge of Back Bed 4" },
+        { src: "images/September Pots V2/Bed 4 - Nemesia - 3.jpeg", caption: "The moved Nemesia among Bed 4's established planting" },
+      ],
+      bed5: [
+        { src: "images/September Pots V2/Bed 5 - Big Pot - 1.jpeg", caption: "Bed 5 big pot refreshed with Gaultheria, Violas and Pansies" },
+        { src: "images/September Pots V2/Bed 5 - Big Pot - 2.jpeg", caption: "Mixed cool-season flowers around the moved Gaultheria" },
+        { src: "images/September Pots V2/Bed 5 - Big Pot - 3.jpeg", caption: "The refreshed big pot beneath the established Bed 5 planting" },
       ],
       frontBed3: [
         { src: "images/September Trees & Pots /Cercis - Eternal Flame - 1.jpeg", caption: "Cercis 'Eternal Flame' at the red-circle position in Front Bed 3" },
@@ -3830,8 +4006,17 @@ window.OAK = (function () {
         { src: "images/September Trees & Pots /Arbutus Unedo - 2.jpeg", caption: "New Strawberry Tree foliage" },
       ],
       stairpots: [
-        { src: "images/September Trees & Pots /Stairs Pot 1 - 1.jpeg", caption: "White Pot 1 with Yellow Ripple ivy, Skimmia 'Double Diamond' and Fire Red Pansies" },
-        { src: "images/September Trees & Pots /Stairs Pot 2 - 1.jpeg", caption: "Blue Pot 2 with Yellow Ripple ivy, Gaultheria and Fire Red Pansies" },
+        { src: "images/September Pots V2/Stairs Pots + Can - 1.jpeg", caption: "White and blue stairs pots with their companion tomato can" },
+        { src: "images/September Pots V2/Stairs Pots + Can - 2.jpeg", caption: "The three-container Viola and Pansy display" },
+        { src: "images/September Pots V2/Stairs Pots + Can - 3.jpeg", caption: "White pot, can and blue pot arranged down the Steps" },
+      ],
+      staircans: [
+        { src: "images/September Pots V2/Stair Cans - 1.jpeg", caption: "Three repurposed tomato cans planted with Violas and Pansies" },
+        { src: "images/September Pots V2/Stair Cans - 2.jpeg", caption: "The three-can cluster on the back-garden Steps" },
+      ],
+      steps: [
+        { src: "images/September Pots V2/Stairs View From Top - 1.jpeg", caption: "September pot displays viewed from the top of the Steps" },
+        { src: "images/September Pots V2/Stairs View From Top - 2.jpeg", caption: "The refreshed Steps and lower garden in September" },
       ],
       frontBed5: [
         { src: "images/September Hanging Baskets & Pots/Front Bed 5 - Update 1.jpeg", caption: "Rocky Purple Picotee Viola added beside Astrantia and Winter Chocolate" },
@@ -4168,6 +4353,9 @@ window.OAK = (function () {
       { mapNo: 11, plantId: "bed1-japanese-maple", name: "Japanese Maple 'Bloodgood'", x: 58, y: 25, r: 17, hue: 18 },
       { mapNo: "BOX", plantId: "bed1-box-hedging", name: "Box Hedging", x: 92, y: 58, r: 7, hue: 130 },
       { mapNo: "LH", plantId: "bed1-little-heath", name: "Little Heath", x: 18, y: 53, r: 7, hue: 320 },
+      { mapNo: 12, plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 42, y: 35, r: 7, hue: 120 },
+      { mapNo: 13, plantId: "baskets-trailing-fuchsia", name: "Fuchsia (cultivar to confirm)", x: 24, y: 35, r: 8, hue: 340 },
+      { mapNo: 14, plantId: "baskets-fern-unidentified", name: "Fern (cultivar to confirm)", x: 34, y: 26, r: 7, hue: 110 },
     ],
     bed2: [
       { mapNo: 1, plantId: "bed2-weigela", name: "Weigela", x: 82, y: 84, r: 8, hue: 320 },
@@ -4176,7 +4364,7 @@ window.OAK = (function () {
       { mapNo: 4, plantId: "bed2-euonymus-emerald-gaiety", name: "Euonymus 'Emerald Gaiety'", x: 62, y: 59, r: 7, hue: 110 },
       { mapNo: 5, plantId: "bed2-hydrangea-petiolaris", name: "Hydrangea petiolaris", x: 36, y: 50, r: 9, hue: 210 },
       { mapNo: 6, plantId: "bed2-avens", name: "Avens", x: 61, y: 41, r: 7, hue: 30 },
-      { mapNo: 7, plantId: "bed2-maiden-pink", name: "Maiden Pink", x: 78, y: 47, r: 6, hue: 330 },
+      { mapNo: 7, plantId: "bed2-abelia-raspberry-profusion", name: "Abelia 'Raspberry Profusion'", x: 78, y: 47, r: 7, hue: 335 },
       { mapNo: 8, plantId: "bed2-rose-inherited", name: "Rose (inherited)", x: 60, y: 25, r: 8, hue: 350 },
       { mapNo: 9, plantId: "bed2-silverbush", name: "Silverbush", x: 82, y: 14, r: 8, hue: 70 },
       { mapNo: 10, plantId: "bed2-butterfly-bush", name: "Butterfly Bush", x: 24, y: 14, r: 14, hue: 285 },
@@ -4202,6 +4390,7 @@ window.OAK = (function () {
       { mapNo: 3, plantId: "bed4-callistemon-inferno-yanferno", name: "Callistemon Inferno ('Yanferno')", x: 35, y: 48, r: 9, hue: 0 },
       { mapNo: 4, plantId: "lobeliapot-lobelia-starship-scarlet-bronze-leaf", name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 53, y: 48, r: 8, hue: 8 },
       { mapNo: 5, plantId: "bed4-apple-tree", name: "Apple Tree", x: 72, y: 48, r: 10, hue: 105 },
+      { mapNo: 7, plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 87, y: 47, r: 6, hue: 25 },
     ],
     bed5: [
       { mapNo: "W", plantId: "bed5-wisteria", name: "Wisteria", x: 88, y: 12, r: 10, hue: 270 },
@@ -4210,8 +4399,9 @@ window.OAK = (function () {
       { mapNo: "B1", plantId: "bed5-big-pot-alstroemeria", name: "Alstroemeria", x: 70, y: 20, r: 5, hue: 20 },
       { mapNo: "B2", plantId: "bed5-big-pot-petunia-bees-knees", name: "Petunia 'Bee's Knees'", x: 78, y: 20, r: 4, hue: 75 },
       { mapNo: "B3", plantId: "bed5-big-pot-vinca-minor-illumination", name: "Vinca minor 'Illumination'", x: 70, y: 28, r: 4, hue: 110 },
-      { mapNo: "B4", plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 78, y: 28, r: 4, hue: 25 },
       { mapNo: "B5", plantId: "bed1-nemesia", name: "Nemesia 'Aroma Heart of Gold'", x: 74, y: 35, r: 4, hue: 15 },
+      { mapNo: "B6", plantId: "stairpots-p2-gaultheria-unidentified", name: "Gaultheria (cultivar to confirm)", x: 82, y: 30, r: 5, hue: 350 },
+      { mapNo: "B7", plantId: "bed5-big-pot-violas-pansies", name: "Violas & Pansies · Big Pot", x: 66, y: 34, r: 5, hue: 280 },
       { mapNo: "M", plantId: "bed5-medium-pot-lythrum-robin", name: "Lythrum 'Robin'", x: 74, y: 64, r: 6, hue: 325 },
       { mapNo: "L", plantId: "bed5-little-pot-begonia-carmen", name: "Begonia 'Carmen'", x: 70, y: 45, r: 5, hue: 10 },
       { mapNo: "C", plantId: "stone-cabbage-tree", name: "Cabbage Tree", x: 45, y: 88, r: 13, hue: 350 },
@@ -4369,12 +4559,10 @@ window.OAK = (function () {
       { mapNo: "P2", plantId: "frontPots-fuchsia-pot", name: "Fuchsia Pot", x: 70, y: 50, r: 22, hue: 335 },
     ],
     stairpots: [
-      { mapNo: "P1", plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 30, y: 42, r: 17, hue: 105 },
-      { mapNo: "P1", plantId: "stairpots-p1-hedera-yellow-ripple", name: "Hedera helix 'Yellow Ripple' · Pot 1", x: 20, y: 65, r: 8, hue: 80 },
-      { mapNo: "P1", plantId: "stairpots-p1-pansy-fire-red", name: "Pansy 'Fire Red' · Pot 1", x: 40, y: 65, r: 8, hue: 5 },
-      { mapNo: "P2", plantId: "stairpots-p2-gaultheria-unidentified", name: "Gaultheria (cultivar to confirm)", x: 70, y: 42, r: 17, hue: 350 },
-      { mapNo: "P2", plantId: "stairpots-p2-hedera-yellow-ripple", name: "Hedera helix 'Yellow Ripple' · Pot 2", x: 60, y: 65, r: 8, hue: 80 },
-      { mapNo: "P2", plantId: "stairpots-p2-pansy-fire-red", name: "Pansy 'Fire Red' · Pot 2", x: 80, y: 65, r: 8, hue: 5 },
+      { mapNo: "P+C", plantId: "stairpots-violas-pansies-group", name: "Violas & Pansies · White Pot, Blue Pot & Can", x: 50, y: 50, r: 30, hue: 280 },
+    ],
+    staircans: [
+      { mapNo: "C3", plantId: "staircans-violas-pansies-group", name: "Violas & Pansies · Three-Can Cluster", x: 50, y: 50, r: 30, hue: 35 },
     ],
     frontArbutus: [
       { plantId: "frontArbutus-arbutus-unedo", name: "Arbutus unedo", x: 50, y: 50, r: 26, hue: 100 },
@@ -4411,7 +4599,8 @@ window.OAK = (function () {
       { name: "Little Pot 2", marker: "L2", zoneKey: "littlepot2", x: 65, y: 30, r: 6, hue: 240 },
       { name: "Echinacea Pot", marker: "E", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 70 },
       { name: "Little Pot 1", marker: "L1", zoneKey: "littlepot1", x: 83, y: 46, r: 6, hue: 240 },
-      { name: "Stairs Pots 1 & 2", marker: "P12", zoneKey: "stairpots", x: 48, y: 52, r: 8, hue: 275 },
+      { name: "Stairs Pots & Can", marker: "P+C", zoneKey: "stairpots", x: 48, y: 52, r: 8, hue: 275 },
+      { name: "Three-Can Cluster", marker: "C3", zoneKey: "staircans", x: 31, y: 67, r: 7, hue: 35 },
       { name: "Wall Pot — Candy House", marker: "W", zoneKey: "wallpot1", x: 83, y: 86, r: 6, hue: 350 },
     ],
     lounge: [

@@ -891,53 +891,6 @@
       sources: [RHS.geum, OAK_SOURCE],
     },
 
-    "bed2-maiden-pink": {
-      version: 2,
-      type: "Evergreen mat-forming perennial",
-      badges: ["Confirmed cultivar", "Ruby-red flowers", "Hardy evergreen"],
-      description: "Maiden Pink ‘Leuchtfunk’ forms a low evergreen mat of narrow, grass-like leaves between the walls of Flower Bed 2. In summer it produces many single ruby-red flowers, each marked by a darker ring around the centre. The cultivar is also sold under the English synonym ‘Flashing Lights’. Its retained nursery label is visible in the Oak Lodge photograph, turning what was previously a generic Dianthus record into a confident cultivar identification.",
-      floweringMonths: ["Jun", "Jul", "Aug"],
-      facts: [
-        { label: "Size", value: "10–30cm high", detail: "A spreading mat that can reach 50–100cm wide" },
-        { label: "Position", value: "Full sun", detail: "Open and airy, in either a sheltered or exposed aspect" },
-        { label: "Soil", value: "Well-drained", detail: "Neutral to alkaline chalk, loam or sandy soil" },
-        { label: "Hardiness", value: "H6", detail: "Fully hardy in the UK and northern Europe" },
-        { label: "Foliage", value: "Evergreen", detail: "Narrow leaves make a low spreading mat" },
-        { label: "Flower", value: "Ruby red", detail: "Single blooms with a deeper central ring" },
-      ],
-      careGuide: [
-        { title: "Give the crown light and air", summary: "Keep taller neighbours from collapsing over the mat.", detail: "Full sun and moving air keep the evergreen foliage compact and reduce mildew. Remove fallen leaves and encroaching stems that trap winter damp over the crown." },
-        { title: "Water only when the root zone dries", summary: "Help a young plant establish, then avoid routine watering.", detail: "Dianthus tolerates short dry spells better than waterlogging. Check beneath the mat and soak only if the soil is dry; do not leave water around the crown in winter." },
-        { title: "Shear lightly after flowering", summary: "Remove spent stems without cutting into old bare growth.", detail: "Regular deadheading extends bloom. After the main flush, a light trim keeps the mat dense; divide every three to five years if the centre becomes thin." },
-      ],
-      waterSigns: {
-        under: "Foliage loses colour, becomes brittle and pulls away from very dry soil. Check below the mat before giving a thorough but infrequent soak.",
-        over: "Yellow or blackened foliage and a soft crown in damp soil indicate rot. Stop watering, clear debris and improve drainage around the plant.",
-      },
-      seasons: [
-        { season: "Spring", action: "Comb out dead leaves, trim any winter damage lightly and divide an ageing mat before flower stems develop." },
-        { season: "Summer", action: "Deadhead ruby-red flowers regularly, keep taller neighbours clear and water only if the root zone becomes genuinely dry." },
-        { season: "Autumn", action: "Finish the light post-flowering trim and clear debris so the evergreen mat enters winter dry and airy." },
-        { season: "Winter", action: "Leave healthy foliage intact, avoid standing wet and clear fallen leaves that could smother the low crown." },
-      ],
-      problems: [
-        { name: "Powdery mildew", sign: "White coating and distorted or tired-looking leaves", response: "Open the plant to sun and airflow, maintain sensible root moisture and remove heavily affected foliage." },
-        { name: "Crown rot", sign: "Blackened centre and loose, collapsing shoots in wet soil", response: "Remove rotten material, improve drainage and re-root healthy outer shoots if the centre is lost." },
-        { name: "Slugs and aphids", sign: "Chewed young shoots or clustered insects on flower stems", response: "Inspect early, remove pests by hand where practical and avoid forcing soft growth with rich feed." },
-      ],
-      caution: "Dianthus can irritate skin and may be harmful to pets if eaten. Wear gloves for prolonged handling and discourage chewing.",
-      about: "Dianthus deltoides is a low maiden pink, distinct from the larger cushion-forming garden pinks. ‘Leuchtfunk’—also listed as ‘Flashing Lights’—was selected for vivid ruby-red single flowers with a darker eye. The cultivar’s mat-forming evergreen habit makes it useful at a sunny edge, provided drainage stays sharp.",
-      provenanceNote: "Cultivar identity is confirmed by the photographed ‘Leuchtfunk’ nursery label and matches the recorded foliage and flower description.",
-      botanical: [
-        { label: "Family", value: "Caryophyllaceae" }, { label: "Genus", value: "Dianthus" },
-        { label: "Botanical name", value: "Dianthus deltoides ‘Leuchtfunk’" }, { label: "Synonym", value: "‘Flashing Lights’" },
-        { label: "Native to Britain or Ireland", value: "No" }, { label: "Habit", value: "Evergreen and mat-forming" },
-        { label: "Time to mature", value: "2–5 years" }, { label: "Hardiness", value: "H6" },
-      ],
-      oakLodge: { location: "Sunny gap between the walls in Flower Bed 2", added: "Established before the 2026 journal", role: "Low evergreen edge with vivid summer flower", observation: "The retained label reads ‘Dianthus Leuchtfunk’; the plant forms a small narrow-leaved mat beside the Hosta.", status: "Photograph the ruby-red flowers at peak bloom and measure how quickly the mat closes the open soil between the walls." },
-      sources: [RHS.dianthus, OAK_SOURCE],
-    },
-
     "bed2-hydrangea-petiolaris": {
       version: 2,
       type: "Self-clinging deciduous climber",

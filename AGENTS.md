@@ -204,21 +204,21 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Cercis Pot — terracotta specimen pot in the former stair-corner location; Cercis canadensis 'Carolina Sweetheart'
 - Little Pot 1 — small blue pot shifted south below the Echinacea pot in August 2026
 - Echinacea Pot — the former Coreopsis pot, now at Little Pot 1's previous position; Echinacea Mooodz Glory
-- The Cercis, Viburnum, Skimmia, Echinacea, Little Pots 1 and 2, Candy House wall pot, and September white-and-blue Stairs Pots 1 & 2 are nested inside the Steps folio. The older boundary-wall Front Pots remain a separate front-garden folio.
+- The Cercis, Viburnum, Skimmia, Echinacea, Little Pots 1 and 2, Candy House wall pot, September white-and-blue pot group and new three-can cluster are nested inside the Steps folio. The older boundary-wall Front Pots remain a separate front-garden folio.
 - Patio Kitchen & Lounge — one merged hardscape section; the Hanging Baskets are nested inside its folio
 - Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
 ---
 
-## Plant inventory summary (updated August 2026)
+## Plant inventory summary (updated September 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 12 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope' and Pieris 'Forest Flame'; both Nemesias moved and Angel Wings removed August 2026 |
-| Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, two Geums, Dianthus, inherited Rose and Butterfly Bush |
+| Bed 1 | 15 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', and the September-moved Skimmia 'Double Diamond', Fuchsia and fern |
+| Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, Geum, inherited Rose, Butterfly Bush and Abelia 'Raspberry Profusion', which directly replaced the failed Dianthus in September 2026 |
 | Bed 3 | 9 | Sedum 'Rose Carpet', four grouped Double Play Big Bang Spiraea plus relocated Magic Carpet, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis |
-| Bed 4 | 5 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelia 'Kaleidoscope' and relocated Lobelia 'Starship Scarlet Bronze Leaf' |
-| Bed 5 | 11 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, Nemesia and relocated 'Aroma Heart of Gold'; two smaller planted pots |
+| Bed 4 | 7 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelias 'Kaleidoscope' and 'Radiance', relocated Lobelia 'Starship Scarlet Bronze Leaf' and September-moved Nemesia 'Wisley Vanilla' |
+| Bed 5 | 12 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, relocated 'Aroma Heart of Gold', September-moved Gaultheria and mixed Violas/Pansies; two smaller planted pots |
 | Stone Bed | 22 | Alpine and succulent planting: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, Agapanthus, purple fountain grass, two tender Echeverias and dark Phormium |
 | Patio | 2 | Clematis montana and Honeysuckle; rotten-crowned Lavender removed July 2026 and retained in the Stone Bed photo archive |
 | Tree | 1 | Pear Tree (Pyrus) |
@@ -231,6 +231,9 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Bed 2/3 Wall Pot | 2 | Viburnum 'Lisarose' and an additional Vinca minor 'Illumination' — added August 2026 |
 | Cercis Pot | 1 | Cercis canadensis 'Carolina Sweetheart' — added August 2026 |
 | Echinacea Pot | 1 | Echinacea Mooodz Glory — added August 2026 |
+| Stairs Pots | 1 | One grouped entry covering the refreshed white pot, blue pot and one can, all containing mixed Violas and Pansies |
+| Stairs Cans | 1 | One grouped entry covering a cluster of three repurposed cans containing mixed Violas and Pansies |
+| Hanging Basket 3 | 4 | Lysimachia, Chrysanthemum, Cyclamen and two grouped unidentified Hedera; Fuchsia and fern moved to Bed 1 in September 2026 |
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
 | Front Bed 2 | 5 | Three Coprosmas including new ‘City Knights’, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
