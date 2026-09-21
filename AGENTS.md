@@ -52,7 +52,9 @@ oak-lodge-garden/
   cultivar-resolution-data.js # Label confirmations and visibly qualified best-fit cultivar assumptions
   plant-care-data.js   # September care/fact corrections, applied after cultivar resolution
   SeasonalCalendar.jsx  # Monthly care calendar — click a month to see all tasks
-  seasonal-data.js    # Task data for the calendar, keyed by month (jan–dec)
+  seasonal-data.js    # Authored monthly jobs, plant notes and linked sources (January–December)
+  seasonal-guides.js  # Category definitions, shared how-to techniques and diagram captions
+  SeasonalDiagram.jsx # Original accessible pruning and mulching SVG schematics
   WateringGuide.jsx   # Weekly watering view — frequency grid + overwatering watch
   watering-data.js    # Water frequency band (1–5) per plant, keyed like PLANTS
   GardenJournal.jsx   # Visual newest-first diary of planting, moves, removals and photos
@@ -156,6 +158,14 @@ Clickable plant positions on the bed detail map. Each entry:
 // x/y in 0-100 viewBox, r = radius, hue = oklch hue for the circle colour
 // name must exactly match the plant name in PLANTS
 ```
+
+### Seasonal calendar
+
+The calendar shows category jobs followed by a bed-by-bed round, both derived from `SEASONAL` in `seasonal-data.js`. Jobs use stable plant IDs, with current names and locations resolved from `PLANT_BY_ID`. Every shared job must have a `plantNotes` entry for each affected plant. Surface work can use `zoneNotes`. `guide`, `sources` and optional `diagram` reference the explicit technique/source registries; never infer pruning instructions from plant names.
+
+Keep an existing job ID only when its action is unchanged: checks are saved by year and job ID in `oak-seasonal-completed-v1`. New or materially changed work needs a new ID. A check completes the whole shared job in both views and counts once. `calendarMonth` lives in `app.jsx` so full-page plant visits preserve the chosen month.
+
+Guidance assumes outdoor shelter only and keeping healthy plants where practical. No calendar action records real work in the journal. See `docs/audits/2026-09-21-seasonal-calendar-audit.md` for the content review and browser checks. The optional `tests/seasonal-calendar.cjs` suite uses existing Playwright tooling; it adds no production build dependency.
 
 ### WATER_BANDS (watering-data.js)
 Lives in its own file, same pattern as `SEASONAL` in `seasonal-data.js` — keeps `data.js` from having to be touched for this feature. Registered as `window.OAK.WATER_BANDS` and `window.OAK.WATER_BAND_INFO`.

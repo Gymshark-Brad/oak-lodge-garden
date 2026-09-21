@@ -6,6 +6,7 @@ const { useState: useState_App, useEffect: useEffect_App, useLayoutEffect: useLa
 function App() {
   const [palette, setPalette] = useState_App(window.loadPalette());
   const [view, setView] = useState_App({ name: "plan" }); // plan | houseplan | frontplan | journal | calendar | watering | bed | plant
+  const [calendarMonth, setCalendarMonth] = useState_App(new Date().getMonth());
   const [calendarPlantReturn, setCalendarPlantReturn] = useState_App(false);
   const [wateringPlantReturn, setWateringPlantReturn] = useState_App(false);
   const [housePlantReturn, setHousePlantReturn] = useState_App(false);
@@ -240,6 +241,8 @@ function App() {
           )}
           {!fullPageProfile && (view.name === "calendar" || (view.name === "plant" && calendarPlantReturn)) && (
             <SeasonalCalendar
+              activeIndex={calendarMonth}
+              onMonthChange={setCalendarMonth}
               onOpenPlant={openPlantFromCalendar}
             />
           )}

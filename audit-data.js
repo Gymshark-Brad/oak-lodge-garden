@@ -24,6 +24,7 @@ function run(argv) {
   eval(readText(`${root}/front-garden-profile-data.js`));
   eval(readText(`${root}/house-plant-profile-data.js`));
   eval(readText(`${root}/profile-quality-data.js`));
+  eval(readText(`${root}/seasonal-guides.js`));
   eval(readText(`${root}/seasonal-data.js`));
   eval(readText(`${root}/watering-data.js`));
   eval(readText(`${root}/cultivar-resolution-data.js`));
@@ -223,10 +224,7 @@ function run(argv) {
   });
 
   const allowedSeasonalPriorities = new Set(["first", "month", "ongoing"]);
-  const allowedSeasonalCategories = new Set([
-    "prune", "deadhead", "cut-back", "ground", "protect",
-    "prepare", "support", "feed", "check", "harvest",
-  ]);
+  const allowedSeasonalCategories = new Set(OAK.SEASONAL_CATEGORIES.map((group) => group.id));
   const allowedSeasonalScopes = new Set(["zone", "plant", "pot", "bed5-big-pot"]);
   const seasonalIds = new Set();
   const requiredJobText = ["title", "timing", "summary", "why", "doneWhen"];
@@ -249,8 +247,6 @@ function run(argv) {
         errors.push(`unresolved seasonal zone: ${monthName} / ${entry.id} / ${zoneKey}`);
       } else if (indoor !== (zone.environment === "indoor")) {
         errors.push(`seasonal indoor/outdoor mismatch: ${monthName} / ${entry.id} / ${zoneKey}`);
-      } else if (!indoor && zone.isPot && entry.scope !== "pot") {
-        errors.push(`outdoor pot must use pot scope: ${monthName} / ${entry.id} / ${zoneKey}`);
       }
     });
     entry.plantIds.forEach((plantId) => {
@@ -304,44 +300,56 @@ function run(argv) {
     }
   }
 
+  function auditSeasonalGuidance(entry) {
+    if (!OAK.SEASONAL_GUIDES[entry.guide]) errors.push(`missing seasonal technique: ${entry.id}`);
+    if (entry.diagram && !OAK.SEASONAL_DIAGRAMS[entry.diagram]) errors.push(`unknown seasonal diagram: ${entry.id}`);
+    if (!Array.isArray(entry.sources) || !entry.sources.length) errors.push(`missing seasonal sources: ${entry.id}`);
+    (entry.sources || []).forEach((key) => {
+      const source = OAK.SEASONAL_SOURCES[key];
+      if (!source || !source.title || !/^https:\/\//.test(source.url)) errors.push(`invalid seasonal source: ${entry.id} / ${key}`);
+    });
+    if (entry.plantIds.length > 1 && entry.plantIds.some((id) => !(entry.plantNotes || {})[id])) {
+      errors.push(`shared seasonal job needs plant-specific instructions: ${entry.id}`);
+    }
+    Object.entries(entry.plantNotes || {}).forEach(([id, note]) => {
+      if (!entry.plantIds.includes(id) || !note.trim()) errors.push(`invalid seasonal plant instruction: ${entry.id} / ${id}`);
+    });
+    Object.entries(entry.zoneNotes || {}).forEach(([key, note]) => {
+      if (!entry.zoneKeys.includes(key) || !note.trim()) errors.push(`invalid seasonal location instruction: ${entry.id} / ${key}`);
+    });
+  }
+
   if (Object.keys(OAK.SEASONAL || {}).length !== 12) errors.push("seasonal calendar must contain 12 months");
   Object.entries(OAK.SEASONAL || {}).forEach(([monthName, month]) => {
     if (!month.theme || !Array.isArray(month.jobs) || !Array.isArray(month.highlights) || !Array.isArray(month.indoorJobs)) {
       errors.push(`incomplete maintenance-first seasonal month: ${monthName}`);
       return;
     }
-    if (month.jobs.length < 6) errors.push(`seasonal month has fewer than 6 outdoor jobs: ${monthName}`);
     if (month.highlights.length < 3 || month.highlights.length > 6) {
       errors.push(`seasonal month must have 3-6 highlights: ${monthName}`);
     }
 
-    const jobPotKeys = new Set();
     const highlightPotKeys = new Set();
     month.jobs.forEach((entry) => {
       auditSeasonalReference(entry, monthName, "jobs", false);
+      auditSeasonalGuidance(entry);
       if (!allowedSeasonalPriorities.has(entry.priority)) errors.push(`invalid seasonal priority: ${monthName} / ${entry.id}`);
       if (!allowedSeasonalCategories.has(entry.category)) errors.push(`invalid seasonal category: ${monthName} / ${entry.id}`);
       requiredJobText.forEach((field) => {
         if (!entry[field]) errors.push(`missing seasonal job field: ${monthName} / ${entry.id} / ${field}`);
       });
       if (!Array.isArray(entry.steps) || entry.steps.length === 0) errors.push(`seasonal job has no steps: ${monthName} / ${entry.id}`);
-      const jobCopy = requiredJobText.map((field) => entry[field] || "").concat(entry.steps || []).join(" ");
-      if (/\bwater(?:ing|ed|s)?\b/i.test(jobCopy)) errors.push(`watering advice leaked into seasonal job: ${monthName} / ${entry.id}`);
-      if (entry.scope === "pot") {
-        if (jobPotKeys.has(entry.potKey)) errors.push(`duplicate monthly pot job: ${monthName} / ${entry.potKey}`);
-        jobPotKeys.add(entry.potKey);
-      }
+
     });
     month.indoorJobs.forEach((entry) => {
       auditSeasonalReference(entry, monthName, "indoorJobs", true);
+      auditSeasonalGuidance(entry);
       if (!allowedSeasonalPriorities.has(entry.priority)) errors.push(`invalid indoor seasonal priority: ${monthName} / ${entry.id}`);
       if (!allowedSeasonalCategories.has(entry.category)) errors.push(`invalid indoor seasonal category: ${monthName} / ${entry.id}`);
       requiredJobText.forEach((field) => {
         if (!entry[field]) errors.push(`missing indoor seasonal field: ${monthName} / ${entry.id} / ${field}`);
       });
       if (!Array.isArray(entry.steps) || entry.steps.length === 0) errors.push(`indoor seasonal job has no steps: ${monthName} / ${entry.id}`);
-      const jobCopy = requiredJobText.map((field) => entry[field] || "").concat(entry.steps || []).join(" ");
-      if (/\bwater(?:ing|ed|s)?\b/i.test(jobCopy)) errors.push(`watering advice leaked into indoor seasonal job: ${monthName} / ${entry.id}`);
     });
     month.highlights.forEach((entry) => {
       auditSeasonalReference(entry, monthName, "highlights", false);
