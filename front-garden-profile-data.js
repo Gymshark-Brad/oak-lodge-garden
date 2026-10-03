@@ -818,3 +818,157 @@
 
   window.OAK.FRONT_GARDEN_PROFILE_BUILDERS = { add, profiles, RHS };
 })();
+
+// October 2026 birthday additions — explicit researched profiles.
+(() => {
+  const profiles = {
+  "frontBed4-hydrangea-petite-star": {
+    "version": 2,
+    "type": "Compact deciduous panicle hydrangea",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "Hydrangea ‘Petite Star’ replaces Polar Passion in Front Bed 4. This compact panicle hydrangea brings a low framework and changing summer flower colour. The October photographs record its new root pocket; the supplied cultivar name maps to Sapho’s ‘Coustar02’ introduction.",
+    "floweringMonths": [
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep"
+    ],
+    "facts": [
+      {
+        "label": "Size",
+        "value": "About 60 × 80cm",
+        "detail": "Sapho’s published height and spread."
+      },
+      {
+        "label": "Position",
+        "value": "Sun or partial shade",
+        "detail": "Keep the new root ball evenly moist."
+      },
+      {
+        "label": "Soil",
+        "value": "Moist, well drained",
+        "detail": "Improve organic matter and avoid stagnant pockets."
+      },
+      {
+        "label": "Hardiness",
+        "value": "Hardy shrub",
+        "detail": "Protect tender spring growth from late frost."
+      },
+      {
+        "label": "Flowers",
+        "value": "June–September",
+        "detail": "Lime panicles age white, pink and red."
+      },
+      {
+        "label": "Identity",
+        "value": "Petite Star / Coustar02",
+        "detail": "Name supplied by Brad; label photograph not retained here."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Establish the small root ball",
+        "summary": "Check its moisture after planting.",
+        "detail": "Water the whole pocket when drying, then mulch clear of the stems."
+      },
+      {
+        "title": "Prune as a panicle hydrangea",
+        "summary": "Use late winter or early spring.",
+        "detail": "Shorten last year’s shoots to healthy buds; leave a sound low framework on the young plant."
+      },
+      {
+        "title": "Watch the wall-side pocket",
+        "summary": "Give room for its rounded spread.",
+        "detail": "Compare next summer’s panicles with this October foliage baseline."
+      }
+    ],
+    "waterSigns": {
+      "under": "Soft leaves wilt and edges crisp with dry soil around the new root ball.",
+      "over": "Leaves yellow or shoots decline while the planting pocket remains saturated; check drainage."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Check healthy buds before panicle-hydrangea pruning and refresh mulch."
+      },
+      {
+        "season": "Summer",
+        "action": "Water the establishing shrub through dry spells as flower panicles develop."
+      },
+      {
+        "season": "Autumn",
+        "action": "Record changing flower colour and keep fallen leaves off the stem bases."
+      },
+      {
+        "season": "Winter",
+        "action": "Retain the low framework until the late-winter pruning window."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Dry new root ball",
+        "sign": "Leaves wilt although surrounding soil looks damp",
+        "response": "Check the original nursery root ball separately and water it deeply when dry."
+      }
+    ],
+    "about": "Sapho lists Petite Star as Hydrangea paniculata ‘Coustar02’, a compact deciduous selection with changing panicle colours. Panicle hydrangeas flower on the current season’s growth, supporting spring pruning.",
+    "provenanceNote": "Petite Star name supplied by Brad; Coustar02 botanical relationship verified from the cultivar publisher.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Hydrangeaceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Hydrangea"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Hydrangea paniculata 'Coustar02' (Petite Star)"
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Petite Star name supplied by Brad; Coustar02 botanical relationship verified from the cultivar publisher."
+      }
+    ],
+    "oakLodge": {
+      "location": "Former Polar Passion position — planted October 2026",
+      "added": "Added October 2026 · birthday update",
+      "role": "Compact summer-flowering replacement in Polar Passion’s former Front Bed 4 pocket",
+      "observation": "A newly planted low Hydrangea now occupies the former Polar Passion pocket beside the brick wall.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "Sapho · Petite Star Coustar02",
+        "url": "https://www.sapho.fr/fr/arbres-et-arbustes/352-hydrangea-paniculata-petite-star-coustar02-.html",
+        "note": "Cultivar name, dimensions and flowering"
+      },
+      {
+        "title": "RHS · Hydrangea pruning",
+        "url": "https://www.rhs.org.uk/plants/hydrangea/pruning-guide",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "RHS · Growing shrubby hydrangeas",
+        "url": "https://www.rhs.org.uk/plants/hydrangea/shrubby/growing-guide",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ]
+  }
+};
+  Object.entries(profiles).forEach(([id, profile]) => {
+    const record = window.OAK.PLANT_BY_ID[id];
+    if (!record) throw new Error(`Missing October specimen: ${id}`);
+    record.plant.profile = profile;
+    window.OAK.AUTHORED_PLANT_PROFILES[id] = profile;
+  });
+})();

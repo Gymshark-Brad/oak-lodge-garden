@@ -350,7 +350,7 @@
 
   add("bed4-gaillardia", {
     type: "Short-lived clump-forming perennial", badges: ["Long flowering", "Hot colours", "Pollinator plant"],
-    description: "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, making it one of Bed 4’s longest displays. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
+    description: "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, providing a long display after its October move to Bed 1. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
     months: ["Jun", "Jul", "Aug", "Sep", "Oct"], size: "30–60cm", sizeDetail: "Cultivar-dependent mound with upright flower stems", position: "Full sun", positionDetail: "Needs warmth and open light for sustained flowering", soil: "Light and well-drained", soilDetail: "Tolerates lean soil; dislikes winter wet", hardiness: "H5 with drainage", hardinessDetail: "Cold hardy, but crowns can rot in wet winters", feature: "Red, orange and yellow daisies", featureDetail: "Often concentrically banded around a dark centre", identity: "Gaillardia × grandiflora", identityDetail: "Hybrid group secure; cultivar unknown",
     under: "wilting and stalled buds during extended summer drought", over: "a soft dark crown or sudden winter collapse", spring: "Clear dead growth, check the crown is firm and replace losses before neighbouring plants close the gap.", summer: "Deadhead down to a side shoot every week and water only when the root zone has dried.", autumn: "Leave a few final heads to ripen seed, then clear soggy stems away from the crown.", winter: "Prioritise air and drainage; do not cover the crown with a dense wet mulch.",
     problem: { name: "Short-lived crown", sign: "The centre weakens or fails to return after winter", response: "Improve drainage, divide only vigorous outer pieces and raise replacements slightly above heavy soil." },
@@ -1000,4 +1000,150 @@
   });
 
   window.OAK.BACK_GARDEN_PROFILE_BUILDERS = { add, profiles, RHS };
+})();
+
+// October 2026 birthday additions — explicit researched profiles.
+(() => {
+  const profiles = {
+  "bed4-viola-pineapple-crush": {
+    "version": 2,
+    "type": "Cool-season bedding viola",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "Viola ‘Pineapple Crush’ adds low yellow-and-purple flowers at the front edge of Back Bed 4. The photo filename supplies the cultivar wording and Brad confirmed the bed. The RHS Bel Viso Pineapple Crush record is the botanical match used provisionally until a label is retained.",
+    "floweringMonths": [
+      "Mar",
+      "Apr",
+      "May",
+      "Sep",
+      "Oct",
+      "Nov"
+    ],
+    "facts": [
+      {
+        "label": "Size",
+        "value": "Low bedding mound",
+        "detail": "Allow neighbouring shrubs to leave its small crown open."
+      },
+      {
+        "label": "Position",
+        "value": "Sun or partial shade",
+        "detail": "Flowers need light at the front edge."
+      },
+      {
+        "label": "Soil",
+        "value": "Moist, freely drained",
+        "detail": "Check the nursery plug as well as surrounding ground."
+      },
+      {
+        "label": "Flowers",
+        "value": "Cool-season colour",
+        "detail": "Autumn and spring display varies with weather."
+      },
+      {
+        "label": "Identity",
+        "value": "Pineapple Crush · reported",
+        "detail": "Bel Viso series relationship requires a retained label."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Check the small plug",
+        "summary": "Water when its root ball begins to dry.",
+        "detail": "Avoid wetting the crown repeatedly after autumn rain."
+      },
+      {
+        "title": "Remove spent flower stems",
+        "summary": "Pinch off the seed pod too.",
+        "detail": "Clear damaged petals before they decay among fresh buds."
+      },
+      {
+        "title": "Keep the edge open",
+        "summary": "Lift overhanging neighbouring shoots.",
+        "detail": "Photograph new flowers and retain a label to confirm the full series name."
+      }
+    ],
+    "waterSigns": {
+      "under": "Flowers droop and fine leaves wilt with a dry nursery plug even if the bed surface looks damp.",
+      "over": "The Viola crown softens or petals mould while its soil remains wet; clear debris and check drainage."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Remove overwintered dead petals and enjoy renewed edge flowers."
+      },
+      {
+        "season": "Summer",
+        "action": "Trim stretched growth lightly and monitor the small plug in heat."
+      },
+      {
+        "season": "Autumn",
+        "action": "Keep the new Back Bed 4 Viola moist while its crown establishes."
+      },
+      {
+        "season": "Winter",
+        "action": "Clear soggy petals after rain and leave healthy leafy growth intact."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Slug damage",
+        "sign": "Flower buds or leaf edges disappear overnight",
+        "response": "Inspect the low bed edge after damp evenings and protect new growth."
+      }
+    ],
+    "about": "RHS records Bel Viso Pineapple Crush as a bedding Viola for humus-rich, moist but draining soil in sun or partial shade. Its overwintering trial included this variety; the Oak Lodge series relationship remains qualified.",
+    "provenanceNote": "Photo filename supplies Pineapple Crush; Brad confirmed Back Bed 4. The Bel Viso series match is provisional without the label.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Violaceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Viola"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Viola 'Bel Viso Pineapple Crush' (Bel Viso Series) — reported name"
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Photo filename supplies Pineapple Crush; Brad confirmed Back Bed 4. The Bel Viso series match is provisional without the label."
+      }
+    ],
+    "oakLodge": {
+      "location": "Front edge of Back Bed 4 — added October 2026",
+      "added": "Added October 2026 · birthday update",
+      "role": "Low cool-season flowers at the front of Back Bed 4",
+      "observation": "A small yellow-and-purple flowering Viola is visible at the front edge of Back Bed 4. Brad confirmed the back-bed location despite the initial front-bed wording.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "RHS · Viola Bel Viso Pineapple Crush",
+        "url": "https://www.rhs.org.uk/plants/517052/viola-bel-viso-pineapple-crush-bel-viso-series/details",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "RHS · Viola overwintering trial",
+        "url": "https://www.rhs.org.uk/plants/trials-awards/plant-trial-results/viola",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ]
+  }
+};
+  Object.entries(profiles).forEach(([id, profile]) => {
+    const record = window.OAK.PLANT_BY_ID[id];
+    if (!record) throw new Error(`Missing October specimen: ${id}`);
+    record.plant.profile = profile;
+    window.OAK.AUTHORED_PLANT_PROFILES[id] = profile;
+  });
 })();

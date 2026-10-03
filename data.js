@@ -12,7 +12,7 @@ window.OAK = (function () {
       dims: "2.6m × 2.6m",
       where: "Corner by the gate, upper level",
       desc:
-        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. In September, Skimmia 'Double Diamond' and the Fuchsia and fern from Hanging Basket 3 moved into the sheltered planting beneath it.",
+        "Raised timber-edged bed dominated by a purple-leaved Japanese Maple. In September, Skimmia 'Double Diamond' and the Fuchsia and fern from Hanging Basket 3 moved into the sheltered planting beneath it. Wisley Vanilla Nemesia and Gaillardia joined Bed 1 from Back Bed 4 in October 2026; their new map pockets are approximate pending a closer planting record.",
       shape: {
         kind: "polygon",
         points: "94,98 164,58 214,58 214,188 104,188 94,168",
@@ -54,7 +54,7 @@ window.OAK = (function () {
       dims: "≈1.2m × 0.8m",
       where: "Junction of steps and stone bed",
       desc:
-        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over Gaillardia, two Abelias, Callistemon, Lobelia 'Starship Scarlet Bronze Leaf' and the Nemesia moved from Bed 5's big pot in September.",
+        "Compact bed at the junction of the steps and stone bed. An apple tree with bird feeders stands over two Abelias, Callistemon, Lobelia 'Starship Scarlet Bronze Leaf', the moved Pieris 'Polar Passion' and Viola 'Pineapple Crush'. Gaillardia and Wisley Vanilla Nemesia moved on to Back Bed 1 in October 2026.",
       shape: { kind: "rect", x: 474, y: 243, w: 60, h: 40 },
       color: "#c7a54a",
       labelXY: [520, 212],
@@ -459,7 +459,7 @@ window.OAK = (function () {
       dims: "≈3.2m at the wall · wraps the corner to ~2.2m deep",
       where: "Under the ensuite window, wrapping the corner down to the knee",
       desc:
-        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above two mixed three-plant Physocarpus clusters, the moved Purple Gem, Rhododendron 'Libretto', Azaleas 'Silvester' and 'Lotte', Pieris 'Polar Passion' and blue Festuca. Nemesia 'Lady Penelope', Dahlia 'Tampico', Verbena 'Margaret's Memory' and a three-plant Calluna mix add late colour beside Achillea; the established Photinia canopy remains at the return-wall side.",
+        "A foliage-rich corner border beneath the ensuite window, wrapping down the return wall to the knee. Two David Austin climbing roses rise above two mixed three-plant Physocarpus clusters, the moved Purple Gem, Rhododendron 'Libretto', Azaleas 'Silvester' and 'Lotte', new Hydrangea 'Petite Star' in Polar Passion's former position and blue Festuca. Nemesia 'Lady Penelope', Dahlia 'Tampico', Verbena 'Margaret's Memory' and a three-plant Calluna mix add late colour beside Achillea; the established Photinia canopy remains at the return-wall side.",
       shape: { kind: "polygon", points: "775,42 958,42 958,170 880,170 775,88" },
       color: "#77613f",
       labelXY: [867, 106],
@@ -3205,6 +3205,212 @@ window.OAK = (function () {
     seasonal: "Mixed Viola and Pansy flowers give the three-can cluster autumn-to-spring colour during mild weather.",
   }];
 
+  // October 2026 birthday planting. Keep stable IDs through each move.
+  const octoberNemesia = takePlant("Bed 4", "bed5-big-pot-nemesia");
+  Object.assign(octoberNemesia, { group: "Back Bed 1 · moved October 2026", position: "Moved from Back Bed 4 in October 2026", photos: ["images/oct-2026/back-bed1-update.webp", ...octoberNemesia.photos] });
+  PLANTS["Bed 1"].push(octoberNemesia);
+  const octoberGaillardia = takePlant("Bed 4", "bed4-gaillardia");
+  Object.assign(octoberGaillardia, { position: "Moved from Back Bed 4 in October 2026; exact pocket to record", photos: ["images/oct-2026/back-bed1-update.webp", ...(octoberGaillardia.photos || [])] });
+  PLANTS["Bed 1"].push(octoberGaillardia);
+  const octoberPolarPassion = takePlant("Front Bed 4", "frontBed5-pieris-polar-passion");
+  Object.assign(octoberPolarPassion, { position: "Former Gaillardia position in Back Bed 4 — moved October 2026", photos: ["images/oct-2026/back-bed4-polar-passion.webp", ...(octoberPolarPassion.photos || [])] });
+  PLANTS["Bed 4"].push(octoberPolarPassion);
+  PLANTS["Front Bed 4"].push({
+  "id": "frontBed4-hydrangea-petite-star",
+  "name": "Hydrangea 'Petite Star'",
+  "latin": "Hydrangea paniculata 'Coustar02' (Petite Star)",
+  "photos": [
+    "images/oct-2026/front-bed4-hydrangea-petite-star-1.webp",
+    "images/oct-2026/front-bed4-hydrangea-petite-star-2.webp"
+  ],
+  "position": "Former Polar Passion position — planted October 2026",
+  "light": "Sun or partial shade.",
+  "water": "Keep the newly planted root ball moist but freely drained.",
+  "care": "Mulch over moist ground, keeping stems clear. Prune this panicle hydrangea in late winter or early spring.",
+  "seasonal": "Compact deciduous shrub; lime, white, pink and red panicles June–September."
+});
+  PLANTS["Bed 4"].push({
+  "id": "bed4-viola-pineapple-crush",
+  "name": "Viola 'Pineapple Crush'",
+  "latin": "Viola 'Bel Viso Pineapple Crush' (Bel Viso Series) — reported name",
+  "photos": [
+    "images/oct-2026/back-bed4-viola-pineapple-crush.webp"
+  ],
+  "position": "Front edge of Back Bed 4 — added October 2026",
+  "light": "Sun or partial shade.",
+  "water": "Keep the small root ball evenly moist without saturating the crown.",
+  "care": "Pinch off faded flower stems and seed pods; remove damaged petals after rain.",
+  "seasonal": "Yellow and purple cool-season flowers; autumn and spring display, weather permitting."
+});
+  ZONES["houseSittingRhipsalis"] = {
+  "id": "houseSittingRhipsalis",
+  "title": "Sitting Room · Rhipsalis (species to confirm)",
+  "badge": "Indoor specimen",
+  "dims": "Container specimen",
+  "where": "Ground floor · Hanging beside the sitting-room stair opening · purple star",
+  "desc": "Long narrow trailing stems hang from the beam beside the split-level stair opening.",
+  "color": "#974abe",
+  "plantKey": "House · Sitting Room · Rhipsalis (species to confirm)",
+  "isPot": true,
+  "environment": "indoor",
+  "floor": "Ground Floor",
+  "room": "Sitting Room",
+  "marker": {
+    "floor": "ground",
+    "x": 700,
+    "y": 111
+  }
+};
+  PLANTS["House · Sitting Room · Rhipsalis (species to confirm)"] = [{
+  "id": "house-sitting-rhipsalis",
+  "name": "Rhipsalis (species to confirm)",
+  "latin": "Rhipsalis sp.",
+  "light": "Bright indirect light.",
+  "water": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+  "care": "Keep the hanging pot drained and the long stems clear of the stair opening; reduce watering in winter.",
+  "seasonal": "Evergreen trailing stems; flowering season unresolved until species is known.",
+  "position": "Hanging beside the sitting-room stair opening · purple star",
+  "photos": [
+    "images/oct-2026/house-rhipsalis.webp"
+  ],
+  "description": "Long narrow trailing stems hang from the beam beside the split-level stair opening."
+}];
+  ZONES["houseSittingDracaena"] = {
+  "id": "houseSittingDracaena",
+  "title": "Sitting Room / stair opening · Dracaena Bicolour Touffe",
+  "badge": "Indoor specimen",
+  "dims": "Container specimen",
+  "where": "Ground floor · Beside the split-level stair opening · green star",
+  "desc": "Two leafy tufts rise at different heights in a small nursery pot beside the stairs.",
+  "color": "#72a749",
+  "plantKey": "House · Sitting Room / stair opening · Dracaena Bicolour Touffe",
+  "isPot": true,
+  "environment": "indoor",
+  "floor": "Ground Floor",
+  "room": "Sitting Room / stair opening",
+  "marker": {
+    "floor": "ground",
+    "x": 777,
+    "y": 149
+  }
+};
+  PLANTS["House · Sitting Room / stair opening · Dracaena Bicolour Touffe"] = [{
+  "id": "house-sitting-dracaena-bicolour",
+  "name": "Dracaena Bicolour Touffe",
+  "latin": "Dracaena marginata Bicolor type — assumed",
+  "light": "Bright indirect light, sheltered from draughts.",
+  "water": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+  "care": "Keep leaves clear of passing feet, wipe dust gently and avoid standing water.",
+  "seasonal": "Evergreen strap-shaped foliage; slower growth and less water in winter.",
+  "position": "Beside the split-level stair opening · green star",
+  "photos": [
+    "images/oct-2026/house-dracaena-bicolour-1.webp",
+    "images/oct-2026/house-dracaena-bicolour-2.webp"
+  ],
+  "description": "Two leafy tufts rise at different heights in a small nursery pot beside the stairs."
+}];
+  ZONES["houseLandingCrassula"] = {
+  "id": "houseLandingCrassula",
+  "title": "Bedroom-wing landing · Crassula 'Hottentot'",
+  "badge": "Indoor specimen",
+  "dims": "Container specimen",
+  "where": "Ground floor · Landing shelf above the split-level stair · orange star",
+  "desc": "Dense strings of fleshy paired leaves spill from a decorative pot beside a table lamp.",
+  "color": "#d3772e",
+  "plantKey": "House · Bedroom-wing landing · Crassula 'Hottentot'",
+  "isPot": true,
+  "environment": "indoor",
+  "floor": "Ground Floor",
+  "room": "Bedroom-wing landing",
+  "marker": {
+    "floor": "ground",
+    "x": 905,
+    "y": 79
+  }
+};
+  PLANTS["House · Bedroom-wing landing · Crassula 'Hottentot'"] = [{
+  "id": "house-landing-crassula-hottentot",
+  "name": "Crassula 'Hottentot'",
+  "latin": "Crassula rupestris subsp. marnieriana type",
+  "light": "Very bright light; introduce direct sunshine gradually.",
+  "water": "Let compost dry between soakings; water sparingly through winter.",
+  "care": "Use gritty cactus compost in a draining inner pot and empty the decorative outer pot.",
+  "seasonal": "Evergreen succulent trails; indoor flowering is not yet recorded.",
+  "position": "Landing shelf above the split-level stair · orange star",
+  "photos": [
+    "images/oct-2026/house-crassula-hottentot-1.webp",
+    "images/oct-2026/house-crassula-hottentot-2.webp"
+  ],
+  "description": "Dense strings of fleshy paired leaves spill from a decorative pot beside a table lamp."
+}];
+  ZONES["houseKitchenPhilodendron"] = {
+  "id": "houseKitchenPhilodendron",
+  "title": "Kitchen / Dining · Philodendron (species to confirm)",
+  "badge": "Indoor specimen",
+  "dims": "Container specimen",
+  "where": "Ground floor · Kitchen / dining window · red star",
+  "desc": "The supplied birthday photograph records a small broad-leaved plant in an orange pot; species and cultivar remain unresolved.",
+  "color": "#bb4b42",
+  "plantKey": "House · Kitchen / Dining · Philodendron (species to confirm)",
+  "isPot": true,
+  "environment": "indoor",
+  "floor": "Ground Floor",
+  "room": "Kitchen / Dining",
+  "marker": {
+    "floor": "ground",
+    "x": 263,
+    "y": 73
+  }
+};
+  PLANTS["House · Kitchen / Dining · Philodendron (species to confirm)"] = [{
+  "id": "house-kitchen-philodendron",
+  "name": "Philodendron (species to confirm)",
+  "latin": "Philodendron sp.",
+  "light": "Bright indirect light; protect tender leaves from harsh sun.",
+  "water": "Water once the upper compost begins to dry and let excess drain completely.",
+  "care": "Keep warm, use airy compost and keep foliage out of reach; identify its growth habit before choosing support.",
+  "seasonal": "Evergreen foliage; no reliable flowering window for this unidentified specimen.",
+  "position": "Kitchen / dining window · red star",
+  "photos": [
+    "images/oct-2026/house-philodendron.webp"
+  ],
+  "description": "The supplied birthday photograph records a small broad-leaved plant in an orange pot; species and cultivar remain unresolved."
+}];
+  ZONES["houseLandingZamioculcas"] = {
+  "id": "houseLandingZamioculcas",
+  "title": "Bedroom-wing landing · Zamioculcas",
+  "badge": "Indoor specimen",
+  "dims": "Container specimen",
+  "where": "Ground floor · Landing beside Bedroom 3 and the split-level stairs · blue star",
+  "desc": "Glossy upright leaf stalks stand in a black nursery pot beside the wooden console.",
+  "color": "#3376bf",
+  "plantKey": "House · Bedroom-wing landing · Zamioculcas",
+  "isPot": true,
+  "environment": "indoor",
+  "floor": "Ground Floor",
+  "room": "Bedroom-wing landing",
+  "marker": {
+    "floor": "ground",
+    "x": 810,
+    "y": 225
+  }
+};
+  PLANTS["House · Bedroom-wing landing · Zamioculcas"] = [{
+  "id": "house-landing-zamioculcas",
+  "name": "Zamioculcas",
+  "latin": "Zamioculcas zamiifolia — assumed",
+  "light": "Bright indirect light; tolerates lower light with slower growth.",
+  "water": "Allow the whole root ball to dry before watering; reduce checks into winter.",
+  "care": "Keep its fleshy rhizomes above stagnant runoff and inspect for scale while wiping leaves.",
+  "seasonal": "Evergreen glossy leaflets; indoor flowering is occasional and unpredictable.",
+  "position": "Landing beside Bedroom 3 and the split-level stairs · blue star",
+  "photos": [
+    "images/oct-2026/house-zamioculcas-1.webp",
+    "images/oct-2026/house-zamioculcas-2.webp"
+  ],
+  "description": "Glossy upright leaf stalks stand in a black nursery pot beside the wooden console."
+}];
+
   // ─── PLANT PROFILES ───────────────────────────────────────────────
   // Every specimen gets an RHS-style introduction and a consistent set of
   // at-a-glance characteristics. Existing care prose remains the detailed
@@ -4356,6 +4562,8 @@ window.OAK = (function () {
       { mapNo: 12, plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 42, y: 35, r: 7, hue: 120 },
       { mapNo: 13, plantId: "baskets-trailing-fuchsia", name: "Fuchsia (cultivar to confirm)", x: 24, y: 35, r: 8, hue: 340 },
       { mapNo: 14, plantId: "baskets-fern-unidentified", name: "Fern (cultivar to confirm)", x: 34, y: 26, r: 7, hue: 110 },
+      { mapNo: 15, plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 74, y: 74, r: 6, hue: 70, positionNote: "Approximate October pocket" },
+      { mapNo: 16, plantId: "bed4-gaillardia", name: "Gaillardia", x: 48, y: 82, r: 6, hue: 25, positionNote: "Approximate October pocket" },
     ],
     bed2: [
       { mapNo: 1, plantId: "bed2-weigela", name: "Weigela", x: 82, y: 84, r: 8, hue: 320 },
@@ -4385,12 +4593,12 @@ window.OAK = (function () {
     ],
     bed4: [
       { mapNo: 6, plantId: "bed4-abelia-radiance", name: "Abelia 'Radiance'", x: 72, y: 24, r: 8, hue: 30 },
-      { mapNo: 1, plantId: "bed4-gaillardia", name: "Gaillardia", x: 35, y: 24, r: 8, hue: 25 },
+      { mapNo: 1, plantId: "frontBed5-pieris-polar-passion", name: "Pieris 'Polar Passion'", x: 35, y: 24, r: 8, hue: 345 },
       { mapNo: 2, plantId: "bed4-abelia-kaleidoscope", name: "Abelia 'Kaleidoscope'", x: 60, y: 24, r: 8, hue: 310 },
       { mapNo: 3, plantId: "bed4-callistemon-inferno-yanferno", name: "Callistemon Inferno ('Yanferno')", x: 35, y: 48, r: 9, hue: 0 },
       { mapNo: 4, plantId: "lobeliapot-lobelia-starship-scarlet-bronze-leaf", name: "Lobelia 'Starship Scarlet Bronze Leaf'", x: 53, y: 48, r: 8, hue: 8 },
       { mapNo: 5, plantId: "bed4-apple-tree", name: "Apple Tree", x: 72, y: 48, r: 10, hue: 105 },
-      { mapNo: 7, plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 87, y: 47, r: 6, hue: 25 },
+      { mapNo: 7, plantId: "bed4-viola-pineapple-crush", name: "Viola 'Pineapple Crush'", x: 87, y: 54, r: 6, hue: 65 },
     ],
     bed5: [
       { mapNo: "W", plantId: "bed5-wisteria", name: "Wisteria", x: 88, y: 12, r: 10, hue: 270 },
@@ -4524,7 +4732,7 @@ window.OAK = (function () {
       { name: "Dahlia 'Tampico'", x: 66, y: 69, r: 12, hue: 5 },
       { name: "Verbena 'Margaret's Memory'", x: 50, y: 82, r: 7, hue: 330 },
       { plantId: "frontBed4-calluna-trio-mix", name: "Calluna Trio Mix (2 plants)", x: 82, y: 72, r: 8, hue: 320 },
-      { name: "Pieris 'Polar Passion'", x: 82, y: 56, r: 10, hue: 345 },
+      { plantId: "frontBed4-hydrangea-petite-star", name: "Hydrangea 'Petite Star'", x: 82, y: 56, r: 10, hue: 340 },
       { name: "The Generous Gardener", x: 91, y: 88, r: 11, hue: 345 },
       { name: "Achillea", x: 29, y: 78, r: 9, hue: 15 },
       { plantId: "frontBed4-azalea-lotte", name: "Azalea japonica 'Lotte'", x: 55, y: 59, r: 6, hue: 330 },
@@ -4936,6 +5144,121 @@ window.OAK = (function () {
     { src: "images/house-plants/sep-2026/mixed-planter-overview-1.jpeg", caption: "The Arrowhead Vine sharing Nicola’s three-plant pot" },
     { src: "images/house-plants/sep-2026/mixed-planter-overview-2.jpeg", caption: "The complete mixed planter in its sitting-room position" },
   ] }];
+
+  PHOTOS_BY_MONTH["oct-2026"] = {
+  "label": "October 2026",
+  "bed1": [
+    {
+      "src": "images/oct-2026/back-bed1-update.webp",
+      "caption": "Back Bed 1 after the October Nemesia and Gaillardia moves"
+    }
+  ],
+  "bed4": [
+    {
+      "src": "images/oct-2026/back-bed4-update.webp",
+      "caption": "Back Bed 4 after Polar Passion and Viola joined the planting"
+    },
+    {
+      "src": "images/oct-2026/back-bed4-polar-passion.webp",
+      "caption": "Polar Passion in Gaillardia's former position"
+    },
+    {
+      "src": "images/oct-2026/back-bed4-viola-pineapple-crush.webp",
+      "caption": "New Viola 'Pineapple Crush' at the front edge"
+    }
+  ],
+  "frontBed4": [
+    {
+      "src": "images/oct-2026/front-bed4-hydrangea-petite-star-1.webp",
+      "caption": "New Hydrangea 'Petite Star' in Polar Passion's former position"
+    },
+    {
+      "src": "images/oct-2026/front-bed4-hydrangea-petite-star-2.webp",
+      "caption": "Petite Star foliage and surrounding planting"
+    }
+  ]
+};
+  const octoberPortraitPhotos = {
+  "house-sitting-rhipsalis": [
+    {
+      "src": "images/oct-2026/house-rhipsalis.webp",
+      "caption": "Rhipsalis (species to confirm) · October birthday record"
+    }
+  ],
+  "house-sitting-dracaena-bicolour": [
+    {
+      "src": "images/oct-2026/house-dracaena-bicolour-1.webp",
+      "caption": "Dracaena Bicolour Touffe · October birthday record"
+    },
+    {
+      "src": "images/oct-2026/house-dracaena-bicolour-2.webp",
+      "caption": "Dracaena Bicolour Touffe · October birthday record"
+    }
+  ],
+  "house-landing-crassula-hottentot": [
+    {
+      "src": "images/oct-2026/house-crassula-hottentot-1.webp",
+      "caption": "Crassula 'Hottentot' · October birthday record"
+    },
+    {
+      "src": "images/oct-2026/house-crassula-hottentot-2.webp",
+      "caption": "Crassula 'Hottentot' · October birthday record"
+    }
+  ],
+  "house-kitchen-philodendron": [
+    {
+      "src": "images/oct-2026/house-philodendron.webp",
+      "caption": "Philodendron (species to confirm) · October birthday record"
+    }
+  ],
+  "house-landing-zamioculcas": [
+    {
+      "src": "images/oct-2026/house-zamioculcas-1.webp",
+      "caption": "Zamioculcas · October birthday record"
+    },
+    {
+      "src": "images/oct-2026/house-zamioculcas-2.webp",
+      "caption": "Zamioculcas · October birthday record"
+    }
+  ],
+  "frontBed4-hydrangea-petite-star": [
+    {
+      "src": "images/oct-2026/front-bed4-hydrangea-petite-star-1.webp",
+      "caption": "Hydrangea 'Petite Star' · October planting"
+    },
+    {
+      "src": "images/oct-2026/front-bed4-hydrangea-petite-star-2.webp",
+      "caption": "Hydrangea 'Petite Star' · October planting"
+    }
+  ],
+  "bed4-viola-pineapple-crush": [
+    {
+      "src": "images/oct-2026/back-bed4-viola-pineapple-crush.webp",
+      "caption": "Viola 'Pineapple Crush' · October planting"
+    }
+  ],
+  "bed5-big-pot-nemesia": [
+    {
+      "src": "images/oct-2026/back-bed1-update.webp",
+      "caption": "Wisley Vanilla moved into Back Bed 1; shared bed overview"
+    }
+  ],
+  "bed4-gaillardia": [
+    {
+      "src": "images/oct-2026/back-bed1-update.webp",
+      "caption": "Gaillardia moved into Back Bed 1; shared bed overview"
+    }
+  ],
+  "frontBed5-pieris-polar-passion": [
+    {
+      "src": "images/oct-2026/back-bed4-polar-passion.webp",
+      "caption": "Polar Passion in Back Bed 4, replacing Gaillardia"
+    }
+  ]
+};
+  Object.entries(octoberPortraitPhotos).forEach(([id, photos]) => {
+    PLANT_PHOTOS_BY_ID[id] = [{ month: "oct-2026", label: "October 2026", photos }, ...(PLANT_PHOTOS_BY_ID[id] || [])];
+  });
 
   // Cards and galleries use lightweight display derivatives. Originals stay
   // available for the full-screen lightboxes, and components fall back to

@@ -220,14 +220,14 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 ---
 
-## Plant inventory summary (updated September 2026)
+## Plant inventory summary (updated October 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 15 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', and the September-moved Skimmia 'Double Diamond', Fuchsia and fern |
+| Bed 1 | 17 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', the September-moved Skimmia 'Double Diamond', Fuchsia and fern; Wisley Vanilla Nemesia and assumed Gaillardia ‘Arizona Sun’ moved here from Back Bed 4 in October |
 | Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, Geum, inherited Rose, Butterfly Bush and Abelia 'Raspberry Profusion', which directly replaced the failed Dianthus in September 2026 |
 | Bed 3 | 9 | Sedum 'Rose Carpet', four grouped Double Play Big Bang Spiraea plus relocated Magic Carpet, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis |
-| Bed 4 | 7 | Apple Tree, Callistemon 'Inferno', Gaillardia, Abelias 'Kaleidoscope' and 'Radiance', relocated Lobelia 'Starship Scarlet Bronze Leaf' and September-moved Nemesia 'Wisley Vanilla' |
+| Bed 4 | 7 | Apple Tree, Callistemon 'Inferno', Abelias 'Kaleidoscope' and 'Radiance', relocated Lobelia 'Starship Scarlet Bronze Leaf', October-moved Pieris 'Polar Passion' in Gaillardia’s former position and new Viola 'Pineapple Crush' |
 | Bed 5 | 12 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, relocated 'Aroma Heart of Gold', September-moved Gaultheria and mixed Violas/Pansies; two smaller planted pots |
 | Stone Bed | 22 | Alpine and succulent planting: five houseleek records, seven stonecrops, two Ajugas, Hydrangea ‘Snowflake’, Achillea ‘King Alfred’, Armeria ‘Armada White’, Agapanthus, purple fountain grass, two tender Echeverias and dark Phormium |
 | Patio | 2 | Clematis montana and Honeysuckle; rotten-crowned Lavender removed July 2026 and retained in the Stone Bed photo archive |
@@ -247,7 +247,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Front Pot | 4 | Gazania 'Sunny Side Up', Gazania 'Orange Flame', Calibrachoa, Bacopa White — new June 2026 |
 | Front Bed 2 | 5 | Three Coprosmas including new ‘City Knights’, Hebe ‘Kiwi’ and Polemonium ‘Golden Feathers’; Begonia Cocktail ‘Gin’ removed and archived July 2026 |
 | Front Bed 3 | 5 | Climbing Rose 'Super Fairy', pink rose, relocated Variegated Dogwood and Red Hot Poker, Leucothoe 'Little Flames' |
-| Front Bed 4 | 16 | Two climbing roses; two mixed Physocarpus clusters containing three Little Devils and three Lady in Reds; Purple Gem, Rhododendron 'Libretto', Azaleas 'Silvester' and 'Lotte', relocated Nemesia 'Lady Penelope', Polar Passion, Festuca, Photinia, Achillea, Dahlia 'Tampico', Verbena 'Margaret's Memory' and Calluna Trio Mix |
+| Front Bed 4 | 16 | Two climbing roses; two mixed Physocarpus clusters containing three Little Devils and three Lady in Reds; Purple Gem, Rhododendron 'Libretto', Azaleas 'Silvester' and 'Lotte', relocated Nemesia 'Lady Penelope', Hydrangea 'Petite Star' (October addition in Polar Passion’s former position), Festuca, Photinia, Achillea, Dahlia 'Tampico', Verbena 'Margaret's Memory' and Calluna Trio Mix |
 | Front Bed 5 | 23 | Established Laurel, Choisya and climbers plus five heathers, Ceratostigma, Hypericum, Sollya, Hebe, Salvia, moved Astrantia and Flaming Silver, Hydrangea 'Bloody Marie', Euphorbia 'Ascot Petite' and Jurassic Gold fern; Honeysuckle and a failed Little Devil removed August 2026 |
 
 Full descriptions, characteristics and care data for every plant are in the `data.js` PLANTS object.
@@ -372,3 +372,9 @@ Today I want to: [DESCRIBE THE FEATURE OR FIX]
 That's enough. No further explanation needed.
 
 ## Imported Claude Cowork project instructions
+
+## October 2026 birthday update
+
+Five houseplants were added using the supplied ground-floor stars: Rhipsalis (purple, hanging beside the sitting-room stairs), Dracaena Bicolour Touffe (green, at the stair opening), Crassula Hottentot (orange, landing shelf), Philodendron (red, kitchen window) and Zamioculcas (blue, landing by Bedroom 3). Species/cultivar relationships remain visibly qualified where labels are missing.
+
+Petite Star Hydrangea replaced Polar Passion in Front Bed 4. Polar Passion moved to Gaillardia’s former Back Bed 4 position; Wisley Vanilla Nemesia and Gaillardia moved into Back Bed 1. New Pineapple Crush Viola is in **Back Bed 4**, confirmed by Brad after correcting the initial front-bed wording. Bed 1 map pockets for the two moves are approximate. Public October photos are metadata-free WebP copies under `images/oct-2026/`; originals remain in `images/October Birthday Plants/`. October journal dates retain month precision.

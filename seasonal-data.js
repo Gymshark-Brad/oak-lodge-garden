@@ -337,6 +337,51 @@
           "plant-house-hallway-kentia-palm"
         ],
         "plantNotes": {}
+      },
+      {
+        "id": "jan-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
       }
     ]
   },
@@ -679,7 +724,53 @@
         "note": "Houseleeks often deepen in red and purple tones in bright winter weather."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "feb-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "March": {
     "theme": "Clear old growth, mulch clean ground and protect the first tender shoots.",
@@ -721,7 +812,8 @@
         "scope": "zone",
         "zoneKeys": [
           "frontBed5",
-          "bed4"
+          "bed4",
+          "bed1"
         ],
         "plantIds": [
           "frontBed5-gaura-gaudi-red",
@@ -1175,6 +1267,36 @@
           "lobeliapot-viola-rocky-purple-picotee": "Keep healthy Violas and Pansies. Pinch off each finished flower with its seed capsule; clear soggy leaves and replace only plants that have failed.",
           "frontBed5-viola-rocky-purple-picotee": "Keep healthy Violas and Pansies. Pinch off each finished flower with its seed capsule; clear soggy leaves and replace only plants that have failed."
         }
+      },
+      {
+        "id": "mar-prune-petite-star-2026",
+        "scope": "plant",
+        "zoneKeys": [
+          "frontBed4"
+        ],
+        "plantIds": [
+          "frontBed4-hydrangea-petite-star"
+        ],
+        "priority": "month",
+        "category": "prune",
+        "title": "Prune Petite Star as a panicle hydrangea",
+        "timing": "Late winter or early spring before strong shoot growth.",
+        "summary": "Shorten last year’s shoots to healthy buds, keeping the young shrub’s low framework.",
+        "why": "Hydrangea paniculata flowers on new growth; its pruning differs from mophead hydrangeas.",
+        "doneWhen": "Dead wood is removed and healthy buds remain on a sound compact framework.",
+        "steps": [
+          "Inspect the young framework and locate healthy buds.",
+          "Remove dead or damaged wood.",
+          "Shorten last year’s shoots above sound buds without stripping the young plant."
+        ],
+        "guide": "prune",
+        "sources": [
+          "oct-petite-star",
+          "oct-panicle-pruning"
+        ],
+        "plantNotes": {
+          "frontBed4-hydrangea-petite-star": "Keep a compact framework in Polar Passion’s former Front Bed 4 position; use panicle-hydrangea timing."
+        }
       }
     ],
     "highlights": [
@@ -1254,6 +1376,51 @@
           "plant-house-hallway-kentia-palm"
         ],
         "plantNotes": {}
+      },
+      {
+        "id": "mar-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
       }
     ]
   },
@@ -1321,7 +1488,8 @@
           "bed1",
           "bed2",
           "frontBed4",
-          "frontBed5"
+          "frontBed5",
+          "bed4"
         ],
         "plantIds": [
           "bed1-japanese-maple",
@@ -1359,7 +1527,7 @@
           "bed1-dahlia": "Tender Dahlia: protect emerged shoots from spring frost. After autumn dieback, an outdoor tuber needs well-drained ground and roughly 15cm mulch, with losses still possible; lifted tubers require frost-free storage.",
           "bed1-dahlia-yellow": "Tender Dahlia: protect emerged shoots from spring frost. After autumn dieback, an outdoor tuber needs well-drained ground and roughly 15cm mulch, with losses still possible; lifted tubers require frost-free storage.",
           "bed2-peony": "Protect emerged buds on a late-frost night with supported fleece. Keep mulch away from crown buds and remove the cover once the frost lifts.",
-          "frontBed5-pieris-polar-passion": "This Pieris is now in Front Bed 4. Shield tender coloured spring shoots on cold nights, uncovering afterwards; do not prune them pre-emptively.",
+          "frontBed5-pieris-polar-passion": "This Pieris is now in Back Bed 4. Shield tender coloured spring shoots on cold nights, uncovering afterwards; do not prune them pre-emptively.",
           "frontBed5-salvia-salgoon-lake-blueberry": "Lake Blueberry is H3. Keep some sound top growth and a drained crown. Outdoor protection is uncertain in severe cold; a cutting also needs an arranged frost-free home."
         },
         "caution": "Check the plant-specific limits: fleece reduces exposure but does not make an outdoor position frost-free."
@@ -1501,7 +1669,8 @@
         "zoneKeys": [
           "bed1",
           "frontBed4",
-          "frontBed5"
+          "frontBed5",
+          "bed4"
         ],
         "plantIds": [
           "bed1-little-heath",
@@ -1696,7 +1865,53 @@
         "note": "Dark maple leaves, hosta shoots and dahlia growth rebuild the bed’s layered canopy."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "apr-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "May": {
     "theme": "Guide climbers, support heavy flowers and assemble the summer containers after frost.",
@@ -2253,7 +2468,53 @@
         "potKey": "frontpot"
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "may-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "June": {
     "theme": "Prune spring-flowering wood promptly and settle into the deadheading rhythm.",
@@ -2380,7 +2641,8 @@
           "frontBed4",
           "bed4",
           "frontBed2",
-          "frontBed5"
+          "frontBed5",
+          "bed1"
         ],
         "plantIds": [
           "bed2-peony",
@@ -2610,7 +2872,7 @@
       {
         "scope": "zone",
         "zoneKeys": [
-          "bed4"
+          "bed1"
         ],
         "plantIds": [
           "bed5-big-pot-nemesia"
@@ -2623,11 +2885,11 @@
         "id": "jun-bed4-wisley-vanilla-nemesia",
         "priority": "ongoing",
         "category": "deadhead",
-        "title": "Trim the Bed 4 nemesia when its first flush fades",
+        "title": "Trim the Bed 1 nemesia when its first flush fades",
         "timing": "As flowers thin and stems stretch.",
         "summary": "Shear the leafy flowering growth lightly to restart a compact flush.",
-        "why": "The moved Wisley Vanilla plant benefits from a light cut that keeps it compact among the Bed 4 shrubs.",
-        "doneWhen": "A neat leafy mound remains at the front-right edge of Bed 4.",
+        "why": "The moved Wisley Vanilla plant benefits from a light cut that keeps it compact among the Bed 1 shrubs.",
+        "doneWhen": "A neat leafy mound remains at the new pocket in Bed 1.",
         "guide": "clear",
         "sources": [
           "deadhead",
@@ -2815,6 +3077,51 @@
           "plant-house-hallway-kentia-palm"
         ],
         "plantNotes": {}
+      },
+      {
+        "id": "jun-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
       }
     ]
   },
@@ -2928,7 +3235,8 @@
           "bed2",
           "bed4",
           "frontBed3",
-          "frontBed5"
+          "frontBed5",
+          "bed1"
         ],
         "plantIds": [
           "bed2-avens",
@@ -3320,7 +3628,53 @@
         "note": "Tall red flowers rise over dramatic bronze foliage in Bed 4."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "jul-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "August": {
     "theme": "Make the second structural cuts, harvest regularly and keep the late display productive.",
@@ -3849,7 +4203,53 @@
         "note": "A third Coprosma adds glossy burgundy-red foliage to the small front-door bed."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "aug-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "September": {
     "theme": "Harvest, keep late flowers going and prepare a realistic frost plan before cold nights arrive.",
@@ -4473,6 +4873,51 @@
           "plant-house-hallway-kentia-palm"
         ],
         "plantNotes": {}
+      },
+      {
+        "id": "sep-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
       }
     ]
   },
@@ -5216,6 +5661,49 @@
           "frontPots-fuchsia-pot": "Fuchsia hardiness is not confirmed here. Keep living stems and seek the label; tender types need a frost-free home rather than assuming the Mrs Popple care used in the big pots."
         },
         "caution": "Check the plant-specific limits: fleece reduces exposure but does not make an outdoor position frost-free."
+      },
+      {
+        "id": "oct-birthday-bed-establishment-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "bed1",
+          "bed4",
+          "frontBed4"
+        ],
+        "plantIds": [
+          "bed5-big-pot-nemesia",
+          "bed4-gaillardia",
+          "frontBed5-pieris-polar-passion",
+          "frontBed4-hydrangea-petite-star",
+          "bed4-viola-pineapple-crush"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the October border additions and moves",
+        "timing": "Through the first weeks after planting, especially during dry spells.",
+        "summary": "Check each moved root ball separately and keep crowns clear of wet debris.",
+        "why": "New planting can dry inside the original root ball while the surrounding ground stays damp.",
+        "doneWhen": "Root balls are checked, watered only when needed, and crowns remain open.",
+        "steps": [
+          "Feel the original root ball and adjacent ground.",
+          "Soak only drying planting pockets and let water drain.",
+          "Clear heavy wet litter without disturbing newly settled roots."
+        ],
+        "guide": "check",
+        "sources": [
+          "plant-bed4-gaillardia",
+          "plant-bed5-big-pot-nemesia",
+          "plant-frontBed5-pieris-polar-passion",
+          "oct-petite-star",
+          "oct-viola"
+        ],
+        "plantNotes": {
+          "bed5-big-pot-nemesia": "Check Wisley Vanilla in Back Bed 1 and avoid letting fine roots dry hard.",
+          "bed4-gaillardia": "Check the new Bed 1 pocket for adequate light and keep the Gaillardia crown drained.",
+          "frontBed5-pieris-polar-passion": "Check Polar Passion in Gaillardia’s former Back Bed 4 pocket; preserve acidic soil.",
+          "frontBed4-hydrangea-petite-star": "Keep Petite Star’s new Front Bed 4 root ball evenly moist without stagnant water.",
+          "bed4-viola-pineapple-crush": "Check the small Viola plug at Back Bed 4’s front edge and remove soggy spent flowers."
+        }
       }
     ],
     "highlights": [
@@ -5262,7 +5750,53 @@
         "note": "Spiraea foliage returns to orange-red as the compact bed winds down."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "oct-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "November": {
     "theme": "Finish the tidy-up selectively, secure climbers and keep winter wet away from crowns.",
@@ -5700,7 +6234,53 @@
         "note": "Small fruit can continue the display and feed visiting birds."
       }
     ],
-    "indoorJobs": []
+    "indoorJobs": [
+      {
+        "id": "nov-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
+      }
+    ]
   },
   "December": {
     "theme": "Protect, inspect and plan; make only the winter cuts that are genuinely due.",
@@ -6006,6 +6586,51 @@
           "plant-house-hallway-kentia-palm"
         ],
         "plantNotes": {}
+      },
+      {
+        "id": "dec-birthday-houseplants-moisture-2026",
+        "scope": "zone",
+        "zoneKeys": [
+          "houseSittingRhipsalis",
+          "houseSittingDracaena",
+          "houseLandingCrassula",
+          "houseKitchenPhilodendron",
+          "houseLandingZamioculcas"
+        ],
+        "plantIds": [
+          "house-sitting-rhipsalis",
+          "house-sitting-dracaena-bicolour",
+          "house-landing-crassula-hottentot",
+          "house-kitchen-philodendron",
+          "house-landing-zamioculcas"
+        ],
+        "priority": "ongoing",
+        "category": "check",
+        "title": "Check the five birthday houseplants individually",
+        "timing": "When inspecting pots; reduce watering as light and growth decline.",
+        "summary": "Feel each root ball before deciding whether to water; drain every outer pot after a drink.",
+        "why": "The hanging cactus and young Philodendron dry differently from the water-storing Crassula and Zamioculcas.",
+        "doneWhen": "All five root balls have been checked and any surplus water emptied.",
+        "steps": [
+          "Feel below the surface and lift each accessible inner pot.",
+          "Water only the specimens whose compost has reached their stated drying point.",
+          "Let runoff finish and return each pot to its marked position."
+        ],
+        "guide": "check",
+        "sources": [
+          "oct-house-rhipsalis",
+          "oct-house-dracaena",
+          "oct-house-crassula",
+          "oct-house-philodendron",
+          "oct-house-zamioculcas"
+        ],
+        "plantNotes": {
+          "house-sitting-rhipsalis": "Let the surface begin to dry, then water and drain; avoid prolonged drought.",
+          "house-sitting-dracaena-bicolour": "Allow the upper compost to dry before soaking and draining; use rainwater where possible.",
+          "house-landing-crassula-hottentot": "Let compost dry between soakings; water sparingly through winter.",
+          "house-kitchen-philodendron": "Water once the upper compost begins to dry and let excess drain completely.",
+          "house-landing-zamioculcas": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        }
       }
     ]
   }
@@ -6692,3 +7317,39 @@
   window.OAK.MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   window.OAK.MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 })();
+
+// October birthday planting sources.
+Object.assign(window.OAK.SEASONAL_SOURCES, {
+  "oct-house-rhipsalis": {
+    "title": "NC State · Mistletoe cactus",
+    "url": "https://plants.ces.ncsu.edu/plants/rhipsalis-baccifera/"
+  },
+  "oct-house-dracaena": {
+    "title": "RHS · Dracaena",
+    "url": "https://www.rhs.org.uk/plants/dracaena/how-to-grow-dracaena"
+  },
+  "oct-house-crassula": {
+    "title": "RHS · Worm plant",
+    "url": "https://www.rhs.org.uk/plants/4749/crassula-rupestris-subsp-marnieriana/details"
+  },
+  "oct-house-philodendron": {
+    "title": "RHS · Philodendron",
+    "url": "https://www.rhs.org.uk/plants/philodendron/growing-guide"
+  },
+  "oct-house-zamioculcas": {
+    "title": "NC State · ZZ plant",
+    "url": "https://plants.ces.ncsu.edu/plants/zamioculcas-zamiifolia/"
+  },
+  "oct-petite-star": {
+    "title": "Sapho · Petite Star",
+    "url": "https://www.sapho.fr/fr/arbres-et-arbustes/352-hydrangea-paniculata-petite-star-coustar02-.html"
+  },
+  "oct-panicle-pruning": {
+    "title": "RHS · Hydrangea pruning",
+    "url": "https://www.rhs.org.uk/plants/hydrangea/pruning-guide"
+  },
+  "oct-viola": {
+    "title": "RHS · Pineapple Crush",
+    "url": "https://www.rhs.org.uk/plants/517052/viola-bel-viso-pineapple-crush-bel-viso-series/details"
+  }
+});

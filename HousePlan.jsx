@@ -85,7 +85,7 @@ function HousePlan({ onOpenPlant, dark }) {
           <div className="house-floor-canvas">
             <svg viewBox="0 0 1300 620" role="img" aria-labelledby="ground-plan-title ground-plan-desc">
               <title id="ground-plan-title">Ground-floor plan of Oak Lodge</title>
-              <desc id="ground-plan-desc">A close redrawing of the supplied floor plan, with the split-level rooms, two staircases and the recorded houseplants marked in the sitting room and hallway.</desc>
+              <desc id="ground-plan-desc">A close redrawing of the supplied floor plan, with the split-level rooms, two staircases and the recorded houseplants marked in the kitchen, sitting room, hallway and bedroom-wing landing.</desc>
               {RoughDefs("house-ground")}
 
               <g filter="url(#house-ground-rough-soft)">
@@ -185,6 +185,7 @@ function HousePlan({ onOpenPlant, dark }) {
             </svg>
             {groundEntries.map((entry) => renderMarker(entry, 1300, 620))}
           </div>
+          <p className="house-map-hint t-hand">Swipe sideways across the plan to reach every pot.</p>
         </section>
 
         <section className="house-floor-card house-first" aria-labelledby="first-floor-heading">
@@ -294,6 +295,7 @@ function HousePlan({ onOpenPlant, dark }) {
         .house-floor-card h2 { margin: 2px 0 0; font-size: clamp(28px, 3.5vw, 42px); font-weight: 400; }
         .house-floor-card > header > .t-mono { opacity: 0.65; padding-bottom: 5px; }
         .house-floor-canvas { position: relative; width: 100%; }
+        .house-map-hint { display: none; }
         .house-floor-canvas > svg { display: block; width: 100%; height: auto; }
         .house-room-labels {
           font-family: var(--hand); font-size: 19px; opacity: 0.8;
@@ -359,6 +361,9 @@ function HousePlan({ onOpenPlant, dark }) {
           .house-plan-head { grid-template-columns: 1fr; }
           .house-plan-note { display: none; }
           .house-floor-card { padding: 10px; }
+          .house-ground { overflow-x: auto; }
+          .house-ground .house-floor-canvas { min-width: 960px; }
+          .house-map-hint { display: block; width: 300px; margin: 8px 0 2px; color: var(--pencil); }
           .house-room-labels { font-size: 22px; }
           .house-ground .house-room-labels { font-size: 30px; }
           .house-pot-marker {

@@ -458,12 +458,20 @@
     card("Wait for spring buds before pruning", "Cut winter-damaged stems back only after living growth is visible.", "The cultivar and hardiness are unresolved. Preserve useful low buds and pinch young shoots only if a bushier border framework is needed."),
     card("Support the arching flowers", "Keep Fuchsia stems clear of the fern and Skimmia crowns.", "Deadhead during the mild season, feed lightly only while growing and photograph open flowers from the side and front for later identification."),
   ]);
-  care("bed5-big-pot-nemesia", ["Even moisture in its new bed pocket", "Fine Nemesia roots can dry rapidly after moving, but the Bed 4 crown still needs air and free drainage."], [
+  care("bed5-big-pot-nemesia", ["Even moisture in its new bed pocket", "Fine Nemesia roots can dry rapidly after moving, but the Bed 1 crown still needs air and free drainage."], [
     card("Trim Wisley Vanilla after a tired flush", "Shorten spent shoots by about a third above healthy leaves.", "Keep the retained label with the moved plant, water if the soil is dry after cutting and avoid burying the crown beneath mulch."),
-    card("Keep a frost-free backup", "Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained.", "Do not assume the former container plant will overwinter in Bed 4; keep rooted cuttings bright and only lightly moist."),
+    card("Keep a frost-free backup", "Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained.", "Do not assume the former container plant will overwinter in Bed 1; keep rooted cuttings bright and only lightly moist."),
   ]);
 
   const priorities = {
+    "house-sitting-rhipsalis": ["Keep the hanging root ball accessible", "Check moisture in the hanging pot itself and keep the long trails clear of the split-level stair opening."],
+    "house-sitting-dracaena-bicolour": ["Protect the two stair-side tufts", "Keep leaves clear of passing feet; verify natural light and drain the small inner pot after watering."],
+    "house-landing-crassula-hottentot": ["Check natural light on the landing shelf", "The table lamp does not establish adequate daylight; monitor stretching and let the succulent compost dry between drinks."],
+    "house-kitchen-philodendron": ["Record the next kitchen-window leaves", "Retain species uncertainty, inspect new growth before choosing a support and keep the orange pot fully drained."],
+    "house-landing-zamioculcas": ["Let the fleshy rhizomes dry between drinks", "Check deep compost at the blue-star landing position before watering; avoid trapping runoff beneath the nursery pot."],
+    "frontBed4-hydrangea-petite-star": ["Establish Petite Star in the vacated front pocket", "Check the new nursery root ball separately from neighbouring soil and retain a low framework for spring panicle-hydrangea pruning."],
+    "bed4-viola-pineapple-crush": ["Keep the small Back Bed 4 plug open", "Remove soggy petals and overhanging foliage so the new low Viola has light and air at the border edge."],
+
     "bed1-japanese-maple": ["Protect the shallow roots", "Keep mulch over the maple's root area, clear of its trunk, and avoid digging beneath its canopy."],
     "bed1-japanese-aralia": ["Shelter the white-splashed leaves", "Keep Spider's Web out of harsh reflected sun and remove only damaged leaves beneath the maple."],
     "bed1-rhododendron": ["Keep the soil acidic", "Test the root pocket if Goldflimmer yellows; its normal yellow leaf markings should not be mistaken for chlorosis."],
@@ -495,7 +503,7 @@
     "bed3-variegated-periwinkle": ["Contain the groundcover under the rose", "Lift unwanted rooted runners at position 9 before they connect with neighbouring planting pockets."],
     "bed4-apple-tree": ["Keep feeder access clear", "Maintain the apple's useful framework around the bird feeders and photograph fruit before relying on the assumed Cox identity."],
     "bed4-callistemon-inferno-yanferno": ["Plan frost shelter for Inferno", "The bottlebrush is one of Bed 4's least hardy shrubs; check protection before a prolonged inland freeze."],
-    "bed4-gaillardia": ["Keep a dry crown near thirstier plants", "Separate the Gaillardia's watering decisions from the moisture-loving Starship Lobelia in the same bed."],
+    "bed4-gaillardia": ["Keep a dry crown near thirstier plants", "In its new Bed 1 pocket, check Gaillardia separately from thirstier Nemesia and avoid prolonged shade or a wet crown beneath the maple."],
     "bed4-abelia-kaleidoscope": ["Retain the warm foliage contrast", "Give the established Kaleidoscope light around the apple planting and remove reversions without shearing all its flower shoots."],
     "bed4-abelia-radiance": ["Keep the pale Abelia separate", "Distinguish Radiance's cream-edged shoots from nearby Kaleidoscope when inspecting reversions and recording growth."],
     "lobeliapot-lobelia-starship-scarlet-bronze-leaf": ["Water the new bed root run", "Starship now grows in Bed 4, so check soil around its moved crown rather than following its former pot location."],
@@ -505,7 +513,7 @@
     "bed5-big-pot-alstroemeria": ["Protect the central perennial roots", "Avoid pulling hard on Alstroemeria stems while its roots share the big pot with seasonal trailers."],
     "bed5-big-pot-petunia-bees-knees": ["Give Bee's Knees room to trail", "Shorten bare yellow-Petunia stems before they tangle through the Alstroemeria and the two Nemesias."],
     "bed5-big-pot-vinca-minor-illumination": ["Contain the original gold-centred Vinca", "Keep this established big-pot specimen separate in the record from the additional Vinca on the Bed 2/3 wall."],
-    "bed5-big-pot-nemesia": ["Retain the Wisley Vanilla label", "Trim the pale scented Nemesia in its new Bed 4 position and keep the moved crown clear of woody neighbours."],
+    "bed5-big-pot-nemesia": ["Retain the Wisley Vanilla label", "Trim the pale scented Nemesia in its new Bed 1 position and keep the moved crown clear of woody neighbours."],
     "bed5-medium-pot-lythrum-robin": ["Check the separate medium pot first", "Robin's moisture demand is higher than most Bed 5 pot plants; inspect its root ball during every hot dry spell."],
     "bed5-little-pot-begonia-carmen": ["Shelter the little pot's flowers", "Keep Carmen's brittle red-flowered stems out of strong wind and avoid soaking its fleshy centre."],
     "bed1-nemesia": ["Follow the moved specimen", "Aroma Heart of Gold now shares the Bed 5 big pot; check that root pocket rather than its former Bed 1 edge."],
@@ -600,7 +608,7 @@
     "frontBed4-purple-gem": ["Keep the moved shrub free of ivy", "Maintain the cleared space around Purple Gem in the former Lady in Red position so its roots can establish."],
     "frontBed4-rhododendron-libretto": ["Leave room in the shaded corner", "Keep Libretto's broad future crown distinct from the nearby Physocarpus groups rather than clipping it to fit later."],
     "frontBed4-festuca-elijah-blue": ["Check each of the three blue tufts", "Renew only a Festuca whose centre is failing and keep damp leaf litter out of the other crowns."],
-    "frontBed5-pieris-polar-passion": ["Follow Polar Passion to Front Bed 4", "Check its moved root ball in Flaming Silver's former position rather than its old Front Bed 5 location."],
+    "frontBed5-pieris-polar-passion": ["Follow Polar Passion to Back Bed 4", "Check its moved root ball in Gaillardia's former Back Bed 4 position; maintain an acidic root pocket and protect new shoots from exposure."],
     "frontBed4-dahlia-tampico": ["Retain Tampico's own tuber label", "Keep the red-and-white front-bed Dahlia separate from both dark-leaved Double Dreamy plants when lifting."],
     "frontBed4-verbena-margarets-memory": ["Keep the sunny edge drained", "Protect Margaret's Memory's low crown from winter wet beside Tampico rather than automatically replacing it as tender pot Verbena."],
     "frontBed4-calluna-trio-mix": ["Maintain the two remaining plants", "Keep the Front Bed 4 heathers open to sun after one plant from this group moved into a basket."],
@@ -663,7 +671,7 @@
     "bed4-abelia-radiance": "Radiance adds a compact mound of cream-edged evergreen to semi-evergreen foliage around the Bed 4 apple. Pale tubular flowers extend its interest into late summer, while cold weather may cause some normal leaf loss. Keep its light variegation distinct from nearby Kaleidoscope, remove all-green reversions and prune selectively in spring rather than repeatedly shearing the flowering shoots.",
     "bed5-wisteria": "This vigorous woody climber carries hanging lilac spring flower clusters along the Bed 5 boundary, then produces long leafy shoots through summer. Chinese Wisteria Prolific is the recorded assumption and remains unconfirmed. Its main care is a strong trained framework and twice-yearly shortening of side shoots so the canopy does not engulf the planting and pots below.",
     "bed5-rose": "The supported Bed 5 rose adds summer flowers among the boundary framework. Golden Showers is a working identification rather than a proven cultivar, so flower photographs and repeat-flowering observations remain useful. Keep its main canes clear of the Wisteria and train them deliberately, preserving the distinction between woody framework and shorter flowering side shoots.",
-    "bed5-big-pot-nemesia": "The retained label identifies this plant as Nemesia Wisley Vanilla. In September it moved from Bed 5's big pot to the front-right edge of Back Bed 4, where its small pale scented flowers now sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
+    "bed5-big-pot-nemesia": "The retained label identifies this plant as Nemesia Wisley Vanilla. It moved from Bed 5's big pot to Back Bed 4 in September, then into Back Bed 1 in October 2026, where its small pale scented flowers sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
     "bed1-nemesia": "Aroma Heart of Gold forms a low bushy Nemesia with scented, two-lipped flowers combining burgundy, cream-yellow and warm orange tones. It moved from Bed 1 into the Bed 5 big pot in August 2026 and is distinct from the labelled Wisley Vanilla already there. Check the shared pot for drying and trim tired flower shoots to retain a compact, branching display.",
     "stone-honeysuckle": "The honeysuckle climbs its support at the far right of the Patio, providing fragrant tubular summer flowers above a shaded root run. Serotina is the current assumed cultivar, not a retained-label certainty. Guide the new shoots before they tangle, record the flowering window and keep the wall-side roots from drying during warm weather.",
     "stone-pear-tree": "The mature upper-terrace pear supplies white spring blossom, a broad summer canopy and a crop that should be tested for picking while still firm. Conference on Quince A is the existing working assumption; fruit and graft evidence have not confirmed it. Record harvest and indoor-ripening behaviour rather than promising a particular storage period or pollination group.",
@@ -888,6 +896,18 @@
   replaceCongestion("frontBed5-salvia-salgoon-lake-blueberry", { name: "Cold-damaged framework", sign: "Older stems brown after winter but low buds may remain alive", response: "Wait for active spring growth before cutting to sound buds. Keep frost-free cuttings as insurance rather than dividing a weakened woody base." });
   replaceCongestion("littlepot1-hellebore-ice-n-roses-bennotta", { name: "Root-bound container", sign: "Roots fill the pot and watering becomes difficult", response: "Move the intact root ball into a larger draining pot when needed. Hellebores resent disturbance; do not prescribe routine division to restore flowers." });
 
+  // October moves retain their original IDs and historical photo entries.
+  const octoberIds = new Set(["house-sitting-rhipsalis", "house-sitting-dracaena-bicolour", "house-landing-crassula-hottentot", "house-kitchen-philodendron", "house-landing-zamioculcas", "frontBed4-hydrangea-petite-star", "bed4-viola-pineapple-crush"]);
+  const octoberMoves = {
+    "bed5-big-pot-nemesia": { added: "Added July 2026; moved via Back Bed 4 to Back Bed 1 in October 2026", role: "Low scented flowers in Back Bed 1", observation: "The October Bed 1 overview records the new planting; its exact map pocket is approximate." },
+    "bed4-gaillardia": { added: "Added June 2026; moved from Back Bed 4 to Back Bed 1 in October 2026", role: "Hot-coloured flowers in the sunniest available Bed 1 pocket", observation: "Brad records the October move into Bed 1; check light and crown drainage beneath the maple." },
+    "frontBed5-pieris-polar-passion": { added: "Added July 2026; moved via Front Bed 4 to Back Bed 4 in October 2026", role: "Variegated evergreen in Gaillardia's former Back Bed 4 pocket", observation: "October photographs show Polar Passion beside the wall; Petite Star now occupies its former front-garden location." },
+  };
+  Object.entries(octoberMoves).forEach(([id, details]) => {
+    const record = OAK.PLANT_BY_ID[id];
+    Object.assign(record.plant.profile.oakLodge, details, { location: `${record.plant.position} · ${record.plantKey}` });
+  });
+
   // Keep public summaries and downloads aligned with the authored profile.
   // This copies reviewed content OUT to legacy fields, never infers v2 prose
   // from the old generic characteristics in data.js.
@@ -906,7 +926,18 @@
     plant.characteristics.size = value(["Size", "Ultimate size", "Indoor size"], plant.characteristics.size);
     plant.characteristics.water = value(["Water"], plant.characteristics.water);
     plant.characteristics.flowering = profile.floweringMonths.length ? profile.floweringMonths.join(", ") : ((profile.display || {}).cycleEmpty || "No regular flowering period recorded");
-    profile.contentReview = { date: "2026-09-18", care: reviewed.has(plant.id) ? "Rewritten with botanical and specimen-specific actions" : "Retained existing plant-specific authored care" };
+    if (octoberIds.has(plant.id)) {
+      plant.characteristics.hardiness = profile.environment === "indoor" ? "Tender · keep indoors" : plant.characteristics.hardiness;
+      plant.characteristics.habit = profile.type;
+      plant.characteristics.foliage = "Evergreen";
+      if (plant.id === "frontBed4-hydrangea-petite-star") plant.characteristics.foliage = "Deciduous";
+      if (plant.id === "bed4-viola-pineapple-crush") plant.characteristics.foliage = "Leafy cool-season bedding";
+      if (profile.environment === "indoor") {
+        plant.characteristics.wildlife = "Indoor foliage specimen";
+        plant.characteristics.size = value(["Size"], "Species-dependent; identity to confirm");
+      }
+    }
+    profile.contentReview = { date: octoberIds.has(plant.id) || octoberMoves[plant.id] ? "2026-10-03" : "2026-09-18", care: reviewed.has(plant.id) ? "Rewritten with botanical and specimen-specific actions" : "Retained existing plant-specific authored care" };
   });
-  OAK.PLANT_CARE_REVIEW = { date: "2026-09-18", rewrittenIds: Array.from(reviewed), priorityIds: Object.keys(priorities), descriptionIds: Object.keys(descriptions) };
+  OAK.PLANT_CARE_REVIEW = { date: "2026-10-03", rewrittenIds: Array.from(reviewed), priorityIds: Object.keys(priorities), descriptionIds: Object.keys(descriptions) };
 })();

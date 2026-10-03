@@ -395,3 +395,706 @@
   Object.assign(window.OAK.AUTHORED_PLANT_PROFILES, { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile, [mixedSpiderId]: mixedSpiderProfile, [mixedPalmId]: mixedPalmProfile, [mixedArrowId]: mixedArrowProfile });
   window.OAK.HOUSE_PLANT_PROFILES = { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile, [mixedSpiderId]: mixedSpiderProfile, [mixedPalmId]: mixedPalmProfile, [mixedArrowId]: mixedArrowProfile };
 })();
+
+// October 2026 birthday additions — explicit researched profiles.
+(() => {
+  const profiles = {
+  "house-sitting-rhipsalis": {
+    "version": 2,
+    "type": "Trailing epiphytic cactus",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "The new Rhipsalis hangs beside the sitting-room stair opening, its slender green stems falling in a long curtain. Brad supplied the genus name; species remains unresolved. Care follows mistletoe-cactus guidance provisionally, with observation of this specimen taking priority.",
+    "floweringMonths": [],
+    "facts": [
+      {
+        "label": "Habit",
+        "value": "Trailing stems",
+        "detail": "The October photograph shows a hanging specimen."
+      },
+      {
+        "label": "Light",
+        "value": "Bright indirect",
+        "detail": "Protect the trails from harsh window sun."
+      },
+      {
+        "label": "Water",
+        "value": "Surface drying",
+        "detail": "Drain after watering; avoid sustained dryness."
+      },
+      {
+        "label": "Temperature",
+        "value": "Warm room",
+        "detail": "Keep away from cold draughts."
+      },
+      {
+        "label": "Identity",
+        "value": "Rhipsalis sp.",
+        "detail": "Species and exact mature size remain unresolved."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Check the hanging pot",
+        "summary": "Feel the compost before watering.",
+        "detail": "Soak when its surface dries, then drain away from furniture."
+      },
+      {
+        "title": "Protect its long trails",
+        "summary": "Keep stems clear of the stairs.",
+        "detail": "The purple star records the hanging point; check that walking past does not snag growth."
+      },
+      {
+        "title": "Give filtered light",
+        "summary": "Avoid harsh direct sunshine.",
+        "detail": "Observe pale or puckered stems and adjust light or moisture after checking the roots."
+      }
+    ],
+    "waterSigns": {
+      "under": "Thin trails pucker and lose firmness with dry compost; check the hanging root ball before watering.",
+      "over": "Soft dark stems at the base with wet compost suggest decay; drain the pot and remove failed tissue."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Watch for fresh branching and increase checks as growth resumes."
+      },
+      {
+        "season": "Summer",
+        "action": "Check the exposed hanging root ball during warm spells."
+      },
+      {
+        "season": "Autumn",
+        "action": "Reduce drinks as the long trails grow more slowly."
+      },
+      {
+        "season": "Winter",
+        "action": "Keep the hanging cactus warm and water less often."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Stem damage",
+        "sign": "Trails snap or catch at the stair opening",
+        "response": "Reposition loose trails while keeping the recorded hanging point accessible."
+      }
+    ],
+    "about": "Rhipsalis are forest cacti; the mistletoe-cactus sources describe a hanging epiphyte needing filtered light and draining compost. Those sources do not confirm the species at Oak Lodge.",
+    "provenanceNote": "Genus supplied by Brad; no species or cultivar claimed from the photograph.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Cactaceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Rhipsalis"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Rhipsalis sp."
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Genus supplied by Brad; no species or cultivar claimed from the photograph."
+      }
+    ],
+    "oakLodge": {
+      "location": "Hanging beside the sitting-room stair opening · purple star",
+      "added": "Added October 2026 · birthday update",
+      "role": "Hanging green curtain at the purple-star position",
+      "observation": "Long narrow trailing stems hang from the beam beside the split-level stair opening.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "NC State Extension · Mistletoe cactus",
+        "url": "https://plants.ces.ncsu.edu/plants/rhipsalis-baccifera/",
+        "note": "Provisional epiphytic-cactus care; not a specimen species confirmation"
+      },
+      {
+        "title": "RHS · Rhipsalis baccifera",
+        "url": "https://www.rhs.org.uk/plants/14483/rhipsalis-baccifera/details",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ],
+    "environment": "indoor",
+    "display": {
+      "cycleTitle": "Indoor growth",
+      "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+      "waterLabel": "Watering",
+      "seasonsTitle": "Through the indoor year",
+      "waterNote": "Let the surface begin to dry, then water and drain; avoid prolonged drought."
+    },
+    "petSafety": {
+      "tone": "note",
+      "label": "Species safety unverified",
+      "detail": "Species remains unresolved; discourage chewing and keep fallen stems away from pets."
+    }
+  },
+  "house-sitting-dracaena-bicolour": {
+    "version": 2,
+    "type": "Evergreen dragon tree",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "Brad’s “Dracena Bicolour Touffe” is recorded as Dracaena Bicolour Touffe. The two narrow-leaved tufts beside the split-level stairs fit a marginata-type dragon tree. The formal Bicolor cultivar relationship remains assumed without a retained passport.",
+    "floweringMonths": [],
+    "facts": [
+      {
+        "label": "Habit",
+        "value": "Upright leafy tufts",
+        "detail": "Two crowns are visible in the small pot."
+      },
+      {
+        "label": "Light",
+        "value": "Indirect light",
+        "detail": "Shelter at the stair opening."
+      },
+      {
+        "label": "Water",
+        "value": "Upper compost drying",
+        "detail": "Avoid stagnant runoff."
+      },
+      {
+        "label": "Size",
+        "value": "Can become tall",
+        "detail": "Dragon trees can exceed 2m; this specimen is smaller."
+      },
+      {
+        "label": "Identity",
+        "value": "Bicolor type · assumed",
+        "detail": "Touffe wording retained from Brad’s record."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Water the inner pot",
+        "summary": "Allow the upper compost to dry.",
+        "detail": "Drain thoroughly and use rainwater where possible."
+      },
+      {
+        "title": "Keep leaves out of traffic",
+        "summary": "Check the green-star stair position.",
+        "detail": "Rotate only enough to maintain balanced growth without obstructing the passage."
+      },
+      {
+        "title": "Clean and inspect the tufts",
+        "summary": "Wipe dust from strap-shaped leaves.",
+        "detail": "Inspect for pests; avoid repeatedly wetting an already damp root ball."
+      }
+    ],
+    "waterSigns": {
+      "under": "Drooping tufts and dry leaf tips alongside dry compost call for a thorough, drained drink.",
+      "over": "Yellow lower leaves and a soft cane in wet compost call for a pause in watering and a drainage check."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Watch the two crowns for new leaves and restart modest feeding."
+      },
+      {
+        "season": "Summer",
+        "action": "Protect narrow leaves from strong glass-filtered sun and draughts."
+      },
+      {
+        "season": "Autumn",
+        "action": "Extend intervals between drinks as tuft growth slows."
+      },
+      {
+        "season": "Winter",
+        "action": "Keep the stair-side plant warm and reduce watering further."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Brown leaf tips",
+        "sign": "Dry tips despite moist roots",
+        "response": "Check water quality, draughts and nearby heat before increasing water."
+      }
+    ],
+    "about": "Dracaenas are woody tropical foliage plants. RHS recommends indirect light, warmth and attention to water quality; the supplied commercial name does not establish a verified cultivar.",
+    "provenanceNote": "Name supplied by Brad; Dracaena marginata Bicolor type is a qualified photo fit.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Asparagaceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Dracaena"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Dracaena marginata Bicolor type — assumed"
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Name supplied by Brad; Dracaena marginata Bicolor type is a qualified photo fit."
+      }
+    ],
+    "oakLodge": {
+      "location": "Beside the split-level stair opening · green star",
+      "added": "Added October 2026 · birthday update",
+      "role": "Two-tier upright foliage at the green-star position",
+      "observation": "Two leafy tufts rise at different heights in a small nursery pot beside the stairs.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "RHS · How to grow dracaena",
+        "url": "https://www.rhs.org.uk/plants/dracaena/how-to-grow-dracaena",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "RHS · Dracaena guide",
+        "url": "https://www.rhs.org.uk/plants/dracaena",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ],
+    "environment": "indoor",
+    "display": {
+      "cycleTitle": "Indoor growth",
+      "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+      "waterLabel": "Watering",
+      "seasonsTitle": "Through the indoor year",
+      "waterNote": "Allow the upper compost to dry before soaking and draining; use rainwater where possible."
+    },
+    "petSafety": {
+      "tone": "caution",
+      "label": "Harmful if eaten",
+      "detail": "RHS records Dracaena as toxic; keep foliage out of reach of children and pets."
+    }
+  },
+  "house-landing-crassula-hottentot": {
+    "version": 2,
+    "type": "Trailing succulent",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "Crassula ‘Hottentot’ spills over the landing shelf in dense bead-like strings of fleshy paired leaves. The supplied commercial name is retained, while its botanical placement follows the marnieriana worm-plant type provisionally. The orange star marks the shelf beside the lamp.",
+    "floweringMonths": [],
+    "facts": [
+      {
+        "label": "Habit",
+        "value": "Pendant leafy strings",
+        "detail": "Long trails spill from the decorative pot."
+      },
+      {
+        "label": "Light",
+        "value": "Very bright",
+        "detail": "The lamp is part of the display; assess actual daylight."
+      },
+      {
+        "label": "Water",
+        "value": "Dry between drinks",
+        "detail": "Use the inner-pot weight and compost together."
+      },
+      {
+        "label": "Compost",
+        "value": "Gritty cactus mix",
+        "detail": "Drain excess from the outer pot."
+      },
+      {
+        "label": "Identity",
+        "value": "Marnieriana type",
+        "detail": "Commercial Hottentot name supplied by Brad."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Empty the decorative pot",
+        "summary": "Water only after drying.",
+        "detail": "Soak the inner pot separately and let runoff finish before replacing it."
+      },
+      {
+        "title": "Assess daylight at the shelf",
+        "summary": "Give the succulent strong natural light.",
+        "detail": "Introduce direct sun gradually; watch stretching at the orange-star position."
+      },
+      {
+        "title": "Keep the leaf strings sound",
+        "summary": "Handle trailing growth gently.",
+        "detail": "Remove only damaged portions and inspect tightly stacked leaves for mealybugs."
+      }
+    ],
+    "waterSigns": {
+      "under": "Leaves wrinkle and trails lose plumpness with a light dry pot; rewet and drain.",
+      "over": "Translucent soft leaves and blackened stem bases with wet compost indicate rot risk."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Resume moderate watering once the leaf strings extend."
+      },
+      {
+        "season": "Summer",
+        "action": "Maintain bright light and allow drying between soakings."
+      },
+      {
+        "season": "Autumn",
+        "action": "Check for stretching as shelf daylight declines."
+      },
+      {
+        "season": "Winter",
+        "action": "Water the landing succulent sparingly and keep it warm."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Mealybugs",
+        "sign": "White cotton-like patches between paired leaves",
+        "response": "Isolate and inspect the dense leaf stacks before treatment."
+      }
+    ],
+    "about": "RHS places worm plant under Crassula rupestris subsp. marnieriana and advises cactus compost, full light and sparse winter watering. The supplied ‘Hottentot’ wording is a garden record rather than a photographed label confirmation.",
+    "provenanceNote": "Commercial name supplied by Brad; marnieriana botanical fit remains provisional.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Crassulaceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Crassula"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Crassula rupestris subsp. marnieriana type"
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Commercial name supplied by Brad; marnieriana botanical fit remains provisional."
+      }
+    ],
+    "oakLodge": {
+      "location": "Landing shelf above the split-level stair · orange star",
+      "added": "Added October 2026 · birthday update",
+      "role": "Pendant succulent on the orange-star landing shelf",
+      "observation": "Dense strings of fleshy paired leaves spill from a decorative pot beside a table lamp.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "RHS · Worm plant",
+        "url": "https://www.rhs.org.uk/plants/4749/crassula-rupestris-subsp-marnieriana/details",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Kew · Crassula rupestris subsp. marnieriana",
+        "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A878790-1",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ],
+    "environment": "indoor",
+    "display": {
+      "cycleTitle": "Indoor growth",
+      "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+      "waterLabel": "Watering",
+      "seasonsTitle": "Through the indoor year",
+      "waterNote": "Let compost dry between soakings; water sparingly through winter."
+    },
+    "petSafety": {
+      "tone": "note",
+      "label": "Cultivar safety unverified",
+      "detail": "A cultivar-specific safety record is not established here; discourage chewing the succulent."
+    }
+  },
+  "house-kitchen-philodendron": {
+    "version": 2,
+    "type": "Tropical foliage plant; habit unresolved",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "The birthday photograph records a small Philodendron in an orange pot. Brad’s red star places it at the kitchen / dining window. Species, cultivar and eventual climbing or upright habit remain unresolved, so this portrait uses genus guidance and keeps those questions visible.",
+    "floweringMonths": [],
+    "facts": [
+      {
+        "label": "Light",
+        "value": "Bright indirect",
+        "detail": "Protect leaves at the kitchen window."
+      },
+      {
+        "label": "Water",
+        "value": "Upper compost drying",
+        "detail": "Use airy compost and free drainage."
+      },
+      {
+        "label": "Temperature",
+        "value": "Warm indoors",
+        "detail": "Keep clear of cold glass and draughts."
+      },
+      {
+        "label": "Habit",
+        "value": "To confirm",
+        "detail": "Observe future stems before choosing support."
+      },
+      {
+        "label": "Identity",
+        "value": "Philodendron sp.",
+        "detail": "No cultivar inferred from this photograph."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Check the kitchen root ball",
+        "summary": "Water after surface drying.",
+        "detail": "Drain the orange pot fully before returning it to the window."
+      },
+      {
+        "title": "Leave space for new leaves",
+        "summary": "Protect tender foliage from sun scorch.",
+        "detail": "Observe growth before deciding whether this particular plant needs a climbing support."
+      },
+      {
+        "title": "Handle with care",
+        "summary": "Keep it out of reach.",
+        "detail": "Wear gloves when cutting and clean tools after contact with sap."
+      }
+    ],
+    "waterSigns": {
+      "under": "Leaves droop with a light dry pot; check beneath the surface before soaking.",
+      "over": "Lower leaves yellow while the root ball stays wet; restore drainage before watering again."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Record the next leaves to help resolve identity and habit."
+      },
+      {
+        "season": "Summer",
+        "action": "Check the small kitchen pot more often during warm weather."
+      },
+      {
+        "season": "Autumn",
+        "action": "Reduce water as this young plant slows in lower light."
+      },
+      {
+        "season": "Winter",
+        "action": "Keep the Philodendron away from cold window glass."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Scorched leaves",
+        "sign": "Dry pale patches on the exposed side",
+        "response": "Filter harsh sun and photograph new growth to compare."
+      }
+    ],
+    "about": "Philodendrons are tropical aroids grown for foliage. Species include climbers and upright plants; the genus-level RHS guide supports indirect light, warmth, draining compost and safe handling while this specimen’s identity remains open.",
+    "provenanceNote": "Philodendron genus supplied by Brad; species and cultivar unresolved.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Araceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Philodendron"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Philodendron sp."
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Philodendron genus supplied by Brad; species and cultivar unresolved."
+      }
+    ],
+    "oakLodge": {
+      "location": "Kitchen / dining window · red star",
+      "added": "Added October 2026 · birthday update",
+      "role": "Small foliage specimen at the red-star kitchen window",
+      "observation": "The supplied birthday photograph records a small broad-leaved plant in an orange pot; species and cultivar remain unresolved.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "RHS · How to grow philodendrons",
+        "url": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ],
+    "environment": "indoor",
+    "display": {
+      "cycleTitle": "Indoor growth",
+      "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+      "waterLabel": "Watering",
+      "seasonsTitle": "Through the indoor year",
+      "waterNote": "Water once the upper compost begins to dry and let excess drain completely."
+    },
+    "petSafety": {
+      "tone": "caution",
+      "label": "Harmful if eaten",
+      "detail": "Philodendron sap is irritant and plants are harmful if eaten; keep out of reach of children and pets."
+    }
+  },
+  "house-landing-zamioculcas": {
+    "version": 2,
+    "type": "Rhizomatous evergreen foliage plant",
+    "badges": [
+      "Recorded October 2026",
+      "Birthday plants"
+    ],
+    "description": "Zamioculcas stands beside the console on the bedroom-wing landing, with glossy leaflets on upright fleshy stalks. Its photograph strongly supports Zamioculcas zamiifolia, retained as assumed without a label. The blue star records the position beside Bedroom 3.",
+    "floweringMonths": [],
+    "facts": [
+      {
+        "label": "Habit",
+        "value": "Upright glossy leaves",
+        "detail": "Fleshy stalks rise from underground rhizomes."
+      },
+      {
+        "label": "Light",
+        "value": "Indirect; shade tolerated",
+        "detail": "Lower light lengthens drying time."
+      },
+      {
+        "label": "Water",
+        "value": "Root ball drying",
+        "detail": "Check deeply before the next drink."
+      },
+      {
+        "label": "Size",
+        "value": "About 60–120cm",
+        "detail": "Published species range; allow space at the landing."
+      },
+      {
+        "label": "Identity",
+        "value": "Z. zamiifolia · assumed",
+        "detail": "Photo fit and supplied genus; no named cultivar."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Let the root ball dry",
+        "summary": "Check below the surface.",
+        "detail": "Water thoroughly only after drying and let all runoff escape."
+      },
+      {
+        "title": "Protect the landing leaves",
+        "summary": "Keep upright stalks away from traffic.",
+        "detail": "The blue star sits beside the stair opening; avoid scraping leaflets when passing."
+      },
+      {
+        "title": "Inspect glossy leaflets",
+        "summary": "Wipe dust gently.",
+        "detail": "Look for scale on stalks and leaf undersides; feed sparingly during active growth."
+      }
+    ],
+    "waterSigns": {
+      "under": "Leaflets lose gloss and wrinkle with a thoroughly dry root ball; soak and drain once.",
+      "over": "Yellow leaves and soft stalk bases in persistently wet compost suggest rhizome or root rot."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Watch for new upright shoots and check whether the pot is congested."
+      },
+      {
+        "season": "Summer",
+        "action": "Allow full drying even while the landing is warm."
+      },
+      {
+        "season": "Autumn",
+        "action": "Lengthen the gap between drinks as growth slows."
+      },
+      {
+        "season": "Winter",
+        "action": "Keep the rhizomes dry between occasional winter drinks."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Rhizome rot",
+        "sign": "Stalks collapse at a wet soft base",
+        "response": "Pause watering, inspect roots and restore drainage."
+      }
+    ],
+    "about": "Zamioculcas zamiifolia is an African aroid with water-storing rhizomes. NC State describes slow growth, shade tolerance and poor tolerance of wet roots; the photographed plant is recorded as an assumed species fit.",
+    "provenanceNote": "Supplied genus and glossy pinnate leaves strongly support Z. zamiifolia; retained as assumed.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Araceae"
+      },
+      {
+        "label": "Genus",
+        "value": "Zamioculcas"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Zamioculcas zamiifolia — assumed"
+      },
+      {
+        "label": "Identity evidence",
+        "value": "Supplied genus and glossy pinnate leaves strongly support Z. zamiifolia; retained as assumed."
+      }
+    ],
+    "oakLodge": {
+      "location": "Landing beside Bedroom 3 and the split-level stairs · blue star",
+      "added": "Added October 2026 · birthday update",
+      "role": "Glossy upright foliage at the blue-star landing position",
+      "observation": "Glossy upright leaf stalks stand in a black nursery pot beside the wooden console.",
+      "status": "Retain labels and compare the next photographs with this October baseline."
+    },
+    "sources": [
+      {
+        "title": "NC State Extension · ZZ plant",
+        "url": "https://plants.ces.ncsu.edu/plants/zamioculcas-zamiifolia/",
+        "note": "Botanical identity and cultivation"
+      },
+      {
+        "title": "Oak Lodge October birthday record",
+        "url": null,
+        "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+      }
+    ],
+    "environment": "indoor",
+    "display": {
+      "cycleTitle": "Indoor growth",
+      "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+      "waterLabel": "Watering",
+      "seasonsTitle": "Through the indoor year",
+      "waterNote": "Allow the whole root ball to dry before watering; reduce checks into winter."
+    },
+    "petSafety": {
+      "tone": "caution",
+      "label": "Harmful if eaten",
+      "detail": "NC State records toxicity to cats and dogs; prevent chewing and keep removed leaves out of reach."
+    }
+  }
+};
+  Object.entries(profiles).forEach(([id, profile]) => {
+    const record = window.OAK.PLANT_BY_ID[id];
+    if (!record) throw new Error(`Missing October specimen: ${id}`);
+    record.plant.profile = profile;
+    window.OAK.AUTHORED_PLANT_PROFILES[id] = profile;
+  });
+  Object.assign(window.OAK.HOUSE_PLANT_PROFILES = window.OAK.HOUSE_PLANT_PROFILES || {}, profiles);
+})();

@@ -7,6 +7,175 @@
   OAK.JOURNAL = {
     version: 1,
     entries: [
+{
+      "id": "oct-2026",
+      "year": 2026,
+      "month": 10,
+      "label": "October 2026",
+      "title": "Birthday plants inside and a fresh border reshuffle",
+      "note": "Five birthday houseplants joined the notebook: Rhipsalis, Dracaena Bicolour Touffe, Crassula Hottentot, Philodendron and Zamioculcas. Out in the garden, Petite Star Hydrangea took Polar Passion’s place in Front Bed 4. Polar Passion moved into the old Gaillardia pocket in Back Bed 4, while Gaillardia and Wisley Vanilla Nemesia moved to Back Bed 1. Pineapple Crush Viola added new colour at the front of Back Bed 4.",
+      "photos": [
+            {
+                  "id": "oct-2026-rhipsalis-photo",
+                  "area": "house",
+                  "src": "images/oct-2026/house-rhipsalis.webp",
+                  "caption": "New hanging Rhipsalis beside the sitting-room stairs"
+            },
+            {
+                  "id": "oct-2026-petite-star-photo",
+                  "area": "front",
+                  "src": "images/oct-2026/front-bed4-hydrangea-petite-star-1.webp",
+                  "caption": "Petite Star in Polar Passion’s former Front Bed 4 pocket"
+            },
+            {
+                  "id": "oct-2026-back-bed1-photo",
+                  "area": "back",
+                  "src": "images/oct-2026/back-bed1-update.webp",
+                  "caption": "Back Bed 1 after the Nemesia and Gaillardia moves"
+            },
+            {
+                  "id": "oct-2026-back-bed4-photo",
+                  "area": "back",
+                  "src": "images/oct-2026/back-bed4-update.webp",
+                  "caption": "Back Bed 4 with Polar Passion and the new Viola"
+            }
+      ],
+      "events": [
+            {
+                  "id": "oct-2026-house-sitting-rhipsalis",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "house",
+                  "title": "Rhipsalis (species to confirm) added",
+                  "note": "Hanging beside the sitting-room stair opening · purple star. Recorded in the October birthday photographs.",
+                  "plantId": "house-sitting-rhipsalis",
+                  "zoneKey": "houseSittingRhipsalis",
+                  "location": "Ground floor · Hanging beside the sitting-room stair opening · purple star"
+            },
+            {
+                  "id": "oct-2026-house-sitting-dracaena-bicolour",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "house",
+                  "title": "Dracaena Bicolour Touffe added",
+                  "note": "Beside the split-level stair opening · green star. Recorded in the October birthday photographs.",
+                  "plantId": "house-sitting-dracaena-bicolour",
+                  "zoneKey": "houseSittingDracaena",
+                  "location": "Ground floor · Beside the split-level stair opening · green star"
+            },
+            {
+                  "id": "oct-2026-house-landing-crassula-hottentot",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "house",
+                  "title": "Crassula 'Hottentot' added",
+                  "note": "Landing shelf above the split-level stair · orange star. Recorded in the October birthday photographs.",
+                  "plantId": "house-landing-crassula-hottentot",
+                  "zoneKey": "houseLandingCrassula",
+                  "location": "Ground floor · Landing shelf above the split-level stair · orange star"
+            },
+            {
+                  "id": "oct-2026-house-kitchen-philodendron",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "house",
+                  "title": "Philodendron (species to confirm) added",
+                  "note": "Kitchen / dining window · red star. Recorded in the October birthday photographs.",
+                  "plantId": "house-kitchen-philodendron",
+                  "zoneKey": "houseKitchenPhilodendron",
+                  "location": "Ground floor · Kitchen / dining window · red star"
+            },
+            {
+                  "id": "oct-2026-house-landing-zamioculcas",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "house",
+                  "title": "Zamioculcas added",
+                  "note": "Landing beside Bedroom 3 and the split-level stairs · blue star. Recorded in the October birthday photographs.",
+                  "plantId": "house-landing-zamioculcas",
+                  "zoneKey": "houseLandingZamioculcas",
+                  "location": "Ground floor · Landing beside Bedroom 3 and the split-level stairs · blue star"
+            },
+            {
+                  "id": "oct-2026-petite-star",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "front",
+                  "title": "Hydrangea Petite Star planted",
+                  "note": "New Petite Star planted in Polar Passion’s former Front Bed 4 position.",
+                  "plantId": "frontBed4-hydrangea-petite-star",
+                  "zoneKey": "frontBed4",
+                  "location": "Front Bed 4"
+            },
+            {
+                  "id": "oct-2026-nemesia-moved",
+                  "type": "moved",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "back",
+                  "title": "Wisley Vanilla moved into Back Bed 1",
+                  "note": "The Nemesia moved from Back Bed 4 into Back Bed 1.",
+                  "plantId": "bed5-big-pot-nemesia",
+                  "zoneKey": "bed1",
+                  "from": "Back Bed 4",
+                  "to": "Back Bed 1"
+            },
+            {
+                  "id": "oct-2026-gaillardia-moved",
+                  "type": "moved",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "back",
+                  "title": "Gaillardia Arizona Sun moved into Back Bed 1",
+                  "note": "The Gaillardia moved from Back Bed 4 into Back Bed 1; the existing assumed cultivar qualification remains.",
+                  "plantId": "bed4-gaillardia",
+                  "zoneKey": "bed1",
+                  "from": "Back Bed 4",
+                  "to": "Back Bed 1"
+            },
+            {
+                  "id": "oct-2026-polar-passion-moved",
+                  "type": "moved",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "back",
+                  "title": "Polar Passion moved into Back Bed 4",
+                  "note": "Pieris Polar Passion moved from Front Bed 4 into Gaillardia’s former Back Bed 4 position.",
+                  "plantId": "frontBed5-pieris-polar-passion",
+                  "zoneKey": "bed4",
+                  "from": "Front Bed 4",
+                  "to": "Back Bed 4 · former Gaillardia position"
+            },
+            {
+                  "id": "oct-2026-pineapple-crush",
+                  "type": "planted",
+                  "date": "2026-10",
+                  "datePrecision": "month",
+                  "dateLabel": "October 2026",
+                  "area": "back",
+                  "title": "Viola Pineapple Crush added",
+                  "note": "The new Viola went into Back Bed 4, as confirmed by Brad.",
+                  "plantId": "bed4-viola-pineapple-crush",
+                  "zoneKey": "bed4",
+                  "location": "Back Bed 4 · front edge"
+            }
+      ]
+},
       {
         id: "sep-2026",
         year: 2026,

@@ -619,6 +619,21 @@
   // Stable-ID view used by the current profile and watering interfaces. The
   // original name-keyed object remains available for older views, but names
   // are presentation data and may change when an identity is resolved.
+  // October moved plants and birthday additions. Bands prompt a soil check.
+  WATER_BANDS["Bed 1"]["Nemesia"] = WATER_BANDS["Bed 4"]["Nemesia"];
+  WATER_BANDS["Bed 1"]["Gaillardia"] = WATER_BANDS["Bed 4"]["Gaillardia"];
+  delete WATER_BANDS["Bed 4"]["Nemesia"];
+  delete WATER_BANDS["Bed 4"]["Gaillardia"];
+  WATER_BANDS["Bed 4"]["Pieris 'Polar Passion'"] = WATER_BANDS["Front Bed 4"]["Pieris 'Polar Passion'"] || 3;
+  delete WATER_BANDS["Front Bed 4"]["Pieris 'Polar Passion'"];
+  WATER_BANDS["Front Bed 4"]["Hydrangea 'Petite Star'"] = 4;
+  WATER_BANDS["Bed 4"]["Viola 'Pineapple Crush'"] = 3;
+  WATER_BANDS["House · Sitting Room · Rhipsalis (species to confirm)"] = {"Rhipsalis (species to confirm)": 3};
+  WATER_BANDS["House · Sitting Room / stair opening · Dracaena Bicolour Touffe"] = {"Dracaena Bicolour Touffe": 2};
+  WATER_BANDS["House · Bedroom-wing landing · Crassula 'Hottentot'"] = {"Crassula 'Hottentot'": 1};
+  WATER_BANDS["House · Kitchen / Dining · Philodendron (species to confirm)"] = {"Philodendron (species to confirm)": 3};
+  WATER_BANDS["House · Bedroom-wing landing · Zamioculcas"] = {"Zamioculcas": 1};
+
   const WATER_BANDS_BY_ID = {};
   Object.values(window.OAK.PLANT_BY_ID || {}).forEach((record) => {
     const band = (WATER_BANDS[record.plantKey] || {})[record.plant.name];
@@ -796,7 +811,7 @@
         "frontBed4-purple-gem": "dropper",
         "frontBed4-rhododendron-libretto": "sprinkler",
         "frontBed4-festuca-elijah-blue": "sprinkler",
-        "frontBed5-pieris-polar-passion": "dropper",
+        "frontBed4-hydrangea-petite-star": "dropper",
         "frontBed4-dahlia-tampico": "sprinkler",
         "frontBed4-verbena-margarets-memory": "dropper",
         "frontBed4-calluna-trio-mix": "sprinkler",

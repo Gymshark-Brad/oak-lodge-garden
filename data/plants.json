@@ -3029,6 +3029,429 @@
           "care": "Rewritten with botanical and specimen-specific actions"
         }
       }
+    },
+    {
+      "name": "Nemesia ‘Wisley Vanilla’ — label confirmed",
+      "id": "bed5-big-pot-nemesia",
+      "latin": "Nemesia ‘Wisley Vanilla’",
+      "photos": [
+        "images/oct-2026/back-bed1-update.webp",
+        "images/September Pots V2/Bed 4 - Nemesia - 1.jpeg",
+        "images/September Pots V2/Bed 4 - Nemesia - 2.jpeg",
+        "images/September Pots V2/Bed 4 - Nemesia - 3.jpeg",
+        "images/jul-2026/july-update-bed-5-nemesia.webp"
+      ],
+      "group": "Back Bed 1 · moved October 2026",
+      "position": "Moved from Back Bed 4 in October 2026",
+      "light": "Sun or light shade. Shelter from drying wind and intense reflected heat",
+      "water": "Even moisture in its new bed pocket. Fine Nemesia roots can dry rapidly after moving, but the Bed 1 crown still needs air and free drainage.",
+      "care": "Trim Wisley Vanilla after a tired flush: Shorten spent shoots by about a third above healthy leaves. Keep the retained label with the moved plant, water if the soil is dry after cutting and avoid burying the crown beneath mulch.\n\nKeep a frost-free backup: Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained. Do not assume the former container plant will overwinter in Bed 1; keep rooted cuttings bright and only lightly moist.\n\nRetain the Wisley Vanilla label: For this Oak Lodge specimen Trim the pale scented Nemesia in its new Bed 1 position and keep the moved crown clear of woody neighbours.",
+      "seasonal": "Spring: Check for surviving basal shoots before trimming old stems and keep the new Bed 4 position open to light.\nSummer: Maintain even moisture, trim tired flowering shoots by about a third and avoid feeding heavily around neighbouring woody plants.\nAutumn: Take labelled cuttings before frost if Wisley Vanilla is to be retained, and clear damp fallen petals from the crown.\nWinter: Do not rely on the outdoor plant surviving hard frost; keep any rooted cuttings bright, frost-free and lightly moist.",
+      "description": "The retained label identifies this plant as Nemesia Wisley Vanilla. It moved from Bed 5's big pot to Back Bed 4 in September, then into Back Bed 1 in October 2026, where its small pale scented flowers sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
+      "characteristics": {
+        "sunlight": "Sun or light shade",
+        "hardiness": "Usually H3 or lower",
+        "flowering": "Jun, Jul, Aug, Sep, Oct",
+        "water": "Even moisture in its new bed pocket",
+        "habit": "Compact seasonal flowering plant",
+        "size": "20–35cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Compact tender flowering plant",
+        "badges": [
+          "Label confirmed",
+          "Scented flowers",
+          "Cool-season performer"
+        ],
+        "description": "The retained label identifies this plant as Nemesia Wisley Vanilla. It moved from Bed 5's big pot to Back Bed 4 in September, then into Back Bed 1 in October 2026, where its small pale scented flowers sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
+        "floweringMonths": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ],
+        "facts": [
+          {
+            "label": "Size",
+            "value": "20–35cm",
+            "detail": "Compact, branching mound"
+          },
+          {
+            "label": "Position",
+            "value": "Sun or light shade",
+            "detail": "Shelter from drying wind and intense reflected heat"
+          },
+          {
+            "label": "Soil",
+            "value": "Moist, mildly acidic and drained",
+            "detail": "Use free-draining peat-free container compost"
+          },
+          {
+            "label": "Hardiness",
+            "value": "Usually H3 or lower",
+            "detail": "Treat as tender unless a hardy series is confirmed"
+          },
+          {
+            "label": "Main feature",
+            "value": "Small scented flowers",
+            "detail": "Two-lipped blooms from summer into autumn"
+          },
+          {
+            "label": "Identity",
+            "value": "Nemesia ‘Wisley Vanilla’",
+            "detail": "Confirmed from a photographed plant label in the Oak Lodge archive"
+          },
+          {
+            "label": "Water",
+            "value": "Even moisture in its new bed pocket",
+            "detail": "Fine Nemesia roots can dry rapidly after moving, but the Bed 1 crown still needs air and free drainage."
+          },
+          {
+            "label": "Care priority",
+            "value": "Retain the Wisley Vanilla label",
+            "detail": "Trim the pale scented Nemesia in its new Bed 1 position and keep the moved crown clear of woody neighbours."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Trim Wisley Vanilla after a tired flush",
+            "summary": "Shorten spent shoots by about a third above healthy leaves.",
+            "detail": "Keep the retained label with the moved plant, water if the soil is dry after cutting and avoid burying the crown beneath mulch."
+          },
+          {
+            "title": "Keep a frost-free backup",
+            "summary": "Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained.",
+            "detail": "Do not assume the former container plant will overwinter in Bed 1; keep rooted cuttings bright and only lightly moist."
+          },
+          {
+            "title": "Retain the Wisley Vanilla label",
+            "summary": "For this Oak Lodge specimen",
+            "detail": "Trim the pale scented Nemesia in its new Bed 1 position and keep the moved crown clear of woody neighbours."
+          }
+        ],
+        "waterSigns": {
+          "under": "Fine stems sag and pale flowers stop opening while the new Bed 4 root pocket is dry; water gently around the moved root ball before it shrinks.",
+          "over": "Yellow foliage and dark soft crown tissue in wet Bed 4 soil show the moved Nemesia needs more drainage and air; pause watering and remove affected stems."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Check for surviving basal shoots before trimming old stems and keep the new Bed 4 position open to light."
+          },
+          {
+            "season": "Summer",
+            "action": "Maintain even moisture, trim tired flowering shoots by about a third and avoid feeding heavily around neighbouring woody plants."
+          },
+          {
+            "season": "Autumn",
+            "action": "Take labelled cuttings before frost if Wisley Vanilla is to be retained, and clear damp fallen petals from the crown."
+          },
+          {
+            "season": "Winter",
+            "action": "Do not rely on the outdoor plant surviving hard frost; keep any rooted cuttings bright, frost-free and lightly moist."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Aphids",
+            "sign": "Sticky, distorted tips and colonies around buds",
+            "response": "Rub off or wash away small colonies before they spread through the pot."
+          },
+          {
+            "name": "Grey mould",
+            "sign": "Fuzzy decay among crowded flowers and leaves",
+            "response": "Remove affected material, increase airflow and avoid leaving flowers wet overnight."
+          },
+          {
+            "name": "Root or stem rot",
+            "sign": "Yellowing followed by a soft dark base",
+            "response": "Stop watering, clear drainage holes and discard plants whose crown has collapsed."
+          }
+        ],
+        "about": "Nemesia is a southern African genus of annuals, perennials and subshrubs with characteristic two-lipped flowers. Modern container hybrids are bred for compact growth, colour and sometimes fragrance, but most are frost-tender and dislike prolonged hot drought. A trim after flowering is often more productive than picking individual tiny blooms.",
+        "provenanceNote": "The photographed plant label reads Wisley Vanilla. This supersedes the earlier unresolved garden record.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Scrophulariaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Nemesia"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Nemesia ‘Wisley Vanilla’"
+          },
+          {
+            "label": "Plant type",
+            "value": "Compact tender flowering plant"
+          },
+          {
+            "label": "Foliage",
+            "value": "Tender and seasonal"
+          },
+          {
+            "label": "Habit",
+            "value": "Compact and branching"
+          },
+          {
+            "label": "Name status",
+            "value": "Label confirmed"
+          },
+          {
+            "label": "Native to Britain or Ireland",
+            "value": "No"
+          }
+        ],
+        "oakLodge": {
+          "location": "Moved from Back Bed 4 in October 2026 · Bed 1",
+          "added": "Added July 2026; moved via Back Bed 4 to Back Bed 1 in October 2026",
+          "role": "Low scented flowers in Back Bed 1",
+          "observation": "The October Bed 1 overview records the new planting; its exact map pocket is approximate.",
+          "status": "Cultivar wording is confirmed from the photographed label; retain the label image with the plant journal."
+        },
+        "sources": [
+          {
+            "title": "Royal Horticultural Society · How to grow Nemesia",
+            "url": "https://www.rhs.org.uk/plants/nemesia/how-to-grow-nemesia",
+            "note": "Habit, flowering, cultivation, trimming and frost protection"
+          },
+          {
+            "title": "Oak Lodge garden record",
+            "url": null,
+            "note": "Identity label, position, photographs, planting history and on-site observations"
+          },
+          {
+            "title": "Oak Lodge photographed plant label",
+            "url": null,
+            "note": "Cultivar wording read directly from a retained label visible in the garden photo archive"
+          }
+        ],
+        "careSummary": "Retain the Wisley Vanilla label. Trim the pale scented Nemesia in its new Bed 1 position and keep the moved crown clear of woody neighbours.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Rewritten with botanical and specimen-specific actions"
+        }
+      },
+      "identityResolution": {
+        "status": "confirmed",
+        "basis": "The photographed plant label reads Wisley Vanilla."
+      }
+    },
+    {
+      "name": "Gaillardia ‘Arizona Sun’ — assumed",
+      "id": "bed4-gaillardia",
+      "latin": "Gaillardia × grandiflora ‘Arizona Sun’",
+      "photos": [
+        "images/oct-2026/back-bed1-update.webp",
+        "images/june-2026-updates/gaillardia.webp"
+      ],
+      "position": "Moved from Back Bed 4 in October 2026; exact pocket to record",
+      "light": "Full sun. Needs warmth and open light for sustained flowering",
+      "water": "Allow drying between soakings. Established Gaillardia dislikes rich wet ground; drought tolerance is greater than winter-wet tolerance.",
+      "care": "Deadhead to keep blanket flowers coming: Remove faded heads to the next leafy shoot. Leave a few late heads only if seed is wanted. Do not expect seedlings to preserve an assumed cultivar or the same colour pattern.\n\nProtect the crown from winter wet: Clear collapsed stems and keep heavy mulch off the centre. Lean, freely drained soil supports a sturdier clump than rich feeding. Even with good care, these hybrids can be short-lived.\n\nKeep a dry crown near thirstier plants: For this Oak Lodge specimen In its new Bed 1 pocket, check Gaillardia separately from thirstier Nemesia and avoid prolonged shade or a wet crown beneath the maple.",
+      "seasonal": "Spring: Clear dead growth, check the crown is firm and replace losses before neighbouring plants close the gap.\nSummer: Deadhead down to a side shoot every week and water only when the root zone has dried.\nAutumn: Leave a few final heads to ripen seed, then clear soggy stems away from the crown.\nWinter: Prioritise air and drainage; do not cover the crown with a dense wet mulch.",
+      "description": "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, providing a long display after its October move to Bed 1. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
+      "characteristics": {
+        "sunlight": "Full sun",
+        "hardiness": "H5 with drainage",
+        "flowering": "Jun, Jul, Aug, Sep, Oct",
+        "water": "Allow drying between soakings",
+        "habit": "Herbaceous perennial",
+        "size": "30–60cm",
+        "foliage": "Seasonal foliage",
+        "wildlife": "Flowers visited by pollinators"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Short-lived clump-forming perennial",
+        "badges": [
+          "Assumed identity",
+          "Long flowering",
+          "Hot colours",
+          "Pollinator plant"
+        ],
+        "description": "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, providing a long display after its October move to Bed 1. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
+        "floweringMonths": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct"
+        ],
+        "facts": [
+          {
+            "label": "Size",
+            "value": "30–60cm",
+            "detail": "Cultivar-dependent mound with upright flower stems"
+          },
+          {
+            "label": "Position",
+            "value": "Full sun",
+            "detail": "Needs warmth and open light for sustained flowering"
+          },
+          {
+            "label": "Soil",
+            "value": "Light and well-drained",
+            "detail": "Tolerates lean soil; dislikes winter wet"
+          },
+          {
+            "label": "Hardiness",
+            "value": "H5 with drainage",
+            "detail": "Cold hardy, but crowns can rot in wet winters"
+          },
+          {
+            "label": "Main feature",
+            "value": "Red, orange and yellow daisies",
+            "detail": "Often concentrically banded around a dark centre"
+          },
+          {
+            "label": "Identity",
+            "value": "Gaillardia × grandiflora ‘Arizona Sun’",
+            "detail": "Assumed from Oak Lodge evidence; replace if a label or stronger diagnostic record appears"
+          },
+          {
+            "label": "Water",
+            "value": "Allow drying between soakings",
+            "detail": "Established Gaillardia dislikes rich wet ground; drought tolerance is greater than winter-wet tolerance."
+          },
+          {
+            "label": "Care priority",
+            "value": "Keep a dry crown near thirstier plants",
+            "detail": "In its new Bed 1 pocket, check Gaillardia separately from thirstier Nemesia and avoid prolonged shade or a wet crown beneath the maple."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Deadhead to keep blanket flowers coming",
+            "summary": "Remove faded heads to the next leafy shoot.",
+            "detail": "Leave a few late heads only if seed is wanted. Do not expect seedlings to preserve an assumed cultivar or the same colour pattern."
+          },
+          {
+            "title": "Protect the crown from winter wet",
+            "summary": "Clear collapsed stems and keep heavy mulch off the centre.",
+            "detail": "Lean, freely drained soil supports a sturdier clump than rich feeding. Even with good care, these hybrids can be short-lived."
+          },
+          {
+            "title": "Keep a dry crown near thirstier plants",
+            "summary": "For this Oak Lodge specimen",
+            "detail": "In its new Bed 1 pocket, check Gaillardia separately from thirstier Nemesia and avoid prolonged shade or a wet crown beneath the maple."
+          }
+        ],
+        "waterSigns": {
+          "under": "The first useful warning is wilting and stalled buds during extended summer drought. Check below the surface before soaking the full root area.",
+          "over": "Watch for a soft dark crown or sudden winter collapse. If the root zone is still wet, pause watering and restore air to the compost or soil."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Clear dead growth, check the crown is firm and replace losses before neighbouring plants close the gap."
+          },
+          {
+            "season": "Summer",
+            "action": "Deadhead down to a side shoot every week and water only when the root zone has dried."
+          },
+          {
+            "season": "Autumn",
+            "action": "Leave a few final heads to ripen seed, then clear soggy stems away from the crown."
+          },
+          {
+            "season": "Winter",
+            "action": "Prioritise air and drainage; do not cover the crown with a dense wet mulch."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Short-lived crown",
+            "sign": "The centre weakens or fails to return after winter",
+            "response": "Improve drainage, divide only vigorous outer pieces and raise replacements slightly above heavy soil."
+          },
+          {
+            "name": "Powdery mildew",
+            "sign": "White coating during warm, dry weather",
+            "response": "Water roots consistently, improve airflow and remove the worst affected foliage."
+          },
+          {
+            "name": "Congestion",
+            "sign": "A weak centre with flowers only around the edge",
+            "response": "Divide and replant vigorous outer pieces in spring or autumn."
+          }
+        ],
+        "about": "Gaillardia × grandiflora is the blanket-flower hybrid group, combining North American species into compact garden perennials with prolonged, vividly banded flowers. Individual named cultivars vary in height and exact pattern. The Oak Lodge record securely captures the hybrid group but not the cultivar, so care is based on the shared need for sun and sharp winter drainage.",
+        "provenanceNote": "Best fit from the compact mound and red-orange flowers with yellow-tipped rays. This is an explicit working assumption, not a confirmed identification.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Asteraceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Gaillardia"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Gaillardia × grandiflora ‘Arizona Sun’ · assumed"
+          },
+          {
+            "label": "Plant type",
+            "value": "Short-lived clump-forming perennial"
+          },
+          {
+            "label": "Foliage",
+            "value": "Deciduous to semi-evergreen in mild weather"
+          },
+          {
+            "label": "Habit",
+            "value": "Compact clump; often short-lived"
+          },
+          {
+            "label": "Name status",
+            "value": "Assumed working identity"
+          },
+          {
+            "label": "Native to Britain or Ireland",
+            "value": "No"
+          }
+        ],
+        "oakLodge": {
+          "location": "Moved from Back Bed 4 in October 2026; exact pocket to record · Bed 1",
+          "added": "Added June 2026; moved from Back Bed 4 to Back Bed 1 in October 2026",
+          "role": "Hot-coloured flowers in the sunniest available Bed 1 pocket",
+          "observation": "Brad records the October move into Bed 1; check light and crown drainage beneath the maple.",
+          "status": "Keep this identity visibly marked as assumed and replace it if a label, diagnostic flower or fruit record provides stronger evidence."
+        },
+        "sources": [
+          {
+            "title": "Royal Horticultural Society · Gaillardia × grandiflora",
+            "url": "https://www.rhs.org.uk/plants/190980/gaillardia-grandiflora-fanfare-pbr/details",
+            "note": "Hybrid-group habit, cultivation, flowering, hardiness and problems"
+          },
+          {
+            "title": "Oak Lodge garden record",
+            "url": null,
+            "note": "Identity label, position, photographs, planting history and on-site observations"
+          },
+          {
+            "title": "Oak Lodge cultivar resolution register",
+            "url": null,
+            "note": "A qualified best-fit identity from Oak Lodge photographs, retained labels and garden context; replace when stronger evidence appears"
+          }
+        ],
+        "careSummary": "Keep a dry crown near thirstier plants. In its new Bed 1 pocket, check Gaillardia separately from thirstier Nemesia and avoid prolonged shade or a wet crown beneath the maple.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Rewritten with botanical and specimen-specific actions"
+        }
+      },
+      "identityResolution": {
+        "status": "assumed",
+        "basis": "Best fit from the compact mound and red-orange flowers with yellow-tipped rays."
+      }
     }
   ],
   "Bed 2": [
@@ -7046,215 +7469,6 @@
       }
     },
     {
-      "name": "Gaillardia ‘Arizona Sun’ — assumed",
-      "id": "bed4-gaillardia",
-      "latin": "Gaillardia × grandiflora ‘Arizona Sun’",
-      "photos": [
-        "images/june-2026-updates/gaillardia.webp"
-      ],
-      "position": "Right — vivid daisy flowers",
-      "light": "Full sun. Needs warmth and open light for sustained flowering",
-      "water": "Allow drying between soakings. Established Gaillardia dislikes rich wet ground; drought tolerance is greater than winter-wet tolerance.",
-      "care": "Deadhead to keep blanket flowers coming: Remove faded heads to the next leafy shoot. Leave a few late heads only if seed is wanted. Do not expect seedlings to preserve an assumed cultivar or the same colour pattern.\n\nProtect the crown from winter wet: Clear collapsed stems and keep heavy mulch off the centre. Lean, freely drained soil supports a sturdier clump than rich feeding. Even with good care, these hybrids can be short-lived.\n\nKeep a dry crown near thirstier plants: For this Oak Lodge specimen Separate the Gaillardia's watering decisions from the moisture-loving Starship Lobelia in the same bed.",
-      "seasonal": "Spring: Clear dead growth, check the crown is firm and replace losses before neighbouring plants close the gap.\nSummer: Deadhead down to a side shoot every week and water only when the root zone has dried.\nAutumn: Leave a few final heads to ripen seed, then clear soggy stems away from the crown.\nWinter: Prioritise air and drainage; do not cover the crown with a dense wet mulch.",
-      "description": "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, making it one of Bed 4’s longest displays. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
-      "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H5 with drainage",
-        "flowering": "Jun, Jul, Aug, Sep, Oct",
-        "water": "Allow drying between soakings",
-        "habit": "Herbaceous perennial",
-        "size": "30–60cm",
-        "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
-      },
-      "profile": {
-        "version": 2,
-        "type": "Short-lived clump-forming perennial",
-        "badges": [
-          "Assumed identity",
-          "Long flowering",
-          "Hot colours",
-          "Pollinator plant"
-        ],
-        "description": "Gaillardia × grandiflora carries daisy-like flowers banded in ember shades of red, orange and yellow above a compact leafy clump. With regular deadheading it can flower from June until October, making it one of Bed 4’s longest displays. The plant is often short-lived in cold wet soil, so keeping the crown drained and allowing some late seedheads is more useful than treating it like an indefinitely permanent shrub.",
-        "floweringMonths": [
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
-        ],
-        "facts": [
-          {
-            "label": "Size",
-            "value": "30–60cm",
-            "detail": "Cultivar-dependent mound with upright flower stems"
-          },
-          {
-            "label": "Position",
-            "value": "Full sun",
-            "detail": "Needs warmth and open light for sustained flowering"
-          },
-          {
-            "label": "Soil",
-            "value": "Light and well-drained",
-            "detail": "Tolerates lean soil; dislikes winter wet"
-          },
-          {
-            "label": "Hardiness",
-            "value": "H5 with drainage",
-            "detail": "Cold hardy, but crowns can rot in wet winters"
-          },
-          {
-            "label": "Main feature",
-            "value": "Red, orange and yellow daisies",
-            "detail": "Often concentrically banded around a dark centre"
-          },
-          {
-            "label": "Identity",
-            "value": "Gaillardia × grandiflora ‘Arizona Sun’",
-            "detail": "Assumed from Oak Lodge evidence; replace if a label or stronger diagnostic record appears"
-          },
-          {
-            "label": "Water",
-            "value": "Allow drying between soakings",
-            "detail": "Established Gaillardia dislikes rich wet ground; drought tolerance is greater than winter-wet tolerance."
-          },
-          {
-            "label": "Care priority",
-            "value": "Keep a dry crown near thirstier plants",
-            "detail": "Separate the Gaillardia's watering decisions from the moisture-loving Starship Lobelia in the same bed."
-          }
-        ],
-        "careGuide": [
-          {
-            "title": "Deadhead to keep blanket flowers coming",
-            "summary": "Remove faded heads to the next leafy shoot.",
-            "detail": "Leave a few late heads only if seed is wanted. Do not expect seedlings to preserve an assumed cultivar or the same colour pattern."
-          },
-          {
-            "title": "Protect the crown from winter wet",
-            "summary": "Clear collapsed stems and keep heavy mulch off the centre.",
-            "detail": "Lean, freely drained soil supports a sturdier clump than rich feeding. Even with good care, these hybrids can be short-lived."
-          },
-          {
-            "title": "Keep a dry crown near thirstier plants",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Separate the Gaillardia's watering decisions from the moisture-loving Starship Lobelia in the same bed."
-          }
-        ],
-        "waterSigns": {
-          "under": "The first useful warning is wilting and stalled buds during extended summer drought. Check below the surface before soaking the full root area.",
-          "over": "Watch for a soft dark crown or sudden winter collapse. If the root zone is still wet, pause watering and restore air to the compost or soil."
-        },
-        "seasons": [
-          {
-            "season": "Spring",
-            "action": "Clear dead growth, check the crown is firm and replace losses before neighbouring plants close the gap."
-          },
-          {
-            "season": "Summer",
-            "action": "Deadhead down to a side shoot every week and water only when the root zone has dried."
-          },
-          {
-            "season": "Autumn",
-            "action": "Leave a few final heads to ripen seed, then clear soggy stems away from the crown."
-          },
-          {
-            "season": "Winter",
-            "action": "Prioritise air and drainage; do not cover the crown with a dense wet mulch."
-          }
-        ],
-        "problems": [
-          {
-            "name": "Short-lived crown",
-            "sign": "The centre weakens or fails to return after winter",
-            "response": "Improve drainage, divide only vigorous outer pieces and raise replacements slightly above heavy soil."
-          },
-          {
-            "name": "Powdery mildew",
-            "sign": "White coating during warm, dry weather",
-            "response": "Water roots consistently, improve airflow and remove the worst affected foliage."
-          },
-          {
-            "name": "Congestion",
-            "sign": "A weak centre with flowers only around the edge",
-            "response": "Divide and replant vigorous outer pieces in spring or autumn."
-          }
-        ],
-        "about": "Gaillardia × grandiflora is the blanket-flower hybrid group, combining North American species into compact garden perennials with prolonged, vividly banded flowers. Individual named cultivars vary in height and exact pattern. The Oak Lodge record securely captures the hybrid group but not the cultivar, so care is based on the shared need for sun and sharp winter drainage.",
-        "provenanceNote": "Best fit from the compact mound and red-orange flowers with yellow-tipped rays. This is an explicit working assumption, not a confirmed identification.",
-        "botanical": [
-          {
-            "label": "Family",
-            "value": "Asteraceae"
-          },
-          {
-            "label": "Genus",
-            "value": "Gaillardia"
-          },
-          {
-            "label": "Botanical name",
-            "value": "Gaillardia × grandiflora ‘Arizona Sun’ · assumed"
-          },
-          {
-            "label": "Plant type",
-            "value": "Short-lived clump-forming perennial"
-          },
-          {
-            "label": "Foliage",
-            "value": "Deciduous to semi-evergreen in mild weather"
-          },
-          {
-            "label": "Habit",
-            "value": "Compact clump; often short-lived"
-          },
-          {
-            "label": "Name status",
-            "value": "Assumed working identity"
-          },
-          {
-            "label": "Native to Britain or Ireland",
-            "value": "No"
-          }
-        ],
-        "oakLodge": {
-          "location": "Right — vivid daisy flowers · Bed 4",
-          "added": "Added during the June 2026 Bed 4 replant",
-          "role": "Sustained hot-coloured flowers on the right side",
-          "observation": "Red, orange and yellow flowers continue strongly when faded heads are removed.",
-          "status": "Keep this identity visibly marked as assumed and replace it if a label, diagnostic flower or fruit record provides stronger evidence."
-        },
-        "sources": [
-          {
-            "title": "Royal Horticultural Society · Gaillardia × grandiflora",
-            "url": "https://www.rhs.org.uk/plants/190980/gaillardia-grandiflora-fanfare-pbr/details",
-            "note": "Hybrid-group habit, cultivation, flowering, hardiness and problems"
-          },
-          {
-            "title": "Oak Lodge garden record",
-            "url": null,
-            "note": "Identity label, position, photographs, planting history and on-site observations"
-          },
-          {
-            "title": "Oak Lodge cultivar resolution register",
-            "url": null,
-            "note": "A qualified best-fit identity from Oak Lodge photographs, retained labels and garden context; replace when stronger evidence appears"
-          }
-        ],
-        "careSummary": "Keep a dry crown near thirstier plants. Separate the Gaillardia's watering decisions from the moisture-loving Starship Lobelia in the same bed.",
-        "contentReview": {
-          "date": "2026-09-18",
-          "care": "Rewritten with botanical and specimen-specific actions"
-        }
-      },
-      "identityResolution": {
-        "status": "assumed",
-        "basis": "Best fit from the compact mound and red-orange flowers with yellow-tipped rays."
-      }
-    },
-    {
       "name": "Abelia 'Kaleidoscope'",
       "id": "bed4-abelia-kaleidoscope",
       "latin": "Abelia × grandiflora 'Kaleidoscope'",
@@ -7854,176 +8068,175 @@
       }
     },
     {
-      "name": "Nemesia ‘Wisley Vanilla’ — label confirmed",
-      "id": "bed5-big-pot-nemesia",
-      "latin": "Nemesia ‘Wisley Vanilla’",
+      "name": "Pieris 'Polar Passion'",
+      "id": "frontBed5-pieris-polar-passion",
+      "latin": "Pieris japonica 'Ppobas' (Polar Passion)",
       "photos": [
-        "images/September Pots V2/Bed 4 - Nemesia - 1.jpeg",
-        "images/September Pots V2/Bed 4 - Nemesia - 2.jpeg",
-        "images/September Pots V2/Bed 4 - Nemesia - 3.jpeg",
-        "images/jul-2026/july-update-bed-5-nemesia.webp"
+        "images/oct-2026/back-bed4-polar-passion.webp",
+        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-1.jpeg",
+        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-2.jpeg",
+        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-3.jpeg",
+        "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-1.webp"
       ],
-      "group": "Back Bed 4 · moved September 2026",
-      "position": "Front-right edge of Bed 4 — moved from Bed 5's big pot",
-      "light": "Sun or light shade. Shelter from drying wind and intense reflected heat",
-      "water": "Even moisture in its new bed pocket. Fine Nemesia roots can dry rapidly after moving, but the Bed 4 crown still needs air and free drainage.",
-      "care": "Trim Wisley Vanilla after a tired flush: Shorten spent shoots by about a third above healthy leaves. Keep the retained label with the moved plant, water if the soil is dry after cutting and avoid burying the crown beneath mulch.\n\nKeep a frost-free backup: Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained. Do not assume the former container plant will overwinter in Bed 4; keep rooted cuttings bright and only lightly moist.\n\nRetain the Wisley Vanilla label: For this Oak Lodge specimen Trim the pale scented Nemesia in its new Bed 4 position and keep the moved crown clear of woody neighbours.",
-      "seasonal": "Spring: Check for surviving basal shoots before trimming old stems and keep the new Bed 4 position open to light.\nSummer: Maintain even moisture, trim tired flowering shoots by about a third and avoid feeding heavily around neighbouring woody plants.\nAutumn: Take labelled cuttings before frost if Wisley Vanilla is to be retained, and clear damp fallen petals from the crown.\nWinter: Do not rely on the outdoor plant surviving hard frost; keep any rooted cuttings bright, frost-free and lightly moist.",
-      "description": "The retained label identifies this plant as Nemesia Wisley Vanilla. In September it moved from Bed 5's big pot to the front-right edge of Back Bed 4, where its small pale scented flowers now sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
+      "position": "Former Gaillardia position in Back Bed 4 — moved October 2026",
+      "light": "Partial shade. Shelter from cold wind and strong early sun",
+      "water": "Even root moisture. Shallow Pieris roots must not dry hard; use rainwater where available and allow excess to drain.",
+      "care": "Keep the root run acidic: Use acidic, humus-rich soil and a shallow leaf-mould mulch. Keep lime away and do not cultivate through the fine surface roots. Check soil pH if young leaves yellow between green veins.\n\nPreserve next spring's flowers: Remove spent flower clusters carefully, with little routine pruning. Make any necessary shaping cuts after flowering. Protect new coloured shoots from drying winds and late frost; do not clip away developing buds later in the year.\n\nFollow Polar Passion to Back Bed 4: For this Oak Lodge specimen Check its moved root ball in Gaillardia's former Back Bed 4 position; maintain an acidic root pocket and protect new shoots from exposure.",
+      "seasonal": "Spring: Mulch with ericaceous material, remove spent flowers gently and protect new growth from late frost.\nSummer: Use rainwater in drought and avoid lime-rich feed or amendments.\nAutumn: Allow flower buds to develop untouched and clear smothering fallen leaves.\nWinter: Protect from cold drying wind and do not prune away the spring flower buds.",
+      "description": "Pieris japonica Polar Passion (‘Ppobas’) is the labelled evergreen with cream-edged leaves, colourful young growth and hanging spring flower clusters. It needs acidic, humus-rich soil and steady moisture without waterlogging; harsh early sun can scorch growth already chilled by frost. Its slow rounded habit makes it a permanent middle layer rather than a plant to clip routinely.",
       "characteristics": {
-        "sunlight": "Sun or light shade",
-        "hardiness": "Usually H3 or lower",
-        "flowering": "Jun, Jul, Aug, Sep, Oct",
-        "water": "Even moisture in its new bed pocket",
-        "habit": "Compact seasonal flowering plant",
-        "size": "20–35cm",
-        "foliage": "Seasonal foliage",
+        "sunlight": "Partial shade",
+        "hardiness": "Around H5",
+        "flowering": "Mar, Apr, May",
+        "water": "Even root moisture",
+        "habit": "Garden shrub",
+        "size": "1–1.5m",
+        "foliage": "Evergreen",
         "wildlife": "Flowers visited by pollinators"
       },
       "profile": {
         "version": 2,
-        "type": "Compact tender flowering plant",
+        "type": "Compact variegated evergreen shrub",
         "badges": [
           "Label confirmed",
-          "Scented flowers",
-          "Cool-season performer"
+          "Acid soil",
+          "Spring flowers"
         ],
-        "description": "The retained label identifies this plant as Nemesia Wisley Vanilla. In September it moved from Bed 5's big pot to the front-right edge of Back Bed 4, where its small pale scented flowers now sit among the established border planting. Keep the moved crown evenly moist but open, trim after a tired flush and take frost-free cuttings if the cultivar is to be retained.",
+        "description": "Pieris japonica Polar Passion (‘Ppobas’) is the labelled evergreen with cream-edged leaves, colourful young growth and hanging spring flower clusters. It needs acidic, humus-rich soil and steady moisture without waterlogging; harsh early sun can scorch growth already chilled by frost. Its slow rounded habit makes it a permanent middle layer rather than a plant to clip routinely.",
         "floweringMonths": [
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
+          "Mar",
+          "Apr",
+          "May"
         ],
         "facts": [
           {
             "label": "Size",
-            "value": "20–35cm",
-            "detail": "Compact, branching mound"
+            "value": "1–1.5m",
+            "detail": "Compact rounded shrub over many years"
           },
           {
             "label": "Position",
-            "value": "Sun or light shade",
-            "detail": "Shelter from drying wind and intense reflected heat"
+            "value": "Partial shade",
+            "detail": "Shelter from cold wind and strong early sun"
           },
           {
             "label": "Soil",
-            "value": "Moist, mildly acidic and drained",
-            "detail": "Use free-draining peat-free container compost"
+            "value": "Acidic, humus-rich and moist",
+            "detail": "Well-drained; use rainwater where practical"
           },
           {
             "label": "Hardiness",
-            "value": "Usually H3 or lower",
-            "detail": "Treat as tender unless a hardy series is confirmed"
+            "value": "Around H5",
+            "detail": "Hardy, but new shoots and flowers can scorch"
           },
           {
             "label": "Main feature",
-            "value": "Small scented flowers",
-            "detail": "Two-lipped blooms from summer into autumn"
+            "value": "Variegated foliage and hanging spring flowers",
+            "detail": "Young growth adds a second colour season"
           },
           {
             "label": "Identity",
-            "value": "Nemesia ‘Wisley Vanilla’",
-            "detail": "Confirmed from a photographed plant label in the Oak Lodge archive"
+            "value": "Pieris japonica ‘Ppobas’",
+            "detail": "Polar Passion trade name retained from the label"
           },
           {
             "label": "Water",
-            "value": "Even moisture in its new bed pocket",
-            "detail": "Fine Nemesia roots can dry rapidly after moving, but the Bed 4 crown still needs air and free drainage."
+            "value": "Even root moisture",
+            "detail": "Shallow Pieris roots must not dry hard; use rainwater where available and allow excess to drain."
           },
           {
             "label": "Care priority",
-            "value": "Retain the Wisley Vanilla label",
-            "detail": "Trim the pale scented Nemesia in its new Bed 4 position and keep the moved crown clear of woody neighbours."
+            "value": "Follow Polar Passion to Back Bed 4",
+            "detail": "Check its moved root ball in Gaillardia's former Back Bed 4 position; maintain an acidic root pocket and protect new shoots from exposure."
           }
         ],
         "careGuide": [
           {
-            "title": "Trim Wisley Vanilla after a tired flush",
-            "summary": "Shorten spent shoots by about a third above healthy leaves.",
-            "detail": "Keep the retained label with the moved plant, water if the soil is dry after cutting and avoid burying the crown beneath mulch."
+            "title": "Keep the root run acidic",
+            "summary": "Use acidic, humus-rich soil and a shallow leaf-mould mulch.",
+            "detail": "Keep lime away and do not cultivate through the fine surface roots. Check soil pH if young leaves yellow between green veins."
           },
           {
-            "title": "Keep a frost-free backup",
-            "summary": "Take labelled non-flowering cuttings before hard cold if the cultivar is to be retained.",
-            "detail": "Do not assume the former container plant will overwinter in Bed 4; keep rooted cuttings bright and only lightly moist."
+            "title": "Preserve next spring's flowers",
+            "summary": "Remove spent flower clusters carefully, with little routine pruning.",
+            "detail": "Make any necessary shaping cuts after flowering. Protect new coloured shoots from drying winds and late frost; do not clip away developing buds later in the year."
           },
           {
-            "title": "Retain the Wisley Vanilla label",
+            "title": "Follow Polar Passion to Back Bed 4",
             "summary": "For this Oak Lodge specimen",
-            "detail": "Trim the pale scented Nemesia in its new Bed 4 position and keep the moved crown clear of woody neighbours."
+            "detail": "Check its moved root ball in Gaillardia's former Back Bed 4 position; maintain an acidic root pocket and protect new shoots from exposure."
           }
         ],
         "waterSigns": {
-          "under": "Fine stems sag and pale flowers stop opening while the new Bed 4 root pocket is dry; water gently around the moved root ball before it shrinks.",
-          "over": "Yellow foliage and dark soft crown tissue in wet Bed 4 soil show the moved Nemesia needs more drainage and air; pause watering and remove affected stems."
+          "under": "The most useful early warning is young leaves drooping and developing dry brown margins. Check below the surface before soaking the full root area.",
+          "over": "Watch for yellowing and root decline in stagnant soil. If the root zone is still wet, pause watering and restore air or drainage."
         },
         "seasons": [
           {
             "season": "Spring",
-            "action": "Check for surviving basal shoots before trimming old stems and keep the new Bed 4 position open to light."
+            "action": "Mulch with ericaceous material, remove spent flowers gently and protect new growth from late frost."
           },
           {
             "season": "Summer",
-            "action": "Maintain even moisture, trim tired flowering shoots by about a third and avoid feeding heavily around neighbouring woody plants."
+            "action": "Use rainwater in drought and avoid lime-rich feed or amendments."
           },
           {
             "season": "Autumn",
-            "action": "Take labelled cuttings before frost if Wisley Vanilla is to be retained, and clear damp fallen petals from the crown."
+            "action": "Allow flower buds to develop untouched and clear smothering fallen leaves."
           },
           {
             "season": "Winter",
-            "action": "Do not rely on the outdoor plant surviving hard frost; keep any rooted cuttings bright, frost-free and lightly moist."
+            "action": "Protect from cold drying wind and do not prune away the spring flower buds."
           }
         ],
         "problems": [
           {
-            "name": "Aphids",
-            "sign": "Sticky, distorted tips and colonies around buds",
-            "response": "Rub off or wash away small colonies before they spread through the pot."
+            "name": "Lime-induced chlorosis",
+            "sign": "Young leaves turn yellow between greener veins",
+            "response": "Check soil and irrigation-water pH, restore acidic root conditions and correct drainage before adding trace feed."
           },
           {
-            "name": "Grey mould",
-            "sign": "Fuzzy decay among crowded flowers and leaves",
-            "response": "Remove affected material, increase airflow and avoid leaving flowers wet overnight."
+            "name": "Poor flowering or colour",
+            "sign": "Healthy growth but few flowers or muted foliage",
+            "response": "Review light, pruning time and excess nitrogen before adding more feed."
           },
           {
-            "name": "Root or stem rot",
-            "sign": "Yellowing followed by a soft dark base",
-            "response": "Stop watering, clear drainage holes and discard plants whose crown has collapsed."
+            "name": "Scale, aphids or leaf spot",
+            "sign": "Sticky leaves, fixed bumps or spreading discoloured patches",
+            "response": "Identify the cause first, remove badly affected material and improve airflow and plant vigour."
           }
         ],
-        "about": "Nemesia is a southern African genus of annuals, perennials and subshrubs with characteristic two-lipped flowers. Modern container hybrids are bred for compact growth, colour and sometimes fragrance, but most are frost-tender and dislike prolonged hot drought. A trim after flowering is often more productive than picking individual tiny blooms.",
-        "provenanceNote": "The photographed plant label reads Wisley Vanilla. This supersedes the earlier unresolved garden record.",
+        "caution": "All parts are harmful if eaten. Wear gloves and keep prunings away from children and pets.",
+        "about": "Pieris are evergreen heath-family shrubs from East Asia and North America. Like rhododendrons and heathers, their fine roots are adapted to acidic organic soils. Polar Passion is a variegated selection whose registered cultivar epithet is ‘Ppobas’.",
+        "provenanceNote": "The retained label and foliage support the trade cultivar identity.",
         "botanical": [
           {
             "label": "Family",
-            "value": "Scrophulariaceae"
+            "value": "Ericaceae"
           },
           {
             "label": "Genus",
-            "value": "Nemesia"
+            "value": "Pieris"
           },
           {
             "label": "Botanical name",
-            "value": "Nemesia ‘Wisley Vanilla’"
+            "value": "Pieris japonica 'Ppobas' (Polar Passion)"
           },
           {
             "label": "Plant type",
-            "value": "Compact tender flowering plant"
+            "value": "Compact variegated evergreen shrub"
           },
           {
             "label": "Foliage",
-            "value": "Tender and seasonal"
+            "value": "Evergreen and variegated"
           },
           {
             "label": "Habit",
-            "value": "Compact and branching"
+            "value": "Compact and rounded"
           },
           {
-            "label": "Name status",
-            "value": "Label confirmed"
+            "label": "Cultivar note",
+            "value": "Polar Passion is the trade name for ‘Ppobas’"
           },
           {
             "label": "Native to Britain or Ireland",
@@ -8031,38 +8244,197 @@
           }
         ],
         "oakLodge": {
-          "location": "Front-right edge of Bed 4 — moved from Bed 5's big pot · Bed 4",
-          "added": "Added July 2026",
-          "role": "Scented flowering filler within the big pot",
-          "observation": "Added in July to fill the planting around the Alstroemeria and trailing foliage.",
-          "status": "Cultivar wording is confirmed from the photographed label; retain the label image with the plant journal."
+          "location": "Former Gaillardia position in Back Bed 4 — moved October 2026 · Bed 4",
+          "added": "Added July 2026; moved via Front Bed 4 to Back Bed 4 in October 2026",
+          "role": "Variegated evergreen in Gaillardia's former Back Bed 4 pocket",
+          "observation": "October photographs show Polar Passion beside the wall; Petite Star now occupies its former front-garden location.",
+          "status": "Prioritise re-establishment, monitor chlorosis and keep lime-rich runoff away from the planting pocket."
         },
         "sources": [
           {
-            "title": "Royal Horticultural Society · How to grow Nemesia",
-            "url": "https://www.rhs.org.uk/plants/nemesia/how-to-grow-nemesia",
-            "note": "Habit, flowering, cultivation, trimming and frost protection"
+            "title": "Royal Horticultural Society · Pieris Polar Passion (‘Ppobas’)",
+            "url": "https://www.rhs.org.uk/plants/504956/pieris-japonica-polar-passion-ppobas-pbr-v/details",
+            "note": "Cultivar identity, evergreen habit, flowers and acid-soil cultivation"
           },
           {
             "title": "Oak Lodge garden record",
             "url": null,
             "note": "Identity label, position, photographs, planting history and on-site observations"
-          },
-          {
-            "title": "Oak Lodge photographed plant label",
-            "url": null,
-            "note": "Cultivar wording read directly from a retained label visible in the garden photo archive"
           }
         ],
-        "careSummary": "Retain the Wisley Vanilla label. Trim the pale scented Nemesia in its new Bed 4 position and keep the moved crown clear of woody neighbours.",
+        "careSummary": "Follow Polar Passion to Back Bed 4. Check its moved root ball in Gaillardia's former Back Bed 4 position; maintain an acidic root pocket and protect new shoots from exposure.",
         "contentReview": {
-          "date": "2026-09-18",
+          "date": "2026-10-03",
           "care": "Rewritten with botanical and specimen-specific actions"
         }
+      }
+    },
+    {
+      "id": "bed4-viola-pineapple-crush",
+      "name": "Viola 'Pineapple Crush'",
+      "latin": "Viola 'Bel Viso Pineapple Crush' (Bel Viso Series) — reported name",
+      "photos": [
+        "images/oct-2026/back-bed4-viola-pineapple-crush.webp"
+      ],
+      "position": "Front edge of Back Bed 4 — added October 2026",
+      "light": "Sun or partial shade. Flowers need light at the front edge.",
+      "water": "Moist, freely drained. Check the nursery plug as well as surrounding ground.",
+      "care": "Check the small plug: Water when its root ball begins to dry. Avoid wetting the crown repeatedly after autumn rain.\n\nRemove spent flower stems: Pinch off the seed pod too. Clear damaged petals before they decay among fresh buds.\n\nKeep the edge open: Lift overhanging neighbouring shoots. Photograph new flowers and retain a label to confirm the full series name.",
+      "seasonal": "Spring: Remove overwintered dead petals and enjoy renewed edge flowers.\nSummer: Trim stretched growth lightly and monitor the small plug in heat.\nAutumn: Keep the new Back Bed 4 Viola moist while its crown establishes.\nWinter: Clear soggy petals after rain and leave healthy leafy growth intact.",
+      "description": "Viola ‘Pineapple Crush’ adds low yellow-and-purple flowers at the front edge of Back Bed 4. The photo filename supplies the cultivar wording and Brad confirmed the bed. The RHS Bel Viso Pineapple Crush record is the botanical match used provisionally until a label is retained.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Fully hardy in the UK",
+        "flowering": "Mar, Apr, May, Sep, Oct, Nov",
+        "water": "Keep the small root ball evenly moist without saturating the crown",
+        "habit": "Cool-season bedding viola",
+        "size": "Low bedding mound",
+        "foliage": "Leafy cool-season bedding",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
       },
-      "identityResolution": {
-        "status": "confirmed",
-        "basis": "The photographed plant label reads Wisley Vanilla."
+      "profile": {
+        "version": 2,
+        "type": "Cool-season bedding viola",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "Viola ‘Pineapple Crush’ adds low yellow-and-purple flowers at the front edge of Back Bed 4. The photo filename supplies the cultivar wording and Brad confirmed the bed. The RHS Bel Viso Pineapple Crush record is the botanical match used provisionally until a label is retained.",
+        "floweringMonths": [
+          "Mar",
+          "Apr",
+          "May",
+          "Sep",
+          "Oct",
+          "Nov"
+        ],
+        "facts": [
+          {
+            "label": "Size",
+            "value": "Low bedding mound",
+            "detail": "Allow neighbouring shrubs to leave its small crown open."
+          },
+          {
+            "label": "Position",
+            "value": "Sun or partial shade",
+            "detail": "Flowers need light at the front edge."
+          },
+          {
+            "label": "Soil",
+            "value": "Moist, freely drained",
+            "detail": "Check the nursery plug as well as surrounding ground."
+          },
+          {
+            "label": "Flowers",
+            "value": "Cool-season colour",
+            "detail": "Autumn and spring display varies with weather."
+          },
+          {
+            "label": "Identity",
+            "value": "Pineapple Crush · reported",
+            "detail": "Bel Viso series relationship requires a retained label."
+          },
+          {
+            "label": "Care priority",
+            "value": "Keep the small Back Bed 4 plug open",
+            "detail": "Remove soggy petals and overhanging foliage so the new low Viola has light and air at the border edge."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Check the small plug",
+            "summary": "Water when its root ball begins to dry.",
+            "detail": "Avoid wetting the crown repeatedly after autumn rain."
+          },
+          {
+            "title": "Remove spent flower stems",
+            "summary": "Pinch off the seed pod too.",
+            "detail": "Clear damaged petals before they decay among fresh buds."
+          },
+          {
+            "title": "Keep the edge open",
+            "summary": "Lift overhanging neighbouring shoots.",
+            "detail": "Photograph new flowers and retain a label to confirm the full series name."
+          }
+        ],
+        "waterSigns": {
+          "under": "Flowers droop and fine leaves wilt with a dry nursery plug even if the bed surface looks damp.",
+          "over": "The Viola crown softens or petals mould while its soil remains wet; clear debris and check drainage."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Remove overwintered dead petals and enjoy renewed edge flowers."
+          },
+          {
+            "season": "Summer",
+            "action": "Trim stretched growth lightly and monitor the small plug in heat."
+          },
+          {
+            "season": "Autumn",
+            "action": "Keep the new Back Bed 4 Viola moist while its crown establishes."
+          },
+          {
+            "season": "Winter",
+            "action": "Clear soggy petals after rain and leave healthy leafy growth intact."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Slug damage",
+            "sign": "Flower buds or leaf edges disappear overnight",
+            "response": "Inspect the low bed edge after damp evenings and protect new growth."
+          }
+        ],
+        "about": "RHS records Bel Viso Pineapple Crush as a bedding Viola for humus-rich, moist but draining soil in sun or partial shade. Its overwintering trial included this variety; the Oak Lodge series relationship remains qualified.",
+        "provenanceNote": "Photo filename supplies Pineapple Crush; Brad confirmed Back Bed 4. The Bel Viso series match is provisional without the label.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Violaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Viola"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Viola 'Bel Viso Pineapple Crush' (Bel Viso Series) — reported name"
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Photo filename supplies Pineapple Crush; Brad confirmed Back Bed 4. The Bel Viso series match is provisional without the label."
+          }
+        ],
+        "oakLodge": {
+          "location": "Front edge of Back Bed 4 — added October 2026",
+          "added": "Added October 2026 · birthday update",
+          "role": "Low cool-season flowers at the front of Back Bed 4",
+          "observation": "A small yellow-and-purple flowering Viola is visible at the front edge of Back Bed 4. Brad confirmed the back-bed location despite the initial front-bed wording.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "RHS · Viola Bel Viso Pineapple Crush",
+            "url": "https://www.rhs.org.uk/plants/517052/viola-bel-viso-pineapple-crush-bel-viso-series/details",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "RHS · Viola overwintering trial",
+            "url": "https://www.rhs.org.uk/plants/trials-awards/plant-trial-results/viola",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "careSummary": "Keep the small Back Bed 4 plug open. Remove soggy petals and overhanging foliage so the new low Viola has light and air at the border edge.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
       }
     }
   ],
@@ -26327,207 +26699,6 @@
       }
     },
     {
-      "name": "Pieris 'Polar Passion'",
-      "id": "frontBed5-pieris-polar-passion",
-      "latin": "Pieris japonica 'Ppobas' (Polar Passion)",
-      "photos": [
-        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-1.jpeg",
-        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-2.jpeg",
-        "images/aug-2026-small-changes/front-bed4-pieris-polar-passion-move-3.jpeg",
-        "images/jul-2026/front-260725-bed-5-pieris-japonica-polar-passion-1.webp"
-      ],
-      "position": "Moved from Front Bed 5 into the former Flaming Silver position in August 2026",
-      "light": "Partial shade. Shelter from cold wind and strong early sun",
-      "water": "Even root moisture. Shallow Pieris roots must not dry hard; use rainwater where available and allow excess to drain.",
-      "care": "Keep the root run acidic: Use acidic, humus-rich soil and a shallow leaf-mould mulch. Keep lime away and do not cultivate through the fine surface roots. Check soil pH if young leaves yellow between green veins.\n\nPreserve next spring's flowers: Remove spent flower clusters carefully, with little routine pruning. Make any necessary shaping cuts after flowering. Protect new coloured shoots from drying winds and late frost; do not clip away developing buds later in the year.\n\nFollow Polar Passion to Front Bed 4: For this Oak Lodge specimen Check its moved root ball in Flaming Silver's former position rather than its old Front Bed 5 location.",
-      "seasonal": "Spring: Mulch with ericaceous material, remove spent flowers gently and protect new growth from late frost.\nSummer: Use rainwater in drought and avoid lime-rich feed or amendments.\nAutumn: Allow flower buds to develop untouched and clear smothering fallen leaves.\nWinter: Protect from cold drying wind and do not prune away the spring flower buds.",
-      "description": "Pieris japonica Polar Passion (‘Ppobas’) is the labelled evergreen with cream-edged leaves, colourful young growth and hanging spring flower clusters. It needs acidic, humus-rich soil and steady moisture without waterlogging; harsh early sun can scorch growth already chilled by frost. Its slow rounded habit makes it a permanent middle layer rather than a plant to clip routinely.",
-      "characteristics": {
-        "sunlight": "Partial shade",
-        "hardiness": "Around H5",
-        "flowering": "Mar, Apr, May",
-        "water": "Even root moisture",
-        "habit": "Garden shrub",
-        "size": "1–1.5m",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers visited by pollinators"
-      },
-      "profile": {
-        "version": 2,
-        "type": "Compact variegated evergreen shrub",
-        "badges": [
-          "Label confirmed",
-          "Acid soil",
-          "Spring flowers"
-        ],
-        "description": "Pieris japonica Polar Passion (‘Ppobas’) is the labelled evergreen with cream-edged leaves, colourful young growth and hanging spring flower clusters. It needs acidic, humus-rich soil and steady moisture without waterlogging; harsh early sun can scorch growth already chilled by frost. Its slow rounded habit makes it a permanent middle layer rather than a plant to clip routinely.",
-        "floweringMonths": [
-          "Mar",
-          "Apr",
-          "May"
-        ],
-        "facts": [
-          {
-            "label": "Size",
-            "value": "1–1.5m",
-            "detail": "Compact rounded shrub over many years"
-          },
-          {
-            "label": "Position",
-            "value": "Partial shade",
-            "detail": "Shelter from cold wind and strong early sun"
-          },
-          {
-            "label": "Soil",
-            "value": "Acidic, humus-rich and moist",
-            "detail": "Well-drained; use rainwater where practical"
-          },
-          {
-            "label": "Hardiness",
-            "value": "Around H5",
-            "detail": "Hardy, but new shoots and flowers can scorch"
-          },
-          {
-            "label": "Main feature",
-            "value": "Variegated foliage and hanging spring flowers",
-            "detail": "Young growth adds a second colour season"
-          },
-          {
-            "label": "Identity",
-            "value": "Pieris japonica ‘Ppobas’",
-            "detail": "Polar Passion trade name retained from the label"
-          },
-          {
-            "label": "Water",
-            "value": "Even root moisture",
-            "detail": "Shallow Pieris roots must not dry hard; use rainwater where available and allow excess to drain."
-          },
-          {
-            "label": "Care priority",
-            "value": "Follow Polar Passion to Front Bed 4",
-            "detail": "Check its moved root ball in Flaming Silver's former position rather than its old Front Bed 5 location."
-          }
-        ],
-        "careGuide": [
-          {
-            "title": "Keep the root run acidic",
-            "summary": "Use acidic, humus-rich soil and a shallow leaf-mould mulch.",
-            "detail": "Keep lime away and do not cultivate through the fine surface roots. Check soil pH if young leaves yellow between green veins."
-          },
-          {
-            "title": "Preserve next spring's flowers",
-            "summary": "Remove spent flower clusters carefully, with little routine pruning.",
-            "detail": "Make any necessary shaping cuts after flowering. Protect new coloured shoots from drying winds and late frost; do not clip away developing buds later in the year."
-          },
-          {
-            "title": "Follow Polar Passion to Front Bed 4",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Check its moved root ball in Flaming Silver's former position rather than its old Front Bed 5 location."
-          }
-        ],
-        "waterSigns": {
-          "under": "The most useful early warning is young leaves drooping and developing dry brown margins. Check below the surface before soaking the full root area.",
-          "over": "Watch for yellowing and root decline in stagnant soil. If the root zone is still wet, pause watering and restore air or drainage."
-        },
-        "seasons": [
-          {
-            "season": "Spring",
-            "action": "Mulch with ericaceous material, remove spent flowers gently and protect new growth from late frost."
-          },
-          {
-            "season": "Summer",
-            "action": "Use rainwater in drought and avoid lime-rich feed or amendments."
-          },
-          {
-            "season": "Autumn",
-            "action": "Allow flower buds to develop untouched and clear smothering fallen leaves."
-          },
-          {
-            "season": "Winter",
-            "action": "Protect from cold drying wind and do not prune away the spring flower buds."
-          }
-        ],
-        "problems": [
-          {
-            "name": "Lime-induced chlorosis",
-            "sign": "Young leaves turn yellow between greener veins",
-            "response": "Check soil and irrigation-water pH, restore acidic root conditions and correct drainage before adding trace feed."
-          },
-          {
-            "name": "Poor flowering or colour",
-            "sign": "Healthy growth but few flowers or muted foliage",
-            "response": "Review light, pruning time and excess nitrogen before adding more feed."
-          },
-          {
-            "name": "Scale, aphids or leaf spot",
-            "sign": "Sticky leaves, fixed bumps or spreading discoloured patches",
-            "response": "Identify the cause first, remove badly affected material and improve airflow and plant vigour."
-          }
-        ],
-        "caution": "All parts are harmful if eaten. Wear gloves and keep prunings away from children and pets.",
-        "about": "Pieris are evergreen heath-family shrubs from East Asia and North America. Like rhododendrons and heathers, their fine roots are adapted to acidic organic soils. Polar Passion is a variegated selection whose registered cultivar epithet is ‘Ppobas’.",
-        "provenanceNote": "The retained label and foliage support the trade cultivar identity.",
-        "botanical": [
-          {
-            "label": "Family",
-            "value": "Ericaceae"
-          },
-          {
-            "label": "Genus",
-            "value": "Pieris"
-          },
-          {
-            "label": "Botanical name",
-            "value": "Pieris japonica 'Ppobas' (Polar Passion)"
-          },
-          {
-            "label": "Plant type",
-            "value": "Compact variegated evergreen shrub"
-          },
-          {
-            "label": "Foliage",
-            "value": "Evergreen and variegated"
-          },
-          {
-            "label": "Habit",
-            "value": "Compact and rounded"
-          },
-          {
-            "label": "Cultivar note",
-            "value": "Polar Passion is the trade name for ‘Ppobas’"
-          },
-          {
-            "label": "Native to Britain or Ireland",
-            "value": "No"
-          }
-        ],
-        "oakLodge": {
-          "location": "Moved from Front Bed 5 into the former Flaming Silver position in August 2026 · Front Bed 4",
-          "added": "Added July 2026; moved from Front Bed 5 to Front Bed 4 in August 2026",
-          "role": "Variegated acid-loving evergreen moved into Front Bed 4",
-          "observation": "It now occupies Flaming Silver's former sheltered pocket beside the Photinia canopy.",
-          "status": "Prioritise re-establishment, monitor chlorosis and keep lime-rich runoff away from the planting pocket."
-        },
-        "sources": [
-          {
-            "title": "Royal Horticultural Society · Pieris Polar Passion (‘Ppobas’)",
-            "url": "https://www.rhs.org.uk/plants/504956/pieris-japonica-polar-passion-ppobas-pbr-v/details",
-            "note": "Cultivar identity, evergreen habit, flowers and acid-soil cultivation"
-          },
-          {
-            "title": "Oak Lodge garden record",
-            "url": null,
-            "note": "Identity label, position, photographs, planting history and on-site observations"
-          }
-        ],
-        "careSummary": "Follow Polar Passion to Front Bed 4. Check its moved root ball in Flaming Silver's former position rather than its old Front Bed 5 location.",
-        "contentReview": {
-          "date": "2026-09-18",
-          "care": "Rewritten with botanical and specimen-specific actions"
-        }
-      }
-    },
-    {
       "name": "Dahlia Dalina Maxi ‘Tampico’ — label confirmed",
       "id": "frontBed4-dahlia-tampico",
       "latin": "Dahlia ‘Datretten’ (Dalina Maxi Tampico)",
@@ -27563,6 +27734,183 @@
         "contentReview": {
           "date": "2026-09-18",
           "care": "Rewritten with botanical and specimen-specific actions"
+        }
+      }
+    },
+    {
+      "id": "frontBed4-hydrangea-petite-star",
+      "name": "Hydrangea 'Petite Star'",
+      "latin": "Hydrangea paniculata 'Coustar02' (Petite Star)",
+      "photos": [
+        "images/oct-2026/front-bed4-hydrangea-petite-star-1.webp",
+        "images/oct-2026/front-bed4-hydrangea-petite-star-2.webp"
+      ],
+      "position": "Former Polar Passion position — planted October 2026",
+      "light": "Sun or partial shade. Keep the new root ball evenly moist.",
+      "water": "Moist, well drained. Improve organic matter and avoid stagnant pockets.",
+      "care": "Establish the small root ball: Check its moisture after planting. Water the whole pocket when drying, then mulch clear of the stems.\n\nPrune as a panicle hydrangea: Use late winter or early spring. Shorten last year’s shoots to healthy buds; leave a sound low framework on the young plant.\n\nWatch the wall-side pocket: Give room for its rounded spread. Compare next summer’s panicles with this October foliage baseline.",
+      "seasonal": "Spring: Check healthy buds before panicle-hydrangea pruning and refresh mulch.\nSummer: Water the establishing shrub through dry spells as flower panicles develop.\nAutumn: Record changing flower colour and keep fallen leaves off the stem bases.\nWinter: Retain the low framework until the late-winter pruning window.",
+      "description": "Hydrangea ‘Petite Star’ replaces Polar Passion in Front Bed 4. This compact panicle hydrangea brings a low framework and changing summer flower colour. The October photographs record its new root pocket; the supplied cultivar name maps to Sapho’s ‘Coustar02’ introduction.",
+      "characteristics": {
+        "sunlight": "Sun or partial shade",
+        "hardiness": "Hardy shrub",
+        "flowering": "Jun, Jul, Aug, Sep",
+        "water": "Keep the newly planted root ball moist but freely drained",
+        "habit": "Compact deciduous panicle hydrangea",
+        "size": "About 60 × 80cm",
+        "foliage": "Deciduous",
+        "wildlife": "Foliage provides garden habitat"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Compact deciduous panicle hydrangea",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "Hydrangea ‘Petite Star’ replaces Polar Passion in Front Bed 4. This compact panicle hydrangea brings a low framework and changing summer flower colour. The October photographs record its new root pocket; the supplied cultivar name maps to Sapho’s ‘Coustar02’ introduction.",
+        "floweringMonths": [
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep"
+        ],
+        "facts": [
+          {
+            "label": "Size",
+            "value": "About 60 × 80cm",
+            "detail": "Sapho’s published height and spread."
+          },
+          {
+            "label": "Position",
+            "value": "Sun or partial shade",
+            "detail": "Keep the new root ball evenly moist."
+          },
+          {
+            "label": "Soil",
+            "value": "Moist, well drained",
+            "detail": "Improve organic matter and avoid stagnant pockets."
+          },
+          {
+            "label": "Hardiness",
+            "value": "Hardy shrub",
+            "detail": "Protect tender spring growth from late frost."
+          },
+          {
+            "label": "Flowers",
+            "value": "June–September",
+            "detail": "Lime panicles age white, pink and red."
+          },
+          {
+            "label": "Identity",
+            "value": "Petite Star / Coustar02",
+            "detail": "Name supplied by Brad; label photograph not retained here."
+          },
+          {
+            "label": "Care priority",
+            "value": "Establish Petite Star in the vacated front pocket",
+            "detail": "Check the new nursery root ball separately from neighbouring soil and retain a low framework for spring panicle-hydrangea pruning."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Establish the small root ball",
+            "summary": "Check its moisture after planting.",
+            "detail": "Water the whole pocket when drying, then mulch clear of the stems."
+          },
+          {
+            "title": "Prune as a panicle hydrangea",
+            "summary": "Use late winter or early spring.",
+            "detail": "Shorten last year’s shoots to healthy buds; leave a sound low framework on the young plant."
+          },
+          {
+            "title": "Watch the wall-side pocket",
+            "summary": "Give room for its rounded spread.",
+            "detail": "Compare next summer’s panicles with this October foliage baseline."
+          }
+        ],
+        "waterSigns": {
+          "under": "Soft leaves wilt and edges crisp with dry soil around the new root ball.",
+          "over": "Leaves yellow or shoots decline while the planting pocket remains saturated; check drainage."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Check healthy buds before panicle-hydrangea pruning and refresh mulch."
+          },
+          {
+            "season": "Summer",
+            "action": "Water the establishing shrub through dry spells as flower panicles develop."
+          },
+          {
+            "season": "Autumn",
+            "action": "Record changing flower colour and keep fallen leaves off the stem bases."
+          },
+          {
+            "season": "Winter",
+            "action": "Retain the low framework until the late-winter pruning window."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Dry new root ball",
+            "sign": "Leaves wilt although surrounding soil looks damp",
+            "response": "Check the original nursery root ball separately and water it deeply when dry."
+          }
+        ],
+        "about": "Sapho lists Petite Star as Hydrangea paniculata ‘Coustar02’, a compact deciduous selection with changing panicle colours. Panicle hydrangeas flower on the current season’s growth, supporting spring pruning.",
+        "provenanceNote": "Petite Star name supplied by Brad; Coustar02 botanical relationship verified from the cultivar publisher.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Hydrangeaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Hydrangea"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Hydrangea paniculata 'Coustar02' (Petite Star)"
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Petite Star name supplied by Brad; Coustar02 botanical relationship verified from the cultivar publisher."
+          }
+        ],
+        "oakLodge": {
+          "location": "Former Polar Passion position — planted October 2026",
+          "added": "Added October 2026 · birthday update",
+          "role": "Compact summer-flowering replacement in Polar Passion’s former Front Bed 4 pocket",
+          "observation": "A newly planted low Hydrangea now occupies the former Polar Passion pocket beside the brick wall.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "Sapho · Petite Star Coustar02",
+            "url": "https://www.sapho.fr/fr/arbres-et-arbustes/352-hydrangea-paniculata-petite-star-coustar02-.html",
+            "note": "Cultivar name, dimensions and flowering"
+          },
+          {
+            "title": "RHS · Hydrangea pruning",
+            "url": "https://www.rhs.org.uk/plants/hydrangea/pruning-guide",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "RHS · Growing shrubby hydrangeas",
+            "url": "https://www.rhs.org.uk/plants/hydrangea/shrubby/growing-guide",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "careSummary": "Establish Petite Star in the vacated front pocket. Check the new nursery root ball separately from neighbouring soil and retain a low framework for spring panicle-hydrangea pruning.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
         }
       }
     }
@@ -37077,6 +37425,879 @@
       "identityResolution": {
         "status": "confirmed",
         "basis": "The photographed nursery label reads Viburnum tinus Spirit; ‘Anvi’ is its accepted cultivar epithet."
+      }
+    }
+  ],
+  "House · Sitting Room · Rhipsalis (species to confirm)": [
+    {
+      "id": "house-sitting-rhipsalis",
+      "name": "Rhipsalis (species to confirm)",
+      "latin": "Rhipsalis sp.",
+      "light": "Bright indirect. Protect the trails from harsh window sun.",
+      "water": "Surface drying. Drain after watering; avoid sustained dryness.",
+      "care": "Check the hanging pot: Feel the compost before watering. Soak when its surface dries, then drain away from furniture.\n\nProtect its long trails: Keep stems clear of the stairs. The purple star records the hanging point; check that walking past does not snag growth.\n\nGive filtered light: Avoid harsh direct sunshine. Observe pale or puckered stems and adjust light or moisture after checking the roots.",
+      "seasonal": "Spring: Watch for fresh branching and increase checks as growth resumes.\nSummer: Check the exposed hanging root ball during warm spells.\nAutumn: Reduce drinks as the long trails grow more slowly.\nWinter: Keep the hanging cactus warm and water less often.",
+      "position": "Hanging beside the sitting-room stair opening · purple star",
+      "photos": [
+        "images/oct-2026/house-rhipsalis.webp"
+      ],
+      "description": "The new Rhipsalis hangs beside the sitting-room stair opening, its slender green stems falling in a long curtain. Brad supplied the genus name; species remains unresolved. Care follows mistletoe-cactus guidance provisionally, with observation of this specimen taking priority.",
+      "characteristics": {
+        "sunlight": "Bright indirect",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage specimen; no reliable indoor flowering window",
+        "water": "Surface drying",
+        "habit": "Trailing epiphytic cactus",
+        "size": "Species-dependent; identity to confirm",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Trailing epiphytic cactus",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "The new Rhipsalis hangs beside the sitting-room stair opening, its slender green stems falling in a long curtain. Brad supplied the genus name; species remains unresolved. Care follows mistletoe-cactus guidance provisionally, with observation of this specimen taking priority.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Habit",
+            "value": "Trailing stems",
+            "detail": "The October photograph shows a hanging specimen."
+          },
+          {
+            "label": "Light",
+            "value": "Bright indirect",
+            "detail": "Protect the trails from harsh window sun."
+          },
+          {
+            "label": "Water",
+            "value": "Surface drying",
+            "detail": "Drain after watering; avoid sustained dryness."
+          },
+          {
+            "label": "Temperature",
+            "value": "Warm room",
+            "detail": "Keep away from cold draughts."
+          },
+          {
+            "label": "Identity",
+            "value": "Rhipsalis sp.",
+            "detail": "Species and exact mature size remain unresolved."
+          },
+          {
+            "label": "Care priority",
+            "value": "Keep the hanging root ball accessible",
+            "detail": "Check moisture in the hanging pot itself and keep the long trails clear of the split-level stair opening."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Check the hanging pot",
+            "summary": "Feel the compost before watering.",
+            "detail": "Soak when its surface dries, then drain away from furniture."
+          },
+          {
+            "title": "Protect its long trails",
+            "summary": "Keep stems clear of the stairs.",
+            "detail": "The purple star records the hanging point; check that walking past does not snag growth."
+          },
+          {
+            "title": "Give filtered light",
+            "summary": "Avoid harsh direct sunshine.",
+            "detail": "Observe pale or puckered stems and adjust light or moisture after checking the roots."
+          }
+        ],
+        "waterSigns": {
+          "under": "Thin trails pucker and lose firmness with dry compost; check the hanging root ball before watering.",
+          "over": "Soft dark stems at the base with wet compost suggest decay; drain the pot and remove failed tissue."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Watch for fresh branching and increase checks as growth resumes."
+          },
+          {
+            "season": "Summer",
+            "action": "Check the exposed hanging root ball during warm spells."
+          },
+          {
+            "season": "Autumn",
+            "action": "Reduce drinks as the long trails grow more slowly."
+          },
+          {
+            "season": "Winter",
+            "action": "Keep the hanging cactus warm and water less often."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Stem damage",
+            "sign": "Trails snap or catch at the stair opening",
+            "response": "Reposition loose trails while keeping the recorded hanging point accessible."
+          }
+        ],
+        "about": "Rhipsalis are forest cacti; the mistletoe-cactus sources describe a hanging epiphyte needing filtered light and draining compost. Those sources do not confirm the species at Oak Lodge.",
+        "provenanceNote": "Genus supplied by Brad; no species or cultivar claimed from the photograph.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Cactaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Rhipsalis"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Rhipsalis sp."
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Genus supplied by Brad; no species or cultivar claimed from the photograph."
+          }
+        ],
+        "oakLodge": {
+          "location": "Hanging beside the sitting-room stair opening · purple star",
+          "added": "Added October 2026 · birthday update",
+          "role": "Hanging green curtain at the purple-star position",
+          "observation": "Long narrow trailing stems hang from the beam beside the split-level stair opening.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "NC State Extension · Mistletoe cactus",
+            "url": "https://plants.ces.ncsu.edu/plants/rhipsalis-baccifera/",
+            "note": "Provisional epiphytic-cactus care; not a specimen species confirmation"
+          },
+          {
+            "title": "RHS · Rhipsalis baccifera",
+            "url": "https://www.rhs.org.uk/plants/14483/rhipsalis-baccifera/details",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "environment": "indoor",
+        "display": {
+          "cycleTitle": "Indoor growth",
+          "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+          "waterLabel": "Watering",
+          "seasonsTitle": "Through the indoor year",
+          "waterNote": "Let the surface begin to dry, then water and drain; avoid prolonged drought."
+        },
+        "petSafety": {
+          "tone": "note",
+          "label": "Species safety unverified",
+          "detail": "Species remains unresolved; discourage chewing and keep fallen stems away from pets."
+        },
+        "careSummary": "Keep the hanging root ball accessible. Check moisture in the hanging pot itself and keep the long trails clear of the split-level stair opening.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
+      }
+    }
+  ],
+  "House · Sitting Room / stair opening · Dracaena Bicolour Touffe": [
+    {
+      "id": "house-sitting-dracaena-bicolour",
+      "name": "Dracaena Bicolour Touffe",
+      "latin": "Dracaena marginata Bicolor type — assumed",
+      "light": "Indirect light. Shelter at the stair opening.",
+      "water": "Upper compost drying. Avoid stagnant runoff.",
+      "care": "Water the inner pot: Allow the upper compost to dry. Drain thoroughly and use rainwater where possible.\n\nKeep leaves out of traffic: Check the green-star stair position. Rotate only enough to maintain balanced growth without obstructing the passage.\n\nClean and inspect the tufts: Wipe dust from strap-shaped leaves. Inspect for pests; avoid repeatedly wetting an already damp root ball.",
+      "seasonal": "Spring: Watch the two crowns for new leaves and restart modest feeding.\nSummer: Protect narrow leaves from strong glass-filtered sun and draughts.\nAutumn: Extend intervals between drinks as tuft growth slows.\nWinter: Keep the stair-side plant warm and reduce watering further.",
+      "position": "Beside the split-level stair opening · green star",
+      "photos": [
+        "images/oct-2026/house-dracaena-bicolour-1.webp",
+        "images/oct-2026/house-dracaena-bicolour-2.webp"
+      ],
+      "description": "Brad’s “Dracena Bicolour Touffe” is recorded as Dracaena Bicolour Touffe. The two narrow-leaved tufts beside the split-level stairs fit a marginata-type dragon tree. The formal Bicolor cultivar relationship remains assumed without a retained passport.",
+      "characteristics": {
+        "sunlight": "Indirect light",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage specimen; no reliable indoor flowering window",
+        "water": "Upper compost drying",
+        "habit": "Evergreen dragon tree",
+        "size": "Can become tall",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Evergreen dragon tree",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "Brad’s “Dracena Bicolour Touffe” is recorded as Dracaena Bicolour Touffe. The two narrow-leaved tufts beside the split-level stairs fit a marginata-type dragon tree. The formal Bicolor cultivar relationship remains assumed without a retained passport.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Habit",
+            "value": "Upright leafy tufts",
+            "detail": "Two crowns are visible in the small pot."
+          },
+          {
+            "label": "Light",
+            "value": "Indirect light",
+            "detail": "Shelter at the stair opening."
+          },
+          {
+            "label": "Water",
+            "value": "Upper compost drying",
+            "detail": "Avoid stagnant runoff."
+          },
+          {
+            "label": "Size",
+            "value": "Can become tall",
+            "detail": "Dragon trees can exceed 2m; this specimen is smaller."
+          },
+          {
+            "label": "Identity",
+            "value": "Bicolor type · assumed",
+            "detail": "Touffe wording retained from Brad’s record."
+          },
+          {
+            "label": "Care priority",
+            "value": "Protect the two stair-side tufts",
+            "detail": "Keep leaves clear of passing feet; verify natural light and drain the small inner pot after watering."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Water the inner pot",
+            "summary": "Allow the upper compost to dry.",
+            "detail": "Drain thoroughly and use rainwater where possible."
+          },
+          {
+            "title": "Keep leaves out of traffic",
+            "summary": "Check the green-star stair position.",
+            "detail": "Rotate only enough to maintain balanced growth without obstructing the passage."
+          },
+          {
+            "title": "Clean and inspect the tufts",
+            "summary": "Wipe dust from strap-shaped leaves.",
+            "detail": "Inspect for pests; avoid repeatedly wetting an already damp root ball."
+          }
+        ],
+        "waterSigns": {
+          "under": "Drooping tufts and dry leaf tips alongside dry compost call for a thorough, drained drink.",
+          "over": "Yellow lower leaves and a soft cane in wet compost call for a pause in watering and a drainage check."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Watch the two crowns for new leaves and restart modest feeding."
+          },
+          {
+            "season": "Summer",
+            "action": "Protect narrow leaves from strong glass-filtered sun and draughts."
+          },
+          {
+            "season": "Autumn",
+            "action": "Extend intervals between drinks as tuft growth slows."
+          },
+          {
+            "season": "Winter",
+            "action": "Keep the stair-side plant warm and reduce watering further."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Brown leaf tips",
+            "sign": "Dry tips despite moist roots",
+            "response": "Check water quality, draughts and nearby heat before increasing water."
+          }
+        ],
+        "about": "Dracaenas are woody tropical foliage plants. RHS recommends indirect light, warmth and attention to water quality; the supplied commercial name does not establish a verified cultivar.",
+        "provenanceNote": "Name supplied by Brad; Dracaena marginata Bicolor type is a qualified photo fit.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Asparagaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Dracaena"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Dracaena marginata Bicolor type — assumed"
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Name supplied by Brad; Dracaena marginata Bicolor type is a qualified photo fit."
+          }
+        ],
+        "oakLodge": {
+          "location": "Beside the split-level stair opening · green star",
+          "added": "Added October 2026 · birthday update",
+          "role": "Two-tier upright foliage at the green-star position",
+          "observation": "Two leafy tufts rise at different heights in a small nursery pot beside the stairs.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "RHS · How to grow dracaena",
+            "url": "https://www.rhs.org.uk/plants/dracaena/how-to-grow-dracaena",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "RHS · Dracaena guide",
+            "url": "https://www.rhs.org.uk/plants/dracaena",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "environment": "indoor",
+        "display": {
+          "cycleTitle": "Indoor growth",
+          "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+          "waterLabel": "Watering",
+          "seasonsTitle": "Through the indoor year",
+          "waterNote": "Allow the upper compost to dry before soaking and draining; use rainwater where possible."
+        },
+        "petSafety": {
+          "tone": "caution",
+          "label": "Harmful if eaten",
+          "detail": "RHS records Dracaena as toxic; keep foliage out of reach of children and pets."
+        },
+        "careSummary": "Protect the two stair-side tufts. Keep leaves clear of passing feet; verify natural light and drain the small inner pot after watering.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
+      }
+    }
+  ],
+  "House · Bedroom-wing landing · Crassula 'Hottentot'": [
+    {
+      "id": "house-landing-crassula-hottentot",
+      "name": "Crassula 'Hottentot'",
+      "latin": "Crassula rupestris subsp. marnieriana type",
+      "light": "Very bright. The lamp is part of the display; assess actual daylight.",
+      "water": "Dry between drinks. Use the inner-pot weight and compost together.",
+      "care": "Empty the decorative pot: Water only after drying. Soak the inner pot separately and let runoff finish before replacing it.\n\nAssess daylight at the shelf: Give the succulent strong natural light. Introduce direct sun gradually; watch stretching at the orange-star position.\n\nKeep the leaf strings sound: Handle trailing growth gently. Remove only damaged portions and inspect tightly stacked leaves for mealybugs.",
+      "seasonal": "Spring: Resume moderate watering once the leaf strings extend.\nSummer: Maintain bright light and allow drying between soakings.\nAutumn: Check for stretching as shelf daylight declines.\nWinter: Water the landing succulent sparingly and keep it warm.",
+      "position": "Landing shelf above the split-level stair · orange star",
+      "photos": [
+        "images/oct-2026/house-crassula-hottentot-1.webp",
+        "images/oct-2026/house-crassula-hottentot-2.webp"
+      ],
+      "description": "Crassula ‘Hottentot’ spills over the landing shelf in dense bead-like strings of fleshy paired leaves. The supplied commercial name is retained, while its botanical placement follows the marnieriana worm-plant type provisionally. The orange star marks the shelf beside the lamp.",
+      "characteristics": {
+        "sunlight": "Very bright",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage specimen; no reliable indoor flowering window",
+        "water": "Dry between drinks",
+        "habit": "Trailing succulent",
+        "size": "Species-dependent; identity to confirm",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Trailing succulent",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "Crassula ‘Hottentot’ spills over the landing shelf in dense bead-like strings of fleshy paired leaves. The supplied commercial name is retained, while its botanical placement follows the marnieriana worm-plant type provisionally. The orange star marks the shelf beside the lamp.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Habit",
+            "value": "Pendant leafy strings",
+            "detail": "Long trails spill from the decorative pot."
+          },
+          {
+            "label": "Light",
+            "value": "Very bright",
+            "detail": "The lamp is part of the display; assess actual daylight."
+          },
+          {
+            "label": "Water",
+            "value": "Dry between drinks",
+            "detail": "Use the inner-pot weight and compost together."
+          },
+          {
+            "label": "Compost",
+            "value": "Gritty cactus mix",
+            "detail": "Drain excess from the outer pot."
+          },
+          {
+            "label": "Identity",
+            "value": "Marnieriana type",
+            "detail": "Commercial Hottentot name supplied by Brad."
+          },
+          {
+            "label": "Care priority",
+            "value": "Check natural light on the landing shelf",
+            "detail": "The table lamp does not establish adequate daylight; monitor stretching and let the succulent compost dry between drinks."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Empty the decorative pot",
+            "summary": "Water only after drying.",
+            "detail": "Soak the inner pot separately and let runoff finish before replacing it."
+          },
+          {
+            "title": "Assess daylight at the shelf",
+            "summary": "Give the succulent strong natural light.",
+            "detail": "Introduce direct sun gradually; watch stretching at the orange-star position."
+          },
+          {
+            "title": "Keep the leaf strings sound",
+            "summary": "Handle trailing growth gently.",
+            "detail": "Remove only damaged portions and inspect tightly stacked leaves for mealybugs."
+          }
+        ],
+        "waterSigns": {
+          "under": "Leaves wrinkle and trails lose plumpness with a light dry pot; rewet and drain.",
+          "over": "Translucent soft leaves and blackened stem bases with wet compost indicate rot risk."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Resume moderate watering once the leaf strings extend."
+          },
+          {
+            "season": "Summer",
+            "action": "Maintain bright light and allow drying between soakings."
+          },
+          {
+            "season": "Autumn",
+            "action": "Check for stretching as shelf daylight declines."
+          },
+          {
+            "season": "Winter",
+            "action": "Water the landing succulent sparingly and keep it warm."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Mealybugs",
+            "sign": "White cotton-like patches between paired leaves",
+            "response": "Isolate and inspect the dense leaf stacks before treatment."
+          }
+        ],
+        "about": "RHS places worm plant under Crassula rupestris subsp. marnieriana and advises cactus compost, full light and sparse winter watering. The supplied ‘Hottentot’ wording is a garden record rather than a photographed label confirmation.",
+        "provenanceNote": "Commercial name supplied by Brad; marnieriana botanical fit remains provisional.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Crassulaceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Crassula"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Crassula rupestris subsp. marnieriana type"
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Commercial name supplied by Brad; marnieriana botanical fit remains provisional."
+          }
+        ],
+        "oakLodge": {
+          "location": "Landing shelf above the split-level stair · orange star",
+          "added": "Added October 2026 · birthday update",
+          "role": "Pendant succulent on the orange-star landing shelf",
+          "observation": "Dense strings of fleshy paired leaves spill from a decorative pot beside a table lamp.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "RHS · Worm plant",
+            "url": "https://www.rhs.org.uk/plants/4749/crassula-rupestris-subsp-marnieriana/details",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Kew · Crassula rupestris subsp. marnieriana",
+            "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A878790-1",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "environment": "indoor",
+        "display": {
+          "cycleTitle": "Indoor growth",
+          "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+          "waterLabel": "Watering",
+          "seasonsTitle": "Through the indoor year",
+          "waterNote": "Let compost dry between soakings; water sparingly through winter."
+        },
+        "petSafety": {
+          "tone": "note",
+          "label": "Cultivar safety unverified",
+          "detail": "A cultivar-specific safety record is not established here; discourage chewing the succulent."
+        },
+        "careSummary": "Check natural light on the landing shelf. The table lamp does not establish adequate daylight; monitor stretching and let the succulent compost dry between drinks.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
+      }
+    }
+  ],
+  "House · Kitchen / Dining · Philodendron (species to confirm)": [
+    {
+      "id": "house-kitchen-philodendron",
+      "name": "Philodendron (species to confirm)",
+      "latin": "Philodendron sp.",
+      "light": "Bright indirect. Protect leaves at the kitchen window.",
+      "water": "Upper compost drying. Use airy compost and free drainage.",
+      "care": "Check the kitchen root ball: Water after surface drying. Drain the orange pot fully before returning it to the window.\n\nLeave space for new leaves: Protect tender foliage from sun scorch. Observe growth before deciding whether this particular plant needs a climbing support.\n\nHandle with care: Keep it out of reach. Wear gloves when cutting and clean tools after contact with sap.",
+      "seasonal": "Spring: Record the next leaves to help resolve identity and habit.\nSummer: Check the small kitchen pot more often during warm weather.\nAutumn: Reduce water as this young plant slows in lower light.\nWinter: Keep the Philodendron away from cold window glass.",
+      "position": "Kitchen / dining window · red star",
+      "photos": [
+        "images/oct-2026/house-philodendron.webp"
+      ],
+      "description": "The birthday photograph records a small Philodendron in an orange pot. Brad’s red star places it at the kitchen / dining window. Species, cultivar and eventual climbing or upright habit remain unresolved, so this portrait uses genus guidance and keeps those questions visible.",
+      "characteristics": {
+        "sunlight": "Bright indirect",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage specimen; no reliable indoor flowering window",
+        "water": "Upper compost drying",
+        "habit": "Tropical foliage plant; habit unresolved",
+        "size": "Species-dependent; identity to confirm",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Tropical foliage plant; habit unresolved",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "The birthday photograph records a small Philodendron in an orange pot. Brad’s red star places it at the kitchen / dining window. Species, cultivar and eventual climbing or upright habit remain unresolved, so this portrait uses genus guidance and keeps those questions visible.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Light",
+            "value": "Bright indirect",
+            "detail": "Protect leaves at the kitchen window."
+          },
+          {
+            "label": "Water",
+            "value": "Upper compost drying",
+            "detail": "Use airy compost and free drainage."
+          },
+          {
+            "label": "Temperature",
+            "value": "Warm indoors",
+            "detail": "Keep clear of cold glass and draughts."
+          },
+          {
+            "label": "Habit",
+            "value": "To confirm",
+            "detail": "Observe future stems before choosing support."
+          },
+          {
+            "label": "Identity",
+            "value": "Philodendron sp.",
+            "detail": "No cultivar inferred from this photograph."
+          },
+          {
+            "label": "Care priority",
+            "value": "Record the next kitchen-window leaves",
+            "detail": "Retain species uncertainty, inspect new growth before choosing a support and keep the orange pot fully drained."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Check the kitchen root ball",
+            "summary": "Water after surface drying.",
+            "detail": "Drain the orange pot fully before returning it to the window."
+          },
+          {
+            "title": "Leave space for new leaves",
+            "summary": "Protect tender foliage from sun scorch.",
+            "detail": "Observe growth before deciding whether this particular plant needs a climbing support."
+          },
+          {
+            "title": "Handle with care",
+            "summary": "Keep it out of reach.",
+            "detail": "Wear gloves when cutting and clean tools after contact with sap."
+          }
+        ],
+        "waterSigns": {
+          "under": "Leaves droop with a light dry pot; check beneath the surface before soaking.",
+          "over": "Lower leaves yellow while the root ball stays wet; restore drainage before watering again."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Record the next leaves to help resolve identity and habit."
+          },
+          {
+            "season": "Summer",
+            "action": "Check the small kitchen pot more often during warm weather."
+          },
+          {
+            "season": "Autumn",
+            "action": "Reduce water as this young plant slows in lower light."
+          },
+          {
+            "season": "Winter",
+            "action": "Keep the Philodendron away from cold window glass."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Scorched leaves",
+            "sign": "Dry pale patches on the exposed side",
+            "response": "Filter harsh sun and photograph new growth to compare."
+          }
+        ],
+        "about": "Philodendrons are tropical aroids grown for foliage. Species include climbers and upright plants; the genus-level RHS guide supports indirect light, warmth, draining compost and safe handling while this specimen’s identity remains open.",
+        "provenanceNote": "Philodendron genus supplied by Brad; species and cultivar unresolved.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Araceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Philodendron"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Philodendron sp."
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Philodendron genus supplied by Brad; species and cultivar unresolved."
+          }
+        ],
+        "oakLodge": {
+          "location": "Kitchen / dining window · red star",
+          "added": "Added October 2026 · birthday update",
+          "role": "Small foliage specimen at the red-star kitchen window",
+          "observation": "The supplied birthday photograph records a small broad-leaved plant in an orange pot; species and cultivar remain unresolved.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "RHS · How to grow philodendrons",
+            "url": "https://www.rhs.org.uk/plants/philodendron/growing-guide",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "environment": "indoor",
+        "display": {
+          "cycleTitle": "Indoor growth",
+          "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+          "waterLabel": "Watering",
+          "seasonsTitle": "Through the indoor year",
+          "waterNote": "Water once the upper compost begins to dry and let excess drain completely."
+        },
+        "petSafety": {
+          "tone": "caution",
+          "label": "Harmful if eaten",
+          "detail": "Philodendron sap is irritant and plants are harmful if eaten; keep out of reach of children and pets."
+        },
+        "careSummary": "Record the next kitchen-window leaves. Retain species uncertainty, inspect new growth before choosing a support and keep the orange pot fully drained.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
+      }
+    }
+  ],
+  "House · Bedroom-wing landing · Zamioculcas": [
+    {
+      "id": "house-landing-zamioculcas",
+      "name": "Zamioculcas",
+      "latin": "Zamioculcas zamiifolia — assumed",
+      "light": "Indirect; shade tolerated. Lower light lengthens drying time.",
+      "water": "Root ball drying. Check deeply before the next drink.",
+      "care": "Let the root ball dry: Check below the surface. Water thoroughly only after drying and let all runoff escape.\n\nProtect the landing leaves: Keep upright stalks away from traffic. The blue star sits beside the stair opening; avoid scraping leaflets when passing.\n\nInspect glossy leaflets: Wipe dust gently. Look for scale on stalks and leaf undersides; feed sparingly during active growth.",
+      "seasonal": "Spring: Watch for new upright shoots and check whether the pot is congested.\nSummer: Allow full drying even while the landing is warm.\nAutumn: Lengthen the gap between drinks as growth slows.\nWinter: Keep the rhizomes dry between occasional winter drinks.",
+      "position": "Landing beside Bedroom 3 and the split-level stairs · blue star",
+      "photos": [
+        "images/oct-2026/house-zamioculcas-1.webp",
+        "images/oct-2026/house-zamioculcas-2.webp"
+      ],
+      "description": "Zamioculcas stands beside the console on the bedroom-wing landing, with glossy leaflets on upright fleshy stalks. Its photograph strongly supports Zamioculcas zamiifolia, retained as assumed without a label. The blue star records the position beside Bedroom 3.",
+      "characteristics": {
+        "sunlight": "Indirect; shade tolerated",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage specimen; no reliable indoor flowering window",
+        "water": "Root ball drying",
+        "habit": "Rhizomatous evergreen foliage plant",
+        "size": "About 60–120cm",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "type": "Rhizomatous evergreen foliage plant",
+        "badges": [
+          "Recorded October 2026",
+          "Birthday plants"
+        ],
+        "description": "Zamioculcas stands beside the console on the bedroom-wing landing, with glossy leaflets on upright fleshy stalks. Its photograph strongly supports Zamioculcas zamiifolia, retained as assumed without a label. The blue star records the position beside Bedroom 3.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Habit",
+            "value": "Upright glossy leaves",
+            "detail": "Fleshy stalks rise from underground rhizomes."
+          },
+          {
+            "label": "Light",
+            "value": "Indirect; shade tolerated",
+            "detail": "Lower light lengthens drying time."
+          },
+          {
+            "label": "Water",
+            "value": "Root ball drying",
+            "detail": "Check deeply before the next drink."
+          },
+          {
+            "label": "Size",
+            "value": "About 60–120cm",
+            "detail": "Published species range; allow space at the landing."
+          },
+          {
+            "label": "Identity",
+            "value": "Z. zamiifolia · assumed",
+            "detail": "Photo fit and supplied genus; no named cultivar."
+          },
+          {
+            "label": "Care priority",
+            "value": "Let the fleshy rhizomes dry between drinks",
+            "detail": "Check deep compost at the blue-star landing position before watering; avoid trapping runoff beneath the nursery pot."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Let the root ball dry",
+            "summary": "Check below the surface.",
+            "detail": "Water thoroughly only after drying and let all runoff escape."
+          },
+          {
+            "title": "Protect the landing leaves",
+            "summary": "Keep upright stalks away from traffic.",
+            "detail": "The blue star sits beside the stair opening; avoid scraping leaflets when passing."
+          },
+          {
+            "title": "Inspect glossy leaflets",
+            "summary": "Wipe dust gently.",
+            "detail": "Look for scale on stalks and leaf undersides; feed sparingly during active growth."
+          }
+        ],
+        "waterSigns": {
+          "under": "Leaflets lose gloss and wrinkle with a thoroughly dry root ball; soak and drain once.",
+          "over": "Yellow leaves and soft stalk bases in persistently wet compost suggest rhizome or root rot."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Watch for new upright shoots and check whether the pot is congested."
+          },
+          {
+            "season": "Summer",
+            "action": "Allow full drying even while the landing is warm."
+          },
+          {
+            "season": "Autumn",
+            "action": "Lengthen the gap between drinks as growth slows."
+          },
+          {
+            "season": "Winter",
+            "action": "Keep the rhizomes dry between occasional winter drinks."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Rhizome rot",
+            "sign": "Stalks collapse at a wet soft base",
+            "response": "Pause watering, inspect roots and restore drainage."
+          }
+        ],
+        "about": "Zamioculcas zamiifolia is an African aroid with water-storing rhizomes. NC State describes slow growth, shade tolerance and poor tolerance of wet roots; the photographed plant is recorded as an assumed species fit.",
+        "provenanceNote": "Supplied genus and glossy pinnate leaves strongly support Z. zamiifolia; retained as assumed.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Araceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Zamioculcas"
+          },
+          {
+            "label": "Botanical name",
+            "value": "Zamioculcas zamiifolia — assumed"
+          },
+          {
+            "label": "Identity evidence",
+            "value": "Supplied genus and glossy pinnate leaves strongly support Z. zamiifolia; retained as assumed."
+          }
+        ],
+        "oakLodge": {
+          "location": "Landing beside Bedroom 3 and the split-level stairs · blue star",
+          "added": "Added October 2026 · birthday update",
+          "role": "Glossy upright foliage at the blue-star landing position",
+          "observation": "Glossy upright leaf stalks stand in a black nursery pot beside the wooden console.",
+          "status": "Retain labels and compare the next photographs with this October baseline."
+        },
+        "sources": [
+          {
+            "title": "NC State Extension · ZZ plant",
+            "url": "https://plants.ces.ncsu.edu/plants/zamioculcas-zamiifolia/",
+            "note": "Botanical identity and cultivation"
+          },
+          {
+            "title": "Oak Lodge October birthday record",
+            "url": null,
+            "note": "Brad’s plant names, marked floor plan, confirmed bed moves and supplied photographs"
+          }
+        ],
+        "environment": "indoor",
+        "display": {
+          "cycleTitle": "Indoor growth",
+          "cycleEmpty": "Foliage specimen; no reliable indoor flowering window",
+          "waterLabel": "Watering",
+          "seasonsTitle": "Through the indoor year",
+          "waterNote": "Allow the whole root ball to dry before watering; reduce checks into winter."
+        },
+        "petSafety": {
+          "tone": "caution",
+          "label": "Harmful if eaten",
+          "detail": "NC State records toxicity to cats and dogs; prevent chewing and keep removed leaves out of reach."
+        },
+        "careSummary": "Let the fleshy rhizomes dry between drinks. Check deep compost at the blue-star landing position before watering; avoid trapping runoff beneath the nursery pot.",
+        "contentReview": {
+          "date": "2026-10-03",
+          "care": "Retained existing plant-specific authored care"
+        }
       }
     }
   ]
