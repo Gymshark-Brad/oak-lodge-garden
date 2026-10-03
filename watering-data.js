@@ -257,14 +257,8 @@
     "House · Hallway · Staghorn Fern": {
       "Staghorn Fern": 3,
     },
-    "House · Sitting Room · Shared Pot · Spider Plant": {
-      "Spider Plant ‘Vittatum’ — assumed": 3,
-    },
-    "House · Sitting Room · Shared Pot · Parlour Palm": {
-      "Parlour Palm — assumed": 3,
-    },
-    "House · Sitting Room · Shared Pot · Arrowhead Vine": {
-      "Arrowhead Vine — assumed": 3,
+    "House · Sitting Room · Nicola’s Mixed Planter": {
+      "Nicola’s Mixed Planter — identities assumed": 3,
     },
   };
 

@@ -210,13 +210,11 @@ function run(argv) {
   }
 
   const mixedHouseplantChecks = {
-    "house-sitting-mixed-spider-plant": "Non-toxic to cats & dogs",
-    "house-sitting-mixed-parlour-palm": "Non-toxic to cats & dogs",
-    "house-sitting-mixed-arrowhead-vine": "Harmful if eaten",
+    "house-sitting-mixed-spider-plant": "Harmful if eaten",
   };
   Object.entries(mixedHouseplantChecks).forEach(([plantId, safetyLabel]) => {
     const mixedRecord = OAK.PLANT_BY_ID[plantId];
-    if (!mixedRecord || !mixedRecord.plant.name.endsWith("— assumed")
+    if (!mixedRecord || !mixedRecord.plant.name.endsWith("— identities assumed")
       || !mixedRecord.plant.profile.petSafety
       || mixedRecord.plant.profile.petSafety.label !== safetyLabel) {
       errors.push("shared gift-pot identity qualification or safety record is incomplete: " + plantId);
