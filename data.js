@@ -3146,6 +3146,40 @@ window.OAK = (function () {
     seasonal: "Mixed Viola and Pansy flowers give the three-can cluster autumn-to-spring colour during mild weather.",
   }];
 
+  // October berry planting replaces the September basket rescues.
+  PLANTS["Bed 1"].push(...[
+  {
+    "id": "bed1-pernettya-pink",
+    "name": "Pernettya Pink (cultivar to confirm)",
+    "latin": "Gaultheria mucronata — pink-fruited form",
+    "position": "Former Fuchsia and fern pocket beneath the Maple, left of the Hosta and Buddha",
+    "light": "Sun to partial shade",
+    "water": "Moist, freely drained acidic soil; check the original root ball",
+    "care": "Check soil acidity; avoid drying out and heavy pruning.",
+    "seasonal": "White flowers in late spring / early summer; pink berries in autumn and winter",
+    "photos": [
+      "images/oct-2026/back-bed1-pernettya-pink.webp",
+      "images/oct-2026/back-bed1-berry-planting.webp"
+    ],
+    "group": "Back Bed 1 · added October 2026"
+  },
+  {
+    "id": "bed1-solanum-jupiter",
+    "name": "Solanum 'Jupiter' (name supplied)",
+    "latin": "Solanum pseudocapsicum 'Jupiter' — supplied trade name",
+    "position": "Former Fuchsia and fern pocket beneath the Maple, in front of the Hosta",
+    "light": "Sunny, sheltered position",
+    "water": "Keep the root ball moist but freely drained",
+    "care": "Tender: requires frost-free conditions to retain through winter. All parts are poisonous.",
+    "seasonal": "Small white summer flowers; orange and red autumn berries",
+    "photos": [
+      "images/oct-2026/back-bed1-solanum-jupiter.webp",
+      "images/oct-2026/back-bed1-berry-planting.webp"
+    ],
+    "group": "Back Bed 1 · added October 2026"
+  }
+]);
+
   // October 2026 birthday planting. Keep stable IDs through each move.
   const octoberNemesia = takePlant("Bed 4", "bed5-big-pot-nemesia");
   Object.assign(octoberNemesia, { group: "Back Bed 1 · moved October 2026", position: "Moved from Back Bed 4 in October 2026", photos: ["images/oct-2026/back-bed1-update.webp", ...octoberNemesia.photos] });
@@ -4501,8 +4535,8 @@ window.OAK = (function () {
       { mapNo: "BOX", plantId: "bed1-box-hedging", name: "Box Hedging", x: 92, y: 58, r: 7, hue: 130 },
       { mapNo: "LH", plantId: "bed1-little-heath", name: "Little Heath", x: 18, y: 53, r: 7, hue: 320 },
       { mapNo: 12, plantId: "stairpots-p1-skimmia-double-diamond", name: "Skimmia 'Double Diamond'", x: 42, y: 35, r: 7, hue: 120 },
-      { mapNo: 13, plantId: "baskets-trailing-fuchsia", name: "Fuchsia (cultivar to confirm)", x: 24, y: 35, r: 8, hue: 340 },
-      { mapNo: 14, plantId: "baskets-fern-unidentified", name: "Fern (cultivar to confirm)", x: 34, y: 26, r: 7, hue: 110 },
+      {   "mapNo": 13,   "plantId": "bed1-pernettya-pink",   "name": "Pernettya Pink (cultivar to confirm)",   "x": 24,   "y": 35,   "r": 7,   "hue": 340,   "positionNote": "Approximate replacement pocket; relative placement shown in October photographs" },
+      {   "mapNo": 14,   "plantId": "bed1-solanum-jupiter",   "name": "Solanum 'Jupiter' (name supplied)",   "x": 34,   "y": 26,   "r": 7,   "hue": 40,   "positionNote": "Approximate replacement pocket; relative placement shown in October photographs" },
       { mapNo: 15, plantId: "bed5-big-pot-nemesia", name: "Nemesia", x: 74, y: 74, r: 6, hue: 70, positionNote: "Approximate October pocket" },
       { mapNo: 16, plantId: "bed4-gaillardia", name: "Gaillardia", x: 48, y: 82, r: 6, hue: 25, positionNote: "Approximate October pocket" },
     ],
@@ -5193,6 +5227,41 @@ window.OAK = (function () {
   Object.entries(octoberPortraitPhotos).forEach(([id, photos]) => {
     PLANT_PHOTOS_BY_ID[id] = [{ month: "oct-2026", label: "October 2026", photos }, ...(PLANT_PHOTOS_BY_ID[id] || [])];
   });
+
+  PHOTOS_BY_MONTH["oct-2026"].bed1.unshift(...[
+  {
+    "src": "images/oct-2026/back-bed1-solanum-jupiter.webp",
+    "caption": "Solanum Jupiter in the former basket-rescue pocket"
+  },
+  {
+    "src": "images/oct-2026/back-bed1-pernettya-pink.webp",
+    "caption": "Pernettya Pink beside the Buddha and Hosta"
+  },
+  {
+    "src": "images/oct-2026/back-bed1-berry-planting.webp",
+    "caption": "Both new berry plants beneath the Japanese Maple"
+  }
+]);
+  PLANT_PHOTOS_BY_ID["bed1-pernettya-pink"] = [{ month: "oct-2026", label: "October 2026", photos: [
+  {
+    "src": "images/oct-2026/back-bed1-pernettya-pink.webp",
+    "caption": "Pernettya Pink beside the Buddha and Hosta"
+  },
+  {
+    "src": "images/oct-2026/back-bed1-berry-planting.webp",
+    "caption": "Both new berry plants beneath the Japanese Maple"
+  }
+] }];
+  PLANT_PHOTOS_BY_ID["bed1-solanum-jupiter"] = [{ month: "oct-2026", label: "October 2026", photos: [
+  {
+    "src": "images/oct-2026/back-bed1-solanum-jupiter.webp",
+    "caption": "Solanum Jupiter in the former basket-rescue pocket"
+  },
+  {
+    "src": "images/oct-2026/back-bed1-berry-planting.webp",
+    "caption": "Both new berry plants beneath the Japanese Maple"
+  }
+] }];
 
   // Cards and galleries use lightweight display derivatives. Originals stay
   // available for the full-screen lightboxes, and components fall back to

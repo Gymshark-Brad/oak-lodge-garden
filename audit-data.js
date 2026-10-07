@@ -376,7 +376,7 @@ function run(argv) {
     errors.push("care review does not cover every active plant");
   }
   ["baskets-fern-unidentified", "frontBed5-fern-jurassic-gold"].forEach((id) => {
-    if (OAK.PLANT_BY_ID[id].plant.profile.floweringMonths.length) errors.push(`fern assigned a flowering window: ${id}`);
+    if (OAK.PLANT_BY_ID[id] && OAK.PLANT_BY_ID[id].plant.profile.floweringMonths.length) errors.push(`fern assigned a flowering window: ${id}`);
   });
   if (/Kleph15313/.test(OAK.PLANT_BY_ID["bigpot1-petunia"].plant.profile.facts.find((row) => row.label === "Identity").value)) {
     errors.push("Midnight Sky incorrectly equated with NightSky");

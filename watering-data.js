@@ -628,6 +628,9 @@
   WATER_BANDS["House · Kitchen / Dining · Philodendron (species to confirm)"] = {"Philodendron (species to confirm)": 3};
   WATER_BANDS["House · Bedroom-wing landing · Zamioculcas"] = {"Zamioculcas": 1};
 
+  WATER_BANDS["Bed 1"]["Pernettya Pink (cultivar to confirm)"] = 3;
+  WATER_BANDS["Bed 1"]["Solanum 'Jupiter' (name supplied)"] = 3;
+
   const WATER_BANDS_BY_ID = {};
   Object.values(window.OAK.PLANT_BY_ID || {}).forEach((record) => {
     const band = (WATER_BANDS[record.plantKey] || {})[record.plant.name];

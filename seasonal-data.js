@@ -5630,17 +5630,14 @@
         "category": "protect",
         "scope": "zone",
         "zoneKeys": [
-          "bed1",
           "frontPots"
         ],
         "plantIds": [
-          "baskets-trailing-fuchsia",
-          "baskets-fern-unidentified",
           "frontPots-fuchsia-pot"
         ],
-        "title": "Check winter needs of the unidentified Fuchsias and fern",
+        "title": "Check winter needs of the unidentified front Fuchsia",
         "timing": "Before damaging frost.",
-        "summary": "The former basket plants in Bed 1 and the front Fuchsia pot do not have confirmed hardiness.",
+        "summary": "The front Fuchsia pot does not have confirmed hardiness.",
         "why": "Give this planting the seasonal attention it needs without disturbing healthy neighbouring plants.",
         "steps": [
           "Look for retained labels or clear identification evidence.",
@@ -5650,14 +5647,10 @@
         "doneWhen": "The named work is complete and healthy growth remains undamaged.",
         "sources": [
           "fleece",
-          "plant-baskets-trailing-fuchsia",
-          "plant-baskets-fern-unidentified",
           "plant-frontPots-fuchsia-pot"
         ],
         "guide": "protect",
         "plantNotes": {
-          "baskets-trailing-fuchsia": "Fuchsia hardiness is not confirmed here. Keep living stems and seek the label; tender types need a frost-free home rather than assuming the Mrs Popple care used in the big pots.",
-          "baskets-fern-unidentified": "The fern’s identity and hardiness remain unknown. Keep healthy fronds, protect temporarily from cold exposure and seek identification before relying on an outdoor winter.",
           "frontPots-fuchsia-pot": "Fuchsia hardiness is not confirmed here. Keep living stems and seek the label; tender types need a frost-free home rather than assuming the Mrs Popple care used in the big pots."
         },
         "caution": "Check the plant-specific limits: fleece reduces exposure but does not make an outdoor position frost-free."
@@ -7351,5 +7344,120 @@ Object.assign(window.OAK.SEASONAL_SOURCES, {
   "oct-viola": {
     "title": "RHS · Pineapple Crush",
     "url": "https://www.rhs.org.uk/plants/517052/viola-bel-viso-pineapple-crush-bel-viso-series/details"
+  }
+});
+
+window.OAK.SEASONAL["October"].jobs.push({
+  "id": "october-bed1-berry-check-2026",
+  "scope": "zone",
+  "zoneKeys": [
+    "bed1"
+  ],
+  "plantIds": [
+    "bed1-pernettya-pink",
+    "bed1-solanum-jupiter"
+  ],
+  "priority": "first",
+  "category": "protect",
+  "title": "Check Pernettya roots and Jupiter frost protection",
+  "timing": "Before frost and during cold or dry spells.",
+  "summary": "Check each new root ball; Jupiter needs frost-free conditions to survive winter.",
+  "why": "The two berry plants have different winter needs despite sharing a planting pocket.",
+  "doneWhen": "Roots have been checked and the decision about Jupiter’s winter accommodation has been made.",
+  "steps": [
+    "Feel each original root ball and water only when drying.",
+    "Keep bark off the stems and clear fallen fruit safely.",
+    "Arrange frost-free accommodation for Jupiter if retaining it; record its outcome if left outside."
+  ],
+  "guide": "check",
+  "sources": [
+    "oct-pernettya-pink",
+    "oct-solanum-jupiter"
+  ],
+  "plantNotes": {
+    "bed1-pernettya-pink": "Keep Pernettya evenly moist and drained; check soil acidity. Pink is a supplied colour name, not a confirmed cultivar.",
+    "bed1-solanum-jupiter": "Jupiter is tender and poisonous. Outdoor shelter or fleece does not provide frost-free conditions; retain only with suitable accommodation."
+  },
+  "caution": "Both plants bear ornamental fruit; prevent children and pets eating it."
+});
+
+window.OAK.SEASONAL["November"].jobs.push({
+  "id": "november-bed1-berry-check-2026",
+  "scope": "zone",
+  "zoneKeys": [
+    "bed1"
+  ],
+  "plantIds": [
+    "bed1-pernettya-pink",
+    "bed1-solanum-jupiter"
+  ],
+  "priority": "ongoing",
+  "category": "protect",
+  "title": "Check Pernettya roots and Jupiter frost protection",
+  "timing": "Before frost and during cold or dry spells.",
+  "summary": "Check each new root ball; Jupiter needs frost-free conditions to survive winter.",
+  "why": "The two berry plants have different winter needs despite sharing a planting pocket.",
+  "doneWhen": "Roots have been checked and the decision about Jupiter’s winter accommodation has been made.",
+  "steps": [
+    "Feel each original root ball and water only when drying.",
+    "Keep bark off the stems and clear fallen fruit safely.",
+    "Arrange frost-free accommodation for Jupiter if retaining it; record its outcome if left outside."
+  ],
+  "guide": "check",
+  "sources": [
+    "oct-pernettya-pink",
+    "oct-solanum-jupiter"
+  ],
+  "plantNotes": {
+    "bed1-pernettya-pink": "Keep Pernettya evenly moist and drained; check soil acidity. Pink is a supplied colour name, not a confirmed cultivar.",
+    "bed1-solanum-jupiter": "Jupiter is tender and poisonous. Outdoor shelter or fleece does not provide frost-free conditions; retain only with suitable accommodation."
+  },
+  "caution": "Both plants bear ornamental fruit; prevent children and pets eating it."
+});
+
+window.OAK.SEASONAL["December"].jobs.push({
+  "id": "december-bed1-berry-check-2026",
+  "scope": "zone",
+  "zoneKeys": [
+    "bed1"
+  ],
+  "plantIds": [
+    "bed1-pernettya-pink",
+    "bed1-solanum-jupiter"
+  ],
+  "priority": "ongoing",
+  "category": "protect",
+  "title": "Check Pernettya roots and Jupiter frost protection",
+  "timing": "Before frost and during cold or dry spells.",
+  "summary": "Check each new root ball; Jupiter needs frost-free conditions to survive winter.",
+  "why": "The two berry plants have different winter needs despite sharing a planting pocket.",
+  "doneWhen": "Roots have been checked and the decision about Jupiter’s winter accommodation has been made.",
+  "steps": [
+    "Feel each original root ball and water only when drying.",
+    "Keep bark off the stems and clear fallen fruit safely.",
+    "Arrange frost-free accommodation for Jupiter if retaining it; record its outcome if left outside."
+  ],
+  "guide": "check",
+  "sources": [
+    "oct-pernettya-pink",
+    "oct-solanum-jupiter"
+  ],
+  "plantNotes": {
+    "bed1-pernettya-pink": "Keep Pernettya evenly moist and drained; check soil acidity. Pink is a supplied colour name, not a confirmed cultivar.",
+    "bed1-solanum-jupiter": "Jupiter is tender and poisonous. Outdoor shelter or fleece does not provide frost-free conditions; retain only with suitable accommodation."
+  },
+  "caution": "Both plants bear ornamental fruit; prevent children and pets eating it."
+});
+
+Object.assign(window.OAK.SEASONAL_SOURCES, {
+  "oct-pernettya-pink": {
+    "title": "RHS · Gaultheria mucronata Pink Pearl (reference pink form, not cultivar identification)",
+    "url": "https://www.rhs.org.uk/plants/67076/gaultheria-mucronata-pink-pearl-f/details",
+    "note": "Species-group cultivation, pollination and ornamental fruit; not evidence this plant is Pink Pearl"
+  },
+  "oct-solanum-jupiter": {
+    "title": "NC State · Solanum pseudocapsicum",
+    "url": "https://plants.ces.ncsu.edu/plants/solanum-pseudocapsicum/",
+    "note": "Species care, seasonal fruit, frost sensitivity and toxicity"
   }
 });

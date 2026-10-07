@@ -975,6 +975,271 @@
     oakLodge: { location: "Lower front of Flower Bed 2", added: "Established before the 2026 journal", role: "Bold silver foliage at the front of the bed", observation: "Large furry white leaves create a striking contrast with the peony and darker wall-side shrubs.", status: "Record winter survival separately from the Bed 1 plant; the two positions may reveal which has the safer drainage and microclimate." },
   };
 
+  Object.assign(profiles, {
+  "bed1-pernettya-pink": {
+    "version": 2,
+    "type": "Evergreen berry shrub",
+    "badges": [
+      "Added October 2026",
+      "Cultivar unresolved",
+      "Pink fruit"
+    ],
+    "description": "Pernettya Pink brings pale pink and stronger pink berries to the cleared pocket beside the Buddha beneath the Japanese Maple. Brad supplied the name; the photograph fits a pink-fruited Gaultheria mucronata, but does not establish a named cultivar such as Pink Pearl. It replaces part of the space left by the discarded September Fuchsia and fern.",
+    "floweringMonths": [
+      "May",
+      "Jun"
+    ],
+    "facts": [
+      {
+        "label": "Identity",
+        "value": "Pink-fruited Gaultheria",
+        "detail": "Pernettya is an older name; Pink does not identify a particular cultivar."
+      },
+      {
+        "label": "Size",
+        "value": "About 0.5–1m",
+        "detail": "Cultivar size remains unresolved; record this specimen’s spread."
+      },
+      {
+        "label": "Position",
+        "value": "Sun to partial shade",
+        "detail": "Monitor shade beneath the Maple; record whether this pocket gets sufficient light."
+      },
+      {
+        "label": "Soil",
+        "value": "Acidic, moist and drained",
+        "detail": "Check pH before relying on the bed for long-term ericaceous growth."
+      },
+      {
+        "label": "Hardiness",
+        "value": "Hardy species",
+        "detail": "Pink-form cultivar rating not confirmed."
+      },
+      {
+        "label": "Flower",
+        "value": "White bells · late spring / early summer",
+        "detail": "The pink display is fruit, not flowers."
+      },
+      {
+        "label": "Water",
+        "value": "Even moisture at roots",
+        "detail": "Check this new planting separately from its established neighbours."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Check the acidic pocket",
+        "summary": "Test soil pH if it is unknown.",
+        "detail": "Use an acidic root environment for Pernettya; if this bed is unsuitable, an ericaceous container is a practical alternative."
+      },
+      {
+        "title": "Keep berry-bearing growth",
+        "summary": "Avoid a hard autumn trim.",
+        "detail": "Remove damaged shoots and control unwanted suckers. Keep the small plant clear of expanding Hosta leaves."
+      },
+      {
+        "title": "Check future pollination",
+        "summary": "Existing berries do not guarantee next year’s crop.",
+        "detail": "Female Gaultheria mucronata normally needs a compatible male nearby; confirm the selection before buying a partner."
+      }
+    ],
+    "waterSigns": {
+      "under": "Dry soil inside the Pernettya root ball with curled or drooping small leaves: water and let surplus drain.",
+      "over": "Persistently wet soil with yellowing Pernettya leaves or a dark, soft stem base: stop watering and check drainage."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "Check new shoots and remove unwanted suckers without disturbing the Pernettya root ball."
+      },
+      {
+        "season": "Summer",
+        "action": "Watch the little bell flowers and check moisture beneath the Maple as its canopy fills."
+      },
+      {
+        "season": "Autumn",
+        "action": "Enjoy the photographed pink fruit and keep bark away from the Pernettya stem base."
+      },
+      {
+        "season": "Winter",
+        "action": "Check that the evergreen Pernettya root ball drains freely and does not dry during prolonged dry weather."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Poor future berry set",
+        "sign": "Few berries after flowering",
+        "response": "Female Gaultheria mucronata normally needs a compatible male nearby; confirm the selection before buying a partner."
+      }
+    ],
+    "caution": "Ornamental berries are not for eating; prevent children and pets eating them and wear gloves when handling.",
+    "about": "Pernettya mucronata is now treated as Gaultheria mucronata, a small-leaved evergreen heath-family shrub. Pink is retained as a colour description rather than a proven cultivar.",
+    "provenanceNote": "Name supplied by Brad, October 2026. Photos support the plant group and berry colour; cultivar confirmation remains pending.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Ericaceae"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Gaultheria mucronata — pink-fruited form"
+      },
+      {
+        "label": "Name status",
+        "value": "Species best fit; cultivar unresolved"
+      }
+    ],
+    "oakLodge": {
+      "location": "Former Fuchsia and fern pocket beneath the Maple, left of the Hosta and Buddha · Back Bed 1",
+      "added": "October 2026",
+      "role": "Autumn berry colour in the former basket-rescue pocket",
+      "observation": "Photographed beside the Buddha, Hosta and Japanese Maple.",
+      "status": "Replaces the Fuchsia and fern discarded by Brad; map position is approximate."
+    },
+    "sources": [
+      {
+        "title": "RHS · Gaultheria mucronata Pink Pearl (reference pink form, not cultivar identification)",
+        "url": "https://www.rhs.org.uk/plants/67076/gaultheria-mucronata-pink-pearl-f/details",
+        "note": "Species-group cultivation, pollination and ornamental fruit; not evidence this plant is Pink Pearl"
+      }
+    ]
+  },
+  "bed1-solanum-jupiter": {
+    "version": 2,
+    "type": "Tender ornamental berry shrub",
+    "badges": [
+      "Added October 2026",
+      "Name supplied",
+      "Frost tender"
+    ],
+    "description": "Solanum Jupiter adds bright green, yellow, orange and red fruit in front of the Hosta in the cleared Bed 1 pocket. The supplied name and photograph fit the ornamental winter-cherry group, Solanum pseudocapsicum. Jupiter is recorded as Brad’s supplied trade name, with a label still needed for confirmation. This is a tender seasonal planting.",
+    "floweringMonths": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "facts": [
+      {
+        "label": "Identity",
+        "value": "Jupiter · name supplied",
+        "detail": "Brad supplied Jupiter; no label photograph confirms the name."
+      },
+      {
+        "label": "Size",
+        "value": "Species can reach about 0.9m",
+        "detail": "Nursery selections may stay smaller; record the height of this plant."
+      },
+      {
+        "label": "Position",
+        "value": "Sunny, sheltered position",
+        "detail": "Monitor shade beneath the Maple; record whether this pocket gets sufficient light."
+      },
+      {
+        "label": "Soil",
+        "value": "Moist, well-drained loam",
+        "detail": "Water the small root ball without keeping the planting hole saturated."
+      },
+      {
+        "label": "Hardiness",
+        "value": "Tender; frost-free winter",
+        "detail": "An outdoor wall or fleece cannot guarantee frost-free conditions."
+      },
+      {
+        "label": "Flower",
+        "value": "White stars · summer",
+        "detail": "The coloured balls are ornamental fruit, not edible tomatoes."
+      },
+      {
+        "label": "Water",
+        "value": "Even moisture at roots",
+        "detail": "Check this new planting separately from its established neighbours."
+      }
+    ],
+    "careGuide": [
+      {
+        "title": "Plan for frost",
+        "summary": "Arrange frost-free accommodation if keeping Jupiter.",
+        "detail": "It is recorded as planted in Bed 1, but is a seasonal outdoor display unless suitable frost-free accommodation becomes available."
+      },
+      {
+        "title": "Water its own root ball",
+        "summary": "Feel the soil before adding water.",
+        "detail": "The nursery root ball can dry while surrounding bark and soil look damp. Keep drainage open and reduce watering in cool conditions."
+      },
+      {
+        "title": "Handle fruit safely",
+        "summary": "Keep children and pets away from the berries.",
+        "detail": "All parts are poisonous. Wear gloves, collect fallen berries and never treat the fruit as food."
+      }
+    ],
+    "waterSigns": {
+      "under": "Limp Jupiter leaves with dry soil in its root ball indicate a need for water; check before assuming fruit drop means drought.",
+      "over": "Wet, cold soil with yellow leaves or soft Jupiter stems suggests saturation; pause watering and inspect its roots."
+    },
+    "seasons": [
+      {
+        "season": "Spring",
+        "action": "If Jupiter has survived frost-free, inspect living growth before any light shaping."
+      },
+      {
+        "season": "Summer",
+        "action": "Give Jupiter good light during flowering; inspect leaves for aphids and mites."
+      },
+      {
+        "season": "Autumn",
+        "action": "Enjoy Jupiter’s orange and red fruit; arrange frost-free conditions before damaging cold."
+      },
+      {
+        "season": "Winter",
+        "action": "If retained frost-free, give Jupiter bright light and reduced watering; assess outdoor frost damage before deciding its future."
+      }
+    ],
+    "problems": [
+      {
+        "name": "Cold damage",
+        "sign": "Leaves and stems collapse after frost",
+        "response": "Outdoor shelter cannot guarantee survival. Record the outcome; retaining the plant needs a frost-free space."
+      }
+    ],
+    "caution": "All parts are poisonous to people and pets; berries are particularly tempting. Wear gloves and prevent ingestion.",
+    "about": "Winter cherry is an evergreen nightshade-family shrub grown for ornamental fruit. Jupiter occurs in horticultural trade under Solanum pseudocapsicum; this specimen’s supplied name has not been checked against a retained label.",
+    "provenanceNote": "Name supplied by Brad, October 2026. Photos support the plant group and berry colour; cultivar confirmation remains pending.",
+    "botanical": [
+      {
+        "label": "Family",
+        "value": "Solanaceae"
+      },
+      {
+        "label": "Botanical name",
+        "value": "Solanum pseudocapsicum 'Jupiter' — supplied trade name"
+      },
+      {
+        "label": "Name status",
+        "value": "Species best fit; trade name supplied"
+      }
+    ],
+    "oakLodge": {
+      "location": "Former Fuchsia and fern pocket beneath the Maple, in front of the Hosta · Back Bed 1",
+      "added": "October 2026",
+      "role": "Autumn berry colour in the former basket-rescue pocket",
+      "observation": "Photographed beside the Buddha, Hosta and Japanese Maple.",
+      "status": "Replaces the Fuchsia and fern discarded by Brad; map position is approximate."
+    },
+    "sources": [
+      {
+        "title": "NC State · Solanum pseudocapsicum",
+        "url": "https://plants.ces.ncsu.edu/plants/solanum-pseudocapsicum/",
+        "note": "Species care, seasonal fruit, frost sensitivity and toxicity"
+      },
+      {
+        "title": "Syngenta · Pot Plants 2016",
+        "url": "https://pages.nxtbook.com/syngenta/FloriProServices/Pot_Plants_2016_EX/offline/FloriProServices_Pot_Plants_2016_EX.pdf",
+        "note": "Jupiter listed under Solanum pseudocapsicum; trade-name context only"
+      }
+    ]
+  }
+});
+
   Object.entries(profiles).forEach(([plantId, profile]) => {
     const record = (window.OAK.PLANT_BY_ID || {})[plantId];
     if (!record && ["bed1-angel-wings", "bed2-angel-wings", "bed1-wintercreeper"].includes(plantId)) return;

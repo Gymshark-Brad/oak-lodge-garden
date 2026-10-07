@@ -938,4 +938,28 @@
     profile.contentReview = { date: octoberIds.has(plant.id) || octoberMoves[plant.id] ? "2026-10-03" : "2026-09-18", care: reviewed.has(plant.id) ? "Rewritten with botanical and specimen-specific actions" : "Retained existing plant-specific authored care" };
   });
   OAK.PLANT_CARE_REVIEW = { date: "2026-10-03", rewrittenIds: Array.from(reviewed), priorityIds: Object.keys(priorities), descriptionIds: Object.keys(descriptions) };
+  // October 2026: Brad discarded both September basket rescues. Earlier
+  // authored layers remain historical; only active registries feed the UI.
+  const retiredIds = ["baskets-trailing-fuchsia", "baskets-fern-unidentified"];
+  retiredIds.forEach((id) => {
+    const record = OAK.PLANT_BY_ID[id];
+    OAK.PLANTS[record.plantKey] = OAK.PLANTS[record.plantKey].filter((p) => p.id !== id);
+    Object.keys(OAK.PLANT_ID_BY_ZONE_AND_NAME[record.zoneKey]).forEach((name) => {
+      if (OAK.PLANT_ID_BY_ZONE_AND_NAME[record.zoneKey][name] === id) delete OAK.PLANT_ID_BY_ZONE_AND_NAME[record.zoneKey][name];
+    });
+    delete OAK.WATER_BANDS[record.plantKey][record.plant.name];
+    delete OAK.WATER_SIGNS[record.plantKey][record.plant.name];
+    delete OAK.WATER_BANDS_BY_ID[id];
+    delete OAK.PLANT_BY_ID[id];
+    ["rewrittenIds", "priorityIds", "descriptionIds"].forEach((key) => {
+      OAK.PLANT_CARE_REVIEW[key] = OAK.PLANT_CARE_REVIEW[key].filter((value) => value !== id);
+    });
+  });
+  ["bed1-pernettya-pink", "bed1-solanum-jupiter"].forEach((id) => {
+    OAK.PLANT_CARE_REVIEW.priorityIds.push(id);
+    const p = OAK.PLANT_BY_ID[id].plant;
+    OAK.WATER_SIGNS["Bed 1"][p.name] = p.profile.waterSigns;
+  });
+  OAK.PLANT_CARE_REVIEW.date = "2026-10-07";
+
 })();

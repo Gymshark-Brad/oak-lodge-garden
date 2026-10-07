@@ -13,7 +13,7 @@
       "month": 10,
       "label": "October 2026",
       "title": "Birthday plants inside and a fresh border reshuffle",
-      "note": "Five birthday houseplants joined the notebook: Rhipsalis, Dracaena Bicolour Touffe, Crassula Hottentot, Philodendron and Zamioculcas. Out in the garden, Petite Star Hydrangea took Polar Passion’s place in Front Bed 4. Polar Passion moved into the old Gaillardia pocket in Back Bed 4, while Gaillardia and Wisley Vanilla Nemesia moved to Back Bed 1. Pineapple Crush Viola added new colour at the front of Back Bed 4.",
+      "note": "Five birthday houseplants joined the notebook: Rhipsalis, Dracaena Bicolour Touffe, Crassula Hottentot, Philodendron and Zamioculcas. Out in the garden, Petite Star Hydrangea took Polar Passion’s place in Front Bed 4. Polar Passion moved into the old Gaillardia pocket in Back Bed 4, while Gaillardia and Wisley Vanilla Nemesia moved to Back Bed 1. Pineapple Crush Viola added new colour at the front of Back Bed 4. I also binned the Fuchsia and fern rescued from the hanging basket in September, and filled their Back Bed 1 spot with Pernettya Pink and Solanum Jupiter.",
       "photos": [
             {
                   "id": "oct-2026-rhipsalis-photo",
@@ -30,8 +30,8 @@
             {
                   "id": "oct-2026-back-bed1-photo",
                   "area": "back",
-                  "src": "images/oct-2026/back-bed1-update.webp",
-                  "caption": "Back Bed 1 after the Nemesia and Gaillardia moves"
+                  "src": "images/oct-2026/back-bed1-berry-planting.webp",
+                  "caption": "Pernettya Pink and Solanum Jupiter in the cleared Back Bed 1 pocket"
             },
             {
                   "id": "oct-2026-back-bed4-photo",
@@ -41,6 +41,56 @@
             }
       ],
       "events": [
+{
+  "id": "oct-2026-fuchsia-removed",
+  "type": "removed",
+  "date": "2026-10",
+  "datePrecision": "month",
+  "dateLabel": "October 2026",
+  "area": "back",
+  "title": "Fuchsia removed from Back Bed 1",
+  "note": "Binned the unidentified Fuchsia saved from Hanging Basket 3 in September.",
+  "zoneKey": "bed1",
+  "location": "Back Bed 1 · beneath the Japanese Maple"
+},
+{
+  "id": "oct-2026-fern-removed",
+  "type": "removed",
+  "date": "2026-10",
+  "datePrecision": "month",
+  "dateLabel": "October 2026",
+  "area": "back",
+  "title": "Fern removed from Back Bed 1",
+  "note": "Binned the unidentified fern saved from Hanging Basket 3 in September.",
+  "zoneKey": "bed1",
+  "location": "Back Bed 1 · beneath the Japanese Maple"
+},
+{
+  "id": "oct-2026-bed1-pernettya-pink",
+  "type": "planted",
+  "date": "2026-10",
+  "datePrecision": "month",
+  "dateLabel": "October 2026",
+  "area": "back",
+  "title": "Pernettya Pink planted in Back Bed 1",
+  "note": "Added in the spot freed by the discarded Fuchsia and fern. Pink-fruited form; exact cultivar unresolved.",
+  "zoneKey": "bed1",
+  "location": "Back Bed 1 · beneath the Japanese Maple",
+  "plantId": "bed1-pernettya-pink"
+},
+{
+  "id": "oct-2026-bed1-solanum-jupiter",
+  "type": "planted",
+  "date": "2026-10",
+  "datePrecision": "month",
+  "dateLabel": "October 2026",
+  "area": "back",
+  "title": "Solanum Jupiter planted in Back Bed 1",
+  "note": "Added in the spot freed by the discarded Fuchsia and fern. Jupiter is the supplied name.",
+  "zoneKey": "bed1",
+  "location": "Back Bed 1 · beneath the Japanese Maple",
+  "plantId": "bed1-solanum-jupiter"
+},
             {
                   "id": "oct-2026-house-sitting-rhipsalis",
                   "type": "planted",
@@ -208,8 +258,8 @@
           { id: "sep-2026-bed2-dianthus-died", type: "removed", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Back Bed 2 Dianthus removed", note: "The Dianthus 'Leuchtfunk' at position 7 died and was removed. Its historic name and former position remain preserved in this journal.", location: "Back Bed 2 position 7", zoneKey: "bed2" },
           { id: "sep-2026-bed2-raspberry-profusion-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Abelia 'Raspberry Profusion' replaced the Dianthus", note: "Abelia × grandiflora 'Raspberry Profusion' was planted directly into the position vacated by the failed Dianthus in Back Bed 2.", plantId: "bed2-abelia-raspberry-profusion", zoneKey: "bed2" },
           { id: "sep-2026-double-diamond-moved-bed1", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Skimmia 'Double Diamond' moved into Back Bed 1", note: "The Skimmia moved from the white stairs pot into the sheltered planting beneath the Japanese Maple.", plantId: "stairpots-p1-skimmia-double-diamond", zoneKey: "bed1", from: "White Stairs Pot 1", to: "Back Bed 1" },
-          { id: "sep-2026-basket-fuchsia-moved-bed1", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Hanging Basket 3 Fuchsia moved into Back Bed 1", note: "The unidentified Fuchsia moved from Hanging Basket 3 into the sheltered planting beneath the Japanese Maple.", plantId: "baskets-trailing-fuchsia", zoneKey: "bed1", from: "Hanging Basket 3", to: "Back Bed 1" },
-          { id: "sep-2026-basket-fern-moved-bed1", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Hanging Basket 3 fern moved into Back Bed 1", note: "The unidentified fern moved from Hanging Basket 3 into the sheltered planting beneath the Japanese Maple.", plantId: "baskets-fern-unidentified", zoneKey: "bed1", from: "Hanging Basket 3", to: "Back Bed 1" },
+          { id: "sep-2026-basket-fuchsia-moved-bed1", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Hanging Basket 3 Fuchsia moved into Back Bed 1", note: "The unidentified Fuchsia moved from Hanging Basket 3 into the sheltered planting beneath the Japanese Maple.", zoneKey: "bed1", from: "Hanging Basket 3", to: "Back Bed 1" },
+          { id: "sep-2026-basket-fern-moved-bed1", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Hanging Basket 3 fern moved into Back Bed 1", note: "The unidentified fern moved from Hanging Basket 3 into the sheltered planting beneath the Japanese Maple.", zoneKey: "bed1", from: "Hanging Basket 3", to: "Back Bed 1" },
           { id: "sep-2026-wisley-vanilla-moved-bed4", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Wisley Vanilla Nemesia moved into Back Bed 4", note: "The retained-label Nemesia moved from Bed 5's big pot to the front-right edge of Back Bed 4.", plantId: "bed5-big-pot-nemesia", zoneKey: "bed4", from: "Back Bed 5 big pot", to: "Back Bed 4" },
           { id: "sep-2026-gaultheria-moved-bed5", type: "moved", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Gaultheria moved into the Back Bed 5 big pot", note: "The unidentified Gaultheria moved from the blue stairs pot into Bed 5's big pot.", plantId: "stairpots-p2-gaultheria-unidentified", zoneKey: "bed5", from: "Blue Stairs Pot 2", to: "Back Bed 5 big pot" },
           { id: "sep-2026-bed5-violas-pansies-planted", type: "planted", date: "2026-09", datePrecision: "month", dateLabel: "Later September 2026", area: "back", title: "Mixed Violas and Pansies added to the Bed 5 big pot", note: "A mixed selection of Violas and Pansies was planted around the moved Gaultheria and established big-pot planting as one recorded entry.", plantId: "bed5-big-pot-violas-pansies", zoneKey: "bed5" },

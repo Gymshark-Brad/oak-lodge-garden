@@ -2629,404 +2629,324 @@
       }
     },
     {
-      "name": "Fuchsia (cultivar to confirm)",
-      "id": "baskets-trailing-fuchsia",
-      "latin": "Fuchsia hybrid",
+      "id": "bed1-pernettya-pink",
+      "name": "Pernettya Pink (cultivar to confirm)",
+      "latin": "Gaultheria mucronata — pink-fruited form",
+      "position": "Former Fuchsia and fern pocket beneath the Maple, left of the Hosta and Buddha",
+      "light": "Sun to partial shade. Monitor shade beneath the Maple; record whether this pocket gets sufficient light.",
+      "water": "Even moisture at roots. Check this new planting separately from its established neighbours.",
+      "care": "Check the acidic pocket: Test soil pH if it is unknown. Use an acidic root environment for Pernettya; if this bed is unsuitable, an ericaceous container is a practical alternative.\n\nKeep berry-bearing growth: Avoid a hard autumn trim. Remove damaged shoots and control unwanted suckers. Keep the small plant clear of expanding Hosta leaves.\n\nCheck future pollination: Existing berries do not guarantee next year’s crop. Female Gaultheria mucronata normally needs a compatible male nearby; confirm the selection before buying a partner.",
+      "seasonal": "Spring: Check new shoots and remove unwanted suckers without disturbing the Pernettya root ball.\nSummer: Watch the little bell flowers and check moisture beneath the Maple as its canopy fills.\nAutumn: Enjoy the photographed pink fruit and keep bark away from the Pernettya stem base.\nWinter: Check that the evergreen Pernettya root ball drains freely and does not dry during prolonged dry weather.",
       "photos": [
-        "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 2.jpeg",
-        "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 3.jpeg",
-        "images/September Trees & Pots /Hanging Basket 3 - 1.jpeg"
+        "images/oct-2026/back-bed1-pernettya-pink.webp",
+        "images/oct-2026/back-bed1-berry-planting.webp"
       ],
-      "group": "Back Bed 1 · moved September 2026",
-      "position": "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3",
-      "light": "Sheltered partial shade. Back Bed 1 beneath the Japanese Maple",
-      "water": "Moist during active Bed 1 growth. The former basket root ball needs establishment water, but the sheltered crown must not sit in cold wet soil.",
-      "care": "Wait for spring buds before pruning: Cut winter-damaged stems back only after living growth is visible. The cultivar and hardiness are unresolved. Preserve useful low buds and pinch young shoots only if a bushier border framework is needed.\n\nSupport the arching flowers: Keep Fuchsia stems clear of the fern and Skimmia crowns. Deadhead during the mild season, feed lightly only while growing and photograph open flowers from the side and front for later identification.\n\nSupport the moved Bed 1 stems: For this Oak Lodge specimen Arrange the arching Fuchsia clear of the fern and Skimmia crowns while its new root system establishes.",
-      "seasonal": "Spring: Wait for live buds before cutting winter-damaged stems, then pinch young shoots only if a bushier Bed 1 framework is needed.\nSummer: Water the new root area during dry spells, feed lightly while flowering and support arching stems away from the fern crown.\nAutumn: Stop feeding, record a fully open flower for identification and mulch lightly without covering the stem base.\nWinter: Protect the newly planted crown until its hardiness is known and wait for spring buds before declaring bare upper stems dead.",
-      "description": "The former Hanging Basket 3 Fuchsia now grows beneath the Japanese Maple in Back Bed 1, where its arching stems carry pendant bicolour flowers among the newly moved fern and Skimmia. The trailing habit is secure, but colour and cultivar are not recorded, so final size and winter hardiness remain deliberately unresolved.",
+      "group": "Back Bed 1 · added October 2026",
+      "description": "Pernettya Pink brings pale pink and stronger pink berries to the cleared pocket beside the Buddha beneath the Japanese Maple. Brad supplied the name; the photograph fits a pink-fruited Gaultheria mucronata, but does not establish a named cultivar such as Pink Pearl. It replaces part of the space left by the discarded September Fuchsia and fern.",
       "characteristics": {
-        "sunlight": "Sheltered partial shade",
-        "hardiness": "To confirm",
-        "flowering": "Jun, Jul, Aug, Sep, Oct",
-        "water": "Moist during active Bed 1 growth",
-        "habit": "Seasonal flowering plant",
-        "size": "20–60cm high",
+        "sunlight": "Sun to partial shade",
+        "hardiness": "Hardy species",
+        "flowering": "May, Jun",
+        "water": "Even moisture at roots",
+        "habit": "Herbaceous perennial",
+        "size": "About 0.5–1m",
         "foliage": "Seasonal foliage",
-        "wildlife": "Flowers visited by pollinators"
+        "wildlife": "Flowers, fruit or shelter for wildlife"
       },
       "profile": {
         "version": 2,
-        "type": "Trailing tender Fuchsia",
+        "type": "Evergreen berry shrub",
         "badges": [
-          "Pendant flowers",
-          "Hanging-basket anchor",
-          "Cultivar unresolved"
+          "Added October 2026",
+          "Cultivar unresolved",
+          "Pink fruit"
         ],
-        "description": "The former Hanging Basket 3 Fuchsia now grows beneath the Japanese Maple in Back Bed 1, where its arching stems carry pendant bicolour flowers among the newly moved fern and Skimmia. The trailing habit is secure, but colour and cultivar are not recorded, so final size and winter hardiness remain deliberately unresolved.",
+        "description": "Pernettya Pink brings pale pink and stronger pink berries to the cleared pocket beside the Buddha beneath the Japanese Maple. Brad supplied the name; the photograph fits a pink-fruited Gaultheria mucronata, but does not establish a named cultivar such as Pink Pearl. It replaces part of the space left by the discarded September Fuchsia and fern.",
         "floweringMonths": [
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
+          "May",
+          "Jun"
         ],
         "facts": [
           {
+            "label": "Identity",
+            "value": "Pink-fruited Gaultheria",
+            "detail": "Pernettya is an older name; Pink does not identify a particular cultivar."
+          },
+          {
             "label": "Size",
-            "value": "20–60cm high",
-            "detail": "Arching stems may spread beyond the former basket scale"
+            "value": "About 0.5–1m",
+            "detail": "Cultivar size remains unresolved; record this specimen’s spread."
           },
           {
             "label": "Position",
-            "value": "Sheltered partial shade",
-            "detail": "Back Bed 1 beneath the Japanese Maple"
+            "value": "Sun to partial shade",
+            "detail": "Monitor shade beneath the Maple; record whether this pocket gets sufficient light."
           },
           {
             "label": "Soil",
-            "value": "Moist and well-drained",
-            "detail": "Humus-rich bed soil with reliable drainage"
+            "value": "Acidic, moist and drained",
+            "detail": "Check pH before relying on the bed for long-term ericaceous growth."
           },
           {
             "label": "Hardiness",
-            "value": "To confirm",
-            "detail": "The cultivar is unresolved; protect the crown during its first winter in the bed"
+            "value": "Hardy species",
+            "detail": "Pink-form cultivar rating not confirmed."
           },
           {
-            "label": "Main feature",
-            "value": "Pendant bicolour flowers",
-            "detail": "Arching flowers among the shaded Bed 1 planting"
-          },
-          {
-            "label": "Identity",
-            "value": "Fuchsia cultivar",
-            "detail": "Cultivar and exact flower colours are not recorded"
+            "label": "Flower",
+            "value": "White bells · late spring / early summer",
+            "detail": "The pink display is fruit, not flowers."
           },
           {
             "label": "Water",
-            "value": "Moist during active Bed 1 growth",
-            "detail": "The former basket root ball needs establishment water, but the sheltered crown must not sit in cold wet soil."
-          },
-          {
-            "label": "Care priority",
-            "value": "Support the moved Bed 1 stems",
-            "detail": "Arrange the arching Fuchsia clear of the fern and Skimmia crowns while its new root system establishes."
+            "value": "Even moisture at roots",
+            "detail": "Check this new planting separately from its established neighbours."
           }
         ],
         "careGuide": [
           {
-            "title": "Wait for spring buds before pruning",
-            "summary": "Cut winter-damaged stems back only after living growth is visible.",
-            "detail": "The cultivar and hardiness are unresolved. Preserve useful low buds and pinch young shoots only if a bushier border framework is needed."
+            "title": "Check the acidic pocket",
+            "summary": "Test soil pH if it is unknown.",
+            "detail": "Use an acidic root environment for Pernettya; if this bed is unsuitable, an ericaceous container is a practical alternative."
           },
           {
-            "title": "Support the arching flowers",
-            "summary": "Keep Fuchsia stems clear of the fern and Skimmia crowns.",
-            "detail": "Deadhead during the mild season, feed lightly only while growing and photograph open flowers from the side and front for later identification."
+            "title": "Keep berry-bearing growth",
+            "summary": "Avoid a hard autumn trim.",
+            "detail": "Remove damaged shoots and control unwanted suckers. Keep the small plant clear of expanding Hosta leaves."
           },
           {
-            "title": "Support the moved Bed 1 stems",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Arrange the arching Fuchsia clear of the fern and Skimmia crowns while its new root system establishes."
+            "title": "Check future pollination",
+            "summary": "Existing berries do not guarantee next year’s crop.",
+            "detail": "Female Gaultheria mucronata normally needs a compatible male nearby; confirm the selection before buying a partner."
           }
         ],
         "waterSigns": {
-          "under": "Soft shoot tips and buds hang while the moved Fuchsia's Bed 1 root pocket is dry; soak the root area slowly before the whole plant collapses.",
-          "over": "Yellow leaves and dark soft tissue at the stem base while soil beneath the Maple remains wet show the crown needs more air and less water."
+          "under": "Dry soil inside the Pernettya root ball with curled or drooping small leaves: water and let surplus drain.",
+          "over": "Persistently wet soil with yellowing Pernettya leaves or a dark, soft stem base: stop watering and check drainage."
         },
         "seasons": [
           {
             "season": "Spring",
-            "action": "Wait for live buds before cutting winter-damaged stems, then pinch young shoots only if a bushier Bed 1 framework is needed."
+            "action": "Check new shoots and remove unwanted suckers without disturbing the Pernettya root ball."
           },
           {
             "season": "Summer",
-            "action": "Water the new root area during dry spells, feed lightly while flowering and support arching stems away from the fern crown."
+            "action": "Watch the little bell flowers and check moisture beneath the Maple as its canopy fills."
           },
           {
             "season": "Autumn",
-            "action": "Stop feeding, record a fully open flower for identification and mulch lightly without covering the stem base."
+            "action": "Enjoy the photographed pink fruit and keep bark away from the Pernettya stem base."
           },
           {
             "season": "Winter",
-            "action": "Protect the newly planted crown until its hardiness is known and wait for spring buds before declaring bare upper stems dead."
+            "action": "Check that the evergreen Pernettya root ball drains freely and does not dry during prolonged dry weather."
           }
         ],
         "problems": [
           {
-            "name": "Fuchsia gall mite",
-            "sign": "New leaves and flowers become tightly distorted, reddened and swollen",
-            "response": "Isolate the plant, do not propagate it and follow current local disposal and control guidance."
-          },
-          {
-            "name": "Grey mould",
-            "sign": "Fuzzy decay among crowded flowers and leaves",
-            "response": "Remove affected material, increase airflow and avoid leaving flowers wet overnight."
-          },
-          {
-            "name": "Root or stem rot",
-            "sign": "Yellowing followed by a soft dark base",
-            "response": "Stop watering, clear drainage holes and discard plants whose crown has collapsed."
+            "name": "Poor future berry set",
+            "sign": "Few berries after flowering",
+            "response": "Female Gaultheria mucronata normally needs a compatible male nearby; confirm the selection before buying a partner."
           }
         ],
-        "about": "Garden Fuchsias are hybrids of Central and South American species. Their flowers vary greatly in sepal colour, corolla fullness, hardiness and growth habit, so the former basket plant cannot be converted reliably into a named or hardy cultivar without a label and close flower photographs.",
-        "provenanceNote": "Fuchsia identity and its move from Hanging Basket 3 to Back Bed 1 are secure from the garden record; cultivar is unresolved.",
+        "caution": "Ornamental berries are not for eating; prevent children and pets eating them and wear gloves when handling.",
+        "about": "Pernettya mucronata is now treated as Gaultheria mucronata, a small-leaved evergreen heath-family shrub. Pink is retained as a colour description rather than a proven cultivar.",
+        "provenanceNote": "Name supplied by Brad, October 2026. Photos support the plant group and berry colour; cultivar confirmation remains pending.",
         "botanical": [
           {
             "label": "Family",
-            "value": "Onagraceae"
-          },
-          {
-            "label": "Genus",
-            "value": "Fuchsia"
+            "value": "Ericaceae"
           },
           {
             "label": "Botanical name",
-            "value": "Fuchsia hybrid"
-          },
-          {
-            "label": "Plant type",
-            "value": "Trailing tender Fuchsia"
-          },
-          {
-            "label": "Foliage",
-            "value": "Deciduous or semi-evergreen according to winter"
-          },
-          {
-            "label": "Habit",
-            "value": "Branching and arching"
+            "value": "Gaultheria mucronata — pink-fruited form"
           },
           {
             "label": "Name status",
-            "value": "Garden record accepted"
-          },
-          {
-            "label": "Native to Britain or Ireland",
-            "value": "No"
+            "value": "Species best fit; cultivar unresolved"
           }
         ],
         "oakLodge": {
-          "location": "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3 · Bed 1",
-          "added": "Established before the 2026 journal",
-          "role": "Pendant flowers beneath the Japanese Maple",
-          "observation": "September photographs show the moved Fuchsia planted beside the fern and Skimmia 'Double Diamond'.",
-          "status": "Monitor first-winter survival and photograph a fully open flower plus foliage for cultivar work."
+          "location": "Former Fuchsia and fern pocket beneath the Maple, left of the Hosta and Buddha · Back Bed 1",
+          "added": "October 2026",
+          "role": "Autumn berry colour in the former basket-rescue pocket",
+          "observation": "Photographed beside the Buddha, Hosta and Japanese Maple.",
+          "status": "Replaces the Fuchsia and fern discarded by Brad; map position is approximate."
         },
         "sources": [
           {
-            "title": "Royal Horticultural Society · Fuchsia ‘Mrs Popple’",
-            "url": "https://www.rhs.org.uk/plants/84426/fuchsia-mrs-popple/details",
-            "note": "Cultivar description, dimensions, hardiness and cultivation"
-          },
-          {
-            "title": "Oak Lodge garden record",
-            "url": null,
-            "note": "Identity label, position, photographs, planting history and on-site observations"
+            "title": "RHS · Gaultheria mucronata Pink Pearl (reference pink form, not cultivar identification)",
+            "url": "https://www.rhs.org.uk/plants/67076/gaultheria-mucronata-pink-pearl-f/details",
+            "note": "Species-group cultivation, pollination and ornamental fruit; not evidence this plant is Pink Pearl"
           }
         ],
-        "careSummary": "Support the moved Bed 1 stems. Arrange the arching Fuchsia clear of the fern and Skimmia crowns while its new root system establishes.",
         "contentReview": {
           "date": "2026-09-18",
-          "care": "Rewritten with botanical and specimen-specific actions"
+          "care": "Retained existing plant-specific authored care"
         }
       }
     },
     {
-      "name": "Fern (cultivar to confirm)",
-      "id": "baskets-fern-unidentified",
-      "latin": "Fern — cultivar to confirm",
+      "id": "bed1-solanum-jupiter",
+      "name": "Solanum 'Jupiter' (name supplied)",
+      "latin": "Solanum pseudocapsicum 'Jupiter' — supplied trade name",
+      "position": "Former Fuchsia and fern pocket beneath the Maple, in front of the Hosta",
+      "light": "Sunny, sheltered position. Monitor shade beneath the Maple; record whether this pocket gets sufficient light.",
+      "water": "Even moisture at roots. Check this new planting separately from its established neighbours.",
+      "care": "Plan for frost: Arrange frost-free accommodation if keeping Jupiter. It is recorded as planted in Bed 1, but is a seasonal outdoor display unless suitable frost-free accommodation becomes available.\n\nWater its own root ball: Feel the soil before adding water. The nursery root ball can dry while surrounding bark and soil look damp. Keep drainage open and reduce watering in cool conditions.\n\nHandle fruit safely: Keep children and pets away from the berries. All parts are poisonous. Wear gloves, collect fallen berries and never treat the fruit as food.",
+      "seasonal": "Spring: If Jupiter has survived frost-free, inspect living growth before any light shaping.\nSummer: Give Jupiter good light during flowering; inspect leaves for aphids and mites.\nAutumn: Enjoy Jupiter’s orange and red fruit; arrange frost-free conditions before damaging cold.\nWinter: If retained frost-free, give Jupiter bright light and reduced watering; assess outdoor frost damage before deciding its future.",
       "photos": [
-        "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 1.jpeg",
-        "images/September Pots V2/Bed 1 - Skimmia & Fuchsia - 3.jpeg",
-        "images/September Trees & Pots /Hanging Basket 3 - 1.jpeg"
+        "images/oct-2026/back-bed1-solanum-jupiter.webp",
+        "images/oct-2026/back-bed1-berry-planting.webp"
       ],
-      "group": "Back Bed 1 · moved September 2026",
-      "position": "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3",
-      "light": "Sheltered shade to partial shade. Filtered light protects soft fronds while its exact shade preference remains unresolved.",
-      "water": "Even moisture in sheltered soil. The moved fern needs a cool root area beneath the Maple but its crown must not remain saturated.",
-      "care": "Protect the moved frond crown: Remove only dead fronds at their base and clear fallen Maple leaves. Do not shear the plant or feed it for flowers. Brown spore patches can be normal; keep the crown exposed to air as it establishes in Bed 1.\n\nUse new growth for identification: Photograph croziers, scales and mature frond undersides. Until the species is resolved, protect the new planting during hard frost rather than assuming the hardiness of a known garden fern.\n\nKeep a frond for identification: For this Oak Lodge specimen Photograph the moved Bed 1 fern's underside before removing old fronds; its winter requirements are still unresolved.",
-      "seasonal": "Spring: Remove only brown fronds at their base and photograph new croziers, scales and mature frond undersides to narrow the identification.\nSummer: Use the Maple canopy as shelter from hot midday sun, maintaining even moisture while keeping the crown open to air.\nAutumn: Clear fallen leaves before they smother the crown and record whether the fronds remain evergreen as temperatures fall.\nWinter: Because the species is unconfirmed, add light protection during hard frost and keep the sheltered crown just moist rather than saturated.",
-      "description": "The unidentified fern moved from Hanging Basket 3 into the sheltered soil beneath the Japanese Maple in Back Bed 1. Its divided green fronds now form a low foliage layer beside the moved Fuchsia and Skimmia. Brown spore patches can be normal, but species and hardiness remain unresolved, so preserve diagnostic photographs and use cautious first-winter protection.",
+      "group": "Back Bed 1 · added October 2026",
+      "description": "Solanum Jupiter adds bright green, yellow, orange and red fruit in front of the Hosta in the cleared Bed 1 pocket. The supplied name and photograph fit the ornamental winter-cherry group, Solanum pseudocapsicum. Jupiter is recorded as Brad’s supplied trade name, with a label still needed for confirmation. This is a tender seasonal planting.",
       "characteristics": {
-        "sunlight": "Sheltered shade to partial shade",
-        "hardiness": "Unresolved; protect from frost",
-        "flowering": "fronds, not flowers",
-        "water": "Even moisture in sheltered soil",
+        "sunlight": "Sunny, sheltered position",
+        "hardiness": "Tender; frost-free winter",
+        "flowering": "Jun, Jul, Aug",
+        "water": "Even moisture at roots",
         "habit": "Herbaceous perennial",
-        "size": "Species not yet identified",
+        "size": "Species can reach about 0.9m",
         "foliage": "Seasonal foliage",
-        "wildlife": "Foliage provides garden habitat"
+        "wildlife": "Flowers, fruit or shelter for wildlife"
       },
       "profile": {
         "version": 2,
-        "type": "Unidentified garden fern",
+        "type": "Tender ornamental berry shrub",
         "badges": [
-          "September 2026",
-          "Garden record"
+          "Added October 2026",
+          "Name supplied",
+          "Frost tender"
         ],
-        "description": "The unidentified fern moved from Hanging Basket 3 into the sheltered soil beneath the Japanese Maple in Back Bed 1. Its divided green fronds now form a low foliage layer beside the moved Fuchsia and Skimmia. Brown spore patches can be normal, but species and hardiness remain unresolved, so preserve diagnostic photographs and use cautious first-winter protection.",
-        "floweringMonths": [],
+        "description": "Solanum Jupiter adds bright green, yellow, orange and red fruit in front of the Hosta in the cleared Bed 1 pocket. The supplied name and photograph fit the ornamental winter-cherry group, Solanum pseudocapsicum. Jupiter is recorded as Brad’s supplied trade name, with a label still needed for confirmation. This is a tender seasonal planting.",
+        "floweringMonths": [
+          "Jun",
+          "Jul",
+          "Aug"
+        ],
         "facts": [
           {
+            "label": "Identity",
+            "value": "Jupiter · name supplied",
+            "detail": "Brad supplied Jupiter; no label photograph confirms the name."
+          },
+          {
             "label": "Size",
-            "value": "Species not yet identified",
-            "detail": "Measure the fronds and record their form; basket size is not a mature plant dimension."
+            "value": "Species can reach about 0.9m",
+            "detail": "Nursery selections may stay smaller; record the height of this plant."
           },
           {
             "label": "Position",
-            "value": "Sheltered shade to partial shade",
-            "detail": "Filtered light protects soft fronds while its exact shade preference remains unresolved."
+            "value": "Sunny, sheltered position",
+            "detail": "Monitor shade beneath the Maple; record whether this pocket gets sufficient light."
           },
           {
             "label": "Soil",
-            "value": "Humus-rich, moist and free-draining soil",
-            "detail": "Keep the frond-producing crown above the compost and prevent the small root plug drying hard."
+            "value": "Moist, well-drained loam",
+            "detail": "Water the small root ball without keeping the planting hole saturated."
           },
           {
             "label": "Hardiness",
-            "value": "Unresolved; protect from frost",
-            "detail": "An unidentified fern must not inherit the hardy Dryopteris rating."
+            "value": "Tender; frost-free winter",
+            "detail": "An outdoor wall or fleece cannot guarantee frost-free conditions."
           },
           {
-            "label": "Main feature",
-            "value": "Divided green fronds",
-            "detail": "Fronds are the display: this fern produces spores, not flowers."
-          },
-          {
-            "label": "Identity",
-            "value": "Fern (cultivar to confirm)",
-            "detail": "Name retained from the supplied garden record"
+            "label": "Flower",
+            "value": "White stars · summer",
+            "detail": "The coloured balls are ornamental fruit, not edible tomatoes."
           },
           {
             "label": "Water",
-            "value": "Even moisture in sheltered soil",
-            "detail": "The moved fern needs a cool root area beneath the Maple but its crown must not remain saturated."
-          },
-          {
-            "label": "Care priority",
-            "value": "Keep a frond for identification",
-            "detail": "Photograph the moved Bed 1 fern's underside before removing old fronds; its winter requirements are still unresolved."
+            "value": "Even moisture at roots",
+            "detail": "Check this new planting separately from its established neighbours."
           }
         ],
         "careGuide": [
           {
-            "title": "Protect the moved frond crown",
-            "summary": "Remove only dead fronds at their base and clear fallen Maple leaves.",
-            "detail": "Do not shear the plant or feed it for flowers. Brown spore patches can be normal; keep the crown exposed to air as it establishes in Bed 1."
+            "title": "Plan for frost",
+            "summary": "Arrange frost-free accommodation if keeping Jupiter.",
+            "detail": "It is recorded as planted in Bed 1, but is a seasonal outdoor display unless suitable frost-free accommodation becomes available."
           },
           {
-            "title": "Use new growth for identification",
-            "summary": "Photograph croziers, scales and mature frond undersides.",
-            "detail": "Until the species is resolved, protect the new planting during hard frost rather than assuming the hardiness of a known garden fern."
+            "title": "Water its own root ball",
+            "summary": "Feel the soil before adding water.",
+            "detail": "The nursery root ball can dry while surrounding bark and soil look damp. Keep drainage open and reduce watering in cool conditions."
           },
           {
-            "title": "Keep a frond for identification",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Photograph the moved Bed 1 fern's underside before removing old fronds; its winter requirements are still unresolved."
+            "title": "Handle fruit safely",
+            "summary": "Keep children and pets away from the berries.",
+            "detail": "All parts are poisonous. Wear gloves, collect fallen berries and never treat the fruit as food."
           }
         ],
         "waterSigns": {
-          "under": "Young frond tips crisp and older fronds curl while the new Bed 1 root pocket is dry beneath the surface; water around the crown without wetting it repeatedly.",
-          "over": "Fronds yellow from the base and the crown smells sour in continuously wet sheltered soil; reduce watering and clear fallen Maple leaves from the centre."
+          "under": "Limp Jupiter leaves with dry soil in its root ball indicate a need for water; check before assuming fruit drop means drought.",
+          "over": "Wet, cold soil with yellow leaves or soft Jupiter stems suggests saturation; pause watering and inspect its roots."
         },
         "seasons": [
           {
             "season": "Spring",
-            "action": "Remove only brown fronds at their base and photograph new croziers, scales and mature frond undersides to narrow the identification."
+            "action": "If Jupiter has survived frost-free, inspect living growth before any light shaping."
           },
           {
             "season": "Summer",
-            "action": "Use the Maple canopy as shelter from hot midday sun, maintaining even moisture while keeping the crown open to air."
+            "action": "Give Jupiter good light during flowering; inspect leaves for aphids and mites."
           },
           {
             "season": "Autumn",
-            "action": "Clear fallen leaves before they smother the crown and record whether the fronds remain evergreen as temperatures fall."
+            "action": "Enjoy Jupiter’s orange and red fruit; arrange frost-free conditions before damaging cold."
           },
           {
             "season": "Winter",
-            "action": "Because the species is unconfirmed, add light protection during hard frost and keep the sheltered crown just moist rather than saturated."
+            "action": "If retained frost-free, give Jupiter bright light and reduced watering; assess outdoor frost damage before deciding its future."
           }
         ],
         "problems": [
           {
-            "name": "Slugs and snails",
-            "sign": "Ragged shoots or missing new growth",
-            "response": "Check after damp nights and protect growth early using wildlife-conscious controls."
-          },
-          {
-            "name": "Powdery mildew",
-            "sign": "White coating during warm, dry weather",
-            "response": "Water roots consistently, improve airflow and remove the worst affected foliage."
+            "name": "Cold damage",
+            "sign": "Leaves and stems collapse after frost",
+            "response": "Outdoor shelter cannot guarantee survival. Record the outcome; retaining the plant needs a frost-free space."
           }
         ],
-        "about": "This is an observed fern record, not a guessed name. Its divided fronds now provide a low foliage layer beside the moved Fuchsia and Skimmia; close photographs of new fronds, scales and mature frond undersides remain the right route to a more precise identification.",
-        "provenanceNote": "The supplied September update and photographs record this plant's identity and position.",
+        "caution": "All parts are poisonous to people and pets; berries are particularly tempting. Wear gloves and prevent ingestion.",
+        "about": "Winter cherry is an evergreen nightshade-family shrub grown for ornamental fruit. Jupiter occurs in horticultural trade under Solanum pseudocapsicum; this specimen’s supplied name has not been checked against a retained label.",
+        "provenanceNote": "Name supplied by Brad, October 2026. Photos support the plant group and berry colour; cultivar confirmation remains pending.",
         "botanical": [
           {
             "label": "Family",
-            "value": "Unconfirmed"
-          },
-          {
-            "label": "Genus",
-            "value": "Fern"
+            "value": "Solanaceae"
           },
           {
             "label": "Botanical name",
-            "value": "Fern — cultivar to confirm"
-          },
-          {
-            "label": "Plant type",
-            "value": "Unidentified garden fern"
-          },
-          {
-            "label": "Foliage",
-            "value": "Fern fronds; exact type unconfirmed"
-          },
-          {
-            "label": "Habit",
-            "value": "Tufted or arching"
+            "value": "Solanum pseudocapsicum 'Jupiter' — supplied trade name"
           },
           {
             "label": "Name status",
-            "value": "Garden record accepted"
-          },
-          {
-            "label": "Native to Britain or Ireland",
-            "value": "No"
+            "value": "Species best fit; trade name supplied"
           }
         ],
         "oakLodge": {
-          "location": "Sheltered planting beneath the Japanese Maple — moved from Hanging Basket 3 · Bed 1",
-          "added": "Added September 2026",
-          "role": "Sheltered foliage layer in Back Bed 1",
-          "observation": "Recorded in the September 2026 garden update photographs.",
-          "status": "Retain labels and monitor the first winter."
+          "location": "Former Fuchsia and fern pocket beneath the Maple, in front of the Hosta · Back Bed 1",
+          "added": "October 2026",
+          "role": "Autumn berry colour in the former basket-rescue pocket",
+          "observation": "Photographed beside the Buddha, Hosta and Japanese Maple.",
+          "status": "Replaces the Fuchsia and fern discarded by Brad; map position is approximate."
         },
         "sources": [
           {
-            "label": "RHS · Fern growing guide",
-            "url": "https://www.rhs.org.uk/plants/types/ferns/growing-guide"
+            "title": "NC State · Solanum pseudocapsicum",
+            "url": "https://plants.ces.ncsu.edu/plants/solanum-pseudocapsicum/",
+            "note": "Species care, seasonal fruit, frost sensitivity and toxicity"
           },
           {
-            "title": "Oak Lodge September 2026 plant labels and photographs",
-            "url": null,
-            "note": "Identity and placement recorded from the September pot and hanging-basket update"
-          },
-          {
-            "title": "Oak Lodge garden record",
-            "url": null,
-            "note": "Identity label, position, photographs, planting history and on-site observations"
+            "title": "Syngenta · Pot Plants 2016",
+            "url": "https://pages.nxtbook.com/syngenta/FloriProServices/Pot_Plants_2016_EX/offline/FloriProServices_Pot_Plants_2016_EX.pdf",
+            "note": "Jupiter listed under Solanum pseudocapsicum; trade-name context only"
           }
         ],
-        "careSummary": "Keep a frond for identification. Photograph the moved Bed 1 fern's underside before removing old fronds; its winter requirements are still unresolved.",
-        "display": {
-          "cycleTitle": "Foliage display",
-          "cycleEmpty": "fronds, not flowers",
-          "cycleAria": "Fern: no flowering period",
-          "cycleNote": "Ferns reproduce by spores. Frond emergence and persistence depend on the species and season."
-        },
         "contentReview": {
           "date": "2026-09-18",
-          "care": "Rewritten with botanical and specimen-specific actions"
+          "care": "Retained existing plant-specific authored care"
         }
       }
     },

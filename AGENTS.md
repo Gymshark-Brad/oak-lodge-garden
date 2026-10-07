@@ -224,7 +224,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
-| Bed 1 | 17 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', the September-moved Skimmia 'Double Diamond', Fuchsia and fern; Wisley Vanilla Nemesia and assumed Gaillardia ‘Arizona Sun’ moved here from Back Bed 4 in October |
+| Bed 1 | 17 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', the September-moved Skimmia 'Double Diamond', Pernettya Pink (cultivar unresolved) and Solanum Jupiter (name supplied), replacing the discarded September Fuchsia and fern; Wisley Vanilla Nemesia and assumed Gaillardia ‘Arizona Sun’ moved here from Back Bed 4 in October |
 | Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, Geum, inherited Rose, Butterfly Bush and Abelia 'Raspberry Profusion', which directly replaced the failed Dianthus in September 2026 |
 | Bed 3 | 9 | Sedum 'Rose Carpet', four grouped Double Play Big Bang Spiraea plus relocated Magic Carpet, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis |
 | Bed 4 | 7 | Apple Tree, Callistemon 'Inferno', Abelias 'Kaleidoscope' and 'Radiance', relocated Lobelia 'Starship Scarlet Bronze Leaf', October-moved Pieris 'Polar Passion' in Gaillardia’s former position and new Viola 'Pineapple Crush' |
@@ -380,3 +380,8 @@ Five houseplants were added using the supplied ground-floor stars: Rhipsalis (pu
 Petite Star Hydrangea replaced Polar Passion in Front Bed 4. Polar Passion moved to Gaillardia’s former Back Bed 4 position; Wisley Vanilla Nemesia and Gaillardia moved into Back Bed 1. New Pineapple Crush Viola is in **Back Bed 4**, confirmed by Brad after correcting the initial front-bed wording. Bed 1 map pockets for the two moves are approximate. Public October photos are metadata-free WebP copies under `images/oct-2026/`; originals remain in `images/October Birthday Plants/`. October journal dates retain month precision.
 
 Nicola’s sitting-room gift planter is now one mixed-pot record containing the assumed Spider Plant ‘Vittatum’, Parlour Palm and Arrowhead Vine. The original lead plant ID `house-sitting-mixed-spider-plant` and zone `houseSittingMixedSpider` are retained for September journal links. One map marker, watering entry and six-photo collection cover the shared pot; component botanical identities and the vine’s safety warning remain in the full profile. The assembled inventory has 186 records across 43 groups.
+
+
+## October 2026 Bed 1 berry planting
+
+Brad discarded both September Hanging Basket 3 rescues (Fuchsia and unidentified fern) and planted Pernettya Pink and Solanum Jupiter in their freed Back Bed 1 pocket. Stable IDs: `bed1-pernettya-pink`, `bed1-solanum-jupiter`. Names are supplied, without retained labels; Pink is not assumed to mean Pink Pearl. Jupiter needs frost-free conditions for winter retention. October journal events use month precision. Metadata-free public photos are in `images/oct-2026/`; originals are in `images/October Bed 1 Berry Plants/`. Retirement at the end of `plant-care-data.js` excludes the old rescues from active registries while preserving historical authored layers and September journal wording.
