@@ -3023,7 +3023,7 @@
         "plantIds": [],
         "id": "jun-bed2-summer",
         "title": "Bed 2 shifts from blossom to summer flower",
-        "note": "Weigela and Geum share the border with Silverbush, the climbing Hydrangea and Abelia Raspberry Profusion."
+        "note": "Weigela and Geum share the border with Silverbush, the climbing Hydrangea and Echinacea Mooodz Glory. Raspberry Profusion now grows in the blue stair pot."
       },
       {
         "scope": "pot",
@@ -7461,3 +7461,70 @@ Object.assign(window.OAK.SEASONAL_SOURCES, {
     "note": "Species care, seasonal fruit, frost sensitivity and toxicity"
   }
 });
+
+// November locations and the new hanging houseplant. The calendar describes
+// current care; the separately authored journal preserves the earlier history.
+(() => {
+  const OAK = window.OAK;
+  const abeliaId = "bed2-abelia-raspberry-profusion";
+  const echinaceaId = "wallpot2-echinacea-mooodz-glory";
+  const marchAbelia = OAK.SEASONAL.March.jobs.find((job) => job.id === "mar-abelia-thin");
+  marchAbelia.zoneKeys = ["bed1", "wallpot2", "bed4"];
+  marchAbelia.plantNotes[abeliaId] = "Raspberry Profusion now grows in the blue stair pot. Let it establish; remove dead tips or an obstruction when live spring buds show, without repeatedly shearing healthy flowering shoots.";
+
+  const augustEchinacea = OAK.SEASONAL.August.jobs.find((job) => job.id === "aug-wallpot2");
+  augustEchinacea.scope = "plant";
+  augustEchinacea.zoneKeys = ["bed2"];
+  delete augustEchinacea.potKey;
+  augustEchinacea.title = "Deadhead Echinacea Mooodz Glory selectively";
+
+  [
+    ["October", "oct-echinacea-pot-protect", "oct-echinacea-border-drainage"],
+    ["November", "nov-echinacea-pot-protection", "nov-echinacea-border-crown"],
+  ].forEach(([month, previousId, newId]) => {
+    const job = OAK.SEASONAL[month].jobs.find((entry) => entry.id === previousId);
+    // A new ID prevents a saved pot-protection check completing changed work.
+    Object.assign(job, {
+      id: newId, scope: "plant", zoneKeys: ["bed2"],
+      title: "Keep the border Echinacea crown clear",
+      summary: "Clear wet leaves and bark from the crown in Back Bed 2; check that rain drains away.",
+      why: "The moved coneflower is now in the ground; keeping its dormant crown open matters more than container insulation.",
+      steps: ["Find the marked crown at Back Bed 2 position 7.", "Lift away wet leaves and pull bark back from the basal shoots.", "Check for pooled water; avoid extra watering while the soil remains wet."],
+      doneWhen: "The Bed 2 crown is clear of wet debris and the root area is draining.",
+      sources: ["plant-wallpot2-echinacea-mooodz-glory"], guide: "check",
+      plantNotes: { [echinaceaId]: "Mooodz Glory directly replaced Raspberry Profusion. Leave the hardy dormant clump undisturbed and protect emerging basal shoots from slugs in spring." },
+    });
+    delete job.potKey;
+    delete job.caution;
+  });
+
+  OAK.SEASONAL.November.jobs.push({
+    id: "nov-abelia-blue-pot-establishment", scope: "pot", potKey: "wallpot2", zoneKeys: ["wallpot2"], plantIds: [abeliaId],
+    priority: "first", category: "protect", title: "Check Raspberry Profusion in its new pot",
+    timing: "After the swap, in drying winds and before prolonged freezing weather.",
+    summary: "Check the original root ball, clear the blue pot's drainage and shelter exposed roots.",
+    why: "The evergreen Abelia now depends on a small container rather than the Bed 2 root run.",
+    steps: ["Feel the original root ball and water only if drying.", "Make sure the pot is stable and surplus rain can drain.", "Protect the container during prolonged frost; delay pruning until spring growth shows live wood."],
+    doneWhen: "The Abelia root ball is checked, drainage is clear and the pot has appropriate winter shelter.",
+    guide: "protect", sources: ["plant-bed2-abelia-raspberry-profusion"], plantNotes: {},
+  });
+
+  OAK.SEASONAL_SOURCES["house-scindapsus-care"] = {
+    title: "RHS · How to grow epipremnum", url: "https://www.rhs.org.uk/plants/epipremnum/growing-guide",
+    note: "Care for the assumed golden pothos; Scindapsus remains the supplied name",
+  };
+  OAK.MONTHS.forEach((month) => {
+    const growing = ["April", "May", "June", "July", "August", "September"].includes(month);
+    OAK.SEASONAL[month].indoorJobs.push({
+      id: `${month.slice(0, 3).toLowerCase()}-scindapsus-hanging-pot-check`,
+      scope: "plant", zoneKeys: ["houseSittingScindapsus"], plantIds: ["house-sitting-scindapsus"],
+      priority: "ongoing", category: "check", title: "Check the hanging Scindapsus",
+      timing: growing ? "During regular indoor checks; more often in warm bright weather." : "During indoor checks; lengthen watering intervals in lower winter light.",
+      summary: "Check the compost before watering and let all runoff drain before rehanging.",
+      why: "A full hanging canopy can hide wet compost or trapped water in the outer pot.",
+      steps: ["Lower the pot safely and feel the upper compost.", "Water only after the top layer has dried, then drain fully.", "Keep trails clear of the stairs and out of reach of pets."],
+      doneWhen: "The hanging root ball has been checked and no standing water remains.",
+      guide: "check", sources: ["house-scindapsus-care"], plantNotes: {},
+    });
+  });
+})();

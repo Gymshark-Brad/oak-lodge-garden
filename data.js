@@ -28,7 +28,7 @@ window.OAK = (function () {
       dims: "2m wide · ≈3.1m run",
       where: "Lower level, west boundary",
       desc:
-        "The upright section of the former sideways T-shaped border along the west boundary. Abelia 'Raspberry Profusion' directly replaced the Dianthus that died in September 2026, beside Weigela, peony, Geums, Euonymus, climbing Hydrangea, an inherited rose, Silverbush and Butterfly Bush.",
+        "The upright section of the former sideways T-shaped border along the west boundary. Echinacea Mooodz Glory now occupies position 7 after a direct swap with Abelia 'Raspberry Profusion' in the November 2026 update. Weigela, peony, Geums, Euonymus, climbing Hydrangea, an inherited rose, Silverbush and Butterfly Bush complete the planting.",
       shape: { kind: "rect", x: 94, y: 323, w: 100, h: 155 },
       color: "#6b8e4e",
       labelXY: [144, 390],
@@ -96,7 +96,7 @@ window.OAK = (function () {
       dims: "3m × 3m",
       where: "Connecting upper and lower",
       desc:
-        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Skimmia, Echinacea, two little pots, Candy House wall pot, refreshed white-and-blue pot group and new tomato-can cluster are catalogued together in this folio.",
+        "Block paving with brick edging, several levels stepping down. The Cercis, Viburnum, Skimmia, Abelia, two little pots, Candy House wall pot, refreshed white-and-blue pot group and tomato-can cluster are catalogued together in this folio. Abelia 'Raspberry Profusion' took the Echinacea's blue pot in the November 2026 update.",
       shape: { kind: "rect", x: 334, y: 243, w: 140, h: 150 },
       color: "#6e6e5e",
       labelXY: [404, 344],
@@ -230,7 +230,7 @@ window.OAK = (function () {
       title: "Little Pot 1",
       badge: "Small pot",
       dims: "Small square blue pot",
-      where: "Right edge of the steps, south of the Echinacea pot",
+      where: "Right edge of the steps, south of the Abelia pot",
       desc:
         "A small blue pot shifted farther south along the right edge of the steps in August 2026. It now holds Helleborus Ice N' Roses Bennotta; its earlier Geranium and Petunia display remains in the September journal.",
       shape: { kind: "circle", cx: 464, cy: 291, r: 12 },
@@ -244,7 +244,7 @@ window.OAK = (function () {
       title: "Little Pot 2",
       badge: "Small pot",
       dims: "Small square blue pot",
-      where: "Upper stair wall, directly west of the Echinacea pot",
+      where: "Upper stair wall, directly west of the Abelia pot",
       desc:
         "The square blue Little Pot 2 moved to the upper stair wall in August 2026. Its former summer bedding was removed and the established golden Coreopsis moved into it.",
       shape: { kind: "circle", cx: 440, cy: 265, r: 11 },
@@ -295,11 +295,11 @@ window.OAK = (function () {
     },
     wallpot2: {
       id: "wallpot2",
-      title: "Echinacea Pot",
+      title: "Abelia Pot",
       badge: "Small glazed pot",
       dims: "Small blue pot",
       where: "Former Little Pot 1 position on the right edge of the steps",
-      desc: "The former Coreopsis pot now holds Echinacea Mooodz Glory ('Hilmooglor'), a compact white coneflower with golden-green central cones. It occupies Little Pot 1's former position.",
+      desc: "The small blue stair pot now holds Abelia 'Raspberry Profusion', directly swapped with Echinacea Mooodz Glory from Back Bed 2 in the November 2026 update. The container remains in Little Pot 1's former position; the Echinacea now grows in Back Bed 2.",
       shape: { kind: "circle", cx: 464, cy: 265, r: 10 },
       color: "#3a7abf",
       labelXY: [575, 270],
@@ -3386,6 +3386,49 @@ window.OAK = (function () {
   "description": "Glossy upright leaf stalks stand in a black nursery pot beside the wooden console."
 }];
 
+  // November update: swap the specimens, preserving their IDs and history.
+  const novemberBed2Index = PLANTS["Bed 2"].findIndex((plant) => plant.id === "bed2-abelia-raspberry-profusion");
+  const novemberAbelia = takePlant("Bed 2", "bed2-abelia-raspberry-profusion");
+  const novemberEchinacea = takePlant("Wall Pot 2", "wallpot2-echinacea-mooodz-glory");
+  Object.assign(novemberAbelia, {
+    position: "Single specimen in the blue stair pot, swapped from Back Bed 2 in the November 2026 update",
+    photos: ["images/nov-2026/abelia-raspberry-profusion-pot-1.webp", "images/nov-2026/abelia-raspberry-profusion-pot-2.webp", ...novemberAbelia.photos],
+  });
+  Object.assign(novemberEchinacea, {
+    position: "Position 7 in Back Bed 2, directly replacing Abelia 'Raspberry Profusion' in the November 2026 update",
+    photos: ["images/nov-2026/back-bed2-echinacea.webp", ...novemberEchinacea.photos],
+  });
+  PLANTS["Bed 2"].splice(novemberBed2Index, 0, novemberEchinacea);
+  PLANTS["Wall Pot 2"].push(novemberAbelia);
+
+  ZONES.houseSittingScindapsus = {
+    id: "houseSittingScindapsus",
+    title: "Sitting Room · Scindapsus",
+    badge: "Indoor hanging plant",
+    dims: "Hanging container",
+    where: "Ground floor · Hanging from the beam beside the sitting-room stairs",
+    desc: "A trailing green-and-yellow houseplant in a hanging pot. Supplied as Scindapsus; the photographs suggest golden pothos, Epipremnum aureum, with the botanical identity still assumed.",
+    color: "#7d9346",
+    plantKey: "House · Sitting Room · Scindapsus",
+    isPot: true,
+    environment: "indoor",
+    floor: "Ground Floor",
+    room: "Sitting Room / stair opening",
+    marker: { floor: "ground", x: 695, y: 275 },
+  };
+  PLANTS["House · Sitting Room · Scindapsus"] = [{
+    id: "house-sitting-scindapsus",
+    name: "Scindapsus (golden pothos, assumed)",
+    latin: "Epipremnum aureum (assumed)",
+    position: "Hanging from the beam beside the sitting-room stairs; supplied floor-plan star",
+    light: "Bright indirect daylight, away from hot sun.",
+    water: "Let the upper compost dry before watering; drain the hanging pot fully.",
+    care: "Keep trailing stems clear of the stairs and out of reach of pets; do not leave runoff in the outer pot.",
+    seasonal: "Evergreen foliage indoors; reduce watering as winter growth slows.",
+    photos: ["images/nov-2026/house-scindapsus-1.webp", "images/nov-2026/house-scindapsus-2.webp"],
+    description: "Glossy heart-shaped green leaves with yellow streaks trail from the hanging pot beside the stairs. The supplied Scindapsus name is retained; golden pothos is a photo-based assumption.",
+  }];
+
   // ─── PLANT PROFILES ───────────────────────────────────────────────
   // Every specimen gets an RHS-style introduction and a consistent set of
   // at-a-glance characteristics. Existing care prose remains the detailed
@@ -4547,7 +4590,7 @@ window.OAK = (function () {
       { mapNo: 4, plantId: "bed2-euonymus-emerald-gaiety", name: "Euonymus 'Emerald Gaiety'", x: 62, y: 59, r: 7, hue: 110 },
       { mapNo: 5, plantId: "bed2-hydrangea-petiolaris", name: "Hydrangea petiolaris", x: 36, y: 50, r: 9, hue: 210 },
       { mapNo: 6, plantId: "bed2-avens", name: "Avens", x: 61, y: 41, r: 7, hue: 30 },
-      { mapNo: 7, plantId: "bed2-abelia-raspberry-profusion", name: "Abelia 'Raspberry Profusion'", x: 78, y: 47, r: 7, hue: 335 },
+      { mapNo: 7, plantId: "wallpot2-echinacea-mooodz-glory", name: "Echinacea 'Mooodz Glory'", x: 78, y: 47, r: 7, hue: 70 },
       { mapNo: 8, plantId: "bed2-rose-inherited", name: "Rose (inherited)", x: 60, y: 25, r: 8, hue: 350 },
       { mapNo: 9, plantId: "bed2-silverbush", name: "Silverbush", x: 82, y: 14, r: 8, hue: 70 },
       { mapNo: 10, plantId: "bed2-butterfly-bush", name: "Butterfly Bush", x: 24, y: 14, r: 14, hue: 285 },
@@ -4673,7 +4716,7 @@ window.OAK = (function () {
       { plantId: "wallpot1-phormium-flamingo", name: "Phormium 'Flamingo'", x: 50, y: 50, r: 36, hue: 340 },
     ],
     wallpot2: [
-      { name: "Echinacea 'Mooodz Glory'", x: 50, y: 50, r: 36, hue: 70 },
+      { plantId: "bed2-abelia-raspberry-profusion", name: "Abelia 'Raspberry Profusion'", x: 50, y: 50, r: 36, hue: 335 },
     ],
     frontBed1: [
       { name: "Hydrangea", x: 68, y: 25, r: 14, hue: 300 },
@@ -4780,7 +4823,7 @@ window.OAK = (function () {
       { name: "Viburnum Pot", marker: "V", zoneKey: "viburnumpot", x: 90, y: 10, r: 8, hue: 235 },
       { name: "Skimmia Pot", marker: "S", zoneKey: "lobeliapot", x: 20, y: 32, r: 7, hue: 120 },
       { name: "Little Pot 2", marker: "L2", zoneKey: "littlepot2", x: 65, y: 30, r: 6, hue: 240 },
-      { name: "Echinacea Pot", marker: "E", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 70 },
+      { name: "Abelia Pot", marker: "A", zoneKey: "wallpot2", x: 83, y: 30, r: 6, hue: 335 },
       { name: "Little Pot 1", marker: "L1", zoneKey: "littlepot1", x: 83, y: 46, r: 6, hue: 240 },
       { name: "Stairs Pots & Can", marker: "P+C", zoneKey: "stairpots", x: 48, y: 52, r: 8, hue: 275 },
       { name: "Three-Can Cluster", marker: "C3", zoneKey: "staircans", x: 31, y: 67, r: 7, hue: 35 },
@@ -5262,6 +5305,40 @@ window.OAK = (function () {
     "caption": "Both new berry plants beneath the Japanese Maple"
   }
 ] }];
+
+  // Photographs supplied for the November update. The outdoor photographs
+  // predate the upload; do not infer an exact move date from their metadata.
+  PLANT_PHOTOS_BY_ID["bed2-abelia-raspberry-profusion"] = [
+    { month: "sep-2026", label: "September 2026 · Back Bed 2", photos: [
+      { src: "images/September Pots V2/Bed 2 - Abelia - 1.jpeg", caption: "Raspberry Profusion in Back Bed 2 before the direct pot swap" },
+      { src: "images/September Pots V2/Bed 2 - Abelia - 2.jpeg", caption: "The original September Raspberry Profusion planting" },
+    ] },
+    ...(PLANT_PHOTOS_BY_ID["bed2-abelia-raspberry-profusion"] || []),
+  ];
+  const novemberPhotos = {
+    "bed2-abelia-raspberry-profusion": [
+      { src: "images/nov-2026/abelia-raspberry-profusion-pot-1.webp", caption: "Abelia 'Raspberry Profusion' in the Echinacea's former blue stair pot" },
+      { src: "images/nov-2026/abelia-raspberry-profusion-pot-2.webp", caption: "The compact Abelia with pink flowers and persistent coloured calyces" },
+    ],
+    "wallpot2-echinacea-mooodz-glory": [
+      { src: "images/nov-2026/back-bed2-echinacea.webp", caption: "Echinacea Mooodz Glory in the Abelia's former Back Bed 2 pocket" },
+    ],
+    "house-sitting-scindapsus": [
+      { src: "images/nov-2026/house-scindapsus-1.webp", caption: "Scindapsus hanging from the sitting-room beam beside the stairs" },
+      { src: "images/nov-2026/house-scindapsus-2.webp", caption: "Glossy yellow-streaked leaves support the assumed golden pothos identity" },
+    ],
+  };
+  PHOTOS_BY_MONTH["nov-2026"] = {
+    label: "November 2026 update",
+    bed2: novemberPhotos["wallpot2-echinacea-mooodz-glory"],
+    bed2Archive: PLANT_PHOTOS_BY_ID["bed2-abelia-raspberry-profusion"][0].photos,
+    wallpot2: novemberPhotos["bed2-abelia-raspberry-profusion"],
+    wallpot2Archive: [...PHOTOS_BY_MONTH["aug-2026"].wallpot2, ...PHOTOS_BY_MONTH["aug-2026"].wallpot2Archive],
+    houseSittingScindapsus: novemberPhotos["house-sitting-scindapsus"],
+  };
+  Object.entries(novemberPhotos).forEach(([id, photos]) => {
+    PLANT_PHOTOS_BY_ID[id] = [{ month: "nov-2026", label: "November 2026 update", photos }, ...(PLANT_PHOTOS_BY_ID[id] || [])];
+  });
 
   // Cards and galleries use lightweight display derivatives. Originals stay
   // available for the full-screen lightboxes, and components fall back to

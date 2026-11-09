@@ -632,6 +632,12 @@
   WATER_BANDS["Bed 1"]["Solanum 'Jupiter' (name supplied)"] = 3;
 
   const WATER_BANDS_BY_ID = {};
+  // November direct swap: the stable IDs follow the plants, not the pots.
+  delete WATER_BANDS["Bed 2"]["Abelia 'Raspberry Profusion'"];
+  delete WATER_BANDS["Wall Pot 2"]["Echinacea 'Mooodz Glory'"];
+  WATER_BANDS["Bed 2"]["Echinacea 'Mooodz Glory'"] = 3;
+  WATER_BANDS["Wall Pot 2"]["Abelia 'Raspberry Profusion'"] = 3;
+  WATER_BANDS["House · Sitting Room · Scindapsus"] = { "Scindapsus (golden pothos, assumed)": 2 };
   Object.values(window.OAK.PLANT_BY_ID || {}).forEach((record) => {
     const band = (WATER_BANDS[record.plantKey] || {})[record.plant.name];
     if (band) WATER_BANDS_BY_ID[record.plant.id] = band;

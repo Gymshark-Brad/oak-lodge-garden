@@ -212,20 +212,20 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 - Viburnum Pot — new pot in the Lobelia's former Bed 4-side position; Viburnum tinus Spirit
 - Bed 2/3 Wall Pot — pot on the shared brick wall; Viburnum 'Lisarose' and an additional Vinca minor 'Illumination'
 - Cercis Pot — terracotta specimen pot in the former stair-corner location; Cercis canadensis 'Carolina Sweetheart'
-- Little Pot 1 — small blue pot shifted south below the Echinacea pot in August 2026
-- Echinacea Pot — the former Coreopsis pot, now at Little Pot 1's previous position; Echinacea Mooodz Glory
-- The Cercis, Viburnum, Skimmia, Echinacea, Little Pots 1 and 2, Candy House wall pot, September white-and-blue pot group and new three-can cluster are nested inside the Steps folio. The older boundary-wall Front Pots remain a separate front-garden folio.
+- Little Pot 1 — small blue pot shifted south below the current Abelia pot in August 2026
+- Abelia Pot — the former Coreopsis and Echinacea pot, at Little Pot 1's previous position; Raspberry Profusion swapped here from Back Bed 2 in the November 2026 update
+- The Cercis, Viburnum, Skimmia, Abelia, Little Pots 1 and 2, Candy House wall pot, September white-and-blue pot group and new three-can cluster are nested inside the Steps folio. The older boundary-wall Front Pots remain a separate front-garden folio.
 - Patio Kitchen & Lounge — one merged hardscape section; the Hanging Baskets are nested inside its folio
 - Front Pot — glazed pot on the front-garden gravel immediately south of Front Bed 2; Gazania, Calibrachoa, Bacopa White
 
 ---
 
-## Plant inventory summary (updated October 2026)
+## Plant inventory summary (updated November 2026)
 
 | Zone | Count | Key plants |
 |------|-------|-----------|
 | Bed 1 | 17 | Japanese Maple 'Bloodgood' (best fit), Fatsia japonica, Rhododendron, two Double Dreamy Dahlias (best fits), Abelia 'Kaleidoscope', Pieris 'Forest Flame', the September-moved Skimmia 'Double Diamond', Pernettya Pink (cultivar unresolved) and Solanum Jupiter (name supplied), replacing the discarded September Fuchsia and fern; Wisley Vanilla Nemesia and assumed Gaillardia ‘Arizona Sun’ moved here from Back Bed 4 in October |
-| Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, Geum, inherited Rose, Butterfly Bush and Abelia 'Raspberry Profusion', which directly replaced the failed Dianthus in September 2026 |
+| Bed 2 | 9 | Peony, Weigela, Silverbush, Hydrangea petiolaris, Euonymus, Geum, inherited Rose, Butterfly Bush and Echinacea Mooodz Glory, directly swapped with Raspberry Profusion in the November 2026 update |
 | Bed 3 | 9 | Sedum 'Rose Carpet', four grouped Double Play Big Bang Spiraea plus relocated Magic Carpet, assumed Evergreen Candytuft, Centaurea, inherited Rose, assumed Variegated Lesser Periwinkle, Weeping Cherry and assumed yellow Corydalis |
 | Bed 4 | 7 | Apple Tree, Callistemon 'Inferno', Abelias 'Kaleidoscope' and 'Radiance', relocated Lobelia 'Starship Scarlet Bronze Leaf', October-moved Pieris 'Polar Passion' in Gaillardia’s former position and new Viola 'Pineapple Crush' |
 | Bed 5 | 12 | Wisteria, Rose, assumed Yucca and Cabbage Tree; big-pot Alstroemeria, Petunia, original Vinca, relocated 'Aroma Heart of Gold', September-moved Gaultheria and mixed Violas/Pansies; two smaller planted pots |
@@ -240,7 +240,7 @@ Scale: ~50px = 1m, SVG viewBox 820×620. Two levels connected by steps.
 | Viburnum Pot | 1 | Viburnum tinus Spirit — added August 2026 |
 | Bed 2/3 Wall Pot | 2 | Viburnum 'Lisarose' and an additional Vinca minor 'Illumination' — added August 2026 |
 | Cercis Pot | 1 | Cercis canadensis 'Carolina Sweetheart' — added August 2026 |
-| Echinacea Pot | 1 | Echinacea Mooodz Glory — added August 2026 |
+| Abelia Pot | 1 | Abelia 'Raspberry Profusion', directly swapped from Back Bed 2 in the November 2026 update; zone `wallpot2` / `Wall Pot 2` retained |
 | Stairs Pots | 1 | One grouped entry covering the refreshed white pot, blue pot and one can, all containing mixed Violas and Pansies |
 | Stairs Cans | 1 | One grouped entry covering a cluster of three repurposed cans containing mixed Violas and Pansies |
 | Hanging Basket 3 | 4 | Lysimachia, Chrysanthemum, Cyclamen and two grouped unidentified Hedera; Fuchsia and fern moved to Bed 1 in September 2026 |
@@ -385,3 +385,11 @@ Nicola’s sitting-room gift planter is now one mixed-pot record containing the 
 ## October 2026 Bed 1 berry planting
 
 Brad discarded both September Hanging Basket 3 rescues (Fuchsia and unidentified fern) and planted Pernettya Pink and Solanum Jupiter in their freed Back Bed 1 pocket. Stable IDs: `bed1-pernettya-pink`, `bed1-solanum-jupiter`. Names are supplied, without retained labels; Pink is not assumed to mean Pink Pearl. Jupiter needs frost-free conditions for winter retention. October journal events use month precision. Metadata-free public photos are in `images/oct-2026/`; originals are in `images/October Bed 1 Berry Plants/`. Retirement at the end of `plant-care-data.js` excludes the old rescues from active registries while preserving historical authored layers and September journal wording.
+
+## November 2026 update
+
+Abelia 'Raspberry Profusion' and Echinacea Mooodz Glory swapped directly. Abelia now occupies the blue stair pot, displayed as **Abelia Pot** while retaining zone `wallpot2` and plantKey `Wall Pot 2`. Echinacea now occupies Back Bed 2 map position 7. Both retain their original stable IDs and earlier photo histories. Current profiles, maps, watering guidance, seasonal tasks and downloadable inventories follow these locations.
+
+One hanging houseplant was added at the supplied star beside the sitting-room stairs: `house-sitting-scindapsus`, zone `houseSittingScindapsus`. Scindapsus is Brad's supplied name. Glossy yellow-streaked leaves support **Epipremnum aureum (assumed)**, historically Scindapsus aureus; no label confirms the species or a named cultivar. The profile includes the relevant pet and handling caution.
+
+Five metadata-free public photographs are under `images/nov-2026/`. The original `images/November Update/` folder, including its annotated floor plan, is excluded from deployment. Outdoor photographs predate the November upload; journal wording explicitly records the November update without inventing a day for the swap. The assembled inventory now has 187 records across 44 groups.

@@ -325,6 +325,84 @@
   window.OAK.HOUSE_PLANT_PROFILES = { [plantId]: profile, [gioiaId]: gioiaProfile, [staghornId]: staghornProfile, [mixedId]: mixedProfile };
 })();
 
+// November houseplant, supplied as Scindapsus. Botanical fit remains assumed.
+(() => {
+  const id = "house-sitting-scindapsus";
+  const profile = {
+    version: 2,
+    environment: "indoor",
+    type: "Evergreen trailing aroid",
+    badges: ["November 2026", "Supplied as Scindapsus", "Golden pothos assumed"],
+    petSafety: {
+      tone: "caution", label: "Harmful to cats & dogs",
+      detail: "Calcium oxalate crystals irritate the mouth if chewed. Keep trailing stems and fallen leaves away from pets and children; wear gloves when cutting stems.",
+    },
+    display: {
+      cycleTitle: "Indoor foliage", cycleEmpty: "Foliage all year; flowers rare indoors",
+      cycleNote: "The hanging foliage is the display, with slower growth in winter.",
+      cycleAria: "Evergreen indoor foliage throughout the year",
+      roleLabel: "Role in the room", fieldNoteLabel: "Hanging-pot note · November ’26",
+      sourceIntro: "Care follows the assumed golden pothos identity. Position and photographs are Oak Lodge records.",
+      waterBandNote: "Band 2 prompts a compost check, not an automatic drink. Lift the pot down to water and drain it.",
+    },
+    description: "Glossy green leaves streaked with yellow trail from a pot hanging on the sitting-room beam beside the stairs. Brad supplied the name Scindapsus. The foliage fits golden pothos, Epipremnum aureum, previously called Scindapsus aureus; this identification remains assumed without a label.",
+    floweringMonths: [],
+    facts: [
+      { label: "Identity", value: "Epipremnum aureum (assumed)", detail: "Photo-based fit; retain Scindapsus as the supplied name. No named cultivar is confirmed." },
+      { label: "Light", value: "Bright indirect daylight", detail: "Deep shade weakens growth and yellow variegation; protect leaves from hot direct sun." },
+      { label: "Temperature", value: "Warm room; ideally 18–30°C", detail: "Keep away from cold stair draughts and direct heater warmth." },
+      { label: "Water", value: "After the upper compost dries", detail: "Feel beneath the surface and check pot weight; soak and drain fully when needed." },
+      { label: "Size", value: "Trailing stems can exceed 2m", detail: "This is potential growth, not a measurement of the new plant." },
+      { label: "Pot & compost", value: "Open, freely draining houseplant compost", detail: "Use a pot with drainage; never leave the roots standing in the outer container's runoff." },
+    ],
+    careGuide: [
+      { title: "Check the hanging root ball", summary: "Take the pot down before watering.", detail: "Let the top layer dry, then water thoroughly and let surplus escape before rehanging. Reduce water in lower winter light." },
+      { title: "Keep the stair-side trails manageable", summary: "Guide stems clear of the passage and pets.", detail: "Trim long shoots just above a leaf joint in spring for a fuller plant. Wear gloves; stem sections containing a node can be rooted as cuttings." },
+      { title: "Support healthy new leaves", summary: "Wipe dust off and feed only during growth.", detail: "Use monthly houseplant feed in the growing season. Repot in spring only when roots crowd the container, increasing its size modestly." },
+    ],
+    waterSigns: {
+      under: "Drooping golden-marbled leaves and a light hanging pot suggest the root ball has dried; confirm below the surface before soaking and draining.",
+      over: "Yellowing pothos leaves with wet compost or dark soft stem bases suggest excess water; empty the outer pot and check root aeration.",
+    },
+    seasons: [
+      { season: "Spring", action: "Inspect the hanging pothos root ball; repot if crowded and shorten overlong trails above a node." },
+      { season: "Summer", action: "Check the hanging compost more often as pothos growth increases, give monthly feed and shield the yellow-marbled leaves from hot sun." },
+      { season: "Autumn", action: "Reduce feeding as the pothos slows and check whether the beam position still receives useful indirect daylight." },
+      { season: "Winter", action: "Keep this stair-side pothos warm, lengthen watering intervals and empty its hanging container after every drink." },
+    ],
+    problems: [
+      { name: "Weak or plain-green growth", sign: "Long gaps between leaves or fading yellow pattern", response: "Improve indirect daylight before adding fertiliser." },
+      { name: "Root rot", sign: "Wet compost with yellow leaves or blackening stem bases", response: "Stop watering, inspect drainage and remove trapped runoff." },
+      { name: "Scale or mealybugs", sign: "Sticky leaves, stem bumps or white clusters", response: "Inspect leaf joints and nearby plants, then identify the pest before treating." },
+    ],
+    about: "Golden pothos is an aroid from the Society Islands. Juvenile leaves are heart-shaped; aerial roots support climbing growth, while a hanging pot allows stems to cascade. It rarely flowers indoors. The older name Scindapsus aureus explains the supplied name; true Scindapsus pictus usually has silver mottling rather than yellow streaks.",
+    provenanceNote: "Brad supplied Scindapsus, two photographs and a ground-floor star beside the sitting-room stairs in November 2026. Yellow-streaked glossy leaves support Epipremnum aureum as an assumption; no retained label confirms the species or cultivar.",
+    botanical: [
+      { label: "Family", value: "Araceae" }, { label: "Genus", value: "Epipremnum (assumed)" },
+      { label: "Species", value: "Epipremnum aureum (assumed)" },
+      { label: "Supplied name", value: "Scindapsus" }, { label: "Historical synonym", value: "Scindapsus aureus" },
+      { label: "Foliage", value: "Evergreen; glossy green with yellow streaks" },
+    ],
+    oakLodge: {
+      location: "Ground floor · hanging from the beam beside the sitting-room stairs",
+      added: "Recorded November 2026; exact acquisition date not supplied",
+      role: "Trailing foliage at the sitting-room stair opening",
+      observation: "Two supplied views show a full hanging pot, heart-shaped leaves and yellow variegation.",
+      status: "Keep the supplied name and photograph any label before confirming the botanical identity.",
+    },
+    sources: [
+      { title: "RHS · Epipremnum aureum", url: "https://www.rhs.org.uk/plants/91403/epipremnum-aureum/details", note: "Foliage, synonym, growth and identity comparison" },
+      { title: "RHS · How to grow epipremnum", url: "https://www.rhs.org.uk/plants/epipremnum/growing-guide", note: "Indoor light, warmth, watering, feed, pruning and repotting" },
+      { title: "NC State Extension · Epipremnum aureum", url: "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/", note: "Origin, growth, identification and root-stress symptoms" },
+      { title: "ASPCA · Golden Pothos", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/golden-pothos", note: "Pet toxicity and calcium oxalates" },
+      { title: "RHS · Scindapsus pictus", url: "https://www.rhs.org.uk/plants/93929/scindapsus-pictus-v/details", note: "Silver-leaved comparison, not the assumed identification" },
+      { title: "Oak Lodge November update", url: null, note: "Supplied name, photographs and marked floor-plan position" },
+    ],
+  };
+  window.OAK.PLANT_BY_ID[id].plant.profile = profile;
+  window.OAK.HOUSE_PLANT_PROFILES[id] = profile;
+})();
+
 // October 2026 birthday additions — explicit researched profiles.
 (() => {
   const profiles = {

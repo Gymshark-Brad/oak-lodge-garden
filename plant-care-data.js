@@ -907,6 +907,79 @@
   });
 
   // Keep public summaries and downloads aligned with the authored profile.
+  // November direct swap. Apply current location-specific advice after the
+  // historical authored profiles, keeping their identity evidence intact.
+  const novemberIds = new Set(["bed2-abelia-raspberry-profusion", "wallpot2-echinacea-mooodz-glory", "house-sitting-scindapsus"]);
+  fact(profileFor("house-sitting-scindapsus"), "Care priority", "Drain the hanging pot before rehanging", "Lower the pot for checks and keep its trailing stems clear of the stairs and pets.");
+  profileFor("house-sitting-scindapsus").careSummary = "Drain the hanging pot before rehanging. Keep its yellow-streaked trails clear of the stairs and pets.";
+  const potAbelia = profileFor("bed2-abelia-raspberry-profusion");
+  potAbelia.sources.forEach((source) => { if (!source.title && source.label) source.title = source.label; });
+  Object.assign(potAbelia, {
+    description: "Abelia 'Raspberry Profusion' now grows in the blue stair pot after a direct swap with Echinacea Mooodz Glory in the November 2026 update. It first replaced a failed Dianthus in Back Bed 2 in September. Pale raspberry-pink trumpets and coloured calyces sit above small dark leaves; give the container sun, shelter and drainage without allowing its root ball to dry hard.",
+    careSummary: "Check the blue stair pot itself. Keep the moved root ball moist but drained and protect the container during prolonged freezing weather.",
+    waterSigns: {
+      under: "The Abelia's newest leaves curl and flowers fade while its blue stair pot feels light; check the original root ball before soaking and draining it.",
+      over: "Yellowing Abelia leaves or dark soft stem bases while the blue pot stays heavy suggest saturated compost; clear the holes and pause watering.",
+    },
+  });
+  fact(potAbelia, "Soil", "Moist but well-drained container compost", "Keep drainage holes clear and check the original root ball as well as the surrounding fresh compost.");
+  fact(potAbelia, "Water", "Check the pot; water when drying", "The blue container dries differently from Back Bed 2; rain reaching the leaves does not guarantee moist roots.");
+  fact(potAbelia, "Hardiness", "H4; protect exposed container roots", "The cultivar rating describes garden conditions. A small pot is more exposed during prolonged frost.");
+  fact(potAbelia, "Care priority", "Establish the Abelia in its blue pot", "Stand the pot securely with open drainage and shelter it from cold drying wind.");
+  potAbelia.careGuide = [
+    card("Check the whole blue-pot root ball", "Water thoroughly only when the compost is beginning to dry.", "Let surplus drain and avoid a permanently wet base. Protect the pot from prolonged freezing; do not feed a cold, inactive root ball."),
+    card("Keep the raspberry flower display", "Avoid repeated shearing of healthy red stems.", "Remove only damaged or obstructive shoots while flowering. Assess winter-damaged tips when new growth reveals the live framework in spring."),
+    card("Allow room for a woody shrub", "Check root congestion in spring rather than repeatedly clipping the top.", "Raspberry Profusion can reach 1–1.2m high and wide. Review container size as it establishes and move up gradually when the roots need more room."),
+  ];
+  potAbelia.seasons = [
+    { season: "Spring", action: "Assess live Abelia buds before removing dead tips; check the blue pot for congestion and refresh the compost surface without burying stems." },
+    { season: "Summer", action: "Check this exposed Abelia pot during warm or windy weather and water the full root ball when drying, keeping healthy flowering shoots." },
+    { season: "Autumn", action: "Stop routine Abelia feeding, clear leaves from the pot surface and keep the woody stem bases open as the foliage bronzes." },
+    { season: "Winter", action: "Keep the Abelia container draining, shelter it from drying wind and protect exposed roots during prolonged freezing spells." },
+  ];
+  Object.assign(potAbelia.oakLodge, {
+    location: "Abelia Pot · blue stair pot in Little Pot 1's former position",
+    added: "Added September 2026; moved from Back Bed 2 in the November 2026 update",
+    role: "Evergreen flowering shrub in the former Echinacea pot",
+    observation: "The supplied outdoor photographs show the Abelia in the blue pot. They predate the November upload; the exact move date is not recorded.",
+    status: "Check container moisture and drainage through the first winter after the swap.",
+  });
+
+  const borderEchinacea = profileFor("wallpot2-echinacea-mooodz-glory");
+  Object.assign(borderEchinacea, {
+    description: "Echinacea Mooodz Glory (‘Hilmooglor’) now grows at Back Bed 2 position 7 after swapping directly with Abelia 'Raspberry Profusion' in the November 2026 update. This compact white coneflower dies back to a hardy crown in winter. Its new border pocket needs sun and free drainage, with bark and fallen leaves kept off the crown as it settles.",
+    about: "Echinacea are North American daisy-family perennials with raised cones of disc florets surrounded by rays. Mooodz Glory is the trade name for ‘Hilmooglor’, a compact white-flowered selection. The specimen moved from its original blue pot into Back Bed 2; avoid further unnecessary disturbance while the roots establish.",
+    careSummary: "Keep the moved Echinacea crown visible in Back Bed 2. Check the original root ball in dry spells and avoid wet bark or debris against the crown.",
+    waterSigns: {
+      under: "Mooodz Glory's leaves and stems droop while the original root ball in Back Bed 2 feels dry; water that root area slowly rather than flooding the whole border.",
+      over: "A soft dark Echinacea crown beneath wet bark or persistent yellowing in saturated Bed 2 soil suggests poor drainage; clear debris and stop extra watering.",
+    },
+  });
+  fact(borderEchinacea, "Soil", "Deep, humus-rich and well-drained", "Keep bark away from the crown and avoid a planting hollow that holds winter rain.");
+  fact(borderEchinacea, "Water", "While rooting; then during dry spells", "Check the original root ball after the move; dormant winter crowns need drainage rather than routine watering.");
+  fact(borderEchinacea, "Hardiness", "H5", "Hardy in most UK gardens when the crown is kept out of stagnant winter wet.");
+  fact(borderEchinacea, "Care priority", "Keep the moved border crown clear", "Mark the new position and pull bark away from the basal shoots in Back Bed 2.");
+  borderEchinacea.careGuide = [
+    card("Let the Bed 2 crown settle", "Keep its original root ball moist when genuinely dry, without saturating it.", "Avoid lifting it again simply to tidy the border. Keep mulch away from the crown and make sure the new pocket does not collect standing water."),
+    card("Deadhead white flowers selectively", "Cut a faded stem back to a healthy leaf or side bud.", "Retain a few firm late cones if wanted for structure. Leave healthy basal foliage to replenish the established clump."),
+    card("Watch for returning border shoots", "Mark position 7 and check emerging shoots for slugs in spring.", "Clear collapsed leaves carefully. Do not mistake normal winter dieback for plant loss or bury the dormant crown under bark."),
+  ];
+  borderEchinacea.seasons = [
+    { season: "Spring", action: "Find the marked Echinacea crown in Back Bed 2, clear dead stems carefully and check fresh basal shoots for slugs." },
+    { season: "Summer", action: "Water Mooodz Glory's border root area during dry spells and deadhead spent white flowers above a healthy leaf joint." },
+    { season: "Autumn", action: "Keep selected Echinacea cones if firm, remove collapsed leaves and prevent bark accumulating over its new Bed 2 crown." },
+    { season: "Winter", action: "Leave the dormant border Echinacea undisturbed, clear wet debris after storms and avoid routine watering into cold wet soil." },
+  ];
+  borderEchinacea.problems.find((item) => item.name === "Winter crown rot").response = "Clear wet debris and bark from the Bed 2 crown; check for standing water and avoid further autumn disturbance.";
+  Object.assign(borderEchinacea.oakLodge, {
+    location: "Back Bed 2 · position 7, the former Raspberry Profusion pocket",
+    added: "Added 2 August 2026; moved from the blue stair pot in the November 2026 update",
+    role: "White late-summer flowers in Back Bed 2",
+    observation: "The supplied photograph shows a cut-back clump in the mulched border. It predates the November upload; no exact move date was supplied.",
+    status: "Label-confirmed selection; keep its dormant crown marked and free from wet bark.",
+  });
+  [potAbelia, borderEchinacea].forEach((profile) => profile.sources.push({ title: "Oak Lodge November 2026 update", url: null, note: "Brad confirmed the direct swap; supplied photographs record the resulting pot and border positions." }));
+
   // This copies reviewed content OUT to legacy fields, never infers v2 prose
   // from the old generic characteristics in data.js.
   Object.values(OAK.PLANT_BY_ID).forEach(({ plant }) => {
@@ -924,7 +997,7 @@
     plant.characteristics.size = value(["Size", "Ultimate size", "Indoor size"], plant.characteristics.size);
     plant.characteristics.water = value(["Water"], plant.characteristics.water);
     plant.characteristics.flowering = profile.floweringMonths.length ? profile.floweringMonths.join(", ") : ((profile.display || {}).cycleEmpty || "No regular flowering period recorded");
-    if (octoberIds.has(plant.id)) {
+    if (octoberIds.has(plant.id) || plant.id === "house-sitting-scindapsus") {
       plant.characteristics.hardiness = profile.environment === "indoor" ? "Tender · keep indoors" : plant.characteristics.hardiness;
       plant.characteristics.habit = profile.type;
       plant.characteristics.foliage = "Evergreen";
@@ -935,7 +1008,7 @@
         plant.characteristics.size = value(["Size"], "Species-dependent; identity to confirm");
       }
     }
-    profile.contentReview = { date: octoberIds.has(plant.id) || octoberMoves[plant.id] ? "2026-10-03" : "2026-09-18", care: reviewed.has(plant.id) ? "Rewritten with botanical and specimen-specific actions" : "Retained existing plant-specific authored care" };
+    profile.contentReview = { date: novemberIds.has(plant.id) ? "2026-11-09" : (octoberIds.has(plant.id) || octoberMoves[plant.id] ? "2026-10-03" : "2026-09-18"), care: reviewed.has(plant.id) || novemberIds.has(plant.id) ? "Rewritten with botanical and specimen-specific actions" : "Retained existing plant-specific authored care" };
   });
   OAK.PLANT_CARE_REVIEW = { date: "2026-10-03", rewrittenIds: Array.from(reviewed), priorityIds: Object.keys(priorities), descriptionIds: Object.keys(descriptions) };
   // October 2026: Brad discarded both September basket rescues. Earlier
@@ -960,6 +1033,15 @@
     const p = OAK.PLANT_BY_ID[id].plant;
     OAK.WATER_SIGNS["Bed 1"][p.name] = p.profile.waterSigns;
   });
-  OAK.PLANT_CARE_REVIEW.date = "2026-10-07";
+  delete OAK.WATER_SIGNS["Bed 2"][OAK.PLANT_BY_ID["bed2-abelia-raspberry-profusion"].plant.name];
+  OAK.WATER_SIGNS["Bed 2"][OAK.PLANT_BY_ID["wallpot2-echinacea-mooodz-glory"].plant.name] = borderEchinacea.waterSigns;
+  OAK.POT_WATER_SIGNS["Wall Pot 2"] = potAbelia.waterSigns;
+  OAK.POT_WATER_SIGNS["House · Sitting Room · Scindapsus"] = profileFor("house-sitting-scindapsus").waterSigns;
+  novemberIds.forEach((id) => {
+    ["rewrittenIds", "priorityIds", "descriptionIds"].forEach((key) => {
+      if (!OAK.PLANT_CARE_REVIEW[key].includes(id)) OAK.PLANT_CARE_REVIEW[key].push(id);
+    });
+  });
+  OAK.PLANT_CARE_REVIEW.date = "2026-11-09";
 
 })();

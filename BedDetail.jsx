@@ -24,6 +24,10 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
   // Archive photos — stored under `{zoneKey}Archive` in the latest month data
   const archivePhotos = (_latestMonthData[zoneKey + "Archive"] || []);
   const archiveLabels = {
+    bed2: {
+      period: "Before the November 2026 swap",
+      note: "Raspberry Profusion in its original Back Bed 2 pocket. The Abelia now occupies the blue stair pot and Echinacea Mooodz Glory has taken its border position.",
+    },
     stone: {
       period: "Before the late-July 2026 replant",
       note: "The Stone Bed before the rotten-crowned lavender was removed and the new alpine, succulent, grass and Hydrangea planting went in — kept here for the record.",
@@ -37,8 +41,8 @@ function BedDetail({ zoneKey, onBack, onOpenZone, onOpenPlant, onOpenLightbox, d
       note: "Little Pot 2 before its Pelargonium and Petunia were removed and the established Coreopsis moved into the pot — kept here for the record.",
     },
     wallpot2: {
-      period: "Before the 2 August 2026 change",
-      note: "The pot with its former Coreopsis planting, before the Coreopsis moved into Little Pot 2 and Echinacea Mooodz Glory took its place — kept here for the record.",
+      period: "Before the November 2026 swap",
+      note: "The blue pot's earlier Echinacea and Coreopsis plantings. Coreopsis moved into Little Pot 2 in August; Echinacea moved into Back Bed 2 in the November update, swapping directly with Raspberry Profusion.",
     },
     frontBed3: {
       period: "Before the July 2026 update",

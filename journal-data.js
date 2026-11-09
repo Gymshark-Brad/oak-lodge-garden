@@ -7,6 +7,41 @@
   OAK.JOURNAL = {
     version: 1,
     entries: [
+      {
+        id: "nov-2026", year: 2026, month: 11, label: "November 2026",
+        title: "A border and pot swap, and a new hanging houseplant",
+        note: "I swapped Abelia 'Raspberry Profusion' directly with the Echinacea in the blue stair pot. The Abelia now grows in the pot and Echinacea Mooodz Glory takes its former Back Bed 2 pocket. A new Scindapsus hangs from the sitting-room beam beside the stairs. Its yellow-streaked foliage looks like golden pothos, so that botanical identity remains assumed. The outdoor photographs were taken before this November update; the exact move date is not recorded.",
+        photos: [
+          { id: "nov-2026-abelia-photo", area: "back", src: "images/nov-2026/abelia-raspberry-profusion-pot-1.webp", caption: "Raspberry Profusion in the former Echinacea pot" },
+          { id: "nov-2026-echinacea-photo", area: "back", src: "images/nov-2026/back-bed2-echinacea.webp", caption: "Echinacea in the former Abelia pocket in Back Bed 2" },
+          { id: "nov-2026-scindapsus-photo", area: "house", src: "images/nov-2026/house-scindapsus-1.webp", caption: "New Scindapsus hanging beside the sitting-room stairs" },
+        ],
+        events: [
+          {
+            id: "nov-2026-abelia-moved", type: "moved", date: "2026-11", datePrecision: "month", dateLabel: "November 2026 update",
+            area: "back", title: "Raspberry Profusion moved into the blue stair pot",
+            note: "Direct swap with Echinacea Mooodz Glory, reported in the November update. The outdoor photographs predate the upload, so the exact move date is not known.",
+            plantId: "bed2-abelia-raspberry-profusion", zoneKey: "wallpot2",
+            from: "Back Bed 2 · position 7", to: "Blue stair pot · former Echinacea Pot",
+            location: "Blue stair pot, right edge of the steps",
+          },
+          {
+            id: "nov-2026-echinacea-moved", type: "moved", date: "2026-11", datePrecision: "month", dateLabel: "November 2026 update",
+            area: "back", title: "Echinacea Mooodz Glory moved into Back Bed 2",
+            note: "Direct swap into Raspberry Profusion's former pocket, reported in the November update. The exact move date is not recorded.",
+            plantId: "wallpot2-echinacea-mooodz-glory", zoneKey: "bed2",
+            from: "Blue stair pot · Echinacea Pot", to: "Back Bed 2 · position 7",
+            location: "Back Bed 2 · former Raspberry Profusion position",
+          },
+          {
+            id: "nov-2026-scindapsus-added", type: "planted", date: "2026-11", datePrecision: "month", dateLabel: "November 2026",
+            area: "house", title: "Scindapsus added beside the sitting-room stairs",
+            note: "Recorded from the supplied name, two photographs and floor-plan star. Golden pothos, Epipremnum aureum, is the assumed botanical fit; no label confirms it.",
+            plantId: "house-sitting-scindapsus", zoneKey: "houseSittingScindapsus",
+            location: "Ground floor · hanging from the sitting-room beam beside the stairs",
+          },
+        ],
+      },
 {
       "id": "oct-2026",
       "year": 2026,

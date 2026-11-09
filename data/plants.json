@@ -4963,40 +4963,41 @@
       }
     },
     {
-      "name": "Abelia 'Raspberry Profusion'",
-      "id": "bed2-abelia-raspberry-profusion",
-      "latin": "Abelia × grandiflora 'Raspberry Profusion'",
+      "name": "Echinacea Mooodz Glory — label confirmed",
+      "id": "wallpot2-echinacea-mooodz-glory",
+      "latin": "Echinacea ‘Hilmooglor’ (Mooodz Glory)",
       "photos": [
-        "images/September Pots V2/Bed 2 - Abelia - 1.jpeg",
-        "images/September Pots V2/Bed 2 - Abelia - 2.jpeg"
+        "images/nov-2026/back-bed2-echinacea.webp",
+        "images/aug-2026/echinacea-mooodz-glory-1.jpeg",
+        "images/aug-2026/echinacea-mooodz-glory-2.jpeg"
       ],
-      "position": "Position 7 — directly replacing the Dianthus that died in September 2026",
-      "light": "Full sun; sheltered. Good light supports the long flower display, while shelter reduces cold-wind damage to the young evergreen framework.",
-      "water": "Deeply while establishing. Soak the new root ball and surrounding Bed 2 soil during dry spells; do not keep the replacement pocket constantly wet.",
-      "care": "Let Raspberry Profusion keep its long flower season: Remove only damaged or badly placed shoots while pale pink trumpets are opening. The cultivar flowers from late spring into autumn. Delay any shaping until after the main display and avoid shearing away the red flowering stems.\n\nBuild a sheltered evergreen framework: Mulch the moist root area and assess winter damage in spring. Keep mulch clear of the crown, protect the first-season roots from drying wind and cut frost-damaged tips only after live buds show.\n\nProtect the direct replacement planting: For this Oak Lodge specimen Keep the new Abelia's root ball moist and open while it establishes where the Dianthus died.",
-      "seasonal": "Spring: Check for winter-damaged tips after growth resumes, prune only to sound buds and mulch the newly planted root area without touching the stems.\nSummer: Water deeply through its first dry spells and leave the long raspberry-pink flower flush for visiting insects, shortening only badly placed shoots.\nAutumn: Stop feeding so red stems and evergreen leaves harden, and clear fallen leaves that would keep the young crown wet.\nWinter: Let the foliage take its bronze-purple tint, protect the first-season root area from drying wind and postpone reshaping until spring.",
-      "description": "Abelia 'Raspberry Profusion' directly replaced the Dianthus that died at Back Bed 2 position 7. This compact evergreen shrub carries pale raspberry-pink trumpet flowers on red stems from late spring into autumn, while its dark leaves develop purple and bronze winter tones. Give the replacement root ball establishment water, full sun and shelter from cold wind.",
+      "position": "Position 7 in Back Bed 2, directly replacing Abelia 'Raspberry Profusion' in the November 2026 update",
+      "light": "Full sun. Partial shade is tolerated but sun supports stronger flowering",
+      "water": "While rooting; then during dry spells. Check the original root ball after the move; dormant winter crowns need drainage rather than routine watering.",
+      "care": "Let the Bed 2 crown settle: Keep its original root ball moist when genuinely dry, without saturating it. Avoid lifting it again simply to tidy the border. Keep mulch away from the crown and make sure the new pocket does not collect standing water.\n\nDeadhead white flowers selectively: Cut a faded stem back to a healthy leaf or side bud. Retain a few firm late cones if wanted for structure. Leave healthy basal foliage to replenish the established clump.\n\nWatch for returning border shoots: Mark position 7 and check emerging shoots for slugs in spring. Clear collapsed leaves carefully. Do not mistake normal winter dieback for plant loss or bury the dormant crown under bark.",
+      "seasonal": "Spring: Find the marked Echinacea crown in Back Bed 2, clear dead stems carefully and check fresh basal shoots for slugs.\nSummer: Water Mooodz Glory's border root area during dry spells and deadhead spent white flowers above a healthy leaf joint.\nAutumn: Keep selected Echinacea cones if firm, remove collapsed leaves and prevent bark accumulating over its new Bed 2 crown.\nWinter: Leave the dormant border Echinacea undisturbed, clear wet debris after storms and avoid routine watering into cold wet soil.",
+      "description": "Echinacea Mooodz Glory (‘Hilmooglor’) now grows at Back Bed 2 position 7 after swapping directly with Abelia 'Raspberry Profusion' in the November 2026 update. This compact white coneflower dies back to a hardy crown in winter. Its new border pocket needs sun and free drainage, with bark and fallen leaves kept off the crown as it settles.",
       "characteristics": {
-        "sunlight": "Full sun; sheltered",
-        "hardiness": "H4",
-        "flowering": "May, Jun, Jul, Aug, Sep, Oct",
-        "water": "Deeply while establishing",
-        "habit": "Garden shrub",
-        "size": "1–1.2m high and wide",
-        "foliage": "Evergreen",
-        "wildlife": "Flowers, fruit or shelter for wildlife"
+        "sunlight": "Full sun",
+        "hardiness": "H5",
+        "flowering": "Jul, Aug, Sep, Oct",
+        "water": "While rooting; then during dry spells",
+        "habit": "Herbaceous perennial",
+        "size": "Up to about 50cm",
+        "foliage": "Deciduous or dormant in winter",
+        "wildlife": "Foliage provides garden habitat"
       },
       "profile": {
         "version": 2,
-        "type": "Evergreen flowering Abelia",
+        "type": "Compact clump-forming herbaceous perennial",
         "badges": [
-          "September 2026",
-          "Garden record"
+          "Label confirmed",
+          "Label-confirmed trade selection",
+          "White late-summer flowers",
+          "H5"
         ],
-        "description": "Abelia 'Raspberry Profusion' directly replaced the Dianthus that died at Back Bed 2 position 7. This compact evergreen shrub carries pale raspberry-pink trumpet flowers on red stems from late spring into autumn, while its dark leaves develop purple and bronze winter tones. Give the replacement root ball establishment water, full sun and shelter from cold wind.",
+        "description": "Echinacea Mooodz Glory (‘Hilmooglor’) now grows at Back Bed 2 position 7 after swapping directly with Abelia 'Raspberry Profusion' in the November 2026 update. This compact white coneflower dies back to a hardy crown in winter. Its new border pocket needs sun and free drainage, with bark and fallen leaves kept off the crown as it settles.",
         "floweringMonths": [
-          "May",
-          "Jun",
           "Jul",
           "Aug",
           "Sep",
@@ -5005,131 +5006,131 @@
         "facts": [
           {
             "label": "Size",
-            "value": "1–1.2m high and wide",
-            "detail": "Potential mature size for Raspberry Profusion, not the September planting measurement."
+            "value": "Up to about 50cm",
+            "detail": "Compact clump, usually 10–50cm across"
           },
           {
             "label": "Position",
-            "value": "Full sun; sheltered",
-            "detail": "Good light supports the long flower display, while shelter reduces cold-wind damage to the young evergreen framework."
+            "value": "Full sun",
+            "detail": "Partial shade is tolerated but sun supports stronger flowering"
           },
           {
             "label": "Soil",
-            "value": "Moist but well-drained soil",
-            "detail": "Water across the whole new root ball and keep mulch clear of the woody stems."
+            "value": "Deep, humus-rich and well-drained",
+            "detail": "Keep bark away from the crown and avoid a planting hollow that holds winter rain."
           },
           {
             "label": "Hardiness",
-            "value": "H4",
-            "detail": "Protect containers from cold saturation until established"
+            "value": "H5",
+            "detail": "Hardy in most UK gardens when the crown is kept out of stagnant winter wet."
           },
           {
             "label": "Main feature",
-            "value": "Raspberry-pink flowers on red stems",
-            "detail": "The pale raspberry flowers and red stems carry the display from late spring into autumn."
+            "value": "White coneflowers",
+            "detail": "Slightly drooping white rays around a yellow-brown cone"
           },
           {
             "label": "Identity",
-            "value": "Abelia × grandiflora 'Raspberry Profusion'",
-            "detail": "Name retained from the supplied garden record"
+            "value": "Echinacea ‘Hilmooglor’ (Mooodz Glory)",
+            "detail": "Confirmed from a photographed plant label in the Oak Lodge archive"
           },
           {
             "label": "Water",
-            "value": "Deeply while establishing",
-            "detail": "Soak the new root ball and surrounding Bed 2 soil during dry spells; do not keep the replacement pocket constantly wet."
+            "value": "While rooting; then during dry spells",
+            "detail": "Check the original root ball after the move; dormant winter crowns need drainage rather than routine watering."
           },
           {
             "label": "Care priority",
-            "value": "Protect the direct replacement planting",
-            "detail": "Keep the new Abelia's root ball moist and open while it establishes where the Dianthus died."
+            "value": "Keep the moved border crown clear",
+            "detail": "Mark the new position and pull bark away from the basal shoots in Back Bed 2."
           }
         ],
         "careGuide": [
           {
-            "title": "Let Raspberry Profusion keep its long flower season",
-            "summary": "Remove only damaged or badly placed shoots while pale pink trumpets are opening.",
-            "detail": "The cultivar flowers from late spring into autumn. Delay any shaping until after the main display and avoid shearing away the red flowering stems."
+            "title": "Let the Bed 2 crown settle",
+            "summary": "Keep its original root ball moist when genuinely dry, without saturating it.",
+            "detail": "Avoid lifting it again simply to tidy the border. Keep mulch away from the crown and make sure the new pocket does not collect standing water."
           },
           {
-            "title": "Build a sheltered evergreen framework",
-            "summary": "Mulch the moist root area and assess winter damage in spring.",
-            "detail": "Keep mulch clear of the crown, protect the first-season roots from drying wind and cut frost-damaged tips only after live buds show."
+            "title": "Deadhead white flowers selectively",
+            "summary": "Cut a faded stem back to a healthy leaf or side bud.",
+            "detail": "Retain a few firm late cones if wanted for structure. Leave healthy basal foliage to replenish the established clump."
           },
           {
-            "title": "Protect the direct replacement planting",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Keep the new Abelia's root ball moist and open while it establishes where the Dianthus died."
+            "title": "Watch for returning border shoots",
+            "summary": "Mark position 7 and check emerging shoots for slugs in spring.",
+            "detail": "Clear collapsed leaves carefully. Do not mistake normal winter dieback for plant loss or bury the dormant crown under bark."
           }
         ],
         "waterSigns": {
-          "under": "The pale pink flowers close early and the newest leaves curl while the replacement planting pocket is dry; soak the original root ball and surrounding soil slowly.",
-          "over": "Yellowing lower leaves and dark soft stem tissue while Bed 2 stays wet indicate poor aeration; pause watering and pull compacted mulch away from the crown."
+          "under": "Mooodz Glory's leaves and stems droop while the original root ball in Back Bed 2 feels dry; water that root area slowly rather than flooding the whole border.",
+          "over": "A soft dark Echinacea crown beneath wet bark or persistent yellowing in saturated Bed 2 soil suggests poor drainage; clear debris and stop extra watering."
         },
         "seasons": [
           {
             "season": "Spring",
-            "action": "Check for winter-damaged tips after growth resumes, prune only to sound buds and mulch the newly planted root area without touching the stems."
+            "action": "Find the marked Echinacea crown in Back Bed 2, clear dead stems carefully and check fresh basal shoots for slugs."
           },
           {
             "season": "Summer",
-            "action": "Water deeply through its first dry spells and leave the long raspberry-pink flower flush for visiting insects, shortening only badly placed shoots."
+            "action": "Water Mooodz Glory's border root area during dry spells and deadhead spent white flowers above a healthy leaf joint."
           },
           {
             "season": "Autumn",
-            "action": "Stop feeding so red stems and evergreen leaves harden, and clear fallen leaves that would keep the young crown wet."
+            "action": "Keep selected Echinacea cones if firm, remove collapsed leaves and prevent bark accumulating over its new Bed 2 crown."
           },
           {
             "season": "Winter",
-            "action": "Let the foliage take its bronze-purple tint, protect the first-season root area from drying wind and postpone reshaping until spring."
+            "action": "Leave the dormant border Echinacea undisturbed, clear wet debris after storms and avoid routine watering into cold wet soil."
           }
         ],
         "problems": [
           {
-            "name": "Aphids or scale",
-            "sign": "Distorted shoots, sticky leaves or fixed bumps on stems",
-            "response": "Inspect before treating, remove small colonies and improve airflow through crowded growth."
+            "name": "Winter crown rot",
+            "sign": "The crown becomes soft or fails to produce firm shoots after a wet winter",
+            "response": "Clear wet debris and bark from the Bed 2 crown; check for standing water and avoid further autumn disturbance."
           },
           {
-            "name": "Poor flowering",
-            "sign": "Healthy growth but few buds",
-            "response": "Check light, pruning time and excess nitrogen before adding more feed."
+            "name": "Powdery mildew",
+            "sign": "White coating during warm, dry weather",
+            "response": "Water roots consistently, improve airflow and remove the worst affected foliage."
           },
           {
-            "name": "Root stress",
-            "sign": "Yellowing or dieback in soil that remains wet",
-            "response": "Pause watering, inspect drainage and rule out root disease before pruning hard."
+            "name": "Congestion",
+            "sign": "A weak centre with flowers only around the edge",
+            "response": "Divide and replant vigorous outer pieces in spring or autumn."
           }
         ],
-        "about": "'Raspberry Profusion' is a compact named Abelia selected for a long flower season from late spring into autumn. Its sheltered full-sun position and drained soil suit the cultivar, while first-season watering should reach the whole original root ball.",
-        "provenanceNote": "The supplied September update and photographs record this plant's identity and position.",
+        "about": "Echinacea are North American daisy-family perennials with raised cones of disc florets surrounded by rays. Mooodz Glory is the trade name for ‘Hilmooglor’, a compact white-flowered selection. The specimen moved from its original blue pot into Back Bed 2; avoid further unnecessary disturbance while the roots establish.",
+        "provenanceNote": "The retained garden name and white compact flowers match the registered Mooodz Glory trade selection ‘Hilmooglor’. This supersedes the earlier unresolved garden record.",
         "botanical": [
           {
             "label": "Family",
-            "value": "Caprifoliaceae"
+            "value": "Asteraceae"
           },
           {
             "label": "Genus",
-            "value": "Abelia"
+            "value": "Echinacea"
           },
           {
             "label": "Botanical name",
-            "value": "Abelia × grandiflora 'Raspberry Profusion'"
+            "value": "Echinacea ‘Hilmooglor’ (Mooodz Glory)"
           },
           {
             "label": "Plant type",
-            "value": "Evergreen flowering Abelia"
+            "value": "Compact clump-forming herbaceous perennial"
           },
           {
             "label": "Foliage",
-            "value": "Evergreen with purple-bronze winter tints"
+            "value": "Deciduous; dark green and hairy"
           },
           {
             "label": "Habit",
-            "value": "Compact and mound-forming"
+            "value": "Compact and clump-forming"
           },
           {
-            "label": "Name status",
-            "value": "Garden record accepted"
+            "label": "Cultivar epithet",
+            "value": "‘Hilmooglor’"
           },
           {
             "label": "Native to Britain or Ireland",
@@ -5137,33 +5138,43 @@
           }
         ],
         "oakLodge": {
-          "location": "Position 7 — directly replacing the Dianthus that died in September 2026 · Bed 2",
-          "added": "Added September 2026",
-          "role": "Long-flowering replacement at Bed 2 position 7",
-          "observation": "Recorded in the September 2026 garden update photographs.",
-          "status": "Retain labels and monitor the first winter."
+          "location": "Back Bed 2 · position 7, the former Raspberry Profusion pocket",
+          "added": "Added 2 August 2026; moved from the blue stair pot in the November 2026 update",
+          "role": "White late-summer flowers in Back Bed 2",
+          "observation": "The supplied photograph shows a cut-back clump in the mulched border. It predates the November upload; no exact move date was supplied.",
+          "status": "Label-confirmed selection; keep its dormant crown marked and free from wet bark."
         },
         "sources": [
           {
-            "label": "RHS · Abelia 'Raspberry Profusion'",
-            "url": "https://www.rhs.org.uk/plants/305064/abelia-raspberry-profusion/details"
-          },
-          {
-            "title": "Oak Lodge September 2026 plant labels and photographs",
-            "url": null,
-            "note": "Identity and placement recorded from the September pot and hanging-basket update"
+            "title": "Royal Horticultural Society · Echinacea Mooodz Glory",
+            "url": "https://www.rhs.org.uk/plants/357383/echinacea-mooodz-glory-hilmooglor-mooodz-series/details",
+            "note": "Trade identity, flowering, dimensions, cultivation, hardiness and pruning"
           },
           {
             "title": "Oak Lodge garden record",
             "url": null,
             "note": "Identity label, position, photographs, planting history and on-site observations"
+          },
+          {
+            "title": "Oak Lodge photographed plant label",
+            "url": null,
+            "note": "Cultivar wording read directly from a retained label visible in the garden photo archive"
+          },
+          {
+            "title": "Oak Lodge November 2026 update",
+            "url": null,
+            "note": "Brad confirmed the direct swap; supplied photographs record the resulting pot and border positions."
           }
         ],
-        "careSummary": "Protect the direct replacement planting. Keep the new Abelia's root ball moist and open while it establishes where the Dianthus died.",
+        "careSummary": "Keep the moved Echinacea crown visible in Back Bed 2. Check the original root ball in dry spells and avoid wet bark or debris against the crown.",
         "contentReview": {
-          "date": "2026-09-18",
+          "date": "2026-11-09",
           "care": "Rewritten with botanical and specimen-specific actions"
         }
+      },
+      "identityResolution": {
+        "status": "confirmed",
+        "basis": "The retained garden name and white compact flowers match the registered Mooodz Glory trade selection ‘Hilmooglor’."
       }
     }
   ],
@@ -19928,40 +19939,42 @@
   ],
   "Wall Pot 2": [
     {
-      "name": "Echinacea Mooodz Glory — label confirmed",
-      "id": "wallpot2-echinacea-mooodz-glory",
-      "latin": "Echinacea ‘Hilmooglor’ (Mooodz Glory)",
+      "name": "Abelia 'Raspberry Profusion'",
+      "id": "bed2-abelia-raspberry-profusion",
+      "latin": "Abelia × grandiflora 'Raspberry Profusion'",
       "photos": [
-        "images/aug-2026/echinacea-mooodz-glory-1.jpeg",
-        "images/aug-2026/echinacea-mooodz-glory-2.jpeg"
+        "images/nov-2026/abelia-raspberry-profusion-pot-1.webp",
+        "images/nov-2026/abelia-raspberry-profusion-pot-2.webp",
+        "images/September Pots V2/Bed 2 - Abelia - 1.jpeg",
+        "images/September Pots V2/Bed 2 - Abelia - 2.jpeg"
       ],
-      "position": "Single compact specimen filling the former Coreopsis pot",
-      "light": "Full sun. Partial shade is tolerated but sun supports stronger flowering",
-      "water": "Moderate in active growth. A pot dries faster than a border, but winter drainage remains essential for the coneflower crown.",
-      "care": "Manage flowers and seed cones separately: Deadhead early flowers for continuity, leaving selected later cones if wanted. Cut a finished stem to a healthy leaf or side bud. Sound autumn cones can remain for structure rather than stripping the plant bare.\n\nProtect emerging basal growth: Clear collapsed leaves before spring shoots open and check for slugs. Do not keep the dormant pot wet. Divide or repot only when the established root system becomes crowded, retaining strong growing points.\n\nProtect the white coneflower's crown: For this Oak Lodge specimen Keep Mooodz Glory's own pot drained through winter and mark where new basal shoots should emerge.",
-      "seasonal": "Spring: Clear dead stems carefully as new shoots emerge, top-dress lightly and avoid disturbing the crown unnecessarily.\nSummer: Water after the upper compost begins to dry and cut fading stems to a leafy joint for further flowers.\nAutumn: Leave selected firm cones for structure, stop feeding and keep fallen petals and leaves away from the crown.\nWinter: Raise the pot on feet, protect it from prolonged rain and leave the dormant crown undisturbed.",
-      "description": "Echinacea Mooodz Glory (‘Hilmooglor’) fills the former Coreopsis pot with sturdy dark-green foliage and white, slightly drooping ray florets around prominent golden-green cones. The compact selection flowers from summer into autumn and is hardy to H5, but the crown still needs sharp winter drainage in a small glazed pot. Deadheading can extend the display; retaining a few sound cones later gives structure and potential food for birds.",
+      "position": "Single specimen in the blue stair pot, swapped from Back Bed 2 in the November 2026 update",
+      "light": "Full sun; sheltered. Good light supports the long flower display, while shelter reduces cold-wind damage to the young evergreen framework.",
+      "water": "Check the pot; water when drying. The blue container dries differently from Back Bed 2; rain reaching the leaves does not guarantee moist roots.",
+      "care": "Check the whole blue-pot root ball: Water thoroughly only when the compost is beginning to dry. Let surplus drain and avoid a permanently wet base. Protect the pot from prolonged freezing; do not feed a cold, inactive root ball.\n\nKeep the raspberry flower display: Avoid repeated shearing of healthy red stems. Remove only damaged or obstructive shoots while flowering. Assess winter-damaged tips when new growth reveals the live framework in spring.\n\nAllow room for a woody shrub: Check root congestion in spring rather than repeatedly clipping the top. Raspberry Profusion can reach 1–1.2m high and wide. Review container size as it establishes and move up gradually when the roots need more room.",
+      "seasonal": "Spring: Assess live Abelia buds before removing dead tips; check the blue pot for congestion and refresh the compost surface without burying stems.\nSummer: Check this exposed Abelia pot during warm or windy weather and water the full root ball when drying, keeping healthy flowering shoots.\nAutumn: Stop routine Abelia feeding, clear leaves from the pot surface and keep the woody stem bases open as the foliage bronzes.\nWinter: Keep the Abelia container draining, shelter it from drying wind and protect exposed roots during prolonged freezing spells.",
+      "description": "Abelia 'Raspberry Profusion' now grows in the blue stair pot after a direct swap with Echinacea Mooodz Glory in the November 2026 update. It first replaced a failed Dianthus in Back Bed 2 in September. Pale raspberry-pink trumpets and coloured calyces sit above small dark leaves; give the container sun, shelter and drainage without allowing its root ball to dry hard.",
       "characteristics": {
-        "sunlight": "Full sun",
-        "hardiness": "H5",
-        "flowering": "Jul, Aug, Sep, Oct",
-        "water": "Moderate in active growth",
-        "habit": "Herbaceous perennial",
-        "size": "Up to about 50cm",
-        "foliage": "Deciduous or dormant in winter",
-        "wildlife": "Foliage provides garden habitat"
+        "sunlight": "Full sun; sheltered",
+        "hardiness": "H4; protect exposed container roots",
+        "flowering": "May, Jun, Jul, Aug, Sep, Oct",
+        "water": "Check the pot; water when drying",
+        "habit": "Garden shrub",
+        "size": "1–1.2m high and wide",
+        "foliage": "Evergreen",
+        "wildlife": "Flowers, fruit or shelter for wildlife"
       },
       "profile": {
         "version": 2,
-        "type": "Compact clump-forming herbaceous perennial",
+        "type": "Evergreen flowering Abelia",
         "badges": [
-          "Label confirmed",
-          "Label-confirmed trade selection",
-          "White late-summer flowers",
-          "H5"
+          "September 2026",
+          "Garden record"
         ],
-        "description": "Echinacea Mooodz Glory (‘Hilmooglor’) fills the former Coreopsis pot with sturdy dark-green foliage and white, slightly drooping ray florets around prominent golden-green cones. The compact selection flowers from summer into autumn and is hardy to H5, but the crown still needs sharp winter drainage in a small glazed pot. Deadheading can extend the display; retaining a few sound cones later gives structure and potential food for birds.",
+        "description": "Abelia 'Raspberry Profusion' now grows in the blue stair pot after a direct swap with Echinacea Mooodz Glory in the November 2026 update. It first replaced a failed Dianthus in Back Bed 2 in September. Pale raspberry-pink trumpets and coloured calyces sit above small dark leaves; give the container sun, shelter and drainage without allowing its root ball to dry hard.",
         "floweringMonths": [
+          "May",
+          "Jun",
           "Jul",
           "Aug",
           "Sep",
@@ -19970,131 +19983,131 @@
         "facts": [
           {
             "label": "Size",
-            "value": "Up to about 50cm",
-            "detail": "Compact clump, usually 10–50cm across"
+            "value": "1–1.2m high and wide",
+            "detail": "Potential mature size for Raspberry Profusion, not the September planting measurement."
           },
           {
             "label": "Position",
-            "value": "Full sun",
-            "detail": "Partial shade is tolerated but sun supports stronger flowering"
+            "value": "Full sun; sheltered",
+            "detail": "Good light supports the long flower display, while shelter reduces cold-wind damage to the young evergreen framework."
           },
           {
             "label": "Soil",
-            "value": "Deep, humus-rich and well-drained",
-            "detail": "The crown resents cold stagnant compost"
+            "value": "Moist but well-drained container compost",
+            "detail": "Keep drainage holes clear and check the original root ball as well as the surrounding fresh compost."
           },
           {
             "label": "Hardiness",
-            "value": "H5",
-            "detail": "Hardy in most UK winters; protect container drainage"
+            "value": "H4; protect exposed container roots",
+            "detail": "The cultivar rating describes garden conditions. A small pot is more exposed during prolonged frost."
           },
           {
             "label": "Main feature",
-            "value": "White coneflowers",
-            "detail": "Slightly drooping white rays around a yellow-brown cone"
+            "value": "Raspberry-pink flowers on red stems",
+            "detail": "The pale raspberry flowers and red stems carry the display from late spring into autumn."
           },
           {
             "label": "Identity",
-            "value": "Echinacea ‘Hilmooglor’ (Mooodz Glory)",
-            "detail": "Confirmed from a photographed plant label in the Oak Lodge archive"
+            "value": "Abelia × grandiflora 'Raspberry Profusion'",
+            "detail": "Name retained from the supplied garden record"
           },
           {
             "label": "Water",
-            "value": "Moderate in active growth",
-            "detail": "A pot dries faster than a border, but winter drainage remains essential for the coneflower crown."
+            "value": "Check the pot; water when drying",
+            "detail": "The blue container dries differently from Back Bed 2; rain reaching the leaves does not guarantee moist roots."
           },
           {
             "label": "Care priority",
-            "value": "Protect the white coneflower's crown",
-            "detail": "Keep Mooodz Glory's own pot drained through winter and mark where new basal shoots should emerge."
+            "value": "Establish the Abelia in its blue pot",
+            "detail": "Stand the pot securely with open drainage and shelter it from cold drying wind."
           }
         ],
         "careGuide": [
           {
-            "title": "Manage flowers and seed cones separately",
-            "summary": "Deadhead early flowers for continuity, leaving selected later cones if wanted.",
-            "detail": "Cut a finished stem to a healthy leaf or side bud. Sound autumn cones can remain for structure rather than stripping the plant bare."
+            "title": "Check the whole blue-pot root ball",
+            "summary": "Water thoroughly only when the compost is beginning to dry.",
+            "detail": "Let surplus drain and avoid a permanently wet base. Protect the pot from prolonged freezing; do not feed a cold, inactive root ball."
           },
           {
-            "title": "Protect emerging basal growth",
-            "summary": "Clear collapsed leaves before spring shoots open and check for slugs.",
-            "detail": "Do not keep the dormant pot wet. Divide or repot only when the established root system becomes crowded, retaining strong growing points."
+            "title": "Keep the raspberry flower display",
+            "summary": "Avoid repeated shearing of healthy red stems.",
+            "detail": "Remove only damaged or obstructive shoots while flowering. Assess winter-damaged tips when new growth reveals the live framework in spring."
           },
           {
-            "title": "Protect the white coneflower's crown",
-            "summary": "For this Oak Lodge specimen",
-            "detail": "Keep Mooodz Glory's own pot drained through winter and mark where new basal shoots should emerge."
+            "title": "Allow room for a woody shrub",
+            "summary": "Check root congestion in spring rather than repeatedly clipping the top.",
+            "detail": "Raspberry Profusion can reach 1–1.2m high and wide. Review container size as it establishes and move up gradually when the roots need more room."
           }
         ],
         "waterSigns": {
-          "under": "The first useful warning is lower leaves wilt and flower stems lose firmness as the small root ball dries. Check below the surface before soaking the full root area.",
-          "over": "Watch for yellow leaves or a soft dark crown while compost remains cold and wet. If the root zone is still wet, pause watering and restore air to the compost or soil."
+          "under": "The Abelia's newest leaves curl and flowers fade while its blue stair pot feels light; check the original root ball before soaking and draining it.",
+          "over": "Yellowing Abelia leaves or dark soft stem bases while the blue pot stays heavy suggest saturated compost; clear the holes and pause watering."
         },
         "seasons": [
           {
             "season": "Spring",
-            "action": "Clear dead stems carefully as new shoots emerge, top-dress lightly and avoid disturbing the crown unnecessarily."
+            "action": "Assess live Abelia buds before removing dead tips; check the blue pot for congestion and refresh the compost surface without burying stems."
           },
           {
             "season": "Summer",
-            "action": "Water after the upper compost begins to dry and cut fading stems to a leafy joint for further flowers."
+            "action": "Check this exposed Abelia pot during warm or windy weather and water the full root ball when drying, keeping healthy flowering shoots."
           },
           {
             "season": "Autumn",
-            "action": "Leave selected firm cones for structure, stop feeding and keep fallen petals and leaves away from the crown."
+            "action": "Stop routine Abelia feeding, clear leaves from the pot surface and keep the woody stem bases open as the foliage bronzes."
           },
           {
             "season": "Winter",
-            "action": "Raise the pot on feet, protect it from prolonged rain and leave the dormant crown undisturbed."
+            "action": "Keep the Abelia container draining, shelter it from drying wind and protect exposed roots during prolonged freezing spells."
           }
         ],
         "problems": [
           {
-            "name": "Winter crown rot",
-            "sign": "The crown becomes soft or fails to produce firm shoots after a wet winter",
-            "response": "Improve container drainage, keep debris away from the crown and avoid late-autumn division or repeated watering."
+            "name": "Aphids or scale",
+            "sign": "Distorted shoots, sticky leaves or fixed bumps on stems",
+            "response": "Inspect before treating, remove small colonies and improve airflow through crowded growth."
           },
           {
-            "name": "Powdery mildew",
-            "sign": "White coating during warm, dry weather",
-            "response": "Water roots consistently, improve airflow and remove the worst affected foliage."
+            "name": "Poor flowering",
+            "sign": "Healthy growth but few buds",
+            "response": "Check light, pruning time and excess nitrogen before adding more feed."
           },
           {
-            "name": "Congestion",
-            "sign": "A weak centre with flowers only around the edge",
-            "response": "Divide and replant vigorous outer pieces in spring or autumn."
+            "name": "Root stress",
+            "sign": "Yellowing or dieback in soil that remains wet",
+            "response": "Pause watering, inspect drainage and rule out root disease before pruning hard."
           }
         ],
-        "about": "Echinacea are North American daisy-family perennials with a raised cone of disc florets surrounded by rays. Mooodz Glory is the trade name for ‘Hilmooglor’, selected for compact growth and white flowers. The RHS notes that Echinacea dislike disturbance and perform best in deep, drained soil, which makes careful long-term container culture more important than frequent repotting.",
-        "provenanceNote": "The retained garden name and white compact flowers match the registered Mooodz Glory trade selection ‘Hilmooglor’. This supersedes the earlier unresolved garden record.",
+        "about": "'Raspberry Profusion' is a compact named Abelia selected for a long flower season from late spring into autumn. Its sheltered full-sun position and drained soil suit the cultivar, while first-season watering should reach the whole original root ball.",
+        "provenanceNote": "The supplied September update and photographs record this plant's identity and position.",
         "botanical": [
           {
             "label": "Family",
-            "value": "Asteraceae"
+            "value": "Caprifoliaceae"
           },
           {
             "label": "Genus",
-            "value": "Echinacea"
+            "value": "Abelia"
           },
           {
             "label": "Botanical name",
-            "value": "Echinacea ‘Hilmooglor’ (Mooodz Glory)"
+            "value": "Abelia × grandiflora 'Raspberry Profusion'"
           },
           {
             "label": "Plant type",
-            "value": "Compact clump-forming herbaceous perennial"
+            "value": "Evergreen flowering Abelia"
           },
           {
             "label": "Foliage",
-            "value": "Deciduous; dark green and hairy"
+            "value": "Evergreen with purple-bronze winter tints"
           },
           {
             "label": "Habit",
-            "value": "Compact and clump-forming"
+            "value": "Compact and mound-forming"
           },
           {
-            "label": "Cultivar epithet",
-            "value": "‘Hilmooglor’"
+            "label": "Name status",
+            "value": "Garden record accepted"
           },
           {
             "label": "Native to Britain or Ireland",
@@ -20102,17 +20115,22 @@
           }
         ],
         "oakLodge": {
-          "location": "Single compact specimen filling the former Coreopsis pot · Wall Pot 2",
-          "added": "Added 2 August 2026",
-          "role": "White late-summer flowers in the former Coreopsis pot",
-          "observation": "Fresh August flowers show broad white rays around tall golden-green cones.",
-          "status": "Cultivar wording is confirmed from the photographed label; retain the label image with the plant journal."
+          "location": "Abelia Pot · blue stair pot in Little Pot 1's former position",
+          "added": "Added September 2026; moved from Back Bed 2 in the November 2026 update",
+          "role": "Evergreen flowering shrub in the former Echinacea pot",
+          "observation": "The supplied outdoor photographs show the Abelia in the blue pot. They predate the November upload; the exact move date is not recorded.",
+          "status": "Check container moisture and drainage through the first winter after the swap."
         },
         "sources": [
           {
-            "title": "Royal Horticultural Society · Echinacea Mooodz Glory",
-            "url": "https://www.rhs.org.uk/plants/357383/echinacea-mooodz-glory-hilmooglor-mooodz-series/details",
-            "note": "Trade identity, flowering, dimensions, cultivation, hardiness and pruning"
+            "label": "RHS · Abelia 'Raspberry Profusion'",
+            "url": "https://www.rhs.org.uk/plants/305064/abelia-raspberry-profusion/details",
+            "title": "RHS · Abelia 'Raspberry Profusion'"
+          },
+          {
+            "title": "Oak Lodge September 2026 plant labels and photographs",
+            "url": null,
+            "note": "Identity and placement recorded from the September pot and hanging-basket update"
           },
           {
             "title": "Oak Lodge garden record",
@@ -20120,20 +20138,16 @@
             "note": "Identity label, position, photographs, planting history and on-site observations"
           },
           {
-            "title": "Oak Lodge photographed plant label",
+            "title": "Oak Lodge November 2026 update",
             "url": null,
-            "note": "Cultivar wording read directly from a retained label visible in the garden photo archive"
+            "note": "Brad confirmed the direct swap; supplied photographs record the resulting pot and border positions."
           }
         ],
-        "careSummary": "Protect the white coneflower's crown. Keep Mooodz Glory's own pot drained through winter and mark where new basal shoots should emerge.",
+        "careSummary": "Check the blue stair pot itself. Keep the moved root ball moist but drained and protect the container during prolonged freezing weather.",
         "contentReview": {
-          "date": "2026-09-18",
+          "date": "2026-11-09",
           "care": "Rewritten with botanical and specimen-specific actions"
         }
-      },
-      "identityResolution": {
-        "status": "confirmed",
-        "basis": "The retained garden name and white compact flowers match the registered Mooodz Glory trade selection ‘Hilmooglor’."
       }
     }
   ],
@@ -37808,6 +37822,225 @@
         "contentReview": {
           "date": "2026-10-03",
           "care": "Retained existing plant-specific authored care"
+        }
+      }
+    }
+  ],
+  "House · Sitting Room · Scindapsus": [
+    {
+      "id": "house-sitting-scindapsus",
+      "name": "Scindapsus (golden pothos, assumed)",
+      "latin": "Epipremnum aureum (assumed)",
+      "position": "Hanging from the beam beside the sitting-room stairs; supplied floor-plan star",
+      "light": "Bright indirect daylight. Deep shade weakens growth and yellow variegation; protect leaves from hot direct sun.",
+      "water": "After the upper compost dries. Feel beneath the surface and check pot weight; soak and drain fully when needed.",
+      "care": "Check the hanging root ball: Take the pot down before watering. Let the top layer dry, then water thoroughly and let surplus escape before rehanging. Reduce water in lower winter light.\n\nKeep the stair-side trails manageable: Guide stems clear of the passage and pets. Trim long shoots just above a leaf joint in spring for a fuller plant. Wear gloves; stem sections containing a node can be rooted as cuttings.\n\nSupport healthy new leaves: Wipe dust off and feed only during growth. Use monthly houseplant feed in the growing season. Repot in spring only when roots crowd the container, increasing its size modestly.",
+      "seasonal": "Spring: Inspect the hanging pothos root ball; repot if crowded and shorten overlong trails above a node.\nSummer: Check the hanging compost more often as pothos growth increases, give monthly feed and shield the yellow-marbled leaves from hot sun.\nAutumn: Reduce feeding as the pothos slows and check whether the beam position still receives useful indirect daylight.\nWinter: Keep this stair-side pothos warm, lengthen watering intervals and empty its hanging container after every drink.",
+      "photos": [
+        "images/nov-2026/house-scindapsus-1.webp",
+        "images/nov-2026/house-scindapsus-2.webp"
+      ],
+      "description": "Glossy green leaves streaked with yellow trail from a pot hanging on the sitting-room beam beside the stairs. Brad supplied the name Scindapsus. The foliage fits golden pothos, Epipremnum aureum, previously called Scindapsus aureus; this identification remains assumed without a label.",
+      "characteristics": {
+        "sunlight": "Bright indirect daylight",
+        "hardiness": "Tender · keep indoors",
+        "flowering": "Foliage all year; flowers rare indoors",
+        "water": "After the upper compost dries",
+        "habit": "Evergreen trailing aroid",
+        "size": "Trailing stems can exceed 2m",
+        "foliage": "Evergreen",
+        "wildlife": "Indoor foliage specimen"
+      },
+      "profile": {
+        "version": 2,
+        "environment": "indoor",
+        "type": "Evergreen trailing aroid",
+        "badges": [
+          "November 2026",
+          "Supplied as Scindapsus",
+          "Golden pothos assumed"
+        ],
+        "petSafety": {
+          "tone": "caution",
+          "label": "Harmful to cats & dogs",
+          "detail": "Calcium oxalate crystals irritate the mouth if chewed. Keep trailing stems and fallen leaves away from pets and children; wear gloves when cutting stems."
+        },
+        "display": {
+          "cycleTitle": "Indoor foliage",
+          "cycleEmpty": "Foliage all year; flowers rare indoors",
+          "cycleNote": "The hanging foliage is the display, with slower growth in winter.",
+          "cycleAria": "Evergreen indoor foliage throughout the year",
+          "roleLabel": "Role in the room",
+          "fieldNoteLabel": "Hanging-pot note · November ’26",
+          "sourceIntro": "Care follows the assumed golden pothos identity. Position and photographs are Oak Lodge records.",
+          "waterBandNote": "Band 2 prompts a compost check, not an automatic drink. Lift the pot down to water and drain it."
+        },
+        "description": "Glossy green leaves streaked with yellow trail from a pot hanging on the sitting-room beam beside the stairs. Brad supplied the name Scindapsus. The foliage fits golden pothos, Epipremnum aureum, previously called Scindapsus aureus; this identification remains assumed without a label.",
+        "floweringMonths": [],
+        "facts": [
+          {
+            "label": "Identity",
+            "value": "Epipremnum aureum (assumed)",
+            "detail": "Photo-based fit; retain Scindapsus as the supplied name. No named cultivar is confirmed."
+          },
+          {
+            "label": "Light",
+            "value": "Bright indirect daylight",
+            "detail": "Deep shade weakens growth and yellow variegation; protect leaves from hot direct sun."
+          },
+          {
+            "label": "Temperature",
+            "value": "Warm room; ideally 18–30°C",
+            "detail": "Keep away from cold stair draughts and direct heater warmth."
+          },
+          {
+            "label": "Water",
+            "value": "After the upper compost dries",
+            "detail": "Feel beneath the surface and check pot weight; soak and drain fully when needed."
+          },
+          {
+            "label": "Size",
+            "value": "Trailing stems can exceed 2m",
+            "detail": "This is potential growth, not a measurement of the new plant."
+          },
+          {
+            "label": "Pot & compost",
+            "value": "Open, freely draining houseplant compost",
+            "detail": "Use a pot with drainage; never leave the roots standing in the outer container's runoff."
+          },
+          {
+            "label": "Care priority",
+            "value": "Drain the hanging pot before rehanging",
+            "detail": "Lower the pot for checks and keep its trailing stems clear of the stairs and pets."
+          }
+        ],
+        "careGuide": [
+          {
+            "title": "Check the hanging root ball",
+            "summary": "Take the pot down before watering.",
+            "detail": "Let the top layer dry, then water thoroughly and let surplus escape before rehanging. Reduce water in lower winter light."
+          },
+          {
+            "title": "Keep the stair-side trails manageable",
+            "summary": "Guide stems clear of the passage and pets.",
+            "detail": "Trim long shoots just above a leaf joint in spring for a fuller plant. Wear gloves; stem sections containing a node can be rooted as cuttings."
+          },
+          {
+            "title": "Support healthy new leaves",
+            "summary": "Wipe dust off and feed only during growth.",
+            "detail": "Use monthly houseplant feed in the growing season. Repot in spring only when roots crowd the container, increasing its size modestly."
+          }
+        ],
+        "waterSigns": {
+          "under": "Drooping golden-marbled leaves and a light hanging pot suggest the root ball has dried; confirm below the surface before soaking and draining.",
+          "over": "Yellowing pothos leaves with wet compost or dark soft stem bases suggest excess water; empty the outer pot and check root aeration."
+        },
+        "seasons": [
+          {
+            "season": "Spring",
+            "action": "Inspect the hanging pothos root ball; repot if crowded and shorten overlong trails above a node."
+          },
+          {
+            "season": "Summer",
+            "action": "Check the hanging compost more often as pothos growth increases, give monthly feed and shield the yellow-marbled leaves from hot sun."
+          },
+          {
+            "season": "Autumn",
+            "action": "Reduce feeding as the pothos slows and check whether the beam position still receives useful indirect daylight."
+          },
+          {
+            "season": "Winter",
+            "action": "Keep this stair-side pothos warm, lengthen watering intervals and empty its hanging container after every drink."
+          }
+        ],
+        "problems": [
+          {
+            "name": "Weak or plain-green growth",
+            "sign": "Long gaps between leaves or fading yellow pattern",
+            "response": "Improve indirect daylight before adding fertiliser."
+          },
+          {
+            "name": "Root rot",
+            "sign": "Wet compost with yellow leaves or blackening stem bases",
+            "response": "Stop watering, inspect drainage and remove trapped runoff."
+          },
+          {
+            "name": "Scale or mealybugs",
+            "sign": "Sticky leaves, stem bumps or white clusters",
+            "response": "Inspect leaf joints and nearby plants, then identify the pest before treating."
+          }
+        ],
+        "about": "Golden pothos is an aroid from the Society Islands. Juvenile leaves are heart-shaped; aerial roots support climbing growth, while a hanging pot allows stems to cascade. It rarely flowers indoors. The older name Scindapsus aureus explains the supplied name; true Scindapsus pictus usually has silver mottling rather than yellow streaks.",
+        "provenanceNote": "Brad supplied Scindapsus, two photographs and a ground-floor star beside the sitting-room stairs in November 2026. Yellow-streaked glossy leaves support Epipremnum aureum as an assumption; no retained label confirms the species or cultivar.",
+        "botanical": [
+          {
+            "label": "Family",
+            "value": "Araceae"
+          },
+          {
+            "label": "Genus",
+            "value": "Epipremnum (assumed)"
+          },
+          {
+            "label": "Species",
+            "value": "Epipremnum aureum (assumed)"
+          },
+          {
+            "label": "Supplied name",
+            "value": "Scindapsus"
+          },
+          {
+            "label": "Historical synonym",
+            "value": "Scindapsus aureus"
+          },
+          {
+            "label": "Foliage",
+            "value": "Evergreen; glossy green with yellow streaks"
+          }
+        ],
+        "oakLodge": {
+          "location": "Ground floor · hanging from the beam beside the sitting-room stairs",
+          "added": "Recorded November 2026; exact acquisition date not supplied",
+          "role": "Trailing foliage at the sitting-room stair opening",
+          "observation": "Two supplied views show a full hanging pot, heart-shaped leaves and yellow variegation.",
+          "status": "Keep the supplied name and photograph any label before confirming the botanical identity."
+        },
+        "sources": [
+          {
+            "title": "RHS · Epipremnum aureum",
+            "url": "https://www.rhs.org.uk/plants/91403/epipremnum-aureum/details",
+            "note": "Foliage, synonym, growth and identity comparison"
+          },
+          {
+            "title": "RHS · How to grow epipremnum",
+            "url": "https://www.rhs.org.uk/plants/epipremnum/growing-guide",
+            "note": "Indoor light, warmth, watering, feed, pruning and repotting"
+          },
+          {
+            "title": "NC State Extension · Epipremnum aureum",
+            "url": "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/",
+            "note": "Origin, growth, identification and root-stress symptoms"
+          },
+          {
+            "title": "ASPCA · Golden Pothos",
+            "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/golden-pothos",
+            "note": "Pet toxicity and calcium oxalates"
+          },
+          {
+            "title": "RHS · Scindapsus pictus",
+            "url": "https://www.rhs.org.uk/plants/93929/scindapsus-pictus-v/details",
+            "note": "Silver-leaved comparison, not the assumed identification"
+          },
+          {
+            "title": "Oak Lodge November update",
+            "url": null,
+            "note": "Supplied name, photographs and marked floor-plan position"
+          }
+        ],
+        "careSummary": "Drain the hanging pot before rehanging. Keep its yellow-streaked trails clear of the stairs and pets.",
+        "contentReview": {
+          "date": "2026-11-09",
+          "care": "Rewritten with botanical and specimen-specific actions"
         }
       }
     }
